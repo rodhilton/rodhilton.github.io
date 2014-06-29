@@ -1,0 +1,86 @@
+---
+layout: post
+title: Adding 'Dont Hyphenate Classname" Support to Hyphenator
+categories:
+- Programming
+tags:
+- blog
+- code
+- formatting
+- patch
+- wordpress
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+  _syntaxhighlighter_encoded: '1'
+  dsq_thread_id: '607515547'
+author:
+  login: air0day
+  email: blog@air0day.com
+  display_name: Rod Hilton
+  first_name: Rod
+  last_name: Hilton
+---
+<p>The Wordpress <a href="http://wordpress.org/extend/plugins/hyphenator/">Hyphenator</a> plugin is a great plugin that uses <a href="http://code.google.com/p/hyphenator/">Hyphenator.js</a> to perform client-side hyphenation of blog posts.  I think this makes full-justified posts look much nicer, and I use it extensively on this site.</p>
+<p>Hyphenator.js relies on being told what classnames to look for in a page to know what can be hyphenated, but it also has an option called <code>donthyphenateclassname</code> which allows one to specify classnames that never get hyphenated, even when they are inside of a class that ought to be.</p>
+<p>Unfortunately, the Hyphenator Wordpress plugin does not support this option.  I needed support for it, so I added it.  I don't really know of a place to submit this patch, so I'm posting it here.  This patch has been applied to <a href="http://wordpress.org/extend/plugins/hyphenator/download/">version 3.2.0 of Hyphenator</a>.</p>
+<p><!--more--></p>
+<p>[patch]<br />
+diff --git a/options.php b/options.php<br />
+index 7e0d5e8..ce3a966 100644<br />
+--- a/options.php<br />
++++ b/options.php<br />
+@@ -41,7 +41,7 @@ $hyphenator_langindex = array(<br />
+ );</p>
+<p> // list of option names (without &quot;languages&quot;)<br />
+-$hyphenator_options = array(&quot;classname&quot;, &quot;minwordlenght&quot;, &quot;addexceptions&quot;, &quot;displaytogglebox&quot;, &quot;hypenchar&quot;, &quot;usetrunk&quot;, &quot;intermediatestate&quot;);<br />
++$hyphenator_options = array(&quot;classname&quot;, &quot;donthyphenateclassname&quot;, &quot;minwordlenght&quot;, &quot;addexceptions&quot;, &quot;displaytogglebox&quot;, &quot;hypenchar&quot;, &quot;usetrunk&quot;, &quot;intermediatestate&quot;);</p>
+<p> // check for admin options submission and update options<br />
+ if ('process' == $_POST['stage']) {<br />
+@@ -126,7 +126,11 @@ jQuery(document).ready(function() {<br />
+    &lt;label for=&quot;opt1&quot;&gt;&lt;?php _e('class name of content to hyphenate', 'hyphenator') ?&gt;&lt;/label&gt;<br />
+     &lt;input id=&quot;opt1&quot; name=&quot;hyphenator_classname&quot; type=&quot;text&quot; size=&quot;10&quot; value=&quot;&lt;?php echo $hyphenator_['classname'] ?&gt;&quot; /&gt;<br />
+     &lt;p&gt;&lt;small&gt;&lt;?php _e('default', 'hyphenator'); echo &quot;: hyphenate&quot; ?&gt;&lt;/small&gt;&lt;/p&gt;<br />
+-<br />
++<br />
++    &lt;label for=&quot;opt3&quot;&gt;&lt;?php _e('class name of content to never hyphenate', 'hyphenator') ?&gt;&lt;/label&gt;<br />
++    &lt;input id=&quot;opt3&quot; name=&quot;hyphenator_donthyphenateclassname&quot; type=&quot;text&quot; size=&quot;10&quot; value=&quot;&lt;?php echo $hyphenator_['donthyphenateclassname'] ?&gt;&quot; /&gt;<br />
++    &lt;p&gt;&lt;small&gt;&lt;?php _e('default', 'hyphenator'); echo &quot;: donthyphenate&quot; ?&gt;&lt;/small&gt;&lt;/p&gt;<br />
++<br />
+    &lt;label for=&quot;opt2&quot;&gt;&lt;?php _e('minimal length of words', 'hyphenator') ?&gt;&lt;/label&gt;<br />
+     &lt;input id=&quot;opt2&quot; name=&quot;hyphenator_minwordlenght&quot; type=&quot;text&quot; size=&quot;10&quot; value=&quot;&lt;?php echo $hyphenator_['minwordlenght'] ?&gt;&quot; /&gt;<br />
+     &lt;p&gt;&lt;small&gt;&lt;?php _e('default', 'hyphenator'); echo &quot;: 6&quot;; ?&gt;&lt;/small&gt;&lt;/p&gt;<br />
+diff --git a/plugin.php b/plugin.php<br />
+index 0d2aad0..665e299 100644<br />
+--- a/plugin.php<br />
++++ b/plugin.php<br />
+@@ -20,6 +20,7 @@ $hyphenator_options_page = get_option('siteurl') . '/wp-admin/admin.php?page=hyp</p>
+<p> // add default options<br />
+ add_option('hyphenator_classname', 'hyphenate');<br />
++add_option('hyphenator_donthyphenateclassname', 'donthyphenate');<br />
+ add_option('hyphenator_minwordlenght', '6');<br />
+ add_option('hyphenator_languages', 'auto');<br />
+ add_option('hyphenator_addexceptions', '');<br />
+@@ -46,6 +47,7 @@ add_action('wp_head', 'hyphenator_header');<br />
+ function hyphenator_header() {<br />
+       // get values<br />
+       $hyphenator_classname = get_option('hyphenator_classname');<br />
++       $hyphenator_donthyphenateclassname = get_option('hyphenator_donthyphenateclassname');<br />
+       $hyphenator_minwordlenght = get_option('hyphenator_minwordlenght');<br />
+       $hyphenator_languages = get_option('hyphenator_languages');<br />
+       $hyphenator_addexceptions = get_option('hyphenator_addexceptions');<br />
+@@ -82,6 +84,9 @@ function hyphenator_header() {<br />
+       if ($hyphenator_classname != '') {<br />
+               $hyphenatorHeadConfig .= &quot;\n\t\t\tclassname: '{$hyphenator_classname}',&quot;;<br />
+       }<br />
++       if ($hyphenator_donthyphenateclassname != '') {<br />
++               $hyphenatorHeadConfig .= &quot;\n\t\t\tdonthyphenateclassname: '{$hyphenator_donthyphenateclassname}',&quot;;<br />
++       }<br />
+       if ($hyphenator_displaytogglebox == '1') {<br />
+               $hyphenatorHeadConfig .= &quot;\n\t\t\tdisplaytogglebox: true,&quot;;<br />
+       }<br />
+--<br />
+1.7.3.5<br />
+[/patch]</p>

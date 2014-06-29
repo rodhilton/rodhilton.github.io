@@ -1,0 +1,57 @@
+---
+layout: post
+title: Java Security FUD
+categories:
+- Programming
+tags:
+- java
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+  pvc_views: '2'
+  dsq_thread_id: '606605610'
+author:
+  login: air0day
+  email: blog@air0day.com
+  display_name: Rod Hilton
+  first_name: Rod
+  last_name: Hilton
+---
+<p>As soon as Java started to grow in popularity, the misinformation about it began to spread.  There are, of course, a number of legitimate criticisms of Java, but most of them have been used constructively to improve it.  One of the oldest criticisms of Java was that it is slow - a criticism that was valid once-upon-a-time, but has become decreasingly relevant as Sun has made improvements to the JVM (particularly with Just-In-Time compilation).  My friend <a href="http://blog.bharper.com/">Brandon</a> has thoroughly deflated this criticism in a <a href="http://devnulled.com/content/2007/02/correcting-logical-fallacies-why-java-is-not-slow/">blog post</a> that grew into a <a href="http://java.sys-con.com/read/335017.htm">JDJ article </a>(congrats, Brandon!), so I won't spend any more time on it.</p>
+<p>A great deal of the invalid criticism of Java actually comes from a misunderstanding of the purpose of Java.  Though the goals of Java have certainly changed since it was conceived as an embedded systems language to run appliances, there is no denying that, currently, the goals of Java are clear: write once, run anywhere.  Though there are a number of areas Java stands to improve on this goal, it is definitely the idea.  This inherently means that Java applications don't get to access low-level system calls that bypass the JVM.  This limitation is the core cause of the common criticism that Java doesn't give you enough rope to hang yourself, as C++ does.</p>
+<p>I am unsure of what it is about Java that inspires such a dogmatic loathing of it by so many developers that prefer not to use it.  Though dogmatism is no stranger to the world of software development, it rarely reaches the level of vitriol that is common in the "Java vs. Anything" debate.</p>
+<p>One such example is a web site entitled "<a href="http://alife.co.uk/nonrandom/">Sun Redefines Randomness</a>".  The wording of even the title of this page makes it clear that its contents are meant as a criticism against Sun and Java, but unsurprisingly a bit of investigation reveals that it is simply FUD.</p>
+<p>The page contains a simple applet.  This applet generates a field of black and white boxes, using the java.util.Random class and taking the lowest-order bit from each integer generated to decide the color of the box.  It does this repeatedly in an animation, and there is no denying that when you look at the applet's output, there is a distinct pattern to it.  From the page:</p>
+<blockquote><p>As you can probably see by the horizontal stripes, this 'random' method exibits significant periodic behavoiour.</p>
+<p>Rather than looking like random static, the applet's display looks like a badly tuned-in television.</p>
+<p>All Java virtual machines that are available to me appear to exhibit the same problem.</p></blockquote>
+<p>It is interesting, his point about how all virtual machines do this.  Of course they do - the implementation of Random is in the actual class file, not the JVM.</p>
+<p>In any case, the author of this page doesn't seem to understand a few basic things about java.util.Random.  This isn't surprising, since these things aren't exactly well-documented or obviously apparent.</p>
+<p><strong>RNGs</strong></p>
+<p>Random Number Generators (RNGs) are not, generally speaking, actually random.  Picking a random number is actually a relatively difficult task, which is why random number generators pick what are called "pseudorandom" numbers.</p>
+<p>With computers, it is not simply enough to use the last digit of the computer clock whenever you need a random number.  There are actually patterns to when the OS schedules your process to run, and those patterns emerge when you try such a thing, but that's not the point.  Random Number Generators need to run from a seed, meaning that you need to supply the RNG with a starting number, and it needs to generate a sequence of numbers based on that starting number.   If you were to give an RNG the same seed again, it would need to generate the same sequence of pseudorandom numbers.  Why bother with the seed?  Because without it, you might not be able to easily reproduce a bug in your program consistently, which means you can't fix it.  Being able to make the computer go through the same sequence of events is requisite for consistent debugging, which means even if you use random numbers in your program you must be able to get to the same sequence of random numbers.  </p>
+<p>This means that every RNG needs to work by performing a series of mathematical operations on a number.  The RNG starts with a seed, and performs a series of mathematical operations on it to get the first "random" number.  The next time a random number is needed, it performs the same operations on the last random number to get a new one, and so on.  This ensures that, given the same starting number (the seed) the same sequence of numbers would be generated.</p>
+<p>As you might imagine, a very bad random number generator would likely reveal a predictable pattern, given these constraints.  So, is Java's RNG bad?</p>
+<p><strong>Java's Random class</strong></p>
+<p>When it was time to write a RNG for Java, a decision had to be made.  Typically, when programmers use a random number generator they just want, effectively, a dice-roller.  It is rarely important that a sequence of a million dice rolls generated in this manner not reveal a pattern.  It is far more important, to your TYPICAL development purpose, that the dice-rolls occur quickly.  Secondarily, it is important that the dice-rolls be fair, meaning that if you were using an RNG to generate a random number from 1-6, you would get an even distribution for each number approximately 1/6th of the time.  Thirdly, it is important that the numbers be non-periodic, which is to say lacking predictable patterns in number generation.</p>
+<p>There are a LOT of algorithms to take a number and generate a new pseudorandom number based on it.  Most of these algorithms work by (and this is a gross oversimplification) multiplying the number by an extremely large number in order to put it far outside of the range of desired numbers, then adding another offset number, and then modding that number to get it back into the range.  This is called a "<a href="http://en.wikipedia.org/wiki/Linear_congruential_generator">linear congruential algorithm</a>".</p>
+<p>Java's Random class uses a 48-bit version of this algorithm.  Here is the entire code that does the work of turning a number into the next number in the sequence:</p>
+<p><code>seed = (seed * 0x5DEECE66DL + 0xBL) & ((1L << 48) - 1);</code></p>
+<p>Just as described, this algorithm multiplies the previous number (seed), adds another number, then munges it back within range.</p>
+<p>As you can imagine, because of the small number of mathematical operations, this algorithm is extremely fast.  The constants used here have been selected because they yield random numbers that are fair.</p>
+<p>Could the algorithm have also been non-periodic?  Yes, but it would also be slower.  Sun selected an algorithm that, first and foremost, is quick.  They made this call based on their best guess for what your average developer using the class needed.  Had they made it more cryptographically secure (more "random") it would have been slower.</p>
+<p><strong>Java's SecureRandom class</strong></p>
+<p>Of course, there ARE people who need numbers that are more cryptographically random.  Sun made the logical choice: extend the Random class into a new class that overrides the generating function.  Inside of the java.security package is a class called SecureRandom that has the same methods as Random.  It re-implements the main seed-modifying method to use a completely different algorithm.</p>
+<p>In fact, you can supply a number of options to the constructor of SecureRandom to use a variety of different popular random number generating algorithms.  If you supply no arguments, SecureRandom will be constructed with the best generator it can find.</p>
+<p>The author's source code is located <a href="http://alife.co.uk/nonrandom/nonrandom.java">here</a>.  If you simply change the code to construct an instance of java.security.SecureRandom rather than java.util.Random, without changing a single line of code otherwise, the pattern in the graph instantly vanishes.</p>
+<p>On line 37, I have changed</p>
+<p><code>Random rnd = new Random();</code></p>
+<p>to</p>
+<p><code>Random rnd = new java.security.SecureRandom();</code></p>
+<p>I have uploaded the changed version <a href="files/randomrod.html">here</a>.  </p>
+<p>There are two things worth noticing about this new version of the applet.  One, it lacks the periodicity illustrated in the non-secure applet.  Two, the framerate is much lower. </p>
+<p>Like I said, Random was written to be fast, which it is.  SecureRandom is designed to be secure, so it is much slower.</p>
+<p>Long story short, <b>if you are writing code that needs somewhat random numbers and needs them quickly, use java.util.Random.  If you are writing code that needs extremely random numbers less quickly, use java.security.SecureRandom</b>.  Of course, if you are writing code that needs extremely random numbers extremely quickly, use a degree in mathematics.</p>
+<p>As you can see, this is just another unwarranted criticism of Java that is as trivial as it is un-researched.  Criticism is meant to be constructive, which means it is meant to help a thing improve.  It is impossible to improve upon something that isn't actually broken, so this kind of FUD accomplishes little more than further polarizing the world of software development.</p>

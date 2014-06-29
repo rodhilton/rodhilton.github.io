@@ -1,0 +1,95 @@
+---
+layout: post
+title: When To Work On Technical Debt
+categories:
+- Programming
+tags:
+- agile
+- estimation
+- Planning
+- slack
+- technical debt
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+  dsq_thread_id: '606381958'
+author:
+  login: air0day
+  email: blog@air0day.com
+  display_name: Rod Hilton
+  first_name: Rod
+  last_name: Hilton
+---
+<p>I hear the same complaints and concerns from all sorts of different software development organizations.  It seems that development teams only suffer from a small handful of problems in the broad sense, and nearly every team seems to share them.</p>
+<p>One problem I encounter constantly is this: <strong>"We don't have time to address our technical debt!"</strong></p>
+<p>Every company I've ever worked for has had this problem to some degree.  The development team realizes that there are some parts of the system that need to be cleaned up, but for a wide variety of different reasons, they feel like they don't have the time to actually work on improving those areas of the system.</p>
+<p><img src="assets/panic-300x225.jpg" alt="" title="Panic" width="300" height="225" class="alignright size-medium wp-image-1260" /></p>
+<p>The truth is, this is not actually that difficult a problem to deal solve.  As software developers, we deal with significantly more complex problems on a regular basis.</p>
+<p><!--more--></p>
+<h1>Step 1: Stop Creating Technical Debt</h1>
+<p>I know this seems glib, but it really is the first step to solving the problem of technical debt.  No matter what you do to fix your system's problems, if you are creating more while you do it, you will never be out of the hole into which you've dug yourself.</p>
+<p>Otherwise competent developers tend to create technical debt for one of two reasons:</p>
+<ol>
+<li>You're cutting corners to meet a deadline</li>
+<li>You're cutting corners to meet expectations</li>
+</ol>
+<p>These seem similar, but there is a subtle difference between them.</p>
+<h2>Meeting Deadlines</h2>
+<p>The former happens when there's a trade show or a conference coming up and your company wants to have something to show.  It can happen when your competitor is going to unleash something on a specific date and you want to take the wind out of their sails by making a similar announcement at the same time.  This is development with a deadline: the scope of the features and the time of delivery are fixed.</p>
+<p>[caption id="attachment_1262" align="alignleft" width="300" caption="Sometimes, incurring debt is okay."]<img src="assets/credit_card-300x200.jpg" alt="" title="Credit Card" width="300" height="200" class="size-medium wp-image-1262" />[/caption]</p>
+<p>This is a bad situation to be in, but the fact is that it happens, and that's okay.</p>
+<p>Think of it like money.  You want to only buy things you can afford, but occasionally a situation will occur that makes this difficult.  Imagine your television broke, and it would take 6 months to save up the money for a replacement.  If you do this, however, nobody in your home will be able to watch television, a movie, or anything else for 6 months.  On the other hand, you could go down to Big Box and purchase a new TV right now on your credit card, then pay it off, which will take 8 months.  You may decide that the two-month loss is worth it, and put it on your card, incurring debt.  This is not a problem, <strong>as long as you pay it off right away</strong>.  Pretending you never incurred the debt will screw you financially, you have to address it.</p>
+<p>If this situation is uncommon, it's not bad (if this is happening every month, you have a serious problem).  Tread lightly, but if you have a conference coming up, it's okay to cut a few corners in order to make it happen, as long as you truly do go back into the system and clean it up immediately.</p>
+<p>Incurring debt should, at the very least, be a conscious, team-wide decision. "We're going to have to create some debt right now in order to make this deadline, so before we start let's discuss when exactly we're going to fix it."</p>
+<h2>Meeting Expectations</h2>
+<p>The other kind of debt is incurred when a team is trying to meet someone's expectations rather than a deadline.  Maybe for the first 12 months of development on the product, your team worked at a certain pace.  Your customers, your product owners, and the rest of your organization came to understand this pace, and have now come to expect it.  Unfortunately, since the 8th month or so of development, the only way to keep this pace has been to cut corners.  <strong><em>This is deadly to your project.</em></strong></p>
+<p>What this means is that your <em>real</em> pace, the pace at which you can develop features while maintaining the health of the system, is slower than the pace that the organization has come to expect.  You may not even know your <em>real</em> pace anymore, because you have been working at the fake pace for so long, cutting corners and incurring debt.</p>
+<p>There is absolutely no way to develop in this situation in the long term.  Your codebase will eventually get to a point where no work can be done, and you will have to either suspend all feature development to pay down all of your debt at once, or you will have to rewrite the entire application.  The organization and your customers will be furious with you for halting development, trust will dissolve, and tensions will mount.</p>
+<p><img alt="" src="assets/chart?chbh=40,5,11&amp;chs=300x200&amp;cht=bhg&amp;chco=4D89F9,FF0000&amp;chd=s:l,x&amp;chdl=Real+Pace|Bullshit+Pace&amp;chdlp=t&amp;chp=0.01,0.01&amp;chma=|0,10&amp;chtt=How+To+Lie+To+Your+Company" title="How to Lie" class="alignright" width="300" height="200" /></p>
+<p>Every time you do a week of development at your fake, unsustainable pace, you are <strong>lying to your organization</strong>.  Every week that goes by, you are reinforcing in their minds that your fake pace is a sustainable one.  Some developers will assume they know, claiming "well, it's so fast, surely they know we're incurring debt."  <strong>No, they do not.</strong>  They are assuming you are being a professional and doing your job, which means owning the code and growing it in a healthy way.</p>
+<p>If you are in this situation, <strong>immediately slow down</strong>, start addressing any debt you've incurred, and adopt the correct pace.  The correct pace is not "the fastest we can get these features done," it's "the fastest we can get these features done without incurring even a single line of technical debt."  The best television you can afford is the one that costs less than how much money you have.  If you have to put even one dollar on your credit card, you cannot "afford" it under any reasonable definition of the word "afford."</p>
+<p>Don't create new debt when it can be avoided, and pay it off immediately when it can't. </p>
+<h1>Step 2: Identify High-Interest Debt</h1>
+<p>Okay, so you're no longer putting the company's features on your engineering credit card, now what?  Unsurprisingly, the credit card analogy actually tells us what to do here as well.  The general strategy with credit cards is to <a href="http://www.suzeorman.com/igsbase/igstemplate.cfm?SRC=MD012&SRCN=aoedetails&GnavID=84&SnavID=20&TnavID=&AreasofExpertiseID=5">identify the credit card with the highest interest rate, and start paying that one off right away, supplying the minimum payment to other cards</a>.</p>
+<p>[caption id="attachment_1267" align="alignleft" width="300" caption="Prioritize and attack debt."]<img src="assets/debt-free-300x225.jpg" alt="" title="Debt Free" width="300" height="225" class="size-medium wp-image-1267" />[/caption]</p>
+<p>The same goes for technical debt.  Make a list of all of the areas in the system that are problematic and causing pain for development.  Whiteboard it with your team (just don't let it become a bitching session).  Everyone can write down problem areas on index cards, then put them up on a board together.  Have your team discuss, or maybe even vote to identify the debt causing the most pain.</p>
+<p>Once you have a prioritized list of debt, start at the top and work your way down.  Ignore anything on the list that isn't being addressed <strong>right now</strong>.  This allows you to pay off your debt while still developing new features and keeping the business happy.  If a new feature requires working with an area of the codebase that has been identified as debt, talk to your team about potentially re-prioritizing the debt list to move that area to the top.  If you decide not to, refuse to make it any worse.</p>
+<h1>Step 3: Pay It Off</h1>
+<p>The last step is to simply work on the areas of debt.  Refactor, redesign, maybe even rewrite submodules.  Simple, right?</p>
+<p>Of course, it's never that simple.  <strong>This is actually where teams, in my experience, struggle the most.</strong>  They feel like they are taking features away from customers or the business by working on debt instead.  They do all sorts of crazy things to deal with this, and all of them are bad.</p>
+<p>There are two common mistakes development teams make when trying to pay off technical debt.</p>
+<h2>Mistake 1: Create a Debt User Story</h2>
+<p>A lot of agile organizations will create a user story to address the technical debt in a particular area, then try to get that story scheduled into an iteration.  <strong>This is wrong</strong>.</p>
+<p>First of all, it's not really a user story: user stories are written from the user's perspective.  Users should not be able to see the effects of addressing technical debt.  Some teams will get cute with this, writing stories like "As a developer on the team, I'd like the XYZ module to not suck. Har-dee-har."  This is asinine, and it's an indication your team is suffering from process poisoning, allowing their process to dictate how they work even when it does not apply.  Even a story like "As a user, I want this page to load faster" is just shoving a square peg into a round hole.  Shoehorning something into your process means that your process has a flaw, because it does not allow for certain types of work that need to be done.</p>
+<p>[caption id="attachment_1296" align="alignright" width="300" caption="Don&#039;t beg other people to let you do your job well."]<img src="assets/pleading-300x200.jpg" alt="" title="Pleading" width="300" height="200" class="size-medium wp-image-1296" />[/caption]</p>
+<p>More importantly, this tends to lead to teams begging their product owners to prioritize debt stories.  This is not a fair thing to ask your product owner to do.  He or she does not care about technical debt, all they can see is features and users.  Start telling them about how the database tables are designed in a way that causes too many joins per page load and you'll find their eyes start glazing over.</p>
+<p>Customers and product owners have no reason to care about debt.  <strong>Debt is your problem, not theirs</strong>.  Even if a customer has a strong technical background, asking them to prioritize debt stories is not fair to them.  You are taking <em>your</em> responsibility of managing your codebase's debt and making it <em>their</em> responsibility.  It's a dick move.</p>
+<p>Product owners and developers both have insight into the overall product and it's features.  But <em>only</em> developers have insight into the code.  The product is everyone's job, but the <strong>code</strong> is your job.  Nobody else is going to make sure the code is clean, that's <strong>your team's responsibility</strong>.</p>
+<h2>Mistake 2: Explain To The Customer/Product Owner</h2>
+<p>Even if you don't beg your customers to let you schedule a tech debt card, shouldn't you still explain it to them?  <strong>No.</strong></p>
+<p>Your customers and product owners do not care, nor should they.  Not only should they not have the responsibility hoisted upon them to solve your tech debt woes, but they shouldn't even be made aware of when you're doing it.  Frankly, it's none of their damn business.</p>
+<p>"But because we want to address debt, we'll be delivering a feature later than we promised, shouldn't we tell them?" you may ask.  Yes, the very instant that you know something will not be delivered when you said it would, you should communicate that to everyone expecting it.  But don't explain why in any more detail than "we needed to address some problematic areas of the system."  </p>
+<p>If you find yourself explaining the details of the problem, you're justifying it.  You're implicitly asking the customer to approve of your decision to address the debt.  You do not need to seek their approval.</p>
+<p>[caption id="attachment_1273" align="alignleft" width="300" caption="Trust is essential."]<img src="assets/prescription-300x300.jpg" alt="" title="Doctor" width="300" height="300" class="size-medium wp-image-1273" />[/caption]</p>
+<p><strong>Software developers are like doctors, not mechanics.</strong>  When your mechanic tells you that you need to fix <em>X</em>, <em>Y</em>, and <em>Z</em>, you may ask for details about each fix so that you can say "well, it sounds like I need <em>X</em> and <em>Z</em>, but not <em>Y</em>."  This is because there is no trust in the mechanic/customer relationship, people often assume their mechanic is trying to rip them off.  </p>
+<p>When your doctor, on the other hand, tells you to take <em>X</em> and <em>Y</em> medication, the level of detail you ask for is much, much lower.  "It will help your liver."  Well, okay then.  We <strong>trust</strong> our doctors, so we know when they tell us to do something that it's for our own good.  Software developers need to be trusted by the organization in exactly the same way.  If we say we needed to work on some debt, the organization should assume that we're doing it for their own good and not farting around on YouTube all day.</p>
+<p>Even more importantly, your feature delivery shouldn't slip because of addressing debt in the first place.  <strong>You should be building debt work into your estimates.</strong>  When you have to provide an estimate for some piece of work, you should realize that you will want to address some debt and increase your estimate accordingly.</p>
+<p><strong>Doing the work correctly implies fixing the debt associated with it</strong>, and it's not <em>done</em> unless you have done so.  So when you asked when it will be <em>done</em>, you should keep in mind that some of the time spent will be addressing relevant debt.  Even if you can't think of any debt at the time of estimation, it's a good bet that there will be <em>some</em> refactoring you want to do to improve things.  Assume it to be there, and estimate accordingly.</p>
+<p>If you feel like this is "padding your estimates" then it's a safe bet you are planning your work out <strong>at capacity</strong>.  You are probably scheduling the maximum possible amount of work you can imagine getting done, so that your team is busy 100% of the time.  <strong>This is stupid</strong>.  Your plan should have slack built into it to address potential debt as well as unforeseen events such as illness or server explosions.  Spinning at 100% is a surefire way to burn out.  Relax, slow down, build a little flexibility into your schedule.  Start low, and if you find that week after week you're pulling in extra work, THEN you can increase the amount of work you schedule.  Starting high and reducing as needed never works, because you feel like you're disappointing your organization, so you stay at 100% no matter what.</p>
+<p>Build slack into your schedule and your estimations.  The worst thing that happens is that you were wrong, meaning you deliver your feature earlier than you promised.  <strong>Under-promise, over-deliver</strong>.</p>
+<h1>Summary</h1>
+<p>For the TL;DR crowd:</p>
+<ul>
+<li>The first step to paying off your technical debt is to stop creating it.</li>
+<li>The next step is to prioritize existing debt, ignoring everything that isn't top-priority.</li>
+<li>Finally, start attacking it.  Maintaining the health of the codebase is your job, and yours alone.</li>
+<li>Don't schedule cards or stories to deal with debt.  Just deal with it.</li>
+<li>Don't ask permission or even tell the rest of the business.  They don't care.  They are assuming you're creating a healthy system as part of your job, make them correct in that assumption.</li>
+<li>The key to attacking technical debt is to build it into your estimates.  The work can't be done unless you address its relevant debt.</li>
+</ul>
+<p>[caption id="attachment_1275" align="alignright" width="300" caption="This is why they hired you even if they don't know it."]<img src="assets/programmer-300x228.jpg" alt="" title="Programmer" width="300" height="228" class="size-medium wp-image-1275" />[/caption]</p>
+<p>This is one of those solutions that's so obvious it's easy to miss.  It's not always easy to slow down, or deliver features later than you "could get them done" (for a completely incorrect definition of the word "done"), because everyone wants to make the business happy.</p>
+<p>Making the business happy now at the expense of making them miserable later is not how a professional team operates.  Software development is a long game, not a short one, because software spends one hell of a lot longer being maintained than it spends being initially developed.</p>
+<p>Nobody is going to maintain the internal health of the codebase other than you, nor should anyone else be expected to.  Make no apologies for doing your job well.</p>

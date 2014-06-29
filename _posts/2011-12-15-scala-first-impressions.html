@@ -1,0 +1,87 @@
+---
+layout: post
+title: Scala First Impressions
+categories:
+- Programming
+tags:
+- functional
+- languages
+- programming languages
+- scala
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+  _syntaxhighlighter_encoded: '1'
+  dsq_thread_id: '605272874'
+author:
+  login: air0day
+  email: blog@air0day.com
+  display_name: Rod Hilton
+  first_name: Rod
+  last_name: Hilton
+---
+<p>A few months ago, my co-workers and I converted a central part of our codebase from Java and Groovy into <a href="http://www.scala-lang.org/">Scala</a>.  Though I am, by no means, a Scala expert at this point, I wanted to share some of my initial thoughts on the programming language.</p>
+<p>Writing this blog post is probably a mistake.  A few years ago I shared <a href="http://www.nomachetejuggling.com/2007/09/10/language-marathon-first-impressions-of-ruby-python-and-c/">my thoughts on Ruby</a> after a similar amount of time using it.  When I went back and re-read that post to get the link for this one, I was stunned.  I don't even remember disliking Ruby at any point.  <strong>Today, Ruby is one of my favorite programming languages</strong>, and the tool I reach for most readily for almost any project outside of work.  I still love Python as I did in that post, but my view of Ruby has, apparently, completely changed.</p>
+<p>Nonetheless, I have some thoughts on Scala and because I have a blog, I suffer from the delusion that there are people who give a shit what I think about it.  </p>
+<p>As with any "first impressions" post, it's entirely possible I will literally discover something that invalidates my complaints tomorrow (maybe even in a comment on this post), so take this with a grain of salt.</p>
+<p><!--more--></p>
+<h1>What's Bad?</h1>
+<h2>Compilation Is Slow</h2>
+<p>Our Scala codebase is quite large, divided into many different modules.  At the moment, we have over 57,000 lines of Scala code in a series of modules that make up a central Common Services Tier, which is nothing to shake a stick at.  One observation about using Scala in this way is that compiling and running the Scala code takes a very, very long time.  Far longer than with Java or even Groovy.</p>
+<p><img src="assets/scala_logo-e1323974677125-300x83.png" alt="" title="scala_logo" width="300" height="83" class="alignright size-medium wp-image-1777" /></p>
+<p>I am aware of the existence of the <a href="http://www.scala-lang.org/docu/files/tools/fsc.html">Fast Scala Compiler</a>, which offers a substantial speed improvement.  However, while I was able to get FSC working in IntelliJ without an issue, getting Gradle to use it to build our project has proven surprisingly difficult.  I've followed the tutorials that are available, but ultimately I failed.</p>
+<p>And no, the Scala Build Tool is not an option.  It simply doesn't offer the kind of power that we require and are getting out of Gradle.</p>
+<p>It's not like compilation is taking hours or anything, but it's a minute or so longer than it ought to be for the amount of code, which adds up to a lot of time.  It's much faster to compile and run Scala from IntelliJ because I got FSC working in it.  As a result, I rarely have to compile from command-line, but when I do I wish it was faster.</p>
+<h2>Interop Is A Bitch</h2>
+<p>We didn't convert to Scala whole-hog, and I dont think we intend to.  Most of our client-facing sites are written with Grails, with the controllers calling a number of services written in Java and Groovy.  </p>
+<p>Using Java or Groovy from Scala is a breeze.  Using Java and Groovy from each other are also a breeze.  Using Scala from Java or Groovy pretty much makes me want to drink a pitcher of boiling lava.</p>
+<p>I won't pretend to understand the design decisions that went into Scala, but I'm definitely annoyed at the fact that <code>scala.List</code>s do not implement the <code>java.util.List</code> interface.  It seems to me that Scala could have had the full benefit of using its own lists within the Scala language while still implementing that trivially-small interface.  Doing so would have made it so much easier to at least pass Scala's lists to Java or Groovy methods that are expecting a <code>java.util.List</code> or a <code>java.util.Collection</code>. I've had to import <code>scala.collection.JavaConversions</code> into more .java and .groovy files than I care to recount.</p>
+<p>Of course, this wouldn't solve the problem of passing Java <code>List</code>s into Scala, which resembles this beauty:</p>
+<p>[java]<br />
+scala.collection.JavaConversions.asScalaBuffer(existing).toList()<br />
+[/java]</p>
+<p>Using <code>trait</code>s, Scala can give you something resembling multiple inheritance.  This is a powerful addition to the toolbox, but it also makes classes surprisingly difficult to use (and, in particular, mock) in Java or Groovy.  As a result, we tend to use this powerful ability sparingly, which is a shame.</p>
+<h2>It's Young</h2>
+<p>Scala is so young that there isn't much in the way of idiomatic guidelines for it.  <strong>I don't have a good grasp on Scala best practices or patterns.</strong></p>
+<p><img src="assets/eff_java-239x300.jpg" alt="" title="eff_java" width="239" height="300" class="alignleft size-medium wp-image-1782" /></p>
+<p>A lot of the Scala code I write I have little confidence in, in terms of design.  When I write good Java or Groovy code, I know it's good, and part of that is I've read so much about those languages that I know what most other developers consider easy to understand.</p>
+<p>Java has been around so long that the Java community has learned what kinds of things you can do that make code hard to maintain, and countless books have been written on how to avoid those things.  Most of those tips extend to Groovy as well, but not to Scala.  In fact, some of those patterns and practices seem like antipatterns in Scala.</p>
+<p>Whatever book is the "Effective Java" of Scala, I'd love to read it (though I don't think it yet exists).  A coworker told me that it was unnecessary since "Scala is effective Java."  What a <a href="http://twitter.com/#!/chris_wood">douche</a>.</p>
+<h2>The APIs Can Be Ugly</h2>
+<p>I've argued with Java developers before about operator overloading.  Many feel like operator overloading leads to ugly APIs, but I've always said that more power is better, and developers can simply have the discipline not to overuse a feature like operator overloading.  <strong>Scala has convinced me I'm probably wrong.</strong></p>
+<p>We are heavily using the Scala library <a href="http://dispatch.databinder.net/">Dispatch</a> in our code.  Here are some methods defined on the class <a href="http://databinder.net/dispatch-doc/#dispatch.RequestVerbs">RequestVerbs</a>:</p>
+<ul>
+<li><code>/</code> - Append an element to the request path.</li>
+<li><code>&lt;&amp;</code> - Combine this request with another</li>
+<li><code>&lt;:&lt;</code> - Add headers to the request.</li>
+<li><code>&lt;&lt;</code> - POST the parameter.</li>
+<li><code>&lt;&lt;&lt;</code> - PUT the parameter.</li>
+<li><code>&lt;&lt;?</code> - Add query parameters.</li>
+<li><code>&lt;&amp;</code> - Combine this request with a handler.</li>
+<li><code>&gt;\</code> - Set the character set.</li>
+</ul>
+<p>This is terrible. It's impossible to write <a href="http://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882">clean code</a> against this API, because there is no way to express intent.  <strong>Any developer reading the code will have to pull up the API to understand what is happening</strong> unless he or she is intricately familiar with the library already.</p>
+<p>It would be one thing if this object had regular, English methods and the overloaded operators called them (or vice versa), but that's not the case.  There's no way to call these methods without invoking these random-seeming combinations of symbols.  The code ends up looking like <a href="http://www.muppetlabs.com/~breadbox/bf/">Brainfuck</a>.</p>
+<p>Rather than seeing Dispatch as an embarrassing wart on the Scala community, it seems to be generally highly regarded, <a href="http://www.scalafied.com/84/one-liner-for-a-urls-last-modified-header-as-date">even praised</a> for its abysmal API.  There seems to be a large constituency of Scala developers who are enamored with operator overloading, seemingly without regard to the adage "just because you <em>can</em> do something, that doesn't mean you <em>should</em>."</p>
+<h1>What's good?</h1>
+<h2>The Paradigms Are Great (But Are They Exclusive?)</h2>
+<p>There is no doubt that our Scala code is highly functional, emphasizing composing functions together rather than declaring steps.  I love functional code, I think it reads much more clearly than iterative code, so <strong>this is a huge win</strong>.  Our objects are always immutable and much more thread-safe.</p>
+<p>But are we doing this because of Scala? Scala may <strong>encourage</strong> immutability, but it does not <strong>demand</strong> it. You can declare variables as <code>var</code>s even though you’re encouraged to declare them as <code>val</code>s. Our team is following functional coding practices because we chose to, not because Scala is enforcing it.</p>
+<p>I’ve been making my Java classes immutable and relying on the <a href="http://en.wikipedia.org/wiki/Builder_pattern">Builder Pattern</a> for object construction for years. And I’ve been writing functional-style code using <a href="http://code.google.com/p/guava-libraries/">Google Guava</a> in Java for about as long, which is even easier with Groovy.</p>
+<p>These paradigms have been part of my coding practices for a while, and since we’re only using them in Scala because we agreed to do so (and could have just as easily not done so), couldn’t we have agreed to do them in Java or Groovy as well? </p>
+<p><a href="http://clojure.org/">Clojure</a>, I’d understand. Clojure pretty strongly enforces the functional paradigm, it’s not a matter of choice really. But since Scala doesn’t, at least not as much, I’m not really sure I know what Scala is buying us, though I suppose there are some particular functional practices that Scala makes much easier.</p>
+<h2>It Keeps Idiots Out</h2>
+<p>The biggest advantage of Scala, at least so far, is that it keeps a certain type of coder out of the codebase.  Groovy did not accomplish this, since Java code can compile as Groovy with minimal modification.</p>
+<p>[caption id="attachment_1785" align="alignright" width="300" caption="GTFO."]<img src="assets/idiot-300x216.jpg" alt="" title="idiot" width="300" height="216" class="size-medium wp-image-1785" />[/caption]</p>
+<p>Because Scala is a bit more cutting-edge, and involves some pretty serious shifts in thinking, the kinds of coders who are capable of doing their job with Java but have no interest in learning new languages have little interest in understanding Scala well enough to make changes to Scala code.  Most half-assed attempts to do so are met with compilation failures.</p>
+<p>Basically this boils down to Paul Graham's <a href="http://www.paulgraham.com/pypar.html">Python Paradox</a>, in which he claims that the caliber of developers who know Python will, on average, be better than the typical Java programmer, which creates an advantage to using Python in your project that is completely separate from the capabilities of the language itself.</p>
+<p>I feel kind of bad including this as an advantage, because it's esssentially "functional programming is difficult to learn, so it excludes dumb people," but it's kind of true.  It's had a positive impact, and I appreciate Scala for this, even though it's a backhanded benefit.</p>
+<h1>Conclusions</h1>
+<p>Though I list more cons than pros, I'm enjoying Scala.  I like learning new languages and Scala has a lot of movement in the JVM ecosystem, so it's nice that I'm not behind my peers in learning it.</p>
+<p>I also like that my team is writing immutable, thread-safe, highly functional code.  Personally, I think we could be doing that in Java or Groovy or any other language really, with a little added discipline.  That said, to some extent if Scala is what's making everyone do that, then Scala is good thing, in a "the ends justify the means" sort of way.</p>
+<p>Overall, I view Scala very much how I view C++.  C++ is <a href="http://damienkatz.net/2004/08/why-c-sucks.html">not really a good language</a> at all, but it was of great historical importance.  C++ supplied a Object-Oriented Programming layer on top of C, which allowed iterative-style C programmers to transition to OOP at their own pace.  Not a great language, but a necessary compromise to help the transition.  I view Scala in much the same way, as a transitional language to help get professional Java programmers more comfortable with functional programming.  Today's Scala programmers are tomorrow's Clojure or Haskell programmers, and in that sense Scala serves a very valuable purpose.</p>
+<p>I'm definitely still getting comfortable with the language, and I can easily see myself viewing it more and more favorably as time goes on, but <strong>I'm not quite at a point where I'm sure it's buying me much</strong>.  I love functional programming and always have, and Scala <b>does</b> encourage me to do so, which is nice.  I also love <a href="http://www.scala-lang.org/node/120">Pattern Matching</a>, that's a badass feature I could see myself eventually seeing as indispensable.</p>
+<p>A lot of my issues with the language (compilation speed, lack of best practices) are due largely to how young the language is, so they're likely to improve over time as well.  In a way, even my complaint about the ugly APIs is due to the age of the language: if it were older there would probably be a decent alternative to Dispatch.</p>
+<p>Overall, I'm excited to continue using Scala and see it improve over time.</p>

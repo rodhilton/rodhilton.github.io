@@ -1,0 +1,55 @@
+---
+layout: post
+title: Java 5 Global Exception Handling
+categories:
+- Programming
+tags:
+- code
+- java
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+  pvc_views: '2'
+  syntaxhighlighter_encoded: '1'
+  dsq_thread_id: '606605861'
+author:
+  login: air0day
+  email: blog@air0day.com
+  display_name: Rod Hilton
+  first_name: Rod
+  last_name: Hilton
+---
+<p>Ever since Java 5 came out, many articles and blog posts have been written talking about the new features.  Just recently, however, I came upon a feature new to Java 5 that I had never seen mentioned in any of the articles I read: global exception handling.</p>
+<p><!--more--></p>
+<p>There is a way to set a default handler for any exceptions that are thrown which are not caught.  This is very handy for adding handlers for <code>RuntimeException</code>s, since they are unchecked and the compiler will not tell you to catch them.</p>
+<p>For example, you may want to write a handler that will catch any <code>NullPointerException</code>, and e-mail the development team to let them know someone has made a coding mistake.  There are many useful purposes for this feature.  It should also be noted, however, that it breaks the idea of capturing an exception as close to the point of origin as possible.  You should try to keep exception handling close to the exception, so that you have as much contextual information as possible to deal with the error and recover from it gracefully.</p>
+<p>There is no denying, though, that we all write empty catch blocks, or catch blocks that print a trace to a log file and ignore it.  For those, this is handy.</p>
+<p>Below is an example that shows a simple default handler that catches an exception in the application, as well as one in an unrelated child thread.</p>
+<p>[java]<br />
+//ExceptionHandlerExample.java<br />
+package com.air0day.machetejuggling;</p>
+<p>public class ExceptionHandlerExample {<br />
+  public static void main(String[] args) throws Exception {</p>
+<p>    Handler handler = new Handler();<br />
+    Thread.setDefaultUncaughtExceptionHandler(handler);</p>
+<p>    Thread t = new Thread(new SomeThread(), &quot;Some Thread&quot;);<br />
+    t.start();</p>
+<p>    Thread.sleep(100);</p>
+<p>    throw new RuntimeException(&quot;Thrown from Main&quot;);<br />
+  }</p>
+<p>}</p>
+<p>class Handler implements Thread.UncaughtExceptionHandler {<br />
+  public void uncaughtException(Thread t, Throwable e) {<br />
+    System.out.println(&quot;Throwable: &quot; + e.getMessage());<br />
+    System.out.println(t.toString());<br />
+  }<br />
+}</p>
+<p>class SomeThread implements Runnable {<br />
+  public void run() {<br />
+    throw new RuntimeException(&quot;Thrown From Thread&quot;);<br />
+  }<br />
+}<br />
+[/java]</p>
+<p>This example uses <code>setDefaultUncaughtExceptionHandler</code>, which sets it globally for all <code>Thread</code>s (your main application runs as a <code>Thread</code>).  There is also <code>setUncaughtExceptionHandler</code>, which is not a static method and applies to a specific thread.</p>

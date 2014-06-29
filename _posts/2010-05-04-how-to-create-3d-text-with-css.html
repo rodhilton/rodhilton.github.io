@@ -1,0 +1,118 @@
+---
+layout: post
+title: How To Create 3D Text (The Glasses Kind) With CSS
+categories:
+- Programming
+tags:
+- 3d
+- css
+- effects
+- howto
+- text
+- tricks
+- web
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+  syntaxhighlighter_encoded: '1'
+  dsq_thread_id: '605963160'
+author:
+  login: air0day
+  email: blog@air0day.com
+  display_name: Rod Hilton
+  first_name: Rod
+  last_name: Hilton
+---
+<p>Recently, I wanted to create some Red/Blue 3D text.  After a great deal of searching on the internet, I discovered that very few people have actually done this, and those that have seemed to rely on creating a duplicate of the content.  Creating a duplicate copy of the text wouldn't work for me, since my text used a great deal of formatting.</p>
+<p>Through hours of trial and error, I found something that seems to work pretty well.  Here are the caveats:</p>
+<ol>
+<li>It does not work in Internet Explorer</li>
+<li>It requires CSS3</li>
+<li>It uses alpha colors, which means it's a bit more CPU-intensive than text normally is.</li>
+</ol>
+<p>Otherwise, it seems like a good solution.  This works in Firefox for Linux and Mac and Chrome for Linux and Mac.  It does not work in IE at all, and it doesn't work in Safari (last time I checked).</p>
+<p>Here it is:</p>
+<div style="font-size: 250%; text-align: center; border: 1px solid black; padding: 1em; margin: 1em; text-shadow: .5em 0 .2px rgba(0%, 100%, 100%, 0.6), -.5em 0 .2px rgba(100%, 0%, 0%, 0.6); color: rgba(40%, 40%, 40%, 0.0);">
+This should be in 3D!
+</div>
+<p><!--more--></p>
+<h1>How It Works</h1>
+<p>Let's start with some basic text in a div:</p>
+<p>[html]<br />
+&lt;style&gt;<br />
+.threed {<br />
+  font-size: 250%;<br />
+  text-align: center;<br />
+  border: 1px solid black;<br />
+  margin: 1em;<br />
+  border: 1em;<br />
+}<br />
+&lt;/style&gt;</p>
+<p>&lt;div class=&quot;threed&quot;&gt;<br />
+Hello world!<br />
+&lt;/div&gt;<br />
+[/html]</p>
+<div style="font-size: 250%; text-align: center; border: 1px solid black; padding: 1em; margin: 1em;">
+Hello world!
+</div>
+<p>First, you can apply a text-shadow using a CSS3 property called <a href="http://www.w3.org/Style/Examples/007/text-shadow">text-shadow</a> like so:</p>
+<p>[css]<br />
+.threed {<br />
+  font-size: 250%;<br />
+  text-align: center;<br />
+  border: 1px solid black;<br />
+  margin: 1em;<br />
+  border: 1em;<br />
+  text-shadow: .5em 0 .2px rgba(0%, 100%, 100%, 0.6)<br />
+}<br />
+[/css]</p>
+<div style="font-size: 250%; text-align: center; border: 1px solid black; padding: 1em; margin: 1em;   text-shadow: .5em 0 .2px rgba(0%, 100%, 100%, 0.6)">
+Hello world!
+</div>
+<p>Here we put a text-shadow on our text that is offset .5em horizontally and 0em vertically.  It has a 'blur' of .2px, which means virtually none at all.  The text color is a cyan, at .6 alpha transparency.</p>
+<p>The text-shadow element actually allows us to specify multiple text-shadows, so we can just add a second shadow now, this one pink, still .6 alpha transparency, but offset .5em to the LEFT instead of the right (using a negative offset)</p>
+<p>[css]<br />
+.threed {<br />
+  font-size: 250%;<br />
+  text-align: center;<br />
+  border: 1px solid black;<br />
+  margin: 1em;<br />
+  border: 1em;<br />
+  text-shadow: .5em 0 .2px rgba(0%, 100%, 100%, 0.6), -.5em 0 .2px rgba(100%, 0%, 0%, 0.6);<br />
+}<br />
+[/css]</p>
+<div style="font-size: 250%; text-align: center; border: 1px solid black; padding: 1em; margin: 1em; text-shadow: .5em 0 .2px rgba(0%, 100%, 100%, 0.6), -.5em 0 .2px rgba(100%, 0%, 0%, 0.6);">
+Hello world!
+</div>
+<p>The last thing we've got to figure out how to do is hide the black text itself.  This is actually easy, since you can apply alpha transparency to any color using CSS3.  In this case, we're simply going to make the text fully transparent.</p>
+<p>[css]<br />
+/* 3D CSS Effect: www.nomachetejuggling.com */<br />
+.threed {<br />
+  font-size: 250%;<br />
+  text-align: center;<br />
+  border: 1px solid black;<br />
+  margin: 1em;<br />
+  border: 1em;<br />
+  text-shadow: .5em 0 .2px rgba(0%, 100%, 100%, 0.6), -.5em 0 .2px rgba(100%, 0%, 0%, 0.6);<br />
+  color: rgba(40%, 40%, 40%, 0.0);<br />
+}<br />
+[/css]</p>
+<div style="font-size: 250%; text-align: center; border: 1px solid black; padding: 1em; margin: 1em; text-shadow: .5em 0 .2px rgba(0%, 100%, 100%, 0.6), -.5em 0 .2px rgba(100%, 0%, 0%, 0.6); color: rgba(40%, 40%, 40%, 0.0);">
+Hello world!
+</div>
+<p>This effect tends to work best for:</p>
+<ul>
+<li>Small font sizes</li>
+<li>Lots of text</li>
+<li>Normal weight (bold text looks bad)</li>
+</ul>
+<p>You can see this technique used in a lengthy parody of the movie Clash of the Titans <a href="http://www.the-editing-room.com/clash-of-the-titans.html">here</a>.</p>
+<h1>Degradation</h1>
+<p>This seems to degrade really well in Internet Explorer, which supports neither alpha transparency on text nor text-shadow.  As a result, it shows up as just plain black text.</p>
+<p>It degrades very poorly in Safari however, which supports alpha transparency on text but not text-shadows, meaning that the text is rendered invisible without the shadow, so it just shows up as a big blank box.</p>
+<h1>Improvements</h1>
+<p>I fiddled with a lot of different parameters to try to perfect this, and what you see here is as close as I was able to get.  The trick with 3D text is that you want the overlapping areas between the pink and cyan to be dark enough to show up for both eyes, the result of multiplying the cyan and pink colors together.  With the CSS, it's a bit lighter than I'd like, but it seems to do the job.</p>
+<p>I also tried to do it in a way that simply made the main color pink, with a single cyan shadow (and vice versa) but I found that, without that slight blur parameter (.2px), the colors didn't seem to blend quite as well, hurting the effect.</p>
+<p>If anyone out there figures out a way to improve this, please post a comment here with your tips.</p>

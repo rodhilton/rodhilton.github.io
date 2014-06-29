@@ -1,0 +1,55 @@
+---
+layout: post
+title: Moving One Git Repository Into Another As A Subdirectory
+categories:
+- Programming
+tags:
+- git
+- scm
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+  _syntaxhighlighter_encoded: '1'
+  dsq_thread_id: '606600648'
+author:
+  login: air0day
+  email: blog@air0day.com
+  display_name: Rod Hilton
+  first_name: Rod
+  last_name: Hilton
+---
+<p>I recently had to merge a number of independent projects into a larger project to enable a long-term project reorganization effort.  Since we're using Git for both projects, this was quite easy, but it required some investigating to figure out how to do it.</p>
+<p>So you have two projects, <code>old-project</code> and <code>new-project</code>.  You want to end up with a subdirectory inside of <code>new-project</code> called <code>old-project</code> with all of the code from <code>old-project</code>, and you want to preserve that project's history.</p>
+<p>Here's an overview of what we're going to do here, in the abstract:</p>
+<ol>
+<li>Get a local copy of the repository containing the project being pulled in</li>
+<li>Modify the local copy to move all of the files into a subdirectory</li>
+<li>Add the local copy as a fake "remote" to our larger project</li>
+<li>Pull the local "remote" in, thereby pulling the entire history along with it</li>
+</ol>
+<p>For the purposes of this demonstration, <code>old-project</code> is cloned at <code>/home/machete/old-project</code> and <code>new-project</code> is cloned at <code>/home/machete/new-project</code>.</p>
+<p>At the end of this, we want there to be a <code>/home/machete/new-project/old-project</code> with all of the commits from <code>old-project</code> intact.</p>
+<p><!--more--></p>
+<p>The way we're going to do this, it's going to completely overlay <code>old-project</code> on top of <code>new-project</code>, so first we need to adjust the directories inside of <code>old-project</code></p>
+<p>[bash]<br />
+cd /home/machete/old-project<br />
+mkdir old-project<br />
+mv !(old-project) old-project<br />
+git commit -a -m &quot;Preparing old project for move&quot;<br />
+[/bash]</p>
+<p>All we've done is move every file in the <code>old-project</code> project codebase into a subdirectory with the same name.  So you've now got <code>/home/machete/old-project/old-project</code>.  Then this is committed, you should see in the commit that every single file change is a rename.</p>
+<p>This just moves all of the files in <code>old-project</code> into a subdirectory structure matching what we want to have inside of <code>new-project</code>, then makes a commit.</p>
+<p>Next we need to copy the history of this repository into <code>new-project</code>.  So we don't have to push our temporary move anywhere, we're going to add our local directory as a remote git repository, then pull its changes in.</p>
+<p>[bash]<br />
+cd /home/machete/new-project<br />
+git remote add temp /home/machete/old-project<br />
+git fetch temp<br />
+git merge temp master<br />
+git remote rm temp<br />
+[/bash]</p>
+<p>This pulls the entirety of old-project's history in.  This history includes a commit in which all files were moved into a subdirectory named <code>old-project</code>, so you're left with a subdirectory in <code>new-project</code> called <code>old-project</code>.</p>
+<p>Since we did a merge, we will have a new commit at HEAD that has two parents, one for the regular <code>old-project</code> codeline, and one for the old <code>new-project</code> codeline.</p>
+<p>That's it, you can push <code>new-project</code> anywhere and the next fetch will pull down all of <code>old-project</code>'s history.</p>
+<p>It's also a good idea to go back to your <code>old-project</code> and make a commit that deletes the entire old-project subdirectory, write a readme indicating the project has been pulled into <code>new-project</code> and commit and push that.</p>

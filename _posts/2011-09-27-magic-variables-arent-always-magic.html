@@ -1,0 +1,90 @@
+---
+layout: post
+title: Magic Variables Aren't Always Magic
+categories:
+- Programming
+tags:
+- code
+- discipline
+- engineering
+- practices
+- rules
+status: publish
+type: post
+published: true
+meta:
+  _syntaxhighlighter_encoded: '1'
+  _edit_last: '1'
+  dsq_thread_id: '605371630'
+author:
+  login: air0day
+  email: blog@air0day.com
+  display_name: Rod Hilton
+  first_name: Rod
+  last_name: Hilton
+---
+<p>Software development is a strange beast sometimes.  Despite the fact that it is <a href="http://www.artima.com/intv/garden.html">not predictable enough</a> or <a href="http://www.cs.usfca.edu/~parrt/doc/software-not-engineering.html">constant enough</a> to qualify as true engineering, it's often referred to as Software Engineering anyway.</p>
+<p>There are no rules in software development.  Some suggest the existence of <a href="http://www.ibm.com/developerworks/websphere/library/techarticles/0306_perks/perks2.html">best practices</a>, but really there are only guidelines and recommendations.</p>
+<p>Despite these truths, there are a number of alleged "rules" in software development, often suffixed with "<a href="http://en.wikipedia.org/wiki/Considered_harmful">considered harmful</a>" as a reference to Edsger Dijkstra's famous "<a href="http://www.cs.utexas.edu/users/EWD/ewd02xx/EWD215.PDF">Go To Statement Considered Harmful</a>" essay.  I want to look at one of these rules a bit more closely.<br />
+<!--more--></p>
+<h1>Magic Constants Considered Harmful</h1>
+<p>"Magic Constants," also often referred to as "Magic Numbers" break what is regarded as one of the oldest "rules of programming", dating back as far as the manuals for COBOL and FORTRAN in the 60's.</p>
+<p>Magic Numbers are numbers that are used and re-used in code.</p>
+<p>[c gutter="false"]<br />
+salePrice = 0.90 * regularPrice;<br />
+[/c]</p>
+<p>Above is a simple example.  The usage of <code>0.90</code> is generally regarded as bad.  Instead it should be replaced with something like this:</p>
+<p>[c gutter="false"]<br />
+const double DISCOUNT_PERCENT = 10;<br />
+const double DISCOUNT_FACTOR = 1 - (DISCOUNT_PERCENT / 100);</p>
+<p>// ...</p>
+<p>salePrice = DISCOUNT_FACTOR * regularPrice;<br />
+[/c]</p>
+<p>It's hard to argue with this reasoning.  The second code snippet is easier to read and easier to modify.  In this case, this seems like a no-brainer.  This is how "rules" are created.</p>
+<h1>Why Is It Harmful?</h1>
+<p>A lot of times, once a best practice or a rule becomes codified in the industry, it stops being questioned.  The <b>why</b> is forgotten over time, and it just becomes a rule that everyone follows blindly.  Sometimes it's helpful to remind ourselves of the reasons for a best practice, to avoid becoming <a href="http://en.wikipedia.org/wiki/Cargo_cult_programming">Cargo Cult Programmers</a>.</p>
+<p>Why is the first code snippet bad?  </p>
+<ol>
+<li><b>It has no name</b> - It's not immediately clear to the reader of the code why the 0.90 is there.  The variable <code>salePrice</code> gives a good hint, but it takes a bit of inferring.  The second snippet labels the value clearly as <code>DISCOUNT_FACTOR</code>, which is much clearer.</li>
+<li><b>It's reused</b> - Though not directly reused in the example, it's easy to imagine repeated usages of the <code>0.90</code> value.  This repetition is less than ideal, particularly because...</li>
+<li><b>It can change</b> - If we start offering a 15% discount instead of a 10% discount, we'd have to find every usage of <code>0.90</code> and replace it with <code>0.85</code>.  It's much easier to change it in just the one place.</li>
+</ol>
+<h1>Don't Go Overboard</h1>
+<p>Not too long ago, I came across some code that made me realize that this rule is perhaps followed to the letter without being followed in spirit.</p>
+<p>The code has been slightly modified to protect the guilty.</p>
+<p>[java]<br />
+class Example {<br />
+  private static final String FORWARD_SLASH=&quot;/&quot;;</p>
+<p>  public String getUrlPath() {<br />
+    return FORWARD_SLASH + &quot;books&quot; + FORWARD_SLASH + &quot;all&quot;;<br />
+  }<br />
+}<br />
+[/java]</p>
+<p>When I first came across this code, my instinct was to replace it with a simple</p>
+<p>[java firstline="5"]<br />
+    return Joiner.on(FORWARD_SLASH).join(&quot;books&quot;, &quot;all&quot;);<br />
+[/java]</p>
+<p>This seemed so reasonable to me at first, plus I get a nerdection every time I get to use anything in <a href="http://code.google.com/p/guava-libraries/">Google Guava</a>.</p>
+<p>But then I thought about it.  This is following the letter of the "don't use Magic Constants" rule, but is it following the spirit of it?</p>
+<p>The <code>"/"</code> has been extracted to a constant, so now it has a name.  But is the name descriptive?  No, the name is simply <code>FORWARD_SLASH</code>, which is about as descriptive as if in the first example we had simply done <code>const double POINT_NINE_ZERO = 0.90;</code>.</p>
+<p>The constant is clearly being used as part of an HTTP request of some type, so how likely is it that the next version of HTTP would use a new character for path separation?  It's beyond unlikely, so the fact that this constant is easy to change doesn't seem to buy anything.</p>
+<p>It's also significantly more to type and read. <code>return "/books/all"</code> is 35 fewer characters and much easier to read.</p>
+<p>So what about when the constant is reused?  That's actually the most significant problem of all.</p>
+<p>Imagine a second class, <code>Example2</code>:</p>
+<p>[java]<br />
+public class Example2 {<br />
+  private static final String FORWARD_SLASH = &quot;/&quot;;</p>
+<p>  public String getPath() {<br />
+    return FORWARD_SLASH + &quot;directory&quot; + FORWARD_SLASH + &quot;file.txt&quot;;<br />
+  }<br />
+}<br />
+[/java]</p>
+<p>Someone may notice the repeated constant and pull them both into a <code>Constants</code> class, using <code>Constants.FORWARD_SLASH</code> in both <code>Example</code> and <code>Example2</code>.</p>
+<p>Now we're really guarding against change.  If that changes, we can fix both classes by changing only <code>Constant</code>!</p>
+<p>Except, now you're really screwed.  Even on the off-chance that HTTP changes its path separator character, or in the more likely case that you move your deployment environment from Unix to Windows, you haven't saved yourself any time.  Why?  <b>Because these won't both change at the same time</b>.</p>
+<p>If that happened happened, you'd have to re-split the usages of these constants so that you were only changing, say, the file path separators but not the URL path separators.  You actually have to modify even more code, not less.  It would be far easier to have used <code>"/"</code> in both files, then done a simple regex replace on the relevant files in the unlikely event that the character had to change.</p>
+<h1>Don't Follow Rules Blindly</h1>
+<p>The code example I've provided wasn't made up for the post, it's real.  That means that some of my peers felt like it would be bad code to have simply used the forward slash character inline.  There's no way around it, this comes from internalizing rules without internalizing reasons.</p>
+<p>I don't mention this code because I'm specifically bothered by overuse of the "Extract Constant" IntelliJ shortcut, or because I want to pick on old co-workers (though it is fun).  I mention it because, for me, it exemplifies the danger (and hilarity) of following "rules" without giving them due consideration.</p>
+<p>Any time you find yourself doing something because it's the "right" way, stop and make sure you understand the reasons for that best practice.  Take two seconds and make sure those reasons still apply, otherwise you'll wind up writing code that might embarrass you later on.</p>
+<p>Your code should strive to maximize readability and maintainability.  If that goal is at odds with the occasional "rule", break the rule.  </p>

@@ -1,0 +1,8 @@
+name: Absolutely No Machete Juggling
+markdown: kramdown
+highlighter: null
+
+permalink: /:year/:month/:day/:title/
+
+kramdown: 
+  toc_levels: "1,2,3" 

@@ -1,0 +1,48 @@
+---
+layout: post
+title: Responsibility Of Data Warehouses
+categories:
+- Technology
+tags: []
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+  dsq_thread_id: '606605783'
+author:
+  login: air0day
+  email: blog@air0day.com
+  display_name: Rod Hilton
+  first_name: Rod
+  last_name: Hilton
+---
+<p>Imagine that you are going on a long vacation, and you ask a good friend to take care of your cat while you're away.  Your cat seems pretty content with your home, so you give your friend the key to your apartment so he can come over once every few days and refill the water bowl, empty litter, etc.</p>
+<p>One day, though, your friend forgets to lock your front door when he leaves.  The next day, someone enters your home and steals your television, your jewelry, your computer, and everything else of value.  </p>
+<p>Who is to blame?</p>
+<p>Obviously, we blame the robber.  But do we blame the friend?  I think most of us would blame the friend, as it was his responsibility to lock the door, and it was this failure to do so that caused your items to be stolen.  We may feel a bit bad yelling at this friend (since we asked him to come over) but in the end we would still blame him.</p>
+<p>Watch how this problem changes when you catch the robber, though.  Right now, if you imagine yourself in this scenario, you're angry with your friend.  Change the scenario to imagine the robber is caught the next day and all of your stuff is returned.  Now, likely, you're angry with the robber.  You don't feel any animosity toward the friend at all, yet his role in this is completely unchanged.  He still should have locked the door, he still failed to do so, and he still allowed a stranger into your home as a result.  Why are we less angry with him in this scenario?  It is not because he is less responsible, but because we now have someone else to be more angry with.  The robber is the MOST responsible person for the robbery, your friend a close second.  Because of this, when you can hold the most responsible person accountable, you are likely to ignore the role played by the next-most-responsible individual.</p>
+<p>Next time you go on vacation, however, you are likely to not ask this same friend to take care of your cat, because you still know he is partially responsible for this security breach.</p>
+<p><strong>Data Warehouses</strong></p>
+<p>Let's change the scenario one more time.  Instead of a friend, imagine the person in your home has not been invited.  Imagine that the way things really work is that, whenever you buy a home, or a car, or a television, or even a pizza, you have to pay with money as well as part of your housekey.  It's not the whole housekey, but it's a chunk of the housekey - and each purchase requires a different chunk of the key.  You are trusting every company you make a purchase from in this way not to do anything with the portion of the key, but you're not too worried; after all, it's only part of the key.</p>
+<p>Then all of those companies turn around make a copy of your portion of the key, then send the portion to another company, which we'll call Acxiom.  Eventually Acxiom collects enough portions of your key that they can form your entire housekey, which they then use to enter your home when you aren't there.  They don't steal anything or take anything, but they do take notice of your home, your car, your television, and your empty pizza boxes.  </p>
+<p>This allows them to figure out what kind of thing you might be likely to buy next if asked. In your case, based on the stuff in your house, it seems likely that you'd be willing to purchase a DVD Player if given a little push.  Acxiom then tells Sony that you might want to buy a DVD Player, Sony pays them money to do so (giving Acxiom profit enough to keep collecting portions of housekeys) and then sends you a DVD Player catalog, or calls you on the phone to tell you about a great deal, or sends you an <a href="http://www.internetadsales.com/modules/news/article.php?storyid=9022">e-mail</a>.</p>
+<p>Now, I don't want to get into how annoying this entire business model is, or how Acxiom has no right to be entering your home, even <strong>if</strong> you had to give portions of housekeys to everyone from whom you made a purchase.  This post is not about how a company that does this shouldn't exist.</p>
+<p><em>This post is about what happens when that company leaves your door unlocked.</em></p>
+<p><strong>Responsibility</strong></p>
+<p>Surely in this scenario, if Acxiom left your door unlocked, you would find Acxiom completely responsible.  After all, who the hell invited them in the first place?</p>
+<p>ChoicePoint (Acxiom's major competitor) had a data breach not too long ago, and it was held <a href="http://en.wikipedia.org/wiki/Choicepoint#Major_security_breaches">responsible and fined</a>.  Only a portion of the fine was actually given to the victims of the data breach (people whose identities were stolen), but the fine was still large.  We also hold the robber responsible in these cases, but we do not allow the responsibility of the robber to overshadow the responsibility of the person who left the door unlocked.  If anything, because we are placing so much trust in these kinds of companies, we hold the data company <b>more</b> responsible than the attacker.</p>
+<p>To that point, ChoicePoint was fined $15 million, and the attacker sentenced to 16 months in prison.</p>
+<p>Clearly we, as a society, said to ChoicePoint, "look, we aren't huge fans of you holding on to all of this data, but if you're going to do so, you had better damn well protect it."  ChoicePoint is responsible for the theft of its data, and we have sent them that message loud and clear, to the tune of 15 million dollars.  ChoicePoint invested tons of money in improving their security as a result.</p>
+<p>If you hold data and do not protect it adequately, it is your fault when it is stolen.</p>
+<p><strong>Acxiom's Breach</strong></p>
+<p>A few years ago, <a href="http://www.businessweek.com/ap/financialnews/D8NEA0OG0.htm">a man who had legitimate access to part of Acxiom's data broke into other Acxiom databases and gained access to a lot of information about various people.  He then sold some of this information to advertisers so they could launch an ad campaign using it</a>.</p>
+<p>He was caught, and much like when the robber was caught in the first scenario, that seemed to overshadow the fact that the breach happened in the first place.</p>
+<p>The article explains:</p>
+<blockquote><p>Prosecutors said Levine had permission to access part of Acxiom's database but that he used decryption software to obtain passwords and go beyond his authorized access. Data stolen included names, telephone numbers, street addresses and e-mail addresses, along with highly detailed demographic information.</p></blockquote>
+<p>If Levine used "decryption software to obtain passwords" to other databases, it means that the passwords were, first, stored in a place that they could be retrieved without authorization to do so and, second, were stored in a cryptographically reversible manner.  Passwords are usually stored as a one-way hash.  You type your password to be saved, and the software hashes it into a special code.  This code cannot be reversed to get back to the original password, but every time the password is hashed it yields the same code.  Next time you try to verify your identity, the software performs the same hash and compares the hash codes.  If they are equal, you must have typed the correct password.</p>
+<p>If an attacker gets access to these hash codes, they cannot reverse them to get back to the password.  This article indicates Levine did so, which indicates that the passwords we being stored in a way that allowed them to be decrypted.  This was Acxiom's mistake - they should not have stored passwords in this manner.</p>
+<p>Moreover, they should have had better access control, so that people with access to part of the system wouldn't be able to access a different part of the system.</p>
+<p>These are both failures on the part of Acxiom to protect your data, yet the person being held fully responsible is Levine.  As a matter of fact, Levine has to pay $153,395 to Acxiom, so they are actually being rewarded for failing to secure your data.  Why?</p>
+<p>Why did the government hold ChoicePoint responsible for a similar breach, but only hold the attacker responsible when it happens to Acxiom?  On what grounds have we decided Acxiom has done nothing wrong?</p>
+<p>They left the door unlocked.</p>

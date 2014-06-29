@@ -1,0 +1,51 @@
+---
+layout: post
+title: Getting A Java Object's Reference ID
+categories:
+- Programming
+tags:
+- code
+- java
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+  syntaxhighlighter_encoded: '1'
+  pvc_views: '6'
+  dsq_thread_id: '605225954'
+author:
+  login: air0day
+  email: blog@air0day.com
+  display_name: Rod Hilton
+  first_name: Rod
+  last_name: Hilton
+---
+<p><strong>UPDATE: A number of commenters have pointed out that I'm totally wrong here.  Please don't do this.</strong></p>
+<p>When you take an object that has not defined a toString method, it prints out strings that look like these:</p>
+<pre>
+Object@3e25a5
+Car@19821f
+</pre>
+<p>Many people believe that this is the memory location of the object, which isn't really accurate, as it's the reference ID.  It is, however, a string that uniquely identifies the object in memory, so the misconception is understandable.</p>
+<p>A friend recently asked me if there was any way to get that "address" on an object that has overridden toString.  Once toString has been overridden, calling it will bypass this default implementation.</p>
+<p>Since his internet search didn't pull anything up, I figured I'd blog about the answer to his conundrum in case anyone else is ever curious about it.</p>
+<p><!--more--></p>
+<p>It may be surprising, but calling hashCode() actually gives you this value.  The hashCode method doesn't hash the actual object by it's value, but by it's identity, meaning its reference ID.</p>
+<p>To illustrate this simply, take a look at the following code snippet.  It creates two identical objects, then adds them to a HashMap, and prints out the size of the HashMap.</p>
+<p>[java light="true"]<br />
+Car car1=new Car(&quot;Chevy&quot;, &quot;Blazer&quot;);<br />
+Car car2=new Car(&quot;Chevy&quot;, &quot;Blazer&quot;);</p>
+<p>AbstractMap&lt;Car, String&gt; map=new HashMap&lt;Car, String&gt;();<br />
+map.put(car1, &quot;Got it&quot;);<br />
+map.put(car2, &quot;Got it&quot;);</p>
+<p>System.out.println(&quot;Size is: &quot;+map.size());<br />
+[/java]</p>
+<p>HashMap works by calling hashCode() on the objects going into the map.  You might expect for the size to be 1, since the two cars are the same.  However, they do not have the same hashCode, because hashCodes are, by default, identity-based.  Since the two objects take up two unique spots in memory (as they were instantiated separately), they have different hashCodes, and thus the size of the map is 2.</p>
+<p>This means that you can get the reference ID, the thing after the @ in default toString() implementations, simply by calling hashCode() on the object.  It comes back as an int, but it has the same value as the hexadecimal string would in the default toString() implementation.</p>
+<p>However, it's really not a good idea to override toString() without also overriding hashCode() and equals(), so it stands to reason hashCode will be overridden with a value-based hashing scheme in whatever class you're working with.</p>
+<p>Fear not, however, as the System object will actually give you access to the identity-based hashcode on any object, even if the class it is an instance of has overridden hashCode().</p>
+<p>You can also handily convert an integer to a hex string using the Integer class, so you can get the value that would come after the @ in a default toString() implementation by calling this:</p>
+<p>[java light="true"]<br />
+Integer.toHexString(System.identityHashCode(object))<br />
+[/java]</p>

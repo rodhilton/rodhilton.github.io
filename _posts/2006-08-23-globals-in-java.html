@@ -1,0 +1,35 @@
+---
+layout: post
+title: Globals In Java?
+categories:
+- Programming
+tags: []
+status: publish
+type: post
+published: true
+meta:
+  dsq_thread_id: '606605724'
+author:
+  login: air0day
+  email: blog@air0day.com
+  display_name: Rod Hilton
+  first_name: Rod
+  last_name: Hilton
+---
+<p>Elliotte Rusty Harold, author of <a href="http://www.cafeaulait.org/books/javaio2/">Java I/O</a>, has a few very nice blogs that I read often.  He's a smart guy with a lot of experience in software development.  In a <a href="http://cafe.elharo.com/ruby/10-things-i-hate-about-ruby/">recent post</a>, however, I think he made an interesting point that I wanted to address.</p>
+<p>He listed 10 things he dislikes about Ruby.  I don't have a great deal of Ruby experience, so I can't speak on many of them.  I do have a lot of Java experience however, and Java happens to be the language Elliotte seems to like the most.</p>
+<p><!--more--></p>
+<p>The fourth thing he hates about Ruby is this:</p>
+<blockquote><p>
+<strong>4. Global variables</strong></p>
+<p>Didnt somebody tell me Ruby was an object-oriented language?
+</p></blockquote>
+<p>To this, I would ask Elliotte to look back upon the language he promotes and ask the same question.  Once upon a time, Java did not have global variables.  In fact, I liked to ask in interviews "Why doesn't Java support global variables?" to see if interview candidates understand encapsulation.  </p>
+<p>After Java 5 was released however, Java did have globals.  I understand they do not have "true" globals in the most literal sense of the world, but <a href="http://java.sun.com/j2se/1.5.0/docs/guide/language/static-import.html">static import statements</a> effectively brought globals into Java.</p>
+<p>It has always been possible to provide the benefit of data that could be accessed without instantiating a class.  Public static methods and variables have been used in Constants files and Util classes for some time.  It is very often that one finds a Constants file with public static members, so that code can reference them easily: Constants.MAX_WIDTH, etc.  Though that's less OO than would be ideal, it IS a good place for information that needs to be readily accessible.  It provides the benefit of a global variable, but without sacrificing object-orientation.  MAX_WIDTH still *BELONGS* to Constants, and that keeps a relationship active that makes it clear what belongs to what. </p>
+<p>The situation is the same for Util classes.  StringUtils, DbUtils, or what have you; they will have public static methods, so that code can easily call something like StringUtils.center(str,10).  This, once again, gives the benefits of globally accessible methods WITHOUT sacrificing OO, since it's clear that the center method BELONGS to StringUtils.  There is still a relationship that is preserved.</p>
+<p>The ability to do static imports, however, completely ruins this.  I can stick <code>import static com.air0day.ex.Constants.*</code> in the top of my Java source file, and suddenly the code it contains can reference MAX_WIDTH directly, without any concept of what class it belongs to.</p>
+<p>Once upon a time, constants were written in a Constant interface, then classes that needed access implemented that interface.  This worked for variables, except that the values could not be modified by code (handy to prevent one of the biggest problems with global variables), but provided no function access.  As much of a hack as the constant interface methodology was, it did some good.  It forced methods to belong to classes that provided them statically.  It also allowed for code to reference constants directly (MAX_WIDTH instead of Constants.MAX_WIDTH) and it also prevented classes from modifying the values.  </p>
+<p>Static imports, however, allowed you to drop the class identifier when referencing static fields and static methods.  Past a single import line in the head of a file, there is no concept of which classes to which fields and methods belong.  Aside from that one line, these are global variables, plain and simple.  They are generally public (they could be package scope, but that is unlikely), and if they need to be modified at all by one class, they can't be final, which allows any class to modify their values.  </p>
+<p>All of the advantages of global variables can be found with <code>import static</code>, and all of the disadvantages can as well.  Though they go by a different name, and they still technically "belong" to a class, the effect they have on code is exactly the same.  A global by any other name would confuse as much.</p>
+<p>I don't particularly like import static, but I don't hate it either.  At the same time, I recognize that it would be disinginuous to claim that Ruby is not OO because it has globals, but that Java is.  If a language isn't OO because of globals (and I partially agree that it isn't), then <strong>Java is not an OO language</strong>.</p>

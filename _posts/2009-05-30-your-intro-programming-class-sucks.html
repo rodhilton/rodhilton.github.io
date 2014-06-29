@@ -1,0 +1,84 @@
+---
+layout: post
+title: Your Intro Programming Class Sucks
+categories:
+- Programming
+tags:
+- education
+- java
+- python
+- school
+status: draft
+type: post
+published: false
+meta:
+  _edit_last: '1'
+author:
+  login: air0day
+  email: blog@air0day.com
+  display_name: Rod Hilton
+  first_name: Rod
+  last_name: Hilton
+---
+<p>I think a lot about the courses I took in my undergrad Computer Science program.  The first job I ever had was being a TA and a Workshop Leader for the introductory programming classes and my experience doing this was rewarding as well as eye-opening.  I often think about the kids who attended my workshops and sessions, and I think about what problems they faced when trying to learn.  I think about this a lot because long-long-long-term plan is to teach programming classes when I decide to retire from software development (I assume at some point my brain will no longer be very good at it anymore), but that's a digression.</p>
+<p>In any case, I think about the introductory classes a lot, particularly the first class, meant to be an introduction to programming in general for undergraduates with no prior programming experience.  This class was taught in Java, and this article primarily deals with why I feel Java is not only a bad language to start programming with, but one of the worst ones.</p>
+<p><!--more--></p>
+<p><strong>Your First Program</strong></p>
+<p>Try to think back to before you knew how to program at all (if you do not know how to program, think back to five seconds ago).  You have an intuitive sense of what a "program" is, since you deal with programs every day - clicking buttons, typing commands, etc.  You are tasked with creating one of your own.  The job seems absolutely impossible.</p>
+<p>You embark on your first attempt to write a program, with the consultation of a book or a lecture or a friend.  What is the very first program you write?  The answer should be obvious: <i>hello world</i>.</p>
+<p>Hello World is the first program we write in any new language for a reason.  It requires understanding the absolute minimum amount of information about the language to be written.  The set of information, S, required to write Hello World in some language, L, is the smallest possible set to write any program in language L.  There can exist no smaller S.</p>
+<p>No matter what your program does, you can't know if it worked without telling the user something, so you absolutely need to know how to print to the screen.  And you need something to be printed to the screen, so you need to know how to provide some form of literal (although you have no reason to know it's called this when you are starting).  The two things you need to know are:</p>
+<ol>
+<li>How to display something to the screen</li>
+<li>How to construct a literal value (what to print to the screen)</li>
+</ol>
+<p>You could argue that it would be fine to print the number five to the screen instead, but that requires knowing the same amount of information and "Hello World" is more easily understandable to new programmers, since it's an actual phrase with meaning.  You could, I suppose, argue that a Hello World program requires that you learn how to construct strings, introducing the quote-mark for syntax, and I suppose that's true, but printing "5" to the screen just doesn't seem interesting enough to me.</p>
+<p>In any case, there is no simpler program you can write than Hello World.  Ideally then, a student should have to learn EXACTLY those two things in order to print "Hello World" to the screen.  If the language requires they learn more than this, it serves only to confuse the student, because they need to learn 2 core things to complete their task, but the language forces them to learn (or at least ignore) additional things.</p>
+<p>So how does Hello World look in Java?</p>
+<pre lang="java" line="1">
+public class MyProgram {
+	public static void main(String[] args) {
+		System.out.println("Hello, World!");
+	}
+}
+</pre>
+<p>Look at everything a student has to learn or ignore to get this written.</p>
+<ol>
+<li>Classes/Objects (line 1)</li>
+<li>Visibility (lines 1 and 2)</li>
+<li>Static execution (line 2)</li>
+<li>Arrays (line 2)</li>
+<li>Functions (line 2)</li>
+<li>Blocks
+</li>
+</ol>
+<p>And that's ignoring just how confusing it is to have System.out.println in there, a FUNCTION defined on an instance of the PrintStream class stored as a static variable on the System class.</p>
+<p>This is not merely a complaint about Java being verbose.  I like Java.  I like Java a lot.  I even like the verbosity (to an extent).  This is not about code length, it's about conceptual baggage.  You want the student to pull in two concepts into their brain, and they are forced instead to pull five more.</p>
+<p>Compare this to the python version:</p>
+<pre lang="python" line="1">
+  print "Hello, World!"
+</pre>
+<p>or the Ruby version:</p>
+<pre lang="ruby" line="1">
+  puts "Hello, World!"
+</pre>
+<p>Both of these require that students learn only the bare minimum they need to complete the task.</p>
+<p><strong>Your Next Two Programs</strong></p>
+<p>The next program you write as a student needs to introduce a fundamental building block used by virtually everything else you write as a programmer: the variable.  Students need to be introduced to the idea of storing something in memory that can be used later.  A prime candidate is the literal we used before.  Store "Hello World" in a variable, then print that.</p>
+<p>Again, Java:</p>
+<pre lang="java" line="1">
+public class MyProgram {
+	public static void main(String[] args) {
+		String hello = "Hello, World!";
+		System.out.println(hello);
+	}
+}
+</pre>
+<p>and Python:</p>
+<pre lang="python" line="1">
+hello = "Hello, World!"
+print hello
+</pre>
+<p>Here, both languages introduce the concept of a variable and using that variable in place of the value assigned to it, but the Java version requires you develop some sort of understanding of the type system, by declaring hello to be a "String".  More conceptual baggage.</p>
+<p>The next task is to </p>
+<p>pythons not too easy for the input stuff actually. hmmmmmmmmm</p>

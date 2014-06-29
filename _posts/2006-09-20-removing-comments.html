@@ -1,0 +1,48 @@
+---
+layout: post
+title: Removing Comments
+categories:
+- Programming
+tags:
+- career
+- java
+- story
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+  dsq_thread_id: '606605604'
+author:
+  login: air0day
+  email: blog@air0day.com
+  display_name: Rod Hilton
+  first_name: Rod
+  last_name: Hilton
+---
+<p>I had an interesting task at work today.  I maintain a project that has gone through at least 5 other developers before myself.  When I was hired, it was to lighten the workload of the current-at-the-time developer.  This developer had a bit of a personality problem, and she didn't get along with the rest of the team as a result. She was eventually fired, and I was left as the lead maintainer of the application, making changes as needed and improving it.</p>
+<p>I've done a great deal of work on it, but it could only be improved so much, as the system has over 50 dependencies on unstable legacy systems out of our control.  It's a real hassle to maintain. Well, the day has finally come where I can stop working with this nightmarish project. At the end of the month, the project is being officially sunset permanently.  I'll be bringing a bottle of wine to work.</p>
+<p>Unfortunately, one condition of the sunset is that the company we built it originally for gets to buy the source code.  This isn't a problem, except that this previous developer generously spread helpful comments all around the system.  She spent most of her time on the project simply keeping it running rather than actually improving the code, so most of her comments were along the lines of "this piece of code should be improved!" She never actually improved the code herself, but I'm sure she felt better making it known that she cast derision upon the other 3 developers before her.</p>
+<p>My task today was to "clean up" the code so that this other company can buy it from us.  </p>
+<p><!--more--></p>
+<p>Keep in mind, this project is, and always was, a large-scale enterprise application built for a professional company.  Here are a handful of her comments, which I removed:</p>
+<ul>
+<li>//what the ??</li>
+<li>//oughta throw a stinking exception!!</li>
+<li>//really cool that the history entries are in reverse order</li>
+<li>//should i do something here?</li>
+<li>//need to catch something better than a plain old exception</li>
+<li>//stupid but add 4</li>
+<li>//think we need some error checking here </li>
+<li>//why are we converting this?</li>
+<li>//rewrite this bastard</li>
+<li>//I know I'm writing icky code.</li>
+<li>//not sure why but something was not quite right</li>
+<li>//still figuring out the static block</li>
+<li>//what the hell is this?</li>
+<li>//clean up some of the formatting problems that {Company X} is complaining about.</li>
+</ul>
+<p>That last one is my favorite, because {Company X} is the company that is buying this source code from us.</p>
+<p>The best part about this whole thing is that the salesguy in charge of sunsetting this project decided to sell the code to Company X for $1.  I guess he imagined that, since the code is already done, it's a free buck.  </p>
+<p>Of course, I spent 2 hours combing through all of the comments in the code to remove all of this stuff (and more), so overall the company lost a significant amount of money on this "sale".  </p>
+<p>I find the fact that the sale was for a single dollar symbolic.  Of what, I'm not sure.</p>

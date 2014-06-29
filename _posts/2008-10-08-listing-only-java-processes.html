@@ -1,0 +1,35 @@
+---
+layout: post
+title: Listing Only Java Processes
+categories:
+- Programming
+tags: []
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+  dsq_thread_id: '606605816'
+author:
+  login: air0day
+  email: blog@air0day.com
+  display_name: Rod Hilton
+  first_name: Rod
+  last_name: Hilton
+---
+<p>Ever do something like the following?<br />
+<code><br />
+ps aux | grep 'java'<br />
+</code></p>
+<p>Pretty annoying, especially considering that the output usually shows the enormous startup script commands running with Java.  Wouldn't it be nice if you could just run a command that would list only java processes, and specifically list what the actual application running within the VM is?</p>
+<p>As I learned at a JUG last night, there IS a program that will do this.  It's called '<a href="http://java.sun.com/j2se/1.5.0/docs/tooldocs/share/jps.html">jps</a>'.</p>
+<p>JPS will list only the java processes running, with their actual PIDs and the shortened names of the entry classnames or jar files.  This lets you handily see what is actually running:</p>
+<pre>
+jps
+18027 Java2Demo.JAR
+18032 jps
+18005 jstat
+</pre>
+<p>Where can you get this amazing tool?  You already have it!  It's part of the JDK, apparently.  Go to a terminal and type 'jps' and check it out.</p>
+<p>The program also takes options to list full classnames and it can even connect to a remote machine and list JVMs remotely.</p>
+<p>How did I not know about this?  It rocks my face off.</p>

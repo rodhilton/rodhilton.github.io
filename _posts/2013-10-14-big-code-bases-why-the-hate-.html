@@ -1,0 +1,28 @@
+---
+layout: post
+title: 'Big Code Bases: Why the Hate?'
+categories:
+- Programming
+tags: []
+status: draft
+type: post
+published: false
+meta:
+  _edit_last: '1'
+author:
+  login: air0day
+  email: blog@air0day.com
+  display_name: Rod Hilton
+  first_name: Rod
+  last_name: Hilton
+---
+<p>One area where I find myself constantly disagreeing with my fellow code-slingers is on the issue of large codebases.  On multiple occasions, I have been surrounded by a team of people complaining that a codebase has "gotten too big" and I'm the only person in the room who thinks it's fine.  I disagree with teammates so often on this that I have to question the legitimacy of my stance, but time and time again I discover that I still feel there's nothing inherently wrong with a large codebase.  I've worked in codebases of many sizes during my career, and <b>I have never felt any codebase was too big</b>.  If there's such a thing as a codebase that's too large, I have not yet come across it.</p>
+<p>I think, when people complain about a large codebase, they actually mean something else.  Often times, there are various negative properties of codebases that emerge, and seem closely tied to the size of the codebase itself, and I have indeed encountered those issues, but none of them were DUE to the size of the codebase, they were just more apparent due to the size, as a codebase has more opportunities to exhibit negative properties when larger.</p>
+<h3>Too Complex</h3>
+<p>It's difficult to "wrap your head" around the entirety of the code all at once.  (do you really need that?  good unit tests and high cohesion mean that this isn't required.)</p>
+<h3>It's Tying Artifacts Together</h3>
+<p>Many components, now all changing together.  Maybe there are a handful of things sharing a version number now and they aren't inherently related.  We're now deploying unrelated code chunks together.</p>
+<h3>It's Too Spread-Out</h3>
+<p>There's so much code, it's hard to follow the logic path.</p>
+<h3>It's Spaghetti</h3>
+<p>This results when you have a great deal of code depending on other code, which itself depends on code, which maybe depends on the first chunk of code as well as some more, etc.  If you create a graph of dependencies between different parts of the code, you have a spiderweb.  Changes are difficult because you're never sure if you're breaking code elsewhere in the system.</p>

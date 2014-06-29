@@ -1,0 +1,41 @@
+---
+layout: post
+title: Worst Security Tool Ever
+categories:
+- Technology
+tags: []
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+  pvc_views: '2'
+  dsq_thread_id: '606605694'
+author:
+  login: air0day
+  email: blog@air0day.com
+  display_name: Rod Hilton
+  first_name: Rod
+  last_name: Hilton
+---
+<p>A friend at work pointed me toward what has to be the most ill-conceived security mechanism I've seen in a long time.  </p>
+<p>Developed by people at NYU, <a href="http://mrl.nyu.edu/~dhowe/TrackMeNot/">TrackMeNot</a> is a firefox extension with a single purpose in mind: preventing people from profiling you or tracking your web usage.  It seems most suited for corporate environments where the Corporate Overlords may be monitoring net usage to make sure nobody is surfing for inappropriate material on company time.</p>
+<p>Does it accomplish this by relying on encrypting traffic?  No.  How about anonymous proxies, like <a href="http://tor.eff.org/">Tor</a>?  No.  <strong>It hides your inappropriate searches from spies by mixing them in with tons of other web traffic.</strong></p>
+<p><!--more--></p>
+<p>TrackMeNot runs in the background of firefox, performing random searches.  The queries are built by combining two words from a long list of potential words, then the queries are sent to one of the main popular search engines.</p>
+<p>Here are just a few problems with this approach.</p>
+<ol>
+<li>This does not actually "Hide" your real traffic.  It's pointless to bother with this approach, because the traffic is still "in plain sight".  This is a privacy mechanism that relies on simply providing an abundance of information.  In effect, it relies on laziness on the part of the data miner/spy to succeed.</li>
+<li>This generates a ton of web traffic.  It actually gets the full response from the search engine, which is a bunch of traffic you don't need to be generating.  Low priority or not, it creates useless web requests</li>
+<li>The word list is short.  It would be trivial to modify a surveillance program to filter out queries consisting entirely of words from the list.  To be fair, the authors claim that the word list is temporary, and it will eventually query a TrackMeNot server for the search terms.  Of course, if it did this then every response from TrackMeNot could be monitored as well, making it EASIER to filter out TrackMeNot-generated traffic.</li>
+</ol>
+<p>This method doesn't do what it sets out to do, it has easy workarounds available, and it has a negative side effect.</p>
+<p>What's most amazing is that the queries it could generate are potentially far worse than the queries you are trying to hide.  Within the list of words are the following:</p>
+<blockquote><p>HIV, atomic, bomb, bible, bibles, bombing, bombs, boxes, choke, choked, chokes, choking, chain, crackers, empire, evil, erotics, erotices, fingers, knobs, kicking, harier, hamster, hairs, legal, letterbomb, letterbombs, mailbomb, mailbombing, mailbombs, rapes, raping, rape, raper, rapist, virgin, warez, warezes, whack, whacked, whacker, whacking, whackers, whacks, and pistols.</p></blockquote>
+<p>Humorously, the word list also contains "workaround" and "workarounds" toward the end.</p>
+<p>Perhaps this might prevent someone from noticing my google search for "Jessica Alba naked"[1], but only because they're too busy noticing my searches for "virgin rape," "atomic mailbomb," "bible warez," and "hamster whacking".</p>
+<p>Imagine a cop pulls you over for speeding.  As he approaches, you realize you left your wallet at home.  Without your driver's license, you could be in a lot of trouble.  When he approaches, you roll down your window and shout. "Hello Officer!  I don't have insurance on this vehicle! This car is stolen!  I have weed in my glovebox!  <strong>I don't have my driver's license!</strong> I just hit an old lady minutes ago!  I've been running stop lights all morning! I have a dead body in my trunk! This car doesn't pass the emissions tests! I'm not allowed to drive because I am under house arrest! My gas tank runs on the blood of children!"  You stop to catch a breath, confident you have supplied so much information to the cop that you can't possibly be caught for not having your license now.</p>
+<p>It's true that the overabundance of information is often what prevents information seekers from separating the unimportant from the important (9/11 serves as an example of this), but intentionally manufacturing that abundance is vastly inferior to a more proper security mechanism, particularly when the manufacturing can be detected easily.  The art of confusion doesn't typically work on computer programs.</p>
+<p>I sure hope nobody is going to use this program to try and cover their tracks at work or behind a monitoring proxy.  They might be surprised when they get fired for using their work computer to search for "HIV erotics".</p>
+<p>If nothing else, this extension is a great argument for open source.  If people couldn't open the extension up and read the source code, they may never know what they're getting into by installing it.</p>
+<p>[1] <em>I apologize to everyone who found this page by searching for "Jessica Alba Naked".  I also apologize for putting the term in this post a second time right now.</em></p>

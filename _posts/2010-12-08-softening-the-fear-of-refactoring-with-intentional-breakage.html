@@ -1,0 +1,22 @@
+---
+layout: post
+title: Softening The Fear of Refactoring With Intentional Breakage
+categories:
+- Life
+tags: []
+status: draft
+type: post
+published: false
+meta:
+  syntaxhighlighter_encoded: '1'
+  _edit_last: '1'
+author:
+  login: air0day
+  email: blog@air0day.com
+  display_name: Rod Hilton
+  first_name: Rod
+  last_name: Hilton
+---
+<p>You've got code, you've got a suite of tests.  You want to do some refactoring, but you arent usre if there are tests covering what you're about to do.</p>
+<p>Simple solution.</p>
+<p>take what you want to refactor, and add an additional step before refactoring it.  comment out the line and instead make it return an incorrect value.  intentionally break the code, then run the tests. if they all pass, you're not safe, write some new tests. if a test breaks, your refactoring is safe to do (if it breaks something, you'll know)</p>

@@ -1,0 +1,32 @@
+---
+layout: post
+title: The Value of Security Theater
+categories:
+- Life
+tags: []
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+  pvc_views: '2'
+  dsq_thread_id: '606605688'
+author:
+  login: air0day
+  email: blog@air0day.com
+  display_name: Rod Hilton
+  first_name: Rod
+  last_name: Hilton
+---
+<p><a href="http://www.schneier.com/">Bruce Schneier</a> coined the phrase "<a href="http://en.wikipedia.org/wiki/Security_theatre">Security Theater</a>" in his book, <a href="http://www.amazon.com/gp/product/0387026207/">Beyond Fear</a>.  Security Theater is a thing that has the appearance of security, but offers virtually none.  Bruce Argues that security theater is more dangerous than no security at all, because assets are still vulnerable in both situations, but Security Theater offers a false sense of security, allowing people to be lazy.</p>
+<p>Of course, most of the time when we talk about security (at least in the modern age) we are talking about issues of considerable controversy.  For example, if I were to tell you that the efforts that have been put into airline security are, in reality, security theater, you might find this very irritating and emotional, which may cloud your judgement.  You could also say that MY emotional investment in the issue makes me mislabel airline security as security theater.  In any case, it is often difficult to think rationally about security  when discussing something as difficult as homeland security.</p>
+<p>Today I happened upon something that I found very humorous, and it serves as such a good example of security theater that I decided to post it.</p>
+<p><!--more--></p>
+<p>I was looking at movie trailers on apple.com, and I saw that there was a trailer for a new movied called Texas Chainsaw Massacre: The Beginning.  I hadn't heard of this (and I loved the original and liked the remake) so I decided to check it out.  Feel free to go <a href="http://www.apple.com/trailers/newline/tcm_thebeginning/">look</a>.  Be careful though, if it's before 10 PM, you won't be able to view the trailer.</p>
+<p>Indeed, between the hours of 4 AM and 10 PM, the site gives you the message that the trailer is unavailable until that night.  I presume this is because the trailer is so shocking that it's only around when kids are in bed, or something.  Ridiculous nature of that aside, I began to ask questions.  Probably the same questions you are asking now.</p>
+<p>"How does it know what time to keep the file unavailable?  Is it the time on the server?" Indeed, this is a reasonable question.  If the server were in, say, California, then only people on Pacific Time would sync up correctly.  Would a film studio do that in order to prevent parent groups from bitching and moaning?  Of course not, movies are released all across the world, so the studio would never risk making the trailer unavailable internationally.  If you "follow the money" (the quickest way to discover the true motivations behind anything 99% of the time), you can logically conclude the studio isn't going off the time of the server where the trailer is hosted.  You can conclude this just as any kid (who shouldn't see the trailer) can.  Is this good security?</p>
+<p>So then, the only other time they could be using is *MY* time.  That means JavaScript.  Easy.  Change my clock and reload.  To my surprise, this did not work.  So I decided to view the JavaScript source, and I saw that what the code actually does is make a new Date object (using my clock), then figure out my time zone, then poll the server to find out what the server time is, use the offset to calculate my ACTUAL time, and use that to decide if the trailer can be viewed.  Honestly, this was a very clever solution and added one layer of difficulty to the "change my clock" workaround.</p>
+<p>All I had to do, then, was change my time zone and reload.  Problem solved.  So, I was a person who had a pretty high degree of determination to see the trailer, and I was able to do so with very limited effort.  The workaround is extremely simple, and can be communicated effectively to even someone who is unfamiliar with Javascript and could not discover this flaw on their own.  Was this security?</p>
+<p>No, it was security theater.  It provides parents with the false sense of security that their kids cannot see this trailer, but it is trivially easy to bypass the 'security' for someone who wants to do so.  The countermeasure is only effective against people who aren't very motivated in the first place.  As a result, a parent might be confident letting his or her kid browse the internet unsupervised, knowing this trailer is unavailable for viewing (I'm being fecetious, but the point stands) until the child goes to bed.</p>
+<p>In the end, the html elements that have the links are, in fact, on the page the entire time (style.visibility:hidden) and looking at the source code gives complete urls to the actual .mov files with the trailers.  Bypassing the system isn't even required, you can just look the URL up in the source.  This system adds about 20 seconds of inconvenience to the process of the viewing the trailer for a determined person, yet the theoretical parent is happy with the system.  Security Theater defined.</p>
+<p>By the way, the movie looks like shit.</p>

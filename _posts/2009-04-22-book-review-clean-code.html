@@ -1,0 +1,43 @@
+---
+layout: post
+title: 'Book Review: Clean Code'
+categories:
+- Programming
+tags:
+- book
+- craftsmanship
+- crossposted
+status: publish
+type: post
+published: true
+meta:
+  syntaxhighlighter_encoded: '1'
+  syndication_source: NMJ Reviews
+  syndication_source_uri: http://pipes.yahoo.com/pipes/pipe.info?_id=d84840c93d0bc9bae2cf3b1e51257deb
+  syndication_feed: http://pipes.yahoo.com/pipes/pipe.run?_id=d84840c93d0bc9bae2cf3b1e51257deb&_render=rss
+  syndication_feed_id: '31'
+  syndication_permalink: http://www.goodreads.com/review/show/34469573
+  syndication_item_hash: 7e8e8850cb87de5187f28295a95ada28
+  _edit_last: '1'
+  dsq_thread_id: '614398958'
+author:
+  login: NMJ Reviews
+  email: rod.hilton+goodreads@gmail.com
+  display_name: Rod Hilton
+  first_name: Rod Hilton
+  last_name: ''
+---
+<p><img align="right" src="assets/419EFaGEGvL._SX106_.jpg" />There is a movement brewing in the world of professional software development. This movement is concerned not merely with writing functional, correct code, but also on writing <strong>good code</strong>. Taking pride in code. This movement is the <a rel="nofollow" href="http://manifesto.softwarecraftsmanship.org/">Software Craftsmanship movement</a>, and one of the people near the head of this movement is Robert C. Martin, also known as <a rel="nofollow" href="http://www.objectmentor.com/omTeam/martin_r.html">Uncle Bob</a>.</p>
+<p>His book "Clean Code" is, in many ways, <strong>an introduction to the concept of Software Craftsmanship and a guide for developers interested in becoming craftsmen</strong>. Clean Code is not about only writing correct code, it's about writing code that is designed well, code that reads well, and code that expresses the intent of the author.</p>
+<p><!--more--></p>
+<p>The book is essentially divided into two parts. The first part contains Bob's suggestions for writing and maintaining clean code. This includes suggestions on everything ranging from how to properly comment code and how to properly name variables to how to separate your classes and how to construct testable concurrent code. The second part of the book uses the principles in the first part to guide the reader through a few exercises in which existing code is cleaned.</p>
+<p><strong>The first part of the book is fantastic.</strong> I can't recommend it highly enough for a professional software developer that wishes to elevate him or herself to a higher standard. This guide is excellent, and gave me lots of things to think about while reading it. I could almost feel myself becoming a better programmer as I internalized Martin's advice, and the code I've been writing has been noticeably better since I began following his suggestions.</p>
+<p>In the second part of the book, Martin essentially guides us through three projects: a command line argument parser he wrote, a section of the JUnit source code, and a section of source code from <a rel="nofollow" href="http://www.jfree.org/jworkbook/api/org/jfree/workbook/date/SerialDate.html">SerialDate</a>. Of these, the most detailed guide is Martin's illustration of refactoring the command line argument parser.</p>
+<p>These sections all suffered from a fundamental flaw: <strong>they were inside a book.</strong></p>
+<p>These sections all required reading large amounts of source code. Not just scanning it, but really reading and understanding the code, so that the reader can understand the changes Martin makes to the code. Reading and understanding code is something I do every day as a professional, but I <strong>never</strong> have to do it from paper.</p>
+<p>When I read code, I'm interacting with something, not just reading. I can scroll up and down. If I see a method being used and I wonder how it's written, I can click on it and jump right to the implementation. My IDE shows me symbols in my gutterbar when methods are overridden. I can press a keystroke to pull up a list of just the methods in a source file. I can right click on a method and find its usages immediately. <strong>The source code I am reading is something I can push and pull, gaining an understanding of it through interaction.</strong></p>
+<p><strong>When source code is printed in a book, you get none of this. </strong>To make matters worse, Martin's code samples have absolutely no syntax highlighting applied to them. When I read source code, certain parts are rendered in specific ways that make it easier to pull the information into my brain. Strings and literals are formatted differently, comments are dimmer so I can focus on code, and so on. Code samples in "Clean Code" are just characters, with occasionally bolding used to draw attention to parts that were changed. It's amazing how much syntax highlighting helps make code more comprehensible, even at a completely subconscious level.</p>
+<p>A book is, quite simply, <strong>not an appropriate medium for a guided code walkthrough</strong>. I'd have preferred the content of these sections as perhaps a lecture, with Martin's text done in audio and his code kept on the screen. This would at least prevent me from having to flip back and forth constantly. I didn't get as much out of these sections as I would have liked to, simply because it was so difficult to digest the information it contained in such an awkward, unnatural medium. <strong>At the very least, the code samples should have been printed in color, with syntax highlighting.</strong></p>
+<p>I can tell that his advice was good and that the refactorings he applied to the code samples in the book made the code far better, but mostly because I've observed these efforts in real life and observed how much they improve code. <strong>If I were to encounter Martin's "before" and "after" code in a project I was working on, I undoubtedly would find the "after" code far, far cleaner and more enjoyable to work with. </strong> However, since the book format made it so difficult to understand EITHER code sample, it didn't seem like Martin's efforts offered much improvement, even though I know they did.</p>
+<p>Despite this frustration, the book is an excellent read, and I'm quite certain <strong>it has contributed a great deal to helping me improve as a professional. </strong>I can't recommend it enough, especially for Java developers. I just think that most readers will find the final few chapters intensely frustrating - I recommend downloading the <a rel="nofollow" href="http://my.safaribooksonline.com/9780136083238/ch14">code</a> and viewing it in your favorite code editor so that you can comprehend the source code the way you would any other source code.</p>
+<p>Rating: 4 out of 5</p>

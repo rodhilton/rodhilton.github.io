@@ -1,0 +1,31 @@
+---
+layout: post
+title: Remote IFrame Detector
+categories:
+- Technology
+tags:
+- code
+- firefox
+- internet
+- javascript
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+  pvc_views: '12'
+  dsq_thread_id: '606605714'
+author:
+  login: air0day
+  email: blog@air0day.com
+  display_name: Rod Hilton
+  first_name: Rod
+  last_name: Hilton
+---
+<p>I saw a presentation yesterday about cross-site scripting.  It was pretty interesting (though a bit overdramatic) but ultimately almost all of the attacks came down to the ability to send the user to a site which contains an iframe for the site they wanted to visit.</p>
+<p>This allows the attacker to be running javascript code on their machine, but the iframe makes the user believe he or she is at the same site.  This can allow for keylogging and some degree of remote control.</p>
+<p>All of this hinges on the ability to load the real site in an iframe from within the hacker site.  It seems to be that all you need to do is prevent an iframe from loading a page on a different host than the one containing the iframe.</p>
+<p>A simple way to accomplish a task like this is to load a <a href="http://greasemonkey.mozdev.org/">greasemonkey</a> script that draws a border around any iframe that is at a different location than the parent site.  Having never written a greasemonkey script before, I set about doing this.</p>
+<p>This is my first greasemonkey script, so it likely sucks, but it seems to work on the very limited set of tests I performed.  </p>
+<p>To install the script, click <a href="http://www.nomachetejuggling.com/files/iframe.user.js">here</a>.</p>
+<p>Constructive feedback and criticisms welcome.  I'm happy to improve this script, though I may not know exactly how to do so. ;)</p>
