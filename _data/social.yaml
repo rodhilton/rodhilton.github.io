@@ -18,6 +18,11 @@
   url: http://github.com/rodhilton
   color: 4183c4
 
+- name: Speakerdeck
+  icon: speakerdeck.png
+  url: http://speakerdeck.com/rodhilton
+  color: 218d5e
+
 - name: Facebook
   icon: facebook.png
   url: https://facebook.com/rodhilton

@@ -74,7 +74,7 @@ $content_size: percentage(.67);
 
 //$content_width: ($width * $content_size);
 //$sidebar_width: ($width - $content_width);
-$content_width: 750px;
+$content_width: 740px;
 $sidebar_width: 260px;
 
 $content_padding: 20px;
@@ -708,7 +708,6 @@ $inner_block_width: $content_width - (5 * $content_padding);
     margin-bottom: 1.5em;
 
     .posttitle {
-      font-size: 2.2em;
       line-height: 1.2em;
       letter-spacing: -.01em;
       word-spacing: .1em;
@@ -721,8 +720,14 @@ $inner_block_width: $content_width - (5 * $content_padding);
         color: $link_color;
         &:hover { text-decoration: none }
       }
-
     }
+
+    h1 { font-size: 2.2em; }
+    h2 { font-size: 2.0em; }
+    h3 { font-size: 1.8em; }
+    h4 { font-size: 1.6em; }
+    h5 { font-size: 1.4em; }
+    h6 { font-size: 1.2em; }
 
     .postmeta {
       height: 20px;

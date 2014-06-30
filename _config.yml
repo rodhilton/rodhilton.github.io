@@ -3,6 +3,9 @@ markdown: kramdown
 highlighter: null
 
 permalink: /:year/:month/:day/:title/
+separator: "&raquo;"
 
 kramdown: 
   toc_levels: "1,2,3" 
+
+category_dir: category
