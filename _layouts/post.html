@@ -1,70 +1,11 @@
 ---
 layout: default
 ---
-<div class="post" id="post-2434">
-<div class="postheader">
- 	<h1 class="posttitle"><a href="{{page.url}}">{{ page.title }}</a></h1>
-	<div class="postmeta">
-		<p class="meta">
-			<b title="{{page.tags | array_to_sentence_string}}">{{ page.categories | first | upcase }}</b> - 
-			{{ page.date | date: "%B %-d, %Y" }}
-		</p>
+<div class="post">
+	{% include post-header.html page=page %}
+	<div class="postentry">
+		{{ content }}
 	</div>
 </div>
-<div class="postentry">
-{{ content }}
-</div>
-</div>
 
-<div id="disqus_thread">
-</div>
-<script type="text/javascript">
-/* <![CDATA[ */
-    var disqus_url = 'http://www.nomachetejuggling.com/2014/06/24/the-worst-programming-interview-question/';
-    var disqus_identifier = '2434 http://www.nomachetejuggling.com/?p=2434';
-    var disqus_container_id = 'disqus_thread';
-    var disqus_domain = 'disqus.com';
-    var disqus_shortname = 'nomachetejuggling';
-    var disqus_title = "The Worst Programming Interview Question";
-        var disqus_config = function () {
-        var config = this; // Access to the config object
-
-        /*
-           All currently supported events:
-            * preData — fires just before we request for initial data
-            * preInit - fires after we get initial data but before we load any dependencies
-            * onInit  - fires when all dependencies are resolved but before dtpl template is rendered
-            * afterRender - fires when template is rendered but before we show it
-            * onReady - everything is done
-         */
-
-        config.callbacks.preData.push(function() {
-            // clear out the container (its filled for SEO/legacy purposes)
-            document.getElementById(disqus_container_id).innerHTML = '';
-        });
-                config.callbacks.onReady.push(function() {
-            // sync comments in the background so we don't block the page
-            DISQUS.request.get('?cf_action=sync_comments&post_id=2434');
-        });
-                    };
-    var facebookXdReceiverPath = 'http://www.nomachetejuggling.com/wp-content/plugins/disqus-comment-system/xd_receiver.htm';
-/* ]]> */
-</script>
-<script type="text/javascript">
-/* <![CDATA[ */
-    var DsqLocal = {
-        'trackbacks': [
-        ],
-        'trackback_url': "http:\/\/www.nomachetejuggling.com\/2014\/06\/24\/the-worst-programming-interview-question\/trackback\/"    };
-/* ]]> */
-</script>
-<script type="text/javascript">
-/* <![CDATA[ */
-(function() {
-    var dsq = document.createElement('script'); dsq.type = 'text/javascript';
-    dsq.async = true;
-        dsq.src = 'http' + '://' + disqus_shortname + '.' + disqus_domain + '/embed.js?pname=wordpress&pver=2.72';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-})();
-/* ]]> */
-</script>
+{% include comments.html %}

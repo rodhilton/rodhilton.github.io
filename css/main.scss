@@ -701,6 +701,10 @@ $inner_block_width: $content_width - (5 * $content_padding);
     }
   }
 
+  .post-listing .postheader h1 {
+    font-size: 1.6em;
+  }
+
   .postheader {
     width: 100%;
     font-size: 9pt;

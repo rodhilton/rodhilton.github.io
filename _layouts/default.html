@@ -18,125 +18,148 @@
         <link rel="stylesheet" href="http://yandex.st/highlightjs/8.0/styles/solarized_light.min.css">
         
     </head>
-   <body>
+<body>
+
 <div id="page">
-<div id="headerwrapper">
-<div id="header">
-<div id="headertitle">
-<h1><a href="/" title="Absolutely No Machete Juggling: Rod Hilton&#039;s rants about stuff he cares about way too much.">{{site.name}}</a></h1>
-<p>Rod Hilton&#039;s rants about stuff he cares about way too much.</p>
-</div>
-</div>
-</div>
-<div id="navbar">
-<div id="navcontainer">
-<ul id="navlist">
-{% capture cat_class %}
-  {% if page.title == "Home" %}
-    current-cat
-  {% endif %}
-{% endcapture %}
-<li class="cat-item {{cat_class}}"><a href="/">All</a></li>
-
-{% for category in site.categories %}
-  {% capture cat_class %}
-      {% if category[0] == page.category %}
-        current-cat
-      {% elsif category[0] == page.categories.first %}
-        current-cat
-      {% endif %}
-  {% endcapture %}
-  <li class="cat-item {{cat_class}}"><a href="/category/{{category[0]}}">{{category[0] | upcase}}</a>
-{% endfor %}
-
-<li id="menu-item-2242" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2242"><a href="http://www.nomachetejuggling.com/about/">About</a></li>
-<li id="menu-item-2241" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2241"><a href="http://www.nomachetejuggling.com/resume/">Résumé</a></li>
-<li id="menu-item-2239" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2239"><a href="http://www.nomachetejuggling.com/projects/">Projects</a></li>
-<li id="menu-item-2238" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2238"><a href="http://www.nomachetejuggling.com/contact/">Contact</a></li>
-<li id="menu-item-2240" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2240"><a href="http://www.nomachetejuggling.com/links/">Links</a></li>
-</ul>
-</div>
-</div>
-<div id="wrapper">
-<div id="content">
-
-          {{ content }}
-
-</div>
-<div id="sidebars">
-<div id="sidebar-left" class="sidebar">
-<ul>
-<li id="text-3" class="widget widget_text"> <div class="textwidget"><img src="http://www.gravatar.com/avatar/68ca541f6f4eaedbe7d711cd651cf451.png?s=100" style="float: left; margin: 0px 5px 3px 0; border: 1px solid black; width: 50px; height: 50px" width=50 height=50>Absolutely No Machete Juggling is a blog about software, programming, computers, and me. I'm a programmer working in Colorado, mostly with Java and Ruby. <a href="/about/">Read More...</a>
-</div>
-</li>
-<li id="recent-posts-2" class="widget widget_recent_entries"> <h2 class="widgettitle">Recent Posts</h2>
-<ul>
-    {% for post in site.posts limit:10 %}
-      <li><a href="{{ post.url }}">{{post.title}}</a></li>
-    {% endfor %}
-</ul>
-</li>
-<li id="recent-posts-2" class="widget widget_recent_entries"> <h2 class="widgettitle">Tags</h2>
-
-  <ul><li>  {% for tag in site.tags limit: 80 %}
-      <a href="/tags.html#{{ tag | first}}-ref"
-       style="font-size: {{tag | last | size | times:100 | divided_by:site.tags.size | plus:5}}pt">
-      {{ tag | first }}
-      </a>
-  {% endfor %}
-        </li>
-  </ul>
-</li>
-</ul>
-</div>
-<div id="sidebar-right" class="sidebar">
-  <div id="social-icons">
-  {% for social in site.data.social %}
-      <a href="{{social.url}}" title="{{ social.name }}" class="social-icon dimmed" style="background-color: #{{social.color}}">
-        <img src="/assets/social/{{social.icon}}"/>
-      </a>
-  {% endfor %}
+  <div id="headerwrapper">
+    <div id="header">
+      <div id="headertitle">
+        <h1><a href="/" title="{{site.name}}: {{site['tagline']}}">{{site.name}}</a></h1>
+        <p>{{site['tagline']}}</p>
+      </div>
+    </div>
   </div>
-</div>
-</div>
-<div class='cleaner'>&nbsp;</div>
-</div>  
-<div id="footer">
-<a href="/rss.xml">Entries (RSS)</a> and <a href="http://nomachetejuggling.disqus.com/latest.rss">Comments (RSS)</a>.<br/>
-Powered by <a href="http://jekyllrb.com/" title="Powered by Jekyll.">Jekyll</a><br/>
+  <div id="navbar">
+    <div id="navcontainer">
+      <ul id="navlist">
+      {% capture cat_class %}
+        {% if page.title == "Home" %}
+          current-cat
+        {% endif %}
+      {% endcapture %}
+      <li class="cat-item {{cat_class | trim}}"><a href="/">All</a></li>
+
+      {% for category in site.categories %}
+        {% capture cat_class %}
+            {% if category[0] == page.category %}
+              current-cat
+            {% elsif category[0] == page.categories.first %}
+              current-cat
+            {% endif %}
+        {% endcapture %}
+        <li class="cat-item {{cat_class | trim}}"><a href="/category/{{category[0]}}">{{category[0] | upcase}}</a>
+      {% endfor %}
+
+      <li id="menu-item-2242" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2242"><a href="http://www.nomachetejuggling.com/about/">About</a></li>
+      <li id="menu-item-2241" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2241"><a href="http://www.nomachetejuggling.com/resume/">Résumé</a></li>
+      <li id="menu-item-2239" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2239"><a href="http://www.nomachetejuggling.com/projects/">Projects</a></li>
+      <li id="menu-item-2238" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2238"><a href="http://www.nomachetejuggling.com/contact/">Contact</a></li>
+      <li id="menu-item-2240" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2240"><a href="http://www.nomachetejuggling.com/links/">Links</a></li>
+      </ul><!-- /navlist -->
+    </div><!-- /navcontainer -->
+  </div><!-- /navbar -->
+
+  <div id="wrapper">
+    <div id="content">
+      {{ content }}
+    </div>
+
+    <div id="sidebars">
+      <div id="sidebar-left" class="sidebar">
+        <ul>
+          <li id="text-3" class="widget widget_text"> 
+            <div class="textwidget"><img src="http://www.gravatar.com/avatar/68ca541f6f4eaedbe7d711cd651cf451.png?s=100" style="float: left; margin: 0px 5px 3px 0; border: 1px solid black; width: 50px; height: 50px" width=50 height=50>Absolutely No Machete Juggling is a blog about software, programming, computers, and me. I'm a programmer working in Colorado, mostly with Java and Ruby. <a href="/about/">Read More...</a>
+            </div>
+          </li>
+          <li id="recent-posts" class="widget widget_recent_entries"> <h2 class="widgettitle">Recent Posts</h2>
+            <ul>
+                {% for post in site.posts limit:10 %}
+                  <li><a href="{{ post.url }}">{{post.title}}</a></li>
+                {% endfor %}
+            </ul>
+          </li> <!-- /recent-posts -->
+          <li id="tag_cloud" class="widget"> <h2 class="widgettitle">Tags</h2>
+            <ul>
+              <li>
+                {% for tag in site.tags limit: 80 %}
+                  <a href="/tags.html#{{ tag | first}}-ref"
+               style="font-size: {{tag | last | size | times:100 | divided_by:site.tags.size | plus:5}}pt">
+                    {{ tag | first }}
+                  </a>
+                {% endfor %}
+              </li>
+            </ul>
+          </li><!-- /tag-cloud -->
+        </ul>
+      </div><!-- /sidebar-left -->
+
+      <div id="sidebar-right" class="sidebar">
+        <div id="social-icons">
+          {% for social in site.data.social %}
+              <a href="{{social.url}}" title="{{ social.name }}" class="social-icon dimmed" style="background-color: #{{social.color}}">
+                <img src="/assets/social/{{social.icon}}"/>
+              </a>
+          {% endfor %}
+        </div>
+      </div><!-- /sidebar-right -->
+
+    </div><!-- /sidebars -->
+
+    <div class='cleaner'>&nbsp;</div>
+
+  </div><!-- /wrapper -->
+
+  <div id="footer">
+    <a href="/rss.xml">Entries (RSS)</a> and <a href="http://nomachetejuggling.disqus.com/latest.rss">Comments (RSS)</a>.<br/>
+    Powered by <a href="http://jekyllrb.com/" title="Powered by Jekyll.">Jekyll</a><br/>
+  </div>
+</div> <!-- /page -->
 
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-        <script src="/assets/scripts/underscore-min.js" type="text/javascript"></script>
-        <script src="/assets/scripts/hyphenator/Hyphenator.js" type="text/javascript"></script>
-        <script src="/assets/scripts/hyphenator/patterns/en-us.js" type="text/javascript"></script>      
-        <script src="http://yandex.st/highlightjs/8.0/highlight.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="/assets/scripts/underscore-min.js" type="text/javascript"></script>
+<script src="/assets/scripts/hyphenator/Hyphenator.js" type="text/javascript"></script>
+<script src="/assets/scripts/hyphenator/patterns/en-us.js" type="text/javascript"></script>      
+<script src="http://yandex.st/highlightjs/8.0/highlight.min.js"></script>
 
-        <script src="/assets/scripts/auto-toc.js" type="text/javascript"></script>
-        
+<script src="/assets/scripts/auto-toc.js" type="text/javascript"></script>
 
-        <script type="text/javascript">
-          $(function() {
-              Hyphenator.config({
-                minwordlength: 8,
-                classname: 'postentry',
-                donthyphenateclassname: 'no-hyphenate',
-                remoteloading: false,
-                defaultlanguage: 'en-us'
-              })
-              Hyphenator.addExceptions('', 'JAVA_HOME, config');
-              Hyphenator.run();
+<script type="text/javascript">
+  $(function() {
+      Hyphenator.config({
+        minwordlength: 8,
+        classname: 'postentry',
+        donthyphenateclassname: 'no-hyphenate',
+        remoteloading: false,
+        defaultlanguage: 'en-us'
+      })
+      Hyphenator.addExceptions('', 'JAVA_HOME, config');
+      Hyphenator.run();
 
-              hljs.initHighlightingOnLoad();
+      hljs.initHighlightingOnLoad();
 
-              jQuery(".social-icon").hover(
-                function() {
-                  $( this ).removeClass( "dimmed" );
-                }, function() {
-                  $( this ).addClass( "dimmed" );
-                }
-              );
-          });
-        </script>
-    </body>
+      jQuery(".social-icon").hover(
+        function() {
+          $( this ).removeClass( "dimmed" );
+        }, function() {
+          $( this ).addClass( "dimmed" );
+        }
+      );
+  });
+</script>
+
+<script type="text/javascript">
+/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+var disqus_shortname = ''; // required: replace example with your forum shortname
+
+/* * * DON'T EDIT BELOW THIS LINE * * */
+(function () {
+    var s = document.createElement('script'); s.async = true;
+    s.type = 'text/javascript';
+    s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+}());
+</script>
+
+</body>
 </html>
