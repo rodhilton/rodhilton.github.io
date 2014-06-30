@@ -57,6 +57,16 @@ $separator_color: $background_color - #111;
   box-shadow: none;
 }
 
+@mixin inner-burn() {
+  background: -moz-radial-gradient(center, ellipse cover,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.14) 100%); /* FF3.6+ */
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.14))); /* Chrome,Safari4+ */
+  background: -webkit-radial-gradient(center, ellipse cover,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.14) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-radial-gradient(center, ellipse cover,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.14) 100%); /* Opera 12+ */
+  background: -ms-radial-gradient(center, ellipse cover,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.14) 100%); /* IE10+ */
+  background: radial-gradient(ellipse at center,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.14) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#24000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
 //Layout Stuff
 
 $width: 1000px;
@@ -64,8 +74,8 @@ $content_size: percentage(.67);
 
 //$content_width: ($width * $content_size);
 //$sidebar_width: ($width - $content_width);
-$content_width: 670px;
-$sidebar_width: 330px;
+$content_width: 750px;
+$sidebar_width: 260px;
 
 $content_padding: 20px;
 
@@ -73,7 +83,7 @@ $content_padding: 20px;
 //$image_padding = -2px;
 $image_padding: 0px;
 
-$sidebar_left_width: 160px;
+$sidebar_left_width: 166px;
 $sidebar_right_width: $sidebar_width - (3 * $content_padding) - $sidebar_left_width;
 //$sidebar_right_width: 130px;
 
@@ -197,6 +207,30 @@ abbr {
  width: $sidebar_right_width;
  padding-left: $content_padding;
  overflow: hidden;
+}
+
+#social-icons {
+  img {
+    width: 16px;
+    height:16px;
+    margin: 9px;
+  }
+
+  a.social-icon {
+    display: block;
+    width: 34px;
+    height: 34px;
+    -moz-border-radius: 14px;
+    border-radius: 14px;
+    margin-bottom:10px;
+    opacity: 1.0;
+    @include inner-burn;
+
+    &.dimmed {
+      background-color: #a4a4a6 !important;
+      opacity: 0.5;
+    }
+  }
 }
 
 /* Header Formatting */
@@ -400,9 +434,9 @@ $inner_block_width: $content_width - (5 * $content_padding);
   padding: $content_padding 0;
   font-family: $content_font;
   font-size: 1.6em;
-  letter-spacing: 0.02em !important;
-  word-spacing: .3em;
-  line-height: 1.4em;
+  letter-spacing: 0.025em !important;
+  word-spacing: .35em;
+  line-height: 1.45em;
   text-shadow: 0px 1px 0px #fff;
   text-align: justify;
 
@@ -738,8 +772,9 @@ $inner_block_width: $content_width - (5 * $content_padding);
     padding: 5px;
     float: right;
     font-size: .7em;
-    line-height: 1em;
+    line-height: 1.1em;
     letter-spacing: 0;
+    word-spacing: 0;
     text-align: left;
     margin: 0 0 ($content_padding / 2) $content_padding;
     width: 160px;
@@ -751,7 +786,7 @@ $inner_block_width: $content_width - (5 * $content_padding);
     a { border: none }
     h1 {
       margin: .2em 0;
-      font-size: 1em;
+      font-size: 1.2em;
       font-weight: bold;
       color: $text_color;
       text-align: center;

@@ -1,12 +1,16 @@
 function autoToC(contentSelector) {
-	var ToC = "<div class='toc'><h1>Contents</h1><ol>"
+	var ToC = "<div class='toc no-hyphenate'><h1>Contents</h1><ol>"
 
 	var curLevel = 1;
 
 	var headers = ["h1", "h2", "h3", "h4", "h5", "h6"];
 	var selector = _.map(headers, function(h) { return contentSelector + " "+h}).join(", ");
 	
-	$(selector).each(function() {
+	var headers = $(selector);
+
+	if(headers.length < 3) return;
+
+	headers.each(function() {
 
 	  var el = $(this);
 	  var newLevel = Math.floor(el.context.tagName.slice(-1));

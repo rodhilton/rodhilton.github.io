@@ -1,0 +1,64 @@
+- name: about.me
+  icon: aboutme.png
+  url: http://about.me/rodhilton
+  color: eeb111
+
+- name: Twitter
+  icon: twitter.png
+  url: https://twitter.com/rodhilton
+  color: 55acee
+
+- name: LinkedIn
+  icon: linkedin.png
+  url: http://www.linkedin.com/in/rodhilton
+  color: 0976b4
+
+- name: GitHub
+  icon: github.png
+  url: http://github.com/rodhilton
+  color: 4183c4
+
+- name: Facebook
+  icon: facebook.png
+  url: https://facebook.com/rodhilton
+  color: 3b5998
+
+- name: Goodreads
+  icon: goodreads.png
+  url: http://www.goodreads.com/user/show/1499157-rodhilton-hilton
+  color: 76420a
+
+- name: Trakt
+  icon: trakt.png
+  url: http://trakt.tv/user/rodhilton/ratings/movies/all/added/1
+  color: 2a2b2d
+
+- name: Grouvee
+  icon: grouvee.png
+  url: http://www.grouvee.com/user/rodhilton/shelves/3274-played
+  color: dda017
+
+- name: Last.fm
+  icon: lastfm.png
+  url: http://www.last.fm/user/rodhilton
+  color: c3000d
+
+- name: Diigo
+  icon: diigo.png
+  url: http://www.diigo.com/user/rodhilton
+  color: 0079ff
+
+- name: 43things
+  icon: 43things.png
+  url: http://www.43things.com/person/rodhilton
+  color: ff9a00
+
+- name: Flickr
+  icon: flickr.png
+  url: http://www.flickr.com/rodhilton
+  color: ff0084
+
+- name: Yelp
+  icon: yelp.png
+  url: http://rodhilton.yelp.com
+  color: af0606
