@@ -31,13 +31,24 @@
 <div id="navbar">
 <div id="navcontainer">
 <ul id="navlist">
-<li class="cat-item "><a href="http://www.nomachetejuggling.com">All</a></li>
-<li class="cat-item cat-item-1"><a href="http://www.nomachetejuggling.com/category/life/" title="Personal stuff, daily activities, and other stories from my life.">Life</a>
-</li>
-<li class="cat-item cat-item-3 current-cat"><a href="http://www.nomachetejuggling.com/category/programming/" title="Code, projects, solutions, and oddities within the world of software development.">Programming</a>
-</li>
-<li class="cat-item cat-item-2"><a href="http://www.nomachetejuggling.com/category/technology/" title="Gadgets, security, computers, mobile phones, the internet, and other forms of technology that interest me.">Technology</a>
-</li>
+{% capture cat_class %}
+  {% if page.title == "Home" %}
+    current-cat
+  {% endif %}
+{% endcapture %}
+<li class="cat-item {{cat_class}}"><a href="/">All</a></li>
+
+{% for category in site.categories %}
+  {% capture cat_class %}
+      {% if category[0] == page.category %}
+        current-cat
+      {% elsif category[0] == page.categories.first %}
+        current-cat
+      {% endif %}
+  {% endcapture %}
+  <li class="cat-item {{cat_class}}"><a href="/category/{{category[0]}}">{{category[0] | upcase}}</a>
+{% endfor %}
+
 <li id="menu-item-2242" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2242"><a href="http://www.nomachetejuggling.com/about/">About</a></li>
 <li id="menu-item-2241" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2241"><a href="http://www.nomachetejuggling.com/resume/">Résumé</a></li>
 <li id="menu-item-2239" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2239"><a href="http://www.nomachetejuggling.com/projects/">Projects</a></li>
