@@ -47,5 +47,5 @@ function autoToC(contentSelector) {
 }
 
 $(function() {
-      autoToC(".postentry");
+      autoToC(".postentry.enable-toc");
   });

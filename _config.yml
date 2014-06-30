@@ -4,6 +4,8 @@ tagline: "Rod Hilton&#039;s rants about stuff he cares about way too much."
 markdown: kramdown
 highlighter: null
 
+exclude: ['resume/']
+
 permalink: /:year/:month/:day/:title/
 
 separator: "&raquo;"
