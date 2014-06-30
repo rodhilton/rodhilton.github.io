@@ -31,6 +31,13 @@ $calendar_color: $blue_color;
 $calendar_background_color: $background_color;
 $separator_color: $background_color - #111;
 
+@function black($opacity){
+    @return rgba(0,0,0,$opacity)
+}
+@function white($opacity){
+    @return rgba(255,255,255,$opacity)
+}
+
 @mixin gradient {
   background: $background_color; /* old browsers */
   background: -moz-linear-gradient(top, $highlight_color 20%, $background_color 100%); /* firefox */
@@ -51,6 +58,10 @@ $separator_color: $background_color - #111;
   box-shadow: 0px 0px 5px $color;
 }
 
+@mixin box-emboss($opacity, $opacity2){
+    box-shadow:white($opacity) 0 1px 0, inset black($opacity2) 0 1px 0;
+}
+
 @mixin noglow() {
   -moz-box-shadow: none;
   -webkit-box-shadow: none;
@@ -65,6 +76,16 @@ $separator_color: $background_color - #111;
   background: -ms-radial-gradient(center, ellipse cover,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.14) 100%); /* IE10+ */
   background: radial-gradient(ellipse at center,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.14) 100%); /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#24000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+@mixin letterpress($opacity){
+    text-shadow:white($opacity) 0 1px 0;
+}
+
+@mixin box-shadow($distance: 3px, $blur: 4px, $opacity: 0.30) {
+  -webkit-box-shadow: $distance $distance $blur 0px rgba(0, 0, 0, $opacity);
+  -moz-box-shadow:    $distance $distance $blur 0px rgba(0, 0, 0, $opacity);
+  box-shadow:         $distance $distance $blur 0px rgba(0, 0, 0, $opacity);
 }
 
 //Layout Stuff
@@ -225,10 +246,12 @@ abbr {
     margin-bottom:10px;
     opacity: 1.0;
     @include inner-burn;
+    @include box-shadow;
 
     &.dimmed {
       background-color: #a4a4a6 !important;
       opacity: 0.5;
+      @include box-shadow(0px, 0px, 0);
     }
   }
 }
@@ -437,7 +460,7 @@ $inner_block_width: $content_width - (5 * $content_padding);
   letter-spacing: 0.025em !important;
   word-spacing: .35em;
   line-height: 1.45em;
-  text-shadow: 0px 1px 0px #fff;
+  @include letterpress(.9);
   text-align: justify;
 
   p, ol li, ul li{

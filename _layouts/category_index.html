@@ -10,5 +10,6 @@ title: Category Index
 		{% for post in site.categories[page.category] %}
 		  	{% include post-header.html page=post %}
 		{% endfor %}
+		{{page.excerpt}}
 	</div>
 </div>

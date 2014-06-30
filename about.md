@@ -2,7 +2,7 @@
 layout: page
 type: page
 title: About
-order: 2
+order: 1
 ---
 
 Absolutely No Machete Juggling is a blog about software, programming, technology, and me.

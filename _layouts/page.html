@@ -2,10 +2,11 @@
 layout: default
 ---
 <div class="post" id="post-2434">
-<div class="postheader">
- 	<h1 class="posttitle">{{ page.title }}</h1>
-</div>
-<div class="postentry">
-{{ content }}
-</div>
+	<div class="postheader">
+	 	<h1 class="posttitle"><a href="{{ page.url }}">{{page.title}}</a></h1>
+	 	<div class="postmeta">&nbsp;</div>
+	</div>
+	<div class="postentry">
+		{{ content }}
+	</div>
 </div>

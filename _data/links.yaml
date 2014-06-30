@@ -1,0 +1,120 @@
+- name: Adam Esterline
+  url: http://aresterline.wordpress.com/
+  description: Coworker from Rally, creator of Rumbster and Autopair.
+
+- name: Alan Skorkin
+  url: http://www.skorks.com/
+  description: Software blogger I really like.
+
+- name: Andy Hunt
+  url: http://blog.toolshed.com/
+  description: Author of The Pragmatic Programmer, Pragmatic Thinking and Learning, and a whole host of other books.
+
+- name: Ben Rady
+  url: http://benrady.com/
+  description: Software blogger, contibutor to Infinitest, Modit, and Numeral.
+
+- name: Bob Martin
+  url: http://cleancoder.posterous.com/
+  description: Founder of Object Mentor, author of Agile Software Development and Clean Code.
+
+- name: Brandon Harper
+  url: http://www.devnulled.com/
+  description: Coworker from Acxiom and Time Warner Cable.
+
+- name: Brian Goetz
+  url: http://briangoetz.blogspot.com/
+  description: One of my favorite presenters from NFJS, author of Java Concurrency in Practice.
+
+- name: Brian Marick
+  url: http://www.exampler.com/blog/
+  description: Author of Everyday Scripting with Ruby, creator of Graffle and User Choices.
+
+- name: Bryan Noll
+  url: http://cobility.blogspot.com/
+  description: Coworker from OpenLogic and Time Warner Cable.
+
+- name: Chad Fowler
+  url: http://chadfowler.com/
+  description: Author of The Passionate Programmer and Programming Ruby.
+
+- name: Charles Nutter
+  url: http://blog.headius.com/
+  description: Lead developer of JRuby.
+
+- name: Dave Thomas
+  url: http://pragdave.pragprog.com/
+  description: Author of Programming Ruby, Agile Web Development with Rails, and The Pragmatic Programmer.
+
+- name: Demian Neidetcher
+  url: http://demian0311.blogspot.com/
+  description: Coworker from OpenLogic and Time Warner Cable, creator of Kant Builder and Pix.
+
+- name: Eric Wendelin
+  url: http://eriwen.com/
+  description: Coworker from Time Warner Cable, creator of the Griffon Jython plugin and stracktrace.js.
+
+- name: Fred Jean
+  url: http://fredjean.net/
+  description: Coordinator of the Boulder Java User Group.
+
+- name: Jake Sutton
+  url: http://www.blahstuff.com/
+  description: Coworker from Acxiom.
+
+- name: James Shore
+  url: http://jamesshore.com/
+  description: Author of The Art of Agile Development.
+
+- name: Jeff Atwood
+  url: http://www.codinghorror.com/blog/
+  description: Founder of Stack Exchange.
+
+- name: Johnny Wey
+  url: http://johnnywey.wordpress.com/
+  description: Coworker from Time Warner Cable and JUG regular.
+
+- name: Ken Sipe
+  url: http://kensipe.blogspot.com/
+  description: NFJS Speaker, CTO at Gradleware.
+
+- name: Kent Beck
+  url: http://www.threeriversinstitute.org/blog/
+  description: Creator of Extreme Programming, author of Test-Driven Development By Example, Implementation Patterns, and lots more.
+
+- name: Martin Fowler
+  url: http://www.martinfowler.com/bliki/
+  description: Author of Refactoring, Domain Specific Languages, Patterns of Enterprise Application Architecture.
+
+- name: Matt Brozovich
+  url: http://mattbrozovich.com/
+  description: Coworker from Acxiom.
+
+- name: Matt McCullough
+  url: http://ambientideas.com/blog/
+  description: Cofounder of Ambient Ideas, coordinator of Denver Open Source Users Group.
+
+- name: Michael Feathers
+  url: http://michaelfeathers.typepad.com/
+  description: Author of Working Effectively with Legacy Code, consultant at Object Mentor.
+
+- name: Mike Clark
+  url: http://clarkware.com/
+  description: Author of Agile Web Development with Rails and Pragmatic Project Automation.
+
+- name: Neal Enssle
+  url: http://www.ensslefamily.com/
+  description: Coworker from Acxiom.
+
+- name: Neal Ford
+  url: http://memeagora.blogspot.com/
+  description: Author of The Productive Programmer and Art of Java Web Development.
+
+- name: Peter Ko
+  url: http://thekohome.com/
+  description: Coworker from Acxiom.
+
+- name: Tim Berglund
+  url: http://www.augusttechgroup.com/tim/blog/
+  description: Coordinator of Denver Open Source Users group.
+

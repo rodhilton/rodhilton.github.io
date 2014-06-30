@@ -16,7 +16,7 @@
 - name: GitHub
   icon: github.png
   url: http://github.com/rodhilton
-  color: 4183c4
+  color: "000000"
 
 - name: Speakerdeck
   icon: speakerdeck.png

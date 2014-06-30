@@ -50,11 +50,14 @@
         <li class="cat-item {{cat_class | trim}}"><a href="/category/{{category[0]}}">{{category[0] | upcase}}</a>
       {% endfor %}
 
-      <li id="menu-item-2242" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2242"><a href="http://www.nomachetejuggling.com/about/">About</a></li>
-      <li id="menu-item-2241" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2241"><a href="http://www.nomachetejuggling.com/resume/">Résumé</a></li>
-      <li id="menu-item-2239" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2239"><a href="http://www.nomachetejuggling.com/projects/">Projects</a></li>
-      <li id="menu-item-2238" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2238"><a href="http://www.nomachetejuggling.com/contact/">Contact</a></li>
-      <li id="menu-item-2240" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2240"><a href="http://www.nomachetejuggling.com/links/">Links</a></li>
+      {% for top_page in site.top_pages %}
+        {% capture menu_class %}
+            {% if page.url == top_page.url %}
+              current-menu-item
+            {% endif %}
+        {% endcapture %}
+        <li class="menu-item {{menu_class | trim}}"><a href="{{top_page.url}}">{{top_page.title | upcase}}</a></li>
+      {% endfor %}
       </ul><!-- /navlist -->
     </div><!-- /navcontainer -->
   </div><!-- /navbar -->

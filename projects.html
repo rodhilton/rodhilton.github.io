@@ -1,0 +1,18 @@
+---
+layout: page
+type: page
+title: Projects
+order: 3
+---
+
+<p>These are various projects that I’m in different stages of working on.</p>
+
+<dl class='links'>
+{% for project in site.data.projects | sort: 'name' %}
+	<dt>
+		&#8226; 
+		<a href="{{project.url}}">{{project.name}}</a>
+	</dt>
+	<dd class="notes">{{project.description}}</dd>
+{% endfor %}
+</dl>
