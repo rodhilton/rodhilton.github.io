@@ -77,6 +77,10 @@ $separator_color: $background_color - #333;
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#24000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 
+@mixin box-emboss($opacity, $opacity2){
+    box-shadow:white($opacity) 0 1px 0, inset black($opacity2) 0 1px 0;
+}
+
 @mixin letterpress($opacity){
     text-shadow:white($opacity) 0 1px 0;
 }
@@ -126,8 +130,6 @@ body {
   text-align:center;
   background-color: $background_color;
 }
-
-
 
 a {
   color: $link_color;
@@ -181,6 +183,14 @@ abbr {
 
 
 /* Layout */
+
+#notice {
+  background-color: #ffa;
+  font-size: 1.4em;
+  text-align: center;
+  padding: 1em;
+  border-bottom: 1px solid #888;
+}
 
 #page {
   margin:0 auto;
