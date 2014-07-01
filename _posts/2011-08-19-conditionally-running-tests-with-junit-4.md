@@ -1,8 +1,7 @@
 ---
 layout: post
 title: Conditionally Running Tests With JUnit 4
-categories:
-- Programming
+category: Programming
 tags:
 - code
 - groovy
@@ -15,16 +14,6 @@ tags:
 status: publish
 type: post
 published: true
-meta:
-  _edit_last: '1'
-  _syntaxhighlighter_encoded: '1'
-  dsq_thread_id: '606493202'
-author:
-  login: air0day
-  email: blog@air0day.com
-  display_name: Rod Hilton
-  first_name: Rod
-  last_name: Hilton
 ---
 <p>At work, I'm building a module that interfaces with a customer billing system.  Writing unit tests for something like this is easy using mocks, but I really wanted to write an integration test the ensured the two systems worked together correctly.</p>
 <p>Unfortunately, because the system is a billing system, it is considered sensitive, even the developer instance.  This means that, though the Continuous Integration environment (which is hosted in a secure location) is able to access the billing system, the remote office in Denver (where I work) is not.</p>
@@ -33,33 +22,43 @@ author:
 <p><!--more--></p>
 <p>While trying to find a solution to this problem, I discovered JUnit 4's conditional assumption API.  Since I had never seen it before, I wanted to talk about my usage of it here.  In order to make these tests read cleanly, I am using Junit 4, Hamcrest, and HttpClient.  My test itself is also written in Groovy, but it would work just as well in Java (I'm only using Groovy for spaces in test names and <a href="http://dontmindthelanguage.wordpress.com/2009/12/11/groovy-1-7-power-assert/">Power Asserts</a>).</p>
 <p>So here's a stripped down version of my test:</p>
-<p>[groovy]<br />
-package com.nomachetejuggling</p>
-<p>import org.junit.Before<br />
-import org.junit.Test<br />
-import static org.junit.Assume.assumeThat<br />
-import static com.nomachetejuggling.UrlAccessibleMatcher.isAccessible</p>
-<p>class BillingIntegrationTest {</p>
-<p>    def url</p>
-<p>    @Before<br />
-    void setUp() {<br />
-        url = &quot;http://billing.system/endpoint&quot;<br />
-        assumeThat(url, isAccessible())<br />
-    }</p>
-<p>    @Test<br />
-    void &quot;can request data&quot;() {<br />
-        BillingModule billing = new BillingModule(url)</p>
-<p>        BillingData response = billing.getDataForAccount(&quot;12345&quot;)</p>
-<p>        assert response.isSuccessful()<br />
-    }</p>
-<p>    @Test<br />
-    void &quot;should fail when account number invalid&quot;() {<br />
-        BillingModule billing = new BillingModule(url)</p>
-<p>        BillingData response = billing.getDataForAccount(&quot;XXXXX&quot;)</p>
-<p>        assert response.isFailure();<br />
-    }<br />
-}</p>
-<p>[/groovy]</p>
+
+    package com.nomachetejuggling
+
+    import org.junit.Before
+    import org.junit.Test
+    import static org.junit.Assume.assumeThat
+    import static com.nomachetejuggling.UrlAccessibleMatcher.isAccessible
+
+    class BillingIntegrationTest {
+
+      def url
+
+      @Before
+        void setUp() {
+        url = "http://billing.system/endpoint"
+        assumeThat(url, isAccessible())
+      }
+
+      @Test
+      void "can request data"() {
+        BillingModule billing = new BillingModule(url)
+
+        BillingData response = billing.getDataForAccount("12345")
+
+        assert response.isSuccessful()
+      }
+
+      @Test
+      void "should fail when account number invalid"() {
+        BillingModule billing = new BillingModule(url)
+
+        BillingData response = billing.getDataForAccount("XXXXX")
+
+        assert response.isFailure();
+      }
+    }
+
 <p>The specifics of the tests are not important here.  What's important is the <code>@Before</code> method, which calls <code>assumeThat()</code>.  <code>assumeThat</code> is a method that, if it's matcher evaluates to false, ignores the test.  The test does not fail, it's marked as passed (with some information recorded to the log).</p>
 <p>You can also use <code>assumeTrue()</code> and pass a simple boolean, but I prefer to use Hamcrest because I think it reads nicer and it provides a convenient central location for the boolean logic needed here.</p>
 <p>The other piece of the puzzle here is, of course, <code>UrlAccessibleMatcher</code>, which does the work of determining if the URL can be accessed.</p>

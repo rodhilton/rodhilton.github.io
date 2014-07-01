@@ -58,12 +58,12 @@
   url: http://www.43things.com/person/rodhilton
   color: ff9a00
 
-- name: Flickr
-  icon: flickr.png
-  url: http://www.flickr.com/rodhilton
-  color: ff0084
+# - name: Flickr
+#   icon: flickr.png
+#   url: http://www.flickr.com/rodhilton
+#   color: ff0084
 
-- name: Yelp
-  icon: yelp.png
-  url: http://rodhilton.yelp.com
-  color: af0606
+# - name: Yelp
+#   icon: yelp.png
+#   url: http://rodhilton.yelp.com
+#   color: af0606
