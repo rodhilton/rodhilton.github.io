@@ -1,8 +1,7 @@
 ---
 layout: post
 title: Top 10 Career-Changing Programming Books
-categories:
-- Programming
+category: Programming
 tags:
 - books
 - career

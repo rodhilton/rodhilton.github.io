@@ -29,7 +29,7 @@ $blockquote_border_color: $background_color - #111;
 //$calendar_color: $background_color - #333;
 $calendar_color: $blue_color;
 $calendar_background_color: $background_color;
-$separator_color: $background_color - #111;
+$separator_color: $background_color - #333;
 
 @function black($opacity){
     @return rgba(0,0,0,$opacity)
@@ -249,7 +249,7 @@ abbr {
     @include box-shadow;
 
     &.dimmed {
-      background-color: #a4a4a6 !important;
+      background-color: $separator_color !important;
       opacity: 0.5;
       @include box-shadow(0px, 0px, 0);
     }
@@ -467,6 +467,10 @@ $inner_block_width: $content_width - (5 * $content_padding);
     margin-top:0;
   }
 
+  dd, dt, dl, li, ul, ol {
+    text-align: left;
+  }
+
   /*
   p:first-child:first-letter {
     font-size: 2em;
@@ -556,9 +560,11 @@ $inner_block_width: $content_width - (5 * $content_padding);
 
     code {
       font: $code_font !important;
+      background-color: transparentize($highlight_color, 0.7);    
+    }
+
+    pre code {
       background-color: $highlight_color;
-      border: 2px solid $highlight_color;
-      border-width: 0px 1px 0px 1px;
     }
 
     pre.output {
@@ -726,6 +732,16 @@ $inner_block_width: $content_width - (5 * $content_padding);
 
   .post-listing .postheader h1 {
     font-size: 1.6em;
+  }
+
+  .post-listing .postheader {
+    border-bottom: 1px dotted $separator_color;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+  }
+
+  .post-listing .postheader:last-child {
+    border-bottom: 0;    
   }
 
   .postheader {

@@ -1,8 +1,7 @@
 ---
 layout: post
 title: The Worst Programming Interview Question
-categories:
-- Programming
+category: Programming
 tags:
 - algorithms
 - coding
@@ -11,11 +10,6 @@ tags:
 status: publish
 type: post
 published: true
-meta:
-  _edit_last: '1'
-  _syntaxhighlighter_encoded: '1'
-  dsq_thread_id: ''
-  dsq_needs_sync: '1'
 ---
 Years ago, I wrote about a [particular type of interview question]({% post_url 2008-12-11-my-least-favorite-interview-question %}) that I despise.  Today I'd like to discuss a much more specific question, rather than a type.  I've never been asked this question myself, but I have seen it asked in an actual interview, and I officially nominate it as the worst question I've ever heard in an interview.
 
