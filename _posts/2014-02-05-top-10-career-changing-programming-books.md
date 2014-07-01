@@ -22,7 +22,7 @@ So, without further ado...
 
 ## [The Pragmatic Programmer](http://www.amazon.com/The-Pragmatic-Programmer-Journeyman-Master/dp/020161622X)
 
-<a href="http://www.amazon.com/The-Pragmatic-Programmer-Journeyman-Master/dp/020161622X"><img src="/assets/pragprog-238x300.jpg" alt="The Pragmatic Programmer" class="alignright size-medium wp-image-2382" /></a>
+{% image pragprog-238x300.jpg align="right" link="http://www.amazon.com/The-Pragmatic-Programmer-Journeyman-Master/dp/020161622X" %}
 
 I know, I know.  Every list you've ever seen on the internet includes this book.  I'm sorry, I wish I could be more original, but this book really is an eye-opener.  _The Pragmatic Programmer_ contains 46 tips for software professionals that are simply indispensable.  As the name implies, the book avoids falling into any kind of religious wars with its tips, it's simply about pragmatism.
 
@@ -37,7 +37,7 @@ How groundbreaking is this book?  Groundbreaking enough that it launched an enti
 
 ## [Continuous Delivery](http://www.amazon.com/Continuous-Delivery-Deployment-Automation-Addison-Wesley/dp/0321601912)
 
-<a href="http://www.amazon.com/Continuous-Delivery-Deployment-Automation-Addison-Wesley/dp/0321601912"><img src="/assets/continuousDelivery-227x300.jpg" alt="Continuous Delivery" width="227" height="300" class="alignright size-medium wp-image-2384" /></a>
+{% image continuousDelivery-227x300.jpg align="right" link="http://www.amazon.com/Continuous-Delivery-Deployment-Automation-Addison-Wesley/dp/0321601912" %}
 
 Releasing software is one of the most stressful parts of the job.  I can't tell you how many times in my career I've been part of a botched launch, or up until the wee hours of the morning on a conference call trying to get software into the hands of customers.  When do we branch, what goes in what branch, how do we build the artifacts, what process do we walk through to get them where they need to go?  It can be one of the most complex, error-prone, and difficult parts of professional programming.
 
@@ -52,7 +52,7 @@ I worked in an environment operating at about a 70%-level of adherence to the ph
 
 ## [Clean Code](http://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882) / [The Clean Coder](http://www.amazon.com/The-Clean-Coder-Professional-Programmers/dp/0137081073)
 
-<img src="/assets/cleanduology-300x191.jpg" alt="Clean Code &amp; The Clean Coder" width="300" height="191" class="alignright size-medium wp-image-2388" />
+{% image cleanduology-300x191.jpg align="right" %}
 
 Look at this, only a few items into my list and I've already cheated by including two books as a single entry.  Yes, _Clean Code_ and _The Clean Coder_ are two separate books, but honestly they're both very short, and very similar.  Both books are about how a programmer should conduct him or herself professionally, they simply cover different aspects.  Professional software developers communicate with their coworkers in two ways: through code and through everything else.  _Clean Code_ is about how you communicate with your co-workers (fellow programmers) through code itself, and _The Clean Coder_ is about how you communicate verbally, or through e-mail.
 
@@ -67,7 +67,7 @@ Even more than _Clean Code_, _The Clean Coder_ had a profound impact on me.  It 
 
 ## [Release It!](http://www.amazon.com/Release-It-Production-Ready-Pragmatic-Programmers/dp/0978739213)
 
-<a href="http://www.amazon.com/Release-It-Production-Ready-Pragmatic-Programmers/dp/0978739213"><img src="/assets/releaseit-250x300.jpg" alt="Release It!" width="250" height="300" class="alignright size-medium wp-image-2403" /></a>
+{% image releaseit-250x300.jpg align="right" link="http://www.amazon.com/Release-It-Production-Ready-Pragmatic-Programmers/dp/0978739213" %}
 
 A product's life doesn't begin when you first create the source code repository, or write the first line of code, or even finish the first story.  It begins as soon as it's launched into production, into the hands of real users.  Everything before that is just bits, just plain text files on disks.  So in a lot of ways, it's astonishing how much thought is put into the code for the period of time before it's really born.
 
@@ -82,7 +82,7 @@ _Release It!_'s tactics will make you your operations team's favorite person, an
 
 ## [Head First Design Patterns](http://www.amazon.com/First-Design-Patterns-Elisabeth-Freeman/dp/0596007124) / [Patterns of Enterprise Application Architecture](http://www.amazon.com/Patterns-Enterprise-Application-Architecture-Martin/dp/0321127420)
 
-<img src="/assets/patterns-300x189.jpg" alt="Patterns Books" width="300" height="189" class="alignright size-medium wp-image-2394" />
+{% image patterns-300x189.jpg align="right" %}
 
 No list like this would be complete without a book about design patterns.  But where's the famous "Gang of Four" book, you ask?  Not on this list, that's where.  Honestly, GoF was a pretty groundbreaking book at the time, but I personally think the presentation of the information it contains is awful.  I believe everything presented in GoF is presented better in _Head First Design Patterns_.  I know that not everyone is crazy about the Head First series, and even I find the structure and layout of the book grating at times, but I think the diagrams and visuals are light years better than those of GoF.  
 
@@ -97,7 +97,7 @@ Patterns provide great "templates" to use when solving common problems.  They ne
 
 ## [Working Effectively with Legacy Code](http://www.amazon.com/Working-Effectively-Legacy-Michael-Feathers/dp/0131177052)
 
-<a href="http://www.amazon.com/Working-Effectively-Legacy-Michael-Feathers/dp/0131177052"><img src="/assets/legacycode-226x300.jpg" alt="Working Effectively with Legacy Code" width="226" height="300" class="alignright size-medium wp-image-2390" /></a>
+{% image legacycode-226x300.jpg align="right" link="http://www.amazon.com/Working-Effectively-Legacy-Michael-Feathers/dp/0131177052" %}
 
 My first job out of college was replacing a developer who had left the company, as the sole responsible engineer on a massive and extremely complex codebase.  Working in this codebase was terrifying, any change I made had the potential to break almost anything, and there was no way to test any changes without pushing a jar to the production system and watching it go.  I checked over every change I made about a thousand times, and hand-constructed little `public static void main` classes just to instantiate classes and invoke methods, and then hand-check results.  I had never heard of unit tests at this point (evidently, neither had my successor), so everything was done with kid gloves.
 
@@ -109,9 +109,10 @@ Moving to a new job is less intimidating to me now, and I often spend the first 
 
 **What it changed:** How I feel about inherited codebases, and how I manage my confidence working with them.
 
+
 ## [Refactoring](http://www.amazon.com/Refactoring-Improving-Design-Existing-Code/dp/0201485672) / [xUnit Test Patterns](http://www.amazon.com/xUnit-Test-Patterns-Refactoring-Code/dp/0131495054/)
 
-<img src="/assets/refactoring_xunit-300x196.jpg" alt="Refactoring and xUnit Test Patterns" width="300" height="196" class="alignright size-medium wp-image-2396" />
+{% image refactoring_xunit-300x196.jpg align="right" %}
 
 I think most recent college graduates, myself included, are "cowboy" coders.  We have all the changes in our heads, and just try to get them fed from our brains into the compiler as quickly as we can, before we forget all the stuff we want to do.  Today, I cringe when I think about how many characters of code I'd type between actually running or testing my software; "waiting for the compiler is just going to slow me down, let me get all the code written first and then I'll debug it!"
 
@@ -126,7 +127,7 @@ Refactoring and testing are essential tools in the programmer's toolchest, and t
 
 ## [The Passionate Programmer](http://www.amazon.com/The-Passionate-Programmer-Remarkable-Development/dp/1934356344) / [Land the Tech Job You Love](http://www.amazon.com/Land-Tech-Love-Pragmatic-Life/dp/1934356263)
 
-<img src="/assets/career_books-300x225.jpg" alt="Passionate Programmer &amp; Tech Job You Love" width="300" height="225" class="alignright size-medium wp-image-2398" />
+{% image career_books-300x225.jpg align="right" %}
 
 Okay, I get it, I'm terrible at making these lists, and clearly should have just done a "Top 15" or something.  In any case, landing that first job out of college is tough, but eventually the day comes when it's time to move on.  _The Passionate Programmer_ is largely about how to find the right kind of job for you, what to look for in tech companies, and how to manage the direction of your career.  It's pretty high level, but full of extraordinarily important advice to ensure you find yourself at companies that fit you and that you fit into well.  _Land the Tech Job You Love_ is more about the mechanics of this process, how to write a resume, how to interview, how to negotiate a salary, and the like.  This is another situation where really two books are so closely related that they'd be better as a single larger book.
 
@@ -141,7 +142,7 @@ I have a lot of confidence about my career now, and I don't live in fear of losi
 
 ## [Apprenticeship Patterns](http://www.amazon.com/Apprenticeship-Patterns-Guidance-Aspiring-Craftsman/dp/0596518382/)
 
-<a href="http://www.amazon.com/Apprenticeship-Patterns-Guidance-Aspiring-Craftsman/dp/0596518382/"><img src="/assets/apprenticeship-patterns-228x300.jpg" alt="Apprenticeship Patterns" width="228" height="300" class="alignright size-medium wp-image-2407" /></a>
+{% image apprenticeship-patterns-228x300.jpg align="right" link="http://www.amazon.com/Apprenticeship-Patterns-Guidance-Aspiring-Craftsman/dp/0596518382/" %}
 
 _Apprenticeship Patterns_ isn't really a patterns book as the name implies, but it's content has been kind of shoehorned into the format, I assume to increase sales.  Ignoring that flaw, _Apprenticeship Patterns_ is the best book on Software Craftsmanship I've read, and I've read quite a few.  I actually recommend it above [Pete McBreen's Software Craftsmanship](http://www.amazon.com/Software-Craftsmanship-The-New-Imperative/dp/0201733862), because it covers pretty much everything useful from that book, but excises some of the more unrealistic or naive bits, as well as the extremely long and pointless section about salary.  _Apprenticeship Patterns_ is a bugfix release for _Software Craftsmanship_.
 
@@ -153,9 +154,10 @@ What's especially great is this book is it's been licensed under Creative Common
 
 **What it changed:** How I view my responsibilities as a professional, and what I consider my true title.
 
+
 ## [The Art of Agile Development](http://www.amazon.com/Art-Agile-Development-James-Shore/dp/0596527675)
 
-<a href="http://www.amazon.com/Art-Agile-Development-James-Shore/dp/0596527675"><img src="/assets/theartofagiledevelopment-228x300.jpg" alt="Art of Agile Development" width="228" height="300" class="alignright size-medium wp-image-2405" /></a>
+{% image theartofagiledevelopment-228x300.jpg align="right" link="http://www.amazon.com/Art-Agile-Development-James-Shore/dp/0596527675" %}
 
 The first job I had out of college was pure chaos.  No process, no estimation, no planning, nothing.  Generally someone from marketing would stop by a programmer's cubicle and inform them that they just sold a few thousand dollars worth of seats based on a feature that didn't exist yet, so how long would it take to implement it?  Being my first post-college job, I was in "sponge mode," so I simply thought this was how it worked in the real world.  It wasn't until my next job that I was introduced to Agile Development methodologies by way of Scrum, which was like mana from heaven.  I was hooked.
 
@@ -169,6 +171,7 @@ Today, my preferred way of working is with XP-style practices within a Kanban-st
 
 **What it changed:** How I like to work in terms of processes and practices.
 
+
 # Honorable Mentions
 
 There are a number of books that I didn't include in the above list, but that nonetheless had a large impact on my career.  This, of course, despite the fact that I completely cheated in my Top 10 and included more than ten books.  
@@ -181,4 +184,3 @@ There are a number of books that I didn't include in the above list, but that no
 So that's my complete list.  I obviously have many, many more books to read, and I look forward to writing another list like this one in the future after being profoundly changed for the better some more.
 
 Have some books you want to add?  Feel like telling me one of my favorite books is inferior to one of yours?  Want to yell at me for not including [_The Art of Computer Programming_](http://www-cs-faculty.stanford.edu/~uno/taocp.html) (come on, you never read that shit and you know it)?  Leave a comment!
-

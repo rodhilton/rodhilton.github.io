@@ -8,7 +8,7 @@
         <title>{{ page.title }}</title>
         <meta name="viewport" content="width=device-width">
         <link rel="alternate" type="application/rss+xml" title="Absolutely No Machete Juggling Feed" href="/rss.xml" />
-        
+
         <link rel="icon" href="/assets/favicon.png" type="image/png">
         <link rel="shortcut icon" href="/assets/favicon.png" type="image/png">
 
@@ -20,6 +20,7 @@
         <link rel="stylesheet" href="http://yandex.st/highlightjs/8.0/styles/solarized_light.min.css">
         
         <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="/scripts/jquery.lazyload.mini.js"></script>
     </head>
 <body>
 
@@ -130,11 +131,28 @@
 
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
-    tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+    tex2jax: {
+      inlineMath: [["$$","$$"], ["\\(","\\)"]],
+      displayMath: [["$$$","$$$"],["\\[","\\]"]]
+    },
+    TeX: {
+      extensions: ["AMSmath.js", "AMSsymbols.js"]
+    },
+    "HTML-CSS": {
+      scale: 96
+    }
   });
 </script>
 
 <script type="text/javascript">
+  $(function() {
+      if (navigator.platform == "iPad") return;
+      jQuery(".post img").not(".cycle img").lazyload({
+        effect:"fadeIn",
+        placeholder: "/assets/grey.gif"
+      });
+  });
+
   $(function() {
       Hyphenator.config({
         minwordlength: 8,
