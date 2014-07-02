@@ -24,15 +24,18 @@ site_files = Dir.glob(File.join(site_directory, "**/*")).reject{|f| File.directo
 
 site_files_set = Set.new(site_files.collect{|f| f.gsub(/^#{site_directory}\//,"")})
 #Convert the list of local files to name => hash
-site_files_hash = site_files_set.to_a.collect{|f| [f, Digest::MD5.hexdigest(File.join(site_directory, f))]}.inject({}) { |r, s| r.merge!({s[0] => s[1]}) }
+site_files_hash = site_files_set.to_a.collect{|f| [f, Digest::MD5.hexdigest(File.read(File.join(site_directory, f)))]}.inject({}) { |r, s| r.merge!({s[0] => s[1]}) }
 
-
-service = Fog::Storage.new({
-	:provider=>"Rackspace",
-	:rackspace_username=>Fog.credentials[:rackspace_username],
-	:rackspace_api_key=>Fog.credentials[:rackspace_api_key],
-	:rackspace_region => :dfw
-})
+begin
+	service = Fog::Storage.new({
+		:provider=>"Rackspace",
+		:rackspace_username=>Fog.credentials[:rackspace_username],
+		:rackspace_api_key=>Fog.credentials[:rackspace_api_key],
+		:rackspace_region =>Fog.credentials[:rackspace_region].to_sym,
+	})
+rescue Exception => e
+	error("Unable to log in, please check your credentials")
+end
 
 cloud_directory = service.directories.find{|d| d.key == container_name}
 
