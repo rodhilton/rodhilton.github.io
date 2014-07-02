@@ -19,7 +19,7 @@ For a final paper, we had to pick a topic of our own choosing in Complexity Theo
 
 Nonetheless, I'm pretty happy with my paper, which provides an undergraduate-level explanation of 26 other complexity classes, based off [The Complexity Zoo](http://complexityzoo.uwaterloo.ca/Complexity_Zoo"), kept by MIT professor Scott Aaronson.  I tried to boil these classes down to the bare essentials and explain them with examples in plain english as much as I could.  The goal of the paper is to expose those new to Complexity Theory or early in their Computer Science careers to a handful of interesting classes and explain how they relate to each other, the more common classes, and of course the $$P =? NP$$ question.
 
-You can download the paper **[here](/files/complexity_zoo.pdf")**.
+You can download the paper **[here](/files/complexity_zoo.pdf)**.
 
 Please note, this paper has not been peer-reviewed in any fashion.  It has not been (nor will it be) submitted to any academic journals, and it makes no novel contributions to the field.  It's purely an overview of other classes, a literature review at best.  I post it here in case others might find it interesting or informative, but it is **not to be cited**.  If you somehow find something valuable for your own research, I suggest you follow the citations in the paper and look up the references yourself, then use those as a source.
 
