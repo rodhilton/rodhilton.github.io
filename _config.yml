@@ -1,7 +1,7 @@
 name: Absolutely No Machete Juggling
 tagline: "Rod Hilton&#039;s rants about stuff he cares about way too much."
 
-markdown: kramdown
+markdown: redcarpet
 highlighter: null
 
 exclude: ['resume/']
@@ -11,6 +11,9 @@ permalink: /:year/:month/:day/:title/
 separator: "&raquo;"
 
 kramdown: 
-  toc_levels: "1,2,3" 
+  use_coderay: false
+
+sass:
+  style: :compressed
 
 category_dir: category

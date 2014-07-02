@@ -1,0 +1,7 @@
+convert rest of posts
+[output] shortcode conversion of some kind
+self-host jquery and other libs?
+convert scripts to coffeescript and minimize, take out of inline for cache
+google analytics
+more responsive css
+build process in jenkins.  triggered by resume too

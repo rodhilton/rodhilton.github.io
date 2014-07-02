@@ -56,6 +56,7 @@ Even if you wrote a `LinkedList` class for some library, you still can't find yo
 
 Take a look at the Java source code and you'll find those next and previous pointers are here, inside of `LinkedList`:
 
+~~~ java
     private static class Entry <E> {
       E element;
       
@@ -64,6 +65,7 @@ Take a look at the Java source code and you'll find those next and previous poin
       
       Entry(E e, java.util.LinkedList.Entry<E> entry, java.util.LinkedList.Entry<E> entry1) { /* compiled code */ }
     }
+~~~
 
 This is a `private static` class, inside of `LinkedList`.  You can't instantiate a `LinkedList.Entry`.  You have no way to manipulate these `next` or `previous` pointers.  Because those things are the state of the list, and __`LinkedList` encapsulates the behaviors with the state inside of the class,__ like it ought to.
 
@@ -71,11 +73,13 @@ If your `LinkedList` class were vulnerable to any kind of cycle creation, you've
 
 Here's the only cycle detector you'll ever need to write for your `LinkedList`:
 
-    public class LinkedList {
-        public boolean containsCycle() {
-            return false;
-        }
+~~~java
+public class LinkedList {
+    public boolean containsCycle() {
+        return false;
     }
+}
+~~~
 
 There is no real situation in which this method's return value would be different than one that uses a tortoise-and-hare algorithm.
 

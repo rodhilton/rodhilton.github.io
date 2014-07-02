@@ -27,41 +27,43 @@ While trying to find a solution to this problem, I discovered JUnit 4's conditio
 
 So here's a stripped down version of my test:
 
-    package com.nomachetejuggling
+~~~ groovy
+package com.nomachetejuggling
 
-    import org.junit.Before
-    import org.junit.Test
-    import static org.junit.Assume.assumeThat
-    import static com.nomachetejuggling.UrlAccessibleMatcher.isAccessible
+import org.junit.Before
+import org.junit.Test
+import static org.junit.Assume.assumeThat
+import static com.nomachetejuggling.UrlAccessibleMatcher.isAccessible
 
-    class BillingIntegrationTest {
+class BillingIntegrationTest {
 
-      def url
+  def url
 
-      @Before
-        void setUp() {
-        url = "http://billing.system/endpoint"
-        assumeThat(url, isAccessible())
-      }
+  @Before
+    void setUp() {
+    url = "http://billing.system/endpoint"
+    assumeThat(url, isAccessible())
+  }
 
-      @Test
-      void "can request data"() {
-        BillingModule billing = new BillingModule(url)
+  @Test
+  void "can request data"() {
+    BillingModule billing = new BillingModule(url)
 
-        BillingData response = billing.getDataForAccount("12345")
+    BillingData response = billing.getDataForAccount("12345")
 
-        assert response.isSuccessful()
-      }
+    assert response.isSuccessful()
+  }
 
-      @Test
-      void "should fail when account number invalid"() {
-        BillingModule billing = new BillingModule(url)
+  @Test
+  void "should fail when account number invalid"() {
+    BillingModule billing = new BillingModule(url)
 
-        BillingData response = billing.getDataForAccount("XXXXX")
+    BillingData response = billing.getDataForAccount("XXXXX")
 
-        assert response.isFailure();
-      }
-    }
+    assert response.isFailure();
+  }
+}
+~~~
 
 The specifics of the tests are not important here.  What's important is the <code>@Before</code> method, which calls <code>assumeThat()</code>.  <code>assumeThat</code> is a method that, if it's matcher evaluates to false, ignores the test.  The test does not fail, it's marked as passed (with some information recorded to the log).
 
@@ -69,48 +71,50 @@ You can also use <code>assumeTrue()</code> and pass a simple boolean, but I pref
 
 The other piece of the puzzle here is, of course, <code>UrlAccessibleMatcher</code>, which does the work of determining if the URL can be accessed.
 
-    package com.nomachetejuggling;
+~~~ java
+package com.nomachetejuggling;
 
-    import org.apache.commons.httpclient.HttpClient;
-    import org.apache.commons.httpclient.HttpConnectionManager;
-    import org.apache.commons.httpclient.HttpMethod;
-    import org.apache.commons.httpclient.SimpleHttpConnectionManager;
-    import org.apache.commons.httpclient.methods.GetMethod;
-    import org.apache.commons.httpclient.params.HttpConnectionManagerParams;
-    import org.hamcrest.Description;
-    import org.hamcrest.Matcher;
-    import org.junit.internal.matchers.TypeSafeMatcher;
+import org.apache.commons.httpclient.HttpClient;
+import org.apache.commons.httpclient.HttpConnectionManager;
+import org.apache.commons.httpclient.HttpMethod;
+import org.apache.commons.httpclient.SimpleHttpConnectionManager;
+import org.apache.commons.httpclient.methods.GetMethod;
+import org.apache.commons.httpclient.params.HttpConnectionManagerParams;
+import org.hamcrest.Description;
+import org.hamcrest.Matcher;
+import org.junit.internal.matchers.TypeSafeMatcher;
 
-    public class UrlAccessibleMatcher extends TypeSafeMatcher<String> {
+public class UrlAccessibleMatcher extends TypeSafeMatcher<String> {
 
-      public static Matcher<String> isAccessible() {
-        return new UrlAccessibleMatcher();
-      }
+  public static Matcher<String> isAccessible() {
+    return new UrlAccessibleMatcher();
+  }
 
-      @Override
-      public boolean matchesSafely(String url) {
-        HttpMethod method = new GetMethod(url);
-        try {
-          HttpConnectionManager connectionManager = new SimpleHttpConnectionManager();
-          HttpConnectionManagerParams params = connectionManager.getParams();
-          params.setConnectionTimeout(500);
-          params.setSoTimeout(500);
+  @Override
+  public boolean matchesSafely(String url) {
+    HttpMethod method = new GetMethod(url);
+    try {
+      HttpConnectionManager connectionManager = new SimpleHttpConnectionManager();
+      HttpConnectionManagerParams params = connectionManager.getParams();
+      params.setConnectionTimeout(500);
+      params.setSoTimeout(500);
 
-          HttpClient client = new HttpClient(connectionManager);
+      HttpClient client = new HttpClient(connectionManager);
 
-          client.executeMethod(method);
+      client.executeMethod(method);
 
-          return method.getStatusCode() == 200;
-        }
-        catch (Exception e) {
-          return false;
-        }
-      }
-
-      public void describeTo(Description descriptionIn) {
-        descriptionIn.appendText("Site would be connectable, but wasn't");
-      } 
+      return method.getStatusCode() == 200;
     }
+    catch (Exception e) {
+      return false;
+    }
+  }
+
+  public void describeTo(Description descriptionIn) {
+    descriptionIn.appendText("Site would be connectable, but wasn't");
+  } 
+}
+~~~
 
 A couple points of note here are that I give this method only 200 milliseconds before timing out.  This is so that the checking for accessibility does not slow all of the tests down.  The downside here is that, if the system is responding slowly, the test will assume that it is not connectable and it won't run the tests.  I had to weigh that against bogging down my entire team by having them open up tunnels before running the tests and decided this was worth it.
 

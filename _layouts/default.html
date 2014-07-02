@@ -12,15 +12,10 @@
         <link rel="icon" href="/assets/favicon.png" type="image/png">
         <link rel="shortcut icon" href="/assets/favicon.png" type="image/png">
 
-        <link href='http://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
-        <link href='http://fonts.googleapis.com/css?family=Droid+Sans+Mono' rel='stylesheet' type='text/css'>
-        <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic|Source+Code+Pro|Architects+Daughter' rel='stylesheet' type='text/css'>
 
         <link rel="stylesheet" href="/css/main.css">
-        <link rel="stylesheet" href="http://yandex.st/highlightjs/8.0/styles/solarized_light.min.css">
-        
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-        <script src="/scripts/jquery.lazyload.mini.js"></script>
+        <link rel="stylesheet" href="/css/googlecode.css">
     </head>
 <body>
 <div id="notice">
@@ -123,13 +118,16 @@ I am currently in the process of converting this entire site to Jekyll.  Some po
   </div>
 </div> <!-- /page -->
 
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js" type="text/javascript"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.0/highlight.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.4.0/MathJax.js" type="text/javascript"></script>
 
-<script src="/scripts/underscore-min.js" type="text/javascript"></script>
 <script src="/scripts/hyphenator/Hyphenator.js" type="text/javascript"></script>
 <script src="/scripts/hyphenator/patterns/en-us.js" type="text/javascript"></script>      
-<script src="http://yandex.st/highlightjs/8.0/highlight.min.js"></script>
-<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <script src="/scripts/auto-toc.js" type="text/javascript"></script>
+<script src="/scripts/startup.js" type="text/javascript"></script>
 
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
@@ -147,49 +145,17 @@ I am currently in the process of converting this entire site to Jekyll.  Some po
 </script>
 
 <script type="text/javascript">
-  $(function() {
-      if (navigator.platform == "iPad") return;
-      jQuery(".post img").not(".cycle img").lazyload({
-        effect:"fadeIn",
-        placeholder: "/assets/grey.gif"
-      });
-  });
+/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+var disqus_shortname = 'nomachetejuggling'; // required: replace example with your forum shortname
 
-  $(function() {
-      Hyphenator.config({
-        minwordlength: 8,
-        classname: 'postentry',
-        donthyphenateclassname: 'no-hyphenate',
-        remoteloading: false,
-        defaultlanguage: 'en-us'
-      })
-      Hyphenator.addExceptions('', 'JAVA_HOME, config');
-      Hyphenator.run();
-
-      hljs.initHighlightingOnLoad();
-
-      jQuery(".social-icon").hover(
-        function() {
-          $( this ).removeClass( "dimmed" );
-        }, function() {
-          $( this ).addClass( "dimmed" );
-        }
-      );
-  });
+/* * * DON'T EDIT BELOW THIS LINE * * */
+(function () {
+    var s = document.createElement('script'); s.async = true;
+    s.type = 'text/javascript';
+    s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+}());
 </script>
-
-  <script type="text/javascript">
-  /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-  var disqus_shortname = 'nomachetejuggling'; // required: replace example with your forum shortname
-
-  /* * * DON'T EDIT BELOW THIS LINE * * */
-  (function () {
-      var s = document.createElement('script'); s.async = true;
-      s.type = 'text/javascript';
-      s.src = '//' + disqus_shortname + '.disqus.com/count.js';
-      (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-  }());
-  </script>
     
 
 </body>

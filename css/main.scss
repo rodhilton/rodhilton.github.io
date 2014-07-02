@@ -116,7 +116,7 @@ $sidebar_right_width: $sidebar_width - (3 * $content_padding) - $sidebar_left_wi
 $content_font: "Lora", serif;
 $header_font: "Trebuchet MS", sans-serif;
 $code_font_size: 14px;
-$code_font_family: "Droid Sans Mono", monospace;
+$code_font_family: "Source Code Pro", monospace;
 $code_font: $code_font_size $code_font_family;
 $menu_font: "Lucida Grande", Verdana, Arial, sans-serif;
 $handwriting_font: "Architects Daughter", $menu_font;
@@ -186,9 +186,9 @@ abbr {
 
 #notice {
   background-color: #ffa;
-  font-size: 1.4em;
+  font-size: 1.1em;
   text-align: center;
-  padding: 1em;
+  padding: .4em;
   border-bottom: 1px solid #888;
 }
 
@@ -1002,3 +1002,68 @@ textarea#comment {
     }
   }
 }
+
+
+/* Responsive Tweaks */
+/*
+@media screen and (max-width: $width) { 
+  body {
+  padding: 0;
+  }
+
+  #headerwrapper {
+
+    #header {
+      width: 100%;
+      background-position: right 8px;
+    }
+  }
+
+  #wrapper {
+    width: 100%;
+    padding:0;
+  }
+
+  #content {
+    float: none;
+    display: block;
+    width: 100%;
+    margin: 0px !important;;
+    margin-right: 0px !important;
+    border: 0px !important;
+    border-right: 0 !important;
+    padding: 0  !important;
+
+    .post {
+      padding: $content_padding;
+    }
+  }
+
+  #sidebars {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+
+    #sidebar-left, #sidebar-right {
+      width: 100%;
+      padding: 0;
+
+      &:first-child {
+         padding: 0 $content_padding;
+      }
+    }
+
+    .sidebar {
+      float: none;
+    }
+
+    #sidebar-right .social-icon {
+      float: left;
+      margin-right: 10px;
+    }
+  }
+
+  #footer { display: none}
+
+}
+*/
