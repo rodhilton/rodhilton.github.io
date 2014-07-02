@@ -1,16 +1,3 @@
 convert rest of posts
 more responsive css
 build process in jenkins.  triggered by resume too
-
-
-order:
-
-	
-/2010/04/06/avoiding-the-big-design-interview-question/
-/2011/07/31/ubuntu-tomcat-jenkins-git-ssh-togethe/
-/2011/09/12/moving-one-git-repo-into-another-as-subdirectory/
-/2006/06/13/java-5-global-exception-handling/
-/2013/02/02/brief-thoughts-on-software-craftsmanship/
-/2012/10/26/scala-second-impressions/
-/2011/08/25/mechanics-of-good-pairing/
-/2013/08/30/diving-into-android/

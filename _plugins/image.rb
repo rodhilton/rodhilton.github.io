@@ -19,6 +19,10 @@ module Jekyll
 
       markup = /^(?:(?<preset>[^\s.:\/]+)\s+)?(?<image_src>[^\s]+\.[a-zA-Z0-9]{3,4})\s*(?<html_attr>[\s\S]+)?$/.match(render_markup)
 
+      if(markup.nil?)
+        markup = {}
+      end
+
       html_attr = if markup[:html_attr]
         Hash[ *markup[:html_attr].scan(/(?<attr>[^\s="]+)(?:="(?<value>[^"]+)")?\s?/).flatten ]
       else

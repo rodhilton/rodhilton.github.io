@@ -13,7 +13,9 @@ function autoToC(contentSelector) {
 	headers.each(function() {
 
 	  var el = $(this);
-	  el.attr("id", el.text().toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/-+/g,"-"))
+	  var id = "toc-"+el.text().toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/-+/g,"-").replace(/^-+/, "").replace(/-+$/, "")
+
+	  el.attr("id", id)
 
 	  var newLevel = Math.floor(el.context.tagName.slice(-1));
 	  

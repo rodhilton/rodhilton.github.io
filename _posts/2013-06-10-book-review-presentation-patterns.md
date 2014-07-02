@@ -13,6 +13,8 @@ tags:
 status: publish
 type: post
 published: true
+---
+
 I don't post book reviews here very often.  Typically I write up a few paragraphs about a book when I finish it and post it to my [Goodreads account](http://www.goodreads.com/user/show/1499157-rod-hilton"), which I consider enough of a review for nearly every book I read.
 
 But "Presentation Patterns: Techniques for Crafting Better Presentations" by Neal Ford, Matthew McCullough, Nathaniel Schutta is a bit more than a book.  I'm not joking when I say this book has actually changed my life.  As such, I felt it was necessary to devote an entire post to it to draw extra attention to it.
