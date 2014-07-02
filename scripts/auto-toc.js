@@ -13,8 +13,8 @@ function autoToC(contentSelector) {
 	headers.each(function() {
 
 	  var el = $(this);
-	  el.attr("id", el.text().toLowerCase().replace(/[^a-z0-9]/, "-").replace(/-+/,"-"))
-	  
+	  el.attr("id", el.text().toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/-+/g,"-"))
+
 	  var newLevel = Math.floor(el.context.tagName.slice(-1));
 	  
 	  if(newLevel - curLevel > 0) { //We need to indent by the diff between curLevel and newLevel
