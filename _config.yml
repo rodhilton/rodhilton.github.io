@@ -4,7 +4,7 @@ tagline: "Rod Hilton&#039;s rants about stuff he cares about way too much."
 markdown: redcarpet
 highlighter: null
 
-exclude: ['resume/']
+exclude: ['resume/', 'todo.txt', 'cloudfiles_upload.rb']
 
 permalink: /:year/:month/:day/:title/
 

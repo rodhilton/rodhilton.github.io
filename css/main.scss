@@ -91,6 +91,14 @@ $separator_color: $background_color - #333;
   box-shadow:         $distance $distance $blur 0px rgba(0, 0, 0, $opacity);
 }
 
+@mixin pre-wrap() {
+  white-space: pre-wrap;       /* css-3 */
+  white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;      /* Opera 4-6 */
+  white-space: -o-pre-wrap;    /* Opera 7 */
+  word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
+
 //Layout Stuff
 
 $width: 1000px;
@@ -499,7 +507,7 @@ $inner_block_width: $content_width - (5 * $content_padding);
   }
 
   .postentry {
-    blockquote, .chat-transcript, pre, {
+    blockquote, .chat-transcript, pre {
       word-spacing: normal;
       letter-spacing: normal;
       font-size:90%;
@@ -507,12 +515,15 @@ $inner_block_width: $content_width - (5 * $content_padding);
       border: 1px solid $blockquote_border_color;
       margin:$content_padding auto;
       width: $inner_block_width;
-      padding: 5px;
       @include rounded-corners;
       @include glow;
       p { margin: .5em; }
     }
 
+    blockquote, .chat-transcript {
+      padding: 5px;
+    }
+  
     .chat-transcript {
       padding-left: 1em;
       padding-right: 1em;
@@ -528,6 +539,8 @@ $inner_block_width: $content_width - (5 * $content_padding);
 
     pre code {
       overflow: auto;
+      padding: 5px;
+      @include rounded-corners;
     }
 
     blockquote blockquote {
@@ -587,25 +600,33 @@ $inner_block_width: $content_width - (5 * $content_padding);
 
     code {
       font: $code_font !important;
-      background-color: transparentize($highlight_color, 0.7);    
+      background-color: transparentize($highlight_color, 0.3);    
+      -ms-word-break: break-all;
+      word-break: break-all;
+
+      -webkit-hyphens: auto;
+      -moz-hyphens: auto;
+      hyphens: auto;
+      word-wrap: break-word;
     }
 
     pre code {
       background-color: $highlight_color;
     }
 
-    pre.output {
-      margin: 1em auto;
+    pre code.language-terminal, pre code.language-output {
+      margin: 0;
       overflow-x: auto;
-      width: $inner_block_width;
-      color: $highlight_color;
+      color: $highlight_color !important;
       font: $code_font;
       text-shadow: none;
       padding: 10px;
-      //border: 1px solid black;
-      background-color: black;
-      @include rounded-corners;
-      @include glow;
+      background-color: #222;
+      @include pre-wrap;
+
+      span {
+        color: $highlight_color !important;
+      }
     }
 
     dt {
@@ -664,6 +685,10 @@ $inner_block_width: $content_width - (5 * $content_padding);
 
     }
 
+    hr {
+      margin-bottom: 1em !important;
+    }
+
     h1, h2, h3, h4, h5, h6 {
       font-family: $header_font;
       font-weight: normal;
@@ -694,42 +719,6 @@ $inner_block_width: $content_width - (5 * $content_padding);
       }
     }
 
-  }
-
-  .syntaxhighlighter {
-    margin: 1em auto !important;
-    width: ($inner_block_width + $content_padding - 2px) !important;
-    border: 1px solid $blockquote_border_color !important;
-    @include rounded-corners;
-    @include glow;
-
-    $gutter_background_color: $background_color - #111;
-    $code_background_color: $highlight_color;
-    $code_alt_background_color: $code_background_color - #080808;
-
-    background-color: $gutter_background_color !important;
-
-    a {
-      border-bottom: none !important;
-    }
-    .line {
-      &.alt1 .content { background-color: $code_background_color !important; }
-      &.alt2 .content { background-color: $code_alt_background_color !important; }
-      .content {
-        border-left: 2px solid $blue_color !important;
-        .block {
-          background-image: none !important;
-        }
-      }
-    }
-    span, div, code {
-      font: $code_font !important;
-            word-wrap: break-word;
-    }
-    &.nogutter {
-      background-color: $code_background_color !important;
-      padding: 0.5em 0 !important;
-    }
   }
 
   .post-listing .postheader h1 {
