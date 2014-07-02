@@ -24,7 +24,7 @@ module Jekyll
     safe true
 
     def generate(site)
-      site.config["ordered_tags"] = site.tags.collect{|k, v| Tag.new(k, v)}.sort{|a, b| a.posts.size <=> b.posts.size}.reverse
+      site.config["ordered_tags"] = site.tags.collect{|k, v| Tag.new(k, v)}.reject{|t| t.posts.size < 2}.sort{|a, b| a.posts.size <=> b.posts.size}.reverse
 
       if site.layouts.key? 'tag_index'
         site.pages << TagPage.new(site, site.source)

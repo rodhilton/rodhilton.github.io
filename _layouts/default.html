@@ -87,13 +87,20 @@ I am currently in the process of converting this entire site to Jekyll.  Some po
           <li id="tag_cloud" class="widget">
             <h2 class="widgettitle">Tags</h2>
             <div class="ctc">
-                {% for tag in site.ordered_tags limit: 50 %}
-                  <a href="/tags.html#{{ tag.name | idify}}-ref" style="font-size: {{tag.posts | size | times:100 | divided_by:site.tags.size | plus:5}}pt">
+                {% for tag in site.ordered_tags %}
+                  <a href="/tags.html#{{ tag.name | idify}}-ref" style="font-size: {{tag.posts | size | times:100 | divided_by:site.tags.size | plus:6}}pt">
                     {{ tag.name | downcase }}
                   </a>
                 {% endfor %}
             </div>
           </li><!-- /tag-cloud -->
+          <li class="widget widget_text" id="text-4">
+            <div class="textwidget">
+              <div align="center">
+                <a href="http://www.eff.org/action"><img src="/assets/eff.gif"></a>
+              </div>
+            </div>
+          </li>
         </ul>
       </div><!-- /sidebar-left -->
 
