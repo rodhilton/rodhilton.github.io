@@ -1,1 +1,1 @@
-../Projects/rod/jekyll-cloudfiles-upload/cloudfiles_upload.rb
+/Users/air0day/Projects/rod/jekyll-cloudfiles-upload/cloudfiles_upload.rb
