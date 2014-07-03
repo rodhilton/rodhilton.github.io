@@ -1,3 +1,6 @@
 [submodule "resume"]
 	path = resume
 	url = git@github.com:rodhilton/resume.git
+[submodule "jekyll-cloudfiles-upload"]
+	path = jekyll-cloudfiles-upload
+	url = git@github.com:rodhilton/jekyll-cloudfiles-upload.git
