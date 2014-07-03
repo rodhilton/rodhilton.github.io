@@ -1,3 +1,1 @@
 more responsive css
-
-JS to allow copy and paste of highlightjs code

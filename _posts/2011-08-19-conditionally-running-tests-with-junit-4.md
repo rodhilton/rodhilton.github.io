@@ -120,7 +120,7 @@ A couple points of note here are that I give this method only 200 milliseconds b
 
 When this test is run and the tunnel is open or the site is otherwise connectable, it works as expected.  When running them when the site is not connectable, the bar is still green but the tests don't actually run.  Running the test from IntelliJ looks like this:
 
-<a href="http://www.nomachetejuggling.com/files/Screen-shot-2011-08-16-at-12.53.31-PM.png"><img src="/assets/Screen-shot-2011-08-16-at-12.53.31-PM-580x143.png" alt="" title="Screen shot 2011-08-16 at 12.53.31 PM" width="580" height="143" class="aligncenter size-large wp-image-1426" /></a>
+{% image Screen-shot-2011-08-16-at-12.53.31-PM-580x143.png link="/assets/Screen-shot-2011-08-16-at-12.53.31-PM.png" %}
 
 This seems like a pretty clean way of conditionally running tests and only a small amount of ceremony is needed to accomplish it.  The tests do exactly what I want: run when they can, don't run when they can't (but print out that they aren't running to the log).
 
