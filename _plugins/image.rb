@@ -46,7 +46,7 @@ module Jekyll
       wrap_caption(wrap_link(img_url, render_img(img_url, html_attr), html_attr), html_attr)
     end
 
-    private def render_img(img, attributes)
+    def render_img(img, attributes)
       ret = "<img src='#{img}'"
 
       ret = ret + " width='#{attributes['width']}'" if attributes.include?("width")
@@ -56,7 +56,7 @@ module Jekyll
       ret
     end
 
-    private def wrap_link(img, html, attributes)
+    def wrap_link(img, html, attributes)
       link = attributes["link"]
 
       if not attributes.include?("link")
@@ -68,7 +68,7 @@ module Jekyll
       end
     end
 
-    private def wrap_caption(html, attributes)
+    def wrap_caption(html, attributes)
       #This is terrible code.. the idea here is to build up the table, bearing in mind that
       #if we have a width we want to set it on the outer table to be padding*2 more.  This
       #is thus tied to the style sheet quite a bit
