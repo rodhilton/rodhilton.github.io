@@ -1,5 +1,2 @@
-hmm
 convert rest of posts
-test
-test2
 more responsive css
