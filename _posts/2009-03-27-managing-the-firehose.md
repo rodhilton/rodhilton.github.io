@@ -14,9 +14,9 @@ published: true
 
 I love RSS feeds.  I love the fact that I live in a time where the vast majority of sites that I find interesting have managed to export their data, updated live, in a universal format that I can pull together in a single place.  I can read what's going on with hundreds of sites I care about by visiting a single site like Google Reader, or through a single piece of software or a browser plugin.  It's great.
 
-But this comes with a downside.  I have almost 200 subscriptions in my Google Reader account.  Many of these subscriptions are to sites, such as [Reddit](http://reddit.com") or [Digg](http://digg.com"), that themselves, aggregate other sites.  I have divided my Google Reader subscriptions along various categorical tags (such as politics, development, movies, etc) as well as priority tags (Must Read, Should Read, Can Read, Can Ignore, and Should Ignore) but even that isn't quite enough to manage the firehose of information coming my way via RSS.
+But this comes with a downside.  I have almost 200 subscriptions in my Google Reader account.  Many of these subscriptions are to sites, such as [Reddit](http://reddit.com) or [Digg](http://digg.com), that themselves, aggregate other sites.  I have divided my Google Reader subscriptions along various categorical tags (such as politics, development, movies, etc) as well as priority tags (Must Read, Should Read, Can Read, Can Ignore, and Should Ignore) but even that isn't quite enough to manage the firehose of information coming my way via RSS.
 
-I have utilized [Yahoo Pipes](http://pipes.yahoo.com") to manage this deluge of information and I thought I'd take some time to share how.  This article will serve both as a basic tutorial for using Yahoo Pipes to manage your RSS feeds as well as a place to show some specific examples I use to control my feeds that you can use as well if you subscribe to the same sites I do.
+I have utilized [Yahoo Pipes](http://pipes.yahoo.com) to manage this deluge of information and I thought I'd take some time to share how.  This article will serve both as a basic tutorial for using Yahoo Pipes to manage your RSS feeds as well as a place to show some specific examples I use to control my feeds that you can use as well if you subscribe to the same sites I do.
 
 # Yahoo Pipes
 
@@ -28,13 +28,13 @@ The source we'll be using in this article is the RSS feed source.  Everything we
 
 Once you have a pipe that outputs a transformed list, you can get an RSS url to the output of the Pipe itself, then subscribe to that with your feed reader in place of the original feed.  
 
-For example, let's say that I find far too many posts in the RSS feed for [Digg.com/technology](http://digg.com/technology").  Let's say, for me, I only care about the items that relate specifically to Apple, because I'm a digg user and I love Apple to death like all good Digg users.  Rather than subscribe to the RSS feed for Digg/Technology in my Google Reader, I'll create a pipe that uses that feed as a source, filters out all of the posts that do not relate to Apple, and then subscribe to the RSS feed of my pipe.  I can even rename the subscription "Digg/Technology" in Google Reader, hiding the fact that it's even going through Yahoo Pipes.
+For example, let's say that I find far too many posts in the RSS feed for [Digg.com/technology](http://digg.com/technology).  Let's say, for me, I only care about the items that relate specifically to Apple, because I'm a digg user and I love Apple to death like all good Digg users.  Rather than subscribe to the RSS feed for Digg/Technology in my Google Reader, I'll create a pipe that uses that feed as a source, filters out all of the posts that do not relate to Apple, and then subscribe to the RSS feed of my pipe.  I can even rename the subscription "Digg/Technology" in Google Reader, hiding the fact that it's even going through Yahoo Pipes.
 
 # Basic Example: Simple Filter
 
-Let's start with a simple filter.  I like to read [ScrewAttack.com](http://www.screwattack.com"), so naturally I wanted to subscribe to their RSS feed.  But unfortunately for me, they post new videos every day and I'm only interested in some of them.  They have many categories of videos, but the only ones I really like are "Hard News," "Jose's Puntos," and "Trailer Dump".  In particular, I hate their "SideScrollers" feature because I don't listen to podcasts.
+Let's start with a simple filter.  I like to read [ScrewAttack.com](http://www.screwattack.com), so naturally I wanted to subscribe to their RSS feed.  But unfortunately for me, they post new videos every day and I'm only interested in some of them.  They have many categories of videos, but the only ones I really like are "Hard News," "Jose's Puntos," and "Trailer Dump".  In particular, I hate their "SideScrollers" feature because I don't listen to podcasts.
 
-So head on over to ScrewAttack and copy the RSS feed URL to your clipboard: [http://screwattack.com/rss.xml](http://screwattack.com/rss.xml")
+So head on over to ScrewAttack and copy the RSS feed URL to your clipboard: [http://screwattack.com/rss.xml](http://screwattack.com/rss.xml)
 
 Then go to Yahoo Pipes and create a new Pipe (you may need to make a Yahoo account).  Open the "Sources" menu on the left and drag the "Fetch Feed" element into your work area.  Paste the ScrewAttack RSS feed into the box.  You can now click on the titlebar of the source and see the output in the lower portion of the screen.
 
@@ -56,11 +56,11 @@ The later examples will be less more complex and less detailed.  Play around wit
 
 # Reddit Filter: Only Talked-About Posts
 
-One of the reasons I generally prefer [Reddit](http://www.reddit.com") to [Digg](http://www.digg.com") is that I find the conversation on Reddit to be a bit more intelligent.  The top comment is usually some snarky one liner, and the second comment is usually some joke or reference to a meme, but after that there's usually some interesting conversation.
+One of the reasons I generally prefer [Reddit](http://www.reddit.com) to [Digg](http://www.digg.com) is that I find the conversation on Reddit to be a bit more intelligent.  The top comment is usually some snarky one liner, and the second comment is usually some joke or reference to a meme, but after that there's usually some interesting conversation.
 
 As a result, the way I'd like to limit my Reddit RSS feeds is by only selecting the the posts that reach a certain threshold of comments.  This number is different for the different subreddits I read (less popular subreddits need fewer comments to be considered talked-about than, say, the front page).
 
-Let's construct a filter for the [programming subreddit](http://www.reddit.com/r/programming/") (or "proggit") using the RSS feed [http://www.reddit.com/r/programming/.rss](http://www.reddit.com/r/programming/.rss")
+Let's construct a filter for the [programming subreddit](http://www.reddit.com/r/programming/) (or "proggit) using the RSS feed [http://www.reddit.com/r/programming/.rss](http://www.reddit.com/r/programming/.rss)
 
 If we create a feed source and look through the structure of the object that Pipes has to work with, we can see that in the "Description" element is a link to comments, and it contains the number of them.
 
@@ -88,7 +88,7 @@ You can do the same thing with a "number input" to control the comment count thr
 
 {% image picture-7.png %}
 
-If you don't want to bother going through all this work, you can feel free to simply use my published version of this pipe [here](http://pipes.yahoo.com/rodhilton/redditfilter").
+If you don't want to bother going through all this work, you can feel free to simply use my published version of this pipe [here](http://pipes.yahoo.com/rodhilton/redditfilter).
 
 # Digg Filter
 
@@ -98,15 +98,15 @@ Handily, the Digg RSS feeds actually include the number of Diggs that items have
 
 {% image picture-8.png %}
 
-As with the Reddit filter, you may feel free to just use the pipe that I've published [here](http://pipes.yahoo.com/rodhilton/diggfilter").
+As with the Reddit filter, you may feel free to just use the pipe that I've published [here](http://pipes.yahoo.com/rodhilton/diggfilter).
 
 # DZone Filters
 
 DZone is like Reddit and Digg, but geared specifically toward software developers.  Just like Reddit and Digg, you can key off of certain elements in the RSS feed XML to determine how popular an item is and filter accordingly.
 
-DZone is slightly more complicated, however, because there are actually two different kinds of sites on DZone.  First, there are different Zone's, such as [Agile Zone](http://agile.dzone.com/"), where you can key off the number of times a post has been read. Then there are the links collections, such as [Agile Links](http://www.dzone.com/links/tag/agile.html") which is more like Digg/Reddit and you can key off the number of votes.
+DZone is slightly more complicated, however, because there are actually two different kinds of sites on DZone.  First, there are different Zone's, such as [Agile Zone](http://agile.dzone.com/), where you can key off the number of times a post has been read. Then there are the links collections, such as [Agile Links](http://www.dzone.com/links/tag/agile.html) which is more like Digg/Reddit and you can key off the number of votes.
 
-The first type is relatively simple, so I won't even cover it (it works just like the Digg filter, but keying off the number of reads embedded in the feed).  You can use mine [here](http://pipes.yahoo.com/rodhilton/dzonefilter ").
+The first type is relatively simple, so I won't even cover it (it works just like the Digg filter, but keying off the number of reads embedded in the feed).  You can use mine [here](http://pipes.yahoo.com/rodhilton/dzonefilter ).
 
 The Links feeds are more interesting.  Even though the site displays the "net vote", the XML only contains the number of up votes and the number of down votes.  That means you need to do the subtraction in your pipe to get the actual net vote count.
 
@@ -114,7 +114,7 @@ We're going to do the subtraction in a loop and assign the results to a new elem
 
 {% image picture-9.png %}
 
-As usual, you can just use mine [here]( http://pipes.yahoo.com/rodhilton/dzonelinksfilter") if you wish.
+As usual, you can just use mine [here]( http://pipes.yahoo.com/rodhilton/dzonelinksfilter) if you wish.
 
 # Conclusion
 

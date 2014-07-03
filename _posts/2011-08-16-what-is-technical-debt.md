@@ -14,7 +14,7 @@ type: post
 published: true
 ---
 
-Paul Dyson has made a blog post entitled "[Technical Debt and the Lean Startup](http://pauldyson.wordpress.com/2011/08/15/technical-debt-and-the-lean-startup/")" as well as commented on my post about [When To Work On Technical Debt](http://www.nomachetejuggling.com/2011/07/22/when-to-work-on-technical-debt/"), challenging some of my claims.  I read through his post and, while it makes a number of good points, I think it ultimately advocates for a risky manner of running a business.  I started typing this as a response to his comment, but realized that it was long enough to warrant a separate post, so I'd like to go through his post's points one by one.
+Paul Dyson has made a blog post entitled "[Technical Debt and the Lean Startup](http://pauldyson.wordpress.com/2011/08/15/technical-debt-and-the-lean-startup/)" as well as commented on my post about [When To Work On Technical Debt](http://www.nomachetejuggling.com/2011/07/22/when-to-work-on-technical-debt/), challenging some of my claims.  I read through his post and, while it makes a number of good points, I think it ultimately advocates for a risky manner of running a business.  I started typing this as a response to his comment, but realized that it was long enough to warrant a separate post, so I'd like to go through his post's points one by one.
 
 # Hit-By-A-Bus Syndrome
 

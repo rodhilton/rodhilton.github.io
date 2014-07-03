@@ -13,7 +13,7 @@ published: true
 
 We've got a common library used by a number of projects.  This library has it's own git repository and it's own job in Jenkins to build it. 
 
-One of the tasks of the Jenkins job is to, when the tests pass, copy the jar file artifact into a team-wide [Nexus](http://nexus.sonatype.org/") instance, which is added as a repository in our other projects.
+One of the tasks of the Jenkins job is to, when the tests pass, copy the jar file artifact into a team-wide [Nexus](http://nexus.sonatype.org/) instance, which is added as a repository in our other projects.
 
 Lately I started having a problem where a new project that used this library was unable to run tests correctly - strange failures that seemed unrelated to any actual changes.  The culprit wound up being an unlikely source: Clover.
 
@@ -22,7 +22,7 @@ The Jenkins Maven build goal for our library used to look like this:
 
 `clean compile test deploy`
 
-We wanted to start using [Clover](http://www.atlassian.com/software/clover/") to track our test coverage of this library, so we installed it and altered the goal to this:
+We wanted to start using [Clover](http://www.atlassian.com/software/clover/) to track our test coverage of this library, so we installed it and altered the goal to this:
 
 `clean compile clover2:setup test clover2:aggregate clover2:clover deploy`
 
@@ -54,4 +54,4 @@ The first job is focused on the health of the library, so it runs the tests, doe
 
 The second job, the "deploy" job runs only when the first job completes successfully, then does a `clean compile deploy` without the Clover instrumentation.
 
-This is the more correct methodology anyway, as it's closer to the Continuous Delivery pipeline advocated in Jez Humble's book, [Continuous Delivery](http://www.amazon.com/Continuous-Delivery-Deployment-Automation-Addison-Wesley/dp/0321601912"), though it somewhat bothers me that the exact jar file being used for running tests is not the same jar file being deployed.
+This is the more correct methodology anyway, as it's closer to the Continuous Delivery pipeline advocated in Jez Humble's book, [Continuous Delivery](http://www.amazon.com/Continuous-Delivery-Deployment-Automation-Addison-Wesley/dp/0321601912), though it somewhat bothers me that the exact jar file being used for running tests is not the same jar file being deployed.

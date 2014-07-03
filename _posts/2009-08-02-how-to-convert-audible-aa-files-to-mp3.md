@@ -17,18 +17,18 @@ published: true
 
 I do not belong to the cult of iPod.  I use a nonstandard mp3 player and I hate iTunes.  If I'm going to use an mp3 player, it needs to show up as a USB drive on my Linux workstation, my Windows desktop, and my Mac laptop.  I need to be able to drag files over and be done with it.  So far, I've been successful at accomplishing this.
 
-But the simplicity comes with a price.  I cannot download books from [Audible.com](http://www.audible.com") and put them on my player to listen to them.  I have to convert all of the files I download from Audible into DRM-free mp3 files.  There are lots of ways to do this, and even software tools that will do this automatically, but **all of them just play the file in iTunes and capture the audio stream to a file**.  I want something completely digital, which can run in the background without me having to worry about my operating system making other sounds that interfere with the result.
+But the simplicity comes with a price.  I cannot download books from [Audible.com](http://www.audible.com) and put them on my player to listen to them.  I have to convert all of the files I download from Audible into DRM-free mp3 files.  There are lots of ways to do this, and even software tools that will do this automatically, but **all of them just play the file in iTunes and capture the audio stream to a file**.  I want something completely digital, which can run in the background without me having to worry about my operating system making other sounds that interfere with the result.
 
 I have developed an alternative to this method, which lets you convert your Audible audio book downloads to DRM-free mp3s in just a few minutes, with a very small amount of manual work.
 
 # You Will Need
 
  * Windows (sorry, the programs needed only run in Windows)
- * [Nero](http://www.nero.com/enu/store-nero9.html") for Windows (cost: $70, free trial available) **Note:** Do not use versions later than 9.4.  Apparently the functionality this tutorial depends on has been removed.
- * [UltraISO](http://www.ezbsystems.com/ultraiso/") for Windows (cost: $30, free trial available)
- * [Ruby](http://rubyinstaller.rubyforge.org/wiki/wiki.pl") for Windows (free)
- * [Lame](http://www.free-codecs.com/download/Lame_Encoder.htm") for Windows (free)
- * An [Audible.com](http://www.audible.com") account
+ * [Nero](http://www.nero.com/enu/store-nero9.html) for Windows (cost: $70, free trial available) **Note:** Do not use versions later than 9.4.  Apparently the functionality this tutorial depends on has been removed.
+ * [UltraISO](http://www.ezbsystems.com/ultraiso/) for Windows (cost: $30, free trial available)
+ * [Ruby](http://rubyinstaller.rubyforge.org/wiki/wiki.pl) for Windows (free)
+ * [Lame](http://www.free-codecs.com/download/Lame_Encoder.htm) for Windows (free)
+ * An [Audible.com](http://www.audible.com) account
  * Some patience
 
 # Step 1: Download The .aa Files

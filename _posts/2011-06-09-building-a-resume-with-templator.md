@@ -15,13 +15,13 @@ published: true
 I care, probably more than I should, about my résumé.  I sort of think of it like a real-life character sheet, so I like to keep it current at all times.  But my résumé has always been a source of irritation for me as well, as I have a number of things I would like to do with it that I've been unable to do.
 
  1. I want to have it version-controlled, so it should be plain text.
- 2. I want to have a plain HTML version of it that I can post on my blog, [here](http://www.nomachetejuggling.com/resume/")
+ 2. I want to have a plain HTML version of it that I can post on my blog, [here](http://www.nomachetejuggling.com/resume/)
  3. I want to have a $$\LaTeX$$ version of it, because I like the way it looks, and I'd like to send that version to potential employers.
  4. I would like to have a "master" version of the résumé with all of my data, but be able to easily build customized versions of it.  For example, I want to include the sections on what courses I took in school if I'm sending my résumé to an academic institution, but I want to leave that off if I'm applying for an industry job.
 
-I started building some tools that would let me accomplish this, including a specialized résumé data format that I called "rml" but I quickly realized that not everyone wants to store the same data on their résumé, so I kept generalizing and generalizing the tool until I had something usable: [Templator](https://github.com/rodhilton/templator").
+I started building some tools that would let me accomplish this, including a specialized résumé data format that I called "rml" but I quickly realized that not everyone wants to store the same data on their résumé, so I kept generalizing and generalizing the tool until I had something usable: [Templator](https://github.com/rodhilton/templator).
 
-Templator is a general tool that allows someone to store data in a text file and run that data through various template files to get generated output.  It utilizes [YAML](http://www.yaml.org/") and [ERB](http://www.ruby-doc.org/stdlib/libdoc/erb/rdoc/"), so Ruby programmers should already be comfortable with it.
+Templator is a general tool that allows someone to store data in a text file and run that data through various template files to get generated output.  It utilizes [YAML](http://www.yaml.org/) and [ERB](http://www.ruby-doc.org/stdlib/libdoc/erb/rdoc/), so Ruby programmers should already be comfortable with it.
 
 In this article I'm going to explain how to use Templator to store a version-controllable, customizable résumé.
 
@@ -90,7 +90,7 @@ skills:
   - Ping-pong
 ~~~
 
-Here we've defined a simple list under "skills."  I don't plan on covering the basics of YAML here, but obviously the whitespace matters.  For more information on YAML, check [this tutorial](http://www.yaml.org/YAML_for_ruby.html") or [the spec](http://www.yaml.org/spec/1.2/spec.html").
+Here we've defined a simple list under "skills."  I don't plan on covering the basics of YAML here, but obviously the whitespace matters.  For more information on YAML, check [this tutorial](http://www.yaml.org/YAML_for_ruby.html) or [the spec](http://www.yaml.org/spec/1.2/spec.html).
 
 Now let's make another template, `template2.html.erb`:
 
@@ -409,11 +409,11 @@ Notice that the GPA is now included.
 
 # Putting It All Together
 
-It's very easy to use a build tool such as [Rake](http://rake.rubyforge.org/") or [Ant](http://ant.apache.org/") to create different build targets that utilize flags.  Flags are also supported in the yaml file itself, so you can use flags to hide data from the template files.  For example, if you wanted to only include a specific job if a flag was set, you can surround that job in the YAML file with an ERB-escaped `if` statement.
+It's very easy to use a build tool such as [Rake](http://rake.rubyforge.org/) or [Ant](http://ant.apache.org/) to create different build targets that utilize flags.  Flags are also supported in the yaml file itself, so you can use flags to hide data from the template files.  For example, if you wanted to only include a specific job if a flag was set, you can surround that job in the YAML file with an ERB-escaped `if` statement.
 
 I have a `Rakefile` that uses an `expand_school` flag to include my coursework (an escape in the template) as well as my job as a T.A. (an escape in the YAML file).  I also use a flag called `public` that hides my phone number and e-mail address for résumés that get posted on my web site, but includes them for résumés that I intend to send out to individuals.
 
 I also have two template files, an HTML one and a $$\LaTeX$$ one.  `Rake latex` will build the `latex_private` and `latex_public` artifacts, then execute `pdflatex` on those files to get a nice PDF.  `Rake upload_resume` will upload the HTML and PDF files to my web site as well, which is extremely convenient.
 
-There's definitely a learning curve with doing this, which is why I've written this article.  But once I got everything up and running, I was very happy with the result.  I've got my résumé file checked into a private git repo, and I've even set up [Jenkins](http://jenkins-ci.org/") to poll that repo and automatically build my public résumés and upload them to my web site.
+There's definitely a learning curve with doing this, which is why I've written this article.  But once I got everything up and running, I was very happy with the result.  I've got my résumé file checked into a private git repo, and I've even set up [Jenkins](http://jenkins-ci.org/) to poll that repo and automatically build my public résumés and upload them to my web site.
 

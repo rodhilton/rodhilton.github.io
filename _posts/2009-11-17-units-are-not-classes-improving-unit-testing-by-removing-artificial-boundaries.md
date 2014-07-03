@@ -228,10 +228,10 @@ Secondly, even though a real `CalculationProcessor` was instantiated for the tes
 
 # Blurring the Line
 
-Is this a unit test, or is it something else?  Unit-testing pedants would argue that it's not a unit test, but an integration test.  [Michael Feathers](http://www.michaelfeathers.com/") may disagree:
+Is this a unit test, or is it something else?  Unit-testing pedants would argue that it's not a unit test, but an integration test.  [Michael Feathers](http://www.michaelfeathers.com/) may disagree:
 
  > "In the industry, people often go back and forth about whether particular tests are unit tests. Is a test really a unit test if it uses another production class? I go back to the two qualities: Does the test run fast? Can it help us localize errors quickly?"
- > (Source: [Working Effectively with Legacy Code](http://www.amazon.com/Working-Effectively-Legacy-Michael-Feathers/dp/0131177052"))
+ > (Source: [Working Effectively with Legacy Code](http://www.amazon.com/Working-Effectively-Legacy-Michael-Feathers/dp/0131177052))
 
 The test above is extremely fast, but how effectively does it help us localize errors?  If it were the only failing test for a system full of classes and tests, it would help us narrow down the error pretty quickly: there is either a problem parsing the operator, or a problem performing the operation.
 
@@ -241,7 +241,7 @@ It's a trade-off, of course, but I now tend to lean toward creating instances of
 
 # Verify() is a Crutch
 
-When you're writing a test, you go through three phases, which [BDD](http://en.wikipedia.org/wiki/Behavior_driven_development") proponents refer to as the Given, When, and Then.  First you write the Givens, which attempt to fabricate a pre-existing situation for the purposes of your test.  Then you write the Whens, which are the operations being tested.  Last you assert some Thens, which are the expected results of performing the operation.
+When you're writing a test, you go through three phases, which [BDD](http://en.wikipedia.org/wiki/Behavior_driven_development) proponents refer to as the Given, When, and Then.  First you write the Givens, which attempt to fabricate a pre-existing situation for the purposes of your test.  Then you write the Whens, which are the operations being tested.  Last you assert some Thens, which are the expected results of performing the operation.
 
 In the case of our simple unit test above, the Given is that a `NewCalculator` exists.  The When is that `calculate` is called with some parameters.  And then Then, of course, is that we get the desired result.  But how do we write our Thens?
 

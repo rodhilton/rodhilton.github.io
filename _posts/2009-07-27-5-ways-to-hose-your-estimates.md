@@ -38,7 +38,7 @@ It takes a certain level of arrogance to decide you can make a computer do anyth
 
 Do discussions like "well, I don't think that story is really a 3.  Maybe a 2.5," sound familiar?  If so, your team is working with a fictional level of precision.  The difference between a 3 and a 2.5 is smaller than the natural margin of error for something so inexact as story point estimates.  If an engineer starts arguing that story should have a 4 since a 3 is too low and a 5 is too high, there's a good chance the engineer is treating points with a level of a precision that they simply do not carry.  If that engineer were in a sour mood, they may have said a 5 instead.
 
-You want your points to be forced into buckets &#8211; buckets with wide enough gaps between them that there is no need to quibble over insignificant differences.  [Mike Cohn](http://www.amazon.com/Agile-Estimating-Planning-Robert-Martin/dp/0131479415") recommends either a fibonacci-like sequence (0, 1, 2, 3, 5, 8, 13, 20, 40, 100) or a base-2 sequence (0, 1, 2, 4, 8, 16, 32, 64, 128) to ensure that the buckets are reasonable.
+You want your points to be forced into buckets &#8211; buckets with wide enough gaps between them that there is no need to quibble over insignificant differences.  [Mike Cohn](http://www.amazon.com/Agile-Estimating-Planning-Robert-Martin/dp/0131479415) recommends either a fibonacci-like sequence (0, 1, 2, 3, 5, 8, 13, 20, 40, 100) or a base-2 sequence (0, 1, 2, 4, 8, 16, 32, 64, 128) to ensure that the buckets are reasonable.
 
 Seasoned agile teams may find themselves eventually estimating within a very small range of possible values and making up for the loss of range with an increase in precision.  Don't buy into it, the precision is imaginary.
 
@@ -48,7 +48,7 @@ _How To Fix: Pick a sequence and stick to it._
 
 Over time, your agile team will increasingly gel together.  This is normally a good thing, but it can have negative consequences if the team eventually starts to act and think as a pack.
 
-For a group to be smarter than the individuals in the group, it has to be [diverse, independent, and decentralized](http://en.wikipedia.org/wiki/Wisdom_of_crowds#Four_elements_required_to_form_a_wise_crowd").  The longer an agile team works together, the more trust they build together (that's good).  The more trust they build, however, the more they start to think that a subset of the group is a good representative of the entire group (that's bad).  When only part of the group is consulted for estimates, you lose the diversity and decentralization properties of the team, and as a result your estimates become less consistent.
+For a group to be smarter than the individuals in the group, it has to be [diverse, independent, and decentralized](http://en.wikipedia.org/wiki/Wisdom_of_crowds#Four_elements_required_to_form_a_wise_crowd).  The longer an agile team works together, the more trust they build together (that's good).  The more trust they build, however, the more they start to think that a subset of the group is a good representative of the entire group (that's bad).  When only part of the group is consulted for estimates, you lose the diversity and decentralization properties of the team, and as a result your estimates become less consistent.
 
 {% image 2009-07-24-092738-150x150.jpg align="right" %}
 
@@ -70,7 +70,7 @@ _How To Fix: Play two rounds of planning poker and use a timer to limit discussi
 
 It's easier to wrap your brain around smaller things than larger things.  Next time you have a large story and decide to break it into smaller stories, see how many points fall out?  Does your 13-pointer break into two 3's, two 2's, and three 1's?  Probably not.  In all likelihood, your 13-point story, when broken into smaller stories, becomes something closer to a 20-pointer.  Not only is this a problem for scheduling, it is a good indicator that the engineers aren't considering all of the angles when estimating the larger story.
 
-It's not the 20 points worth of small stories that are wrong, it's the 13 points initially.  It's simply too hard to consider everything when estimating large stories.  Product Owners need to understand this and break stories up as small as possible BEFORE engineers estimate them.  Once the number has been assigned to a large story, it affects the points given to the smaller stories that break out of it.  This is called [anchoring](http://en.wikipedia.org/wiki/Anchoring"), and it's a well-known cognitive bias.
+It's not the 20 points worth of small stories that are wrong, it's the 13 points initially.  It's simply too hard to consider everything when estimating large stories.  Product Owners need to understand this and break stories up as small as possible BEFORE engineers estimate them.  Once the number has been assigned to a large story, it affects the points given to the smaller stories that break out of it.  This is called [anchoring](http://en.wikipedia.org/wiki/Anchoring), and it's a well-known cognitive bias.
 
 Encourage your product owners to break stories up before they are estimated.
 

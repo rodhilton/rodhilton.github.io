@@ -20,7 +20,7 @@ I still stuck with 2 classes per semester, though next semester I'm registered f
 
 ## Theory of Automata
 
-Textbook: [Essentials of Theoretical Computer Science](http://www.cs.uky.edu/~lewis/texts/theory/title.pdf")
+Textbook: [Essentials of Theoretical Computer Science](http://www.cs.uky.edu/~lewis/texts/theory/title.pdf)
 
 When I was an undergrad, I hated theory.  It was just too far removed from actual computers, I slacked off in all of my theory classes, and I refused to even open the textbook.  It was my years-later decision to look at that book again that sparked my interest in returning to school, so this class was a make-or-break thing for me.  Theoretical Computer Science is what I came back to school to study, so if I hated this class or struggled with it, I would have dropped out at the end of the semester.
 
@@ -36,7 +36,7 @@ All in all, I loved this class.  The unit on Complexity was removed from this cl
 
 ## Graduate Computer Security
 
-Textbook: [Introduction to Cryptography with Coding Theory](http://www.amazon.com/Introduction-Cryptography-Coding-Theory-Edition/dp/0131862391")
+Textbook: [Introduction to Cryptography with Coding Theory](http://www.amazon.com/Introduction-Cryptography-Coding-Theory-Edition/dp/0131862391)
 
 Don't let the name fool you, this class had very little to do with the concept of Security and everything to do with Cryptography.  It's taught by a professor who transitioned into a PhD in Computer Science after getting her PhD in Mathematics.  It was a very math-heavy course on cryptography.
 
@@ -48,7 +48,7 @@ However, knowing that I needed to take 4 7000-level classes with only 2 that rea
 
 I definitely understood things better this time around, but I also struggled quite a bit with some of the math, particularly with Elliptic Curve cryptography and a lot of the Group Theory stuff.  I don't really feel like I mastered the material, which is a bummer, but I did well enough and earned an A in the class.  The A was due largely to the fact that the grades were based on homeworks and a project, with no exams.  Homeworks meant no time limit, so I could spend hours and hours on homeworks that should have taken someone else less time, and I picked a project topic with less intense math, so I was able to understand it.
 
-My project was actually a lot of fun.  Based on a project one of my friends did in undergrad, I decided to research and implement [an attack on substitution ciphers using Genetic Algorithms](/files/RodHilton-CSCI7002-Cryptanalysis-Against-Monosub-Ciphers.pdf"). A cool [open source project](https://github.com/rodhilton/Geneticrypt") fell out of this as well.
+My project was actually a lot of fun.  Based on a project one of my friends did in undergrad, I decided to research and implement [an attack on substitution ciphers using Genetic Algorithms](/files/RodHilton-CSCI7002-Cryptanalysis-Against-Monosub-Ciphers.pdf). A cool [open source project](https://github.com/rodhilton/Geneticrypt) fell out of this as well.
 
 Overall, I enjoyed the course far, far more than I was expecting too, but I'm disappointed in myself for not feeling like I grasped the material better.  I'm glad there were no time-limited exams, or I'd have probably gotten the B I probably deserved.  I hope that my struggle was due to the subject, and not due to the level of the class, because if the latter than I'm in store for a painful semester taking three 7000-level classes.
 

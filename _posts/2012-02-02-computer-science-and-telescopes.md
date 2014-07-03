@@ -16,7 +16,7 @@ Whenever there is a discussion about what Computer Science is and what it is not
 
  > Computer science is no more about computers than astronomy is about telescopes.
 
-This quote, attributed to the brilliant [Edsger Dijkstra](http://en.wikipedia.org/wiki/Edsger_W._Dijkstra") is such a perfect little summary of what Computer Science is, and it explains so much about the field in a very short space, it's ideal for explaining CS to those outside of the field.
+This quote, attributed to the brilliant [Edsger Dijkstra](http://en.wikipedia.org/wiki/Edsger_W._Dijkstra) is such a perfect little summary of what Computer Science is, and it explains so much about the field in a very short space, it's ideal for explaining CS to those outside of the field.
 
 The problem is, **it's bullshit**.
 
@@ -34,7 +34,7 @@ I've also often heard "Computer Science is a branch of mathematics."  This, too,
 
 Despite the constant drive to figure out which thing Computer Science is most like, the truth is that no analogy is good for Computer Science.  Computer Science isn't **like** any other discipline.  It's a weird hybrid between science, mathematics, and engineering.  It's all of those things at once, and none individually.
 
-When I was an undergrad, my school had 3 divisions under their [College of Arts and Sciences](http://www.rochester.edu/college/sas/"): humanities, social sciences, and natural sciences.  Computer Science was categorized as a natural science.  A few years after I graduated, the major was moved not only out of that category, but **out of that entire school**, and into the [School of Engineering](http://www.hajim.rochester.edu/").  It went from being considered a science to being considered engineering.  I think it's bizarre that so many people try to claim they can explain what Computer Science is with a 12 word pithy quote when universities can't even seem to settle on it.
+When I was an undergrad, my school had 3 divisions under their [College of Arts and Sciences](http://www.rochester.edu/college/sas/): humanities, social sciences, and natural sciences.  Computer Science was categorized as a natural science.  A few years after I graduated, the major was moved not only out of that category, but **out of that entire school**, and into the [School of Engineering](http://www.hajim.rochester.edu/).  It went from being considered a science to being considered engineering.  I think it's bizarre that so many people try to claim they can explain what Computer Science is with a 12 word pithy quote when universities can't even seem to settle on it.
 
 {% image pompous-e1328235145491-300x244.png align="left" caption="&quot;Computers, pish-posh! Naturally I majored in CS because of my childhood passion for the halting problem!&quot;" %}
 

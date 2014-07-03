@@ -41,11 +41,11 @@ But we do not have any known polynomial-time verifier for the optimization versi
 
 **TL;DR: For now TSP-OPTIMIZE is in NP-Hard but not (necessarily) in NP, so its not in NP-Complete.  TSP-DECIDE is both in NP-Hard as well as NP, and is therefore NP-Complete.**
 
-Mistakenly referring to the optimization version of Traveling Salesperson as NP-Complete is unbelievably common among computer science students, so common that I took it for granted that it was the case for years.  I just saw [this article](http://cacm.acm.org/magazines/2009/9/38904-the-status-of-the-p-versus-np-problem/fulltext") in Communications of the ACM which refers to:
+Mistakenly referring to the optimization version of Traveling Salesperson as NP-Complete is unbelievably common among computer science students, so common that I took it for granted that it was the case for years.  I just saw [this article](http://cacm.acm.org/magazines/2009/9/38904-the-status-of-the-p-versus-np-problem/fulltext) in Communications of the ACM which refers to:
 
  > The NP-complete traveling salesperson problem asks for the smallest distance tour through a set of specified cities. 
 
 So next time a computer science person tells you that Traveling Salesperson is NP-Complete, ask them to define what they mean by "Traveling Salesperson", you'll be surprised how often they will say "lowest cost" and get it wrong.  And hopefully, if you've been getting it wrong for years, you'll now know better.
 
-**UPDATE**: This post has been linked to by [Hacker News](http://news.ycombinator.com/item?id=4766475") and [Reddit](http://www.reddit.com/r/compsci/comments/130jw0/traveling_salesman_the_most_misunderstood_problem/") now, so lots of knowledgable people have begun leaving enlightening comments.  Please read them as well, they explain some things that I was not entirely clear about.
+**UPDATE**: This post has been linked to by [Hacker News](http://news.ycombinator.com/item?id=4766475) and [Reddit](http://www.reddit.com/r/compsci/comments/130jw0/traveling_salesman_the_most_misunderstood_problem/) now, so lots of knowledgable people have begun leaving enlightening comments.  Please read them as well, they explain some things that I was not entirely clear about.
 

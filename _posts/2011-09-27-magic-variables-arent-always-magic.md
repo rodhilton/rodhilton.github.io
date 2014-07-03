@@ -12,11 +12,11 @@ status: publish
 type: post
 published: true
 ---
-Software development is a strange beast sometimes.  Despite the fact that it is [not predictable enough](http://www.artima.com/intv/garden.html") or [constant enough](http://www.cs.usfca.edu/~parrt/doc/software-not-engineering.html") to qualify as true engineering, it's often referred to as Software Engineering anyway.
+Software development is a strange beast sometimes.  Despite the fact that it is [not predictable enough](http://www.artima.com/intv/garden.html) or [constant enough](http://www.cs.usfca.edu/~parrt/doc/software-not-engineering.html) to qualify as true engineering, it's often referred to as Software Engineering anyway.
 
-There are no rules in software development.  Some suggest the existence of [best practices](http://www.ibm.com/developerworks/websphere/library/techarticles/0306_perks/perks2.html"), but really there are only guidelines and recommendations.
+There are no rules in software development.  Some suggest the existence of [best practices](http://www.ibm.com/developerworks/websphere/library/techarticles/0306_perks/perks2.html), but really there are only guidelines and recommendations.
 
-Despite these truths, there are a number of alleged "rules" in software development, often suffixed with "[considered harmful](http://en.wikipedia.org/wiki/Considered_harmful")" as a reference to Edsger Dijkstra's famous "[Go To Statement Considered Harmful](http://www.cs.utexas.edu/users/EWD/ewd02xx/EWD215.PDF")" essay.  I want to look at one of these rules a bit more closely.
+Despite these truths, there are a number of alleged "rules" in software development, often suffixed with "[considered harmful](http://en.wikipedia.org/wiki/Considered_harmful)" as a reference to Edsger Dijkstra's famous "[Go To Statement Considered Harmful](http://www.cs.utexas.edu/users/EWD/ewd02xx/EWD215.PDF)" essay.  I want to look at one of these rules a bit more closely.
 
 # Magic Constants Considered Harmful
 "Magic Constants," also often referred to as "Magic Numbers" break what is regarded as one of the oldest "rules of programming", dating back as far as the manuals for COBOL and FORTRAN in the 60's.
@@ -42,7 +42,7 @@ It's hard to argue with this reasoning.  The second code snippet is easier to re
 
 # Why Is It Harmful?
 
-A lot of times, once a best practice or a rule becomes codified in the industry, it stops being questioned.  The **why** is forgotten over time, and it just becomes a rule that everyone follows blindly.  Sometimes it's helpful to remind ourselves of the reasons for a best practice, to avoid becoming [Cargo Cult Programmers](http://en.wikipedia.org/wiki/Cargo_cult_programming").
+A lot of times, once a best practice or a rule becomes codified in the industry, it stops being questioned.  The **why** is forgotten over time, and it just becomes a rule that everyone follows blindly.  Sometimes it's helpful to remind ourselves of the reasons for a best practice, to avoid becoming [Cargo Cult Programmers](http://en.wikipedia.org/wiki/Cargo_cult_programming).
 
 Why is the first code snippet bad?  
 
@@ -72,7 +72,7 @@ When I first came across this code, my instinct was to replace it with a simple
     return Joiner.on(FORWARD_SLASH).join("books", "all");
 ~~~
 
-This seemed so reasonable to me at first, plus I get pumped every time I get to use anything in [Google Guava](http://code.google.com/p/guava-libraries/").
+This seemed so reasonable to me at first, plus I get pumped every time I get to use anything in [Google Guava](http://code.google.com/p/guava-libraries/).
 
 But then I thought about it.  This is following the letter of the "don't use Magic Constants" rule, but is it following the spirit of it?
 

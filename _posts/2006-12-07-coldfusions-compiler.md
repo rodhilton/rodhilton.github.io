@@ -10,7 +10,7 @@ type: post
 published: true
 ---
 
-Neil asks on his blog, "[ What is it with the Coldfusion Compiler?](http://blog.feed-squirrel.com/2006/12/07/what-is-it-with-the-coldfusion-compiler/")"
+Neil asks on his blog, "[ What is it with the Coldfusion Compiler?](http://blog.feed-squirrel.com/2006/12/07/what-is-it-with-the-coldfusion-compiler/)"
 
 Essentially, he posts a simple piece of code in CF that counts up to 1000000 in a loop, then prints out how long that takes.  He does the same thing in JSP, and times that as well.  The JSP code executes much, much more quickly than the CF code, and he wants to know why.  The reason for the interest is that ColdFusion compiles to Java, and one of the big selling points is that CF is just another way of writing Java web code, since it all gets compiled to servlets anyway.
 

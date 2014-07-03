@@ -11,7 +11,7 @@ status: publish
 type: post
 published: true
 ---
-For the past two months, I've been learning three different programming languages simultaneously.  I've been wanting to learn Python for a while, and I finally made some time to read [Learning Python](http://www.amazon.com/Learning-Python-Second-Mark-Lutz/dp/0596002815") cover to cover on camping trips.  I've also been thrown into the world of Ruby (as well as Rails) for work, since we are developing our next web application using that technology.  Lastly, I've had to learn C# and .NET for school - the last class for my Master's degree.  
+For the past two months, I've been learning three different programming languages simultaneously.  I've been wanting to learn Python for a while, and I finally made some time to read [Learning Python](http://www.amazon.com/Learning-Python-Second-Mark-Lutz/dp/0596002815) cover to cover on camping trips.  I've also been thrown into the world of Ruby (as well as Rails) for work, since we are developing our next web application using that technology.  Lastly, I've had to learn C# and .NET for school - the last class for my Master's degree.  
 
 I've wanted to learn all three of these technologies for a while, but I've never had the time.  This has been a very exciting experience for me, and I wanted to share my first impressions of these languages.
 

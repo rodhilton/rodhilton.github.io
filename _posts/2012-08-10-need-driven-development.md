@@ -16,7 +16,7 @@ I love Test-Driven Development, but I've found that there are a number of differ
 
 Imagine you are writing some software that will have a number of interacting components.  I'm going to suggest a toy example, one that will help illustrate what I'm talking about, but is not so complex to actually warrant it.  Imagine you are going to write a Lottery game.  Players will have lottery tickets, and they will listen for Callers to read out the winning lottery number (think Observer pattern).  The Callers will use a Hopper with numbered balls, selecting the appropriate number of balls and then calling out the winning number at the end.
 
-To follow the [Single-Responsibility Principle](http://en.wikipedia.org/wiki/Single_responsibility_principle"), you think your game will probably have three classes:
+To follow the [Single-Responsibility Principle](http://en.wikipedia.org/wiki/Single_responsibility_principle), you think your game will probably have three classes:
 
  1. The `Hopper` - this contains all of the numbered balls and, when asked, returns one to the caller (removing it).
  2. The `Caller` - once the lottery has started, this will ask the `Hopper` for numbers and call out the final sequence of numbers to registered `Player`s
@@ -48,13 +48,13 @@ When you're done with `Player`, since you already assumed `Caller` works, move o
 
 At each stage, rather than simply _guessing_ at how you will want to use the class you are writing, you've already defined exactly how you want it to be used.  This client-oriented approach means that **your classes are always designed with the client in mind**, and therefore the code that uses them is always extremely clean and intent-revealing.  As a bonus, you have a great outline for the tests you need to write at each level.
 
-I've liked developing this way for a long time, but I never knew what to call it.  Well, I recently found out this approach already has a name: Need-Driven Development (([xUnit Test Patterns](http://www.amazon.com/xUnit-Test-Patterns-Refactoring-Code/dp/0131495054"), p. 149)).
+I've liked developing this way for a long time, but I never knew what to call it.  Well, I recently found out this approach already has a name: Need-Driven Development (([xUnit Test Patterns](http://www.amazon.com/xUnit-Test-Patterns-Refactoring-Code/dp/0131495054), p. 149)).
 
 # Advantages
 
 As mentioned, the main advantage here is that your code is always designed with the consumer in mind, which helps ensure code is clean and understandable.
 
-Another advantage of this approach is that it will help with YAGNI (([You Ain't Gonna Need It](http://en.wikipedia.org/wiki/You_ain't_gonna_need_it"))): bear in mind the example from Bob Martin's [Bowling Game](http://www.objectmentor.com/resources/articles/xpepisode.htm"), in which Martin and Bob Koss developed a Bowling scoring program bottom-up, only to discover they were needlessly creating more classes than really essential.  Working top-down means you only split out into a new class when it's truly essential.  A good heuristic to follow is if you're coding and think "I really shouldn't do this in this class..." you can assume another class is doing it, create the interface for that class, write the methods as you wish they existed, mock them out, and continue on without letting it distract you for long.
+Another advantage of this approach is that it will help with YAGNI (([You Ain't Gonna Need It](http://en.wikipedia.org/wiki/You_ain't_gonna_need_it))): bear in mind the example from Bob Martin's [Bowling Game](http://www.objectmentor.com/resources/articles/xpepisode.htm), in which Martin and Bob Koss developed a Bowling scoring program bottom-up, only to discover they were needlessly creating more classes than really essential.  Working top-down means you only split out into a new class when it's truly essential.  A good heuristic to follow is if you're coding and think "I really shouldn't do this in this class..." you can assume another class is doing it, create the interface for that class, write the methods as you wish they existed, mock them out, and continue on without letting it distract you for long.
 
 It also lets work you quite a bit faster.  Instead of getting hung up on the implementation detail of something unrelated, if you find yourself saying "I really don't feel like figuring that out right now" you can refuse to.  Instead, create a class whose job it is to figure that out, then** keep working on the assumption that it's already done**.  Delegate difficult work to a placeholder, then go back and fill it in later.
 

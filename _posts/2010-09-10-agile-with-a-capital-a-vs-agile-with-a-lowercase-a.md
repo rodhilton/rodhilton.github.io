@@ -9,7 +9,7 @@ status: publish
 type: post
 published: true
 ---
-There have been a number of blog posts and discussions lately around the evils of agile.  Lots of traffic recently surrounding an [old post by Cedric](http://beust.com/weblog/2006/06/07/agile-people-still-dont-get-it/").  This [stackoverflowist](http://stackoverflow.com/questions/3226711/giving-up-agile-switching-to-waterfall-is-this-right") is switching to waterfall.  Hell, agile ruined [this guy’s life](http://www.whattofix.com/blog/archives/2010/09/agile-ruined-my.php") - **HIS ENTIRE LIFE**!
+There have been a number of blog posts and discussions lately around the evils of agile.  Lots of traffic recently surrounding an [old post by Cedric](http://beust.com/weblog/2006/06/07/agile-people-still-dont-get-it/).  This [stackoverflowist](http://stackoverflow.com/questions/3226711/giving-up-agile-switching-to-waterfall-is-this-right) is switching to waterfall.  Hell, agile ruined [this guy’s life](http://www.whattofix.com/blog/archives/2010/09/agile-ruined-my.php) - **HIS ENTIRE LIFE**!
 
 I’m a big fan of agile software development, which should come as no surprise given that I work at Rally.  But honestly, I understand where all of this backlash is coming from.  Whenever someone has come to me and told me "this is the way you will do things now," then decreed some elaborate, formal process I would have to follow, I’ve resented it.  Don’t tell me how to work.
 
@@ -17,7 +17,7 @@ But I think a lot of people who are annoyed at agile lately are confusing **Agil
 
 # "agile" with a lowercase a**
 
-In truth, "agile" – with a lowercase a – is not a process.  It’s not a ruleset, it’s a mindset.  A mindset that, to quote from the [manifesto](http://agilemanifesto.org/"), values:
+In truth, "agile" – with a lowercase a – is not a process.  It’s not a ruleset, it’s a mindset.  A mindset that, to quote from the [manifesto](http://agilemanifesto.org/), values:
 
  > Individuals and interactions over processes and tools
  > Working software over comprehensive documentation
@@ -50,4 +50,4 @@ The most important piece of "Agile" is, truly, the retrospective.  We developers
 
 "Agile" may have ruined a life, but "agile" probably did not.  I would guess that "agile" has made it a great deal better, and the dogmatic adherence to a predefined box labelled "Agile" is what made it worse.  Don’t chuck the baby out with the bathwater.
 
-Rigid process is the antithesis of "agile."  Simply ensure that everything your team does enables it to deliver working software early and often, and pieces will fall into place.  The [vast array of books](http://www.amazon.com/gp/search/ref=sr_nr_scat_4016_ln?rh=n:4016,k:agile&keywords=agile&ie=UTF8&qid=1284078587&scn=4016&h=1c5d783e62fdda166786e5852002e9608fbc7636") on "Agile" should be taken as guides, not gospel.  These books, Rally’s training, and other sources all contain excellent suggestions for enabling teams to deliver quality software, but not all things will work for all teams.  These are just things that a lot of people have seen work really well, and they might be useful for your team, too.  Try stuff out, experiment, then evaluate.  Over time, your team will figure out what works best for it.
+Rigid process is the antithesis of "agile."  Simply ensure that everything your team does enables it to deliver working software early and often, and pieces will fall into place.  The [vast array of books](http://www.amazon.com/gp/search/ref=sr_nr_scat_4016_ln?rh=n:4016,k:agile&keywords=agile&ie=UTF8&qid=1284078587&scn=4016&h=1c5d783e62fdda166786e5852002e9608fbc7636) on "Agile" should be taken as guides, not gospel.  These books, Rally’s training, and other sources all contain excellent suggestions for enabling teams to deliver quality software, but not all things will work for all teams.  These are just things that a lot of people have seen work really well, and they might be useful for your team, too.  Try stuff out, experiment, then evaluate.  Over time, your team will figure out what works best for it.

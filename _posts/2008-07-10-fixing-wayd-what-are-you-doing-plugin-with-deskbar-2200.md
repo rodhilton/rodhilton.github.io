@@ -14,7 +14,7 @@ published: true
 
 I wanted to start experimenting with the Gnome Deskbar recently, particularly to make it easier to update my twitter feed.  There are a number of deskbar plugins for twitter updating, though most of them are obsolete because of recent changes to Deskbar.
 
-I had a lot of trouble getting [WAYD](http://www.butterfat.net/wiki/Projects/DeskbarPlugins") (a twitter/pownce/jaiku updater) to work with Deskbar, so I figured I'd post to explain what I had to do to make it work.
+I had a lot of trouble getting [WAYD](http://www.butterfat.net/wiki/Projects/DeskbarPlugins) (a twitter/pownce/jaiku updater) to work with Deskbar, so I figured I'd post to explain what I had to do to make it work.
 
 First, when you download the plugin, you need to put it in the correct directory.  A lot of instructions tell you to place the file in `~/.gnome2/deskbar-applet/handlers` but these instructions are for older style plugins.  You want to place the file in `~/.gnome2/deskbar-applet/modules-2.20-compatible`
 
@@ -64,5 +64,5 @@ and add this below it:
 
 I've sent the author my changes, so hopefully he'll update his site with a new copy of the file and make this post obsolete.
 
-**Update:** The author has merged my changes in.  Go to [his site](http://www.butterfat.net/wiki/Projects/DeskbarPlugins") to get the latest version (you still need to rename it to wayd.py though).
+**Update:** The author has merged my changes in.  Go to [his site](http://www.butterfat.net/wiki/Projects/DeskbarPlugins) to get the latest version (you still need to rename it to wayd.py though).
 

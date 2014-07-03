@@ -41,7 +41,7 @@ It took some time to get the multimedia box stable, the windows machine built, a
 
 How has it been?
 
-Getting my mouse to work correctly has been a pain.  Making Ubuntu play nicely with my Western Digital NetCenter was something of a [nightmare](http://www.nomachetejuggling.com/2007/01/13/using-western-digital-netcenter-with-ubuntu-linux/").  Linux can't seem to handle my KVM switch without disabling my mouse wheel.  Every torrent app for Linux is inferior to uTorrent.  I've definitely dealt with a lot of frustration in Ubuntu - frustration with things that I took for granted when I used Windows.  Despite these frustrations, there has been a noticeable lack of something important: a dealbreaker.
+Getting my mouse to work correctly has been a pain.  Making Ubuntu play nicely with my Western Digital NetCenter was something of a [nightmare](http://www.nomachetejuggling.com/2007/01/13/using-western-digital-netcenter-with-ubuntu-linux/).  Linux can't seem to handle my KVM switch without disabling my mouse wheel.  Every torrent app for Linux is inferior to uTorrent.  I've definitely dealt with a lot of frustration in Ubuntu - frustration with things that I took for granted when I used Windows.  Despite these frustrations, there has been a noticeable lack of something important: a dealbreaker.
 
 As obnoxious as Ubuntu can be at times, nothing so far has made me give up and re-install Windows.  Nothing has gone past the level of annoyance.
 

@@ -18,7 +18,7 @@ I took two 7000-level PhD courses at once (previously I had only done one in a s
 
 ## Artificial Intelligence
 
-Textbook: [Artificial Intelligence, 2nd ed.](http://www.amazon.com/Artificial-Intelligence-Pb-E-Rich/dp/0071008942/ref=sr_1_1?ie=UTF8&qid=1355376492&sr=8-1")
+Textbook: [Artificial Intelligence, 2nd ed.](http://www.amazon.com/Artificial-Intelligence-Pb-E-Rich/dp/0071008942/ref=sr_1_1?ie=UTF8&qid=1355376492&sr=8-1)
 
 I had never taken an A.I. class as an undergrad, and I always regretted it.  I felt like I should at least be see what it's about, and I was always really interested in things like evolutionary algorithms, genetic algorithms, and other metaheuristics.  This class was taught by a professor I hadn't yet had, so this was a real gamble for me.
 
@@ -38,13 +38,13 @@ Ultimately, the workload is what dragged this class down to me, wasting its pote
 
 There actually WAS a project for the class, but it was extra credit.  This project was assigned halfway through the semester (to help students pull their grades up from the midterm), but the lectures that explained the concepts needed to do the project weren't until the final week of class.  Given how much I was drowning in work just keeping up with his class, I decided not to pursue the project at all and just focus on doing well on the final.  After my final, my professor e-mailed me to let me know I had a B in the class, but I could pull it up to an A if I did this project, which was due in 2 days.
 
-I've had straight-A's for every other class, and I can't imagine a course being more challenging than A.I.  I realized that one day I'd look back at my transcript and see all A's and one B, **a B that I had an opportunity to pull up to an A but I didn't bother because I was lazy and wanted to be done with the semester.**  I decided laziness wasn't a good enough reason to accept the B, so with only two days to do the entire half-semester project, I decided to give it a shot.  It actually wound up being incredibly fun, largely because I made it fun by doing it in Scala.  You can check out the project **[here](https://github.com/rodhilton/trajectories")** if you want.
+I've had straight-A's for every other class, and I can't imagine a course being more challenging than A.I.  I realized that one day I'd look back at my transcript and see all A's and one B, **a B that I had an opportunity to pull up to an A but I didn't bother because I was lazy and wanted to be done with the semester.**  I decided laziness wasn't a good enough reason to accept the B, so with only two days to do the entire half-semester project, I decided to give it a shot.  It actually wound up being incredibly fun, largely because I made it fun by doing it in Scala.  You can check out the project **[here](https://github.com/rodhilton/trajectories)** if you want.
 
 In the end, I managed to complete the project by staying up until about 2am a few nights, and I wound up with the A in the class.
 
 ## Computational Complexity
 
-Textbooks: [Automata, Computability, and Complexity](http://www.amazon.com/Automata-Computability-Complexity-Theory-Applications/dp/0132288060") and [Computational Complexity](http://www.amazon.com/Computational-Complexity-Christos-H-Papadimitriou/dp/0201530821")
+Textbooks: [Automata, Computability, and Complexity](http://www.amazon.com/Automata-Computability-Complexity-Theory-Applications/dp/0132288060) and [Computational Complexity](http://www.amazon.com/Computational-Complexity-Christos-H-Papadimitriou/dp/0201530821)
 
 The existence of an entire course devoted to Computational Complexity was one of the main reasons I picked UCD over other schools.  Taught by a professor I really enjoyed for Theory of Automata, I figured this class was likely to be my favorite class of all time.  Unfortunately, it wound up being a bit of a disappointment.
 
@@ -52,7 +52,7 @@ As an experiment, the class was, for the first time, taught as a "hybrid" class.
 
 {% image chp_venn_diagram-300x270.jpg align="left" caption="Complexity Classes, from Math $$\cap$$ Programming" %}
 
-The main issue was that, **by only meeting once a week, we simply we unable to cover a great breadth of material.**  Computational Complexity is a huge subject, there are [495 classes in the Complexity Zoo](http://complexityzoo.uwaterloo.ca/Complexity_Zoo"), and the infrequent meetings meant that only a tiny fraction of the topic wound up being covered.  We walked through some of the more difficult, classic papers in theoretical computer science, which was a lot of fun, but fully dissecting a single paper would often take 2 classes, a huge fraction of the available classtime when only meeting once a week.
+The main issue was that, **by only meeting once a week, we simply we unable to cover a great breadth of material.**  Computational Complexity is a huge subject, there are [495 classes in the Complexity Zoo](http://complexityzoo.uwaterloo.ca/Complexity_Zoo), and the infrequent meetings meant that only a tiny fraction of the topic wound up being covered.  We walked through some of the more difficult, classic papers in theoretical computer science, which was a lot of fun, but fully dissecting a single paper would often take 2 classes, a huge fraction of the available classtime when only meeting once a week.
 
 For my semester project, I did [a literature review and covered 27 complexity classes from the Zoo]({% post_url 2012-12-15-a-stroll-through-the-complexity-zoo %}) that we didn't have time to even mention in class.  Due to the A.I. class, I had much less time to devote to this project than I would have liked, but I still wound up doing a lot of research.  I absolutely loved this project, and discovered a whole bunch of complexity classes I had never heard of before as an undergraduate.  I found the material just as exciting as I expected to, but the sad truth is that I was able to spend much, much less time on this fascinating subject than I wanted to.
 
@@ -94,7 +94,7 @@ I got 100% in the class, I was never willing to walk away from an assignment wit
 
 ## Writing in The Sciences
 
-I also took Kristin Sainani's Writing in the Sciences course on Coursera.  This is the online version of a class Sainani teaches at Stanford University.  Since I'm doing a PhD, I know I'll be doing a lot of writing, and I wanted to improve my writing skills.  I also recently read the very similarly-themed [Writing for Computer Science](http://www.amazon.com/Writing-Computer-Science-Justin-Zobel/dp/1852338024/ref=sr_1_1?ie=UTF8&qid=1356058376&sr=8-1") by Justin Zobel, which I found enlightening.
+I also took Kristin Sainani's Writing in the Sciences course on Coursera.  This is the online version of a class Sainani teaches at Stanford University.  Since I'm doing a PhD, I know I'll be doing a lot of writing, and I wanted to improve my writing skills.  I also recently read the very similarly-themed [Writing for Computer Science](http://www.amazon.com/Writing-Computer-Science-Justin-Zobel/dp/1852338024/ref=sr_1_1?ie=UTF8&qid=1356058376&sr=8-1) by Justin Zobel, which I found enlightening.
 
 I took this course pretty seriously, in that I actually watched all of the lectures and did all of the assignments, but I didn't give it the level of attention I gave the Scala class or either of my University classes.  The course simply wasn't technical enough to require my full attention and it was always my bottom priority, so I often listened to the lectures in headphones while at work, turning my attention to the video only when something visual was being presented.  One week, I played the lectures on my laptop while doing Scala homework on my desktop.  Now **that's** multitasking.
 

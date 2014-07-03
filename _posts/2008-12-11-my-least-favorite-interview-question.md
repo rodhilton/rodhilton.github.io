@@ -42,7 +42,7 @@ Allow me to elaborate by making this concrete.  Imagine the question is as follo
 
 If I, as an interview candidate, were to see a question like this, my mind would go through the following thought process:
 
-_Well, that's actually a really simple algorithm.  Read a date from commandline, do a little [calculation](http://www.voidware.com/moon_phase.htm"), print out the phase.  But wait, they said they want it to be like production code.  So I should probably design it in a more object-oriented modular manner than just some procedural script.  And when I write production code, I unit test it, so I should write some unit tests.  And with all that code, I'm going to need a build file... Jesus, this seems like overkill for a 10 line script._
+_Well, that's actually a really simple algorithm.  Read a date from commandline, do a little [calculation](http://www.voidware.com/moon_phase.htm), print out the phase.  But wait, they said they want it to be like production code.  So I should probably design it in a more object-oriented modular manner than just some procedural script.  And when I write production code, I unit test it, so I should write some unit tests.  And with all that code, I'm going to need a build file... Jesus, this seems like overkill for a 10 line script._
 
 It's the last sentence that destroys me, and many other capable programmers.  On the one hand, production code needs tests, it needs a build, it needs to be well designed, and it needs to work.  On the other hand, the problem I was given is a 10-liner, and it seems like overengineering to do anything more.
 

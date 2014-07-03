@@ -16,15 +16,15 @@ type: post
 published: true
 ---
 
-There's a great WordPress plugin called [Latex for Wordpress](http://wordpress.org/extend/plugins/latex/").  It's less popular than the similar [WP Latex](http://wordpress.org/extend/plugins/wp-latex/"), but I think it's better.
+There's a great WordPress plugin called [Latex for Wordpress](http://wordpress.org/extend/plugins/latex/).  It's less popular than the similar [WP Latex](http://wordpress.org/extend/plugins/wp-latex/), but I think it's better.
 
-Both plugins allow Wordpress users to insert $$\LaTeX$$ into their posts, but the main reason why the former is superior is that, while both plugins generate image files containing processed text, Latex for Wordpress augments this functionality with [MathJax](http://www.mathjax.org/"), a client-side JavaScript $$\LaTeX$$ renderer.  MathJax is the primary means of rendering, with png files as a fallback.  This means that $$\LaTeX$$ renders much more cleanly.
+Both plugins allow Wordpress users to insert $$\LaTeX$$ into their posts, but the main reason why the former is superior is that, while both plugins generate image files containing processed text, Latex for Wordpress augments this functionality with [MathJax](http://www.mathjax.org/), a client-side JavaScript $$\LaTeX$$ renderer.  MathJax is the primary means of rendering, with png files as a fallback.  This means that $$\LaTeX$$ renders much more cleanly.
 
-Unfortunately, Latex for Wordpress does not provide an option to provide custom config options to MathJax.  This is a problem, since my blog uses a large font for text, and the default text scaling size is very small.  I needed a way to use the [MathJax config](http://www.mathjax.org/docs/1.1/options/HTML-CSS.html") to adjust the text scale.
+Unfortunately, Latex for Wordpress does not provide an option to provide custom config options to MathJax.  This is a problem, since my blog uses a large font for text, and the default text scaling size is very small.  I needed a way to use the [MathJax config](http://www.mathjax.org/docs/1.1/options/HTML-CSS.html) to adjust the text scale.
 
 I went ahead and patched this functionality into Latex for Wordpress.  So far, I have been unable to figure out how to commit this patch to the maintainer of the project, so until I am able to do that I'm posting it here.
 
-This is a standard patch file, simply save it and apply the patch to the directory to which Latex for Wordpress has been extracted (inside of your wordpress plugins directory).  The patch runs against version [3.04 of Latex for Wordpress](http://wordpress.org/extend/plugins/latex/download/"), hopefully I can get this patch merged in before a new version is released.
+This is a standard patch file, simply save it and apply the patch to the directory to which Latex for Wordpress has been extracted (inside of your wordpress plugins directory).  The patch runs against version [3.04 of Latex for Wordpress](http://wordpress.org/extend/plugins/latex/download/), hopefully I can get this patch merged in before a new version is released.
 
 ~~~
 diff --git a/latex-admin.php b/latex-admin.php

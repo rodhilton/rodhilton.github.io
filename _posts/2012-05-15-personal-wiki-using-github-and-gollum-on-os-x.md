@@ -25,9 +25,9 @@ I've been struggling for a while to get a good personal wiki solution going.  I 
  * Synchronized across all machines
  * Can use offline
 
-I tried using [TiddlyWiki](http://tiddlywiki.org/") with DropBox as the cloud-based sync mechanism, but I use Google Chrome as my browser, which has a lot of trouble with the Java plugin that does the saving.  There are command line arguments for Chrome that fix this, but that's weirdly difficult to deal with on OS X.
+I tried using [TiddlyWiki](http://tiddlywiki.org/) with DropBox as the cloud-based sync mechanism, but I use Google Chrome as my browser, which has a lot of trouble with the Java plugin that does the saving.  There are command line arguments for Chrome that fix this, but that's weirdly difficult to deal with on OS X.
 
-So my final solution, subject to improvement, is to use [Gollum](https://github.com/github/gollum").  Gollum is a Ruby-based wiki server that runs completely self-contained (you don't need to install PHP or a database) and is backed by Git.  I use a Git repo cloned off a private [GitHub](http://www.github.com") repository for sync functionality.
+So my final solution, subject to improvement, is to use [Gollum](https://github.com/github/gollum).  Gollum is a Ruby-based wiki server that runs completely self-contained (you don't need to install PHP or a database) and is backed by Git.  I use a Git repo cloned off a private [GitHub](http://www.github.com) repository for sync functionality.
 
 There are a number of steps to getting this set up, so I've decided to document them here, both for the benefit of anyone else who wants to do this, as well as for myself if I have to set it up on another machine.
 
@@ -35,16 +35,16 @@ These instructions are geared toward OS X, largely because I found it more diffi
 
 # GitHub
 
-The reason I like [GitHub](http://www.github.com") for backup/sync is that their web interface has a built-in editor that supports [Markdown](http://daringfireball.net/projects/markdown/syntax"), the same Wiki syntax I'm using in Gollum (Gollum actually supports many different formats, but Markdown is one of the easiest to install).  This means I can view, edit, and preview using the GitHub web interface alone, in case I need to access my wiki data from a machine that does not have Gollum set up, but does have a web browser.  My smartphone, for example.
+The reason I like [GitHub](http://www.github.com) for backup/sync is that their web interface has a built-in editor that supports [Markdown](http://daringfireball.net/projects/markdown/syntax), the same Wiki syntax I'm using in Gollum (Gollum actually supports many different formats, but Markdown is one of the easiest to install).  This means I can view, edit, and preview using the GitHub web interface alone, in case I need to access my wiki data from a machine that does not have Gollum set up, but does have a web browser.  My smartphone, for example.
 
-A private repository on GitHub will cost you $7 per month, which is a little pricey if all you're going to do is have a personal wiki stored there.  You could open source your wiki to get around this, or you could also use [BitBucket](https://bitbucket.org/"), which offers free private git repos, but doesn't have the slick web interface for viewing or hand-editing the markdown files Gollum uses.
+A private repository on GitHub will cost you $7 per month, which is a little pricey if all you're going to do is have a personal wiki stored there.  You could open source your wiki to get around this, or you could also use [BitBucket](https://bitbucket.org/), which offers free private git repos, but doesn't have the slick web interface for viewing or hand-editing the markdown files Gollum uses.
 
 In any case, get a Git repo set up on either GitHub or BitBucket.  Since I think GitHub is better for this purpose, I'll be using `git@github.com:rodhilton/personalwiki.git` as my repository URL.
 
 # Gollum
 The easiest way to install Gollum in OS X is to run `gem install gollum`.  This requires that you have Ruby and RubyGems set up correctly.  OS X 10.5 and up have this already, so this shouldn't require any work on your part.
 
-Once Gollum is installed, you need to install support for a wiki syntax.  I'm using Markdown, so I run `gem install redcarpet`.  Instructions for how to use alternative formats can be found in the [Gollum installation README](https://github.com/github/gollum#installation").
+Once Gollum is installed, you need to install support for a wiki syntax.  I'm using Markdown, so I run `gem install redcarpet`.  Instructions for how to use alternative formats can be found in the [Gollum installation README](https://github.com/github/gollum#installation).
 
 Now, clone your personal wiki somewhere handy.  I'm putting it in my home directory, so I merely run `git clone git@github.com:rodhilton/personalwiki.git` from Terminal in `~`.  This will check things out at `~/personalwiki`.  Change into that directory and run `gollum`.  You should see something like:
 
@@ -59,9 +59,9 @@ Open a browser and load `http://localhost:4567` to verify things are working cor
 </blockquote>
 ## Alternative Installation
 
-I often find that installing gems under rvm and then trying to run those gems outside of the shell (like, at login) gives me trouble.  Another way to install Gollum, and the method I'm using on one of my machines, is to check it out from source and use [bundler](http://gembundler.com/").
+I often find that installing gems under rvm and then trying to run those gems outside of the shell (like, at login) gives me trouble.  Another way to install Gollum, and the method I'm using on one of my machines, is to check it out from source and use [bundler](http://gembundler.com/).
 
-To do this, clone the [Gollum repo](https://github.com/github/gollum") to somewhere on disk, such as `/usr/share/`.  Then in `/usr/share/gollum`, run `sudo bundle install`.  This will install everything you need.
+To do this, clone the [Gollum repo](https://github.com/github/gollum) to somewhere on disk, such as `/usr/share/`.  Then in `/usr/share/gollum`, run `sudo bundle install`.  This will install everything you need.
 
 When I need to reference the absolute path of gollum, it's now `/usr/share/gollum/bin/gollum` so I can work around rvm's oddities.
 
@@ -84,7 +84,7 @@ DIR="$( cd -P "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 What this is doing is figuring out the directory of the `.sync.sh` script itself, changing to it, then running git pull (to pull any changes from GitHub) and then git push (to push any changes back up to GitHub).  Make sure to set the script to executable by running `chmod a+x .sync.sh`.  Also make sure to make a local commit of this file (otherwise, ironically, it won't be able to run itself since your git working tree is dirty) by running `git add .sync.sh && git commit -m "Sync script"`.
 
-This script can be run from anywhere (this is important) and it will sync the wiki.  Now it needs to be set to run periodically.  On OS X, we're going to use Apple's incredibly stupid and terrible [launchd](http://en.wikipedia.org/wiki/Launchd"), because [crontab has been deprecated](http://apple.stackexchange.com/questions/12819/why-is-cron-being-deprecated") for reasons that are behind my comprehsion.
+This script can be run from anywhere (this is important) and it will sync the wiki.  Now it needs to be set to run periodically.  On OS X, we're going to use Apple's incredibly stupid and terrible [launchd](http://en.wikipedia.org/wiki/Launchd), because [crontab has been deprecated](http://apple.stackexchange.com/questions/12819/why-is-cron-being-deprecated) for reasons that are behind my comprehsion.
 
 Add a file called `com.personalwiki.sync.plist` to `~/Library/LaunchAgents/` which looks like this:
 

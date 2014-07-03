@@ -10,7 +10,7 @@ type: post
 published: true
 ---
 
-As I grow through my career as a software developer, I have tried to remain aware of what makes me happy or unhappy at a job.   What I decided was that there were three factors in job satisfaction, so I found myself amazed that someone else had posted something similar: Alan Skorkin explains his [Three Pillars of Job Satisfaction](http://www.skorks.com/2009/08/the-3-pillars-of-job-satisfaction/").
+As I grow through my career as a software developer, I have tried to remain aware of what makes me happy or unhappy at a job.   What I decided was that there were three factors in job satisfaction, so I found myself amazed that someone else had posted something similar: Alan Skorkin explains his [Three Pillars of Job Satisfaction](http://www.skorks.com/2009/08/the-3-pillars-of-job-satisfaction/).
 
 I agree that there are three pillars, but I disagree about what the pillars are, at least for myself.
 
@@ -38,7 +38,7 @@ This may sound redundant, as what is a company if not for people and a project? 
 
 I've found that if I have a job that satisfies all **three** of these pillars, I'm extremely happy at a company.  I don't look elsewhere, I don't consider other job opportunities.  I can work there indefinitely (with one caveat, more on that in a bit).
 
-If I have a job that satisfies **two** pillars, I'm reasonably satisfied.  I'm not unhappy, and I can come in every day excited to do my job.  But at the same time, I'm keeping an eye on various RSS feeds from [indeed.com](http://indeed.com"), making sure I don't miss a potential three-pillar job.
+If I have a job that satisfies **two** pillars, I'm reasonably satisfied.  I'm not unhappy, and I can come in every day excited to do my job.  But at the same time, I'm keeping an eye on various RSS feeds from [indeed.com](http://indeed.com), making sure I don't miss a potential three-pillar job.
 
 A job that satisfies only **one** pillar is a job that makes me unhappy.  I'm actively seeking another job and sending my resume out.  I dread coming into work, and I have a hard time motivating myself.
 

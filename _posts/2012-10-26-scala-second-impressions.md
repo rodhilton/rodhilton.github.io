@@ -22,11 +22,11 @@ While some of my initial thoughts still stand, particularly that Scala APIs ofte
 
 A great deal of my perception shift has been due to familiarity and training.  I realize that a lot of my earlier issues with Scala were due to my own lack of comfort with the language, and over the last year I've done a great deal to level up my Scala skills significantly, like:
 
- * Read the entirety of Odersky et. al.'s [Programming in Scala](http://www.artima.com/shop/programming_in_scala_2ed") cover to cover
- * Attended Dick Wall and Bill Venner's excellent [Stairway to Scala](http://www.artima.com/shop/stairway_to_scala") week-long workshop (this probably made the biggest contribution to me getting over the Scala hump).
- * Read what was available of the MEAP [Functional Programming in Scala](http://www.manning.com/bjarnason/"), a book focused not on Scala but on Functional Programming principles
- * Enrolled in Odersky's [Functional Programming Principles in Scala](https://www.coursera.org/course/progfun") class on Coursera.
- * Currently reading Josh Suereth's [Scala in Depth](http://www.manning.com/suereth/"), which actually wound up being the Effective Scala book I wanted in the previous post.
+ * Read the entirety of Odersky et. al.'s [Programming in Scala](http://www.artima.com/shop/programming_in_scala_2ed) cover to cover
+ * Attended Dick Wall and Bill Venner's excellent [Stairway to Scala](http://www.artima.com/shop/stairway_to_scala) week-long workshop (this probably made the biggest contribution to me getting over the Scala hump).
+ * Read what was available of the MEAP [Functional Programming in Scala](http://www.manning.com/bjarnason/), a book focused not on Scala but on Functional Programming principles
+ * Enrolled in Odersky's [Functional Programming Principles in Scala](https://www.coursera.org/course/progfun) class on Coursera.
+ * Currently reading Josh Suereth's [Scala in Depth](http://www.manning.com/suereth/), which actually wound up being the Effective Scala book I wanted in the previous post.
 
 All of these resources, combined with a continued daily use of Scala, led to me using Scala in a much meatier way than previously, enabling me to write some extremely expressive code.
 

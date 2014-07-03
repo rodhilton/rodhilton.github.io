@@ -46,7 +46,7 @@ The default port for Tomcat is in it's `server.xml` file, which you will find in
 Do a little `sudo service tomcat6 restart` and check `http://localhost:8080` in a browser to make sure your Tomcat is okay (obviously, if you changed your port, go there instead).
 
 # Install Jenkins
-We will be deploying Jenkins not as a standalone server, or even using the Ubuntu repository's version (it has one).  That means we need the war file.  Go [download](http://mirrors.jenkins-ci.org/war/latest/") it.
+We will be deploying Jenkins not as a standalone server, or even using the Ubuntu repository's version (it has one).  That means we need the war file.  Go [download](http://mirrors.jenkins-ci.org/war/latest/) it.
 
 Deploying a webapp to Tomcat is more Java-y than Linux-y, so copy the war file to `/var/lib/tomcat6/webapps`.  As long as the war file is readable, Tomcat will extract it into a new directory of it's own creation, so this should go pretty smoothly.
 
@@ -135,7 +135,7 @@ It's a good idea, for a number of reasons, to make sure you can check out your r
 $ git clone ssh://user@mydomain.com:22/~/git/project.git
 ~~~
 
-If you're asked for a password, stop and [set up ssh keys](http://pkeck.myweb.uga.edu/ssh/").  This ensures you won't have to type passwords anymore.
+If you're asked for a password, stop and [set up ssh keys](http://pkeck.myweb.uga.edu/ssh/).  This ensures you won't have to type passwords anymore.
 
 Once you give your Git repo URL to Jenkins, tell it to go ahead and make a build.
 

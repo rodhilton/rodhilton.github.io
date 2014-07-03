@@ -74,13 +74,13 @@ Finally, the biggest problem with this set up is that, because it forces people 
 
 # Level 2: Great Pairing
 
-At the next level, you add a second monitor to the machine.  These monitors are mirrored, which can be done with either software or [DVI splitters](http://www.amazon.com/Cables-Unlimited-DVI-D-Splitter-PCM-2260/dp/B000H09RFM").
+At the next level, you add a second monitor to the machine.  These monitors are mirrored, which can be done with either software or [DVI splitters](http://www.amazon.com/Cables-Unlimited-DVI-D-Splitter-PCM-2260/dp/B000H09RFM).
 
 {% image level2.png %}
 
 Both programmers feel equal control over the machine, and there are no eyestrain problems.  This is a really pleasant pairing situation, and it only adds the cost of a keyboard, mouse, and extra monitor to a regular workstation.
 
-One common problem is that developers, rather than mirroring the desktop on both monitors, may want simply expand the desktop to both monitors.  This is a mistake.  The main IDE will be on only one of these monitors, and whoever is sitting at that monitor will eventually become the permanent driver and you're in a situation no better than the Level -1 setup.  This is even worse on OS X, where even the menu bar "belongs" to only one of the monitors (though this can be somewhat [fixed](http://blog.boastr.net/?page_id=79")).
+One common problem is that developers, rather than mirroring the desktop on both monitors, may want simply expand the desktop to both monitors.  This is a mistake.  The main IDE will be on only one of these monitors, and whoever is sitting at that monitor will eventually become the permanent driver and you're in a situation no better than the Level -1 setup.  This is even worse on OS X, where even the menu bar "belongs" to only one of the monitors (though this can be somewhat [fixed](http://blog.boastr.net/?page_id=79)).
 
 The other problem is that the desk can get pretty cramped, particularly for the person the left side, since their mouse may be constantly hitting the keyboard of the person to their right.
 

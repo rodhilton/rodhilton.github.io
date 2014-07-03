@@ -17,7 +17,7 @@ For a final paper, we had to pick a topic of our own choosing in Complexity Theo
 
 {% image chp_venn_diagram-300x270.jpg align="right" caption="Complexity Classes, from Math ∩ Programming" link="http://jeremykun.wordpress.com/2012/02/29/other-complexity-classes/" %}
 
-Nonetheless, I'm pretty happy with my paper, which provides an undergraduate-level explanation of 26 other complexity classes, based off [The Complexity Zoo](http://complexityzoo.uwaterloo.ca/Complexity_Zoo"), kept by MIT professor Scott Aaronson.  I tried to boil these classes down to the bare essentials and explain them with examples in plain english as much as I could.  The goal of the paper is to expose those new to Complexity Theory or early in their Computer Science careers to a handful of interesting classes and explain how they relate to each other, the more common classes, and of course the $$P =? NP$$ question.
+Nonetheless, I'm pretty happy with my paper, which provides an undergraduate-level explanation of 26 other complexity classes, based off [The Complexity Zoo](http://complexityzoo.uwaterloo.ca/Complexity_Zoo), kept by MIT professor Scott Aaronson.  I tried to boil these classes down to the bare essentials and explain them with examples in plain english as much as I could.  The goal of the paper is to expose those new to Complexity Theory or early in their Computer Science careers to a handful of interesting classes and explain how they relate to each other, the more common classes, and of course the $$P =? NP$$ question.
 
 You can download the paper **[here](/files/complexity_zoo.pdf)**.
 

@@ -25,7 +25,7 @@ The basic cycle of modern software development looks like this:
 
 It's step 4 that generates change requests.  The customer says that something isn't working the way they want it to be working, and the cycle repeats.
 
-Very often, you will hear developers whine about enhancements that are being filed as defects.  Product owners will often respond by saying that it doesn't matter, it all has to be fixed.  A common phrase I hear is "they are all defects from the customer's perspective."  This mentality is echoed in [Practices of an Agile Developer](http://www.pragprog.com/titles/pad/practices-of-an-agile-developer").  The attitude is generally, defects and enhancements are basically the same thing, it's all work that needs to be done, and programmers are being pedantic when they insist on making the distinction.
+Very often, you will hear developers whine about enhancements that are being filed as defects.  Product owners will often respond by saying that it doesn't matter, it all has to be fixed.  A common phrase I hear is "they are all defects from the customer's perspective."  This mentality is echoed in [Practices of an Agile Developer](http://www.pragprog.com/titles/pad/practices-of-an-agile-developer).  The attitude is generally, defects and enhancements are basically the same thing, it's all work that needs to be done, and programmers are being pedantic when they insist on making the distinction.
 
 But here's the deal: **the programmers are right.**
 

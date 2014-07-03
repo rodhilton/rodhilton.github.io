@@ -22,5 +22,5 @@ Test-Driven Development is a Software Engineering practice gaining increasing po
 
 If you'd like to read it, you can download it here:
 
-[Quantitatively Evaluating Test-Driven Development by Applying Object-Oriented Quality Metrics to Open Source Projects](http://www.nomachetejuggling.com/files/tdd_thesis.pdf")
+[Quantitatively Evaluating Test-Driven Development by Applying Object-Oriented Quality Metrics to Open Source Projects](http://www.nomachetejuggling.com/files/tdd_thesis.pdf)
 

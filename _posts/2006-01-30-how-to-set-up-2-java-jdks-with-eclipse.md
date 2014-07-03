@@ -10,7 +10,7 @@ published: true
 
 At work, I maintain a legacy application written in Java 1.4.  However, as a Java nerd, I do all of my new development on other projects in Java 5.0.  Therefore, I had the somewhat challenging task of setting up two versions of Java in my development environment.  While this process wasn't difficult, it was somewhat complicated, and I've had to show a few people at work how to do it, so I thought I'd share it.
 
-This post is for Windows users running [Eclipse](http://www.eclipse.org/") 3.1 or newer (prior versions did not support Java 5).
+This post is for Windows users running [Eclipse](http://www.eclipse.org/) 3.1 or newer (prior versions did not support Java 5).
 
 First you need to decide on which version of Java will be your "primary" version and which will be your "secondary" version.  Basically, you need to decide which version of Java will be your primary JDK, and which will the exception to that.  If your primary role at work is a maintainer of old systems, you want the old version of Java.  If you're going to be doing a lot of new development, you want the new version.  If you do a lot of work with ColdFusion (like we do at my job), you'll want the old version, as Java 5 is not currently supported by JRun (though it is possible to swap it in, but you gain little to nothing by doing that).
 

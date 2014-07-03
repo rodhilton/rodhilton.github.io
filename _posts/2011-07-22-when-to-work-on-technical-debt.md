@@ -66,7 +66,7 @@ Don't create new debt when it can be avoided, and pay it off immediately when it
 
 # Step 2: Identify High-Interest Debt
 
-Okay, so you're no longer putting the company's features on your engineering credit card, now what?  Unsurprisingly, the credit card analogy actually tells us what to do here as well.  The general strategy with credit cards is to [identify the credit card with the highest interest rate, and start paying that one off right away, supplying the minimum payment to other cards](http://www.suzeorman.com/igsbase/igstemplate.cfm?SRC=MD012&SRCN=aoedetails&GnavID=84&SnavID=20&TnavID=&AreasofExpertiseID=5").
+Okay, so you're no longer putting the company's features on your engineering credit card, now what?  Unsurprisingly, the credit card analogy actually tells us what to do here as well.  The general strategy with credit cards is to [identify the credit card with the highest interest rate, and start paying that one off right away, supplying the minimum payment to other cards](http://www.suzeorman.com/igsbase/igstemplate.cfm?SRC=MD012&SRCN=aoedetails&GnavID=84&SnavID=20&TnavID=&AreasofExpertiseID=5).
 
 {% image debt-free-300x225.jpg align="left" caption="Prioritize and attack debt." %}
 

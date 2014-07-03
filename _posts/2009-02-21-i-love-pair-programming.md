@@ -67,7 +67,7 @@ When you're coding like a motherfucker, you're often writing bad code.  You're m
 
 **Programmer Man is dead, but I don't miss him.**  Not anymore.  My standards for what is "good code" have greatly increased and quite frankly I'm not sure ANY of Programmer Man's code ever met that standard.  Today, nearly all of my code does, and I have pairing to thank for it.
 
-And the headphones situation is easy to solve as well - at work we pick a musical theme at the start of the day, then use [Pandora](http://www.pandora.com") to provide music consistent with that theme all day.  I get my "Killswitch Engage" theme and my "Slayer" theme days because I graciously put up with another developer's "Angels and Airwaves" theme and "The Cranberries" theme.
+And the headphones situation is easy to solve as well - at work we pick a musical theme at the start of the day, then use [Pandora](http://www.pandora.com) to provide music consistent with that theme all day.  I get my "Killswitch Engage" theme and my "Slayer" theme days because I graciously put up with another developer's "Angels and Airwaves" theme and "The Cranberries" theme.
 
 # Final Thoughts
 

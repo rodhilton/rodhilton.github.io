@@ -68,7 +68,7 @@ I found that my weight fluctuated quite a bit during the week, and there was not
 
 {% image weightchart-300x194.png align="right" link="/assets/weightchart.png" %}
 
-Instead, what I did was kept track of my weight for the week.  I had a spreadsheet (stored in [Google docs](http://docs.google.com")) that had one week per row, 7 columns each.  The only column I ever really looked at was the "Week Average" and I compared that to the previous week.  If I had, overall, gained during the week, I needed to make a change.  If I had lost weight, I was on the right track.  This let me ignore daily fluctuations.
+Instead, what I did was kept track of my weight for the week.  I had a spreadsheet (stored in [Google docs](http://docs.google.com)) that had one week per row, 7 columns each.  The only column I ever really looked at was the "Week Average" and I compared that to the previous week.  If I had, overall, gained during the week, I needed to make a change.  If I had lost weight, I was on the right track.  This let me ignore daily fluctuations.
 
 I entered my data every day, but I evaluated only at the start of the week.  When I decided to change my plan, I committed to the change for one full week, even if it didn't look like it was working as the week started out.  For example, if I decided to have a different kind of breakfast, I would commit to that new breakfast for the full week, no matter what.  At the end of the week, I'd decide if that did or didn't work.
 

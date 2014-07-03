@@ -12,7 +12,7 @@ published: true
 
 I'm going to show you a little trick that will add two methods to any Java class, without actually defining them.  Furthermore, these methods will be given package visibility, accessible by any class in the same package. 
 
-First and foremost, credit for showing me this interesting `javac` tidbit goes to [Ted Neward](http://blogs.tedneward.com/").  Ted recently presented an introduction to java bytecode at a local JUG.  The entire presentation was incredibly interesting, but one of the more interesting bits that came out was a little bit of trickery the java compiler performs in certain cases.
+First and foremost, credit for showing me this interesting `javac` tidbit goes to [Ted Neward](http://blogs.tedneward.com/).  Ted recently presented an introduction to java bytecode at a local JUG.  The entire presentation was incredibly interesting, but one of the more interesting bits that came out was a little bit of trickery the java compiler performs in certain cases.
 
 Let's take a look at two classes.   One we'll call CompTest, which will be a simple class that contains a private String and a method to print it to the screen.  The second will be CompExecutive, which will simply make a CompTest instance and call the one method it defines.  It will also use Java reflection to count the number of methods on CompTest.
 

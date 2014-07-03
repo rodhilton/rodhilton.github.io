@@ -12,7 +12,7 @@ status: publish
 type: post
 published: true
 ---
-I recently read a book called [The Career Programmer](http://www.amazon.com/The-Career-Programmer-Guerilla-Imperfect/dp/1590596242") by [Christopher Duncan](http://christopherduncan.com/").  I typically don't post book reviews unless I really love a book and want to spread the word, but in this case I felt compelled to post in order to spread the warning.  I can't remember a book I've hated more.
+I recently read a book called [The Career Programmer](http://www.amazon.com/The-Career-Programmer-Guerilla-Imperfect/dp/1590596242) by [Christopher Duncan](http://christopherduncan.com/).  I typically don't post book reviews unless I really love a book and want to spread the word, but in this case I felt compelled to post in order to spread the warning.  I can't remember a book I've hated more.
 
 "The Career Programmer" is meant to be a dispensation of wisdom from a sage, a book that gives younger programmers keen insights from someone who has been in the industry for a long, long time.  I tend to really enjoy books like this, so I picked up a copy.  Unfortunately, it comes across as an anachronism, like the book time-traveled out of the mid-90's. While reading it, I felt compelled to double-check the publication year, and was absolutely astonished that it was printed in 2006. The "wisdom" of the book is so hopelessly out of date with the current state of software development that I cannot recommend it to absolutely anyone.
 
@@ -34,7 +34,7 @@ He goes on to talk about vague requirements with tight deadlines. He states:
 
  > "It's almost completely unheard of in our business for management to ask us for a system without attaching a timetable of some sort." 
 
-This is nonsense, and can come only from a programmer who has had absolutely no experience with agile development. This kind of death march was common in a time when people were all-Waterfall, but in the post-[agile-manifesto](http://agilemanifesto.org/") world, this kind of thing is vanishingly rare. Almost every project I've worked on has either had a fixed delivery date with variable scope, or fixed scope with a variable delivery date; very rarely are both dimensions fixed.
+This is nonsense, and can come only from a programmer who has had absolutely no experience with agile development. This kind of death march was common in a time when people were all-Waterfall, but in the post-[agile-manifesto](http://agilemanifesto.org/) world, this kind of thing is vanishingly rare. Almost every project I've worked on has either had a fixed delivery date with variable scope, or fixed scope with a variable delivery date; very rarely are both dimensions fixed.
 
 Duncan confirms that his view of the world is based in Waterfall when he talks in Chapter 2 about how management often shortchanges the "Analysis and Design Phase" - terminology right out of Waterfall. Chapter 4 talks about gathering requirements in an official requirements gathering phase, and getting them "set in stone". He argues that a formal requirements document gives you "ammunition further down the road when someone comes along and wants you to add additional features." This kind of thing is dinosaur-talk, people who know what they are doing don't develop software this way.  They gather small numbers of isolated requirements in user stories, and get those stories finished and in the hands of users.  In real life, **software requirements are going to change** - pretending you can get requirements set in stone to protect yourself later on is simply divorced from reality. It's far better to embrace a process that allows for that kind of shift, as virtually any professional software developer I've met in the last ten years would attest.
 
@@ -64,12 +64,12 @@ I really don't mean to be too harsh on Christopher Duncan. He seems like a genui
 
 Everything about this book is wrong.  Every aspect of The Career Programmer is covered better, by people who know what they are talking about, in other books.  Here's my list of suggestions for similar books that are all vastly superior to this one:
 
- * [The Pragmatic Programmer](http://www.amazon.com/The-Pragmatic-Programmer-Journeyman-Master/dp/020161622X") - Full of general tips for programmers to improve their skills.
- * [Emergent Design](http://www.amazon.com/Emergent-Design-Evolutionary-Professional-Development/dp/0321509366") - Describes the ACTUAL way to handle design under pressure: by organically growing and evolving the design of the code as needed.
- * [The Passionate Programmer](http://www.amazon.com/Passionate-Programmer-Remarkable-Development-Pragmatic/dp/1934356344/") - Covers how to handle your career development.
- * [Agile Estimating and Planning](http://www.amazon.com/Agile-Estimating-Planning-Mike-Cohn/dp/0131479415") - Describes how to estimate work well within an agile framework.
- * [User Stories Applied](http://www.amazon.com/User-Stories-Applied-Software-Development/dp/0321205685") - Talks about how to gather requirements properly.  Another good one is [Agile Software Requirements](http://www.amazon.com/Agile-Software-Requirements-Enterprise-Development/dp/0321635841"), which is quite a bit more in depth.
- * [The Clean Coder](http://www.amazon.com/Clean-Coder-Conduct-Professional-Programmers/dp/0137081073") - All about how to conduct yourself professionally, how to interact with the business and handle "politics". 
+ * [The Pragmatic Programmer](http://www.amazon.com/The-Pragmatic-Programmer-Journeyman-Master/dp/020161622X) - Full of general tips for programmers to improve their skills.
+ * [Emergent Design](http://www.amazon.com/Emergent-Design-Evolutionary-Professional-Development/dp/0321509366) - Describes the ACTUAL way to handle design under pressure: by organically growing and evolving the design of the code as needed.
+ * [The Passionate Programmer](http://www.amazon.com/Passionate-Programmer-Remarkable-Development-Pragmatic/dp/1934356344/) - Covers how to handle your career development.
+ * [Agile Estimating and Planning](http://www.amazon.com/Agile-Estimating-Planning-Mike-Cohn/dp/0131479415) - Describes how to estimate work well within an agile framework.
+ * [User Stories Applied](http://www.amazon.com/User-Stories-Applied-Software-Development/dp/0321205685) - Talks about how to gather requirements properly.  Another good one is [Agile Software Requirements](http://www.amazon.com/Agile-Software-Requirements-Enterprise-Development/dp/0321635841), which is quite a bit more in depth.
+ * [The Clean Coder](http://www.amazon.com/Clean-Coder-Conduct-Professional-Programmers/dp/0137081073) - All about how to conduct yourself professionally, how to interact with the business and handle "politics". 
 
 The Clean Coder is the one that is most similar to The Career Programmer in terms of purpose, but in almost every way it is the polar opposite.  I think every programmer should read The Clean Coder, but even moreso if one finds him or herself tempted to read The Career Programmer.
 

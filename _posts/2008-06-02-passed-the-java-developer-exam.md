@@ -11,7 +11,7 @@ type: post
 published: true
 ---
 
-Since my current job switched everything off of Java to Ruby and Rails a while back, I was concerned that my Java skills may get rusty.  I had wanted to pursue another Sun Certification anyway, so I decided to take the [Sun Certified Java Developer](http://www.sun.com/training/certification/java/scjd.xml") exam.
+Since my current job switched everything off of Java to Ruby and Rails a while back, I was concerned that my Java skills may get rusty.  I had wanted to pursue another Sun Certification anyway, so I decided to take the [Sun Certified Java Developer](http://www.sun.com/training/certification/java/scjd.xml) exam.
 
 This exam was very different from the other two exams I had taken, in that I did not need to study or answer any questions.  I did not have to go into a room and answer randomly chosen multiple choice questions.  Instead, I was given a document that called for an application to be written with specific functionality, and I had to then write that application and submit it for review.
 
@@ -23,7 +23,7 @@ What was particularly strange about my project was the input data file the store
 
 It bothered me that a project that stressed object oriented programming concepts would pass string arrays instead of actual objects, so even though the project definition didn't say to do so, I wound up writing a whole layer for parsing in and out of the file format, then another layer on top of that that could work with the string data (coded to the provided interfaces), then yet another on top of that which converted the data into actual Objects to be used by my GUI.  I was concerned that I had over engineering the thing, but I guess I hadn't.
 
-The project description was intentionally very vague.  A lot of guessing had to be done to figure out what was desired by the graders.  To this end, the [JavaRanch Big Moose Saloon](http://saloon.javaranch.com/cgi-bin/ubb/ultimatebb.cgi") was extremely helpful.  They have an entire forum devoted to the SCJD exam, which allows people to ask questions of each other for help in parsing the requirements of the document.
+The project description was intentionally very vague.  A lot of guessing had to be done to figure out what was desired by the graders.  To this end, the [JavaRanch Big Moose Saloon](http://saloon.javaranch.com/cgi-bin/ubb/ultimatebb.cgi) was extremely helpful.  They have an entire forum devoted to the SCJD exam, which allows people to ask questions of each other for help in parsing the requirements of the document.
 
 I had an interesting problem with the exam.  When I first got the project description, I was excited to code some Java, so I finished it in a week.  After submitting it, however, I had to separately sign up to take an essay exam, the purpose of which was proving I wrote the project.  Of course, I like writing code a helluva lot more than writing words, so I wound up procrastinating for months before taking the essay exam.  As a result, I had to review my own code prior to the exam, having forgotten nearly all of my own design choices.  Since the purpose of the exam was to make sure I was familiar with my own code, this was actually quite a challenge, especially since I had designed so many extra layers into the application.
 

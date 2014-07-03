@@ -13,11 +13,11 @@ type: post
 published: true
 ---
 
-The Wordpress [Hyphenator](http://wordpress.org/extend/plugins/hyphenator/") plugin is a great plugin that uses [Hyphenator.js](http://code.google.com/p/hyphenator/") to perform client-side hyphenation of blog posts.  I think this makes full-justified posts look much nicer, and I use it extensively on this site.
+The Wordpress [Hyphenator](http://wordpress.org/extend/plugins/hyphenator/) plugin is a great plugin that uses [Hyphenator.js](http://code.google.com/p/hyphenator/) to perform client-side hyphenation of blog posts.  I think this makes full-justified posts look much nicer, and I use it extensively on this site.
 
 Hyphenator.js relies on being told what classnames to look for in a page to know what can be hyphenated, but it also has an option called `donthyphenateclassname` which allows one to specify classnames that never get hyphenated, even when they are inside of a class that ought to be.
 
-Unfortunately, the Hyphenator Wordpress plugin does not support this option.  I needed support for it, so I added it.  I don't really know of a place to submit this patch, so I'm posting it here.  This patch has been applied to [version 3.2.0 of Hyphenator](http://wordpress.org/extend/plugins/hyphenator/download/").
+Unfortunately, the Hyphenator Wordpress plugin does not support this option.  I needed support for it, so I added it.  I don't really know of a place to submit this patch, so I'm posting it here.  This patch has been applied to [version 3.2.0 of Hyphenator](http://wordpress.org/extend/plugins/hyphenator/download/).
 
 ~~~patch
 diff --git a/options.php b/options.php
