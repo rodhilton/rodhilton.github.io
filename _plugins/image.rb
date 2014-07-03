@@ -94,6 +94,29 @@ module Jekyll
     end
   end
 
+  class EmbedBlock < Liquid::Block
+
+    def initialize(tag_name, text, tokens)
+      super
+      @text = text
+      @tokens = tokens
+    end
+
+    def render(context)
+      inner = super.strip
+      
+      ret = ""
+      ret = ret + "<table class='image aligncenter'><tr><td>"
+      ret = ret + inner
+      ret = ret + "</td></tr></table>"
+
+      ret
+    end
+  end
+
+
 end
 
 Liquid::Template.register_tag('image', Jekyll::Image)
+Liquid::Template.register_tag('img', Jekyll::Image)
+Liquid::Template.register_tag('embed', Jekyll::EmbedBlock)
