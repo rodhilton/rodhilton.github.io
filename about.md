@@ -14,3 +14,7 @@ I’m also a PhD candidate at the University of Colorado in Denver, studying Com
 This blog mostly focuses on my fascination with technical topics and my professional and academic life. Every so often I contemplate posting about more divisive issues such are religion and politics, but so far I’ve managed to avoid doing so.
 
 This blog is divided into categories at the top of the page, allowing visitors to follow posts about technical issues such as programming or technology without following posts about my personal life.
+
+For anyone curious about the origin of this blog's title, it comes from this cartoon:
+
+{% image machete_juggling.gif %}

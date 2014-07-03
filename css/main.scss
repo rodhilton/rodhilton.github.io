@@ -601,6 +601,9 @@ $inner_block_width: $content_width - (5 * $content_padding);
     code {
       font: $code_font !important;
       background-color: transparentize($highlight_color, 0.3);    
+    }
+
+    code.language-output, code.language-terminal {
       -ms-word-break: break-all;
       word-break: break-all;
 
