@@ -599,11 +599,11 @@ $inner_block_width: $content_width - (5 * $content_padding);
     }
 
     code {
-      font: $code_font !important;
+      font: $code_font;
       background-color: transparentize($highlight_color, 0.3);    
     }
 
-    code.language-output, code.language-terminal {
+    code.language-output, code.language-terminal {    
       -ms-word-break: break-all;
       word-break: break-all;
 
@@ -611,6 +611,10 @@ $inner_block_width: $content_width - (5 * $content_padding);
       -moz-hyphens: auto;
       hyphens: auto;
       word-wrap: break-word;
+    }
+
+    code.language-output {
+      font-size: ($inner_block_width - ($content_padding * 2) - 10)/ 50 !important;    
     }
 
     pre code {

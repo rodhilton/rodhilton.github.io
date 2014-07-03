@@ -1,0 +1,212 @@
+---
+layout: post
+title: Finding High-Impact Areas for Refactoring
+category: Programming
+tags:
+- code
+- Code Reviews
+- complexity
+- Continuous Integration
+- crossposted
+- java
+- metrics
+- quality
+- Refactoring
+- ruby
+status: publish
+type: post
+published: true
+---
+
+At Rally, we've stayed committed for the last 7 years to never telling the business that the product has to halt active development to pay down technical debt.  For us, the "big rewrite in the sky" has always been off the table.  Instead, we prefer to incrementally refactor and improve the existing elements of the codebase, gradually getting it to where we want it to be without ever halting feature development completely.
+
+This has never been an easy task.  The truth is, the codebase is quite old by engineering standards, many parts of it written before standards emerged in the industry.  Our entire persistence layer, for example, was created by hand well before libraries such as Hibernate existed (or at least, before they became standard practice).  This means that there are many, many areas of the code that we'd like to attack and improve.
+
+One thing we've started doing is holding lunchtime "refactotums," where we take a look at some code and try to improve it.  Of course, with such a large codebase, and so many areas of the code that have not been touched since they were first written, we've often wondered how to most effectively spend our refactotum time.  This led us to wonder "what are the areas of the code where a refactoring would have the greatest impact?"
+
+We started keeping track of our codebase using [Sonar](http://www.sonarsource.org/") which was extremely helpful in keeping track of metrics at a class level, but it didn't give us quite enough information.  For example, if `Class A` has a complexity score of 500 and `Class B` has a complexity score of 200 (higher is worse), you'd think that spending some time cleaning up `Class A` would be the most effective thing to do.  But what if `Class B` is used by 50 times as many other classes as `Class A`?  Or what if `Class B`, complicated as it is, has never been modified in the history of the project?  It would be nice to clean this class up, but it might be a better use of time to focus on `Class A`
+
+So our idea was to combine two metrics: the class complexity (based on [McCabe Cyclomatic Complexity](http://en.wikipedia.org/wiki/Cyclomatic_complexity")) and the number of times a file has been modified in the codebase.  The idea here was, every time a file has to be modified, it has to be read.  A complex file is harder to read, making the engineer more likely to misunderstand or make a mistake while editing the file.
+
+Luckily, git makes it quite easy to count the number of modifications to files in the codebase:
+
+~~~terminal
+git whatchanged | grep '^:.*alm-webapp/src/main/java/.*\.java$' | cut -c65- | sed -e 's/\//./g' -e 's/.java//' | sort | uniq -c | sort -r
+~~~
+
+Obviously, the grep and cut would have to be modified slightly depending on your codebase structure.  The grep is used to ensure only our code is looked at, excluding any third-party code in the system.  The cut and seds are mostly just about munging the filenames into "probable" classnames, since that's more useful (and what Sonar stores).
+
+This command yields some high-traffic files, but it needs to be combined with high-value targets as well.  For this, we turned to Sonar.
+
+We were unable to use the Sonar web services as thoroughly as we were hoping, so we wound up writing a query directly against the database where the Sonar data is stored. The query for a given metric (in our case, metric 12, class complexity) looks like this:
+
+~~~sql
+SELECT projects.kee, project_measures.value, project_measures.metric_id
+FROM snapshots, project_measures, projects
+WHERE islast = 1
+  AND project_measures.snapshot_id = snapshots.id
+  AND project_measures.metric_id = 12
+  AND snapshots.qualifier = 'CLA'
+  AND snapshots.project_id = projects.id
+~~~
+
+We wrote a Ruby script that pulled the data from these two sources and correlated them together, deriving an eventual "weighted rank" from the two.  We went on to include a few more metrics in the final equation.   Output from the script looks like this:
+
+~~~output
+Calculating complexity data from sonar...Done!
+Calculating revision data from git...Done!
+Calculating weighted rank data...Done!
+Current formula:
+   ( 0.15 * ( complexity / average_complexity ) )
+ + ( 0.40 * ( function_complexity / average_function_complexity ) )
+ + ( 0.30 * ( efferent_coupling / average_efferent_coupling ) )
+ + ( 0.40 * ( revisions / average_revisions ) )
+
+Rank    Score  Revisions  Complexity  F.Complexity  E.Coupling  Class
+----  -------  ---------  ----------  ------------  ----------  -----
+   1    14.12         60         507             2          67  com.rallydev.ClassG
+   2    13.10         93         301             2          71  com.rallydev.ClassQ
+   3    12.53         80         318             2          70  com.rallydev.ClassR
+   4    11.25         11          45            45          27  com.rallydev.ClassO
+   5     9.65          9          43            43           8  com.rallydev.ClassC
+   6     9.48         72         194             2          52  com.rallydev.ClassZ
+   7     9.24         60         205             2          56  com.rallydev.ClassN
+   8     8.79         42         218             2          59  com.rallydev.ClassK
+   9     8.75         31         260             3          53  com.rallydev.ClassF
+  10     8.63         54         167             2          59  com.rallydev.ClassT
+  11     8.38         65         194             2          39  com.rallydev.ClassO
+  12     8.29         44         207             3          49  com.rallydev.ClassY
+  13     7.81         40         225             2          41  com.rallydev.ClassP
+  14     7.48         18          26            26          23  com.rallydev.ClassK
+  15     7.44         60         164             2          34  com.rallydev.ClassA
+~~~
+
+We've found it pretty useful to know where our efforts would be most useful.  If you're using git and sonar, feel free to modify this script and try it on your own codebase (note, you will need the mysql client binary in your path for it to work).
+
+~~~ruby
+#!/usr/bin/env ruby
+# Authors: Rod Hilton and Ryan Scott
+# Site: www.rallydev.com
+
+METRICS = {12=>:complexity, 14=>:function_complexity, 74=>:efferent_coupling}
+WEIGHTS = {:revisions=>0.4, :complexity=>0.15, :function_complexity=>0.4, :efferent_coupling=>0.3}
+
+def print_around(title, &amp;block)
+  print title + "..."
+  STDOUT.flush
+  yield block
+  print "Done!\n"
+end
+
+def add_class_data(class_data, class_name, data_key, data_value)
+  class_data[class_name] = {} unless class_data.has_key?(class_name)
+  class_data[class_name][data_key] = data_value
+end
+
+def add_complexity_data(class_data)
+  complexity_query = <<-EOF
+    SELECT projects.kee, project_measures.value, project_measures.metric_id
+    FROM snapshots, project_measures, projects
+    WHERE islast = 1
+      AND project_measures.snapshot_id = snapshots.id
+      AND project_measures.metric_id in (#{METRICS.keys.join(",")})
+      AND snapshots.qualifier = 'CLA'
+      AND snapshots.project_id = projects.id
+    EOF
+
+  print_around "Calculating complexity data from sonar" do
+    complexity = `echo "#{complexity_query}" | mysql -h alm-build --user=YOUR_SONAR_USERNAME --password=YOUR_SONAR_PASSWORD --database=YOUR_SONAR_DATABASE`
+
+    complexity.each do |complexity_line|
+      match = complexity_line.match(/^(\S*)\s+([\d\.]+)\s+(\d+)$/)
+      if(match)
+        name = match[1]
+        metric = match[2].to_f
+        metric_id = match[3].to_i
+        metric_name = METRICS[metric_id]
+        add_class_data(class_data, name.match(/^.*:([^:]*)$/)[1], metric_name, metric)
+      end
+    end
+  end
+end
+
+def add_revision_data(class_data)
+  print_around "Calculating revision data from git" do
+    file_changes = `git whatchanged | grep '^:.*alm-webapp/src/main/java/.*\.java$' | cut -c65- | sed -e 's/\//./g' -e 's/.java//' | sort | uniq -c | sort -r`
+    # file_changes = `cat modified.txt`
+
+    file_changes.each do |file_change_line|
+      match = file_change_line.match(/^\s*(\d+)\s+(.*)$/)
+      if(match)
+        revisions = match[1].to_i
+        name = match[2]
+        add_class_data(class_data, name, :revisions, revisions)
+      end
+    end
+  end
+end
+
+def average_for_data(class_data, key)
+  values = class_data.values.collect{|val| val[key]}
+  values.inject{ |sum, el| sum + el }.to_f / values.size
+end
+
+def add_weighted_rank_data(class_data)
+
+  print_around "Calculating weighted rank data" do
+    averages = {}
+    WEIGHTS.each do |key, value|
+      average = average_for_data(class_data, key)
+      averages[key] = average
+    end
+
+    class_data.each do |classname, data|
+      data[:weighted_rank] = 0
+      WEIGHTS.each do |key, weight|
+        chunk = weight * (data[key] / averages[key])
+        data[:weighted_rank] = data[:weighted_rank] + chunk
+      end
+    end
+  end
+end
+
+def remove_classes_without_all_data(class_data)
+  num_keys = class_data.values.map{|val| val.size}.max
+  class_data.delete_if{|key, val| val.size < num_keys}
+end
+
+# --- Main ---
+
+class_data = {}
+
+add_complexity_data(class_data)
+add_revision_data(class_data)
+
+class_data = remove_classes_without_all_data(class_data)
+
+add_weighted_rank_data(class_data)
+
+#Sort by rank, descending
+
+class_data_sorted = class_data.sort{|a,b| b[1][:weighted_rank] <=> a[1][:weighted_rank]}
+
+puts "Current formula: "
+pieces = []
+WEIGHTS.each do |key, weight|
+  pieces << sprintf( "( %3.2f * ( %s / %s ) )", weight, key.to_s, "average_"+key.to_s)
+end
+puts "   " + pieces.join("\n + ")
+
+puts "\n"
+puts "Rank    Score  Revisions  Complexity  F.Complexity  E.Coupling  Class"
+puts "----  -------  ---------  ----------  ------------  ----------  -----"
+class_data_sorted[0..49].each_with_index do |file, index|
+  class_name=file[0]
+  class_data=file[1]
+  printf("%4u  %7.2f  %9u  %10u  %12u  %10u  %s\n", (index+1), class_data[:weighted_rank], class_data[:revisions], class_data[:complexity], class_data[:function_complexity], class_data[:efferent_coupling], class_name)
+end
+~~~
+
+Feel free to make any improvements or changes to this script that you wish.  It's not the most efficient in the world, but it was thrown together pretty quickly to get a decent idea of our highest-impact refactoring targets.
+
+Suggestions for improving the formula?  Made your own changes to the script?  Feel free to post in the comments below, we welcome the discussion!
