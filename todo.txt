@@ -1,3 +1,2 @@
 convert rest of posts
 more responsive css
-build process in jenkins.  triggered by resume too
