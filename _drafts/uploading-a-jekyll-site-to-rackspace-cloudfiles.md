@@ -26,9 +26,9 @@ Needless to say, the traffic to my blog has been both extremely unexpected and u
 
 # Switching to Jekyll
 
-{% image jekyll-logo.png align="right" %}
-
 So after the most recent pummeling I took due to a [Hacker News link](https://news.ycombinator.com/item?id=7953725), I decided it was time to **bite the bullet and convert the entire site to [Jekyll](http://jekyllrb.com/)**.  I've messed around with the technology before to build another, smaller, blog, so I was somewhat familiar with the constructs and idioms.  A lot of work and ten custom plugins later, the entire site was converted, with very little loss of functionality.
+
+{% image jekyll-logo.png align="right" %}
 
 I didn't want to serve the files from my shared host because I know firsthand that the traffic spikes I experience are often enough to overwhelm apache itself, and I couldn't host it with [GitHub Pages](https://pages.github.com/) due to the aforementioned ten custom plugins.  I've used both Amazon S3 (to host the smaller Jekyll-based blog) and Rackspace Cloudfiles (as a CDN for the Wordpress version).  Of those two, I find Amazon S3 to be extremely overcomplicated and difficult to work with, but there's a great [S3_Website](https://github.com/laurilehmijoki/s3_website) gem that makes uploading a Jekyll blog a snap.  Rackspace Cloudfiles is much more straightforward to work with, but the [Python script](https://github.com/nicholaskuechler/jekyll-rackspace-cloudfiles-clean-urls/blob/master/cloudfiles_jekyll_upload.py) that [even Rackspace itself](http://www.rackspace.com/blog/running-jekyll-on-rackspace-cloud-files/) links to has given me various dependency issues.
 
