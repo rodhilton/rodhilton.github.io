@@ -22,7 +22,7 @@ To my great surprise, a [few](http://www.reddit.com/r/programming/comments/2986e
 <script type="text/javascript" src="//www.google.com/trends/embed.js?hl=en-US&q=Machete+Order&cmpt=q&content=1&cid=TIMESERIES_GRAPH_0&export=5&w=600&h=330"></script>
 {% endembed %}
 
-Needless to say, the traffic to my blog has been both extremely unexpected and unpredictable.  The Star Wars post had been online for months with virtually no traffic before [Wired](http://archive.wired.com/geekdad/2012/02/machete-order-star-wars/) suddenly linked to it, instantly decimating my web server.  I've fought and fought with various configurations for Wordpress, used [as much caching](http://wordpress.org/plugins/w3-total-cache/) as possible, and even had my [web host](https://www.servint.net/) temporarily upgrade my service, all trying to keep a web site that makes no money online even when traffic increases by a factor of 100 overnight.  **When my site goes down, it's embarassing, because even though it's just a personal blog on a shared host, it gives the impression that I, as a software developer, don't know how to make a web site scale**.
+Needless to say, the traffic to my blog has been both extremely unexpected and unpredictable.  The Star Wars post had been online for months with virtually no traffic before [Wired](http://archive.wired.com/geekdad/2012/02/machete-order-star-wars/) suddenly linked to it, instantly decimating my web server.  I've fought and fought with various configurations for Wordpress, used [as much caching](http://wordpress.org/plugins/w3-total-cache/) as possible, and even had my [web host](https://www.servint.net/) temporarily upgrade my service, all trying to keep a web site that makes no money online even when traffic increases by a factor of 100 overnight.  **When my site goes down, it's embarrassing, because even though it's just a personal blog on a shared host, it gives the impression that I, as a software developer, don't know how to make a web site scale**.
 
 # Switching to Jekyll
 
@@ -32,7 +32,7 @@ So after the most recent pummeling I took due to a [Hacker News link](https://ne
 
 I didn't want to serve the files from my shared host because I know firsthand that the traffic spikes I experience are often enough to overwhelm apache itself, and I couldn't host it with [GitHub Pages](https://pages.github.com/) due to the aforementioned ten custom plugins.  I've used both Amazon S3 (to host the smaller Jekyll-based blog) and Rackspace Cloudfiles (as a CDN for the Wordpress version).  Of those two, I find Amazon S3 to be extremely overcomplicated and difficult to work with, but there's a great [S3_Website](https://github.com/laurilehmijoki/s3_website) gem that makes uploading a Jekyll blog a snap.  Rackspace Cloudfiles is much more straightforward to work with, but the [Python script](https://github.com/nicholaskuechler/jekyll-rackspace-cloudfiles-clean-urls/blob/master/cloudfiles_jekyll_upload.py) that [even Rackspace itself](http://www.rackspace.com/blog/running-jekyll-on-rackspace-cloud-files/) links to has given me various dependency issues.
 
-In the end, Rackspace Cloudfiles is a bit cheaper per GB than Amazon S3, and since this blog recieves a nontrivial amount of traffic, that became the deciding factor.  Since I always had issues with the python script that uploads a Jekyll blog to Cloudfiles, I decided to do some research into alternative means of automated uploading ([Cyberduck](http://cyberduck.io/) works, but I wanted something that I could make Jenkins run).
+In the end, Rackspace Cloudfiles is a bit cheaper per GB than Amazon S3, and since this blog receives a nontrivial amount of traffic, that became the deciding factor.  Since I always had issues with the python script that uploads a Jekyll blog to Cloudfiles, I decided to do some research into alternative means of automated uploading ([Cyberduck](http://cyberduck.io/) works, but I wanted something that I could make Jenkins run).
 
 Unfortunately, **almost everything I found wound up linking to the exact same Python script that gave me trouble**.  So I decided to write my own, which I'm open-sourcing for the benefit of anyone else that has had similar problems.
 
@@ -44,7 +44,7 @@ Unfortunately, **almost everything I found wound up linking to the exact same Py
 
  1. Log into Rackspace Cloud Files and create your container.  _You must create your container first, the script will not do that_.
 
-    > **Pro-Tip**: Before you upload anything, set your container's TTL to something other than the default, which is 72 hours.  Once a file is loaded into the CDN, it seemed to me that, even if you changed your container's TTL after the fact, the TTL change itself wouldn't propogate until after 72 hours.  Changing it first (I use 15 minutes) before uploading files seemed to fix this issue.
+    > **Pro-Tip**: Before you upload anything, set your container's TTL to something other than the default, which is 72 hours.  Once a file is loaded into the CDN, it seemed to me that, even if you changed your container's TTL after the fact, the TTL change itself wouldn't propagate until after 72 hours.  Changing it first (I use 15 minutes) before uploading files seemed to fix this issue.
 
  2. Install `fog` rubygem via `gem install fog`
 
@@ -78,7 +78,7 @@ Unfortunately, **almost everything I found wound up linking to the exact same Py
 
 I offer no guarantee of support on this script, but I can assure you that I'm dogfooding the hell out of it.  I set up a private Jenkins instance that watches for changes to my private [BitBucket](https://bitbucket.org/) repository that contains this blog.  The repository has `jekyll-cloudfiles-upload` as a submodule, with the `cloudfiles_upload.rb` script symlinked to the submodule's version.  Any change to the blog pulls down the most recent copy of the script, builds the blog, and then runs the script to upload it.
 
-I liked this solution so much that I wound up converting the smaller blog that I had been running on Amazon S3 over to Rackspace Cloudfiles as well.  I also have a Jenkins job that looks for changes to the `jekyll-cloudfiles-upload` project, and automatically kicks off the jobs for both web sites whenever it changes as well, so this script is definitely instrumental to a process that controls a web site whose downtime personally embarasses me a great deal.  Again, no guarantees, but I'm putting a lot of trust in this script, for whatever that's worth.
+I liked this solution so much that I wound up converting the smaller blog that I had been running on Amazon S3 over to Rackspace Cloudfiles as well.  I also have a Jenkins job that looks for changes to the `jekyll-cloudfiles-upload` project, and automatically kicks off the jobs for both web sites whenever it changes as well, so this script is definitely instrumental to a process that controls a web site whose downtime personally embarrasses me a great deal.  Again, no guarantees, but I'm putting a lot of trust in this script, for whatever that's worth.
 
 
 # Jekyll Thoughts
