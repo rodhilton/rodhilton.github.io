@@ -39,11 +39,11 @@ So we left.  It was unfortunate, since the house was so nice, but it seemed clea
 
 Just to make sure everyone knows the exact company I'm talking about, it's Blue Sage Realty in Colorado, located at:
 
- > Blue Sage Realty, Inc
- > 8471 Turnpike Dr, Suite 220
- > Westminster, CO 80031
- > (303) 432-9898 Office
- > http://www.bluesagerealtyinc.com
+ > Blue Sage Realty, Inc  
+ > 8471 Turnpike Dr, Suite 220  
+ > Westminster, CO 80031  
+ > (303) 432-9898 Office  
+ > http://www.bluesagerealtyinc.com  
 
 ## Update
 
