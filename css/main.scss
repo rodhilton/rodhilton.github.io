@@ -23,6 +23,7 @@ $text_color: #444;
 $header_color: $red_color;
 $link_color: $darkblue_color;
 
+$pullquote_color: #a00;
 $blockquote_border_color: $background_color - #111;
 
 
@@ -685,14 +686,16 @@ $inner_block_width: $content_width - (5 * $content_padding);
       }
 
       &.alignright {
-        margin:.5em $image_padding .5em $content_padding;
+        margin:.5em 0 0.5em $content_padding;
+        margin-right:  -($content_padding/2);
         display:inline;
         float: right;
       }
 
       &.alignleft {
-        margin:.5em $content_padding .5em $image_padding;
-         display:inline;
+        margin:.5em $content_padding .5em  0;
+        margin-left:  -($content_padding/2);
+        display:inline;
         float: left;
       }
 
@@ -746,6 +749,34 @@ $inner_block_width: $content_width - (5 * $content_padding);
 
   .post-listing .postheader:last-child {
     border-bottom: 0;    
+  }
+
+  span[data-pullquote] {
+    /*display: block;*/
+  }
+
+  span[data-pullquote]:before {
+    content: attr(data-pullquote);
+    width: 200px;
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+    padding: 0;
+    text-align: center;
+    font-family: $handwriting_font;
+    font-size: 20px;
+    color: $pullquote_color;
+  }
+
+  span[data-pullquote].right:before {
+    float: right;
+    margin-right: -$content_padding / 2;
+    margin-left: $content_padding;
+  }
+
+  span[data-pullquote].left:before {
+    float: left;
+    margin-right: $content_padding;
+    margin-left: -$content_padding /2;
   }
 
   .postheader {

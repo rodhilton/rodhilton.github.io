@@ -1,1 +1,4 @@
 more responsive css
+[css] maybe the sidebar and header should scroll with the page?
+better index.html page.  some kind of intro or something, maybe?  seems like it shouldn't list "all" going back forever, maybe that page should be paginated?  JS pagination?
+should a plugin just generate the toc? is that even possible?
