@@ -2,33 +2,14 @@
 layout: default
 title: Tag Index
 ---
-
-{% for tag in site.ordered_tags %}
-<div class="post tag-subpage" id="{{ tag.name | idify}}-ref">
+<div class="post">
 	<div class="postheader">
-	 	<h1 class="posttitle"><a href="/tags.html#{{ tag.name | idify}}-ref">All Posts Tagged '{{tag.name | downcase}}' </a></h1>
+	 	<h1 class="posttitle"><a href="{{page.url}}">All Posts Tagged '{{ page.tag.name | capitalize }}'</a></h1>
 	</div>
 	<div class="post-listing">
-		{% for post in tag.posts %}
+		{% for post in page.tag.posts %}
 		  	{% include post-header.html page=post %}
 		{% endfor %}
+		{{page.excerpt}}
 	</div>
 </div>
-
-{% endfor %}
-
-<script>
-  function loadHash() {
-  	jQuery(".tag-subpage").hide();  
-  	jQuery(".tag-subpage"+window.location.hash).show();
-  	$('html, body').animate({scrollTop:0}, 'fast');
-  }
-
-  $(function() {
-  	loadHash();
-  });
-
-  $(window).on('hashchange', function() {
-  	loadHash();
-  });
-</script>

@@ -68,7 +68,7 @@
             <h2 class="widgettitle">Tags</h2>
             <div class="ctc">
                 {% for tag in site.ordered_tags %}
-                  <a href="/tags.html#{{ tag.name | idify}}-ref" style="font-size: {{tag.posts | size | times:100 | divided_by:site.tags.size | plus:6}}pt">
+                  <a href="/tag/{{ tag.id }}" style="font-size: {{tag.posts | size | times:100 | divided_by:site.tags.size | plus:6}}pt">
                     {{ tag.name | downcase }}
                   </a>
                 {% endfor %}

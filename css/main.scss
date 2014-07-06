@@ -145,6 +145,10 @@ $code_font: $code_font_size $code_font_family;
 $menu_font: "Lucida Grande", Verdana, Arial, sans-serif;
 $handwriting_font: "Architects Daughter", $menu_font;
 
+html {
+  margin-bottom: $content_padding;
+}
+
 body {
   margin:0;
   background:#fff;
@@ -1014,8 +1018,12 @@ dl.links {
 
 /* Responsive Tweaks */
 @media screen and (max-width: ($width+($content_padding * 2) + ($sidebar_width * 2))) { 
+  html {
+    margin-bottom: 0;
+  }
+
   body {
-  padding: 0;
+    padding: 0;
   }
 
   #headerwrapper {
@@ -1076,6 +1084,7 @@ dl.links {
 
     #sidebar-right {
       text-align: center;
+      padding-bottom: $content_padding;
 
       .social-icons {
         margin: 0 auto;
