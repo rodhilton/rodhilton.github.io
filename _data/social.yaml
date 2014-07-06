@@ -23,6 +23,11 @@
   url: http://speakerdeck.com/rodhilton
   color: 218d5e
 
+- name: Coderwall
+  icon: coderwall.png
+  url: https://coderwall.com/p/u/rodhilton
+  color: "3990d0"
+
 - name: Facebook
   icon: facebook.png
   url: https://facebook.com/rodhilton
