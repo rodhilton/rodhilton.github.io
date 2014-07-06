@@ -177,10 +177,10 @@ Similar to the Animatrix, which can be watched at any time after the first one, 
 It's not part of the main viewing, but more like an expanded universe kind of thing, like playing a video game or reading a Star Wars comic book or novel.  I think this is a pretty good idea if you really really want to include Episode I.  Personally I don't think I'll be doing this, as I really don't like the pod race or even Darth Maul, but the option is there.
 
 <div style="text-align: center">
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><br />
-<!-- Machete Juggling --><br />
-<ins class="adsbygoogle" style="display:inline-block;width:468px;height:60px" data-ad-client="ca-pub-5967628724862118" data-ad-slot="2179974007"></ins><br />
-<script><br />
-(adsbygoogle = window.adsbygoogle || []).push({});<br />
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Machete Juggling -->
+<ins class="adsbygoogle" style="display:inline-block;width:468px;height:60px" data-ad-client="ca-pub-5967628724862118" data-ad-slot="2179974007"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 </div>

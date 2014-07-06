@@ -1,0 +1,28 @@
+<ul id="navlist">
+  {% capture cat_class %}
+    {% if page.title == "Home" %}
+      current-cat
+    {% endif %}
+  {% endcapture %}
+  <li class="cat-item {{cat_class | trim}}"><a href="/">All</a></li>
+
+  {% for category in site.categories %}
+    {% capture cat_class %}
+        {% if category[0] == page.category %}
+          current-cat
+        {% elsif category[0] == page.categories.first %}
+          current-cat
+        {% endif %}
+    {% endcapture %}
+    <li class="cat-item {{cat_class | trim}}"><a href="/category/{{category[0]}}">{{category[0] | upcase}}</a>
+  {% endfor %}
+
+  {% for top_page in site.top_pages %}
+    {% capture menu_class %}
+        {% if page.url == top_page.url %}
+          current-menu-item
+        {% endif %}
+    {% endcapture %}
+    <li class="menu-item {{menu_class | trim}}"><a href="{{top_page.url}}">{{top_page.title | upcase}}</a></li>
+  {% endfor %}
+</ul><!-- /navlist -->

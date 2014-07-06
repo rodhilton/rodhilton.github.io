@@ -1,4 +1,3 @@
-more responsive css
-[css] maybe the sidebar and header should scroll with the page?
 better index.html page.  some kind of intro or something, maybe?  seems like it shouldn't list "all" going back forever, maybe that page should be paginated?  JS pagination?
-should a plugin just generate the toc? is that even possible?
+individual tag pages, its easy and better than the js solution.  and jquery can go to bottom then
+the image borders arent the same in chrome and firefox... ie is probably h0rked

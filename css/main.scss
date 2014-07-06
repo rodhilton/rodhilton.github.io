@@ -40,11 +40,23 @@ $separator_color: $background_color - #333;
 }
 
 @mixin gradient {
-  background: $background_color; /* old browsers */
-  background: -moz-linear-gradient(top, $highlight_color 20%, $background_color 100%); /* firefox */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(20%,$highlight_color), color-stop(100%,$background_color)); /* webkit */
-  background: -o-linear-gradient(top, $highlight_color 20%,$background_color 100%); /* opera */
+  background: -moz-linear-gradient(top, $highlight_color, 0%, $background_color 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,transparentize($highlight_color, 0)), color-stop(100%,$background_color)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  $highlight_color 0%,$background_color 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,   $highlight_color 0%,$background_color 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,   $highlight_color 0%,$background_color 100%); /* IE10+ */
+  background: linear-gradient(to bottom,   $highlight_color 0%,$background_color 100%); /* W3C */
 }
+
+@mixin trans-gradient {
+  background: -moz-linear-gradient(top, transparentize($highlight_color, 0), 0%, transparentize($highlight_color, 1.0) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,transparentize($highlight_color, 0)), color-stop(100%,transparentize($highlight_color, 1.0))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  transparentize($highlight_color, 0) 0%,transparentize($highlight_color, 1.0) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  transparentize($highlight_color, 0) 0%,transparentize($highlight_color, 1.0) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  transparentize($highlight_color, 0) 0%,transparentize($highlight_color, 1.0) 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  transparentize($highlight_color, 0) 0%,transparentize($highlight_color, 1.0) 100%); /* W3C */
+}
+
 
 @mixin rounded-corners ($radius: 5px) {
   border-radius: $radius;
@@ -102,15 +114,18 @@ $separator_color: $background_color - #333;
 
 //Layout Stuff
 
-$width: 1000px;
+$width: 780px;
 $content_size: percentage(.67);
 
 //$content_width: ($width * $content_size);
 //$sidebar_width: ($width - $content_width);
-$content_width: 740px;
+$content_width: $width;
 $sidebar_width: 260px;
 
 $content_padding: 20px;
+
+//$object_spillover: $content_padding / 2;
+$object_spillover: 0px;
 
 //$image_padding = -1 * ($content_padding / 2);
 //$image_padding = -2px;
@@ -138,6 +153,7 @@ body {
   font-family: $menu_font;
   text-align:center;
   background-color: $background_color;
+  background-image: url(/assets/noise.png);
 }
 
 a {
@@ -208,24 +224,21 @@ abbr {
 
 #wrapper {
   margin:0 auto;
-  padding-right: $sidebar_width;
   width: $content_width;
 }
 
 #content{
   float:left;
-  width: $content_width - ($content_padding * 2);
-  border-right:$sidebar_width solid $background_color;
-  margin-right: (0 - $sidebar_width);
-  padding: 0 $content_padding;
+  width: $content_width;
 }
 
 #sidebars{
-  float:left;
-  width:$sidebar_width;
-  margin:0px;
-  margin-right: -$sidebar_width;
-  @include gradient;
+  width:$sidebar_width;  
+  @include trans-gradient;
+
+  position: fixed;
+  right: 0px;
+  margin: 0;
 }
 
 .sidebar {
@@ -285,12 +298,12 @@ abbr {
     background-image: url(/assets/logo.png);
     height: 70px;
     background-repeat: no-repeat;
-    background-position: 910px 8px;
+    background-position: right 8px;
 
     #headertitle {
       float:left;
       position:relative;
-      margin: 0 0 0 $content_padding;
+      margin: 0 0 0 0;
 
       h1 {
         margin: 0;
@@ -319,6 +332,21 @@ abbr {
 #navbar {
   background-color: $nav_color;
   border-bottom:1px solid $nav_border_color;
+
+  #small-logo { display: none; }
+
+  &.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    #small-logo {
+      position: fixed;
+      width: 16px;
+      height: 16px;
+    }
+  }
 }
 
 
@@ -330,7 +358,7 @@ margin: 0 auto;
 #navlist {
   padding: 0.5em 0;
   margin-left: 0;
-  margin: 0 0 0 1%;
+  margin: 0;
 }
 
 #navlist li {
@@ -482,6 +510,11 @@ $inner_block_width: $content_width - (5 * $content_padding);
 
   p, ol li, ul li{
     margin-top:0;
+  }
+
+  li {
+    margin-top: .25em;
+    margin-bottom: .25em;
   }
 
   dd, dt, dl, li, ul, ol {
@@ -687,14 +720,14 @@ $inner_block_width: $content_width - (5 * $content_padding);
 
       &.alignright {
         margin:.5em 0 0.5em $content_padding;
-        margin-right:  -($content_padding/2);
+        margin-right:  -$object_spillover;
         display:inline;
         float: right;
       }
 
       &.alignleft {
         margin:.5em $content_padding .5em  0;
-        margin-left:  -($content_padding/2);
+        margin-left:  -$object_spillover;
         display:inline;
         float: left;
       }
@@ -769,14 +802,14 @@ $inner_block_width: $content_width - (5 * $content_padding);
 
   span[data-pullquote].right:before {
     float: right;
-    margin-right: -$content_padding / 2;
+    margin-right: -$object_spillover;
     margin-left: $content_padding;
   }
 
   span[data-pullquote].left:before {
     float: left;
     margin-right: $content_padding;
-    margin-left: -$content_padding /2;
+    margin-left: -$object_spillover;
   }
 
   .postheader {
@@ -860,6 +893,7 @@ $inner_block_width: $content_width - (5 * $content_padding);
     word-spacing: 0;
     text-align: left;
     margin: 0 0 ($content_padding / 2) $content_padding;
+    margin-right:  -$object_spillover;
     width: 160px;
     border: 1px solid $blockquote_border_color;
     background-color: $highlight_color;
@@ -923,65 +957,6 @@ dl.links {
   .alignright { float: right; }
 }
 
-/* Comments */
-
-#inline_comments {
- display: block;
-}
-
-#popup_comments {
-  margin: $content_padding 0;
-}
-
-#popup_comments h1 a {
-  font-family: $header_font;
-  font-weight: normal;
-  color: $link_color;
-}
-
-#comments {
-  text-align: left;
-
-  .commentlist {
-    margin:0;
-    padding:0;
-    list-style:none;
-
-    li {
-      padding:2em 0;
-      overflow:auto;
-      border-bottom: 0.1em solid #eee;
-    }
-
-    p {
-      margin:0.5em 0; font-size:1.1em;
-
-      a {
-        border-bottom:1px solid #ddd;
-        &:hover {
-          border-bottom:1px solid #157;
-          text-decoration:none;
-        }
-      }
-    }
-
-    h4 {
-      margin:0;
-      color: $blue_color;
-      a { text-decoration: unline; }
-    }
-  }
-}
-
-#commentspopup {
- margin: 0 1em;
-}
-
-textarea#comment {
-  font-size:1.6em;
-  width:100%;
-}
-
 .cleaner {
   clear: both;
   font-size: 1px;
@@ -1038,65 +1013,82 @@ textarea#comment {
 
 
 /* Responsive Tweaks */
-/*
-@media screen and (max-width: $width) { 
+@media screen and (max-width: ($width+($content_padding * 2) + ($sidebar_width * 2))) { 
   body {
   padding: 0;
   }
 
   #headerwrapper {
+    padding: 0;
+    width: 100%;
 
     #header {
-      width: 100%;
+      width: $width;
       background-position: right 8px;
     }
   }
 
   #wrapper {
-    width: 100%;
+    width: $width;
     padding:0;
+  }
+
+  #navbar {
+  width: 100%;
   }
 
   #content {
     float: none;
     display: block;
-    width: 100%;
+    width: $width;
     margin: 0px !important;;
     margin-right: 0px !important;
     border: 0px !important;
     border-right: 0 !important;
     padding: 0  !important;
+  }
 
-    .post {
-      padding: $content_padding;
-    }
+  #sidebar-wrapper {
+    width: 100%;
+    border-top: 1px solid black;
+    margin-top: $content_padding;
+    background: $highlight_color;
   }
 
   #sidebars {
+    font-size: 140%;
+    position: relative;
     display: block;
-    margin: 0 auto;
-    width: 100%;
+    width: 97%;
+    margin: 0 auto;  
+    padding-top: $content_padding;
+    padding-left: 0;
+    padding-right: 0;
 
     #sidebar-left, #sidebar-right {
       width: 100%;
       padding: 0;
-
-      &:first-child {
-         padding: 0 $content_padding;
-      }
     }
 
     .sidebar {
       float: none;
     }
 
-    #sidebar-right .social-icon {
-      float: left;
-      margin-right: 10px;
+    #sidebar-right {
+      text-align: center;
+
+      .social-icons {
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .social-icon {
+        float: left;
+        margin-right: 10px;
+      }
     }
   }
 
   #footer { display: none}
 
 }
-*/

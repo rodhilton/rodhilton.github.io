@@ -3,8 +3,8 @@ layout: default
 ---
 <div class="post">
 	{% include post-header.html page=page %}
-	<div class="postentry enable-toc">
-		{{ content }}
+	<div class="postentry">
+		{{ content | tocize}}
 	</div>
 </div>
 
