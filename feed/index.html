@@ -1,19 +1,4 @@
 ---
 layout: none
 ---
-<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-	<channel>
-		<title>{{ site.name | xml_escape }} > {{page.category}}</title>
-		<description>{% if site.description %}{{ site.description | xml_escape }}{% endif %}</description>		
-		<link>{{ site.url }}</link>
-		<atom:link href="{{ site.url }}/rss.xml" rel="self" type="application/rss+xml" />
-			<item>
-				<title>Feed moved</title>
-				<description>The RSS url for No Machete Juggling has moved.  Sorry for the inconvenience, please check the web site and update your readers.</description>
-				<pubDate>{{ site.time | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
-				<link>{{ site.url }}/rss.xml</link>
-				<guid isPermaLink="true">{{ site.url }}/rss.xml</guid>
-			</item>
-	</channel>
-</rss>
+{% include main_feed.xml %}
