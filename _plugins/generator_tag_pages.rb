@@ -28,7 +28,7 @@ module Jekyll
 
       tag_title_prefix = site.config['tag_title_prefix'] || @site.config["name"] + " " + @site.config["separator"] + " "
       title_tag = tag.name[0,1].capitalize + tag.name[1,tag.name.length-1]
-      self.data['title'] = "#{tag_title_prefix}#{title_tag}"
+      self.data['title'] = "#{title_tag}"
     end
   end
 

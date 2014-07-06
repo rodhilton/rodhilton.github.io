@@ -13,7 +13,7 @@ module Jekyll
 
       category_title_prefix = site.config['category_title_prefix'] || @site.config["name"] + " " + @site.config["separator"] + " "
       title_category = category[0,1].capitalize + category[1,category.length-1]
-      self.data['title'] = "#{category_title_prefix}#{title_category}"
+      self.data['title'] = "#{title_category}"
     end
   end
 
