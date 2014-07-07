@@ -27,17 +27,24 @@
 <body>
 <div id="page">
   <div id="headerwrapper">
-    <div id="header">
-      <div id="headertitle">
+    <div class="header">
+      <div class="headertitle">
         <h1><a href="/" title="{{site.name}}: {{site['description']}}">{{site.name}}</a></h1>
         <p>{{site['description']}}</p>
+      </div>
+    </div>
+  </div>
+  <div id="thin-headerwrapper">
+     <div class="header">
+      <div id="small-logo"><img src="/assets/favicon.png"/></div>      
+      <div class="headertitle">
+        <p><a href="/" title="{{site.name}}: {{site['description']}}">{{site.name}}</a></p>
       </div>
     </div>
   </div>
   <div id="navbar">
     <div id="navcontainer">
       {% include navlist.html %}
-      <div id="small-logo"><img src="/assets/favicon.png" width=16 height=16/></div>      
     </div><!-- /navcontainer -->
   </div><!-- /navbar -->
 

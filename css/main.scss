@@ -292,10 +292,55 @@ abbr {
 
 /* Header Formatting */
 
+$thinHeaderHeight: 36px;
+$smallLogoSize: 20px;
+
+#thin-headerwrapper {
+  @include gradient;
+
+  visibility: hidden;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top:0;
+  height: $thinHeaderHeight;
+
+  .header {
+    margin:0 auto;
+    width: $width;
+    padding: 0;
+    height: $thinHeaderHeight;
+
+    p {
+      margin: 0;
+      padding: 0;
+      line-height: $thinHeaderHeight;
+      font-family: $header_font;
+      font-size: $thinHeaderHeight/2;
+
+      a {color: $header_color;}
+    }
+
+    #small-logo {
+      float: right;
+      width: $smallLogoSize;
+      height: $smallLogoSize;
+      margin: ($thinHeaderHeight - $smallLogoSize)/2;
+      padding: 0;
+
+      img {
+        width: $smallLogoSize;
+        height: $smallLogoSize;
+      }
+    }
+  }
+
+}
+
 #headerwrapper {
   @include gradient;
 
-  #header {
+  .header {
     margin:0 auto;
     width: $width;
     padding:2em 0;
@@ -304,7 +349,7 @@ abbr {
     background-repeat: no-repeat;
     background-position: right 8px;
 
-    #headertitle {
+    .headertitle {
       float:left;
       position:relative;
       margin: 0 0 0 0;
@@ -341,7 +386,6 @@ abbr {
 
   &.sticky {
     position: fixed;
-    top: 0;
     left: 0;
     right: 0;
 

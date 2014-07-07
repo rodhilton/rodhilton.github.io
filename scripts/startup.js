@@ -33,25 +33,36 @@
     var navBarTop = navBar.position().top
     var navBarHeight = navBar.height();
 
+    var thinHeader = $("#thin-headerwrapper");
+    var thinHeaderHeight = thinHeader.height();
+
     function fixNav() {
       var sidebarTop;
 
-      if($(window).scrollTop() > navBarTop) {
-        $("#navbar").addClass("sticky");
+      console.log(thinHeaderHeight);  
+
+      if($(window).scrollTop() > navBarTop - thinHeaderHeight) {
+        $("#navbar").
+          addClass("sticky").
+          css("top", thinHeaderHeight + "px");
+          
         $("body").css("margin-top", navBarHeight);
-        sideBarTop = navBarHeight + 1;
+        sideBarTop = thinHeaderHeight + navBarHeight + 1;
+
+        $("#thin-headerwrapper").
+          css("visibility", "visible").slideDown();
 
         $("#small-logo").
           css("top", Math.floor((navBarHeight - 16)/2) +"px").
           css("left", Math.floor($("#navlist").position().left + $("#navlist").width() - 16 - 5)+"px");
 
-        $("#small-logo").fadeIn();
 
       } else {
         $("#navbar").removeClass("sticky");
         $("body").css("margin-top", 0);
 
-        $("#small-logo").hide();
+        $("#thin-headerwrapper").
+          css("visibility", "hidden");
 
         var navBarBottomPos = navBar.position().top + navBar.height();      
         sideBarTop = navBarBottomPos - $(window).scrollTop() + 1;
