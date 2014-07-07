@@ -39,8 +39,6 @@
     function fixNav() {
       var sidebarTop;
 
-      console.log(thinHeaderHeight);  
-
       if($(window).scrollTop() > navBarTop - thinHeaderHeight) {
         $("#navbar").
           addClass("sticky").
