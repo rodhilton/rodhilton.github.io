@@ -296,6 +296,7 @@ $thinHeaderHeight: 36px;
 $smallLogoSize: 20px;
 
 #thinheaderwrapper {
+  background-color: $background_color;
   @include gradient;
 
   visibility: hidden;
