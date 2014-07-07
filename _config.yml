@@ -14,8 +14,8 @@ separator: "&raquo;"
 kramdown: 
   use_coderay: false
 
-sass:
-  style: :compressed
+# sass:
+#   style: :compressed
 
 category_dir: category
 tag_dir: tag

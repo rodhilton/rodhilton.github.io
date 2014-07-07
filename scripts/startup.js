@@ -33,7 +33,7 @@
     var navBarTop = navBar.position().top
     var navBarHeight = navBar.height();
 
-    var thinHeader = $("#thin-headerwrapper");
+    var thinHeader = $("#thinheaderwrapper");
     var thinHeaderHeight = thinHeader.height();
 
     function fixNav() {
@@ -49,7 +49,7 @@
         $("body").css("margin-top", navBarHeight);
         sideBarTop = thinHeaderHeight + navBarHeight + 1;
 
-        $("#thin-headerwrapper").
+        $("#thinheaderwrapper").
           css("visibility", "visible").slideDown();
 
         $("#small-logo").
@@ -61,7 +61,7 @@
         $("#navbar").removeClass("sticky");
         $("body").css("margin-top", 0);
 
-        $("#thin-headerwrapper").
+        $("#thinheaderwrapper").
           css("visibility", "hidden");
 
         var navBarBottomPos = navBar.position().top + navBar.height();      
