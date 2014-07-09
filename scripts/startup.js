@@ -30,6 +30,12 @@
     });
 
     var navBar = $("#navbar");
+    var body = $("body");
+    var win = $(window);
+    var smallLogo = $("#small-logo");
+    var sidebars = $("#sidebars");      
+    var content = $("#content");
+
     var navBarTop = navBar.position().top
     var navBarHeight = navBar.height();
 
@@ -39,37 +45,40 @@
     function fixNav() {
       var sidebarTop;
 
-      if($(window).scrollTop() > navBarTop - thinHeaderHeight) {
-        $("#navbar").
+      if(win.scrollTop() > navBarTop - thinHeaderHeight) {
+        navBar.
           addClass("sticky").
           css("top", thinHeaderHeight + "px");
           
-        $("body").css("margin-top", navBarHeight);
+        body.css("margin-top", navBarHeight);
         sideBarTop = thinHeaderHeight + navBarHeight + 1;
 
-        $("#thinheaderwrapper").
+        thinHeader.
           css("visibility", "visible").slideDown();
 
-        $("#small-logo").
+        smallLogo.
           css("top", Math.floor((navBarHeight - 16)/2) +"px").
           css("left", Math.floor($("#navlist").position().left + $("#navlist").width() - 16 - 5)+"px");
 
 
       } else {
-        $("#navbar").removeClass("sticky");
-        $("body").css("margin-top", 0);
+        navBar.removeClass("sticky");
+        body.css("margin-top", 0);
 
-        $("#thinheaderwrapper").
+        thinHeader.
           css("visibility", "hidden");
 
         var navBarBottomPos = navBar.position().top + navBar.height();      
         sideBarTop = navBarBottomPos - $(window).scrollTop() + 1;
       }
 
-      var sidebars = $("#sidebars");      
       var position = sidebars.css("position");
       if(position == "fixed") {
-        sidebars.css({ top: sideBarTop+"px" });
+        sidebars.
+          css({ 
+            top: sideBarTop+"px",
+            left: (content.position().left+content.width()+20)+"px"
+          });
       }
     }
 
