@@ -79,6 +79,12 @@
             top: sideBarTop+"px",
             left: (content.position().left+content.width()+20)+"px"
           });
+      } else {
+         sidebars.
+          css({ 
+            top: "0px",
+            left: "0px"
+          });
       }
     }
 
