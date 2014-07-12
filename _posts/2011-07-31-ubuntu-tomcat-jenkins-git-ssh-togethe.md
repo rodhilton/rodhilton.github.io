@@ -181,7 +181,7 @@ When asked, type the location of your new file as /usr/share/tomcat6/.ssh/id_rsa
 $ sudo chown -R tomcat6:nogroup .ssh
 ~~~
 
-Now you need to SSH up to the server hosting your git repository and edit the ~/.ssh/authorized_keys file to add the contents of /usr/share/tomcat6/.ssh/id_rsa.pub to it.
+Now you need to SSH up to the server hosting your git repository and edit the `~/.ssh/authorized_keys` file to add the contents of `/usr/share/tomcat6/.ssh/id_rsa.pub` to it.
 
 You can actually think of `/usr/share/tomcat6/` as if it were the tomcat6 home directory.  Since a `.ssh` directory goes in your home directory normally, putting one there will have the same effects, as will any files you put there.
 
