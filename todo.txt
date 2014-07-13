@@ -2,6 +2,7 @@ better index.html page.  some kind of intro or something, maybe?  seems like it 
 
 popular posts link? need to pull google analytics data somehow
 
+
 css file cleanup
 
 excerpts - seems doable with a <!--more--> or a <!--excerpt--> and <!--endexcerpt-->
