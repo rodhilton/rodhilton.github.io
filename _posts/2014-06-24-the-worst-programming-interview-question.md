@@ -21,6 +21,7 @@ Anyway, I think this question perfectly represents everything that can go wrong 
 
 Seems like your basic algorithm coding question at first, right?  Hop up and write the function on the white board; totally reasonable, right?  Except it's not, it's brain-meltingly terrible.  Let's break it down.
 
+<!-- more -->
 
 # 1. It's completely inappropriate
 

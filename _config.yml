@@ -19,3 +19,6 @@ kramdown:
 
 category_dir: category
 tag_dir: tag
+
+paginate: 5
+paginate_path: "page:num"

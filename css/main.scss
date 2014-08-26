@@ -550,6 +550,20 @@ margin: 0 auto;
 
 $inner_block_width: $content_width - (5 * $content_padding);
 
+.post-listing .postheader h1 {
+  font-size: 1.6em;
+}
+
+.post-listing .post-preview {
+  border-bottom: 1px dotted $separator_color;
+  padding-bottom: 1em;
+  margin-bottom: 2em;
+}
+
+.post-listing .post-preview:last-child {
+  border-bottom: 0;    
+}
+
 .post {
   margin:0;
   padding: $content_padding 0;
@@ -823,19 +837,6 @@ $inner_block_width: $content_width - (5 * $content_padding);
 
   }
 
-  .post-listing .postheader h1 {
-    font-size: 1.6em;
-  }
-
-  .post-listing .postheader {
-    border-bottom: 1px dotted $separator_color;
-    padding-bottom: 1em;
-    margin-bottom: 1em;
-  }
-
-  .post-listing .postheader:last-child {
-    border-bottom: 0;    
-  }
 
   span[data-pullquote] {
     /*display: block;*/
