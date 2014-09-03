@@ -20,7 +20,7 @@ module ExcerptFilter
       full_tag = tag_a[0]
       tag_name = tag_a[1]
 
-      is_close_tag = full_tag.chars[0..0] == "/"
+      is_close_tag = full_tag[0..0] == "/"
       is_unpaired_tag = full_tag[-1..-1] == "/"
 
       if is_close_tag
