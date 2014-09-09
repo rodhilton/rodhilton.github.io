@@ -43,16 +43,26 @@
       var sideBarTop = navBarTop + navBarHeight + 1 - win.scrollTop();
 
       var position = sidebars.css("position");
-      sidebars.
-        css({ 
-          top: sideBarTop+"px",
-          left: (content.position().left+content.width()+20)+"px"
-        });
+      if(position == "absolute") {
+          sidebars.
+            css({ 
+              top: sideBarTop+"px",
+              left: (content.position().left+content.width()+20)+"px",
+              visibility: "visible"
+            });
+      } else if (position == "relative") {
+        sidebars.
+            css({ 
+              top: "",
+              left: "0px",
+              visibility: "visible"
+            });
+      }
     }
 
-    jQuery(document).scroll(function(evt) {
-      fixNav();
-    })
+    // jQuery(document).scroll(function(evt) {
+    //   fixNav();
+    // })
 
     jQuery(window).resize(function(evt) {
       fixNav();

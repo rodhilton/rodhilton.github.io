@@ -240,9 +240,9 @@ abbr {
   width:$sidebar_width;  
   @include trans-gradient;
 
-  position: fixed;
-  right: 0px;
+  position: absolute;
   margin: 0;
+  visibility: hidden;
 }
 
 .sidebar {
