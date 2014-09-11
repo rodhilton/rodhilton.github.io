@@ -1,5 +1,3 @@
-$("#sidebars").css({visibility: "hidden"});
-
 (function() {
   $(function() {
     if (navigator.platform === "iPad") {
