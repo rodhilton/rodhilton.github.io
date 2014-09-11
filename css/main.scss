@@ -1075,8 +1075,13 @@ dl.links {
 }
 
 
-/* Responsive Tweaks */
 @media screen and (max-width: ($width+($content_padding * 2) + ($sidebar_width * 2)) - $sidebar_right_width * 2 - $content_padding * 2) { 
+    #wrapper, #navcontainer, #headerwrapper .header {
+   margin:0 0 0 $content_padding ; 
+  }
+}
+
+@media screen and (max-width: $content_width + $sidebar_width + $content_padding - $sidebar_right_width ) { 
   html {
     margin-bottom: 0;
   }
@@ -1162,5 +1167,30 @@ dl.links {
   }
 
   #footer { display: none}
+
+}
+
+
+@media screen and (max-width: $content_width + ($content_padding * 2)) {
+  body {
+     /*font-size: 50%;*/
+  }
+
+  #wrapper, #navcontainer, #headerwrapper .header {
+   width: 96%;
+   margin: 0 0 0 2%;
+  }
+
+  #content {
+   width: 100%;
+  }
+
+  .post .postentry blockquote, .post .postentry .chat-transcript, .post .postentry pre  {
+   width: 80%;
+  }
+
+ #navlist .menu-item {
+  display: none;
+ }
 
 }
