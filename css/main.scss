@@ -1064,9 +1064,19 @@ dl.links {
   }
 }
 
+@media screen and (max-width: ($width+($content_padding * 2) + ($sidebar_width * 2))) { 
+  #sidebar-right {
+    display: none;
+  }
+
+  #sidebars {
+    width:$sidebar_width - $sidebar_right_width - $content-padding;  
+  }
+}
+
 
 /* Responsive Tweaks */
-@media screen and (max-width: ($width+($content_padding * 2) + ($sidebar_width * 2))) { 
+@media screen and (max-width: ($width+($content_padding * 2) + ($sidebar_width * 2)) - $sidebar_right_width * 2 - $content_padding * 2) { 
   html {
     margin-bottom: 0;
   }
@@ -1145,6 +1155,10 @@ dl.links {
         margin-right: 10px;
       }
     }
+  }
+
+  #sidebar-right {
+    display: block;
   }
 
   #footer { display: none}
