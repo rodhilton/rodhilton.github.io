@@ -1,3 +1,5 @@
+$("#sidebars").css({visibility: "hidden"});
+
 (function() {
   $(function() {
     if (navigator.platform === "iPad") {
@@ -40,13 +42,13 @@
 
     function fixNav() {
       var navBarTop = navBar.position().top;
-      var sideBarTop = navBarTop + navBarHeight + 1 - win.scrollTop();
+      var sideBarTop = navBarTop + navBarHeight + 1
 
       var position = sidebars.css("position");
       if(position == "absolute") {
           sidebars.
             css({ 
-              top: sideBarTop+"px",
+              top: (sideBarTop)+"px",
               left: (content.position().left+content.width()+20)+"px",
               visibility: "visible"
             });

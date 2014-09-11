@@ -9,6 +9,8 @@ title: Home
 		  	{% include post-header.html page=post %}
 		  	<div class="postentry">
 				{{ post.content | excerpt}}
+
+        <p><a href="{{ post.url }}">Read the rest of "{{post.title}}" &raquo;</a></p>
 			</div>
 		</div>
 	{% endfor %}
