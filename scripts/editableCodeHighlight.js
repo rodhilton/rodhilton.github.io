@@ -19,7 +19,7 @@ $( document ).ready( function() {
 			css("display", "none").
 			attr("wrap", "off").
 			attr("id", id+"-edit").
-			attr("data-original-val", highlightBox.text()).
+			attr("data-original-val", jQuery.trim(highlightBox.text())).
 			blur(function(evt) {
 				$(this).hide();
 				highlightBox.show();
