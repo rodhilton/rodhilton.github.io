@@ -88,7 +88,7 @@ end
 
 # a specific extension using a function block
 
-def convert(extension, options = {}, &amp;function)
+def convert(extension, options = {}, &function)
 	Dir.foreach(@workingdir) do |file|
 		if(file.match(/.#{extension}$/))
 			filepath = File.join(@workingdir, file)
