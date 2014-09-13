@@ -120,7 +120,7 @@ $content_size: percentage(.67);
 //$content_width: ($width * $content_size);
 //$sidebar_width: ($width - $content_width);
 $content_width: $width;
-$sidebar_width: 260px;
+$sidebar_width: 250px;
 
 $content_padding: 20px;
 
@@ -131,7 +131,7 @@ $object_spillover: 0px;
 //$image_padding = -2px;
 $image_padding: 0px;
 
-$sidebar_left_width: 166px;
+$sidebar_left_width: 156px;
 $sidebar_right_width: $sidebar_width - (3 * $content_padding) - $sidebar_left_width;
 //$sidebar_right_width: 130px;
 
