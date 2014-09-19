@@ -1,10 +1,6 @@
-better index.html page.  some kind of intro or something, maybe?  seems like it shouldn't list "all" going back forever, maybe that page should be paginated?  JS pagination?
-
 popular posts link? need to pull google analytics data somehow
 
 
 css file cleanup
-
-excerpts - seems doable with a <!--more--> or a <!--excerpt--> and <!--endexcerpt-->
 
 the image borders arent the same in chrome and firefox... ie is probably h0rked
