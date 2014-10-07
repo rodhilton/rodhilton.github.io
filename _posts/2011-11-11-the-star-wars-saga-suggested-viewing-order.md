@@ -176,6 +176,28 @@ Similar to the Animatrix, which can be watched at any time after the first one, 
 
 It's not part of the main viewing, but more like an expanded universe kind of thing, like playing a video game or reading a Star Wars comic book or novel.  I think this is a pretty good idea if you really really want to include Episode I.  Personally I don't think I'll be doing this, as I really don't like the pod race or even Darth Maul, but the option is there.
 
+## Response: The Qui-Gon Issue
+
+The most common complaint about Machete Order, by far, is that it eliminates Qui-Gon, and he's important (or that his [lightsaber battle](https://www.youtube.com/watch?v=J0mUVY9fLlw) is "cool").  Since this is so common, I thought I'd respond to it in this very post.  Because it's just not long enough, right?
+
+The argument goes, Qui-Gon is extremely important, because it's his intense desire to train Anakin that Obi-Wan feels responsible to continue when Qui-Gon dies.  Obi-Wan wasn't truly ready to be a teacher, so as a result Anakin is poorly trained and that's why he's so susceptible to the dark side.  In this way, Qui-Gon "may arguably be the most important character of the whole series" (this is a direct quote from a comment).
+
+{% image quigon.png align="right" %}
+
+People who make this argument say that the saga is only understandable with Episode 1 included.  I disagree, and I think it's easy to illustrate why.
+
+Imagine for a second that George Lucas releases an Episode 0.  In Episode 0, we see that Qui-Gon moves away from his family's home on Blahtooine, leaving behind his sister and mother to go become a Jedi.  After many years, he returns home to visit his family and discovers they have new neighbors.  One of the neighbors is a young boy who seems to have some degree of force sensitivity.  He asks Qui-Gon if he is a Jedi and says he wants to be a Jedi too, but Qui-Gon tells him that he's too old to begin training, and rules are rules.
+
+Fast forward a few years and the neighbor kid has become quite adept at force manipulation.  Unfortunately, with no formal training he cannot really control his powers, and accidentally kills his family, as well as his neighbors -- including Qui-Gon's mother and sister -- and himself.  Qui-Gon returns to his home to find his family dead, and blames this on the Jedi order's prohibitions against training older children.  Qui-Gon argues to Yoda that, if the boy had been able to receive training, his family would still be alive.
+
+Now, when we watch Episode 1, we have a new answer to a "why" question, we understand why Qui-Gon so strongly wants to train Anakin.  Episode 0 provides explanatory power to the series.  If someone released a Machete Order Prime which is simply Episodes 1-6 in order, without Episode 0, you'd be forced to argue this order is unacceptable, because it completely ignores the reason why Qui-Gon insists on training Anakin.  Machete Order Prime, by the very logic used to argue against Machete Order, is not acceptable.  And yet, it's the EXACT order we are currently faced with when we include Episode 1.
+
+This can go back forever.  Episode -1 comes out and shows why the young force sensitive child and his family had to move away from their home and go to Blahtooine, because the parents lost their job at the corporate Moisture Farm or something.  Episode -2 comes out and explains why the Moisture Farm had to cut expenses that led to the firing or whatever.
+
+The fact of the matter is, we don't really need to understand WHY Anakin is even susceptible to the dark side.  In fact, it makes him more sympathetic if the reason is simply "it's tempting" or "to save his wife".  But we're actually given the why in the elevator scene in Episode II - Obi-Wan is a shitty teacher who has no control over Anakin and who Anakin sees himself as better than.  Qui-Gon only provides an answer to "why is Obi-Wan so unprepared to have a Padawan?", but at what point are you so far away from the central characters that the why's stop mattering?  Everything that happens has some kind of cause, and at some point those causes happen off-screen, in prequels that don't exist.  Qui-Gon is two why's removed from what's interesting here, which is the reason it is completely unnecessary and serves only to distract from the central narrative that Machete Order tries to emphasize.
+
+
+
 <div style="text-align: center">
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- Machete Juggling -->
