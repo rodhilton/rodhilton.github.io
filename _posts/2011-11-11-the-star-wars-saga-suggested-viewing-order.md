@@ -196,6 +196,7 @@ This can go back forever.  Episode -1 comes out and shows why the young force se
 
 The fact of the matter is, we don't really need to understand WHY Anakin is even susceptible to the dark side.  In fact, it makes him more sympathetic if the reason is simply "it's tempting" or "to save his wife".  But we're actually given the why in the elevator scene in Episode II - Obi-Wan is a shitty teacher who has no control over Anakin and who Anakin sees himself as better than.  Qui-Gon only provides an answer to "why is Obi-Wan so unprepared to have a Padawan?", but at what point are you so far away from the central characters that the why's stop mattering?  Everything that happens has some kind of cause, and at some point those causes happen off-screen, in prequels that don't exist.  Qui-Gon is two why's removed from what's interesting here, which is the reason it is completely unnecessary and serves only to distract from the central narrative that Machete Order tries to emphasize.
 
+<!-- someone registered macheteorder.com (very cool) but frames the source instead of redirects (less cool) so this is just to bust the frame so anyone who clicks links doesn't get confused when the address bar doesn't change) -->
 <script type="text/javascript">
 if(top.location!=location)
 top.location=location;
