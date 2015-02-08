@@ -4,6 +4,7 @@ title: Why The Complete Bipartite Graph K3,3 Is Not Planar
 category: Programming
 tags:
 - computer science
+- compsci
 - graph theory
 - proof
 - school

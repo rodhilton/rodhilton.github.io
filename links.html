@@ -8,7 +8,7 @@ order: 5
 <p>What kind of blog would this be without a whole bunch of links to sites of people you've never met?</p>
 
 <dl class='links'>
-{% for link in site.data.links | sort: 'name' %}
+{% for link in site.data.sorted_links | sort: 'name' %}
 	<dt>
 		&#8226; 
 		<a href="{{link.url}}">{{link.name}}</a>

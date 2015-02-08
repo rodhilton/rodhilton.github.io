@@ -47,7 +47,7 @@
   description: Author of Programming Ruby, Agile Web Development with Rails, and The Pragmatic Programmer.
 
 - name: Demian Neidetcher
-  url: http://demian0311.blogspot.com/
+  url: http://neidetcher.com/
   description: Coworker from OpenLogic and Time Warner Cable, creator of Kant Builder and Pix.
 
 - name: Eric Wendelin
@@ -117,4 +117,17 @@
 - name: Tim Berglund
   url: http://www.augusttechgroup.com/tim/blog/
   description: Coordinator of Denver Open Source Users group.
+
+- name: DataGenetics
+  url: http://datagenetics.com/blog.html
+  description: Great blog about math/computer science concepts
+
+- name: Computational Complexity
+  url: http://blog.computationalcomplexity.org/
+  description: The blog of Lance Fortnow, author of The Golden Ticket
+
+- name: Gödel’s Lost Letter and P=NP
+  url: https://rjlipton.wordpress.com
+  description: Dick Lipton and Ken Regan's CS blog, authors of "People, Problems, and Proofs"
+
 

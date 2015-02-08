@@ -38,10 +38,10 @@
   url: http://www.goodreads.com/user/show/1499157-rodhilton-hilton
   color: 76420a
 
-- name: Trakt
-  icon: trakt.png
-  url: http://trakt.tv/user/rodhilton/ratings/movies/all/added/1
-  color: 2a2b2d
+- name: Letterboxd
+  icon: letterboxd.png
+  url: http://letterboxd.com/rodhilton/films/ratings/
+  color: 21282f
 
 - name: Grouvee
   icon: grouvee.png
@@ -58,10 +58,10 @@
   url: http://www.diigo.com/user/rodhilton
   color: 0079ff
 
-- name: 43things
-  icon: 43things.png
-  url: http://www.43things.com/person/rodhilton
-  color: ff9a00
+# - name: 43things
+#   icon: 43things.png
+#   url: http://www.43things.com/person/rodhilton
+#   color: ff9a00
 
 # - name: Flickr
 #   icon: flickr.png
