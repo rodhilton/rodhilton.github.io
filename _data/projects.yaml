@@ -1,4 +1,4 @@
-- name: console_table
+- name: ConsoleTable
   url: https://rubygems.org/gems/console_table
   description: Ruby gem for printing tables of data in commandline scripts
 
