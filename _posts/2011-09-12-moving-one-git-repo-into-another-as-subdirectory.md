@@ -43,7 +43,7 @@ Next we need to copy the history of this repository into `new-project`.  So we d
 $ cd /home/machete/new-project
 $ git remote add temp /home/machete/old-project
 $ git fetch temp
-$ git merge temp master
+$ git merge temp/master
 $ git remote rm temp
 ~~~
 
