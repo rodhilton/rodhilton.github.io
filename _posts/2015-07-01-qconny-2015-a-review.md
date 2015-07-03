@@ -16,6 +16,8 @@ I choose QCon for a few reasons.  One, the sessions seemed very focused on archi
 
 I went to QCon specifically wanting to improve some areas where I was weak, namely containerization, microservices, and reactive programming.  I hear a lot of buzz about these things, and they pop up on recent [ThoughtWorks Technology Radar](http://www.thoughtworks.com/radar/a-z)s, and QCon seemed to have a lot of sessions to offer in these areas.  It took a LOT of convincing to get my employer to agree to send me to a conference location as expensive as New York, but eventually they approved it.  Here I will detail some of my thoughts about the experience, in case it may be of use to others considering QCon.
 
+<!--more-->
+
 # Sessions
 
 First and foremost, the sessions.  Networking isn't my thing, I'm all about the quality, quantity, and variety of sessions offered.  **I picked QCon based on the sessions, and I was not disappointed.**
