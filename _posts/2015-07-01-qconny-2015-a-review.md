@@ -84,15 +84,16 @@ Of course, I mostly avoided talking to people because I hate networking, so I ca
 
 One thing I will say, I really liked how QCon set up their lunch tables.  Lunch is typically when most of the socializing happens, and OSCON for example has tables for people with similar interests to meet and mingle.  QCon had a similar setup, but I appreciated that they also had a handful of rectangular tables pushed against the walls on the perimeter of the lunchroom.  A clear set of "I don't want to mingle" tables.  Good stuff if you hate chit-chat like I do.
 
+<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">Just ran into stranger at <a href="https://twitter.com/hashtag/qconnewyork?src=hash">#qconnewyork</a> who recognized my name from my badge because he follows me on Twitter and doesn&#39;t know why. <a href="https://twitter.com/hashtag/surreal?src=hash">#surreal</a></p>&mdash; Rod Hilton (@rodhilton) <a href="https://twitter.com/rodhilton/status/608641289379262464">June 10, 2015</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
 # Venue
 
 Alright, here's the bad news.  The conference was held at the New York Marriott at the Brooklyn Bridge, and **the venue was easily my biggest complaint about the entire conference**.
 
-First of all, being located in Brooklyn means that you're paying New York prices for accomodations, but without the benefit of being able to walk to tons of cool restaurants or bars for dinner.  It's the money of being in Manhattan, without the advantages such a location affords.
+The hotel itself had absolutely no restaurant (or bar for that matter), which made meals a bit difficult.  What the Marriott had was a lounge that you could pay to access for $75 per day, which is outrageous.  The lounge was the only place to get a meal or a drink in the entire building, and there was no room service offered.
 
-The hotel itself had absolutely no restaurant (or bar for that matter), which made meals a bit difficult.  What the Marriott had was a lounge that you could pay to access for $75 per day, which is outrageous.  The lounge was the only place to get a meal or a drink in the entire building.
-
-Normally only dinners would be a problem in this type of situation, since conferences usually include breakfast and lunch.  However, what passed for 'Breakfast' was extremely disappointing - 100% pastries and breads, no eggs or meat or protien of any kind.  A bunch of pastries and muffins are not "brain food" - starting a full day of technical talks with a bunch of muffins is a surefire way to be nodding off by the third talk.  I wound up walking to a nearby Panera every single morning to get an egg sandwich.
+Normally only dinners would be a problem in this type of situation, since conferences usually include breakfast and lunch.  However, what passed for 'Breakfast' was extremely disappointing - 100% pastries and breads, no eggs or meat or protein of any kind.  A bunch of pastries and muffins are not "brain food" - starting a full day of technical talks with a bunch of muffins is a surefire way to be nodding off by the third talk.  I wound up walking to a nearby Panera every single morning to get an egg sandwich.
 
 Lunch was better, but also not great.  I think by choice of QCon itself, the hotel catering had to make everything gluten-free.  I find the whole gluten-free for non-celiacs fad generally irritating but what really made this annoying was what foods they chose to serve.  If I say to you "okay we need a vegetarian meal" you try to think of foods that don't involve meat, you don't immediately think of a meat dish and substitute tofu in.  Similarly, why does your 'gluten free' menu consist almost entirely of gluten-free pasta?  I wound up grabbing lunch elsewhere for 3 of the 5 days I was at the conference.  This was frustrating, because I convinced my employer to send me to NY by arguing that meals were mostly included, but then I wound up having to pay for most meals.
 
