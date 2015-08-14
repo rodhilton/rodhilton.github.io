@@ -4,3 +4,6 @@
 [submodule "jekyll-cloudfiles-upload"]
 	path = jekyll-cloudfiles-upload
 	url = git@github.com:rodhilton/jekyll-cloudfiles-upload.git
+[submodule "_site"]
+	path = _site
+	url = git@github.com:rodhilton/rodhilton.github.io.git
