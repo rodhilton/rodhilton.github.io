@@ -1,1 +1,0 @@
-jekyll-cloudfiles-upload/cloudfiles_upload.rb
