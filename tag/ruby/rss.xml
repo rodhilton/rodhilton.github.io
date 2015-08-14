@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Absolutely No Machete Juggling &raquo; Ruby</title>
+		<description>Rod Hilton&amp;#039;s rants about stuff he cares about way too much.</description>		
+		<link>http://www.nomachetejuggling.com</link>
+		<atom:link href="http://www.nomachetejuggling.com/tag/{"name"=>"ruby", "posts"=>[<Post: /2012/05/15/personal-wiki-using-github-and-gollum-on-os-x>, <Post: /2010/07/06/finding-high-impact-areas-for-refactoring>, <Post: /2009/08/02/how-to-convert-audible-aa-files-to-mp3>, <Post: /2008/04/28/assert_tag-with-two-siblings-in-rails>, <Post: /2008/04/04/setting-java_home-in-batch-file>, <Post: /2008/03/12/using-multiple-versions-of-rails>, <Post: /2008/02/01/changing-logging-behavior-of-rails-via-extensions>, <Post: /2007/09/10/language-marathon-first-impressions-of-ruby-python-and-c>], "id"=>"ruby"}/rss.xml" rel="self" type="application/rss+xml" />
+		
+	</channel>
+</rss>

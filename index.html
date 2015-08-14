@@ -1,32 +1,728 @@
----
-layout: default
-title: Home
----
-<div class="post-listing">
-	<div class="post">
-	{% for post in paginator.posts %}
-		<div class="post-preview">
-		  	{% include post-header.html page=post %}
-		  	<div class="postentry">
-				{{ post.content | excerpt}}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
-        <p><a href="{{ post.url }}">Read the rest of "{{post.title}}" &raquo;</a></p>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Absolutely No Machete Juggling</title>
+        <meta name="viewport" content="width=device-width" />
+        <link rel="alternate" type="application/rss+xml" title="Absolutely No Machete Juggling &raquo; All Posts" href="/rss.xml" />
+        
+        
+          <link rel="alternate" type="application/rss+xml" title="Absolutely No Machete Juggling &raquo; 'Life' Posts Only" href="/category/life/rss.xml" />
+        
+          <link rel="alternate" type="application/rss+xml" title="Absolutely No Machete Juggling &raquo; 'Programming' Posts Only" href="/category/programming/rss.xml" />
+        
+          <link rel="alternate" type="application/rss+xml" title="Absolutely No Machete Juggling &raquo; 'Technology' Posts Only" href="/category/technology/rss.xml" />
+        
+
+        <link rel="alternate" type="application/rss+xml" title="Absolutely No Machete Juggling &raquo; Comments" href="http://nomachetejuggling.disqus.com/latest.rss" />    
+
+        <link rel="icon" href="/assets/favicon.png" type="image/png">
+        <link rel="shortcut icon" href="/assets/favicon.png" type="image/png">
+
+        <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic|Source+Code+Pro|Architects+Daughter' rel='stylesheet' type='text/css'>
+
+        <link rel="stylesheet" href="/css/main.css">
+        <link rel="stylesheet" href="/css/googlecode.css">
+
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    </head>
+<body>
+<div id="page">
+  <div id="headerwrapper">
+    <div class="header">
+      <div class="headertitle">
+        <h1><a href="/" title="Absolutely No Machete Juggling: Rod Hilton&#039;s rants about stuff he cares about way too much.">Absolutely No Machete Juggling</a></h1>
+        <p>Rod Hilton&#039;s rants about stuff he cares about way too much...</p>
+      </div>
+    </div>
+  </div>
+  <div id="navbar">
+    <div id="navcontainer">
+      <ul id="navlist">
+  
+  <li class="cat-item current-cat"><a href="/">All</a></li>
+
+  
+    
+    <li class="cat-item "><a href="/category/life">LIFE</a>
+  
+    
+    <li class="cat-item "><a href="/category/programming">PROGRAMMING</a>
+  
+    
+    <li class="cat-item "><a href="/category/technology">TECHNOLOGY</a>
+  
+
+  
+    
+    <li class="menu-item "><a href="/about.html">ABOUT</a></li>
+  
+    
+    <li class="menu-item "><a href="/resume.html">RéSUMé</a></li>
+  
+    
+    <li class="menu-item "><a href="/projects.html">PROJECTS</a></li>
+  
+    
+    <li class="menu-item "><a href="/contact.html">CONTACT</a></li>
+  
+    
+    <li class="menu-item "><a href="/links.html">LINKS</a></li>
+  
+</ul><!-- /navlist -->
+    </div><!-- /navcontainer -->
+  </div><!-- /navbar -->
+
+  <div id="wrapper">
+    <div id="content">
+      <div class="post-listing">
+	<div class="post">
+	
+		<div class="post-preview">
+		  	<div class="postheader">
+  	<h1 class="posttitle"><a href="/2015/07/01/qconny-2015-a-review/">QCon New York 2015: A Review</a></h1>
+  	<div class="postmeta">
+		<p class="meta">
+		<b title="career and conference">PROGRAMMING</b> - 
+		July 1, 2015 - 
+		3,045 words -
+		<a href="/2015/07/01/qconny-2015-a-review/#disqus_thread">Comments</a>
+		</p>
+	</div>
+</div>
+		  	<div class="postentry">
+				<p>My default yearly conference, for many years, has been <a href="http://uberconf.com/conference/denver/2015/07/home">UberConf</a>.  I really love UberConf because it&#39;s packed full of tons of great sessions, and it&#39;s conveniently local.  However, because I go to various local user groups and attend so often, I find that, if I go two years in a row there are too many sessions I&#39;ve seen before, and I wind up disappointed.  So for the past few years, I&#39;ve been alternating between UberConf and something new.  Two years ago, it was <a href="http://www.nomachetejuggling.com/2013/07/30/oscon-2013-a-review/">OSCON</a>, and this year it was <a href="https://qconnewyork.com/">QCon New York</a>.</p>
+
+<p>I chose QCon for a few reasons.  One, the sessions seemed very focused on architecture and higher-level concepts, with very few language/technology talks.  This was right up my alley because, while there are some languages and tools I&#39;d like to go deeper on, I think a more significant area for improvement for me is architecture and scalability.  We get tons of traffic at my job - more than any other place I&#39;ve ever worked - so I&#39;ve had to learn a lot about scalability, and the nature of the work has forced me to really see broad system design differently.</p>
+
+<p>I went to QCon specifically wanting to improve some areas where I was weak, namely containerization, microservices, and reactive programming.  I hear a lot of buzz about these things, and they pop up on recent <a href="http://www.thoughtworks.com/radar/a-z">ThoughtWorks Technology Radar</a>s, and QCon seemed to have a lot of sessions to offer in these areas.  It took a LOT of convincing to get my employer to agree to send me to a conference location as expensive as New York, but eventually they approved it.  Here I will detail some of my thoughts about the experience, in case it may be of use to others considering QCon.</p>
+
+
+        <p><a href="/2015/07/01/qconny-2015-a-review/">Read the rest of "QCon New York 2015: A Review" &raquo;</a></p>
 			</div>
 		</div>
-	{% endfor %}
+	
+		<div class="post-preview">
+		  	<div class="postheader">
+  	<h1 class="posttitle"><a href="/2014/07/04/uploading-a-jekyll-site-to-rackspace-cloudfiles/">Uploading a Jekyll Site to Rackspace Cloudfiles</a></h1>
+  	<div class="postmeta">
+		<p class="meta">
+		<b title="code, cloud, web sites, open source, hosting, and web">PROGRAMMING</b> - 
+		July 4, 2014 - 
+		1,587 words -
+		<a href="/2014/07/04/uploading-a-jekyll-site-to-rackspace-cloudfiles/#disqus_thread">Comments</a>
+		</p>
+	</div>
+</div>
+		  	<div class="postentry">
+				<p>This blog was never intended to be popular by any stretch of the imagination.  Largely I started it simply to have a place to gather solutions to technical problems I&#39;ve encountered, so that I could easily look those solutions up if I needed them again.  The blog has always run on my own shared hosting server, on a self-installed version of Wordpress.</p>
+
+<p>To my great surprise, a <a href="http://www.reddit.com/r/programming/comments/2986e4/the_worst_programming_interview_question/">few</a> <a href="http://www.reddit.com/r/programming/comments/hn1fx/a_different_kind_of_technical_interview/">of</a> <a href="http://www.reddit.com/r/programming/comments/yvr9/my_interview_with_google/">my</a> <a href="http://www.reddit.com/r/TrueReddit/comments/q98ld/the_star_wars_saga_suggested_viewing_order_iv_v/">posts</a> have found their way to the front page of <a href="http://www.reddit.com/domain/nomachetejuggling.com">reddit</a>.  My <a href="/2011/11/11/the-star-wars-saga-suggested-viewing-order/">post about Star Wars</a> has been mentioned on <a href="https://www.youtube.com/watch?v=effD1u4oCRE">King of the Nerds</a> and <a href="https://www.youtube.com/watch?v=keSFjjhUyVA">The Big Bang Theory</a>, and even landed me an <a href="http://www.npr.org/2014/03/20/291977042/theres-more-than-one-way-to-watch-star-wars">Interview on NPR</a>.  </p>
+
+<table class='image aligncenter'><tr><td><script type="text/javascript" src="//www.google.com/trends/embed.js?hl=en-US&q=Machete+Order&cmpt=q&content=1&cid=TIMESERIES_GRAPH_0&export=5&w=600&h=330"></script></td></tr></table>
+
+<p>Needless to say, the traffic to my blog has been both extremely unexpected and unpredictable.  The Star Wars post had been online for months with virtually no traffic before <a href="http://archive.wired.com/geekdad/2012/02/machete-order-star-wars/">Wired</a> suddenly linked to it, instantly decimating my web server.  I&#39;ve fought and fought with various configurations for Wordpress, used <a href="http://wordpress.org/plugins/w3-total-cache/">as much caching</a> as possible, and even had my <a href="https://www.servint.net/">web host</a> temporarily upgrade my service, all trying to keep a web site that makes no money online even when traffic increases by a factor of 100 overnight.  <strong>When my site goes down, it&#39;s embarrassing, because even though it&#39;s just a personal blog on a shared host, it gives the impression that I, as a software developer, don&#39;t know how to make a web site scale</strong>.</p>
+
+<h1>Switching to Jekyll</h1>
+
+<table class='image alignright' width='306'><tr><td><img src='/assets/jekyll-logo.png' width='300' height='141'/></td></tr></table>
+
+<p>So after the most recent pummeling I took due to a <a href="https://news.ycombinator.com/item?id=7953725">Hacker News link</a>, I decided it was time to <strong>bite the bullet and convert the entire site to <a href="http://jekyllrb.com/">Jekyll</a></strong>.  I&#39;ve messed around with the technology before to build another, smaller, blog, so I was somewhat familiar with the constructs and idioms.  A lot of work and ten custom plugins later, the entire site was converted, with very little loss of functionality.</p>
+
+
+        <p><a href="/2014/07/04/uploading-a-jekyll-site-to-rackspace-cloudfiles/">Read the rest of "Uploading a Jekyll Site to Rackspace Cloudfiles" &raquo;</a></p>
+			</div>
+		</div>
+	
+		<div class="post-preview">
+		  	<div class="postheader">
+  	<h1 class="posttitle"><a href="/2014/06/24/the-worst-programming-interview-question/">The Worst Programming Interview Question</a></h1>
+  	<div class="postmeta">
+		<p class="meta">
+		<b title="algorithms, coding, interview, and puzzle">PROGRAMMING</b> - 
+		June 24, 2014 - 
+		1,764 words -
+		<a href="/2014/06/24/the-worst-programming-interview-question/#disqus_thread">Comments</a>
+		</p>
+	</div>
+</div>
+		  	<div class="postentry">
+				<p>Years ago, I wrote about a <a href="/2008/12/11/my-least-favorite-interview-question/">particular type of interview question</a> that I despise.  Today I&#39;d like to discuss a much more specific question, rather than a type.  I&#39;ve never been asked this question myself, but I have seen it asked in an actual interview, and I officially nominate it as the worst question I&#39;ve ever heard in an interview.</p>
+
+<p>A co-worker at a previous company used to ask this question, and it was the first time I&#39;d ever heard it in an interview setting.  This company did pair interviews, two engineers with one candidate.  One day he and I were the two engineers interviewing some poor candidate.  The candidate had actually done pretty well as far as I was concerned, and then my co-worker busted this question out.  The candidate stumbled over the answer, visibly frustrated with himself.  In the post-interview pow-wow, all of the engineers who&#39;d interviewed him gave him the thumbs up, except my interview partner, who refused to hire him on the grounds that he completely flubbed this question, and &quot;any engineer worth his salt should be able to answer it.&quot;  He actually said that if we hired this individual, he would be unwilling to work on a team with the candidate.  For what it&#39;s worth, the story has a happy ending, in that we hired the candidate in spite of his protests, fired the co-worker within a few months, and the candidate is still at that company, doing quite well.</p>
+
+<p>Anyway, I think this question perfectly represents everything that can go wrong with an interview question, so I&#39;d like to discuss it here to explain why it&#39;s almost hilariously awful as an interview question:</p>
+
+<blockquote>
+<p><strong>Write a function that can detect a cycle in a linked list.</strong></p>
+</blockquote>
+
+<p>Seems like your basic algorithm coding question at first, right?  Hop up and write the function on the white board; totally reasonable, right?  Except it&#39;s not, it&#39;s brain-meltingly terrible.  Let&#39;s break it down.</p>
+
+
+        <p><a href="/2014/06/24/the-worst-programming-interview-question/">Read the rest of "The Worst Programming Interview Question" &raquo;</a></p>
+			</div>
+		</div>
+	
+		<div class="post-preview">
+		  	<div class="postheader">
+  	<h1 class="posttitle"><a href="/2014/02/05/top-10-career-changing-programming-books/">Top 10 Career-Changing Programming Books</a></h1>
+  	<div class="postmeta">
+		<p class="meta">
+		<b title="books, career, and reading">PROGRAMMING</b> - 
+		February 5, 2014 - 
+		5,165 words -
+		<a href="/2014/02/05/top-10-career-changing-programming-books/#disqus_thread">Comments</a>
+		</p>
+	</div>
+</div>
+		  	<div class="postentry">
+				<p>When I graduated with a Computer Science degree ten years ago, I was excited to dive into the world of professional programming.  I had done well in school, and I thought I was completely ready to be employed doing my dream job: writing code.  What I discovered in my very first interview, however, was that I was massively underprepared to be an actual professional programmer.  I knew all about data structures and algorithms, but nothing about how actual professional, &quot;enterprise&quot; software was written.  I was lucky to find a job at a place willing to take a chance on me, and proceeded to learn as much as I could as quickly as I could to make up for my deficiencies.  This involved reading a LOT of books.</p><p>Here I reflect on my 10-year experience programming professionally and all of the books I&#39;ve read in that time, and offer up the ten that had the most profound impact on my career.  Note that these are not the &quot;10 best&quot; programming books.  I do feel all of these books are very good, but that&#39;s not the only reason I&#39;m selecting them here; I&#39;m mentioning them because I felt that I was a profoundly different person after reading each than I was beforehand.  Each of these books forced me to think differently about my profession, and I believe they helped mold me into the programmer I am today.</p><p>None of these books are language books.  I may feel like learning to program in, say, Scala, had a profound impact on how I work professionally, but the enlightening thing was Scala itself, not the book I used to help me learn it.  Similarly, I&#39;d say that learning to use Git had a significant impact on how I view version control, but it was Git that had the impact on me, not the book that I used to teach myself the tool.  The books on this list are about the the content they dumped into my brain, not just a particular technology they taught me, even if a technology had a profound impact on me.</p><p>So, without further ado...</p>
+
+        <p><a href="/2014/02/05/top-10-career-changing-programming-books/">Read the rest of "Top 10 Career-Changing Programming Books" &raquo;</a></p>
+			</div>
+		</div>
+	
+		<div class="post-preview">
+		  	<div class="postheader">
+  	<h1 class="posttitle"><a href="/2013/12/17/centurylink-traps-and-caps/">CenturyLink: Traps and Caps</a></h1>
+  	<div class="postmeta">
+		<p class="meta">
+		<b title="bridge-burning, business, centurylink, comcast, customer service, internet, letter, rage, and rant">TECHNOLOGY</b> - 
+		December 17, 2013 - 
+		4,639 words -
+		<a href="/2013/12/17/centurylink-traps-and-caps/#disqus_thread">Comments</a>
+		</p>
+	</div>
+</div>
+		  	<div class="postentry">
+				<p><em>TL;DR: After a decade of service, CenturyLink decided I wasn&#39;t worth keeping as a customer, so I switched to Comcast Business Internet.  Even if CenturyLink tells you that you have no data caps, you do.</em></p><p>When I first moved to Colorado nearly a decade ago, I signed up for Comcast&#39;s Residential high-speed internet service, and I hated it.  I had to reset my cable modem once every week because it would stop working properly, and my internet noticeably slowed down when people would get home from school/work in my apartment complex.</p><p>I did some research and determined that, for the kinds of internet speeds being offered at the time (around 1-5Mbps down), Qwest&#39;s DSL had similar prices to Comcast.  Additionally, because it was DSL, I could use my own Netgear router that had a DSL modem built in, and I wouldn&#39;t have to mess with company equipment.  Also, DSL&#39;s speed varies based on your distance to a hub, not based on how many people are currently using it.  I thought I could avoid both of my major problems by switching to DSL for about the same price, so I did, paying for the maximum possible speed at the time, 5Mbps.</p><p>For many years, Qwest was the only monthly bill I never had any trouble with.  Sometimes my cable would go out or look pixelated, sometimes my heating bill would be surprisingly massive, I was always having annoying issues with my cell phone service, but month after month, I never even noticed I had Qwest.  It was just there, it worked, it never went down, it never slowed down.  It was great.</p>
+
+        <p><a href="/2013/12/17/centurylink-traps-and-caps/">Read the rest of "CenturyLink: Traps and Caps" &raquo;</a></p>
+			</div>
+		</div>
+	
+		<div class="post-preview">
+		  	<div class="postheader">
+  	<h1 class="posttitle"><a href="/2013/08/30/diving-into-android/">Diving Into Android</a></h1>
+  	<div class="postmeta">
+		<p class="meta">
+		<b title="android, exercise, health, mobile, phone, and skills">PROGRAMMING</b> - 
+		August 30, 2013 - 
+		3,245 words -
+		<a href="/2013/08/30/diving-into-android/#disqus_thread">Comments</a>
+		</p>
+	</div>
+</div>
+		  	<div class="postentry">
+				<p>I&#39;ve finally written my <a href="https://play.google.com/store/apps/developer?id=Absolutely%20No%20Machete%20Juggling&amp;hl=en">first real Android app</a>.  I dabbled a bit with Android development in the very early days, writing <a href="https://code.google.com/p/rallydroid/">an app that interacted with the web services</a> of the company I was working for at the time.  This app was ugly, written for Froyo, and frankly barely worked at all.  It was a 20% time project at my then-employer, but I never went back and worked on it after the initial effort, and never even bothered getting it packaged into the Android Market, largely out of embarrassment.</p><p>I&#39;ve been wanting to get into Android development more seriously since that effort, because I overall liked the idea, and as a big Android user myself, I felt that it was essential <em>I be able to develop applications for my own device</em>, as being unable to do so was a lot like using Linux without the ability to write shell scripts.</p><p>I&#39;ve taken two all-day training sessions on Android before as part of larger development conferences, and while I was able to suss out some basics about the lifecycle and other Android fundamentals from them, neither left me with any sense of real understanding of how I could develop something for Android that people might actually use.  But at <a href="/2013/07/30/oscon-2013-a-review/">OSCON 2013</a>, I took an excellent half-day Android class taught by <a href="https://twitter.com/markog">Marko Garenta</a>.  Among other things, he showed me, for the first time, how to write a modern-looking Holo app, how to use asynchronous background tasks, how to transition between multiple activities, and how to handle fragmentation issues.  These were never touched on in my all-day sessions, and they&#39;re all large barriers to writing real applications.</p><p>Once I left the class I had a sense that I actually now knew enough that, with some help from web searches, I could actually write an Android app.  I just needed a good idea, so <strong>I tried to take notice of various itches in my life to see if I could scratch any with a phone app</strong>.</p>
+
+        <p><a href="/2013/08/30/diving-into-android/">Read the rest of "Diving Into Android" &raquo;</a></p>
+			</div>
+		</div>
+	
+		<div class="post-preview">
+		  	<div class="postheader">
+  	<h1 class="posttitle"><a href="/2013/07/30/oscon-2013-a-review/">OSCON 2013: A Review</a></h1>
+  	<div class="postmeta">
+		<p class="meta">
+		<b title="career and conference">PROGRAMMING</b> - 
+		July 30, 2013 - 
+		3,764 words -
+		<a href="/2013/07/30/oscon-2013-a-review/#disqus_thread">Comments</a>
+		</p>
+	</div>
+</div>
+		  	<div class="postentry">
+				<p>This year, I went to O&#39;Reilly&#39;s Open Source Convention, <a href="http://www.oscon.com/oscon2013">OSCON</a>.  Every year for the last four years, I&#39;ve gone to a big tech conference.  For the last three, I went to NoFluffJustStuff, which was later renamed <a href="http://uberconf.com/">UberConf</a>.  UberConf is held in my home state, I can drive to it from my house every day so there&#39;s no plane or hotel involved, which makes it inexpensive enough that I&#39;ve been able to get my employers to pay for it.  However, due to having attended UberConf consecutively for three years, last year I&#39;d seen about half the sessions already either in previous years on at local Java User Group meetings, so I decided that this year I&#39;d try something different.</p><p>OSCON was a radical departure for me.  UberConf is a &quot;Java/Agility&quot; conference, and since I work almost exclusively with the JVM in an Agile environment, it&#39;s more or less custom-tailored to my interests.  OSCON, however, had a huge variety of different tracks and a similarly varied group of attendees.  There were Python folks, Ruby folks, hardware hackers, system admins, operations gurus, cloud nerds, data geeks, perl wonks, and more.  I picked OSCON because, while the variety was less tailored to my interests, the sheer number of tracks (18 concurrent sessions per time slot!) made up for it.</p><p>Here is my review of the OSCON experience.  OSCON was the first conference I&#39;ve been to outside of my home state, and really the first one not run by the Rocky Mountain Software Symposium.  As such, it will be unavoidable that I will be comparing it largely to my UberConf experience, since it&#39;s my only real frame of reference.  I will try to address each element of the conference separately.</p><p>First thing&#39;s first, how were the sessions?  I don&#39;t go to tech conferences to network or hand out business cards, though I hear that&#39;s half the point.  I treat conferences like an intense week of school, I take notes and try to learn as much as I can in the sessions.  A tech conference&#39;s quality is going to be 95% the quality of the sessions for me, so they&#39;re the most important thing by far.</p>
+
+        <p><a href="/2013/07/30/oscon-2013-a-review/">Read the rest of "OSCON 2013: A Review" &raquo;</a></p>
+			</div>
+		</div>
+	
+		<div class="post-preview">
+		  	<div class="postheader">
+  	<h1 class="posttitle"><a href="/2013/06/10/book-review-presentation-patterns/">Book Review: Presentation Patterns</a></h1>
+  	<div class="postmeta">
+		<p class="meta">
+		<b title="book, books, fears, presentations, school, speaking, and technical">TECHNOLOGY</b> - 
+		June 10, 2013 - 
+		1,110 words -
+		<a href="/2013/06/10/book-review-presentation-patterns/#disqus_thread">Comments</a>
+		</p>
+	</div>
+</div>
+		  	<div class="postentry">
+				<p>I don&#39;t post book reviews here very often.  Typically I write up a few paragraphs about a book when I finish it and post it to my <a href="http://www.goodreads.com/user/show/1499157-rod-hilton">Goodreads account</a>, which I consider enough of a review for nearly every book I read.</p><p>But &quot;Presentation Patterns: Techniques for Crafting Better Presentations&quot; by Neal Ford, Matthew McCullough, Nathaniel Schutta is a bit more than a book.  I&#39;m not joking when I say this book has actually changed my life.  As such, I felt it was necessary to devote an entire post to it to draw extra attention to it.</p><p>In the interest of full disclosure, I should admit that I know the authors personally, sort of.  I&#39;ve had a conversation or two with Neal and Nathaniel at various developer conferences, though I seriously doubt either of them would remember or even think my face looks familiar.  McCullough I&#39;ve interacted with quite a bit more, but I once managed to get him to tell me he wanted to punch me in the face.  If you&#39;ve ever met Matthew, you&#39;d know this is pretty much like getting Gandhi to call you a stupid asshole.  The point is, I&#39;m not affiliated with the authors or getting anything out of promoting the book.  I just found it extremely valuable and wanted to share it.</p><p>In any case, Presentation Patterns is excellent.  The book is full of tons of real-world, usable tips, ranging from how to speak clearly to how to organize your thoughts to the actual mechanics of doing specific things in Keynote and Powerpoint. It&#39;s very detailed in this way, rarely leaving the reader wondering how to do a thing the book describes.  Reading this book after seeing many presentations by speakers like Ford, McCullough, and Schutta was an eye-opening experience, something akin to seeing how the sausage is made.</p>
+
+        <p><a href="/2013/06/10/book-review-presentation-patterns/">Read the rest of "Book Review: Presentation Patterns" &raquo;</a></p>
+			</div>
+		</div>
+	
+		<div class="post-preview">
+		  	<div class="postheader">
+  	<h1 class="posttitle"><a href="/2013/05/22/spring-2013-semester-in-review/">Spring 2013 Semester in Review</a></h1>
+  	<div class="postmeta">
+		<p class="meta">
+		<b title="class, college, review, school, and semester">LIFE</b> - 
+		May 22, 2013 - 
+		4,305 words -
+		<a href="/2013/05/22/spring-2013-semester-in-review/#disqus_thread">Comments</a>
+		</p>
+	</div>
+</div>
+		  	<div class="postentry">
+				<p>Another semester is over, and it was quite the doozy like the last one.  This time, however, it wasn&#39;t because I hated the workload (like last semester) but because I hated the material.  Or more specifically, half of it, but more on that later.</p><p>This semester, I finally took the cross-department course from the Business School that I was dreading.  My school&#39;s program is a joint-degree, Computer Science and Information Systems, with the CS stuff coming from the Engineering school and the IS stuff coming from the Business school.  The degree has a number of requirements but one of them is that you must take at least one PhD-level class in each school.  This means that I am able to take nothing but pure-CS courses, except I have to take one PhD-level course in the Business school.  I&#39;ve been dreading this since I started, somehow hoping this requirement would be removed before I had to take it, but this was not the case, and I had to take it this semester.  With the credits I am able to transfer from my Master&#39;s degree, this actually completes all of my course requirements, but because I was interested I also took a course on Graph Theory, which was a class crosslisted as both an undergrad and master&#39;s level class.  And once again, I somehow managed to get stuck grading.</p><p>I started the semester taking three courses on Coursera as well, but quickly decided that doing so contributed to my sense of being overwhelmed last semester, so I quickly dropped them and decided to download all of the lectures when the classes ended, and hence won&#39;t be mentioning them further.</p><p>Textbook: <a href="http://www.amazon.com/Graph-Theory-Mathematical-Association-Textbooks/dp/0883857537">Graph Theory, a Problem-Oriented Approach</a></p>
+
+        <p><a href="/2013/05/22/spring-2013-semester-in-review/">Read the rest of "Spring 2013 Semester in Review" &raquo;</a></p>
+			</div>
+		</div>
+	
+		<div class="post-preview">
+		  	<div class="postheader">
+  	<h1 class="posttitle"><a href="/2013/02/02/brief-thoughts-on-software-craftsmanship/">Brief Thoughts on Software Craftsmanship</a></h1>
+  	<div class="postmeta">
+		<p class="meta">
+		<b title="blogosphere, craftsmanship, and drama">PROGRAMMING</b> - 
+		February 2, 2013 - 
+		1,388 words -
+		<a href="/2013/02/02/brief-thoughts-on-software-craftsmanship/#disqus_thread">Comments</a>
+		</p>
+	</div>
+</div>
+		  	<div class="postentry">
+				<p>To catch people up on some blogosphere drama:</p><p>Last month, Heather Arthur posted on her blog about an unfortunate incident in which some people on Twitter had found some <a href="https://github.com/harthur/replace">code she wrote in GitHub</a>, and <a href="http://harthur.wordpress.com/2013/01/24/771/">people started trashing her on Twitter for it</a>.  Some of those people are considered leaders in the <a href="http://manifesto.softwarecraftsmanship.org/">Software Craftsmanship</a> movement, in particular <a href="http://coreyhaines.com/">Corey Haines</a>.  Corey immediately <a href="http://programmingtour.blogspot.com/2013/01/im-sorry.html">apologized</a> for acting like an asshole, and I think his apology was sincere because I&#39;ve met Corey and frankly the guy is almost annoyingly nice (he went around RubyConf 2012 taking a picture with every damn person there).  But Ted Neward saw this turn of events and concluded that Corey&#39;s actions were not orthogonal to his involvement in Software Craftsmanship, but actually influenced by them, and he <a href="http://blogs.tedneward.com/2013/01/24/On+The+Dark+Side+Of+Craftsmanship.aspx">posted as such on his blog</a>.</p><p>Neward&#39;s basic point is that this is the exact kind of behavior we should expect as a side effect of the Software Craftsmanship movement.  By it&#39;s nature, it attempts to create a segregation between those who are &quot;in the know&quot; and those who are not, and he felt the behavior of Corey and others was a byproduct of this segregation.  They saw Heather as an &quot;other&quot; and were overly harsh in their criticisms, emboldened in so doing by their sense of Craftsmanship.  Neward took a lot of shit for this view on Twitter, with most people arguing that this was done by Software Craftsmen, but it wasn&#39;t done <strong>because</strong> they were Software Craftsmen, and it makes no sense to criticize the entire movement based on the action of a few members, regardless of how high their profile is.  Neward responded to all of this feedback in <a href="http://blogs.tedneward.com/2013/01/26/More+On+Craftsmanship.aspx">a second blog post</a>, where he reinforces his original point.</p><p>Uncle Bob Martin, one of the first five signers of the Software Craftsmanship Manifesto and author of Clean Code and The Clean Coder, then responded to all of this drama with <a href="http://blog.8thlight.com/uncle-bob/2013/01/30/The-Craftsman-And-The-Laborer.html">his own post</a>.  Bob takes particular issue with Neward&#39;s promotion of what he sees as the opposite of a Software Craftsman, a Software Laborer.  In Neward&#39;s words, a Laborer is someone &quot;who cranked out one crappy app after another in (what else?) Visual Basic [...] their apps were sloppy, bloated, and ugly...cut-and-paste cobbled-together duct-tape wonders.&quot;  At the end of the post, Neward bows &quot;with respect to the &quot;software laborers&quot; of the world, who churn out quality code without concern for &quot;craftsmanship&quot;, because their lives are more than just their code.&quot;</p>
+
+        <p><a href="/2013/02/02/brief-thoughts-on-software-craftsmanship/">Read the rest of "Brief Thoughts on Software Craftsmanship" &raquo;</a></p>
+			</div>
+		</div>
+	
 	</div>
 </div>
 
 <div class="pagination">
-  {% if paginator.previous_page %}
-    <a href="/page{{ paginator.previous_page }}" class="previous">&laquo; Newer</a>
-  {% else %}
+  
     <span class="previous"></span>
-  {% endif %}
-  <span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
-  {% if paginator.next_page %}
-    <a href="/page{{ paginator.next_page }}" class="next">Older &raquo;</a>
-  {% else %}
-    <span class="next "></span>
-  {% endif %}
+  
+  <span class="page_number ">Page: 1 of 9</span>
+  
+    <a href="/page2" class="next">Older &raquo;</a>
+  
 </div>
+    </div>  
+
+  </div><!-- /wrapper -->
+
+  <div id="sidebar-wrapper">
+   <div id="sidebars">
+      <div id="sidebar-left" class="sidebar">
+        <ul>
+          <li id="text-3" class="widget widget_text"> 
+            <div class="textwidget">
+              <img src="http://www.gravatar.com/avatar/68ca541f6f4eaedbe7d711cd651cf451.png?s=100" style="float: left; margin: 0px 5px 3px 0; border: 1px solid black; width: 50px; height: 50px" width=50 height=50>Absolutely No Machete Juggling is a blog about software, programming, computers, and me. I'm a programmer working in Colorado, mostly with Java and Ruby. <a href="/about.html">Read More...</a>
+            </div>
+          </li>
+          <li id="recent-posts" class="widget widget_recent_entries"> <h2 class="widgettitle">Recent Posts</h2>
+            <ul>
+                
+                  <li><a href="/2015/07/01/qconny-2015-a-review/">QCon New York 2015: A Review</a></li>
+                
+                  <li><a href="/2014/07/04/uploading-a-jekyll-site-to-rackspace-cloudfiles/">Uploading a Jekyll Site to Rackspace Cloudfiles</a></li>
+                
+                  <li><a href="/2014/06/24/the-worst-programming-interview-question/">The Worst Programming Interview Question</a></li>
+                
+                  <li><a href="/2014/02/05/top-10-career-changing-programming-books/">Top 10 Career-Changing Programming Books</a></li>
+                
+                  <li><a href="/2013/12/17/centurylink-traps-and-caps/">CenturyLink: Traps and Caps</a></li>
+                
+                  <li><a href="/2013/08/30/diving-into-android/">Diving Into Android</a></li>
+                
+                  <li><a href="/2013/07/30/oscon-2013-a-review/">OSCON 2013: A Review</a></li>
+                
+                  <li><a href="/2013/06/10/book-review-presentation-patterns/">Book Review: Presentation Patterns</a></li>
+                
+                  <li><a href="/2013/05/22/spring-2013-semester-in-review/">Spring 2013 Semester in Review</a></li>
+                
+                  <li><a href="/2013/02/02/brief-thoughts-on-software-craftsmanship/">Brief Thoughts on Software Craftsmanship</a></li>
+                
+            </ul>
+          </li> <!-- /recent-posts -->
+          <li id="tag_cloud" class="widget">
+            <h2 class="widgettitle">Tags</h2>
+            <div class="ctc">
+                
+                  <a href="/tag/code" style="font-size: 18pt">
+                    code
+                  </a>
+                
+                  <a href="/tag/java" style="font-size: 13pt">
+                    java
+                  </a>
+                
+                  <a href="/tag/career" style="font-size: 13pt">
+                    career
+                  </a>
+                
+                  <a href="/tag/school" style="font-size: 12pt">
+                    school
+                  </a>
+                
+                  <a href="/tag/ruby" style="font-size: 10pt">
+                    ruby
+                  </a>
+                
+                  <a href="/tag/agile" style="font-size: 10pt">
+                    agile
+                  </a>
+                
+                  <a href="/tag/book" style="font-size: 8pt">
+                    book
+                  </a>
+                
+                  <a href="/tag/computer-science" style="font-size: 8pt">
+                    computer science
+                  </a>
+                
+                  <a href="/tag/interview" style="font-size: 8pt">
+                    interview
+                  </a>
+                
+                  <a href="/tag/software" style="font-size: 8pt">
+                    software
+                  </a>
+                
+                  <a href="/tag/crossposted" style="font-size: 8pt">
+                    crossposted
+                  </a>
+                
+                  <a href="/tag/job" style="font-size: 8pt">
+                    job
+                  </a>
+                
+                  <a href="/tag/rails" style="font-size: 8pt">
+                    rails
+                  </a>
+                
+                  <a href="/tag/linux" style="font-size: 8pt">
+                    linux
+                  </a>
+                
+                  <a href="/tag/ubuntu" style="font-size: 8pt">
+                    ubuntu
+                  </a>
+                
+                  <a href="/tag/continuous-integration" style="font-size: 7pt">
+                    continuous integration
+                  </a>
+                
+                  <a href="/tag/business" style="font-size: 7pt">
+                    business
+                  </a>
+                
+                  <a href="/tag/compsci" style="font-size: 7pt">
+                    compsci
+                  </a>
+                
+                  <a href="/tag/open-source" style="font-size: 7pt">
+                    open source
+                  </a>
+                
+                  <a href="/tag/internet" style="font-size: 7pt">
+                    internet
+                  </a>
+                
+                  <a href="/tag/git" style="font-size: 7pt">
+                    git
+                  </a>
+                
+                  <a href="/tag/complexity" style="font-size: 7pt">
+                    complexity
+                  </a>
+                
+                  <a href="/tag/semester" style="font-size: 7pt">
+                    semester
+                  </a>
+                
+                  <a href="/tag/tdd" style="font-size: 7pt">
+                    tdd
+                  </a>
+                
+                  <a href="/tag/class" style="font-size: 7pt">
+                    class
+                  </a>
+                
+                  <a href="/tag/design" style="font-size: 7pt">
+                    design
+                  </a>
+                
+                  <a href="/tag/rant" style="font-size: 7pt">
+                    rant
+                  </a>
+                
+                  <a href="/tag/windows" style="font-size: 7pt">
+                    windows
+                  </a>
+                
+                  <a href="/tag/refactoring" style="font-size: 7pt">
+                    refactoring
+                  </a>
+                
+                  <a href="/tag/review" style="font-size: 7pt">
+                    review
+                  </a>
+                
+                  <a href="/tag/development" style="font-size: 7pt">
+                    development
+                  </a>
+                
+                  <a href="/tag/technical-debt" style="font-size: 7pt">
+                    technical debt
+                  </a>
+                
+                  <a href="/tag/planning" style="font-size: 7pt">
+                    planning
+                  </a>
+                
+                  <a href="/tag/estimating" style="font-size: 7pt">
+                    estimating
+                  </a>
+                
+                  <a href="/tag/automated-testing" style="font-size: 7pt">
+                    automated testing
+                  </a>
+                
+                  <a href="/tag/brain" style="font-size: 7pt">
+                    brain
+                  </a>
+                
+                  <a href="/tag/productivity" style="font-size: 7pt">
+                    productivity
+                  </a>
+                
+                  <a href="/tag/junit" style="font-size: 7pt">
+                    junit
+                  </a>
+                
+                  <a href="/tag/testing" style="font-size: 7pt">
+                    testing
+                  </a>
+                
+                  <a href="/tag/estimation" style="font-size: 7pt">
+                    estimation
+                  </a>
+                
+                  <a href="/tag/education" style="font-size: 7pt">
+                    education
+                  </a>
+                
+                  <a href="/tag/blog" style="font-size: 7pt">
+                    blog
+                  </a>
+                
+                  <a href="/tag/mac" style="font-size: 7pt">
+                    mac
+                  </a>
+                
+                  <a href="/tag/latex" style="font-size: 7pt">
+                    latex
+                  </a>
+                
+                  <a href="/tag/patch" style="font-size: 7pt">
+                    patch
+                  </a>
+                
+                  <a href="/tag/wordpress" style="font-size: 7pt">
+                    wordpress
+                  </a>
+                
+                  <a href="/tag/certification" style="font-size: 7pt">
+                    certification
+                  </a>
+                
+                  <a href="/tag/tests" style="font-size: 7pt">
+                    tests
+                  </a>
+                
+                  <a href="/tag/quality" style="font-size: 7pt">
+                    quality
+                  </a>
+                
+                  <a href="/tag/jenkins" style="font-size: 7pt">
+                    jenkins
+                  </a>
+                
+                  <a href="/tag/professionalism" style="font-size: 7pt">
+                    professionalism
+                  </a>
+                
+                  <a href="/tag/functional" style="font-size: 7pt">
+                    functional
+                  </a>
+                
+                  <a href="/tag/programming-languages" style="font-size: 7pt">
+                    programming languages
+                  </a>
+                
+                  <a href="/tag/story" style="font-size: 7pt">
+                    story
+                  </a>
+                
+                  <a href="/tag/scala" style="font-size: 7pt">
+                    scala
+                  </a>
+                
+                  <a href="/tag/college" style="font-size: 7pt">
+                    college
+                  </a>
+                
+                  <a href="/tag/rage" style="font-size: 7pt">
+                    rage
+                  </a>
+                
+                  <a href="/tag/c" style="font-size: 7pt">
+                    c#
+                  </a>
+                
+                  <a href="/tag/books" style="font-size: 7pt">
+                    books
+                  </a>
+                
+                  <a href="/tag/conference" style="font-size: 7pt">
+                    conference
+                  </a>
+                
+            </div>
+          </li><!-- /tag-cloud -->
+          <li class="widget widget_text" id="text-4">
+            <div class="textwidget">
+              <div align="center">
+                <a href="http://www.eff.org/action"><img src="/assets/eff.gif"></a>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div><!-- /sidebar-left -->
+
+      <div id="sidebar-right" class="sidebar">
+        <div id="social-icons">
+          
+              <a href="http://about.me/rodhilton" title="about.me" class="social-icon dimmed" style="background-color: #eeb111">
+                <img src="/assets/social/aboutme.png"/>
+              </a>
+          
+              <a href="https://twitter.com/rodhilton" title="Twitter" class="social-icon dimmed" style="background-color: #55acee">
+                <img src="/assets/social/twitter.png"/>
+              </a>
+          
+              <a href="http://www.linkedin.com/in/rodhilton" title="LinkedIn" class="social-icon dimmed" style="background-color: #0976b4">
+                <img src="/assets/social/linkedin.png"/>
+              </a>
+          
+              <a href="http://github.com/rodhilton" title="GitHub" class="social-icon dimmed" style="background-color: #000000">
+                <img src="/assets/social/github.png"/>
+              </a>
+          
+              <a href="http://speakerdeck.com/rodhilton" title="Speakerdeck" class="social-icon dimmed" style="background-color: #218d5e">
+                <img src="/assets/social/speakerdeck.png"/>
+              </a>
+          
+              <a href="https://coderwall.com/p/u/rodhilton" title="Coderwall" class="social-icon dimmed" style="background-color: #3990d0">
+                <img src="/assets/social/coderwall.png"/>
+              </a>
+          
+              <a href="https://facebook.com/rodhilton" title="Facebook" class="social-icon dimmed" style="background-color: #3b5998">
+                <img src="/assets/social/facebook.png"/>
+              </a>
+          
+              <a href="http://www.goodreads.com/user/show/1499157-rodhilton-hilton" title="Goodreads" class="social-icon dimmed" style="background-color: #76420a">
+                <img src="/assets/social/goodreads.png"/>
+              </a>
+          
+              <a href="http://letterboxd.com/rodhilton/films/ratings/" title="Letterboxd" class="social-icon dimmed" style="background-color: #21282f">
+                <img src="/assets/social/letterboxd.png"/>
+              </a>
+          
+              <a href="http://www.grouvee.com/user/rodhilton/shelves/3274-played" title="Grouvee" class="social-icon dimmed" style="background-color: #dda017">
+                <img src="/assets/social/grouvee.png"/>
+              </a>
+          
+              <a href="http://www.last.fm/user/rodhilton" title="Last.fm" class="social-icon dimmed" style="background-color: #c3000d">
+                <img src="/assets/social/lastfm.png"/>
+              </a>
+          
+              <a href="http://www.diigo.com/user/rodhilton" title="Diigo" class="social-icon dimmed" style="background-color: #0079ff">
+                <img src="/assets/social/diigo.png"/>
+              </a>
+          
+        </div>
+      </div><!-- /sidebar-right -->
+
+    </div><!-- /sidebars -->
+    </div><!--/sidebar-wrapper-->
+
+</div> <!-- /page -->
+
+<!-- Javascript -->
+<script type="text/javascript">
+/*The sidebar shouldn't be visible until it's been positioned, but just in case someone disables JS we leave it visible in CSS and immediately hide it here */
+$("#sidebars").css({visibility: "hidden"});
+</script>
+
+<script src="/scripts/editableCodeHighlight.js" type="text/javascript"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js" type="text/javascript"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.0/highlight.min.js"></script>
+
+<script src="/scripts/jquery.lazyload.mini.js"></script>
+
+<script type="text/javascript"
+   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<script src="/scripts/hyphenator/Hyphenator.js" type="text/javascript"></script>
+<script src="/scripts/hyphenator/patterns/en-us.js" type="text/javascript"></script>      
+<script src="/scripts/startup.js" type="text/javascript"></script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [["$$","$$"], ["\\(","\\)"]],
+      displayMath: [["$$$","$$$"],["\\[","\\]"]]
+    },
+    TeX: {
+      extensions: ["AMSmath.js", "AMSsymbols.js"]
+    },
+    "HTML-CSS": {
+      scale: 96
+    }
+  });
+</script>
+
+<script type="text/javascript">
+/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+var disqus_shortname = 'nomachetejuggling'; // required: replace example with your forum shortname
+
+/* * * DON'T EDIT BELOW THIS LINE * * */
+(function () {
+    var s = document.createElement('script'); s.async = true;
+    s.type = 'text/javascript';
+    s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+}());
+</script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-379031-4', 'auto');
+  ga('send', 'pageview');
+
+</script> 
+
+</body>
+</html>

@@ -1,0 +1,765 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Absolutely No Machete Juggling &raquo; Ubuntu, Tomcat, Jenkins, Git, and SSH Together</title>
+        <meta name="viewport" content="width=device-width" />
+        <link rel="alternate" type="application/rss+xml" title="Absolutely No Machete Juggling &raquo; All Posts" href="/rss.xml" />
+        
+        
+          <link rel="alternate" type="application/rss+xml" title="Absolutely No Machete Juggling &raquo; 'Life' Posts Only" href="/category/life/rss.xml" />
+        
+          <link rel="alternate" type="application/rss+xml" title="Absolutely No Machete Juggling &raquo; 'Programming' Posts Only" href="/category/programming/rss.xml" />
+        
+          <link rel="alternate" type="application/rss+xml" title="Absolutely No Machete Juggling &raquo; 'Technology' Posts Only" href="/category/technology/rss.xml" />
+        
+
+        <link rel="alternate" type="application/rss+xml" title="Absolutely No Machete Juggling &raquo; Comments" href="http://nomachetejuggling.disqus.com/latest.rss" />    
+
+        <link rel="icon" href="/assets/favicon.png" type="image/png">
+        <link rel="shortcut icon" href="/assets/favicon.png" type="image/png">
+
+        <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic|Source+Code+Pro|Architects+Daughter' rel='stylesheet' type='text/css'>
+
+        <link rel="stylesheet" href="/css/main.css">
+        <link rel="stylesheet" href="/css/googlecode.css">
+
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    </head>
+<body>
+<div id="page">
+  <div id="headerwrapper">
+    <div class="header">
+      <div class="headertitle">
+        <h1><a href="/" title="Absolutely No Machete Juggling: Rod Hilton&#039;s rants about stuff he cares about way too much.">Absolutely No Machete Juggling</a></h1>
+        <p>Rod Hilton&#039;s rants about stuff he cares about way too much...</p>
+      </div>
+    </div>
+  </div>
+  <div id="navbar">
+    <div id="navcontainer">
+      <ul id="navlist">
+  
+  <li class="cat-item "><a href="/">All</a></li>
+
+  
+    
+    <li class="cat-item "><a href="/category/life">LIFE</a>
+  
+    
+    <li class="cat-item current-cat"><a href="/category/programming">PROGRAMMING</a>
+  
+    
+    <li class="cat-item "><a href="/category/technology">TECHNOLOGY</a>
+  
+
+  
+    
+    <li class="menu-item "><a href="/about.html">ABOUT</a></li>
+  
+    
+    <li class="menu-item "><a href="/resume.html">RéSUMé</a></li>
+  
+    
+    <li class="menu-item "><a href="/projects.html">PROJECTS</a></li>
+  
+    
+    <li class="menu-item "><a href="/contact.html">CONTACT</a></li>
+  
+    
+    <li class="menu-item "><a href="/links.html">LINKS</a></li>
+  
+</ul><!-- /navlist -->
+    </div><!-- /navcontainer -->
+  </div><!-- /navbar -->
+
+  <div id="wrapper">
+    <div id="content">
+      <div class="post">
+	<div class="postheader">
+  	<h1 class="posttitle"><a href="/2011/07/31/ubuntu-tomcat-jenkins-git-ssh-togethe/">Ubuntu, Tomcat, Jenkins, Git, and SSH Together</a></h1>
+  	<div class="postmeta">
+		<p class="meta">
+		<b title="code, Continuous Integration, git, java, jenkins, linux, ssh, tomcat, and ubuntu">PROGRAMMING</b> - 
+		July 31, 2011 - 
+		2,259 words -
+		<a href="/2011/07/31/ubuntu-tomcat-jenkins-git-ssh-togethe/#disqus_thread">Comments</a>
+		</p>
+	</div>
+</div>
+	<div class="postentry">
+		<div class='toc no-hyphenate'><h1>Contents</h1><ol><li><a href='#toc-install-tomcat'>Install Tomcat</a></li><li><a href='#toc-install-jenkins'>Install Jenkins</a></li><li><a href='#toc-install-the-git-plugin'>Install The Git Plugin</a></li><li><a href='#toc-create-a-job'>Create a Job</a></li><ol><li><a href='#toc-set-up-ssh-keys-for-tomcat'>Set up SSH Keys For Tomcat</a></li><li><a href='#toc-adding-a-known-host'>Adding a Known Host</a></li><li><a href='#toc-avoid'>Avoid ~</a></li><li><a href='#toc-letting-jenkins-tag'>Letting Jenkins Tag</a></li></ol></div><p>I recently wanted to set up Jenkins on my personal workstation to manage builds for side and personal projects.  I was already running Tomcat on the system since I use that to run Subsonic, so I wanted to install Jenkins in the same container.</p>
+
+<p>The process of getting everything working was just short of a nightmare, but I managed to eventually get my Jenkins inside of Tomcat successfully checking out and building projects through Git.  While I was dealing with various errors, I was doing a lot of Googling.  My searches seemed to indicate that very few people were trying to set things up as I was, because the internet was very little help.  When hours of Googling turns up nothing, you know you either have a) a technical problem that nobody else has tried to solve or b) a weird fetish.</p>
+
+<p>So I&#39;ve written this post to explain how to set things up.  But rather than a simple tutorial, I&#39;ve written it as a step-by-step account of the various difficulties I had setting it up.  I&#39;ve done this partially to draw a little bit of attention to a gap in the error messaging of these tools, but mostly so that the next person who Googles for specific error messages may come across this page and avoid some headaches.</p>
+
+<p>Ultimately, what I wanted was Jenkins installed in Tomcat running as a system service in Ubuntu to be able to check out projects via Git repositories via the SSH protocol.  I will assume you already have Git installed because it is awesome, but if not it&#39;s as easy as using your package manager.</p>
+
+<h1 id=toc-install-tomcat>Install Tomcat</h1>
+
+<p>So first, the easy stuff:</p>
+<div class="highlight"><pre><code class="language-terminal" data-lang="terminal">$ sudo apt-get install tomcat6
+</code></pre></div>
+<p>The out-of-the-box Tomcat configuration was fine for my purposes, though it&#39;s worth mentioning that if your server is going to be accessed remotely, you may want to change the default Tomcat port.</p>
+
+<p>To do this, you have to modify the Tomcat configuration a bit.  One of the things I dislike slightly about installing packages from the Ubuntu repository is that I never know what the default paths are.</p>
+
+<p>In this case, here are the paths you might care about:</p>
+
+<ul>
+<li><code>/var/lib/tomcat6</code> - These are the Java-y files for Tomcat.  If you were to just extract Tomcat&#39;s tar file and run it as a local user, these are the files you&#39;d mostly be looking at.</li>
+<li><code>/usr/share/tomcat6</code> - These are the more Linux-y files for Tomcat.  Tomcat&#39;s binaries, shell scripts, bootstrap files, etc.</li>
+</ul>
+
+<p>The default port for Tomcat is in it&#39;s <code>server.xml</code> file, which you will find in <code>/var/lib/tomcat6/conf</code> (this is actually a symlink to <code>/etc/tomcat6</code> but I won&#39;t tell if you won&#39;t).</p>
+
+<p>Do a little <code>sudo service tomcat6 restart</code> and check <code>http://localhost:8080</code> in a browser to make sure your Tomcat is okay (obviously, if you changed your port, go there instead).</p>
+
+<h1 id=toc-install-jenkins>Install Jenkins</h1>
+
+<p>We will be deploying Jenkins not as a standalone server, or even using the Ubuntu repository&#39;s version (it has one).  That means we need the war file.  Go <a href="http://mirrors.jenkins-ci.org/war/latest/">download</a> it.</p>
+
+<p>Deploying a webapp to Tomcat is more Java-y than Linux-y, so copy the war file to <code>/var/lib/tomcat6/webapps</code>.  As long as the war file is readable, Tomcat will extract it into a new directory of it&#39;s own creation, so this should go pretty smoothly.</p>
+
+<p>If you check <code>http://localhost:8080/jenkins</code> now, you&#39;ll get your first error:</p>
+<div class="highlight"><pre><code class="language-output" data-lang="output">Unable to create the home directory &#39;/usr/share/tomcat6/.jenkins&#39;. This is most likely a permission problem.
+
+To change the home directory, use JENKINS_HOME environment variable or set the JENKINS_HOME system property. See Container-specific documentation for more details of how to do this.
+</code></pre></div>
+<p>Jenkins depends on an environment variable called <code>JENKINS_HOME</code> being set.  Most solutions for this offered by the internet suggest setting the <code>CATALINA_OPTS</code> environment variable, and they all generally assume you are running Tomcat as yourself rather than a system user.</p>
+
+<p>Jenkins actually does something handy when <code>JENKINS_HOME</code> is not set: it sets it for you, as <code>.jenkins</code>.  Of course, it assumes this directory exists relative to where it executing, which means it&#39;s looking in <code>/usr/share/tomcat6</code>.</p>
+<div class="highlight"><pre><code class="language-terminal" data-lang="terminal">$ cd /usr/share/tomcat6
+$ sudo mkdir .jenkins
+$ sudo chown tomcat6:nogroup .jenkins
+</code></pre></div>
+<p>Jenkins will be making lots of files in <code>JENKINS_HOME</code>, but Jenkins is executing from inside of Tomcat, which is running as the user <code>tomcat6</code>.  As long as <code>.jenkins</code> is writeable by Tomcat, this should be all you need to make Jenkins happy.</p>
+
+<p>Even once you fix this, Jenkins is in a confused state.  The easiest thing to do is restart Tomcat, so <code>sudo service tomcat6 restart</code> again.  You won&#39;t have to do it much anymore.</p>
+
+<p>Once you load Jenkins in your browser, you should see that things are happy again.</p>
+
+<h1 id=toc-install-the-git-plugin>Install The Git Plugin</h1>
+
+<p>Jenkins needs to have the Git plugin installed in order to check out source code from Git repositories.  Click &quot;Manage Jenkins&quot;, followed by &quot;Manage Plugins&quot;, then navigate to the &quot;Available&quot; tab.</p>
+
+<p>Find &quot;Git Plugin&quot;, check it off, then scroll down and click &quot;Install&quot;.  Jenkins will tell you that it is checking your internet connection and then downloading the Git Plugin.  It will eventually say it succeeded. Click the &quot;restart&quot; checkbox and Jenkins will restart.</p>
+
+<p>Then you can go back to &quot;Manage Plugins&quot; and go to the &quot;Installed&quot; tab to make sure that it installed correctly.</p>
+
+<p>Unless Jenkins has fixed something between the time of writing this post and the time you&#39;re reading it, you will notice that the Git Plugin is not in the list of installed plugins.  No matter how many times you install it, the result will be the same.  If this is not happening to you, you can skip to the next step.  Otherwise, read on.</p>
+
+<p>What is happening is that Jenkins didn&#39;t actually download the plugin file, but Jenkins thinks it did.  Go to <code>/usr/share/tomcat6/.jenkins/plugins</code>.  Notice a file named <code>git.hpi</code> is there, as well as a directory named <code>git</code>, which is empty.  Also notice how extremely small the plugin file (the .hpi file) is compared to others.</p>
+<div class="highlight"><pre><code class="language-output" data-lang="output">$ ls -l
+drwxr-xr-x 4 tomcat6 tomcat6    4096 2011-07-31 17:03 cvs
+-rw-r--r-- 1 tomcat6 tomcat6  189373 2011-07-25 17:46 cvs.hpi
+drwxr-xr-x 2 tomcat6 tomcat6    4096 2011-07-31 17:08 git
+-rw-r--r-- 1 tomcat6 tomcat6     329 2011-07-31 17:06 git.hpi
+drwxr-xr-x 4 tomcat6 tomcat6    4096 2011-07-31 17:03 maven-plugin
+-rw-r--r-- 1 tomcat6 tomcat6 7935221 2011-07-25 17:46 maven-plugin.hpi
+drwxr-xr-x 4 tomcat6 tomcat6    4096 2011-07-31 17:03 ssh-slaves
+-rw-r--r-- 1 tomcat6 tomcat6   49018 2011-07-25 17:46 ssh-slaves.hpi
+drwxr-xr-x 4 tomcat6 tomcat6    4096 2011-07-31 17:03 subversion
+-rw-r--r-- 1 tomcat6 tomcat6 2097909 2011-07-25 17:46 subversion.hpi
+</code></pre></div>
+<p>Now run <code>cat git.hpi</code>.  This is what I got:</p>
+<div class="highlight"><pre><code class="language-html" data-lang="html">&lt;!DOCTYPE HTML PUBLIC &quot;-//IETF//DTD HTML 2.0//EN&quot;&gt;
+&lt;html&gt;&lt;head&gt;
+&lt;title&gt;302 Found&lt;/title&gt;
+&lt;/head&gt;&lt;body&gt;
+&lt;h1&gt;Found&lt;/h1&gt;
+&lt;p&gt;The document has moved &lt;a href=&quot;http://mirrors.jenkins-ci.org/plugins/git/1.1.11/git.hpi&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;address&gt;Apache/2.2.12 (Ubuntu) Server at updates.jenkins-ci.org Port 443&lt;/address&gt;
+&lt;/body&gt;&lt;/html&gt;
+</code></pre></div>
+<p>So the file moved and what Jenkins downloaded was the HTML file directing us to the right place.  Just copy the correct url (in my case http://mirrors.jenkins-ci.org/plugins/git/1.1.11/git.hpi) and do this:</p>
+<div class="highlight"><pre><code class="language-terminal" data-lang="terminal">$ sudo rm -r git
+$ sudo rm git.hpi
+$ sudo wget
+  http://mirrors.jenkins-ci.org/plugins/git/1.1.11/git.hpi
+</code></pre></div>
+<p>You need to restart Jenkins, but the easiest thing to do is restart Tomcat yet again.</p>
+
+<p>Afterwards when Jenkins comes back up you should see the Git plugin installed correctly.</p>
+
+<h1 id=toc-create-a-job>Create a Job</h1>
+
+<p>The next thing to do is create your job, which means giving your Git repo URL.  For the purpose of this post, I will assume your URL is <code>ssh://user@mydomain.com:22/~/git/project.git</code>.</p>
+
+<p>It&#39;s a good idea, for a number of reasons, to make sure you can check out your repository yourself before you try to make Jenkins do it.</p>
+<div class="highlight"><pre><code class="language-terminal" data-lang="terminal">$ git clone ssh://user@mydomain.com:22/~/git/project.git
+</code></pre></div>
+<p>If you&#39;re asked for a password, stop and <a href="http://pkeck.myweb.uga.edu/ssh/">set up ssh keys</a>.  This ensures you won&#39;t have to type passwords anymore.</p>
+
+<p>Once you give your Git repo URL to Jenkins, tell it to go ahead and make a build.</p>
+
+<h2 id=toc-set-up-ssh-keys-for-tomcat>Set up SSH Keys For Tomcat</h2>
+
+<p>Your first build should fail, and if you click on the failed job and click Console Output you will see something like this:</p>
+<div class="highlight"><pre><code class="language-output" data-lang="output">Permission denied, please try again.
+Permission denied (publickey,gssapi-with-mic,password).
+fatal: The remote end hung up unexpectedly
+
+ERROR: Could not fetch from any repository
+FATAL: Could not fetch from any repository
+hudson.plugins.git.GitException: Could not fetch from any repository
+    at hudson.plugins.git.GitSCM$2.invoke(GitSCM.java:959)
+    at hudson.plugins.git.GitSCM$2.invoke(GitSCM.java:919)
+    at hudson.FilePath.act(FilePath.java:758)
+    at hudson.FilePath.act(FilePath.java:740)
+    at hudson.plugins.git.GitSCM.checkout(GitSCM.java:919)
+    at hudson.model.AbstractProject.checkout(AbstractProject.java:1193)
+    at hudson.model.AbstractBuild$AbstractRunner.checkout(AbstractBuild.java:555)
+    at hudson.model.AbstractBuild$AbstractRunner.run(AbstractBuild.java:443)
+    at hudson.model.Run.run(Run.java:1376)
+    at hudson.model.FreeStyleBuild.run(FreeStyleBuild.java:46)
+    at hudson.model.ResourceController.execute(ResourceController.java:88)
+    at hudson.model.Executor.run(Executor.java:175)
+</code></pre></div>
+<p>There&#39;s no easy way to make Jenkins use a password, so you will need to set up keys for Jenkins as well.  Remember, Jenkins is running as the user <code>tomcat6</code>, so the fact that you can check out from the repo fine doesn&#39;t mean anything.</p>
+
+<p>To generate a key for tomcat, do the following:</p>
+<div class="highlight"><pre><code class="language-terminal" data-lang="terminal">$ cd /usr/share/tomcat6/
+$ sudo mkdir .ssh
+$ sudo ssh-keygen -t rsa -C &quot;tomcat@localhost&quot;
+</code></pre></div>
+<p>When asked, type the location of your new file as /usr/share/tomcat6/.ssh/id_rsa and when it&#39;s generated, do:</p>
+<div class="highlight"><pre><code class="language-terminal" data-lang="terminal">$ sudo chown -R tomcat6:nogroup .ssh
+</code></pre></div>
+<p>Now you need to SSH up to the server hosting your git repository and edit the <code>~/.ssh/authorized_keys</code> file to add the contents of <code>/usr/share/tomcat6/.ssh/id_rsa.pub</code> to it.</p>
+
+<p>You can actually think of <code>/usr/share/tomcat6/</code> as if it were the tomcat6 home directory.  Since a <code>.ssh</code> directory goes in your home directory normally, putting one there will have the same effects, as will any files you put there.</p>
+
+<h2 id=toc-adding-a-known-host>Adding a Known Host</h2>
+
+<p>Build your project and it will still fail. This time the error will look like this:</p>
+<div class="highlight"><pre><code class="language-output" data-lang="output">Host key verification failed.
+fatal: The remote end hung up unexpectedly
+
+Trying next repository
+ERROR: Could not clone repository
+FATAL: Could not clone
+hudson.plugins.git.GitException: Could not clone
+    at hudson.plugins.git.GitSCM$2.invoke(GitSCM.java:993)
+    at hudson.plugins.git.GitSCM$2.invoke(GitSCM.java:919)
+    at hudson.FilePath.act(FilePath.java:758)
+    at hudson.FilePath.act(FilePath.java:740)
+    at hudson.plugins.git.GitSCM.checkout(GitSCM.java:919)
+    at hudson.model.AbstractProject.checkout(AbstractProject.java:1193)
+    at hudson.model.AbstractBuild$AbstractRunner.checkout(AbstractBuild.java:555)
+    at hudson.model.AbstractBuild$AbstractRunner.run(AbstractBuild.java:443)
+    at hudson.model.Run.run(Run.java:1376)
+    at hudson.model.FreeStyleBuild.run(FreeStyleBuild.java:46)
+    at hudson.model.ResourceController.execute(ResourceController.java:88)
+    at hudson.model.Executor.run(Executor.java:175)
+</code></pre></div>
+<p>The problem now is that, even though your git repo trusts Jenkins, Jenkins doesn&#39;t really trust the git repo.</p>
+
+<p>To fix this, do the following:</p>
+<div class="highlight"><pre><code class="language-terminal" data-lang="terminal">$ cat ~/.ssh/known_hosts
+</code></pre></div>
+<p>You&#39;ll see a number of entries here.  These are all of the hosts that you SSH&#39;d into and, when asked, said you trust them based on their fingerprints.  One of those hosts is your git repository, but you&#39;re more or less safe just doing:</p>
+<div class="highlight"><pre><code class="language-terminal" data-lang="terminal">$ sudo cp ~/.ssh/known_hosts /usr/share/tomcat6/.ssh/known_hosts
+$ sudo chown tomcat6:nogroup /usr/share/tomcat6/.ssh/known_hosts
+</code></pre></div>
+<h2 id=toc-avoid>Avoid ~</h2>
+
+<p>Build again.  You may see an error that looks like this:</p>
+<div class="highlight"><pre><code class="language-output" data-lang="output">fatal: &#39;~/git/project.git &#39; does not appear to be a git repository
+fatal: The remote end hung up unexpectedly
+
+Trying next repository
+ERROR: Could not clone repository
+FATAL: Could not clone
+</code></pre></div>
+<p>For some reason, even though my local git is perfectly happy checking out a repository with <code>~</code> used to specify the home directory of the remote user, the git Jenkins is using hates it.</p>
+
+<p>This is easy to fix, simply replace the <code>~</code> if you are using one with the full remote path to your repo, such as <code>ssh://user@mydomain.com:22/home/user/git/project.git</code></p>
+
+<h2 id=toc-letting-jenkins-tag>Letting Jenkins Tag</h2>
+
+<p>Build again and you should get a totally new kind of failure.</p>
+<div class="highlight"><pre><code class="language-output" data-lang="output">FATAL: Could not apply tag jenkins-project-5
+hudson.plugins.git.GitException: Could not apply tag jenkins-project-5
+    at hudson.plugins.git.GitAPI.tag(GitAPI.java:698)
+    at hudson.plugins.git.GitSCM$4.invoke(GitSCM.java:1181)
+    at hudson.plugins.git.GitSCM$4.invoke(GitSCM.java:1129)
+    at hudson.FilePath.act(FilePath.java:758)
+    at hudson.FilePath.act(FilePath.java:740)
+    at hudson.plugins.git.GitSCM.checkout(GitSCM.java:1129)
+    at hudson.model.AbstractProject.checkout(AbstractProject.java:1193)
+    at hudson.model.AbstractBuild$AbstractRunner.checkout(AbstractBuild.java:555)
+    at hudson.model.AbstractBuild$AbstractRunner.run(AbstractBuild.java:443)
+    at hudson.model.Run.run(Run.java:1376)
+    at hudson.model.FreeStyleBuild.run(FreeStyleBuild.java:46)
+    at hudson.model.ResourceController.execute(ResourceController.java:88)
+    at hudson.model.Executor.run(Executor.java:175)
+Caused by: hudson.plugins.git.GitException: Error performing command: git tag -a -f -m Jenkins Build #5 jenkins-project-5
+Command &quot;git tag -a -f -m Jenkins Build #11 jenkins-project-5&quot; returned status code 128:
+*** Please tell me who you are.
+</code></pre></div>
+<p>What&#39;s happening now is that your build is actually successfully checking out your code.  Jenkins tries to make a tag in git so that you know the build number for any given set of commits.  Unfortunately, git is not configured with a name to put as the person creating that tag, so it explodes.</p>
+
+<p>It would be nice to set global config here, but I don&#39;t know of any easy way to do so for the <code>tomcat6</code> user.  If you know of a way, please let me know in the comments.</p>
+
+<p>To fix this, we need to set project-level config options for git.</p>
+<div class="highlight"><pre><code class="language-terminal" data-lang="terminal">$ cd /usr/share/tomcat6/.jenkins/jobs/project/workspace
+$ sudo git config user.email &quot;jenkins@localhost&quot;
+$ sudo git config user.name &quot;Jenkins&quot;
+</code></pre></div>
+<p>Obviously you will have to use the name of your job rather than <code>project</code> above.  You have to do this for any job that you create.</p>
+
+<p>Alternatively, you can set the options globally for the Tomcat user by creating a new file, <code>/usr/share/tomcat6/.gitconfig</code> and putting something like this in it:</p>
+<div class="highlight"><pre><code class="language-ini" data-lang="ini">[user]
+name = Jenkins
+email = jenkins@domain
+</code></pre></div>
+<p><strong>UPDATE</strong>: I&#39;ve discovered a better way of doing this part.  In &quot;Manage Jenkins&quot; there&#39;s actually a &quot;Git Plugin&quot; field set that lets you set this from within Jenkins itself.</p>
+
+<table class='image aligncenter' width='537'><tr><td><img src='/assets/Screen-shot-2011-08-05-at-9.01.03-AM.png' width='531' height='100'/></td></tr></table>
+
+<p>Click build again, and it should actually succeed.</p>
+
+<p>If you&#39;re building java projects, you may get an error with something Maven or Ivy.  This is likely more permissions difficulties, and generally making a <code>.m2</code> or <code>.ivy</code> directory in <code>/usr/share/tomcat6</code> and ensuring that it is owned and writable by the <code>tomcat6</code> user will fix things.  Part of me wonders if setting <code>/usr/share/tomcat6</code> writeable by the <code>tomcat6</code> user would save a lot of headaches, but I&#39;m not sure if that has security implications I&#39;m not considering, so I haven&#39;t done it.</p>
+
+<p>I&#39;m not a Linux, Tomcat, Jenkins, Git, or SSH guru by any stretch of the imagination.  If you know of a better way to do one of the steps above, please leave a comment and let me (and anyone else who finds this post) know.</p>
+
+<p>Happy integrating!</p>
+
+	</div>
+</div>
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'nomachetejuggling'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    
+    </div>  
+
+  </div><!-- /wrapper -->
+
+  <div id="sidebar-wrapper">
+   <div id="sidebars">
+      <div id="sidebar-left" class="sidebar">
+        <ul>
+          <li id="text-3" class="widget widget_text"> 
+            <div class="textwidget">
+              <img src="http://www.gravatar.com/avatar/68ca541f6f4eaedbe7d711cd651cf451.png?s=100" style="float: left; margin: 0px 5px 3px 0; border: 1px solid black; width: 50px; height: 50px" width=50 height=50>Absolutely No Machete Juggling is a blog about software, programming, computers, and me. I'm a programmer working in Colorado, mostly with Java and Ruby. <a href="/about.html">Read More...</a>
+            </div>
+          </li>
+          <li id="recent-posts" class="widget widget_recent_entries"> <h2 class="widgettitle">Recent Posts</h2>
+            <ul>
+                
+                  <li><a href="/2015/07/01/qconny-2015-a-review/">QCon New York 2015: A Review</a></li>
+                
+                  <li><a href="/2014/07/04/uploading-a-jekyll-site-to-rackspace-cloudfiles/">Uploading a Jekyll Site to Rackspace Cloudfiles</a></li>
+                
+                  <li><a href="/2014/06/24/the-worst-programming-interview-question/">The Worst Programming Interview Question</a></li>
+                
+                  <li><a href="/2014/02/05/top-10-career-changing-programming-books/">Top 10 Career-Changing Programming Books</a></li>
+                
+                  <li><a href="/2013/12/17/centurylink-traps-and-caps/">CenturyLink: Traps and Caps</a></li>
+                
+                  <li><a href="/2013/08/30/diving-into-android/">Diving Into Android</a></li>
+                
+                  <li><a href="/2013/07/30/oscon-2013-a-review/">OSCON 2013: A Review</a></li>
+                
+                  <li><a href="/2013/06/10/book-review-presentation-patterns/">Book Review: Presentation Patterns</a></li>
+                
+                  <li><a href="/2013/05/22/spring-2013-semester-in-review/">Spring 2013 Semester in Review</a></li>
+                
+                  <li><a href="/2013/02/02/brief-thoughts-on-software-craftsmanship/">Brief Thoughts on Software Craftsmanship</a></li>
+                
+            </ul>
+          </li> <!-- /recent-posts -->
+          <li id="tag_cloud" class="widget">
+            <h2 class="widgettitle">Tags</h2>
+            <div class="ctc">
+                
+                  <a href="/tag/code" style="font-size: 18pt">
+                    code
+                  </a>
+                
+                  <a href="/tag/java" style="font-size: 13pt">
+                    java
+                  </a>
+                
+                  <a href="/tag/career" style="font-size: 13pt">
+                    career
+                  </a>
+                
+                  <a href="/tag/school" style="font-size: 12pt">
+                    school
+                  </a>
+                
+                  <a href="/tag/ruby" style="font-size: 10pt">
+                    ruby
+                  </a>
+                
+                  <a href="/tag/agile" style="font-size: 10pt">
+                    agile
+                  </a>
+                
+                  <a href="/tag/book" style="font-size: 8pt">
+                    book
+                  </a>
+                
+                  <a href="/tag/computer-science" style="font-size: 8pt">
+                    computer science
+                  </a>
+                
+                  <a href="/tag/interview" style="font-size: 8pt">
+                    interview
+                  </a>
+                
+                  <a href="/tag/software" style="font-size: 8pt">
+                    software
+                  </a>
+                
+                  <a href="/tag/crossposted" style="font-size: 8pt">
+                    crossposted
+                  </a>
+                
+                  <a href="/tag/job" style="font-size: 8pt">
+                    job
+                  </a>
+                
+                  <a href="/tag/rails" style="font-size: 8pt">
+                    rails
+                  </a>
+                
+                  <a href="/tag/linux" style="font-size: 8pt">
+                    linux
+                  </a>
+                
+                  <a href="/tag/ubuntu" style="font-size: 8pt">
+                    ubuntu
+                  </a>
+                
+                  <a href="/tag/continuous-integration" style="font-size: 7pt">
+                    continuous integration
+                  </a>
+                
+                  <a href="/tag/business" style="font-size: 7pt">
+                    business
+                  </a>
+                
+                  <a href="/tag/compsci" style="font-size: 7pt">
+                    compsci
+                  </a>
+                
+                  <a href="/tag/open-source" style="font-size: 7pt">
+                    open source
+                  </a>
+                
+                  <a href="/tag/internet" style="font-size: 7pt">
+                    internet
+                  </a>
+                
+                  <a href="/tag/git" style="font-size: 7pt">
+                    git
+                  </a>
+                
+                  <a href="/tag/complexity" style="font-size: 7pt">
+                    complexity
+                  </a>
+                
+                  <a href="/tag/semester" style="font-size: 7pt">
+                    semester
+                  </a>
+                
+                  <a href="/tag/tdd" style="font-size: 7pt">
+                    tdd
+                  </a>
+                
+                  <a href="/tag/class" style="font-size: 7pt">
+                    class
+                  </a>
+                
+                  <a href="/tag/design" style="font-size: 7pt">
+                    design
+                  </a>
+                
+                  <a href="/tag/rant" style="font-size: 7pt">
+                    rant
+                  </a>
+                
+                  <a href="/tag/windows" style="font-size: 7pt">
+                    windows
+                  </a>
+                
+                  <a href="/tag/refactoring" style="font-size: 7pt">
+                    refactoring
+                  </a>
+                
+                  <a href="/tag/review" style="font-size: 7pt">
+                    review
+                  </a>
+                
+                  <a href="/tag/development" style="font-size: 7pt">
+                    development
+                  </a>
+                
+                  <a href="/tag/technical-debt" style="font-size: 7pt">
+                    technical debt
+                  </a>
+                
+                  <a href="/tag/planning" style="font-size: 7pt">
+                    planning
+                  </a>
+                
+                  <a href="/tag/estimating" style="font-size: 7pt">
+                    estimating
+                  </a>
+                
+                  <a href="/tag/automated-testing" style="font-size: 7pt">
+                    automated testing
+                  </a>
+                
+                  <a href="/tag/brain" style="font-size: 7pt">
+                    brain
+                  </a>
+                
+                  <a href="/tag/productivity" style="font-size: 7pt">
+                    productivity
+                  </a>
+                
+                  <a href="/tag/junit" style="font-size: 7pt">
+                    junit
+                  </a>
+                
+                  <a href="/tag/testing" style="font-size: 7pt">
+                    testing
+                  </a>
+                
+                  <a href="/tag/estimation" style="font-size: 7pt">
+                    estimation
+                  </a>
+                
+                  <a href="/tag/education" style="font-size: 7pt">
+                    education
+                  </a>
+                
+                  <a href="/tag/blog" style="font-size: 7pt">
+                    blog
+                  </a>
+                
+                  <a href="/tag/mac" style="font-size: 7pt">
+                    mac
+                  </a>
+                
+                  <a href="/tag/latex" style="font-size: 7pt">
+                    latex
+                  </a>
+                
+                  <a href="/tag/patch" style="font-size: 7pt">
+                    patch
+                  </a>
+                
+                  <a href="/tag/wordpress" style="font-size: 7pt">
+                    wordpress
+                  </a>
+                
+                  <a href="/tag/certification" style="font-size: 7pt">
+                    certification
+                  </a>
+                
+                  <a href="/tag/tests" style="font-size: 7pt">
+                    tests
+                  </a>
+                
+                  <a href="/tag/quality" style="font-size: 7pt">
+                    quality
+                  </a>
+                
+                  <a href="/tag/jenkins" style="font-size: 7pt">
+                    jenkins
+                  </a>
+                
+                  <a href="/tag/professionalism" style="font-size: 7pt">
+                    professionalism
+                  </a>
+                
+                  <a href="/tag/functional" style="font-size: 7pt">
+                    functional
+                  </a>
+                
+                  <a href="/tag/programming-languages" style="font-size: 7pt">
+                    programming languages
+                  </a>
+                
+                  <a href="/tag/story" style="font-size: 7pt">
+                    story
+                  </a>
+                
+                  <a href="/tag/scala" style="font-size: 7pt">
+                    scala
+                  </a>
+                
+                  <a href="/tag/college" style="font-size: 7pt">
+                    college
+                  </a>
+                
+                  <a href="/tag/rage" style="font-size: 7pt">
+                    rage
+                  </a>
+                
+                  <a href="/tag/c" style="font-size: 7pt">
+                    c#
+                  </a>
+                
+                  <a href="/tag/books" style="font-size: 7pt">
+                    books
+                  </a>
+                
+                  <a href="/tag/conference" style="font-size: 7pt">
+                    conference
+                  </a>
+                
+            </div>
+          </li><!-- /tag-cloud -->
+          <li class="widget widget_text" id="text-4">
+            <div class="textwidget">
+              <div align="center">
+                <a href="http://www.eff.org/action"><img src="/assets/eff.gif"></a>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div><!-- /sidebar-left -->
+
+      <div id="sidebar-right" class="sidebar">
+        <div id="social-icons">
+          
+              <a href="http://about.me/rodhilton" title="about.me" class="social-icon dimmed" style="background-color: #eeb111">
+                <img src="/assets/social/aboutme.png"/>
+              </a>
+          
+              <a href="https://twitter.com/rodhilton" title="Twitter" class="social-icon dimmed" style="background-color: #55acee">
+                <img src="/assets/social/twitter.png"/>
+              </a>
+          
+              <a href="http://www.linkedin.com/in/rodhilton" title="LinkedIn" class="social-icon dimmed" style="background-color: #0976b4">
+                <img src="/assets/social/linkedin.png"/>
+              </a>
+          
+              <a href="http://github.com/rodhilton" title="GitHub" class="social-icon dimmed" style="background-color: #000000">
+                <img src="/assets/social/github.png"/>
+              </a>
+          
+              <a href="http://speakerdeck.com/rodhilton" title="Speakerdeck" class="social-icon dimmed" style="background-color: #218d5e">
+                <img src="/assets/social/speakerdeck.png"/>
+              </a>
+          
+              <a href="https://coderwall.com/p/u/rodhilton" title="Coderwall" class="social-icon dimmed" style="background-color: #3990d0">
+                <img src="/assets/social/coderwall.png"/>
+              </a>
+          
+              <a href="https://facebook.com/rodhilton" title="Facebook" class="social-icon dimmed" style="background-color: #3b5998">
+                <img src="/assets/social/facebook.png"/>
+              </a>
+          
+              <a href="http://www.goodreads.com/user/show/1499157-rodhilton-hilton" title="Goodreads" class="social-icon dimmed" style="background-color: #76420a">
+                <img src="/assets/social/goodreads.png"/>
+              </a>
+          
+              <a href="http://letterboxd.com/rodhilton/films/ratings/" title="Letterboxd" class="social-icon dimmed" style="background-color: #21282f">
+                <img src="/assets/social/letterboxd.png"/>
+              </a>
+          
+              <a href="http://www.grouvee.com/user/rodhilton/shelves/3274-played" title="Grouvee" class="social-icon dimmed" style="background-color: #dda017">
+                <img src="/assets/social/grouvee.png"/>
+              </a>
+          
+              <a href="http://www.last.fm/user/rodhilton" title="Last.fm" class="social-icon dimmed" style="background-color: #c3000d">
+                <img src="/assets/social/lastfm.png"/>
+              </a>
+          
+              <a href="http://www.diigo.com/user/rodhilton" title="Diigo" class="social-icon dimmed" style="background-color: #0079ff">
+                <img src="/assets/social/diigo.png"/>
+              </a>
+          
+        </div>
+      </div><!-- /sidebar-right -->
+
+    </div><!-- /sidebars -->
+    </div><!--/sidebar-wrapper-->
+
+</div> <!-- /page -->
+
+<!-- Javascript -->
+<script type="text/javascript">
+/*The sidebar shouldn't be visible until it's been positioned, but just in case someone disables JS we leave it visible in CSS and immediately hide it here */
+$("#sidebars").css({visibility: "hidden"});
+</script>
+
+<script src="/scripts/editableCodeHighlight.js" type="text/javascript"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js" type="text/javascript"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.0/highlight.min.js"></script>
+
+<script src="/scripts/jquery.lazyload.mini.js"></script>
+
+<script type="text/javascript"
+   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<script src="/scripts/hyphenator/Hyphenator.js" type="text/javascript"></script>
+<script src="/scripts/hyphenator/patterns/en-us.js" type="text/javascript"></script>      
+<script src="/scripts/startup.js" type="text/javascript"></script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [["$$","$$"], ["\\(","\\)"]],
+      displayMath: [["$$$","$$$"],["\\[","\\]"]]
+    },
+    TeX: {
+      extensions: ["AMSmath.js", "AMSsymbols.js"]
+    },
+    "HTML-CSS": {
+      scale: 96
+    }
+  });
+</script>
+
+<script type="text/javascript">
+/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+var disqus_shortname = 'nomachetejuggling'; // required: replace example with your forum shortname
+
+/* * * DON'T EDIT BELOW THIS LINE * * */
+(function () {
+    var s = document.createElement('script'); s.async = true;
+    s.type = 'text/javascript';
+    s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+}());
+</script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-379031-4', 'auto');
+  ga('send', 'pageview');
+
+</script> 
+
+</body>
+</html>

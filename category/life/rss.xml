@@ -1,0 +1,1230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Absolutely No Machete Juggling &raquo; Life</title>
+		<description>Rod Hilton&amp;#039;s rants about stuff he cares about way too much.</description>		
+		<link>http://www.nomachetejuggling.com</link>
+		<atom:link href="http://www.nomachetejuggling.com/category/life/rss.xml" rel="self" type="application/rss+xml" />
+		
+			<item>
+				<title>Spring 2013 Semester in Review</title>
+				<description>&lt;p&gt;Another semester is over, and it was quite the doozy like the last one.  This time, however, it wasn&amp;#39;t because I hated the workload (like last semester) but because I hated the material.  Or more specifically, half of it, but more on that later.&lt;/p&gt;
+
+&lt;p&gt;This semester, I finally took the cross-department course from the Business School that I was dreading.  My school&amp;#39;s program is a joint-degree, Computer Science and Information Systems, with the CS stuff coming from the Engineering school and the IS stuff coming from the Business school.  The degree has a number of requirements but one of them is that you must take at least one PhD-level class in each school.  This means that I am able to take nothing but pure-CS courses, except I have to take one PhD-level course in the Business school.  I&amp;#39;ve been dreading this since I started, somehow hoping this requirement would be removed before I had to take it, but this was not the case, and I had to take it this semester.  With the credits I am able to transfer from my Master&amp;#39;s degree, this actually completes all of my course requirements, but because I was interested I also took a course on Graph Theory, which was a class crosslisted as both an undergrad and master&amp;#39;s level class.  And once again, I somehow managed to get stuck grading.&lt;/p&gt;
+
+&lt;p&gt;I started the semester taking three courses on Coursera as well, but quickly decided that doing so contributed to my sense of being overwhelmed last semester, so I quickly dropped them and decided to download all of the lectures when the classes ended, and hence won&amp;#39;t be mentioning them further.&lt;/p&gt;
+
+&lt;h1&gt;Classes&lt;/h1&gt;
+
+&lt;h2&gt;Applied Graph Theory&lt;/h2&gt;
+
+&lt;p&gt;Textbook: &lt;a href=&quot;http://www.amazon.com/Graph-Theory-Mathematical-Association-Textbooks/dp/0883857537&quot;&gt;Graph Theory, a Problem-Oriented Approach&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Like I said, Graph Theory wasn&amp;#39;t a course I took because I needed it, I took it because I felt like it would be low-key and fun, and a lot of the problems I&amp;#39;m interested in for research relate to Graph Theory in some way or another.&lt;/p&gt;
+
+&lt;p&gt;A great deal of the material had been covered in the same professor&amp;#39;s Graduate Algorithms class, but not as much as I was expecting.  There was lots of new stuff that I learned, and I really enjoyed it.  This particular professor is a very good lecturer; I always enjoy her classes, and this one was no exception.&lt;/p&gt;
+
+&lt;p&gt;The course is strange because its quadruply cross-listed.  It is cross-listed as both a CS class and a Math class, and also cross-listed as an Undergrad and Graduate class.  This led to an interesting mix of students in class, many lacking the math background of others, many lacking the CS background of others still.  All together, there were 13 CS Undergrads, 15 Math undergrads, and 5 CS grads including myself (no Math grads).  Due to the makeup of the class, the material was definitely taught at a level catering mostly to the undergrads, which made for a pretty easy class for me and the other graduate students.  After the last semester&amp;#39;s overwhelming workload, this was welcome.&lt;/p&gt;
+
+&lt;table class=&#39;image alignright&#39; width=&#39;306&#39;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/300px-Petersen_graph_3-coloring.png&quot; width=&#39;300&#39; height=&#39;288&#39;/&gt;&lt;p class=&#39;caption&#39;&gt;Graph Theory!&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;Graduate students were required to also do a semester project and present it to the class at the end of the semester.  As was the case last time I had a similarly-structured course, once I got into my research project I found it hard to focus on the rest of the class material due to being obsessed with my own project.  My understanding and retention of the first half of the class material is definitely better than that of the second half.  Because the professor drops the lowest homework grade, I didn&amp;#39;t even do the final homework for the class, electing instead to put more work into my project.&lt;/p&gt;
+
+&lt;p&gt;As the only PhD student in the class, my project presentation was allotted an entire class period for the presentation (the other students each got half of one), which consisted mostly of me lecturing on the background material not covered in the class before presenting my research.  For the project, I was given an interesting, NP-Complete Graph Theory problem to try and optimize, which I attempted to find a solution to by implementing a Genetic Algorithm search.  The code for this project is &lt;a href=&quot;https://github.com/rodhilton/rectangle_visibility&quot;&gt;here&lt;/a&gt;, my presentation slides &lt;a href=&quot;https://speakerdeck.com/rodhilton/rectangle-visibility-and-elusive-k23&quot;&gt;here&lt;/a&gt;.  In the end, I was unable to actually solve the problem, but I had a great time trying.&lt;/p&gt;
+
+&lt;p&gt;I had an absolute blast with this project, and my presentation went very well.  I actually coded it up so that the students all met in the PC lab on campus instead of in the regular classroom, and they each ran their own copy of the search algorithm and uploaded their best result automatically to a server I was running connected to a projector.  This turned the search into something of a competition, and the interactive component was a lot of fun.  I somewhat regret shifting my focus too far away from the class material once I got invested in my project, but overall I had a great time and really enjoyed this class a lot.  I wound up with an A in the class.&lt;/p&gt;
+
+&lt;h2&gt;Topics in Analytical Research Management&lt;/h2&gt;
+
+&lt;p&gt;Textbook: None&lt;/p&gt;
+
+&lt;p&gt;Like I mentioned, this class is a requirement, the one Business School class that CS students needed to take as part of the degree requirements.  I had been dreading it since I heard about it, as I have no interest in anything I could learn from the business school, and even less interest in this particular class subject.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;I hated, hated, hated this class.&lt;/strong&gt;  I hated every second of its 3-hour length.  I hated the fact that I had to stay downtown after work and grab food before its 6:00pm start time instead of eating dinner with my wife at home.  I hated the complete lack of common ground between the few CS students taking the class and the overwhelming majority of business-school types in the same room.  I hated the fact that almost all of the material was built on previous classes that the business school students had taken before but the CS students had not.  I hated every lecture, every assignment, every student presentation I had to sit through.  I hated the over-reliance on Powerpoint for lectures.  I hated all the business-buzzword talk that I try so hard to avoid in my day job.  I hated that I never saw a single mathematical proof of anything being discussed.  I hated having to use Blackboard.  Most of all, I hated how it was the only course I took not because I thought it sounded interesting, but because the department required me to.  I deeply, deeply resented having to sacrifice an evening at home with my family every single week to take a course I had absolutely no interest in, that I felt I should not have to take at all, with a bunch of people with whom I had nothing to talk to about.  I hated this class.&lt;/p&gt;
+
+&lt;p&gt;I did not hate it due to workload, which was relatively minimal.  Let me first start out by saying that, at no point during the semester did I actually &lt;strong&gt;understand&lt;/strong&gt; any of the class material.  I mean that literally, it all seemed built on classes in the business school prior to this one, classes I did not take, and I never understood anything.  Almost every lecture may as well have been in French, I didn&amp;#39;t even recognize the vast majority of the &lt;em&gt;words&lt;/em&gt; being used, let alone understand the sentences they were in.  At no point did my understanding of the material reach a level above a D or D+.  By all rights, a D or perhaps an F is what I &lt;strong&gt;deserved&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;However, the assignments were extremely easy, though occasionally time-consuming.  Four of them were to simply read a paper from a list of possible papers and write a review, akin to the kind of review one might write if reviewing for an academic journal.  Of course, none of these articles were CS articles, they were all business-type articles.  The most interesting paper I saw was on the subject of machine learning, and the opening paragraph talked about how it could be used to increase return on investment for businesses and my interest was instantly sapped.  I just have no patience for this money-centric worldview.&lt;/p&gt;
+
+&lt;p&gt;I managed to get an A on all four of these articles.  I never read a single one of them.  I read the abstract, the introduction, and the conclusion section of each.  I rarely understood any of these sections, and I didn&amp;#39;t even attempt to read the stuff in the middle.  Yet they were enough to write my &amp;quot;reviews&amp;quot;, which largely consisted of finding a detail and generically referring to it as &amp;quot;under-explained&amp;quot; or something similarly vague.  Every one of my article reviews was complete and total bullshit, an attempt to make it look like I understood the articles when I absolutely did not.  My lowest grade was on a review of a paper that the professor was a co-author on, where my same generic criticisms were met with defensiveness, explaining that the content I felt was missing was cut out due to the journal&amp;#39;s length restrictions.&lt;/p&gt;
+
+&lt;p&gt;There were also a number of assignments that involved a lot of calculations in Excel.  I never understood the purpose of these calculations, or what they meant.  But I was consistently able to look at the professor&amp;#39;s example Excel files, re-use the formulas out of one column and put them into my Excel sheet, just changing the cell numbers to use what appeared to be analogues in my worksheets to the cells in his.  These assignments were, for me, exercises in pattern recognition, a skill at which I&amp;#39;m quite adept.  I was able to get decent grades on these assignments as well, only occasionally did my pattern matching skills fail me.&lt;/p&gt;
+
+&lt;p&gt;A month or so before the midterm, I decided that I was being lazy.  I decided I was only having trouble understanding the material because I disliked it, and that&amp;#39;s no excuse.  So I went to the professor&amp;#39;s office hour, with one goal in mind: to walk out understanding exactly one thing.  We&amp;#39;d covered dozens and dozens of different concepts by this point in the class, and I understood none of them.  I decided to pick one that was referenced a lot, and fully understand it.  Sure, I&amp;#39;d still be crazy behind, but at least it would be an improvement.&lt;/p&gt;
+
+&lt;p&gt;I asked my question and he immediately launched into a tirade of nonsense that baffled me.  I asked him to hold on, slow down, go back and explain so-and-so first.  I took up an entire hour trying to get him to explain things more simply before eventually the professor shrugged and said &amp;quot;you know, this stuff is pretty basic statistics, maybe I should have had a statistics class as a prerequisite.&amp;quot;  He then gave me a URL to a web page with hundreds of written pages about statistics and told me to read it.  He didn&amp;#39;t direct me to a particular thing to read up on, just the URL which had at least two semesters worth of reading material alone.  First of all, I have what I consider basic statistics knowledge, I took statistics in high school at the very least.  What he was referring to was more like graduate-level statistics, which I&amp;#39;ll admit I don&amp;#39;t know much about, largely because I have little to no use for such a thing studying theoretical computer science.  Secondly, this course is &lt;strong&gt;already&lt;/strong&gt; a course I&amp;#39;m required to take and don&amp;#39;t want to, the idea that he&amp;#39;d add another one as a prerequisite was infuriating.  And finally, it certainly didn&amp;#39;t do me any good &lt;strong&gt;right now&lt;/strong&gt;, so thanks a pantload.&lt;/p&gt;
+
+&lt;table class=&#39;image alignleft&#39; width=&#39;306&#39;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/file8871263244366-e1349380440442-300x214.jpg&quot; width=&#39;300&#39; height=&#39;214&#39;/&gt;&lt;p class=&#39;caption&#39;&gt;Synergize our opportunity platform to facilitate tiger team knowledge management&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;So I gave up.  I was mentally done with the course.  I felt like I gave it an honest effort to understand something, anything from class, and the professor basically told me to fuck off.  From this point forward, I resigned myself to the knowledge that I&amp;#39;d fail the midterm, but with the decent grades I got on the assignments and the fact that I&amp;#39;d be able to work with a partner on the final project, I&amp;#39;d probably manage to get a C in the class, which would be enough for it to count.  I spent every lecture from this point on working on my Graph Theory project on my laptop, I never looked at another one of the professor&amp;#39;s slides again.  I honestly don&amp;#39;t even know what many of the lectures were even about, I just used the class as a 3-hour work session for my project.&lt;/p&gt;
+
+&lt;p&gt;Sure enough, when it came for the midterm, I did poorly.  There were 4 total questions, 2 of which I actually understood relatively well due to reviewing the material with another student in the class (who was able to explain, in about 10 minutes, what the professor could not explain to me in an hour).  The final question -- worth the most points -- was, once again, barely English for me.  I didn&amp;#39;t even understand the words in the question, let alone how to answer it.  So once again, I just wrote garbage down.  I wrote 6 paragraphs, each exactly one sentence long.  Each sentence was a statement that was true, which I knew from having memorized random sentences from the slides from class.  Did any of these statements answer the question in any way?  No idea.  I just knew they were true statements about things, and that they were stated in class.  I got the second lowest grade on the midterm in the class, but when I compared my answers with the other student I studied with, he was dismayed when he saw that he and I got the same number of points on the final question despite the fact that I clearly did not understand it.  I got a B- on the midterm, not because I understood the material at a B- level, but because of how it was graded.&lt;/p&gt;
+
+&lt;p&gt;There were only two more graded artifacts left.  One was to read a paper of our own choosing and present it to the class, similar to the paper reviews from before.  I did extremely well on this one, because I was able to select a CS paper and I&amp;#39;m pretty good at giving presentations (he actually said it was one of the best he&amp;#39;s ever seen).  The final assignment was a project, and I was able to work with a partner (the one I studied with before).  We selected a very CS-oriented project and did a very cool experiment, which utilized a fraction of classroom material.  He was largely responsible for the research and the paper, whereas I did a lot of the gruntwork, writing scripts to generate data sets as well as all of the slides and the project presentation to the class, which is &lt;a href=&quot;https://speakerdeck.com/rodhilton/priming-for-steganography&quot;&gt;here&lt;/a&gt;.  This division of labor worked well for us because he understood the class material better than I did, but I was better at giving talks.  In the end, we got a low A- on the project.  We were the only group who not only designed an experiment, but actually &lt;strong&gt;performed&lt;/strong&gt; it and got real results.  Everyone else designed experiments that they couldn&amp;#39;t actually do, so it sort of drives me nuts to know they got a higher grade for utilizing more material from class and doing absolutely nothing with any of it.&lt;/p&gt;
+
+&lt;p&gt;These assignment and project grades were actually enough to make up for my midterm grade, and I wound up with an A- in the class.  In a way, I actually wish I&amp;#39;d gotten a B, since my project partner, who scored only a few points higher than me on the midterm and otherwise had the same grades, got an A.  This means my grade was damn close to the A, and is now the lowest grade I&amp;#39;ve received in all of my classwork, and this is the one class ruining my perfect 4.0 GPA.  This kind of enrages me since I never wanted to take this class to begin with, but I have to try and keep things in perspective.  I did not understand the class material at an A- level.  I still do not understand much of &lt;strong&gt;anything&lt;/strong&gt; from this class, and by all rights I should have failed.  But due to the structure of the class and the grades, I managed to get an A-, so I don&amp;#39;t have to retake the class and it counts towards my degree, which is really all I needed.&lt;/p&gt;
+
+&lt;h2&gt;Grading&lt;/h2&gt;
+
+&lt;p&gt;Believe it or not, I once again got roped into grading.  The professor for Graph Theory asked if I could grade her class.  I said I didn&amp;#39;t really want to, but I didn&amp;#39;t want her to be in a jam, so she should go ask everyone else on her list and if she can&amp;#39;t find someone, come back to me.  She found another grader, but the other grader could only do it part-time, so she wanted to know if I would be willing to be a second grader and grade part-time as well.&lt;/p&gt;
+
+&lt;p&gt;I&amp;#39;d only have to grade half of the six quizzes, and I&amp;#39;d have one office hour per week instead of two.  I figured this was tolerable, so I reluctantly agreed.  Then after the semester started, the other grader got re-assigned by the department to grade another class, and I was the only one left for Graph Theory, so I had to double my office hours and grade all of the quizzes.  It was too late to get anyone else, so I was stuck with it.&lt;/p&gt;
+
+&lt;table class=&#39;image alignright&#39; width=&#39;306&#39;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/grading-rubric.jpg&quot; width=&#39;300&#39; height=&#39;288&#39;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;This was the first time I was grading written work instead of compiled programs, which meant I had to deal with handwriting, lack of descriptions, poor English, errors in proofs, and crazy, off-the-wall answers from left field.  I also had to figure out for myself how many points I&amp;#39;d take off for particular errors, whereas with my previous grading effort I was given a rubric by the teacher.  Grading this type of work is much more time consuming and much more difficult.  I hated it.  I also had to have office hours every week so students could come by and argue with me about the points I took off.  I hated this more than anything else - nobody ever came to me and asked why they got the answer wrong because they wanted to understand the material, they almost always acknowledged they got it wrong but felt I took off too many points.  This type of crap annoyed me to no end, particularly considering how obscenely lenient I was with points.  I was giving 50-75% of credit to answers that I&amp;#39;m sure the professor would have given a 0 to.  I know this is the case, because the only grading feedback I ever got from the professor was that I was being too generous with points.&lt;/p&gt;
+
+&lt;p&gt;You may have also noticed the name of the course I graded was &amp;quot;Graph Theory&amp;quot;.  Wait, isn&amp;#39;t that the name of the course I was also taking?  Why, yes, yes it is.  &lt;strong&gt;PhD students in the department are allowed to take and simultaneously grade the same class&lt;/strong&gt;, the professor grades the TA&amp;#39;s work, and the TA grades everyone else.  If that sounds a bit strange to you, let me assure you that you have no idea how strange it is.&lt;/p&gt;
+
+&lt;p&gt;I had to sit, every class, with students whose grades were lower than they wanted because of my grading.  I had to hear the comments about what &amp;quot;bullshit&amp;quot; their grades were as their quizzes were handed back with me standing right there.  Worst of all, I had to present a full lecture on my semester research to what I can only describe as a maximally hostile audience, who I was certain would have enjoyed nothing more than to see me stumble and fail as karma for taking 10 points off that one time when I &amp;quot;totally should have taken off like 2 or 3, max.&amp;quot;&lt;/p&gt;
+
+&lt;p&gt;I had no friends in the class, and no other students I could talk to when I was having trouble with the material myself.  I had to figure everything out early, before my office hour the day before assignments were due, which was inevitably when everyone would show up to ask me questions.  The sense of being completely alone and an absolute outsider in the class transformed what would have otherwise been an awesome class into something awkward and uncomfortable.  It placed far more stress on me in terms of needing to understand material out of fear of humiliating myself or telling a student something incorrect.  This alone turned my &amp;quot;low-key, easy class&amp;quot; into a stressful burden.&lt;/p&gt;
+
+&lt;p&gt;The value I got out of this was that it has made it abundantly clear that I do not want to teach.  I actually really enjoy lecturing and teaching people, but I detest with every fiber of my being grading their work and having stupid little grade-grubbing conversations with them where I spend 30 minutes listening to them explain why they deserve 2 extra points while in my head thinking how they really deserve a 0 and I was already being nice by giving them partial credit.  The lecturing part of teaching is fun, but the evaluating/grading portion has made it crystal clear that teaching is not for me.&lt;/p&gt;
+
+&lt;p&gt;I know I&amp;#39;ve said this before, but this time &lt;strong&gt;I totally, seriously, super-duper mean it&lt;/strong&gt;: I am never going to be a grader again.  &lt;em&gt;Dammit.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h1&gt;Conclusions&lt;/h1&gt;
+
+&lt;p&gt;This semester was tough.  I hated one of my classes more than any other, even Artificial Intelligence (where I at least liked the material), and the one that was supposed to be low-stress and fun wound up being highly stressful and unpleasant due to the grading situation.  It was my second semester in a row where my overall level of enjoyment of school was low due to overwhelmingly negative reactions to a particular class.  I had two semesters of awesome school, and then what wound up being another two semesters of unpleasantness.  Considering that the only reason I&amp;#39;m in school is because I thought it would be fun, you better believe I was wrestling at least once a week with the question of just dropping out.  Usually in the minutes before the Business School class started.&lt;/p&gt;
+
+&lt;p&gt;I stuck with it, largely because the one constant in the courses that I didn&amp;#39;t enjoy was that, when I was doing a project or research for the semester, I was loving it.  As much as I hated the business school class, I&amp;#39;m really proud of the experiment my partner and I designed and I really had a lot of fun working on it.  As stressful as Graph Theory was due to my &amp;quot;other&amp;quot; status, I absolutely loved my project, and really enjoyed presenting it, even to a hostile audience.  Last semester, I hated the A.I. workload, but I had a blast doing the semester project.  And even in my Computational Complexity class, which I really enjoyed but was disappointed with due to the infrequency of class, the highlight was my independent literature review.&lt;/p&gt;
+
+&lt;p&gt;Since the end of this semester actually marks the end of all classwork for me, I slogged through the rough semester hoping that the next semester, where I&amp;#39;ll be doing research completely on my own, will be a lot more of the thing I liked from the classes that I did not. I came to the school looking forward to actual classroom material, sitting in a physical class instead of taking classes online like I did for my Master&amp;#39;s degree.  I enjoyed that experience most of the time, but I&amp;#39;m definitely at the point where I&amp;#39;m ready to be done with classes and doing research.&lt;/p&gt;
+
+&lt;p&gt;I had hoped that this semester would be low-key enough that I could spend lots of time figuring out what I wanted to research, but unfortunately both classes wound up being more time-consuming than I had hoped (particularly at the end where I was juggling two large projects).  I&amp;#39;m not as far along in the &amp;quot;what do I want to research&amp;quot; process as I was hoping to be, so I&amp;#39;m hoping to catch up a bit this summer.&lt;/p&gt;
+
+&lt;p&gt;I wish I could have enjoyed all of my classes as much as I enjoyed some of them, because I think it would have been possible to do so for all but the Business School class if not for particular circumstances.  In a way, I&amp;#39;m sad to see the chapter of classwork for my PhD close with a little under half of that time marked by disappointment in some cases and outright hatred, but close the chapter has, and it&amp;#39;s time to buckle down and start doing my own research.&lt;/p&gt;
+
+&lt;p&gt;This period will be marked by self-doubt, I&amp;#39;m sure.  Even now I don&amp;#39;t really know what I want to research (though I&amp;#39;ve developed quite a &lt;a href=&quot;http://www.goodreads.com/review/list/1499157-rod-hilton?shelf=research&quot;&gt;reading list&lt;/a&gt;), and I don&amp;#39;t really know if I&amp;#39;m up to the task of coming up with something truly original and novel.  I know that I enjoy the &lt;strong&gt;process&lt;/strong&gt; of research, as it&amp;#39;s been the only aspect of more than one course that I actually liked, so I&amp;#39;m hoping I can find a problem or a set of problems that I&amp;#39;m both passionate about as well as confident I can solve.  I hope next school year is better than this one was, if I reach the point where 2/3rds of my time in school has been unpleasant, I don&amp;#39;t think I can possibly justify sticking with it.&lt;/p&gt;
+</description>
+				<pubDate>Wed, 22 May 2013 00:00:00 -0600</pubDate>
+				<link>http://www.nomachetejuggling.com/2013/05/22/spring-2013-semester-in-review/</link>
+				<guid isPermaLink="true">http://www.nomachetejuggling.com/2013/05/22/spring-2013-semester-in-review/</guid>
+			</item>
+		
+			<item>
+				<title>Fall 2012 Semester in Review</title>
+				<description>&lt;p&gt;My third semester in the PhD program is over, and it has unquestionably been my hardest yet.  I bit off way more than I could chew, this semester was extremely unpleasant and, for the first time since going back to school, I was glad for the semester to end.&lt;/p&gt;
+
+&lt;p&gt;I took two 7000-level PhD courses at once (previously I had only done one in a semester) which was part of the problem.  Originally I was planning on doing three, but quickly decided that was insane and dropped one of the classes, which I&amp;#39;ll now be taking in the Spring.  One of these two remaining classes was material I had never been exposed to at all, and it also happened to be structured in a way that would have made it exceptionally difficult even if I had, while the other was material to which I had minimal exposure.  I also took two courses on Coursera during this period of time, both of which I took quite seriously, as though they were credit courses.  And if all of that wasn&amp;#39;t crazy enough, I managed to once again get roped into grading.&lt;/p&gt;
+
+&lt;h1&gt;Campus Classes&lt;/h1&gt;
+
+&lt;h2&gt;Artificial Intelligence&lt;/h2&gt;
+
+&lt;p&gt;Textbook: &lt;a href=&quot;http://www.amazon.com/Artificial-Intelligence-Pb-E-Rich/dp/0071008942/ref=sr_1_1?ie=UTF8&amp;amp;qid=1355376492&amp;amp;sr=8-1&quot;&gt;Artificial Intelligence, 2nd ed.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;I had never taken an A.I. class as an undergrad, and I always regretted it.  I felt like I should at least be see what it&amp;#39;s about, and I was always really interested in things like evolutionary algorithms, genetic algorithms, and other metaheuristics.  This class was taught by a professor I hadn&amp;#39;t yet had, so this was a real gamble for me.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;I actually wound up intensely disliking the class.&lt;/strong&gt;  Not the material, which I found mostly very interesting, but the actual class itself.  Rather than having a challenging homework due every two weeks like my other classes had been, this class had one homework due each week, on Monday.  Since I work full-time, this meant that every single weekend during the semester was spent working on homework, I never had a full weekend to relax or catch up on anything else.  This had a pretty serious impact on my home life and I really grew to dislike it.&lt;/p&gt;
+
+&lt;p&gt;It wasn&amp;#39;t just the number of homeworks that was the issue, but the nature of them.  The homeworks often asked us to solve very easy problems whose solutions were incredibly time-consuming to write out, and to make matters worse they often asked us to solve nearly identical problems in the exact same way over and over. It never tested my knowledge any differently to do the same problem twice in exactly the same way, but it was incredibly time-consuming to do these problems by hand.  &lt;strong&gt;Homeworks often took 10-14 hours to complete&lt;/strong&gt;, and like I said I could only work on them during the weekends, so my entire weekend was consumed by homework, every weekend, for 12 weeks.  What infuriated me was that these homeworks didn&amp;#39;t take time because I didn&amp;#39;t understand the material, the amount of effort required was almost completely disconnected from my grasp of the topic.&lt;/p&gt;
+
+&lt;table class=&#39;image alignright&#39; width=&#39;235&#39;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/Artificial.intelligence-229x300.jpg&quot; width=&#39;229&#39; height=&#39;300&#39;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;My lack of weekends also led to me falling behind in my other classes, it felt like I was struggling to keep my head above water all semester long.  This semester felt the most like my undergrad days, pulling all-nighters to complete assignments just before they were due, doing the bare minimum on an assignment just to get it checked off my list and move on to the next one, and always feeling stressed.&lt;/p&gt;
+
+&lt;p&gt;Worst of all, this class, which I took as an elective for fun just to see what it would be like, was a constant time distraction, pulling my attention away from my Computational Complexity class, which I had been looking forward to since going back to school.  Another PhD student who has taken a lot of classes with me actually wound up dropping Artificial Intelligence and entering an Independent Study because he felt that A.I.&amp;#39;s disproportionate amount of busywork was distracting him from narrowing down his research area, and would ultimately delay him completing the program.  He did this after the add/drop date, paying for the class and taking a withdrawal; that&amp;#39;s how much of a timesink this class was.  As the class went on, I began to realize just how wise a decision this was.&lt;/p&gt;
+
+&lt;p&gt;I actually liked the classroom environment quite a lot - the professor tried to run the class very socratically, and almost nothing was taught without having a student come to the board and work through a problem with the entire class helping.  I thought this was a really great way to teach, and the professor clearly had a passion for the subject.  Class was very lively and engaging, which I enjoyed.  &lt;strong&gt;It was unfortunate that the intense workload distracted me so much from the passionate professor, strong lectures, and engaging material.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Ultimately, the workload is what dragged this class down to me, wasting its potential as a great class and transforming it into the only class I&amp;#39;ve taken that I didn&amp;#39;t like.   It&amp;#39;s one thing if the work takes me a long time because I&amp;#39;m struggling to understand the material, but when I understand the material and it takes me 10 hours to write it all up anyway, something is amiss.  I&amp;#39;d have preferred to have half the number of homeworks, and have them be more challenging than what we got.  In fact, I&amp;#39;d have preferred to have some projects, given that I wound up writing a lot of code to generate solutions for me to save time.&lt;/p&gt;
+
+&lt;p&gt;There actually WAS a project for the class, but it was extra credit.  This project was assigned halfway through the semester (to help students pull their grades up from the midterm), but the lectures that explained the concepts needed to do the project weren&amp;#39;t until the final week of class.  Given how much I was drowning in work just keeping up with his class, I decided not to pursue the project at all and just focus on doing well on the final.  After my final, my professor e-mailed me to let me know I had a B in the class, but I could pull it up to an A if I did this project, which was due in 2 days.&lt;/p&gt;
+
+&lt;p&gt;I&amp;#39;ve had straight-A&amp;#39;s for every other class, and I can&amp;#39;t imagine a course being more challenging than A.I.  I realized that one day I&amp;#39;d look back at my transcript and see all A&amp;#39;s and one B, &lt;strong&gt;a B that I had an opportunity to pull up to an A but I didn&amp;#39;t bother because I was lazy and wanted to be done with the semester.&lt;/strong&gt;  I decided laziness wasn&amp;#39;t a good enough reason to accept the B, so with only two days to do the entire half-semester project, I decided to give it a shot.  It actually wound up being incredibly fun, largely because I made it fun by doing it in Scala.  You can check out the project &lt;strong&gt;&lt;a href=&quot;https://github.com/rodhilton/trajectories&quot;&gt;here&lt;/a&gt;&lt;/strong&gt; if you want.&lt;/p&gt;
+
+&lt;p&gt;In the end, I managed to complete the project by staying up until about 2am a few nights, and I wound up with the A in the class.&lt;/p&gt;
+
+&lt;h2&gt;Computational Complexity&lt;/h2&gt;
+
+&lt;p&gt;Textbooks: &lt;a href=&quot;http://www.amazon.com/Automata-Computability-Complexity-Theory-Applications/dp/0132288060&quot;&gt;Automata, Computability, and Complexity&lt;/a&gt; and &lt;a href=&quot;http://www.amazon.com/Computational-Complexity-Christos-H-Papadimitriou/dp/0201530821&quot;&gt;Computational Complexity&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The existence of an entire course devoted to Computational Complexity was one of the main reasons I picked UCD over other schools.  Taught by a professor I really enjoyed for Theory of Automata, I figured this class was likely to be my favorite class of all time.  Unfortunately, it wound up being a bit of a disappointment.&lt;/p&gt;
+
+&lt;p&gt;As an experiment, the class was, for the first time, taught as a &amp;quot;hybrid&amp;quot; class.  Rather than the traditional classroom setting it had always been, it was taught mostly online.  Once my professor saw that only 3 people wanted to take the class at the 7000-level and everyone else was taking it at 5000-level, it was split further, and the format it wound up taking was that the three of us met in-person once per week and discussed various issues within Complexity.&lt;/p&gt;
+
+&lt;table class=&#39;image alignleft&#39; width=&#39;306&#39;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/chp_venn_diagram-300x270.jpg&quot; width=&#39;300&#39; height=&#39;270&#39;/&gt;&lt;p class=&#39;caption&#39;&gt;Complexity Classes, from Math $$\cap$$ Programming&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;The main issue was that, &lt;strong&gt;by only meeting once a week, we simply we unable to cover a great breadth of material.&lt;/strong&gt;  Computational Complexity is a huge subject, there are &lt;a href=&quot;http://complexityzoo.uwaterloo.ca/Complexity_Zoo&quot;&gt;495 classes in the Complexity Zoo&lt;/a&gt;, and the infrequent meetings meant that only a tiny fraction of the topic wound up being covered.  We walked through some of the more difficult, classic papers in theoretical computer science, which was a lot of fun, but fully dissecting a single paper would often take 2 classes, a huge fraction of the available classtime when only meeting once a week.&lt;/p&gt;
+
+&lt;p&gt;For my semester project, I did &lt;a href=&quot;http://www.nomachetejuggling.com/2012/12/15/a-stroll-through-the-complexity-zoo/&quot;&gt;a literature review and covered 27 complexity classes from the Zoo&lt;/a&gt; that we didn&amp;#39;t have time to even mention in class.  Due to the A.I. class, I had much less time to devote to this project than I would have liked, but I still wound up doing a lot of research.  I absolutely loved this project, and discovered a whole bunch of complexity classes I had never heard of before as an undergraduate.  I found the material just as exciting as I expected to, but the sad truth is that I was able to spend much, much less time on this fascinating subject than I wanted to.&lt;/p&gt;
+
+&lt;p&gt;There was also a wide disparity between the 3 students.  One of the students had actually taken a different version of the same class in another semester, and another was an upper-level PhD student working on his dissertation that was taking the &amp;quot;class&amp;quot; as an Independent Study.  Both of these students had a much greater grasp of this material than I did, so I often felt like the class moved too quickly for me, and I got lost frequently.  I was reluctant to ask questions because I knew I was the only person in the room who didn&amp;#39;t understand things, so I had to do a lot of reading on my own time to keep up.  Of course, I had almost no time to do this kind of reading, so I think there&amp;#39;s a lot of stuff that went over my head and stayed there.&lt;/p&gt;
+
+&lt;p&gt;Overall, I really enjoyed this class and both of the textbooks we used, but it was also one of my biggest disappointments because I felt like I was only getting half a class.  I would have loved for us to have met twice a week (hell, I&amp;#39;d have loved thrice per week), but I&amp;#39;m glad I took the class and I learned more in the couple weeks of independent research than I have in any other class I&amp;#39;ve taken.  I wound up ordering physical copies of a number of complexity textbooks because I found the topic so interesting, and I&amp;#39;m eyeing the sub-field closely for potential research topics.&lt;/p&gt;
+
+&lt;p&gt;The class was pretty informal, with the only graded components being a presentation we did halfway through the semester, another presentation at the end, and the final term paper.  I wound up with an A in the class.&lt;/p&gt;
+
+&lt;h2&gt;Grading: Fundamentals of Computing&lt;/h2&gt;
+
+&lt;p&gt;I swore off grading last time I did it, with an overabundance of cheating ruining the experience for me.  But after the same class I graded before saw a 100% increase in enrollment, the chair of the department personally asked me if I could help her out by grading it again, along with a second grader.  As much as I didn&amp;#39;t want to, I couldn&amp;#39;t turn down the chair, so I reluctantly agreed.&lt;/p&gt;
+
+&lt;table class=&#39;image alignright&#39; width=&#39;306&#39;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/grading-rubric.jpg&quot; width=&#39;300&#39; height=&#39;288&#39;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;I only graded the odd homeworks, with the other grader doing the evens.  A grading session took much longer than it did last time I did it, but they were infrequent enough that it wasn&amp;#39;t too much of a problem.  It certainly did feel like I never had the time to grade, but I managed to sneak in the time whenever I was too tired to do A.I. work.&lt;/p&gt;
+
+&lt;p&gt;Classes started off badly, with more students cheating on the first assignment I was grading.  I once again caught them and called them out and then, to my great surprise, the cheating stopped (or they got much better at hiding it).  Grading was much better this time, the only downside being that &lt;strong&gt;it cut into time I simply didn&amp;#39;t have.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;One tip I got a while ago from a blog post or article about getting a PhD is to remember that your goal is to get the PhD, and that anything you spend your time doing that doesn&amp;#39;t bring you closer to that goal is inherently taking you further away from it, since your time is limited.  Grading definitely falls into that category, and I particularly felt the drain on my time since I was barely surviving anyway.&lt;/p&gt;
+
+&lt;p&gt;I intend to avoid grading in the future as much as possible, though it&amp;#39;s hard to turn down a professor or department chair when personally asked by them.&lt;/p&gt;
+
+&lt;h1&gt;Online Classes&lt;/h1&gt;
+
+&lt;h2&gt;Functional Programming Principles in Scala&lt;/h2&gt;
+
+&lt;p&gt;I, along with something like 10,000 other students, took Functional Programming Principles in Scala taught by Martin Odersky online on Coursera.org.  I had registered for Coursera courses before, but largely treated them as &amp;quot;bonus material.&amp;quot;  I&amp;#39;d check out video lectures every so often, glance at assignments, and so forth.  I thought taking a Functional Programming course would help me both academically as well as professionally, since we use Scala exclusively at work.&lt;/p&gt;
+
+&lt;table class=&#39;image alignleft&#39; width=&#39;246&#39;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/scala.png&quot; width=&#39;240&#39; height=&#39;135&#39;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;I took this course very seriously.  I carved out time to watch every video lecture, and I treated the homework assignments like real assignments.  I really enjoyed the format of the class, with an autograder running secret tests against my code.  The code had a couple clever tricks to make &amp;quot;???&amp;quot; compile but not work, so you could leave functions unimplemented and submit what you had to see if you were on the right track.  A co-worker would typically do the entire assignment and submit once, but I tended to write a little, submit, write a little, submit, over and over again.  I typically wound up with 10-20 submissions per assignment.&lt;/p&gt;
+
+&lt;p&gt;I thought the course started out better than it finished.  When the course first started, it really felt like a class on Functional Programming itself, which simply happened to use Scala as the language.  &lt;strong&gt;Later in the course, it began to feel like a Scala course, with more of a focus on Scala&amp;#39;s idioms and syntax.&lt;/strong&gt;  I still enjoyed these sections, but definitely less so.  Another thing that irked me was when Odersky dropped the hammer on posting and sharing code solutions to the homeworks.  My co-workers and I would always share our solutions after the deadlines had passed, and I wound up learning a ton from seeing how others implemented the same things as me.  I understand why they had to crack down on &amp;quot;cheating&amp;quot; but I think the restrictions were a bit overly strict.&lt;/p&gt;
+
+&lt;p&gt;Odersky teaches a followup to the course at EPFDL, and I&amp;#39;d love to see that course offered online as well.  I&amp;#39;d like to see more focus on FP in general with less time devoted to the particulars of Scala, but I definitely got a lot of out the course as it was.  In fact, I wound up using a very similar style to the course to implement the A.I. project described above, and it worked incredibly well.&lt;/p&gt;
+
+&lt;p&gt;I got 100% in the class, I was never willing to walk away from an assignment without getting full credit on it, even when I was pulling my hair out with suboptimal trees in the Huffman Codes assignment.&lt;/p&gt;
+
+&lt;h2&gt;Writing in The Sciences&lt;/h2&gt;
+
+&lt;p&gt;I also took Kristin Sainani&amp;#39;s Writing in the Sciences course on Coursera.  This is the online version of a class Sainani teaches at Stanford University.  Since I&amp;#39;m doing a PhD, I know I&amp;#39;ll be doing a lot of writing, and I wanted to improve my writing skills.  I also recently read the very similarly-themed &lt;a href=&quot;http://www.amazon.com/Writing-Computer-Science-Justin-Zobel/dp/1852338024/ref=sr_1_1?ie=UTF8&amp;amp;qid=1356058376&amp;amp;sr=8-1&quot;&gt;Writing for Computer Science&lt;/a&gt; by Justin Zobel, which I found enlightening.&lt;/p&gt;
+
+&lt;p&gt;I took this course pretty seriously, in that I actually watched all of the lectures and did all of the assignments, but I didn&amp;#39;t give it the level of attention I gave the Scala class or either of my University classes.  The course simply wasn&amp;#39;t technical enough to require my full attention and it was always my bottom priority, so I often listened to the lectures in headphones while at work, turning my attention to the video only when something visual was being presented.  One week, I played the lectures on my laptop while doing Scala homework on my desktop.  Now &lt;strong&gt;that&amp;#39;s&lt;/strong&gt; multitasking.&lt;/p&gt;
+
+&lt;table class=&#39;image alignright&#39; width=&#39;246&#39;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/writing.png&quot; width=&#39;240&#39; height=&#39;135&#39;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;I struggled a bit with the grading of the class.  Since it wasn&amp;#39;t code, no auto-grader could be used.  Instead, students simply submitted writing assignments and had 3 other students grade them.  Similarly, you had to grade the work of 3 other students.  The peer reviewers were tasked with making suggestion to improve the overall clarity of the writing, but generally they focused on word choice and minor paragraph tweaks.  Nobody ever turned a 4-paragraph rant into a sleek and slender 2-paragraphs, the tweaks were always much more minor.  By the final assignment, I was putting about the same level of effort in.&lt;/p&gt;
+
+&lt;p&gt;I was also shocked at the level of plagiarism.  One student submitted a paper that had a single sentence introducing a scientific peer, then a 4-paragraph quote by them, then another sentence thanking them for their contribution.  What the hell is that supposed to be?  I gave them a zero.&lt;/p&gt;
+
+&lt;p&gt;I got pretty good feedback on my writing, and I think I improved overall.  I definitely know some things to watch for when writing, but I also &lt;strong&gt;think I got more out of Zobel&amp;#39;s book, possibly because it was more focused on Computer Science&lt;/strong&gt; specifically than Sainani&amp;#39;s class.&lt;/p&gt;
+
+&lt;p&gt;I wound up with a 91.8% in the class, just barely above the 90% required to be considered passing.  This was due almost entirely to my own lack of organization, getting due-dates of two assignments mixed up with all of my other due-dates and earning a couple zeroes as a result.&lt;/p&gt;
+
+&lt;h1&gt;Conclusions&lt;/h1&gt;
+
+&lt;p&gt;This semester was incredibly rough.  On multiple occasions I asked myself just what the hell I was doing, and why I was subjecting myself to it.  Lots of self-doubt, wondering if I was cut-out for the program.  In the end, I pushed through it by thinking that if I can survive this semester, I can survive any of them.&lt;/p&gt;
+
+&lt;p&gt;Having finished the semester with my grades and sanity in tact and little more than a severely bruised social life and diminished level of happiness, I think I can probably survive the rest of the program, which is promising.  When I started this program, a goal of mine was to not let it impact my life noticeably; time I normally would spend watching TV or playing video games would be spent doing schoolwork, and otherwise my time would be the same.  While I succeeded in this goal every other semester, this semester I failed, being &lt;strong&gt;completely unavailable for anything during any weekend, including for simple duties around the house&lt;/strong&gt;.  Lots of plans had to be cancelled or postponed, and juggling everything in my life was exhausting.&lt;/p&gt;
+
+&lt;p&gt;Next semester should be less intense.  I&amp;#39;m taking a class in the business school (it&amp;#39;s a requirement) about how to do research.  I somewhat resent having to take a course that isn&amp;#39;t really Computer Science, but it&amp;#39;s the only non-CS requirement for the degree so I&amp;#39;m just going to have to do it.  Now that I have straight A&amp;#39;s, I&amp;#39;m going to feel a lot of pressure in that class, I don&amp;#39;t want my only non-CS class to drag my GPA down.&lt;/p&gt;
+
+&lt;p&gt;Due to credits transferring from my Master&amp;#39;s program, that&amp;#39;s actually all I need to be done with classwork.  But since I&amp;#39;ll be enrolled anyway, I&amp;#39;m taking Graph Theory as well.  I don&amp;#39;t technically need this course, but I find the topic extremely interesting and I&amp;#39;ve been looking forward to it since the professor who teaches it introduced some of the material in my Algorithms class.  This course is taught simultaneously at a Master&amp;#39;s AND Bachelor&amp;#39;s level, so I doubt it&amp;#39;d going to be a back-breaking workload, and I get along well with the professor.  &lt;/p&gt;
+
+&lt;p&gt;I have one more preliminary exam to take in February before I&amp;#39;m truly considered a PhD candidate, so that&amp;#39;s my next big obstacle.  After the prelim and these two more courses, my coursework is finished and all non-research requirements will have been met.  Hopefully I&amp;#39;ll have narrowed things down and I&amp;#39;ll have a good idea of what I want my research area to be before the summer. &lt;strong&gt;Ideally at the end of next semester I&amp;#39;ll defend my proposal and be well on my way in research.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;I&amp;#39;m still glad I&amp;#39;m in the program, and I&amp;#39;m looking forward to continuing, but after this semester I&amp;#39;m definitely ready for a nice long break.&lt;/p&gt;
+</description>
+				<pubDate>Thu, 20 Dec 2012 00:00:00 -0700</pubDate>
+				<link>http://www.nomachetejuggling.com/2012/12/20/fall-2012-semester-in-review/</link>
+				<guid isPermaLink="true">http://www.nomachetejuggling.com/2012/12/20/fall-2012-semester-in-review/</guid>
+			</item>
+		
+			<item>
+				<title>Spring 2012 Semester In Review</title>
+				<description>&lt;p&gt;The second semester in my PhD program had me crank up the difficulty level a bit.  Since I got A&amp;#39;s in both of my classes in the Fall, I figured I could extend myself and take on a bigger challenge: taking my first 7000-level course.&lt;/p&gt;
+
+&lt;p&gt;5000-level classes are Master&amp;#39;s classes, 7000-level classes are PhD classes.  PhD students need to take 6 Master&amp;#39;s classes and 4 PhD classes (plus 30 credit hours of research), and ideally 3 of those 6 Master&amp;#39;s classes will be transferred for me.  Basically, I had to get my ass in gear and take a PhD-level class.&lt;/p&gt;
+
+&lt;p&gt;I still stuck with 2 classes per semester, though next semester I&amp;#39;m registered for 3 PhD-level classes, which is probably stupid and may change.&lt;/p&gt;
+
+&lt;h1&gt;Classes&lt;/h1&gt;
+
+&lt;h2&gt;Theory of Automata&lt;/h2&gt;
+
+&lt;p&gt;Textbook: &lt;a href=&quot;http://www.cs.uky.edu/%7Elewis/texts/theory/title.pdf&quot;&gt;Essentials of Theoretical Computer Science&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;When I was an undergrad, I hated theory.  It was just too far removed from actual computers, I slacked off in all of my theory classes, and I refused to even open the textbook.  It was my years-later decision to look at that book again that sparked my interest in returning to school, so this class was a make-or-break thing for me.  Theoretical Computer Science is what I came back to school to study, so if I hated this class or struggled with it, I would have dropped out at the end of the semester.&lt;/p&gt;
+
+&lt;table class=&#39;image alignright&#39; width=&#39;306&#39;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/turingMachine-300x205.gif&quot; width=&#39;300&#39; height=&#39;205&#39;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;I&amp;#39;m not sure what it is exactly.  Maybe it&amp;#39;s because I was in school by choice.  Maybe it was because I&amp;#39;m paying for it myself.  Maybe it was the professor, Tom Altman, and his lectures.  Maybe it was the book.  Whatever the reason, this class made me actually &lt;strong&gt;get&lt;/strong&gt;  theoretical computer science.  Finite state machines, push-down automata, turing machines, undecidable problems, context-free languages, the halting problem, the pumping lemma, all of those things were phrases I remember from my undergrad days, but exclusively in the context of words that were bringing my grade down.  This semester, I got it - all of it.  I got 100% on the first test (which Professor Altman announced when handing them back, much to my embarassment) and quickly became the class &amp;quot;expert&amp;quot; on the material.&lt;/p&gt;
+
+&lt;p&gt;I was constantly IMed or e-mailed questions from classmates, and I found myself, to my amazement, consistently able to answer them.  I &lt;strong&gt;LOVE&lt;/strong&gt; Theoretical Computer Science, and I loved the textbook and the class.  I looked forward to it every week, the only negative being that often my classmate&amp;#39;s inability to understand the material would annoy the professor visibly, which made me feel kind of awkward.&lt;/p&gt;
+
+&lt;p&gt;The book was excellent.  Every other Theory book I&amp;#39;ve looked at (a lot of them these days) first covers Finite Automata, then Pushdown Automata, then Linear-Bounded Automata, and finally Turing Machines.  Each time more power is added to the machine, with something like the Halting Problem being discussed pretty late (since it has so much to do with Turing Machines).  This book flips it, IMMEDIATELY covering Turing Machines, the Halting Problem, computability, and decidability.  Afterwards, it takes a more standard order, FSA, PDA, and LBA (but then Grammars at the very end).  At first I thought this order would be terrible, but I was completely wrong.  Covering Turing Machines first frames the discussion about other types of machines in a completely new way, and I think it really works well.  I&amp;#39;d suggest anyone teaching a Theory class, even an undergrad one, consider using this textbook, or at least this order.&lt;/p&gt;
+
+&lt;p&gt;All in all, I loved this class.  The unit on Complexity was removed from this class (we skipped the chapter in the book) and instead moved to its own course next semester, which I&amp;#39;m really looking forward to.  I&amp;#39;m certain I got the highest grade in the class, and I really felt like I mastered the material (aside from a question on the final that I bombed).  A great experience overall.&lt;/p&gt;
+
+&lt;h2&gt;Graduate Computer Security&lt;/h2&gt;
+
+&lt;p&gt;Textbook: &lt;a href=&quot;http://www.amazon.com/Introduction-Cryptography-Coding-Theory-Edition/dp/0131862391&quot;&gt;Introduction to Cryptography with Coding Theory&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Don&amp;#39;t let the name fool you, this class had very little to do with the concept of Security and everything to do with Cryptography.  It&amp;#39;s taught by a professor who transitioned into a PhD in Computer Science after getting her PhD in Mathematics.  It was a very math-heavy course on cryptography.&lt;/p&gt;
+
+&lt;p&gt;To be honest, I wasn&amp;#39;t really looking forward to this course.  I took a Cryptography course as an undergrad and, though I enjoyed it, I didn&amp;#39;t really connect with the material.  I found a lot of the more complex math difficult because I couldn&amp;#39;t develop intuitions for it, and I wasn&amp;#39;t exactly looking to repeat the experience.&lt;/p&gt;
+
+&lt;table class=&#39;image alignleft&#39; width=&#39;306&#39;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/Computer-Network-Security-300x225.jpg&quot; width=&#39;300&#39; height=&#39;225&#39;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;However, knowing that I needed to take 4 7000-level classes with only 2 that really got me excited, I decided Computer Security was probably the way to go.  The class skipped over classical ciphers and focused primarily on AES, DES, RSA, Quantum Cryptography, Secret Sharing, Group Theory, and Elliptic Curve cryptography.  About half of the class was material I remembered (and struggled with) from undergrad, and the rest was brand new.&lt;/p&gt;
+
+&lt;p&gt;I definitely understood things better this time around, but I also struggled quite a bit with some of the math, particularly with Elliptic Curve cryptography and a lot of the Group Theory stuff.  I don&amp;#39;t really feel like I mastered the material, which is a bummer, but I did well enough and earned an A in the class.  The A was due largely to the fact that the grades were based on homeworks and a project, with no exams.  Homeworks meant no time limit, so I could spend hours and hours on homeworks that should have taken someone else less time, and I picked a project topic with less intense math, so I was able to understand it.&lt;/p&gt;
+
+&lt;p&gt;My project was actually a lot of fun.  Based on a project one of my friends did in undergrad, I decided to research and implement &lt;a href=&quot;http://www.nomachetejuggling.com/files/RodHilton-CSCI7002-Cryptanalysis-Against-Monosub-Ciphers.pdf&quot;&gt;an attack on substitution ciphers using Genetic Algorithms&lt;/a&gt;. A cool &lt;a href=&quot;https://github.com/rodhilton/Geneticrypt&quot;&gt;open source project&lt;/a&gt; fell out of this as well.&lt;/p&gt;
+
+&lt;p&gt;Overall, I enjoyed the course far, far more than I was expecting too, but I&amp;#39;m disappointed in myself for not feeling like I grasped the material better.  I&amp;#39;m glad there were no time-limited exams, or I&amp;#39;d have probably gotten the B I probably deserved.  I hope that my struggle was due to the subject, and not due to the level of the class, because if the latter than I&amp;#39;m in store for a painful semester taking three 7000-level classes.&lt;/p&gt;
+
+&lt;h1&gt;Cheating&lt;/h1&gt;
+
+&lt;p&gt;One thing that cast a shadow over the semester was my sudden inability to ignore a problem that appears to be rampant at the school: &lt;strong&gt;The University of Colorado at Denver has a major cheating problem.&lt;/strong&gt;  One of my classes last semester had a lot of cheating, and &lt;a href=&quot;http://www.nomachetejuggling.com/2011/12/21/fall-2011-semester-in-review/#toc-grading-fundamentals-of-computing&quot;&gt;the class I graded for did as well&lt;/a&gt;.  I thought these may have been isolated, but I&amp;#39;m less able to convince myself of that after this past semester.&lt;/p&gt;
+
+&lt;p&gt;Like I said before, I wound up becoming something of the class &amp;quot;expert&amp;quot; in my theory class.  So before every exam, people would ask me questions.  One day, minutes before the second exam, a student asked me a really strange question I&amp;#39;d never heard before.  I thought about it a second and supplied her with a proof.  I asked her where this question came from and she said she saw it on the internet.  When the exams were handed out, I was stunned to see that Question #4 was this exact question, word for word.  Could it have been a weird coincidence or a lucky guess?&lt;/p&gt;
+
+&lt;table class=&#39;image alignright&#39; width=&#39;306&#39;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/Cheating-Photo_1-300x190.jpg&quot; width=&#39;300&#39; height=&#39;190&#39;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;The day before the third and final exam for the class, I was suddenly inundated with emails from other students asking me questions.  What was weird was, 10 different people had the exact same question for me.  I asked one of them where it came from and she said she saw it on the internet.  I asked for a link, and she sent me one.  I read over the link and replied &amp;quot;this link doesn&amp;#39;t have the question you asked, where did you find that question?&amp;quot;  After putting some more pressure on her and making it clear I wasn&amp;#39;t going to answer it unless she told me where she heard it, the truth came out.  A small group of students had the last 4 years worth of exams and were trading them around.  This particular question appeared on two of the exams, and they didn&amp;#39;t know how to answer it.&lt;/p&gt;
+
+&lt;p&gt;Some might say that simply knowing previous exam questions isn&amp;#39;t really cheating, but if it&amp;#39;s not something they&amp;#39;d be comfortable with the professor knowing, I say it falls squarely in the camp of cheating.  Additionally, the students who weren&amp;#39;t &amp;quot;in the know&amp;quot; didn&amp;#39;t get the advantage - either everyone should have previous exams to study from or nobody should, otherwise it&amp;#39;s unfair to the students who are working their butts off honestly to learn the stuff.&lt;/p&gt;
+
+&lt;p&gt;I also found out that a number of students in my Computer Security class got zeroes for plagiarizing homework, and even a few zeroes for plagiarizing their project proposals.  How do you even do that?  After talking to some other students about this, everyone has similar experiences.  It appears to just be a widespread thing everyone has come to accept.&lt;/p&gt;
+
+&lt;p&gt;I really don&amp;#39;t understand why the school doesn&amp;#39;t just kick these people out.  They have an academic honesty policy which clearly states that&amp;#39;s what happens if you cheat, but it&amp;#39;s a complete joke.  I have seen cheating take place over and over again, and when it gets called out, it results in zeroes for a single assignment.  Not even an F for the class - they can still get B&amp;#39;s or C&amp;#39;s.  It devalues my degree for the institution granting it to also grant one to people who don&amp;#39;t learn the material, and I really wish the school would crack down on the cheating.  &lt;/p&gt;
+
+&lt;h1&gt;Summer and Next Semester&lt;/h1&gt;
+
+&lt;p&gt;This summer there are no graduate courses being offered that I&amp;#39;m interested in, so I&amp;#39;m taking the summer off.  It&amp;#39;s going to be weird not taking any classes for so long, I hope I don&amp;#39;t have trouble re-adjusting in the Fall.  I do plan on sitting in on an undergrad A.I. class, but I have a pretty busy schedule this summer and I&amp;#39;m going to probably miss half the lectures.&lt;/p&gt;
+
+&lt;p&gt;In the Fall, I&amp;#39;ll be taking 3 PhD-level classes: Graduate A.I., Computational Complexity, and some Information Systems cross-department requirement that I don&amp;#39;t care about and deeply resent having to take.  Computational Complexity is the course that made me pick UCD over every other school, so I&amp;#39;m incredibly excited about that one.&lt;/p&gt;
+
+&lt;p&gt;I&amp;#39;ve been back in school for one year now, and so far I&amp;#39;m loving it.  I wasn&amp;#39;t sure if I&amp;#39;d enjoy it, or even if I was cut out for it, but my level of excitement and my grades tell me both are the case.  I&amp;#39;m so glad I decided to go back to school, I wish I had done it sooner.&lt;/p&gt;
+</description>
+				<pubDate>Fri, 11 May 2012 00:00:00 -0600</pubDate>
+				<link>http://www.nomachetejuggling.com/2012/05/11/spring-2012-semester-in-review/</link>
+				<guid isPermaLink="true">http://www.nomachetejuggling.com/2012/05/11/spring-2012-semester-in-review/</guid>
+			</item>
+		
+			<item>
+				<title>Fall 2011 Semester In Review</title>
+				<description>&lt;p&gt;In August, I started graduate school at the &lt;a href=&quot;http://www.ucdenver.edu/pages/ucdwelcomepage.aspx&quot;&gt;University of Colorado at Denver&lt;/a&gt;, joining their &lt;a href=&quot;http://www.ucdenver.edu/academics/colleges/Engineering/Programs/Computer-Science-and-Engineering/DegreePrograms/DoctorPhilosophy/Pages/PhDComputerScienceInformationSystems.aspx&quot;&gt;PhD program in Computer Science and Information Systems&lt;/a&gt; with a focus on Theory and Algorithms.&lt;/p&gt;
+
+&lt;p&gt;This return to school was the first time since I graduated from the &lt;a href=&quot;http://www.rochester.edu/&quot;&gt;University of Rochester&lt;/a&gt; that I attended actual classes on a campus (my Master&amp;#39;s program was entirely distance learning).  I wanted to record some of my thoughts about returning to school, since it&amp;#39;s been such an adjustment for me.&lt;/p&gt;
+
+&lt;h1&gt;University of Colorado at Denver&lt;/h1&gt;
+
+&lt;p&gt;The University of Colorado at Denver turned out to be exactly the kind of school I wanted.  &lt;/p&gt;
+
+&lt;table class=&#39;image alignright&#39; width=&#39;306&#39;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/ucd-300x199.jpg&quot; width=&#39;300&#39; height=&#39;199&#39;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;The University of Rochester was a great school, considered to be one of the &amp;quot;&lt;a href=&quot;http://www.rochester.edu/news/new_ivy.html&quot;&gt;New Ivy&lt;/a&gt;&amp;quot; institutions.  The Computer Science program was very intensive there, and I was barely able to survive a few of my classes.  This was good for me as an undergrad - that was the right time in my life for an extremely intensive program, since I was in school full-time and focused on nothing else.  These days, however, I&amp;#39;m a full-time Software Engineer professionally, and I didn&amp;#39;t want to be part of such an intense program for graduate school.  I went back to grad school for fun, not for my career, and I wanted a program that would not burn me out due to difficulty.  Often I found undergrad classes so difficult that I was unable to comprehend some material, leaving me to feel lost, like I** was missing out on interesting stuff because I couldn&amp;#39;t understand it before moving on**.  I wasn&amp;#39;t interested in that kind of experience.&lt;/p&gt;
+
+&lt;p&gt;My master&amp;#39;s program with &lt;a href=&quot;http://www.regis.edu/&quot;&gt;Regis University&lt;/a&gt;, on the other hand, was too far at the opposite end of the spectrum.  Since it was online and largely self-taught, I didn&amp;#39;t have much interaction with academics, professors, or even other students.  Often I wouldn&amp;#39;t bother doing the readings, and there were very few actual assignments (usually just a few projects per course).  In short, I felt like Regis was &lt;strong&gt;too easy&lt;/strong&gt;, and I was often bored while attending.  I really enjoyed my thesis work, but the actual courses were so low-key that I was able to get straight A&amp;#39;s without really focusing on school, which reminded me way too much of high school.&lt;/p&gt;
+
+&lt;p&gt;I wanted something that would challenge me enough to keep me engaged, but not so challenging as to frustrate me.  I wanted actual lectures, homeworks, and exams, but I didn&amp;#39;t want them to be so difficult that I felt lost with the material.  &lt;strong&gt;This is precisely what I found at the University of Colorado at Denver.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The material was thorough, but the more difficult topics were always taught at a slightly slower pace, and the professors have been great about making sure their students understand.  There were definitely some frustrating nights doing difficult homeworks, but I was always able to correctly solve the problems with enough time and effort (as compared with undergrad, where no amount of time would have helped me with some assignments).  It was exactly the right level of challenge - enough that I knew it felt like a challenge, but never enough that I couldn&amp;#39;t find the solution.  &lt;strong&gt;Completing homeworks was intensely satisfying.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;If I had applied the same level of effort to UCD that I had applied to Regis, I would have failed out.  But applying the same level of effort that I applied at Rochester yielded me two A&amp;#39;s, rather than the B&amp;#39;s and C&amp;#39;s I got as an undergrad.  It was &lt;em&gt;perfect&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h1&gt;Campus&lt;/h1&gt;
+
+&lt;p&gt;Like I mentioned, this was the first time I was back on an actual campus in seven years.  I worried I would feel old and out of place.  As it turns out, the UCD physical campus is shared between UCD, the &lt;a href=&quot;http://www.mscd.edu/&quot;&gt;Metropolitan State of Denver&lt;/a&gt;, and the &lt;a href=&quot;http://www.ccd.edu/&quot;&gt;Community College of Denver&lt;/a&gt;.  As a result, the diversity of people on campus helped me feel completely at-ease.  I definitely wasn&amp;#39;t part of the younger crowd of undergrad college kids (wearing what is apparently a nationwide school uniform of &amp;quot;skinny jeans, boots, North Face jackets, and huge sunglasses), but I wasn&amp;#39;t part of the older &amp;quot;I&amp;#39;m-changing-careers&amp;quot; crowd either.  It felt just about right, and I felt about the same age as the other students in my graduate courses.&lt;/p&gt;
+
+&lt;table class=&#39;image alignleft&#39; width=&#39;306&#39;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/univ-300x185.jpg&quot; width=&#39;300&#39; height=&#39;185&#39;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;I really enjoyed going to campus and attending classes.  Both classes were taught in a single building, so any time I was on campus I was in that building, save for a few rare instances of grabbing lunch at the food court.  I&amp;#39;m really glad I lived on campus as an undergrad because of the socialization doing so provided, but I went back to grad school exclusively for education, so the lack of social aspects worked well for me.  I probably wouldn&amp;#39;t recommend UCD to young undergrads, but it&amp;#39;s great for commuters and grad students.&lt;/p&gt;
+
+&lt;p&gt;My classroom building is a ten-minute walk from where I work (and the Computer Science department might soon move into a closer building).  My employer has been great about letting me leave work to attend class, and it&amp;#39;s so conveniently close that it&amp;#39;s been a real pleasure.  I&amp;#39;m pretty sure that my classes are even closer to my office than my classes were to my dorm room as an undergrad.&lt;/p&gt;
+
+&lt;h1&gt;Classes&lt;/h1&gt;
+
+&lt;h2&gt;Graduate Algorithms&lt;/h2&gt;
+
+&lt;p&gt;Textbook: &lt;a href=&quot;http://www.amazon.com/Introduction-Algorithms-Thomas-H-Cormen/dp/0262033844&quot;&gt;Introduction to Algorithms, 3rd ed.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;My first class, taught by &lt;a href=&quot;http://carbon.ucdenver.edu/%7Eegethner/&quot;&gt;Dr. Ellen Gethner&lt;/a&gt;, was a continuation of my undergrad Algorithms and Analysis class.  Algorithms at the graduate level focused a lot more on proving correctness and runtime boundaries than my undergrad classes.  I always struggled with proofs, but the constant practice I got with this class made me understand the techniques far better.  The sense of satisfaction I felt when I completed a difficult proof was great.&lt;/p&gt;
+
+&lt;table class=&#39;image alignright&#39; width=&#39;306&#39;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/300px-Petersen_graph_3-coloring.png&quot; width=&#39;300&#39; height=&#39;288&#39;/&gt;&lt;p class=&#39;caption&#39;&gt;3-Coloring of the Peterson graph&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;I&amp;#39;m lucky in that my undergrad course lightly touched on a few subjects that many undergrad courses don&amp;#39;t mention, namely &lt;a href=&quot;http://en.wikipedia.org/wiki/Graph_theory&quot;&gt;Graph Theory&lt;/a&gt;.  Having seen a bit of Graph Theory before, I found that section of the course a bit more familiar than some of my classmates, and I really enjoyed learning a lot more about it (it helped that it&amp;#39;s Professor Gethner&amp;#39;s research area, so she was very excited about it and it showed).  Another large portion of the class was devoted to studying &lt;a href=&quot;http://en.wikipedia.org/wiki/Number_theory&quot;&gt;Number Theory and Cryptography&lt;/a&gt;, both of which I was a little familiar with thanks to a Cryptography course I took as an undergrad.  It was nice to learn in areas that I had seen before but never fully understood, thus really rounding out my grasp of the subjects.&lt;/p&gt;
+
+&lt;p&gt;My professor for undergrad Algorithm Analysis and Design was a really nice Japanese man who had a great passion for the subject, but who I had a hard time understanding due to his extremely thick accent.  I never really understood a lot of the material as well as I&amp;#39;d have liked, particularly &lt;a href=&quot;http://en.wikipedia.org/wiki/Dynamic_programming&quot;&gt;Dynamic Programming&lt;/a&gt; and &lt;a href=&quot;http://wwwc3.lanl.gov/mega-math/gloss/compute/greedy.html&quot;&gt;Greedy Algorithms&lt;/a&gt;.  Professor Gethner is a native English speaker, and it made it so much easier for me to follow the lectures.  &lt;strong&gt;I finally came to a thorough understanding of the material from undergrad&lt;/strong&gt;, but I also learned about a lot of new subjects such as M-pire/Earth-Moon graphs, Huffman encodings, Fast Fourier Transform, and computational geometry.&lt;/p&gt;
+
+&lt;p&gt;Homeworks were fun and interesting, often with a slightly humorous slant (one encoded message we had to decipher decoded to &amp;quot;CHILL OUT EVERYONE&amp;quot;).  Exams were extremely fair, largely based on the homeworks and never testing material that hadn&amp;#39;t been discussed in class.  I did quite well, getting an A as a final grade.&lt;/p&gt;
+
+&lt;h2&gt;Theory of Distributed Computing&lt;/h2&gt;
+
+&lt;p&gt;Textbook: &lt;a href=&quot;http://www.amazon.com/Distributed-Computing-Fundamentals-Simulations-Advanced/dp/0471453242/&quot;&gt;Distributed Computing&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Taught by &lt;a href=&quot;http://carbon.ucdenver.edu/%7Ebchlebus/&quot;&gt;Dr. Bogdan Chlebus&lt;/a&gt;, this was the first course I&amp;#39;ve taken that had virtually no connection to anything I did as an undergrad.  I took a &amp;quot;Parallel and Distributed Systems&amp;quot; course before, but that was a Systems course, focused primarily on implementing shared memory systems at a low level.  This class was much more theoretical, focusing a lot more on proofs (and counterproofs) than implementation.  Occasionally I&amp;#39;d see terms I was familiar with from previous classes, but 95% of the material was brand-new.  I learned about the &lt;a href=&quot;http://en.wikipedia.org/wiki/Consensus_(computer_science)&quot;&gt;Consensus&lt;/a&gt; problem, various types of shared memory registers, fault detection, byzantine processes, the &lt;a href=&quot;http://en.wikipedia.org/wiki/Two_Generals&amp;#x27;_Problem&quot;&gt;attack problem&lt;/a&gt;, the theoretical differences (and similarities) between shared memory and message-passing distributed systems, linearizability and sequential consistency, theoretical mutual exclusion models, and the &lt;a href=&quot;http://smartech.gatech.edu/handle/1853/6710&quot;&gt;wait-free hierarchy&lt;/a&gt;.&lt;/p&gt;
+
+&lt;table class=&#39;image alignleft&#39; width=&#39;306&#39;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/dining_philosophers-e1323298457654-300x292.jpg&quot; width=&#39;300&#39; height=&#39;292&#39;/&gt;&lt;p class=&#39;caption&#39;&gt;The Dining Philosopher&amp;#039;s Problem&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;I found the course extremely interesting, though sometimes I felt like the presentation of the material left me wondering where it was going.  Rather than present a difficult problem, then discuss the tools used to solve it, often we would be presented with the tools first.  Many times this left me (and other students) studying completely academic-seeming tools without any understanding of how they related to anything else.  For some of the subjects we learned about, the payoff wasn&amp;#39;t until the very end of the course.&lt;/p&gt;
+
+&lt;p&gt;Though the material presentation order left a bit to be desired, the decision as to what material to include in the class was excellent.  We never got into any system-implementation details, always staying very theoretical, focusing on proofs and reductions rather than actually writing code.  All assignments were written with text and occasionally drawings, never any programming required.  Since I went back to grad school to focus on theory and algorithms, &lt;strong&gt;this was right up my alley&lt;/strong&gt;, and I really enjoyed it.&lt;/p&gt;
+
+&lt;p&gt;Professor Chlebus was very passionate about the subject, and though he had a pretty thick accent, I was able to follow him extremely well.  The homeworks were all really interesting and thought-provoking, and he even supplied hints for many of the problems if you read his lecture notes closely.  Exams were very difficult, often relying more on memorization than understanding, but he also curved the grades to compensate for the obscene difficulty.  In the end, I actually got the highest grade in the class.&lt;/p&gt;
+
+&lt;h2&gt;Grading: Fundamentals of Computing&lt;/h2&gt;
+
+&lt;p&gt;I also volunteered to be a grader for an intro course, Fundamentals of Computing.  This was the least rewarding part of my semester, by far.&lt;/p&gt;
+
+&lt;p&gt;Though I enjoyed getting a refresher on C++ by reading a LOT of student code, a particular aspect of grading this class marred the experience: &lt;strong&gt;cheating&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;After a few assignments, I began to notice peculiar similarities between student submissions.  I gave the same feedback, word-for-word, on a handful of assignments and around the third time I decided to look at the assignments a bit closer.  It was clear to be that some students were submitting the exact same assignments.&lt;/p&gt;
+
+&lt;p&gt;I was really disappointed in my fellow students for this.  I don&amp;#39;t know what it is about cheating that bothers me so much, but it really irritated me.  I informed the teacher for the class and he gave these students zeroes for the assignments, but it didn&amp;#39;t seem to have that much effect.&lt;/p&gt;
+
+&lt;table class=&#39;image aligncenter&#39; width=&#39;306&#39;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/Cheating-300x199.jpg&quot; width=&#39;300&#39; height=&#39;199&#39;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;On the next assignment, I noticed the same thing, only this time some of the students clumsily renamed variables in arbitrary ways, hoping to trick me.  It was still obvious they were copying, so I brought it to the teacher&amp;#39;s attention again.  Moreover, there were actually 3 or 4 different clusters of students that copied off of each other within the group.  I spent hours combing over code to find patterns indicating cheating between 40 different assignments, and sent my findings to the teacher.&lt;/p&gt;
+
+&lt;p&gt;Finding these cheaters was extremely time-consuming for me, taking far more time than what grading should have reasonably taken.  And yet, despite students getting zeroes as a result of the cheating, &lt;strong&gt;students were still turning in identical, copy-pasted assignments even as late as the final assignment for the class at the end of the semester.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;This really ruined the grading experience for me, so I don&amp;#39;t plan on doing it again.&lt;/p&gt;
+
+&lt;h1&gt;Overall&lt;/h1&gt;
+
+&lt;p&gt;Overall, I&amp;#39;m incredibly happy with my decision to return to school.  I&amp;#39;m learning fascinating stuff in a tough but manageable academic environment, and it&amp;#39;s been very rewarding.&lt;/p&gt;
+
+&lt;p&gt;I honestly don&amp;#39;t know if it&amp;#39;s the school itself that&amp;#39;s been so enjoyable, or if it&amp;#39;s been a matter of getting out what I put in.  Since I&amp;#39;m paying for school myself and I&amp;#39;m attending voluntarily (not because I &amp;quot;have to if I want a job&amp;quot; as I did as an undergrad), I find myself much more motivated to do the readings, give my best effort on assignments, and pay attention in class.  I only missed one lecture the entire semester, in stark contrast to times as an undergrad where I&amp;#39;d skip the entire day because it was cold out (sorry Mom).&lt;/p&gt;
+
+&lt;table class=&#39;image aligncenter&#39; width=&#39;306&#39;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/TLtfR-300x198.jpg&quot; width=&#39;300&#39; height=&#39;198&#39;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;I speak up in class, ask questions, and have even felt a bit like a teacher&amp;#39;s pet a few times due to my enthusiasm.  A number of other students have come to me asking homework questions like I&amp;#39;m some kind of expert (I&amp;#39;m not), which feels great.&lt;/p&gt;
+
+&lt;p&gt;Taking only two courses at once (rather than 4 or sometimes 5 as an undergrad) has allowed me to really focus on the material and I&amp;#39;ve gotten a lot out of it.  There&amp;#39;s very little from the semester that I feel like I didn&amp;#39;t understand fully (looking in your direction, Fast Fourier Transform), which gives me a real feeling of accomplishment.  Being able to work in both the academic world of theoretical Computer Science and the practical world of professional Software Engineering has kept a nice balance of satisfying my interests.&lt;/p&gt;
+
+&lt;p&gt;I&amp;#39;ve absolutely loved being back in school, and I can&amp;#39;t wait for next semester.&lt;/p&gt;
+</description>
+				<pubDate>Wed, 21 Dec 2011 00:00:00 -0700</pubDate>
+				<link>http://www.nomachetejuggling.com/2011/12/21/fall-2011-semester-in-review/</link>
+				<guid isPermaLink="true">http://www.nomachetejuggling.com/2011/12/21/fall-2011-semester-in-review/</guid>
+			</item>
+		
+			<item>
+				<title>The Star Wars Saga: Introducing Machete Order</title>
+				<description>&lt;p&gt;Brace yourselves, what follows is an amazingly long blog post about Star Wars.&lt;/p&gt;
+
+&lt;p&gt;I&amp;#39;m not a huge fan of the various modifications made to the original Star Wars trilogy, so it&amp;#39;s reasonable to assume I&amp;#39;m not a big fan of the prequel trilogy either.  There are many people who dislike the prequel trilogy so much that they don&amp;#39;t even consider watching them.  On bad days, I&amp;#39;m one of those people, but on good days I see some value in the prequel trilogy, even though I consider them inferior in virtually every way.&lt;/p&gt;
+
+&lt;p&gt;For people that couldn&amp;#39;t care less about the prequel trilogy, I suggest &lt;a href=&quot;http://originaltrilogy.com/forum/topic.cfm/Harmys-STAR-WARS-Despecialized-Edition-HD-AVCHD-DVD9-and-NTSC-DVD5-AVAILABLE-see-1st-post/topic/12713/&quot;&gt;Harmy&amp;#39;s Despecialized Editions&lt;/a&gt;.  They are 720p blu-ray discs (AVCHD discs actually) that are the result of &amp;quot;Harmy&amp;quot; from &lt;a href=&quot;http://originaltrilogy.com&quot;&gt;The Original Trilogy forums&lt;/a&gt; painstakingly reconstructing the theatrical releases of all three films utilizing a wide variety of video sources as well as custom mattes.  Downloading, burning, labeling, and printing cases for these films is one of the neckbeardiest things I&amp;#39;ve done (aside from writing this blog post), and I&amp;#39;m extremely glad I did it.  When I feel like watching Star Wars for just me, these are the ones I watch.  If that&amp;#39;s enough for you as well, stop reading now.&lt;/p&gt;
+
+&lt;table class=&#39;image aligncenter&#39; width=&#39;586&#39;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/2011-10-21_22-52-35_694-e1319259575859-580x329.jpg&quot; width=&#39;580&#39; height=&#39;329&#39;/&gt;&lt;p class=&#39;caption&#39;&gt;Harmy, King of the Nerds!&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;But what can you do if you &lt;em&gt;do&lt;/em&gt; wish to involve the prequel trilogy?  Maybe you&amp;#39;re showing the films to a younger crowd that won&amp;#39;t be able to appreciate and enjoy films with distractingly dated special effects.  Maybe you don&amp;#39;t want to spend the effort to download and burn your own discs, and purchasing the official Blu-rays is fine for you.  Maybe you&amp;#39;ve accepted that the original theatrical editions are no longer considered canon, and you&amp;#39;re a nerd that cares about things like that.  Hell, maybe you actually &lt;strong&gt;like&lt;/strong&gt; the prequels (seriously?).&lt;/p&gt;
+
+&lt;p&gt;Whatever your reason, if you are showing someone the official editions of Star Wars for the first time (no &lt;a href=&quot;http://en.wikipedia.org/wiki/The_Phantom_Edit&quot;&gt;Phantom Edit&lt;/a&gt;s), you have to make a decision about which order to show the films.&lt;/p&gt;
+
+&lt;h1&gt;Two Options&lt;/h1&gt;
+
+&lt;p&gt;There are two obvious options for watching the Star Wars saga.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Release Order&lt;/strong&gt; - Watch the films in the order they came out, recreating your experience with the films for someone new to them.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Episode Order&lt;/strong&gt; - Watch the films in the order &lt;a href=&quot;http://scifi.about.com/od/starwarsfilms/a/Star-Wars-Faq-Whats-The-Best-Viewing-Order-For-The-Star-Wars-Films.htm&quot;&gt;George Lucas intends&lt;/a&gt;, starting with Episode I and going straight through to Episode VI&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;There are two critical flaws with both of these orders, unfortunately, that prevent either from being appropriate.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;The problem with Episode Order is that it ruins the surprise that Vader is Luke&amp;#39;s father.&lt;/strong&gt;  If you think that this reveal doesn&amp;#39;t matter since it&amp;#39;s common knowledge, I suggest you watch the &lt;a href=&quot;http://www.youtube.com/watch?v=ZbV5hn_ET0U&quot;&gt;looks on these kids&amp;#39; faces&lt;/a&gt;.  This reveal is one of the most shocking in film history, and if a newcomer to the series has managed to avoid having it spoiled for them, watching the films in Episode Order would be like watching the ending of The Sixth Sense first.&lt;/p&gt;
+
+&lt;p&gt;The other problem with Episode Order is that the prequels don&amp;#39;t really have a story.  They&amp;#39;re just background for the real story, which is Luke&amp;#39;s attempt to destroy the Empire and save his father.  Watching 3 films of backstory is boring if you&amp;#39;ve never seen the films they&amp;#39;re the background to.  Hell, that&amp;#39;s why George Lucas made A New Hope first, he knew if he started with Episode I he&amp;#39;d never be able to complete the series.  Starting someone off with Episode I is a surefire way to ensure they don&amp;#39;t make it through the entire franchise.&lt;/p&gt;
+
+&lt;table class=&#39;image alignright&#39; width=&#39;306&#39;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/jedi_ruined-300x128.jpg&quot; width=&#39;300&#39; height=&#39;128&#39;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;Unfortunately, &lt;strong&gt;Release Order is also an instant failure, and the reason is a single shot&lt;/strong&gt;.  If you&amp;#39;re watching the original trilogy first, then after the Empire is destroyed and everyone is celebrating, Luke looks over at his mentors, Ben Kenobi and Yoda, and suddenly they are joined by... some random creepy looking teenager who needs a haircut.  Placing Hayden Christensen in the ending of Jedi, since he&amp;#39;s not in ANY of the other films, turns an ending that should be celebratory into one that is confusing for the viewer.  The fact that Christensen looks like he&amp;#39;s undressing someone with his eyes doesn&amp;#39;t help.&lt;/p&gt;
+
+&lt;p&gt;So neither order really works.  What to do?&lt;/p&gt;
+
+&lt;h1&gt;An Alternative Suggestion&lt;/h1&gt;
+
+&lt;p&gt;How can you ensure that a viewing keeps the Vader reveal a surprise, while introducing young Anakin before the end of Return of the Jedi?&lt;/p&gt;
+
+&lt;p&gt;Simple, watch them in this order: IV, V, I, II, III, VI.&lt;/p&gt;
+
+&lt;p&gt;George Lucas believes that Star Wars is the story of Anakin Skywalker, but it is not.  The prequels, which establish his character, are so poor at being character-driven that, if the series is about Anakin, the entire series is a failure.  Anakin is not a relatable character, Luke is.&lt;/p&gt;
+
+&lt;p&gt;This alternative order (which a commenter has pointed out is called &lt;a href=&quot;http://boards.theforce.net/star_wars_saga/b10456/26837545/p2&quot;&gt;Ernst Rister&lt;/a&gt; order) inserts the prequel trilogy into the middle, allowing the series to end on the sensible ending point (the destruction of the Empire) while still beginning with Luke&amp;#39;s journey.&lt;/p&gt;
+
+&lt;p&gt;Effectively, this order keeps the story Luke&amp;#39;s tale.  Just when Luke is left with the burning question &amp;quot;how did my father become Darth Vader?&amp;quot; we take an extended flashback to explain exactly how.  Once we understand how his father turned to the dark side, we go back to the main storyline and see how Luke is able to rescue him from it and salvage the good in him.&lt;/p&gt;
+
+&lt;table class=&#39;image alignleft&#39; width=&#39;306&#39;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/vader-300x202.jpg&quot; width=&#39;300&#39; height=&#39;202&#39;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;The prequel backstory comes at the perfect time, because Empire Strikes Back ends on a huge cliffhanger.  Han is in carbonite, Vader is Luke&amp;#39;s father, and the Empire has hit the rebellion hard.  Delaying the resolution of this cliffhanger makes it all the more satisfying when Return of the Jedi is watched.&lt;/p&gt;
+
+&lt;p&gt;Narratively, it&amp;#39;s just like a movie that starts with a big opening, then fades to &amp;quot;2 years earlier&amp;quot; for most of the movie, until it catches up with the present time and concludes.&lt;/p&gt;
+
+&lt;h1&gt;Introducing: Machete Order&lt;/h1&gt;
+
+&lt;p&gt;Now I&amp;#39;d like to modify this into what I&amp;#39;ve named &lt;strong&gt;Machete Order&lt;/strong&gt; on the off chance that this catches on because I&amp;#39;m a vain asshole.&lt;/p&gt;
+
+&lt;p&gt;Next time you want to introduce someone to Star Wars for the first time, watch the films with them in this order: &lt;strong&gt;IV, V, II, III, VI&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Notice something?  Yeah, Episode I is gone.&lt;/p&gt;
+
+&lt;table class=&#39;image aligncenter&#39; width=&#39;586&#39;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/machete_order-580x142.jpg&quot; width=&#39;580&#39; height=&#39;142&#39;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;Episodes II and III aren&amp;#39;t exactly Shakespeare, but standing next to the complete and utter trainwreck that is Episode I, they sure look like it.  At least, III does anyway.&lt;/p&gt;
+
+&lt;p&gt;Episode I is a failure on every possible level.  &lt;a href=&quot;http://redlettermedia.com/plinkett/star-wars/star-wars-episode-1-the-phantom-menace/&quot;&gt;The acting, writing, directing, and special effects are all atrocious, and the movie is just plain boring.&lt;/a&gt;  Luckily, George Lucas has done everyone a favor by making the content of Episode I completely irrelevant to the rest of the series.  Seriously, think about it for a minute.  Name as many things as you can that happen in Episode I and actually help flesh out the story in any subsequent episode.  I can only think of one thing, which I&amp;#39;ll mention later.&lt;/p&gt;
+
+&lt;p&gt;Every character established in Episode I is either killed or removed before it ends (Darth Maul, Qui-Gon, Chancellor Valorum), unimportant (Nute Gunray, Watto), or established better in a later episode (Mace Windu, Darth Sidious).  Does it ever matter that Palpatine had an apprentice before Count Dooku?  Nope, Darth Maul is killed by the end of Episode I and never referenced again.  You may as well just start with the assumption that Dooku was the only apprentice.  Does it ever matter that Obi-Wan was being trained by Qui-Gon?  Nope, Obi-Wan is well into training Anakin at the start of Episode II, Qui-Gon is completely irrelevant.&lt;/p&gt;
+
+&lt;p&gt;Search your feelings, you know it to be true!  Episode I doesn&amp;#39;t matter at all.  You can start the prequels with Episode II and miss absolutely nothing.  The opening crawl of Episode II establishes everything you need to know about the prequels: a bunch of systems want to leave the Republic, they are led by Count Dooku, and Senator Amidala is a senator who is going to vote on whether the Republic is going to create an army.  Natalie Portman is called Senator Amidala twice in the first 4 minutes of the movie, so there&amp;#39;s no question of who&amp;#39;s who.&lt;/p&gt;
+
+&lt;h2&gt;What Gets Removed?&lt;/h2&gt;
+
+&lt;p&gt;Here&amp;#39;s some stuff that you no longer have to see as part of your Star Wars viewing experience, thanks to skipping Episode I.&lt;/p&gt;
+
+&lt;table class=&#39;image alignright&#39; width=&#39;306&#39;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/jarjar-300x200.jpg&quot; width=&#39;300&#39; height=&#39;200&#39;/&gt;&lt;p class=&#39;caption&#39;&gt;Buh-bye, Binks!&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Virtually no Jar-Jar.  Jar-Jar has about 5 lines in Episode II, and zero in Episode III.&lt;/li&gt;
+&lt;li&gt;No midichlorians.  There is only one reference to midichlorians after Episode I, and in the context it appears to mean something as benign as &amp;quot;DNA.&amp;quot;&lt;/li&gt;
+&lt;li&gt;No Jake Lloyd.  Sorry Jake, your acting is terrible and I never really wanted to see Darth Vader as a little boy.&lt;/li&gt;
+&lt;li&gt;No confusing Padme/Queen switcheroo.  The whole subplot with Padme and her decoy makes absolutely no sense.  It&amp;#39;s clear that this was just so people could interact with Padme without knowing she was the Queen, but it&amp;#39;s incredibly convoluted and pointless.&lt;/li&gt;
+&lt;li&gt;Less confusing master/apprentice relationships.  Darth Sidious is training Count Dooku, Obi-Wan is training Anakin.  No other trainer/trainee relationships exist to confuse the backstory.  Fewer characters to learn about, so the story is more focused.&lt;/li&gt;
+&lt;li&gt;Nothing about trade disputes.  The &amp;quot;problem&amp;quot; as of Episode II is that a group of systems want to leave the Republic.  This is much easier to understand for a kid than trade disputes.&lt;/li&gt;
+&lt;li&gt;No pod racing.  Seriously, who gives a shit?  An action sequence for the sake of an action sequence and it goes on forever.  A huge number of plot holes surrounding gambling and the subsequent freeing of Anakin are removed as well.&lt;/li&gt;
+&lt;li&gt;No virgin birth.  We simply don&amp;#39;t know or care who Anakin&amp;#39;s father is, and the subtle implication that it&amp;#39;s Palpatine is gone.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;But booting Episode I isn&amp;#39;t merely about pretending a crappy movie doesn&amp;#39;t exist.  Viewing Episode II immediately after V and Episode III immediately before VI actually tells the story &lt;strong&gt;better&lt;/strong&gt; than including Episode I does.&lt;/p&gt;
+
+&lt;h2&gt;Why Does This Work Better?&lt;/h2&gt;
+
+&lt;table class=&#39;image alignleft&#39; width=&#39;306&#39;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/starwars-300x199.jpg&quot; width=&#39;300&#39; height=&#39;199&#39;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;As I mentioned, this creates a lot of tension after the cliffhanger ending of Episode V.  It also uses the original trilogy as a framing device for the prequel trilogy.  Vader drops this huge bomb that he&amp;#39;s Luke&amp;#39;s father, then we spend two movies proving he&amp;#39;s telling the truth, then we see how it gets resolved.  The Star Wars watching experience gets to start with the film that does the best job of establishing the Star Wars universe, Episode IV, and it ends with the most satisfying ending, Episode VI.  It also starts the series off with the two strongest films, and allows you to never have to either start or end your viewing experience with a shitty movie.  Two films of Luke&amp;#39;s story, two films of Anakin&amp;#39;s story, then a single film that intertwines and ends both stories.&lt;/p&gt;
+
+&lt;p&gt;Beyond this, Episode I establishes Anakin as a cute little kid, totally innocent.  But Episode II quickly establishes him as impulsive and power-hungry, which keeps his character consistent with eventually becoming Darth Vader.  Obi-Wan never really seems to have any control over Anakin, struggling between treating him as a friend (their very first conversation together in Episode II) and treating him as an apprentice (their second conversation, with Padme).  Anakin is never a carefree child yelling &amp;quot;yippee&amp;quot;, he&amp;#39;s a complex teenager nearly boiling over with rage in almost every scene.  It makes much more sense for Anakin to have always been this way.&lt;/p&gt;
+
+&lt;p&gt;In the opening of Episode II, Padme refers to Anakin as &amp;quot;that little boy I knew on Tatooine.&amp;quot;  The two of them look approximately the same age in Episode II, so the viewer can naturally conclude that the two of them were friends as children.  This completely hides the totally weird age gap between them from Episode I, and lends a lot of believability to the subsequent romance.  Scenes in which they fall for each other seem to build on a childhood friendship that we never see but can assume is there.  Since their relationship is the eventual reason for Anakin&amp;#39;s fall to the dark side, having it be somewhat believable makes a big difference.&lt;/p&gt;
+
+&lt;table class=&#39;image alignright&#39; width=&#39;306&#39;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/obiandani-e1319152749809-300x171.jpg&quot; width=&#39;300&#39; height=&#39;171&#39;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;Obi-Wan now always has a beard for the entire duration of the series, and Anakin Skywalker always wears black.  Since these two characters are played by different actors (and are the only characters in the series with such a distinction), having them look visually consistent does a great deal toward reinforcing they are the same people.&lt;/p&gt;
+
+&lt;p&gt;This order also preserves &lt;strong&gt;both&lt;/strong&gt; twists.  George Lucas knew that watching the films in Episode Order would remove the Vader twist, so he added the Palpatine twist to compensate.  Since we don&amp;#39;t really meet the Emperor until Episode VI (you only see him for one scene, in hologram, in V), this order preserves the twist around Palpatine taking over as Emperor.  Episode I establishes that Darth Sidious is manipulating the Trade Federation in the opening scene of the film, and it&amp;#39;s pretty obvious Sidious is Palpatine.  But if you skip Episode I, all we ever see is that Count Dooku is leading a separatist movement, all on his own.  Dooku tells Obi-Wan that the Senate is under the control of a Sith lord named &amp;quot;Darth Sidious&amp;quot;, but at the end of the movie, after Dooku flees from Geonosis, he meets with his &amp;quot;master&amp;quot;, who turns out to be Darth Sidious.  This is the first time we realize that the separatist movement is actually being controlled by Sidious, and it&amp;#39;s the first time we see him, which doesn&amp;#39;t give the audience a chance to realize he&amp;#39;s Palpatine (remember, nobody has ever referred to &amp;quot;Emperor Palpatine&amp;quot; by this point in the series).&lt;/p&gt;
+
+&lt;p&gt;Machete order also keeps the fact that Luke and Leia are siblings a surprise, it simply moves the surprise to Episode III instead of VI, when Padme announces her daughter&amp;#39;s name.  This is actually a more effective twist in this context than when Obi-Wan just tells Luke in Return of the Jedi.  We get to find out before Luke, and we discover she&amp;#39;s carrying twins along with Obi-Wan when the Gynobot tells him.  Luke&amp;#39;s name is first, so when Padme names the other kid &amp;quot;Leia&amp;quot; it&amp;#39;s a pretty shocking reveal.  As an added bonus, there are now about 5 hours of film between the discovery that they are siblings and the time they kissed.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Update&lt;/strong&gt;: Den of Geek has also written up an &lt;a href=&quot;http://www.denofgeek.com/movies/star-wars/18992/would-george-lucas-approve-of-the-star-wars-machete-order&quot;&gt;article highlighting some more things&lt;/a&gt; that work better in Machete Order that I didn&amp;#39;t mention.  I particularly like the extra dimension it gives Yoda.&lt;/p&gt;
+
+&lt;h2&gt;What Works Best?&lt;/h2&gt;
+
+&lt;p&gt;Best of all, this order actually makes a particular tension in Return of the Jedi stronger.  &lt;/p&gt;
+
+&lt;p&gt;Remember, we see in Episode V that Luke&amp;#39;s vision in the cave on Degobah is that he turns into Darth Vader, then we find out Vader is his father.  Then we watch Episodes II and III, in which his father turns to the dark side in order to protect his loved ones.  After that we go back to VI, where eventually Luke confronts the Emperor. &lt;/p&gt;
+
+&lt;p&gt;Remember that we never saw Anakin as a little kid, he&amp;#39;s about the same age the first time we see him as Luke was in Episode VI.  Hayden Christensen&amp;#39;s incessant whining in Episode II is actually less annoying now, because it&amp;#39;s helping to link the character to Luke, who was just as whiny in Episode IV.  In other words, because we skipped Episode I, the parallels between Luke and Anakin are much stronger.  We&amp;#39;ve seen Obi-Wan train just the two of them, and never had to see anyone training Obi-Wan himself.  The viewer is naturally linking the paths of these two characters together at this point.&lt;/p&gt;
+
+&lt;table class=&#39;image alignleft&#39; width=&#39;306&#39;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/jediluke-e1319294859642-300x213.png&quot; width=&#39;300&#39; height=&#39;213&#39;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;The first time we see Luke in Return of the Jedi, he&amp;#39;s wearing all-black, just like his father did.  He gives R2D2 and C-3P0 to Jabba the Hutt, much to their surprise.  Luke isn&amp;#39;t exactly looking like a clean-cut Jedi like he claims.  Then, when he finally enters Jabba&amp;#39;s palace, the musical cue sounds a bit like the Imperial March, and the way he enters with the light behind him makes it unclear if he is Luke or Vader.  Then, he &lt;strong&gt;force chokes Jabba&amp;#39;s guards&lt;/strong&gt;, something only Vader has done in the series!  Nobody else sees him do this.&lt;/p&gt;
+
+&lt;p&gt;When he confronts Jabba, he warns him that he&amp;#39;s taking his friends back.  He says Jabba can either profit from this, &amp;quot;or be destroyed.&amp;quot;  Furthermore, he tells Jabba &amp;quot;not to underestimate my power.&amp;quot;  The last time this phrase was used, it was by Anakin when dueling Obi-Wan.  When watching Jedi on its own, Luke just seems a tad arrogant during these scenes.  When watching Jedi immediately after watching Revenge of the Sith, the message is clear: &lt;strong&gt;Luke Skywalker is on the path to the Dark Side&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Why does this matter?  Because at the end of Jedi, Luke confronts the Emperor.  The Emperor explains that the assault on the new Death Star is a trap and that his friends are going to die, and he keeps taunting Luke, telling him to grab his lightsaber and fight him.  The film is trying to create a tension that Luke might embrace the Dark Side, but it was never really believable.  However, within the context of him following in his father&amp;#39;s footsteps and his father using the power of the dark side to save people, with Luke&amp;#39;s friends being killed just outside the Death Star window, this is much more believable.&lt;/p&gt;
+
+&lt;p&gt;Shortly after, Luke goes apeshit and beats the hell out of Vader, clearly succumbing to his anger.  He overpowers Vader with rage and cuts his arm off, just like Anakin did to Windu in Episode III.  Having the very real threat of Luke following in his father&amp;#39;s path made clear by watching II and III before VI heightens the tension of this scene, and it actually makes Return of the Jedi better.  Yes, watching Revenge of the Sith makes Return of the Jedi a better, more effective film.  Considering it&amp;#39;s the weakest of the original trilogy films, this improvement is welcome.  &lt;/p&gt;
+
+&lt;h2&gt;What Doesn&amp;#39;t Work Better?&lt;/h2&gt;
+
+&lt;p&gt;Machete Order isn&amp;#39;t perfect.  There are a few tiny issues that arise watching the films in this order.&lt;/p&gt;
+
+&lt;p&gt;The Kamino sequence is a little confusing.  Since the cloners seem to have been &amp;quot;expecting&amp;quot; Kenobi, it leads the viewer to wonder if Episode I showed him creating the clone army or something.  Hilariously, Episode I doesn&amp;#39;t actually explain anything or make this scene less misleading, but the fact that the viewer knows a movie got skipped amplifies the confusion.&lt;/p&gt;
+
+&lt;p&gt;Qui-Gon is mentioned once in Episode II and once in Episode III.  Luckily, both times he is mentioned, his relationship to the characters is restated, so it works.  Dooku explains that Obi-Wan&amp;#39;s old master Qui-Gon was once Dooku&amp;#39;s apprentice, and then in Episode III Yoda tells Obi-Wan that Qui-Gon has learned to communicate after death.  It&amp;#39;s alright, just a little weird.&lt;/p&gt;
+
+&lt;p&gt;Episodes II and III both talk about Anakin being part of a prophecy which is never really explained (because it was explained in Episode I).  This is unfortunate, but on the plus side the last time it&amp;#39;s mentioned in Episode III, Yoda says it may have been misinterpreted.&lt;/p&gt;
+
+&lt;table class=&#39;image alignright&#39; width=&#39;306&#39;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/aniep2-300x126.jpg&quot; width=&#39;300&#39; height=&#39;126&#39;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;The weakest part of this order is when Anakin returns to Tatooine.  We don&amp;#39;t know his mother is a slave, and we don&amp;#39;t know he built C-3P0.  When he has visions of his mother dying and returns, Watto says he sold her.  That&amp;#39;s not something you expect to hear about a Jedi&amp;#39;s mother, so it&amp;#39;s a bit jarring.  When Anakin goes to the Lars moisture farm, Threepio calls him &amp;quot;the maker&amp;quot; and they act like they know each other, but it&amp;#39;s not stated outright that Anakin created Threepio.  This definitely draws attention to the fact that one of the films was skipped.  This is the one, singular thing made genuinely more confusing by skipping Episode I.&lt;/p&gt;
+
+&lt;h1&gt;Give It A Shot&lt;/h1&gt;
+
+&lt;p&gt;You might be wondering if it&amp;#39;s worth skipping II and only watching III, just to establish young Anakin in time for Jedi.  I don&amp;#39;t recommend this, every character you need to know for Episode III who was introduced in Episode I is reintroduced in Episode II with a quick line of dialogue, but Episode III just assumes you know who everyone is.  Ham-handed as it is, Anakin&amp;#39;s love for Padme is the ultimate reason for his fall to the dark side, and Episode II has most of that.  Additionally, without seeing the Clone Army being created in Episode II, seeing the Jedi fight alongside them in III would be extremely confusing, since they look almost exactly like Stormtroopers in III.&lt;/p&gt;
+
+&lt;p&gt;Machete Order doesn&amp;#39;t even interfere with canon - everything that happens in Episode I is still canonically compatible with this ordering, we simply don&amp;#39;t watch it as part of the main saga.&lt;/p&gt;
+
+&lt;p&gt;I&amp;#39;ve tried clearing my brain out and watching the films in this order and it makes the overall experience vastly more enjoyable.  If you find someone who has never seen any Star Wars movies, try showing them the films in this order and post a comment explaining any particular points of confusion they had while watching.  My hunch is there won&amp;#39;t be many, if any at all.&lt;/p&gt;
+
+&lt;h2&gt;Update&lt;/h2&gt;
+
+&lt;p&gt;I recently discovered my college-aged brother-in-law&amp;#39;s girlfriend had never seen any Star Wars films and wanted to watch them all over winter break.  Armed with the new Blu-rays, we all went about watching them, and I showed them in Machete Order.  It actually works even better than I originally anticipated - it&amp;#39;s almost as if this is somehow the intented order.  There&amp;#39;s a great pattern here, taking the viewer on a series of emotional ups and downs.  IV ends with a victory that seems to have some sinister undertones, then V is dark and unresolved with a cliffhanger, II ends with victory with sinister undertones, then III is dark and unresolved with a cliffhanger again.  It works incredibly well, and when III ended everyone demanded we immediately watch VI to see how everything gets tied up.&lt;/p&gt;
+
+&lt;p&gt;Perhaps most importantly, the flaws with Machete Order seem to not be problematic at all.  When Anakin returned to Tatooine in II, the conversation with Watto immediately indicated to her that Anakin&amp;#39;s mother was a slave.  She asked why Anakin never went back to free her after becoming a Jedi, but Episode I doesn&amp;#39;t really provide an answer to that.&lt;/p&gt;
+
+&lt;p&gt;The thing she had the most trouble with was when Leia and Luke are talking in ROTJ, and she talks about how she remembers her mother, her &amp;quot;real mother&amp;quot; (so Leia clearly knows she&amp;#39;s adopted).  With a few movies between III and VI, one might forget about this line, but watching VI right after III made her stop and ask &amp;quot;wait, what? How does she remember her mother?&amp;quot;  She found herself similarly bothered by R2D2 having a jetpack in the prequels but not the other films, and all I could tell her was &amp;quot;yeah, it bugs me too.&amp;quot;  &lt;/p&gt;
+
+&lt;p&gt;I asked her if she found Jar-Jar annoying and she asked &amp;quot;who&amp;#39;s Jar Jar?&amp;quot;  - Mission accomplished.&lt;/p&gt;
+
+&lt;h2&gt;Watching Episode I&lt;/h2&gt;
+
+&lt;p&gt;Episode I has some redeemable moments, such as the tension in the final duel after Qui-Gon is killed, and for some reason people seem to really enjoy the pod race (I hated it).  Arguably, Episode II is worse than I.  &lt;/p&gt;
+
+&lt;p&gt;The reason to remove I isn&amp;#39;t &lt;em&gt;just&lt;/em&gt; that it&amp;#39;s bad, it&amp;#39;s that the overall story arc of the saga, which is Luke&amp;#39;s discovery of his Jedi lineage, his training to be the last of the Jedi, his temptation at following the path of Anakin, and ultimately his overcoming that temptation and redeeming his father, is told BETTER by including II and III, whereas I serves to distract from this main arc.&lt;/p&gt;
+
+&lt;p&gt;As such, some people may want to watch Episode I after all.  As some commenters have pointed out, there &lt;em&gt;is&lt;/em&gt; still a place to watch Episode I with this order.  The ideal place is after the &amp;quot;main saga&amp;quot; of IV, V, II, III, VI is complete.   Not immediately after, but like &amp;quot;okay, Star Wars is over, but there&amp;#39;s some other stuff you can watch that takes place in the same galaxy with some of the same people.&amp;quot;&lt;/p&gt;
+
+&lt;p&gt;Similar to the Animatrix, which can be watched at any time after the first one, the collection of Episode I, the Clone Wars cartoon series, the Clone Wars CGI series, a number of video games, and the Clone Wars movie can all be presented as part of a collection of &amp;quot;extra stuff, made for kids&amp;quot;.  In this context, Episode I can be contextualized as a standalone prequel to the main saga.&lt;/p&gt;
+
+&lt;p&gt;It&amp;#39;s not part of the main viewing, but more like an expanded universe kind of thing, like playing a video game or reading a Star Wars comic book or novel.  I think this is a pretty good idea if you really really want to include Episode I.  Personally I don&amp;#39;t think I&amp;#39;ll be doing this, as I really don&amp;#39;t like the pod race or even Darth Maul, but the option is there.&lt;/p&gt;
+
+&lt;h2&gt;Response: The Qui-Gon Issue&lt;/h2&gt;
+
+&lt;p&gt;The most common complaint about Machete Order, by far, is that it eliminates Qui-Gon, and he&amp;#39;s important (or that his &lt;a href=&quot;https://www.youtube.com/watch?v=J0mUVY9fLlw&quot;&gt;lightsaber battle&lt;/a&gt; is &amp;quot;cool&amp;quot;).  Since this is so common, I thought I&amp;#39;d respond to it in this very post.  Because it&amp;#39;s just not long enough, right?&lt;/p&gt;
+
+&lt;p&gt;The argument goes, Qui-Gon is extremely important, because it&amp;#39;s his intense desire to train Anakin that Obi-Wan feels responsible to continue when Qui-Gon dies.  Obi-Wan wasn&amp;#39;t truly ready to be a teacher, so as a result Anakin is poorly trained and that&amp;#39;s why he&amp;#39;s so susceptible to the dark side.  In this way, Qui-Gon &amp;quot;may arguably be the most important character of the whole series&amp;quot; (this is a direct quote from a comment).&lt;/p&gt;
+
+&lt;table class=&#39;image alignright&#39; width=&#39;306&#39;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/quigon.png&quot; width=&#39;300&#39; height=&#39;310&#39;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;People who make this argument say that the saga is only understandable with Episode 1 included.  I disagree, and I think it&amp;#39;s easy to illustrate why.&lt;/p&gt;
+
+&lt;p&gt;Imagine for a second that George Lucas releases an Episode 0.  In Episode 0, we see that Qui-Gon moves away from his family&amp;#39;s home on Blahtooine, leaving behind his sister and mother to go become a Jedi.  After many years, he returns home to visit his family and discovers they have new neighbors.  One of the neighbors is a young boy who seems to have some degree of force sensitivity.  He asks Qui-Gon if he is a Jedi and says he wants to be a Jedi too, but Qui-Gon tells him that he&amp;#39;s too old to begin training, and rules are rules.&lt;/p&gt;
+
+&lt;p&gt;Fast forward a few years and the neighbor kid has become quite adept at force manipulation.  Unfortunately, with no formal training he cannot really control his powers, and accidentally kills his family, as well as his neighbors -- including Qui-Gon&amp;#39;s mother and sister -- and himself.  Qui-Gon returns to his home to find his family dead, and blames this on the Jedi order&amp;#39;s prohibitions against training older children.  Qui-Gon argues to Yoda that, if the boy had been able to receive training, his family would still be alive.&lt;/p&gt;
+
+&lt;p&gt;Now, when we watch Episode 1, we have a new answer to a &amp;quot;why&amp;quot; question, we understand why Qui-Gon so strongly wants to train Anakin.  Episode 0 provides explanatory power to the series.  If someone wrote a blog post about a Machete Order Prime which is simply Episodes 1-6 in order, without Episode 0, you&amp;#39;d be forced to argue this order is unacceptable, because it completely ignores the reason why Qui-Gon insists on training Anakin.  Machete Order Prime, by the very logic used to argue against Machete Order, is not acceptable.  And yet, it&amp;#39;s the EXACT order we are currently faced with when we include Episode 1.&lt;/p&gt;
+
+&lt;p&gt;This can go back forever.  Episode -1 comes out and shows why the young force sensitive child and his family had to move away from their home and go to Blahtooine, because the parents lost their job at the corporate Moisture Farm or something.  Episode -2 comes out and explains why the Moisture Farm had to cut expenses that led to the firing or whatever.&lt;/p&gt;
+
+&lt;p&gt;The fact of the matter is, we don&amp;#39;t really need to understand WHY Anakin is even susceptible to the dark side.  In fact, it makes him more sympathetic if the reason is simply &amp;quot;it&amp;#39;s tempting&amp;quot; or &amp;quot;to save his wife&amp;quot;.  But we&amp;#39;re actually given the why in the elevator scene in Episode II - Obi-Wan is a shitty teacher who has no control over Anakin and who Anakin sees himself as better than.  Qui-Gon only provides an answer to &amp;quot;why is Obi-Wan so unprepared to have a Padawan?&amp;quot;, but at what point are you so far away from the central characters that the why&amp;#39;s stop mattering?  Everything that happens has some kind of cause, and at some point those causes happen off-screen, in prequels that don&amp;#39;t exist.  Qui-Gon is two why&amp;#39;s removed from what&amp;#39;s interesting here, which is the reason it is completely unnecessary and serves only to distract from the central narrative that Machete Order tries to emphasize.&lt;/p&gt;
+
+&lt;!-- someone registered macheteorder.com (very cool) but frames the source instead of redirects (less cool) so this is just to bust the frame so anyone who clicks links doesn&#39;t get confused when the address bar doesn&#39;t change) --&gt;
+
+&lt;script type=&quot;text/javascript&quot;&gt;
+if(top.location!=location)
+top.location=location;
+&lt;/script&gt;
+
+&lt;div style=&quot;text-align: center&quot;&gt;
+&lt;script async src=&quot;//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js&quot;&gt;&lt;/script&gt;
+&lt;!-- Machete Juggling --&gt;
+&lt;ins class=&quot;adsbygoogle&quot; style=&quot;display:inline-block;width:468px;height:60px&quot; data-ad-client=&quot;ca-pub-5967628724862118&quot; data-ad-slot=&quot;2179974007&quot;&gt;&lt;/ins&gt;
+&lt;script&gt;
+(adsbygoogle = window.adsbygoogle || []).push({});
+&lt;/script&gt;
+&lt;/div&gt;
+</description>
+				<pubDate>Fri, 11 Nov 2011 00:00:00 -0700</pubDate>
+				<link>http://www.nomachetejuggling.com/2011/11/11/the-star-wars-saga-suggested-viewing-order/</link>
+				<guid isPermaLink="true">http://www.nomachetejuggling.com/2011/11/11/the-star-wars-saga-suggested-viewing-order/</guid>
+			</item>
+		
+			<item>
+				<title>Building a Résumé With Templator</title>
+				<description>&lt;p&gt;I care, probably more than I should, about my résumé.  I sort of think of it like a real-life character sheet, so I like to keep it current at all times.  But my résumé has always been a source of irritation for me as well, as I have a number of things I would like to do with it that I&amp;#39;ve been unable to do.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;I want to have it version-controlled, so it should be plain text.&lt;/li&gt;
+&lt;li&gt;I want to have a plain HTML version of it that I can post on my blog, &lt;a href=&quot;http://www.nomachetejuggling.com/resume/&quot;&gt;here&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;I want to have a $$\LaTeX$$ version of it, because I like the way it looks, and I&amp;#39;d like to send that version to potential employers.&lt;/li&gt;
+&lt;li&gt;I would like to have a &amp;quot;master&amp;quot; version of the résumé with all of my data, but be able to easily build customized versions of it.  For example, I want to include the sections on what courses I took in school if I&amp;#39;m sending my résumé to an academic institution, but I want to leave that off if I&amp;#39;m applying for an industry job.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;I started building some tools that would let me accomplish this, including a specialized résumé data format that I called &amp;quot;rml&amp;quot; but I quickly realized that not everyone wants to store the same data on their résumé, so I kept generalizing and generalizing the tool until I had something usable: &lt;a href=&quot;https://github.com/rodhilton/templator&quot;&gt;Templator&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Templator is a general tool that allows someone to store data in a text file and run that data through various template files to get generated output.  It utilizes &lt;a href=&quot;http://www.yaml.org/&quot;&gt;YAML&lt;/a&gt; and &lt;a href=&quot;http://www.ruby-doc.org/stdlib/libdoc/erb/rdoc/&quot;&gt;ERB&lt;/a&gt;, so Ruby programmers should already be comfortable with it.&lt;/p&gt;
+
+&lt;p&gt;In this article I&amp;#39;m going to explain how to use Templator to store a version-controllable, customizable résumé.&lt;/p&gt;
+
+&lt;h1&gt;Getting Started With Templator&lt;/h1&gt;
+
+&lt;p&gt;The way Templator works is simple (once you&amp;#39;ve cloned the git repo):&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-terminal&quot; data-lang=&quot;terminal&quot;&gt;$ ./templator --data-file data_file template_file
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;The &lt;code&gt;data_file&lt;/code&gt; file is where we will store our master résumé data, and the &lt;code&gt;template_file&lt;/code&gt; is the file we will use to store the template, which in this example will be generating HTML.&lt;/p&gt;
+
+&lt;p&gt;Let&amp;#39;s start with a simple data file, which I&amp;#39;ll save as &lt;code&gt;example1.yaml&lt;/code&gt;.&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;name: Bob Smith
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;And here is our first template, which I will save as &lt;code&gt;template1.html.erb&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&amp;lt;html&amp;gt;
+&amp;lt;body&amp;gt;
+  &amp;lt;h1&amp;gt;Resume for &amp;lt;%= name %&amp;gt;&amp;lt;/h1&amp;gt;
+
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Now, if I execute:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-terminal&quot; data-lang=&quot;terminal&quot;&gt;./templator -d example1.yaml template1.html.erb
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;I get the output to &lt;code&gt;stdout&lt;/code&gt;, so I&amp;#39;m going to dump that into a file.&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-terminal&quot; data-lang=&quot;terminal&quot;&gt;./templator -d example1.yaml template1.html.erb &amp;gt; template1.html
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Now I get a new HTML file, &lt;code&gt;template1.html&lt;/code&gt;, which looks like this:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&amp;lt;html&amp;gt;
+&amp;lt;body&amp;gt;
+  &amp;lt;h1&amp;gt;Resume for Bob Smith&amp;lt;/h1&amp;gt;
+
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;As you can see, the ERB escape sequences have access to everything defined in the YAML file, in this case &lt;code&gt;name&lt;/code&gt;.  If &lt;code&gt;name&lt;/code&gt; had not been defined in the yaml file, the then &lt;code&gt;name&lt;/code&gt; in the template would have simply been &lt;code&gt;nil&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h1&gt;A More Complicated Example: Lists&lt;/h1&gt;
+
+&lt;p&gt;Alright so let&amp;#39;s add our skills to this résumé.  We have many skills, so this will be a list.  Here&amp;#39;s our new YAML file, &lt;code&gt;example2.yaml&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;name: Bob Smith
+
+skills:
+  - C++
+  - Typing
+  - Ping-pong
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Here we&amp;#39;ve defined a simple list under &amp;quot;skills.&amp;quot;  I don&amp;#39;t plan on covering the basics of YAML here, but obviously the whitespace matters.  For more information on YAML, check &lt;a href=&quot;http://www.yaml.org/YAML_for_ruby.html&quot;&gt;this tutorial&lt;/a&gt; or &lt;a href=&quot;http://www.yaml.org/spec/1.2/spec.html&quot;&gt;the spec&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Now let&amp;#39;s make another template, &lt;code&gt;template2.html.erb&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&amp;lt;html&amp;gt;
+&amp;lt;body&amp;gt;
+  &amp;lt;h1&amp;gt;Resume for &amp;lt;%= name %&amp;gt;&amp;lt;/h1&amp;gt;
+
+  &amp;lt;h1&amp;gt;Skills&amp;lt;/h1&amp;gt;
+  &amp;lt;ul&amp;gt;
+    &amp;lt;% skills.each do |skill| %&amp;gt;
+      &amp;lt;li&amp;gt;&amp;lt;%= skill %&amp;gt;&amp;lt;/li&amp;gt;
+    &amp;lt;% end %&amp;gt;
+  &amp;lt;/ul&amp;gt;
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;When we run this through templator:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-terminal&quot; data-lang=&quot;terminal&quot;&gt;./templator -d example2.yaml template2.html.erb
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;We get this output:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&amp;lt;html&amp;gt;
+&amp;lt;body&amp;gt;
+  &amp;lt;h1&amp;gt;Resume for Bob Smith&amp;lt;/h1&amp;gt;
+
+  &amp;lt;h1&amp;gt;Skills&amp;lt;/h1&amp;gt;
+  &amp;lt;ul&amp;gt;
+
+      &amp;lt;li&amp;gt;C++&amp;lt;/li&amp;gt;
+
+      &amp;lt;li&amp;gt;Typing&amp;lt;/li&amp;gt;
+
+      &amp;lt;li&amp;gt;Ping-pong&amp;lt;/li&amp;gt;
+
+  &amp;lt;/ul&amp;gt;
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Notice the somewhat surprising additional spaces.  Ruby programmers will be familiar with this, but it&amp;#39;s the result of having linebreaks before and after the ERB lines, like &lt;code&gt;&amp;lt;% skills.each do |skill| %&amp;gt;&lt;/code&gt;.  Since we&amp;#39;re outputting HTML, the additional linebreaks don&amp;#39;t matter, but if you want to output plain text you&amp;#39;d need to ensure that ERB escapes aren&amp;#39;t surrounded by linebreaks and other spacing.  This makes your template files less readable, so it&amp;#39;s a tradeoff.&lt;/p&gt;
+
+&lt;h1&gt;Nested Data&lt;/h1&gt;
+
+&lt;p&gt;Now we&amp;#39;d like to add our work experience.  This data is significantly more hierarchical, but Templator has us covered.  Here is example3.yaml:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;name: Bob Smith
+
+skills:
+  - C++
+  - Typing
+  - Ping-pong
+
+experience:
+  - company: XYZ Widgets, Inc
+    title: Senior Widget Analyst
+    accomplishments:
+      - Made over 300 widgets
+      - Increased widget production by 55%
+  - company: GlobalInfraComm
+    title: Intern
+    accomplishments:
+      - Made great coffee
+      - Seriously, the coffee was awesome.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;This nested format will mean that there is going to be a &lt;code&gt;experience&lt;/code&gt; variable available to the template file.  &lt;code&gt;experience&lt;/code&gt; will be a list of objects, and each of those objects will have properties named &lt;code&gt;company&lt;/code&gt;, &lt;code&gt;title&lt;/code&gt;, and &lt;code&gt;accomplishments&lt;/code&gt;.  &lt;code&gt;accomplishments&lt;/code&gt; will also be a list, but of strings.&lt;/p&gt;
+
+&lt;p&gt;Here is example3.html.erb:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&amp;lt;html&amp;gt;
+&amp;lt;body&amp;gt;
+  &amp;lt;h1&amp;gt;Resume for &amp;lt;%= name %&amp;gt;&amp;lt;/h1&amp;gt;
+
+  &amp;lt;h1&amp;gt;Skills&amp;lt;/h1&amp;gt;
+  &amp;lt;ul&amp;gt;
+    &amp;lt;% skills.each do |skill| %&amp;gt;
+      &amp;lt;li&amp;gt;&amp;lt;%= skill %&amp;gt;&amp;lt;/li&amp;gt;
+    &amp;lt;% end %&amp;gt;
+  &amp;lt;/ul&amp;gt;
+
+  &amp;lt;h1&amp;gt;Experience&amp;lt;/h1&amp;gt;
+  &amp;lt;% experience.each do |job| %&amp;gt;
+    &amp;lt;p&amp;gt;
+      &amp;lt;%= job.company %&amp;gt; (&amp;lt;%= job.title %&amp;gt;)
+      &amp;lt;ul&amp;gt;
+        &amp;lt;% job.accomplishments.each do |accomplishment| %&amp;gt;
+          &amp;lt;li&amp;gt;&amp;lt;%= accomplishment %&amp;gt;&amp;lt;/li&amp;gt;
+        &amp;lt;% end %&amp;gt;
+      &amp;lt;/ul&amp;gt;
+    &amp;lt;/p&amp;gt;
+  &amp;lt;% end %&amp;gt;
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Each aspect of the hierarchy can be referred to by a simple object-style syntax.  Anything not defined in the yaml file returns &lt;code&gt;nil&lt;/code&gt;, and &lt;code&gt;nil.[anything]&lt;/code&gt; also returns &lt;code&gt;nil&lt;/code&gt;, so referencing things that aren&amp;#39;t defined doesn&amp;#39;t result in an error. For example, &lt;code&gt;&amp;lt;%= experience.something.otherstuff.morethings %&amp;gt;&lt;/code&gt; simply returns &lt;code&gt;nil&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Arrays can be referred to how one would expect.  For example, if I wanted to only print out my top accomplishment somewhere, I could do &lt;code&gt;&amp;lt;%= experience[0].accomplishments[0] %&amp;gt;&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Running this through Templator yields (extra linebreaks removed):&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&amp;lt;html&amp;gt;
+&amp;lt;body&amp;gt;
+  &amp;lt;h1&amp;gt;Resume for Bob Smith&amp;lt;/h1&amp;gt;
+
+  &amp;lt;h1&amp;gt;Skills&amp;lt;/h1&amp;gt;
+  &amp;lt;ul&amp;gt;
+      &amp;lt;li&amp;gt;C++&amp;lt;/li&amp;gt;
+      &amp;lt;li&amp;gt;Typing&amp;lt;/li&amp;gt;
+      &amp;lt;li&amp;gt;Ping-pong&amp;lt;/li&amp;gt;
+  &amp;lt;/ul&amp;gt;
+
+  &amp;lt;h1&amp;gt;Experience&amp;lt;/h1&amp;gt;
+    &amp;lt;p&amp;gt;
+      XYZ Widgets, Inc (Senior Widget Analyst)
+      &amp;lt;ul&amp;gt;
+          &amp;lt;li&amp;gt;Made over 300 widgets&amp;lt;/li&amp;gt;
+          &amp;lt;li&amp;gt;Increased widget production by 55%&amp;lt;/li&amp;gt;
+      &amp;lt;/ul&amp;gt;
+    &amp;lt;/p&amp;gt;
+    &amp;lt;p&amp;gt;
+      GlobalInfraComm (Intern)
+      &amp;lt;ul&amp;gt;
+          &amp;lt;li&amp;gt;Made great coffee&amp;lt;/li&amp;gt;
+          &amp;lt;li&amp;gt;Seriously, the coffee was awesome.&amp;lt;/li&amp;gt;
+      &amp;lt;/ul&amp;gt;
+    &amp;lt;/p&amp;gt;
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h1&gt;Flags&lt;/h1&gt;
+
+&lt;p&gt;The real power in Templator comes from the ability to set flags at runtime.  Let&amp;#39;s add an &amp;quot;Education&amp;quot; section to the résumé.  I want to list my GPA in the master résumé YAML file, but only have it show up when I build certain kinds of résumés.  I&amp;#39;d like it to be included whenever I build an academic résumé, but leave it off whenever I am building a regular résumé.&lt;/p&gt;
+
+&lt;p&gt;Even though we&amp;#39;ve only got one degree, we&amp;#39;re going to make our degrees a list, in case we ever go back to school.&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;name: Bob Smith
+
+skills:
+  - C++
+  - Typing
+  - Ping-pong
+
+experience:
+  - company: XYZ Widgets, Inc
+    title: Senior Widget Analyst
+    accomplishments:
+      - Made over 300 widgets
+      - Increased widget production by 55%
+  - company: GlobalInfraComm
+    title: Intern
+    accomplishments:
+      - Made great coffee
+      - Seriously, the coffee was awesome.
+
+education:
+  - degree: B.A., Basket-weaving
+    school: University of Basketweaving
+    gpa: 3.4
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;And here&amp;#39;s our new template:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&amp;lt;html&amp;gt;
+&amp;lt;body&amp;gt;
+  &amp;lt;h1&amp;gt;Resume for &amp;lt;%= name %&amp;gt;&amp;lt;/h1&amp;gt;
+
+  &amp;lt;h1&amp;gt;Skills&amp;lt;/h1&amp;gt;
+  &amp;lt;ul&amp;gt;
+    &amp;lt;% skills.each do |skill| %&amp;gt;
+      &amp;lt;li&amp;gt;&amp;lt;%= skill %&amp;gt;&amp;lt;/li&amp;gt;
+    &amp;lt;% end %&amp;gt;
+  &amp;lt;/ul&amp;gt;
+
+  &amp;lt;h1&amp;gt;Experience&amp;lt;/h1&amp;gt;
+  &amp;lt;% experience.each do |job| %&amp;gt;
+    &amp;lt;p&amp;gt;
+      &amp;lt;%= job.company %&amp;gt; (&amp;lt;%= job.title %&amp;gt;)
+      &amp;lt;ul&amp;gt;
+        &amp;lt;% job.accomplishments.each do |accomplishment| %&amp;gt;
+          &amp;lt;li&amp;gt;&amp;lt;%= accomplishment %&amp;gt;&amp;lt;/li&amp;gt;
+        &amp;lt;% end %&amp;gt;
+      &amp;lt;/ul&amp;gt;
+    &amp;lt;/p&amp;gt;
+  &amp;lt;% end %&amp;gt;
+
+  &amp;lt;h1&amp;gt;Education&amp;lt;/h1&amp;gt;
+  &amp;lt;ul&amp;gt;
+    &amp;lt;% education.each do |e| %&amp;gt;
+      &amp;lt;li&amp;gt;
+        &amp;lt;%= e.degree %&amp;gt; (&amp;lt;%= e.school %&amp;gt;)
+        &amp;lt;% if flags[:academic] %&amp;gt;
+          - GPA: &amp;lt;%= e.gpa %&amp;gt;
+        &amp;lt;% end %&amp;gt;
+      &amp;lt;/li&amp;gt;
+    &amp;lt;% end %&amp;gt;
+  &amp;lt;/ul&amp;gt;
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Notice the &lt;code&gt;if&lt;/code&gt; using &lt;code&gt;flags[:academic]&lt;/code&gt; surrounding the printing of the GPA.&lt;/p&gt;
+
+&lt;p&gt;Now if we run Templator like normal:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-terminal&quot; data-lang=&quot;terminal&quot;&gt;./templator -d example4.yaml template4.html.erb
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;We get:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&amp;lt;html&amp;gt;
+&amp;lt;body&amp;gt;
+  &amp;lt;h1&amp;gt;Resume for Bob Smith&amp;lt;/h1&amp;gt;
+
+  &amp;lt;h1&amp;gt;Skills&amp;lt;/h1&amp;gt;
+  &amp;lt;ul&amp;gt;
+      &amp;lt;li&amp;gt;C++&amp;lt;/li&amp;gt;
+      &amp;lt;li&amp;gt;Typing&amp;lt;/li&amp;gt;
+      &amp;lt;li&amp;gt;Ping-pong&amp;lt;/li&amp;gt;
+  &amp;lt;/ul&amp;gt;
+
+  &amp;lt;h1&amp;gt;Experience&amp;lt;/h1&amp;gt;
+
+    &amp;lt;p&amp;gt;
+      XYZ Widgets, Inc (Senior Widget Analyst)
+      &amp;lt;ul&amp;gt;
+          &amp;lt;li&amp;gt;Made over 300 widgets&amp;lt;/li&amp;gt;
+          &amp;lt;li&amp;gt;Increased widget production by 55%&amp;lt;/li&amp;gt;
+      &amp;lt;/ul&amp;gt;
+    &amp;lt;/p&amp;gt;
+
+    &amp;lt;p&amp;gt;
+      GlobalInfraComm (Intern)
+      &amp;lt;ul&amp;gt;
+          &amp;lt;li&amp;gt;Made great coffee&amp;lt;/li&amp;gt;
+          &amp;lt;li&amp;gt;Seriously, the coffee was awesome.&amp;lt;/li&amp;gt;
+      &amp;lt;/ul&amp;gt;
+    &amp;lt;/p&amp;gt;
+
+  &amp;lt;h1&amp;gt;Education&amp;lt;/h1&amp;gt;
+  &amp;lt;ul&amp;gt;
+      &amp;lt;li&amp;gt;
+        B.A., Basket-weaving (University of Basketweaving)
+      &amp;lt;/li&amp;gt;
+  &amp;lt;/ul&amp;gt;
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;No GPA listed.  But if we run Templator with a flag, like so:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-terminal&quot; data-lang=&quot;terminal&quot;&gt;./templator -d example4.yaml --flag academic template4.html.erb
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;We&amp;#39;ll get:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&amp;lt;html&amp;gt;
+&amp;lt;body&amp;gt;
+  &amp;lt;h1&amp;gt;Resume for Bob Smith&amp;lt;/h1&amp;gt;
+
+  &amp;lt;h1&amp;gt;Skills&amp;lt;/h1&amp;gt;
+  &amp;lt;ul&amp;gt;
+      &amp;lt;li&amp;gt;C++&amp;lt;/li&amp;gt;
+      &amp;lt;li&amp;gt;Typing&amp;lt;/li&amp;gt;
+      &amp;lt;li&amp;gt;Ping-pong&amp;lt;/li&amp;gt;
+  &amp;lt;/ul&amp;gt;
+
+  &amp;lt;h1&amp;gt;Experience&amp;lt;/h1&amp;gt;
+
+    &amp;lt;p&amp;gt;
+      XYZ Widgets, Inc (Senior Widget Analyst)
+      &amp;lt;ul&amp;gt;
+          &amp;lt;li&amp;gt;Made over 300 widgets&amp;lt;/li&amp;gt;
+          &amp;lt;li&amp;gt;Increased widget production by 55%&amp;lt;/li&amp;gt;
+      &amp;lt;/ul&amp;gt;
+    &amp;lt;/p&amp;gt;
+
+    &amp;lt;p&amp;gt;
+      GlobalInfraComm (Intern)
+      &amp;lt;ul&amp;gt;
+          &amp;lt;li&amp;gt;Made great coffee&amp;lt;/li&amp;gt;
+          &amp;lt;li&amp;gt;Seriously, the coffee was awesome.&amp;lt;/li&amp;gt;
+      &amp;lt;/ul&amp;gt;
+    &amp;lt;/p&amp;gt;
+
+  &amp;lt;h1&amp;gt;Education&amp;lt;/h1&amp;gt;
+  &amp;lt;ul&amp;gt;
+      &amp;lt;li&amp;gt;
+        B.A., Basket-weaving (University of Basketweaving)
+          - GPA: 3.4
+      &amp;lt;/li&amp;gt;
+  &amp;lt;/ul&amp;gt;
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Notice that the GPA is now included.&lt;/p&gt;
+
+&lt;h1&gt;Putting It All Together&lt;/h1&gt;
+
+&lt;p&gt;It&amp;#39;s very easy to use a build tool such as &lt;a href=&quot;http://rake.rubyforge.org/&quot;&gt;Rake&lt;/a&gt; or &lt;a href=&quot;http://ant.apache.org/&quot;&gt;Ant&lt;/a&gt; to create different build targets that utilize flags.  Flags are also supported in the yaml file itself, so you can use flags to hide data from the template files.  For example, if you wanted to only include a specific job if a flag was set, you can surround that job in the YAML file with an ERB-escaped &lt;code&gt;if&lt;/code&gt; statement.&lt;/p&gt;
+
+&lt;p&gt;I have a &lt;code&gt;Rakefile&lt;/code&gt; that uses an &lt;code&gt;expand_school&lt;/code&gt; flag to include my coursework (an escape in the template) as well as my job as a T.A. (an escape in the YAML file).  I also use a flag called &lt;code&gt;public&lt;/code&gt; that hides my phone number and e-mail address for résumés that get posted on my web site, but includes them for résumés that I intend to send out to individuals.&lt;/p&gt;
+
+&lt;p&gt;I also have two template files, an HTML one and a $$\LaTeX$$ one.  &lt;code&gt;Rake latex&lt;/code&gt; will build the &lt;code&gt;latex_private&lt;/code&gt; and &lt;code&gt;latex_public&lt;/code&gt; artifacts, then execute &lt;code&gt;pdflatex&lt;/code&gt; on those files to get a nice PDF.  &lt;code&gt;Rake upload_resume&lt;/code&gt; will upload the HTML and PDF files to my web site as well, which is extremely convenient.&lt;/p&gt;
+
+&lt;p&gt;There&amp;#39;s definitely a learning curve with doing this, which is why I&amp;#39;ve written this article.  But once I got everything up and running, I was very happy with the result.  I&amp;#39;ve got my résumé file checked into a private git repo, and I&amp;#39;ve even set up &lt;a href=&quot;http://jenkins-ci.org/&quot;&gt;Jenkins&lt;/a&gt; to poll that repo and automatically build my public résumés and upload them to my web site.&lt;/p&gt;
+</description>
+				<pubDate>Thu, 09 Jun 2011 00:00:00 -0600</pubDate>
+				<link>http://www.nomachetejuggling.com/2011/06/09/building-a-resume-with-templator/</link>
+				<guid isPermaLink="true">http://www.nomachetejuggling.com/2011/06/09/building-a-resume-with-templator/</guid>
+			</item>
+		
+			<item>
+				<title>Leaving Rally</title>
+				<description>&lt;p&gt;Today was my last day at &lt;a href=&quot;http://www.rallydev.com&quot;&gt;Rally Software&lt;/a&gt;.  In two weeks, I will be starting a new job, working on a variety of web services, mostly with Java and Groovy.&lt;/p&gt;
+
+&lt;table class=&#39;image alignright&#39; width=&#39;306&#39;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/IMG_20110531_104216-300x224.jpg&quot; width=&#39;300&#39; height=&#39;224&#39;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;Leaving Rally was tough for me.  It&amp;#39;s easy to leave a job when I&amp;#39;m unhappy, or irritated with management, or tired of a project, or if I&amp;#39;m just not learning anything new.  But none of these were the case with Rally.  I&amp;#39;m leaving not because anything is wrong with Rally, but because there&amp;#39;s simply a better opportunity for me elsewhere.  Time Warner is in downtown Denver (right near campus), they have a great benefits and tuition reimbursement program, they&amp;#39;re working with technology I want to know more about, and their staff reads like a fantasy league of my career (I already know half the developers from other jobs).  The switch just made sense for me, but it wasn&amp;#39;t easy to leave.&lt;/p&gt;
+
+&lt;p&gt;When I started at Rally nearly 3 years ago, it was a company that was struggling.  Not financially, but technologically.  For a long time, the company had done very well spreading agile to various customers, led by a product that was having features added to it at a breakneck pace.  &lt;strong&gt;From the outside, the company seemed to have things together, but internally the codebase was a monument of technical debt and hasty decisions.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The company had survived in &amp;quot;startup mode&amp;quot; for years, but the team was starting to buckle under the pressure of technical debt.  Feature development was slowing, and external bug reports were flooding in. Things weren&amp;#39;t looking good.&lt;/p&gt;
+
+&lt;p&gt;Similar situations cause other companies to fail, but Rally was different.  Rally sold itself as a company that could help your company adopt agile and succeed.  Rally insisted on living what they preached, and the team committed itself to attacking their problems using the very tools and techniques the company taught.&lt;/p&gt;
+
+&lt;table class=&#39;image alignleft&#39; width=&#39;306&#39;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/IMG_20110531_104052-300x224.jpg&quot; width=&#39;300&#39; height=&#39;224&#39;/&gt;&lt;p class=&#39;caption&#39;&gt;The Engineering area&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;We increased our test coverage, more than quadrupling the total number of tests in the system.  We worked to convert integration tests into unit tests where possible.  We threaded the tests out during runs (which initially resulted in huge numbers of thread safety failures).  We converted a class of tests that could only run from within our J2EE container to tests that had no such requirement.  &lt;strong&gt;Overall, the suite of tests went from running in 40 minutes to running in about 5, and with better coverage&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;We also completely rewrote our GUI test system, vastly reducing the number of false negatives.  We wrote a GUI test framework from scratch in order to abstract a lot of behaviors and assertions to substantially increase coverage of our app through the GUI.  &lt;strong&gt;Our efforts provided a safety net for making large, crosscutting changes to the application, and we got the GUI tests down from an 8-hour nightly run to a 30-minute run on every commit.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;We attacked areas of the code that had grown brittle and problematic.  Through an enormous undertaking, we converted our entire domain, previously mapped to a relational database in a 5000-line file called &lt;code&gt;GeneratedTopLinkProject.java&lt;/code&gt; (despite the name, it was hand-modified) to actually use &lt;a href=&quot;http://en.wikipedia.org/wiki/Java_Persistence_API&quot;&gt;JPA&lt;/a&gt; on top of EclipseLink, making modification of the domain classes far easier.  We held weekly &amp;quot;&lt;a href=&quot;http://thinkrelevance.com/blog/2008/05/23/refactotum-overview.html&quot;&gt;Refactotums&lt;/a&gt;&amp;quot; where we&amp;#39;d gather the entire team in front of a projector, use &lt;a href=&quot;http://www.sonarsource.org/&quot;&gt;Sonar&lt;/a&gt; to identify areas of the code that needed help, and refactor that code to improve it&amp;#39;s design. &lt;strong&gt;The code was aggressively and fearlessly improved.&lt;/strong&gt;  Hundreds of thousands of lines of code were deleted.&lt;/p&gt;
+
+&lt;p&gt;Personally, one of my personally proudest achievements was the elimination of &amp;quot;Use Case Mode&amp;quot; a deprecated mode in the application that, while used by very few customers, forced the code to branch in hundreds of areas and doubled the overall testing effort.  I was instrumental in both developing the data migration that converted our customers out of this mode, as well as &lt;a href=&quot;http://www.youtube.com/watch?v=qHjpIaH0i80&quot;&gt;deleting tens of thousands of lines of legacy code&lt;/a&gt;.  I vowed to destroy this mode in my second week at the company, so being able to actually do it allowed me to tie a nice bow on my time at Rally.&lt;/p&gt;
+
+&lt;p&gt;There were even more efforts undertaken than those mentioned here.  Some took weeks and some took months, but the team was resolute.  Astonishingly, &lt;strong&gt;all of this happened while still delivering new features for our customers and maintaining a healthy work-life balance&lt;/strong&gt;.  Feature development slowed, but it never stopped.  We never rewrote the codebase; we transformed the code, organically.&lt;/p&gt;
+
+&lt;p&gt;Being a part of Rally during this period of transformation has been fantastic for my career.  &lt;strong&gt;Rally wasn&amp;#39;t the only entity that was in &amp;quot;startup mode&amp;quot; 3 years ago - I was too&lt;/strong&gt;.  I was a cowboy coder, the kind of guy that didn&amp;#39;t have time to write tests, and just wanted to get stuff done and out the door, quality be damned.  I managed to start at Rally right on the ground floor of the effort to mature, and as a direct result I got to mature right along with it.&lt;/p&gt;
+
+&lt;p&gt;Today, where I am in terms of how I approach software is miles ahead of where I was 3 years ago.  &lt;strong&gt;I&amp;#39;ve grown and learned far more in the last 3 years than I did in the first 7 of my career.&lt;/strong&gt;  My understanding of design principles and good coding practices is so much more evolved, I&amp;#39;m almost embarrassed to ever have even been the person I was 3 years ago.  I hope to continue to improve and hone my craft, but I don&amp;#39;t think I&amp;#39;ll ever have an experience as intense and eye-opening as Rally&amp;#39;s code quality bootcamp.&lt;/p&gt;
+
+&lt;p&gt;No matter where my career takes me, I believe that my years at Rally will be some of the best I ever had.  Though I am extremely excited to start at my new company, I know I will miss Rally a great deal.&lt;/p&gt;
+</description>
+				<pubDate>Tue, 31 May 2011 00:00:00 -0600</pubDate>
+				<link>http://www.nomachetejuggling.com/2011/05/31/leaving-rally/</link>
+				<guid isPermaLink="true">http://www.nomachetejuggling.com/2011/05/31/leaving-rally/</guid>
+			</item>
+		
+			<item>
+				<title>Going Back to School (Again)</title>
+				<description>&lt;p&gt;Within the broad spectrum of human feeling, there lies an emotion very much unlike its biochemical brethren: the sense of regret. What separates regret from other emotions is not its potency, but its resilience. Joy, misery, love, and even grief can dull or dissipate given enough time, but regret endures, gnawing at the back of one’s mind, reminding each of us of what could have been, but is not. Regret never wanes and it never dissolves; &lt;strong&gt;regret festers&lt;/strong&gt;. &lt;/p&gt;
+
+&lt;p&gt;Like so many others, I have accumulated a number of regrets over my life.  Though I’ve learned to live with many of these, one regret in particular has lingered in my mind for the past six years: I regret the limitations I placed on myself as an undergraduate at the University of Rochester.&lt;/p&gt;
+
+&lt;p&gt;Since I was a child, I’ve known that what I wanted to do with my life was write computer programs.  From the moment of my first experience writing code on the glowing box attached to a 286 in my father’s study, I’ve been driven by a vivid, clear goal of writing software professionally.  Since the age of 6, whenever someone asked me what I wanted to be when I grew up, I gave the same answer.  When I told my high school guidance counselor, he told me that I needed to go to school and major in Computer Science, so that’s what I did.&lt;/p&gt;
+
+&lt;table class=&#39;image alignright&#39; width=&#39;246&#39;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/4924928641_a758120c60_m.jpg&quot; width=&#39;240&#39; height=&#39;180&#39;/&gt;&lt;p class=&#39;caption&#39;&gt;Clearly, I was a popular guy in college.&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;What I found as early as my first year at school was that my selected major included a variety of subjects that I was not expecting.  I was exposed to material that seemed wholly unrelated to writing programs professionally.  Algorithmic complexity?  Turing machines?  Chomsky Normal Form?  It all seemed too theoretical, too far removed from the actual process of programming.  I needed to prepare myself for my career, and I felt I had no time for theory.  I decided to spend the next four years avoiding the theoretical material as much as possible.  Instead, I focused on my systems classes, which I found both engrossing and practical.  &lt;strong&gt;I even recall how proud I was for passing a particular theory class without more than a cursory glance at the textbook&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Once I graduated, it wasn&amp;#39;t long before I got a job writing software at a data mining company in Colorado, achieving my goal.  I thought I was living my dream, but after a conversation with co-workers about NP-Completeness in which I was accused of “geeking out,” I realized I had a much stronger interest in theoretical material than I had originally thought. I went home and found the very textbook I had once felt so proud to leave virtually untouched. I started really reading it and, to my amazement, I found it absolutely fascinating. I began to realize how interesting I found the subjects I had tried so hard to eschew in school.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;In hindsight, I have always had a passion for theory&lt;/strong&gt;, but I never let myself explore it because I worried it would derail me from my career path.  In retrospect, I missed four years of opportunity as I avoided a subject that, deep down, I found absolutely enthralling.  I realize now that some of my fondest memories from working as a Teaching Assistant were the days I led workshops on graph algorithms, run-time analysis, and sorting.  I am constantly reading papers on algorithms and complexity, perusing the Theoretical Computer Science section on StackExchange, and experimenting with genetic algorithms libraries.  One day, I discovered a list of “the most interesting papers in Theoretical Computer Science” and I found myself reading them until four in the morning.  There’s an entire world of fascinating research within Computer Science, but I’m a spectator in this world, not a contributor.  Because of this, every paper I read is tainted with my regret.&lt;/p&gt;
+
+&lt;table class=&#39;image alignleft&#39; width=&#39;246&#39;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/4928244700_a3eebe3bfd_m.jpg&quot; width=&#39;240&#39; height=&#39;180&#39;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;But regret, for all its negativity, does have a particularly positive property. Under certain conditions, the magnitude of the regret can be transformed into something just as powerful: motivation. When one hears within the same nagging sense of regret an echo of “it’s not too late,” regret can become one of the most powerful of positive human emotions. &lt;strong&gt;Regret, re-purposed, is a far more powerful motivator than any mere goal&lt;/strong&gt;, because it pushes us rather than pulls us.&lt;/p&gt;
+
+&lt;p&gt;This regret has now completed its transformation into motivation.  &lt;strong&gt;I am going back to school to pursue a PhD in Computer Science with a specialization in theory and algorithms&lt;/strong&gt;.  I am not doing this because I think it will help me in my career, in fact I may not even be willing to list the PhD on my professional resume, as a number of hiring managers I have talked to have told me that Computer Science PhD&amp;#39;s resumes go straight into the trash.  No, I am not going back to grad school to accomplish any particular goal, but because I find theory fascinating and I want to enrich the field through my own research.  I want to explore my interests in computational complexity, evolutionary computation, data structures, cryptography, graph theory, probabilistic algorithms, and automata theory, and coalesce these interests with my passion for software engineering.  The fact that I don’t know exactly where this exploration will take me doesn’t deter me in the slightest, it invigorates me.&lt;/p&gt;
+
+&lt;p&gt;I do not intend to become an academic.  &lt;strong&gt;I still love professional software engineering&lt;/strong&gt;, and I won&amp;#39;t be taking any TA or RA positions.  I plan to work a full-time job as a professional programmer while pursuing my PhD.  It is absolutely possible that I will not enjoy these subjects as I think I will, so at the end of every semester I will be asking myself if I still want to do be doing this.  If the answer is ever &amp;quot;no,&amp;quot; I&amp;#39;ll drop-out guilt-free, but my regret has been living inside me for too long for me to not at the very least give a PhD program an honest shot.&lt;/p&gt;
+
+&lt;p&gt;I will be starting at the University of Colorado in Denver this Fall.&lt;/p&gt;
+</description>
+				<pubDate>Fri, 15 Apr 2011 00:00:00 -0600</pubDate>
+				<link>http://www.nomachetejuggling.com/2011/04/15/going-back-to-school-again/</link>
+				<guid isPermaLink="true">http://www.nomachetejuggling.com/2011/04/15/going-back-to-school-again/</guid>
+			</item>
+		
+			<item>
+				<title>Book Review: Pragmatic Thinking and Learning</title>
+				<description>&lt;table class=&#39;image alignright&#39; width=&#39;104&#39;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/3063393.jpg&quot; width=&#39;98&#39; height=&#39;117&#39;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;The book essentially covers two topics. The first topic is how your brain works. This is interesting, to be sure, but the book really shines when it comes to the second topic: how to use your brain, knowing how it works.&lt;/p&gt;
+
+&lt;p&gt;Andy talks about very light cognitive science, and he puts it into extremely digestible terms. I never felt lost, but I never felt patronized either. I emerged from reading the book with a far better understanding of the brain in an academic sense.&lt;/p&gt;
+
+&lt;p&gt;But more importantly, I understand exactly what the limitations of my brain are. I understand what my brain is good at, and what it is not so good at. I understand why I think of programming solutions in the shower. I understand what makes the difference between retaining what I read and not.&lt;/p&gt;
+
+&lt;p&gt;This book is essentially a toolkit for electro-shocking your brain. It teaches you how to nurture the creative parts of your brain, and how best to utilize the differences between the different aspects of your mind. It teaches you how to manage your focus on different tasks and how to avoid incorrect and biased thinking. &lt;strong&gt;In short, it teaches you how to use your brain the way it&amp;#39;s truly meant to be used.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;This is not a book you can skim through. The information is exactly as dense as it can be, and no denser (no surprise considering that the author understands the limitations of the brain very well). It is the perfect balance of curiosity-satisfying academic knowledge and real-world pragmatic knowledge.&lt;/p&gt;
+
+&lt;p&gt;Since reading this book, I have noticed a fundamental change in the way I treat and understand my brain, and I have found solutions to problems far more easily than I used to. I hate to use a cliche&amp;#39;d phrase like &amp;quot;life-changing&amp;quot; but, yeah, it&amp;#39;s kind of life-changing.&lt;/p&gt;
+
+&lt;p&gt;I recommend this book to anyone who wants to turbocharge their mind, programmer or not. But I recommend it even more highly to programmers.&lt;/p&gt;
+
+&lt;p&gt;Rating: 5 out of 5&lt;/p&gt;
+</description>
+				<pubDate>Fri, 31 Jul 2009 00:00:00 -0600</pubDate>
+				<link>http://www.nomachetejuggling.com/2009/07/31/book-review-pragmatic-thinking-and-learning/</link>
+				<guid isPermaLink="true">http://www.nomachetejuggling.com/2009/07/31/book-review-pragmatic-thinking-and-learning/</guid>
+			</item>
+		
+			<item>
+				<title>How I Lost 90 Pounds in One Year</title>
+				<description>&lt;p&gt;I&amp;#39;ve been a fat guy since I was in elementary school.  I had a growth spurt around 10th grade that thinned me out a lot, but then I regained all of that weight in college, and then some.&lt;/p&gt;
+
+&lt;table class=&#39;image aligncenter&#39; width=&#39;406&#39;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/weight_mountains.jpg&quot; width=&#39;400&#39; height=&#39;300&#39;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;One day I hit 290, which became something of a wake-up call for me.  I really didn&amp;#39;t want to break the 300 barrier, but I had been steadily gaining weight for the past few years and I was well on my way to being over 300 pounds.  Combined with my father&amp;#39;s increasing problems due to his diabetes, I had become worried enough about my future that I decided to do something about my weight in 2007.&lt;/p&gt;
+
+&lt;p&gt;I have tried a number of different things over the course of my life, though I never tried any fad diets like South Beach or Atkins.  I tried limiting my food intake, I tried riding my bike to work to get exercise, but I remained steadily creeping toward 300 pounds and a future as a diabetic.&lt;/p&gt;
+
+&lt;p&gt;To make a long story very, very short, exactly one year later I weighed 200 pounds, having lost 90 pounds.  No surgeries, no fad diets.&lt;/p&gt;
+
+&lt;p&gt;There were a number of things I did that I consider to have made the difference between an unsuccessful attempt at losing weight and a successful one.  I&amp;#39;ve decided to share these things on the intarwebs, in hopes that they might motivate or help someone else struggling with their weight.&lt;/p&gt;
+
+&lt;h1&gt;#1 See A Nutritionist&lt;/h1&gt;
+
+&lt;p&gt;Talking to a professional nutritionist made a huge difference.  I was able to tell her exactly what I ate during the day and exactly what kind of exercise I got regularly.  I ran her through a typical day and a typical week, and she figured out exactly what my problem areas were.  As it turned out, my main problem wasn&amp;#39;t sugar intake, but carbohydrate intake, and she gave me helpful guidance for how to control my carbs in my diet.  She told me what foods I ate that I needed to stop eating, which foods I needed to cut back on, and which kinds of food I needed to start eating.  She illustrated portion sizes for the foods I eat, and gave me a number of extremely helpful guides.&lt;/p&gt;
+
+&lt;p&gt;She didn&amp;#39;t put me on some crazy fad diet, or give me suggestions that I&amp;#39;d be unable to follow because I&amp;#39;d be miserable following them.  &lt;strong&gt;She catered her advice to me specifically&lt;/strong&gt;, which made it far more useful advice than what I could pick up on the internet in blog posts such as this one.&lt;/p&gt;
+
+&lt;p&gt;In the end, making adjustments to my diet and exercise routines based on her suggestions wound up making a &lt;strong&gt;critical difference&lt;/strong&gt; in my ability to lose weight.&lt;/p&gt;
+
+&lt;h1&gt;#2 Seriously, See A Nutritionist&lt;/h1&gt;
+
+&lt;p&gt;I really can&amp;#39;t stress it enough.  &lt;strong&gt;The combined impact of every single other item on this list didn&amp;#39;t even come close to the impact made by just talking to a nutritionist&lt;/strong&gt;.  The visit was covered on my insurance plan and it only took about an hour out of my life.  Absolutely nothing I did over the course of the year helped me as much as talking to a nutritionist.&lt;/p&gt;
+
+&lt;p&gt;Do it.&lt;/p&gt;
+
+&lt;h1&gt;#3 Set Goals and Rewards&lt;/h1&gt;
+
+&lt;p&gt;My goal for the year was 90 pounds.  I never, EVER thought I&amp;#39;d actually pull it off.  90 was my &amp;quot;boy would it be nice&amp;quot; goal.  I set intermediate goals of 30 and 60 pounds.  30 I knew I could hit, 60 would take work, 90 was basically impossible.&lt;/p&gt;
+
+&lt;p&gt;At each goal, I gave myself a reward.  This reward was something I didn&amp;#39;t allow myself to get without hitting the goal.  At 30, I got a second monitor for my computer.  At 60, an XBox.  At 90, a Macbook.  Each reward was larger than the last.&lt;/p&gt;
+
+&lt;p&gt;Focusing on just the thirty pound increments made my goals seem more doable, and whenever I wanted to bail on a workout early I could say &amp;quot;come on, 10 more pounds to the XBox&amp;quot; to keep myself going.  Every time I wanted a piece of cake, I knew it moved me further away from my Macbook.&lt;/p&gt;
+
+&lt;p&gt;Manageable goals make a big difference in motivation, and I&amp;#39;d say that this item combined with seeing a nutritionist were the biggest difference makers without question.&lt;/p&gt;
+
+&lt;h1&gt;#4 Timebox The Effort and Commit&lt;/h1&gt;
+
+&lt;table class=&#39;image alignright&#39; width=&#39;406&#39;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/weight_pose.jpg&quot; width=&#39;400&#39; height=&#39;300&#39;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;When I first started, it was very helpful, just from a mentality standpoint, to set a limit for how long I was going to make this effort.&lt;/p&gt;
+
+&lt;p&gt;The idea of &amp;quot;I&amp;#39;m going to watch what I eat and work out for the rest of my life&amp;quot; was intimidating to me, to the point where it felt like I didn&amp;#39;t even want to bother.  It was a miserable future in my mind, and it made me want to give up instantly.&lt;/p&gt;
+
+&lt;p&gt;In contrast, this time I said to myself &amp;quot;Okay, I&amp;#39;m going to watch what I eat and work out and commit to that for exactly one year, to the day.  I&amp;#39;ll decide what to do after that at the end.&amp;quot;  Time boxing the effort gave me a reason to try, and every time I wanted to give myself an excuse to get out of the gym or eat a giant pizza by myself, I&amp;#39;d just say &amp;quot;No, not now.  You&amp;#39;re sticking with this for one year.&amp;quot;&lt;/p&gt;
+
+&lt;p&gt;It seems small, but it made a big difference.  Feeling like there was a limit to the work kept me motivated to stick with the plan whenever I was tempted to deviate.&lt;/p&gt;
+
+&lt;p&gt;In the end, however, I feel so much better now than I did when I was 90 pounds heavier, and I actually ENJOY the gym as well as how I feel when I eat healthy.  I don&amp;#39;t have the temptation to eat a big pizza any more because I know how I feel afterwards and how different that is from how I feel normally.  Eating junk food makes me lethargic and tired, but I never knew that until I ate healthy and was able to really observe the difference.  Even though my year is up, I haven&amp;#39;t fallen back into old habits; I still eat well and go to the gym, but now I&amp;#39;m happy to do so.  However, it helped a great deal to to limit myself to a specific period of time from the outset.&lt;/p&gt;
+
+&lt;h1&gt;#5 Track Progress, Adjust as Needed&lt;/h1&gt;
+
+&lt;p&gt;During the year, I weighed myself every day, at the same time every day, wearing the same amount of clothing.  I wrote down my weight, and I used the results to course correct when I needed to.&lt;/p&gt;
+
+&lt;p&gt;I found that my weight fluctuated quite a bit during the week, and there was nothing as frustrating as working my ass of at the gym and then weighing myself the next day and finding I had gained weight.  In actuality, I hadn&amp;#39;t gained weight, but my weight fluctuated.  Weight fluctuations are completely normal and depend on the time of day, the time of year, how hydraded or dehydrated you happen to be, when you last ate, and many other factors.  &lt;strong&gt;You can&amp;#39;t let yourself get hung up on day to day weight changes.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;table class=&#39;image alignright&#39; width=&#39;306&#39;&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://www.nomachetejuggling.com/assets/weightchart.png&quot;&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/weightchart-300x194.png&quot; width=&#39;300&#39; height=&#39;194&#39;/&gt;&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;Instead, what I did was kept track of my weight for the week.  I had a spreadsheet (stored in &lt;a href=&quot;http://docs.google.com&quot;&gt;Google docs&lt;/a&gt;) that had one week per row, 7 columns each.  The only column I ever really looked at was the &amp;quot;Week Average&amp;quot; and I compared that to the previous week.  If I had, overall, gained during the week, I needed to make a change.  If I had lost weight, I was on the right track.  This let me ignore daily fluctuations.&lt;/p&gt;
+
+&lt;p&gt;I entered my data every day, but I evaluated only at the start of the week.  When I decided to change my plan, I committed to the change for one full week, even if it didn&amp;#39;t look like it was working as the week started out.  For example, if I decided to have a different kind of breakfast, I would commit to that new breakfast for the full week, no matter what.  At the end of the week, I&amp;#39;d decide if that did or didn&amp;#39;t work.&lt;/p&gt;
+
+&lt;p&gt;It also helps to buy a decent scale and weigh yourself at the exact same time every day.  I always weighed myself in the morning, right before showering.  The scale was in the bathroom, next to the shower.&lt;/p&gt;
+
+&lt;p&gt;I also tracked myself at the gym.  I didn&amp;#39;t go running or bike riding for aerobic exercise - I used machines that allowed me to enter my age and weight, then told me how many calories I was burning.  When I was first starting out, this was critical in figuring out what kind of changes I needed to make.&lt;/p&gt;
+
+&lt;p&gt;One thing I wish I had done was taken a picture of myself at 290.  I never thought I&amp;#39;d actually be able to lose even 30 pounds, let alone 90.  So I wasn&amp;#39;t willing to take a photo of myself at 290.  When I hit 260, I wished I had taken a picture of myself 30 pounds heavier, because, having lived my life as a fat guy, it was really hard to actually see that I was losing weight because of my own perceptions.  Only the scale told me I was losing weight.  If I had a picture at 290 and one at 260, I would have seen the difference that others were seeing and mentioning.  Of course, at 260 I never thought I&amp;#39;d hit 230, so I still didn&amp;#39;t take a picture.  And, you guessed it, at 230 I never thought I&amp;#39;d hit 200 so I still didn&amp;#39;t take one.  I wish I had a picture of myself 90 pounds heavier without a shirt on, but I don&amp;#39;t.  Do it, or you&amp;#39;ll regret it.&lt;/p&gt;
+
+&lt;h1&gt;#6 Don&amp;#39;t Make A Resolution, Start Right Now&lt;/h1&gt;
+
+&lt;p&gt;Resolutions don&amp;#39;t work.  Don&amp;#39;t make weight loss a &amp;quot;new years resolution.&amp;quot;  And don&amp;#39;t say things like &amp;quot;alright, I&amp;#39;m going on my diet starting the first of this month.&amp;quot;  Start next week.&lt;/p&gt;
+
+&lt;p&gt;Whenever I would pick a specific time to start, or do something like have &amp;quot;one last hurrah&amp;quot; at a buffet during the month prior to &amp;quot;getting serious,&amp;quot; I would fail.  Any time I drew a line between my &amp;quot;old diet&amp;quot; and my &amp;quot;new diet&amp;quot; it didn&amp;#39;t work.  I can&amp;#39;t really explain why, but for some reason this never worked out.&lt;/p&gt;
+
+&lt;p&gt;I&amp;#39;d miss a workout day and all of a sudden the &amp;quot;new diet&amp;quot; had been blown and I&amp;#39;d wind up skipping another day, and then another, until I wasn&amp;#39;t doing it anymore.  Or I&amp;#39;d eat a slice of pizza and just give up on the whole thing. ** Creating a hard line between &amp;quot;old&amp;quot; and &amp;quot;new&amp;quot; made me feel like a failure if I screwed up during the &amp;quot;new&amp;quot; phase.**&lt;/p&gt;
+
+&lt;table class=&#39;image alignright&#39; width=&#39;406&#39;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/weight_suit.jpg&quot; width=&#39;400&#39; height=&#39;300&#39;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;&lt;strong&gt;Instead, I got into it gradually.&lt;/strong&gt; My first day at the gym wasn&amp;#39;t some hour-long thing, it was about 30 minutes.  My first day of my new diet wasn&amp;#39;t carrot sticks and salads, I just cut back on some bad foods and tried some new ones.  I experimented.  I replaced my morning muffin with a morning yogurt.  I added half an hour to my workday by going to the gym immediately after work (before going home) for a little while.  Then I&amp;#39;d simply track how helpful these efforts were.  Quite honestly, a small change was actually enough to lose some weight in the beginning, but eventually it wasn&amp;#39;t enough, and I had to add more gym time or cut back more in my diet.  I started with baby steps and then course-corrected as time went on.  This means I didn&amp;#39;t ever have a distinct &amp;quot;old life&amp;quot; and &amp;quot;new life&amp;quot; with a line drawn between them.  I didn&amp;#39;t start &amp;quot;first thing next Monday&amp;quot;.  I started immediately and changed the plan as I went along.  &lt;strong&gt;Start tomorrow.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Another benefit of starting without making it a New Year&amp;#39;s resolution is quite simple: &lt;strong&gt;just after New Year&amp;#39;s, the gym sucks.&lt;/strong&gt;  The place gets packed with &amp;quot;New Year&amp;#39;s Resolutionists&amp;quot;.  You have to fight for a machine that you want to use, and if you&amp;#39;re new to the gym, you feel like everyone is watching your fat ass jiggle around on the treadmill.  The gym blows when it&amp;#39;s crowded, especially when you&amp;#39;re starting out.  Starting out in January is a guaranteed way to abandon the gym.  I started in October, so I was comfortable enough in the gym by January that I didn&amp;#39;t mind the sudden surge in attendance (in fact, I felt like they were n00bs).  The resolutionists all give up by March, so after that it&amp;#39;s safe.&lt;/p&gt;
+
+&lt;h1&gt;#7 No Fried Food, No Soda - Cold Turkey&lt;/h1&gt;
+
+&lt;p&gt;There were two exceptions to the &amp;quot;slow start&amp;quot; mentioned above.  Two big changes that were, in fact, immediate and drastic.  I stopped drinking regular soda, and I stopped eating fried food.  Completely.&lt;/p&gt;
+
+&lt;p&gt;In a restaurant, if my food came with fries, I&amp;#39;d ask to replace it with steamed Broccoli or something similar.  I didn&amp;#39;t buy or drink any regular soda, ever, no exceptions.  Diet soda was fine, however.&lt;/p&gt;
+
+&lt;p&gt;I didn&amp;#39;t listen to any of the crap about how diet soda is bad for me and causes cancer, or how Mexican coke with real sugar is better for me, blah blah blah.  It&amp;#39;s all horseshit.  Calories are calories, and diet soda doesn&amp;#39;t have any.  Diet soda isn&amp;#39;t GOOD for me, but it did let me drink something with some flavor with my lunch.  Quite honestly I&amp;#39;d have gone insane if I only drank water for the year, so I&amp;#39;m glad diet soda had my back.  That said, I didn&amp;#39;t guzzle the stuff.  Soda, because it&amp;#39;s carbonated, expands your stomach, so it makes you feel less full than you otherwise would.  This encourages you to overeat.  I also started ordering only water when I went out to eat, which had the bonus of saving me more money than I expected.  I generally had water or diet iced tea (no carbonation) with dinner, and I allowed myself to drink a diet soda at lunch.  I could get away with this because I always brought my lunch from home, so there was a limit to the amount of food I could eat at lunchtime, reducing the risk of overeating because of soda.&lt;/p&gt;
+
+&lt;p&gt;I&amp;#39;d occasionally steal a couple fries from my fiancee if she had some, but eventually I found that having two fries made it extremely difficult not to have a third fry, and a third made it very hard not to have a fourth, so I stopped doing that for the most part.&lt;/p&gt;
+
+&lt;p&gt;Diet soda and veggies instead of fried food, immediately.  Starting right away.  It helps.&lt;/p&gt;
+
+&lt;h1&gt;#8 Get What You Need, But Don&amp;#39;t Let It Stop You&lt;/h1&gt;
+
+&lt;p&gt;At the gym during the first week with my iPod nano.  Holding it while I work out is a pain.  &amp;quot;You know what,&amp;quot; I think to myself, &amp;quot;I really need an arm strap.  I&amp;#39;ll get one tomorrow and then start working out.&amp;quot;&lt;/p&gt;
+
+&lt;p&gt;You have no idea what kind of excuses you will invent to get out of the gym until you start going.  It&amp;#39;s staggering, the human brain&amp;#39;s ability to concoct reasons to get out of the gym.  My foot is kind of hurting.  I need a water bottle to really get started.  My iPod battery is dead, I should charge it first.  My gym shorts are too tight, I need new ones.  The little plastic thing on my shoelace came off and now I can&amp;#39;t tie them as tightly.  Seriously, you will think of every possible reason under the sun to get out of the gym.  &lt;strong&gt;GO ANYWAY.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Even if the reason is completely valid, like the armstrap for my iPod, make yourself go anyway and live with the problem for the one time, then fix it tomorrow.  The HABIT of going to the gym is almost as important as the actual going.  If you skip a day that you planned on going, you break your habit.  Once you build the habit of going to the gym, you find that you don&amp;#39;t have to convince yourself to go anymore, it&amp;#39;s just part of your day, like brushing your teeth.  Building the habit is crucial, so don&amp;#39;t let little things derail you from developing the habit.&lt;/p&gt;
+
+&lt;p&gt;I now find that I actually feel shitty when I don&amp;#39;t go to the gym, it takes more effort for me to skip than to go.  That&amp;#39;s because I built a habit out of it, the same way that if you skip brushing your teeth for a day your teeth feel all grimy and disgusting.  &lt;strong&gt;Even if you need something before you can really get a lot out of a gym trip, go anyway and deal with the problem tomorrow.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h1&gt;#9 Drink More Water&lt;/h1&gt;
+
+&lt;table class=&#39;image alignright&#39; width=&#39;406&#39;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/weight_couch.jpg&quot; width=&#39;400&#39; height=&#39;300&#39;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;Water is good for you.  It increases your metabolism, and it helps you feel full.  Very, very often when you think you are hungry, you&amp;#39;re actually thirsty, your brain just can&amp;#39;t tell the difference.  If you find yourself craving food, go drink a glass of water and wait a few minutes.  You very well may not actually have been hungry.  Your brain sucks, deal with it.&lt;/p&gt;
+
+&lt;p&gt;When I go out to a restaurant, I order water, and I drink a ton of it.  This ensures I don&amp;#39;t overeat at the restaurant (food in restaurants is usually served in a 3x or more portion.  If you&amp;#39;re not taking home a box when you leave, you ate too much).  I try to drink an entire glass of water before the waiter or waitress comes back to even take my order, and another before the bread arrives.  &lt;strong&gt;If I&amp;#39;m not annoying the server, I&amp;#39;m not drinking enough water.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;How much water should you drink?  At the risk of being crass, your piss should be almost clear.  If your urine is yellow, you need to drink more water.  It&amp;#39;s that simple.&lt;/p&gt;
+
+&lt;h1&gt;#10 Slow The Fuck Down&lt;/h1&gt;
+
+&lt;p&gt;You eat too fast.  Trust me, you do.  Fat people eat way faster than skinny people.  Huge bites, gone in seconds, then a plate full of more food.&lt;/p&gt;
+
+&lt;p&gt;I found it very helpful to fill my dinner plate with what I felt was the correct amount of food, then to eat the food on it as slowly as possible.  If I was still hungry when I was done, I forced myself to wait 20 minutes.  Only if I was still hungry after 20 minutes would I let myself have more food.  It almost never happened.  I only got a second plate if I broke the 20-minute rule (which I&amp;#39;d always regret)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;It takes about 20 minutes for your stomach to tell your brain it&amp;#39;s full.&lt;/strong&gt;  That means, once you&amp;#39;re COMPLETELY FULL, it will be twenty minutes before your brain even has an idea that you should stop eating.&lt;/p&gt;
+
+&lt;p&gt;The slower you eat, the more time you give your brain to find out it should stop eating before you cram more food down your cramhole.&lt;/p&gt;
+
+&lt;p&gt;Take tiny bites.  Your mouth doesn&amp;#39;t need to be full to enjoy the taste of your meal.  The smaller the bite, the more food you&amp;#39;ll think is on your plate, and the less likely you will be to feel like you didn&amp;#39;t get enough food.&lt;/p&gt;
+
+&lt;p&gt;Chew.  Turn it into mush before you swallow.  You&amp;#39;re on a diet, so you have a much more limited number of bites.  Taste those bites as long as you can before you swallow them.  Once the food is out of your mouth, you can&amp;#39;t taste it anymore, and you need to stuff a whole new bite into your face to enjoy the taste of your food again.  &lt;strong&gt;Leave the bite in longer, and you can enjoy your food longer without the need to shove more food into your gullet.&lt;/strong&gt;  Try to chew until there&amp;#39;s no flavor.&lt;/p&gt;
+
+&lt;p&gt;I still stuggle with this one, it&amp;#39;s a big adjustment, but it&amp;#39;s worth it.&lt;/p&gt;
+
+&lt;h1&gt;#11 Don&amp;#39;t Kill Yourself&lt;/h1&gt;
+
+&lt;table class=&#39;image alignright&#39; width=&#39;406&#39;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/weight_camping.jpg&quot; width=&#39;400&#39; height=&#39;300&#39;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;The worst thing you can do to completely derail your diet is to make yourself so miserable that you hate it.&lt;/p&gt;
+
+&lt;p&gt;If your company orders pizza for your group and you decide you eat your lame little salad while everyone else is eating pizza, you&amp;#39;re just going to sit there focusing on delicious pizza and how pissed off you are that you&amp;#39;re on this stupid diet.  If you hate it, you&amp;#39;ll quit.&lt;/p&gt;
+
+&lt;p&gt;Indulge every so often.  Have that slice of pizza.  Steal a few fries from your spouse.  Just order the cheeseburger if you&amp;#39;re going to be pissed off all night after ordering a bowl of soup.  Just &lt;strong&gt;don&amp;#39;t make a habit of it&lt;/strong&gt;.  They&amp;#39;re indulgences for a reason, they should be the exception, not the norm.&lt;/p&gt;
+
+&lt;p&gt;If you love chocolate more than life itself, depriving yourself of it is going to end one way: with you shoving fistfuls of Hershey bars into your face while screaming &amp;quot;screw the diet!&amp;quot;  The trick is not to deprive yourself, it&amp;#39;s to introduce moderation.  &lt;strong&gt;Eat a kit-kat, but spend an extra 15 minutes at the gym to balance it out.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Eventually you&amp;#39;ll start looking at a slice of pizza not as a delicious, cheesy piece of bread, but as an extra 20 minutes on the treadmill.  Then you won&amp;#39;t even want the damn thing (usually).  &lt;/p&gt;
+
+&lt;p&gt;Yeah, that snickers bar sure LOOKS good, but the fact of the matter is that you&amp;#39;ll have eaten it in 30 seconds and you won&amp;#39;t even remember what it tastes like 10 minutes from now, but if you eat it you&amp;#39;ll have to spend an extra half hour at the gym working it off.  Possibly an extra 6 hours the next day being all pissed off at yourself for eating it, blaming it for the fact that you gained weight yesterday in spite of working your butt off at the gym.&lt;/p&gt;
+
+&lt;p&gt;Your relationship toward these kinds of foods changes when you start living healthier, and you desire them less and less.  But if you completely deprive yourself of them, you&amp;#39;ll want them more and more.  Give in when you absolutely have to, just don&amp;#39;t make it a regular occurrence.&lt;/p&gt;
+
+&lt;h1&gt;Conclusion&lt;/h1&gt;
+
+&lt;p&gt;Losing weight is not that hard.  Really, it&amp;#39;s not.  It&amp;#39;s more about commitment than anything else.  &lt;strong&gt;Make a plan, stick to it, and the pounds come off.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;You don&amp;#39;t need a fad diet, you don&amp;#39;t need a special book, you don&amp;#39;t need to subscribe to some online service.  &lt;strong&gt;If you burn more calories during a day than you eat, you lose weight,&lt;/strong&gt; it&amp;#39;s that simple.&lt;/p&gt;
+
+&lt;p&gt;Stop telling yourself &amp;quot;I&amp;#39;ve tried everything and nothing works!&amp;quot;  You know damn well you haven&amp;#39;t tried everything, stop kidding yourself.&lt;/p&gt;
+
+&lt;p&gt;Losing 90 pounds is, without a doubt, the most significant accomplishment I&amp;#39;ve ever made in my entire life so far.  I can&amp;#39;t even describe in words how much better I feel now, how much more energy I have now, and how much happier I am.  I feel comfortable in a suit.  I can buckle my seatbelt in a car without feeling like the strap is making my bitch tits stick out.  I can shop for clothes in a regular department store, and it doesn&amp;#39;t take me 5 hours.  I can wear t-shirts instead of fat-guy Hawaiian shirts.  I can dance or ride a bike without feeling like a fridge.  The little things make a big difference.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;I feel alive, confident, and energetic.&lt;/strong&gt;  My brain feels like it works better, and I enjoy how I feel when I&amp;#39;ve eaten well for the day.  I enjoy my time at the gym, it gives me time to think about whatever I want or listen to an audiobook.  200-pound-me is so much happier than 290-pound-me that I can barely even understand how I was able to live my life before.  Having someone I haven&amp;#39;t seen in a while say &amp;quot;holy shit, you look great!&amp;quot; makes my week.  &lt;/p&gt;
+
+&lt;p&gt;It&amp;#39;s not that hard once you build habits, I promise.  I did it.  You can too.&lt;/p&gt;
+</description>
+				<pubDate>Sat, 02 May 2009 00:00:00 -0600</pubDate>
+				<link>http://www.nomachetejuggling.com/2009/05/02/how-i-lost-90-pounds-in-one-year/</link>
+				<guid isPermaLink="true">http://www.nomachetejuggling.com/2009/05/02/how-i-lost-90-pounds-in-one-year/</guid>
+			</item>
+		
+	</channel>
+</rss>

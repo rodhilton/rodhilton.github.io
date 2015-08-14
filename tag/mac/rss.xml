@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Absolutely No Machete Juggling &raquo; Mac</title>
+		<description>Rod Hilton&amp;#039;s rants about stuff he cares about way too much.</description>		
+		<link>http://www.nomachetejuggling.com</link>
+		<atom:link href="http://www.nomachetejuggling.com/tag/{"name"=>"mac", "posts"=>[<Post: /2012/05/15/personal-wiki-using-github-and-gollum-on-os-x>, <Post: /2008/12/05/apple-semi-first-impressions>], "id"=>"mac"}/rss.xml" rel="self" type="application/rss+xml" />
+		
+	</channel>
+</rss>

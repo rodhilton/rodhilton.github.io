@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Absolutely No Machete Juggling &raquo; Book</title>
+		<description>Rod Hilton&amp;#039;s rants about stuff he cares about way too much.</description>		
+		<link>http://www.nomachetejuggling.com</link>
+		<atom:link href="http://www.nomachetejuggling.com/tag/{"name"=>"book", "posts"=>[<Post: /2013/06/10/book-review-presentation-patterns>, <Post: /2012/10/19/book-review-the-career-programmer>, <Post: /2009/08/02/how-to-convert-audible-aa-files-to-mp3>, <Post: /2009/07/31/book-review-pragmatic-thinking-and-learning>, <Post: /2009/02/19/book-review-the-art-of-agile-development>], "id"=>"book"}/rss.xml" rel="self" type="application/rss+xml" />
+		
+	</channel>
+</rss>

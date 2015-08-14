@@ -1,0 +1,756 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Absolutely No Machete Juggling &raquo; Coldfusion's Compiler</title>
+        <meta name="viewport" content="width=device-width" />
+        <link rel="alternate" type="application/rss+xml" title="Absolutely No Machete Juggling &raquo; All Posts" href="/rss.xml" />
+        
+        
+          <link rel="alternate" type="application/rss+xml" title="Absolutely No Machete Juggling &raquo; 'Life' Posts Only" href="/category/life/rss.xml" />
+        
+          <link rel="alternate" type="application/rss+xml" title="Absolutely No Machete Juggling &raquo; 'Programming' Posts Only" href="/category/programming/rss.xml" />
+        
+          <link rel="alternate" type="application/rss+xml" title="Absolutely No Machete Juggling &raquo; 'Technology' Posts Only" href="/category/technology/rss.xml" />
+        
+
+        <link rel="alternate" type="application/rss+xml" title="Absolutely No Machete Juggling &raquo; Comments" href="http://nomachetejuggling.disqus.com/latest.rss" />    
+
+        <link rel="icon" href="/assets/favicon.png" type="image/png">
+        <link rel="shortcut icon" href="/assets/favicon.png" type="image/png">
+
+        <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic|Source+Code+Pro|Architects+Daughter' rel='stylesheet' type='text/css'>
+
+        <link rel="stylesheet" href="/css/main.css">
+        <link rel="stylesheet" href="/css/googlecode.css">
+
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    </head>
+<body>
+<div id="page">
+  <div id="headerwrapper">
+    <div class="header">
+      <div class="headertitle">
+        <h1><a href="/" title="Absolutely No Machete Juggling: Rod Hilton&#039;s rants about stuff he cares about way too much.">Absolutely No Machete Juggling</a></h1>
+        <p>Rod Hilton&#039;s rants about stuff he cares about way too much...</p>
+      </div>
+    </div>
+  </div>
+  <div id="navbar">
+    <div id="navcontainer">
+      <ul id="navlist">
+  
+  <li class="cat-item "><a href="/">All</a></li>
+
+  
+    
+    <li class="cat-item current-cat"><a href="/category/life">LIFE</a>
+  
+    
+    <li class="cat-item "><a href="/category/programming">PROGRAMMING</a>
+  
+    
+    <li class="cat-item "><a href="/category/technology">TECHNOLOGY</a>
+  
+
+  
+    
+    <li class="menu-item "><a href="/about.html">ABOUT</a></li>
+  
+    
+    <li class="menu-item "><a href="/resume.html">RéSUMé</a></li>
+  
+    
+    <li class="menu-item "><a href="/projects.html">PROJECTS</a></li>
+  
+    
+    <li class="menu-item "><a href="/contact.html">CONTACT</a></li>
+  
+    
+    <li class="menu-item "><a href="/links.html">LINKS</a></li>
+  
+</ul><!-- /navlist -->
+    </div><!-- /navcontainer -->
+  </div><!-- /navbar -->
+
+  <div id="wrapper">
+    <div id="content">
+      <div class="post">
+	<div class="postheader">
+  	<h1 class="posttitle"><a href="/2006/12/07/coldfusions-compiler/">Coldfusion's Compiler</a></h1>
+  	<div class="postmeta">
+		<p class="meta">
+		<b title="code and coldfusion">LIFE</b> - 
+		December 7, 2006 - 
+		1,898 words -
+		<a href="/2006/12/07/coldfusions-compiler/#disqus_thread">Comments</a>
+		</p>
+	</div>
+</div>
+	<div class="postentry">
+		<div class='toc no-hyphenate'><h1>Contents</h1><ol><li><a href='#toc-compiled-version-of-neil-39-s-code'>Compiled Version of Neil&#39;s Code</a></li><li><a href='#toc-enter-cfscript'>Enter CFScript</a></li><li><a href='#toc-analysis'>Analysis</a></li></ol></div><p>Neil asks on his blog, &quot;<a href="http://blog.feed-squirrel.com/2006/12/07/what-is-it-with-the-coldfusion-compiler/"> What is it with the Coldfusion Compiler?</a>&quot;</p>
+
+<p>Essentially, he posts a simple piece of code in CF that counts up to 1000000 in a loop, then prints out how long that takes.  He does the same thing in JSP, and times that as well.  The JSP code executes much, much more quickly than the CF code, and he wants to know why.  The reason for the interest is that ColdFusion compiles to Java, and one of the big selling points is that CF is just another way of writing Java web code, since it all gets compiled to servlets anyway.</p>
+
+<p>There are a number of reasons why the CF code is slower.  First and foremost, he&#39;s using a scriptlet in the JSP.  This compiles directly, character for character, to the .java file that gets compiled into a class.  The CF code is using tags.  I think a more fair comparison would be to use JSTL and write a scriptless JSP to do the same thing, however I&#39;m quite confident the JSP code will still come out way ahead.</p>
+
+<p>The real reasons for the difference are actually quite interesting, and I&#39;ll take you through my process of experimentation as I set out to figure out the exact answer. </p>
+
+<p>One thing you need to be aware of is the way that ColdFusion is typed.  CF uses a weak typing system while Java uses strong typing.  Any variable you declare in CF can be automatically converted into any other kind easily.  Converting a weakly typed language into code that compiles for a strongly typed language is no easy task, and the way ColdFusion does it is by having its own variable management system on top of the Java servlet code.</p>
+
+<p>To put this in perspective, imagine I wrote a web language, called RodML and a Java API to interpret it completely.  You can make an instance of a RodMLInterpreter class and pass a string of RodML to it using the method interpretRodML().  I could say that I “compile your page to a servlet” by simply dumping your RodML code into a String and passing it to the interpreter.  Now, this is only &quot;compiling to a servlet&quot; by a mere technicality, as the entire interpretive stack exists on top of the servlet.</p>
+
+<p>On a scale from 1 to 10, 1 being a scriptlet in JSP (which gets compiled directly as Java), and 10 being the RodML example I just gave, I&#39;d place JSTL-written pages at a 2 or 3 and CF at a 6 or 7.  It does compile to code, but it has a thick enough layer between it and the Java that you can&#39;t place it much lower on the scale.</p>
+
+<p>When you compile a CF page into a servlet, it doesn&#39;t turn a variable &quot;x&quot; that you initialize with the value 1.234 to be double x = 1.234.  It makes an object of type Variable (part of the cf library).  Whenever it uses this variable, it performs a function called &quot;_autoscalarize&quot; on it, which essentially figures out the type and convert it.  It then has to perform some casting using utility classes in CF in order to get things to behave correctly.</p>
+
+<h1 id=toc-compiled-version-of-neil-39-s-code>Compiled Version of Neil&#39;s Code</h1>
+
+<p>At the risk of being sued, I&#39;m going to show you what Neil&#39;s CF code turns into.  </p>
+
+<p>Here&#39;s his code:</p>
+<div class="highlight"><pre><code class="language-coldfusion" data-lang="coldfusion">&lt;cfset start = getTickCount()&gt;
+
+&lt;cfset result = 0&gt;
+
+&lt;cfloop from=&quot;1&quot; to=&quot;1000000&quot; index=&quot;i&quot;&gt;
+&lt;cfset result = result + i&gt;
+&lt;/cfloop&gt;
+
+&lt;cfoutput&gt;#result#
+&lt;/cfoutput&gt;
+&lt;cfoutput&gt;Execution Time: #getTickCount() - start#ms&lt;/cfoutput&gt;
+</code></pre></div>
+<p>And this is what you see if you decompile the .class file that ColdFusion 7 MX generates:</p>
+<div class="highlight"><pre><code class="language-java" data-lang="java">import coldfusion.runtime.*;
+import coldfusion.tagext.QueryLoop;
+import coldfusion.tagext.io.OutputTag;
+import java.io.Writer;
+import javax.servlet.jsp.PageContext;
+
+public final class cfblogtest2ecfm1762415691 extends CFPage
+{
+
+    public cfblogtest2ecfm1762415691()
+    {
+    }
+
+    protected final void bindPageVariables(VariableScope varscope, LocalScope locscope)
+    {
+        super.bindPageVariables(varscope, locscope);
+        START = bindPageVariable(&quot;START&quot;, varscope, locscope);
+        RESULT = bindPageVariable(&quot;RESULT&quot;, varscope, locscope);
+
+        I = bindPageVariable(&quot;I&quot;, varscope, locscope);
+    }
+
+    protected final Object runPage()
+    {
+        javax.servlet.jsp.JspWriter out = super.pageContext.getOut();
+        javax.servlet.jsp.tagext.Tag parent = super.parent;
+        START.set(GetTickCount());
+        _whitespace(out, &quot;\r\n\r\n&quot;);
+        RESULT.set(&quot;0&quot;);
+        _whitespace(out, &quot;\r\n\r\n&quot;);
+        double t4 = 1.0D;
+        double t6 = Cast._double(&quot;1000000&quot;);
+        double t8 = Cast._double(&quot;1&quot;);
+        Object value = Cast._Object(t8);
+        SetVariable(&quot;i&quot;, value);
+        for(; CfJspPage._checkCondition(t4, t8, t6); CfJspPage.checkRequestTimeout(&quot;CFLOOP&quot;))
+        {
+            _whitespace(out, &quot;\r\n&quot;);
+            RESULT.set(Cast._Object(Cast._double(_autoscalarize(RESULT)) + Cast._double(_autoscalarize(I))));
+            _whitespace(out, &quot;\r\n&quot;);
+            value = Cast._Object(t8 += t4);
+            SetVariable(&quot;i&quot;, value);
+        }
+
+        _whitespace(out, &quot;\r\n\r\n&quot;);
+        OutputTag output0 = (OutputTag)_initTag(class$coldfusion$tagext$io$OutputTag, 0, parent);
+        try
+        {
+            int mode0;
+            if((mode0 = output0.doStartTag()) != 0)
+                do
+                {
+                    out.write(Cast._String(_autoscalarize(RESULT)));
+                    _whitespace(out, &quot;\r\n&quot;);
+                } while(output0.doAfterBody() != 0);
+            if(output0.doEndTag() == 5)
+            {
+                Object t12 = null;
+                return t12;
+            }
+        }
+        catch(Throwable t13)
+        {
+            output0.doCatch(t13);
+        }
+        finally
+        {
+            output0.doFinally();
+        }
+        _whitespace(out, &quot;\r\n&quot;);
+        OutputTag output1 = (OutputTag)_initTag(class$coldfusion$tagext$io$OutputTag, 1, parent);
+        try
+        {
+            int mode1;
+            if((mode1 = output1.doStartTag()) != 0)
+                do
+                {
+                    out.write(&quot;Execution Time: &quot;);
+                    out.write(Cast._String(Cast._double(GetTickCount()) - Cast._double(_autoscalarize(START))));
+                    out.write(&quot;ms&quot;);
+                } while(output1.doAfterBody() != 0);
+            if(output1.doEndTag() == 5)
+            {
+                Object t18 = null;
+                return t18;
+            }
+        }
+        catch(Throwable t19)
+        {
+            output1.doCatch(t19);
+        }
+        finally
+        {
+            output1.doFinally();
+        }
+        return null;
+    }
+
+    public final Object getMetadata()
+    {
+        return metaData;
+    }
+
+    private Variable START;
+    private Variable RESULT;
+    private Variable I;
+    static final Class class$coldfusion$tagext$io$OutputTag = Class.forName(&quot;coldfusion.tagext.io.OutputTag&quot;);
+    static final Object metaData = new AttributeCollection(new Object[0]);
+}
+</code></pre></div>
+<p>The portion starting with <code>START.set(GetTickCount());</code> and ending at the end of the loop is what&#39;s interesting.  That&#39;s the part that&#39;s executing the loop, and therefore it is the most time-consuming task for the page.  The rest of the code is mostly error handling cruft, and it has minimal impact on the running time of the code.  The part in red is, basically, the part that is timed.</p>
+
+<h1 id=toc-enter-cfscript>Enter CFScript</h1>
+
+<p>CF Supports a tag named CFScript, which allows you to write cf scripting language inside of one tag.  It&#39;s more code-oriented and less tag-oriented than regular cfml.  If you convert Neil&#39;s example to CFScript, you get this:</p>
+<div class="highlight"><pre><code class="language-coldfusion" data-lang="coldfusion">&lt;cfscript&gt;
+start = getTickCount();
+result=0;
+for(i=0;i lte 1000000;i=i+1) {
+    result=result+i;
+}
+&lt;/cfscript&gt;
+
+&lt;cfoutput&gt;#result#
+&lt;/cfoutput&gt;
+&lt;cfoutput&gt;Execution Time: #getTickCount() - start#ms&lt;/cfoutput&gt;
+</code></pre></div>
+<p>This code actually executes in 200ms for me, while the tag-based code executes in 2500ms.</p>
+
+<p>That&#39;s extremely interesting, and we&#39;re going to use it in our experiment.  But first, we need to look at how the cfscript changes the generated class file.  Below is the main change to the code when we write it with cfscript.  That previous section of code now looks like this (the rest is the same)</p>
+<div class="highlight"><pre><code class="language-java" data-lang="java">START.set(GetTickCount());
+RESULT.set(&quot;0&quot;);
+I.set(&quot;0&quot;);
+for(; CfJspPage._compare(_autoscalarize(I), 1000000D) &lt;= 0.0D; I.set(Cast._Object(Cast._double(_autoscalarize(I)) + 1.0D)))
+    RESULT.set(Cast._Object(Cast._double(_autoscalarize(RESULT)) + Cast._double(_autoscalarize(I))));
+</code></pre></div>
+<p>So what are the differences between the above code (generated from a cfscript implementation), and the other code (generated from a cfml implementation)?  Here is the relevant portion of the earlier code, so you don&#39;t have to scroll up to see it:</p>
+<div class="highlight"><pre><code class="language-java" data-lang="java">START.set(GetTickCount());
+_whitespace(out, &quot;\r\n\r\n&quot;);
+RESULT.set(&quot;0&quot;);
+_whitespace(out, &quot;\r\n\r\n&quot;);
+double t4 = 1.0D;
+double t6 = Cast._double(&quot;1000000&quot;);
+double t8 = Cast._double(&quot;1&quot;);
+Object value = Cast._Object(t8);
+SetVariable(&quot;i&quot;, value);
+for(; CfJspPage._checkCondition(t4, t8, t6); CfJspPage.checkRequestTimeout(&quot;CFLOOP&quot;))
+{
+    _whitespace(out, &quot;\r\n&quot;);
+    RESULT.set(Cast._Object(Cast._double(_autoscalarize(RESULT)) + Cast._double(_autoscalarize(I))));
+    _whitespace(out, &quot;\r\n&quot;);
+    value = Cast._Object(t8 += t4);
+    SetVariable(&quot;i&quot;, value);
+}
+</code></pre></div>
+<h1 id=toc-analysis>Analysis</h1>
+
+<p>So what are the main differences in this code?</p>
+
+<ul>
+<li>The call to checkRequestTimeout in the CFML version</li>
+<li>The way the loop condition comparison is done.</li>
+<li>The repeated calls to _whitespace in the CFML version</li>
+<li>The way that i is set in the code.</li>
+</ul>
+
+<p>Note that the actual code that tabulates the RESULT variable is actually identical in both versions.  Despite how many autoscalarize calls and casts are done, it doesn&#39;t seem to be the biggest contributor to the run-time difference.</p>
+
+<p>So let&#39;s go through these.  I can take the decompiled code for the CFML version and actually compile it with cfusion.jar in my classpath.  Then I can take the class file and replace the cached version of the class file on disk.  After reloading ColdFusion, it will use the version I wrote.</p>
+
+<p>The checkRequestTimeout seems like something that could take some time, and it&#39;s called on every iteration of the loop.  I removed that, recompiled, restarted CF, and re-ran the page.  The execution time was still around 2500ms.</p>
+
+<p>Since it wasn&#39;t the checkRequestTimeout method, I imagined it could be the way that the loop condition is tested.  I replaced the for loop in the code with my own for loop:</p>
+<div class="highlight"><pre><code class="language-java" data-lang="java">for(double i=0;i&lt;=1000000;i++)
+</code></pre></div>
+<p>Since the variable the code was using, I (of Variable type) was different from my i, I could leave all of the other code the same.  The I Variable would still be incremented the same way, the same number of times.  My loop replacement was ensuring the block would execute the same number of times, but it was merely removing the  CfJspPage._checkCondition call that it was using to control the loop.  I recompiled, restarted, and re-ran, only to discover the same 2500ms run-time.  Obviously the slowness wasn&#39;t due to the way the loop itself worked.</p>
+
+<p>Now, this next one may surprise you.  _whitespace merely outputs to the page, how can it be the cause of the slowdown?  Because it actually appends that whitespace to a buffer, and the buffer has to grow.  Those two characters have to be added one million times, since they occur in the loop.  In fact, they occur in the loop twice, so that&#39;s 4 million characters being output to the buffer as the loop runs.  When I removed these lines from the code and re-ran it, my execution time dropped to 1100ms.  That&#39;s right, <strong>the calls to _whitespace were a major culprit for the slow execution time.</strong></p>
+
+<p>This happens because there are linebreaks between the cfml tags, and those have to be output directly to the page.  Since Neil&#39;s JSP code used a scriptlet, no such whitespace was printed to the buffer, therefore the JSP wasn&#39;t slowed down by it.  </p>
+
+<p>You can actually fix this problem yourself without recompiling your code.  Simply go into the CF Administrator and into the Settings menu, then turn &quot;Whitespace Management&quot; on.  When this setting is enabled, the call to _whitespace will see that it&#39;s on and return immediately, rather than add the characters to the buffer.  When I leave the _whitespace calls in the code but enable Whitespace Management, the code runs in 1200ms.  It makes sense that it&#39;s slightly more because it still has the extra function calls inside the loop, but it&#39;s still much faster with the setting enabled.</p>
+
+<p>The last thing is how the index variable, I, is incremented.  Since I had a loop that didn&#39;t use I (the Coldfusion Variable instance), I simply removed these lines:</p>
+<div class="highlight"><pre><code class="language-cfscript" data-lang="cfscript">value = Cast._Object(t8 += t4);
+SetVariable(&quot;i&quot;, value);
+</code></pre></div>
+<p>and modified the RESULT.set code to use the double i rather than the Variable I.  When I do this, the code runs in a much more reasonable 150ms.  So what&#39;s the problem, the cast or the SetVariable?</p>
+
+<p>If I put the SetVariable line back in, it executes in about 1200ms.  </p>
+
+<p><em>So there you have it, the SetVariable implementation is slow, and it gets called on every single iteration through the loop in order to set the &quot;I&quot; variable to be one larger.  That, combined with the whitespace buffer issue, is why the CF page is so much slower.</em></p>
+
+<p>The good news is Neil can make his page run in half the time by enabling a single setting in CF Administrator.  The bad news is the real culprit, SetVariable, cannot be controlled by any such setting.</p>
+
+<p>CFScript doesn&#39;t use SetVariable, so if you&#39;re doing heavy loop code like this, I&#39;d recommend writing it using CFScript rather than CFML.</p>
+
+	</div>
+</div>
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'nomachetejuggling'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    
+    </div>  
+
+  </div><!-- /wrapper -->
+
+  <div id="sidebar-wrapper">
+   <div id="sidebars">
+      <div id="sidebar-left" class="sidebar">
+        <ul>
+          <li id="text-3" class="widget widget_text"> 
+            <div class="textwidget">
+              <img src="http://www.gravatar.com/avatar/68ca541f6f4eaedbe7d711cd651cf451.png?s=100" style="float: left; margin: 0px 5px 3px 0; border: 1px solid black; width: 50px; height: 50px" width=50 height=50>Absolutely No Machete Juggling is a blog about software, programming, computers, and me. I'm a programmer working in Colorado, mostly with Java and Ruby. <a href="/about.html">Read More...</a>
+            </div>
+          </li>
+          <li id="recent-posts" class="widget widget_recent_entries"> <h2 class="widgettitle">Recent Posts</h2>
+            <ul>
+                
+                  <li><a href="/2015/07/01/qconny-2015-a-review/">QCon New York 2015: A Review</a></li>
+                
+                  <li><a href="/2014/07/04/uploading-a-jekyll-site-to-rackspace-cloudfiles/">Uploading a Jekyll Site to Rackspace Cloudfiles</a></li>
+                
+                  <li><a href="/2014/06/24/the-worst-programming-interview-question/">The Worst Programming Interview Question</a></li>
+                
+                  <li><a href="/2014/02/05/top-10-career-changing-programming-books/">Top 10 Career-Changing Programming Books</a></li>
+                
+                  <li><a href="/2013/12/17/centurylink-traps-and-caps/">CenturyLink: Traps and Caps</a></li>
+                
+                  <li><a href="/2013/08/30/diving-into-android/">Diving Into Android</a></li>
+                
+                  <li><a href="/2013/07/30/oscon-2013-a-review/">OSCON 2013: A Review</a></li>
+                
+                  <li><a href="/2013/06/10/book-review-presentation-patterns/">Book Review: Presentation Patterns</a></li>
+                
+                  <li><a href="/2013/05/22/spring-2013-semester-in-review/">Spring 2013 Semester in Review</a></li>
+                
+                  <li><a href="/2013/02/02/brief-thoughts-on-software-craftsmanship/">Brief Thoughts on Software Craftsmanship</a></li>
+                
+            </ul>
+          </li> <!-- /recent-posts -->
+          <li id="tag_cloud" class="widget">
+            <h2 class="widgettitle">Tags</h2>
+            <div class="ctc">
+                
+                  <a href="/tag/code" style="font-size: 18pt">
+                    code
+                  </a>
+                
+                  <a href="/tag/java" style="font-size: 13pt">
+                    java
+                  </a>
+                
+                  <a href="/tag/career" style="font-size: 13pt">
+                    career
+                  </a>
+                
+                  <a href="/tag/school" style="font-size: 12pt">
+                    school
+                  </a>
+                
+                  <a href="/tag/ruby" style="font-size: 10pt">
+                    ruby
+                  </a>
+                
+                  <a href="/tag/agile" style="font-size: 10pt">
+                    agile
+                  </a>
+                
+                  <a href="/tag/book" style="font-size: 8pt">
+                    book
+                  </a>
+                
+                  <a href="/tag/computer-science" style="font-size: 8pt">
+                    computer science
+                  </a>
+                
+                  <a href="/tag/interview" style="font-size: 8pt">
+                    interview
+                  </a>
+                
+                  <a href="/tag/software" style="font-size: 8pt">
+                    software
+                  </a>
+                
+                  <a href="/tag/crossposted" style="font-size: 8pt">
+                    crossposted
+                  </a>
+                
+                  <a href="/tag/job" style="font-size: 8pt">
+                    job
+                  </a>
+                
+                  <a href="/tag/rails" style="font-size: 8pt">
+                    rails
+                  </a>
+                
+                  <a href="/tag/linux" style="font-size: 8pt">
+                    linux
+                  </a>
+                
+                  <a href="/tag/ubuntu" style="font-size: 8pt">
+                    ubuntu
+                  </a>
+                
+                  <a href="/tag/continuous-integration" style="font-size: 7pt">
+                    continuous integration
+                  </a>
+                
+                  <a href="/tag/business" style="font-size: 7pt">
+                    business
+                  </a>
+                
+                  <a href="/tag/compsci" style="font-size: 7pt">
+                    compsci
+                  </a>
+                
+                  <a href="/tag/open-source" style="font-size: 7pt">
+                    open source
+                  </a>
+                
+                  <a href="/tag/internet" style="font-size: 7pt">
+                    internet
+                  </a>
+                
+                  <a href="/tag/git" style="font-size: 7pt">
+                    git
+                  </a>
+                
+                  <a href="/tag/complexity" style="font-size: 7pt">
+                    complexity
+                  </a>
+                
+                  <a href="/tag/semester" style="font-size: 7pt">
+                    semester
+                  </a>
+                
+                  <a href="/tag/tdd" style="font-size: 7pt">
+                    tdd
+                  </a>
+                
+                  <a href="/tag/class" style="font-size: 7pt">
+                    class
+                  </a>
+                
+                  <a href="/tag/design" style="font-size: 7pt">
+                    design
+                  </a>
+                
+                  <a href="/tag/rant" style="font-size: 7pt">
+                    rant
+                  </a>
+                
+                  <a href="/tag/windows" style="font-size: 7pt">
+                    windows
+                  </a>
+                
+                  <a href="/tag/refactoring" style="font-size: 7pt">
+                    refactoring
+                  </a>
+                
+                  <a href="/tag/review" style="font-size: 7pt">
+                    review
+                  </a>
+                
+                  <a href="/tag/development" style="font-size: 7pt">
+                    development
+                  </a>
+                
+                  <a href="/tag/technical-debt" style="font-size: 7pt">
+                    technical debt
+                  </a>
+                
+                  <a href="/tag/planning" style="font-size: 7pt">
+                    planning
+                  </a>
+                
+                  <a href="/tag/estimating" style="font-size: 7pt">
+                    estimating
+                  </a>
+                
+                  <a href="/tag/automated-testing" style="font-size: 7pt">
+                    automated testing
+                  </a>
+                
+                  <a href="/tag/brain" style="font-size: 7pt">
+                    brain
+                  </a>
+                
+                  <a href="/tag/productivity" style="font-size: 7pt">
+                    productivity
+                  </a>
+                
+                  <a href="/tag/junit" style="font-size: 7pt">
+                    junit
+                  </a>
+                
+                  <a href="/tag/testing" style="font-size: 7pt">
+                    testing
+                  </a>
+                
+                  <a href="/tag/estimation" style="font-size: 7pt">
+                    estimation
+                  </a>
+                
+                  <a href="/tag/education" style="font-size: 7pt">
+                    education
+                  </a>
+                
+                  <a href="/tag/blog" style="font-size: 7pt">
+                    blog
+                  </a>
+                
+                  <a href="/tag/mac" style="font-size: 7pt">
+                    mac
+                  </a>
+                
+                  <a href="/tag/latex" style="font-size: 7pt">
+                    latex
+                  </a>
+                
+                  <a href="/tag/patch" style="font-size: 7pt">
+                    patch
+                  </a>
+                
+                  <a href="/tag/wordpress" style="font-size: 7pt">
+                    wordpress
+                  </a>
+                
+                  <a href="/tag/certification" style="font-size: 7pt">
+                    certification
+                  </a>
+                
+                  <a href="/tag/tests" style="font-size: 7pt">
+                    tests
+                  </a>
+                
+                  <a href="/tag/quality" style="font-size: 7pt">
+                    quality
+                  </a>
+                
+                  <a href="/tag/jenkins" style="font-size: 7pt">
+                    jenkins
+                  </a>
+                
+                  <a href="/tag/professionalism" style="font-size: 7pt">
+                    professionalism
+                  </a>
+                
+                  <a href="/tag/functional" style="font-size: 7pt">
+                    functional
+                  </a>
+                
+                  <a href="/tag/programming-languages" style="font-size: 7pt">
+                    programming languages
+                  </a>
+                
+                  <a href="/tag/story" style="font-size: 7pt">
+                    story
+                  </a>
+                
+                  <a href="/tag/scala" style="font-size: 7pt">
+                    scala
+                  </a>
+                
+                  <a href="/tag/college" style="font-size: 7pt">
+                    college
+                  </a>
+                
+                  <a href="/tag/rage" style="font-size: 7pt">
+                    rage
+                  </a>
+                
+                  <a href="/tag/c" style="font-size: 7pt">
+                    c#
+                  </a>
+                
+                  <a href="/tag/books" style="font-size: 7pt">
+                    books
+                  </a>
+                
+                  <a href="/tag/conference" style="font-size: 7pt">
+                    conference
+                  </a>
+                
+            </div>
+          </li><!-- /tag-cloud -->
+          <li class="widget widget_text" id="text-4">
+            <div class="textwidget">
+              <div align="center">
+                <a href="http://www.eff.org/action"><img src="/assets/eff.gif"></a>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div><!-- /sidebar-left -->
+
+      <div id="sidebar-right" class="sidebar">
+        <div id="social-icons">
+          
+              <a href="http://about.me/rodhilton" title="about.me" class="social-icon dimmed" style="background-color: #eeb111">
+                <img src="/assets/social/aboutme.png"/>
+              </a>
+          
+              <a href="https://twitter.com/rodhilton" title="Twitter" class="social-icon dimmed" style="background-color: #55acee">
+                <img src="/assets/social/twitter.png"/>
+              </a>
+          
+              <a href="http://www.linkedin.com/in/rodhilton" title="LinkedIn" class="social-icon dimmed" style="background-color: #0976b4">
+                <img src="/assets/social/linkedin.png"/>
+              </a>
+          
+              <a href="http://github.com/rodhilton" title="GitHub" class="social-icon dimmed" style="background-color: #000000">
+                <img src="/assets/social/github.png"/>
+              </a>
+          
+              <a href="http://speakerdeck.com/rodhilton" title="Speakerdeck" class="social-icon dimmed" style="background-color: #218d5e">
+                <img src="/assets/social/speakerdeck.png"/>
+              </a>
+          
+              <a href="https://coderwall.com/p/u/rodhilton" title="Coderwall" class="social-icon dimmed" style="background-color: #3990d0">
+                <img src="/assets/social/coderwall.png"/>
+              </a>
+          
+              <a href="https://facebook.com/rodhilton" title="Facebook" class="social-icon dimmed" style="background-color: #3b5998">
+                <img src="/assets/social/facebook.png"/>
+              </a>
+          
+              <a href="http://www.goodreads.com/user/show/1499157-rodhilton-hilton" title="Goodreads" class="social-icon dimmed" style="background-color: #76420a">
+                <img src="/assets/social/goodreads.png"/>
+              </a>
+          
+              <a href="http://letterboxd.com/rodhilton/films/ratings/" title="Letterboxd" class="social-icon dimmed" style="background-color: #21282f">
+                <img src="/assets/social/letterboxd.png"/>
+              </a>
+          
+              <a href="http://www.grouvee.com/user/rodhilton/shelves/3274-played" title="Grouvee" class="social-icon dimmed" style="background-color: #dda017">
+                <img src="/assets/social/grouvee.png"/>
+              </a>
+          
+              <a href="http://www.last.fm/user/rodhilton" title="Last.fm" class="social-icon dimmed" style="background-color: #c3000d">
+                <img src="/assets/social/lastfm.png"/>
+              </a>
+          
+              <a href="http://www.diigo.com/user/rodhilton" title="Diigo" class="social-icon dimmed" style="background-color: #0079ff">
+                <img src="/assets/social/diigo.png"/>
+              </a>
+          
+        </div>
+      </div><!-- /sidebar-right -->
+
+    </div><!-- /sidebars -->
+    </div><!--/sidebar-wrapper-->
+
+</div> <!-- /page -->
+
+<!-- Javascript -->
+<script type="text/javascript">
+/*The sidebar shouldn't be visible until it's been positioned, but just in case someone disables JS we leave it visible in CSS and immediately hide it here */
+$("#sidebars").css({visibility: "hidden"});
+</script>
+
+<script src="/scripts/editableCodeHighlight.js" type="text/javascript"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js" type="text/javascript"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.0/highlight.min.js"></script>
+
+<script src="/scripts/jquery.lazyload.mini.js"></script>
+
+<script type="text/javascript"
+   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<script src="/scripts/hyphenator/Hyphenator.js" type="text/javascript"></script>
+<script src="/scripts/hyphenator/patterns/en-us.js" type="text/javascript"></script>      
+<script src="/scripts/startup.js" type="text/javascript"></script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [["$$","$$"], ["\\(","\\)"]],
+      displayMath: [["$$$","$$$"],["\\[","\\]"]]
+    },
+    TeX: {
+      extensions: ["AMSmath.js", "AMSsymbols.js"]
+    },
+    "HTML-CSS": {
+      scale: 96
+    }
+  });
+</script>
+
+<script type="text/javascript">
+/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+var disqus_shortname = 'nomachetejuggling'; // required: replace example with your forum shortname
+
+/* * * DON'T EDIT BELOW THIS LINE * * */
+(function () {
+    var s = document.createElement('script'); s.async = true;
+    s.type = 'text/javascript';
+    s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+}());
+</script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-379031-4', 'auto');
+  ga('send', 'pageview');
+
+</script> 
+
+</body>
+</html>

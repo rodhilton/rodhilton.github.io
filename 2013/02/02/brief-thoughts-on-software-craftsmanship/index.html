@@ -1,0 +1,563 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Absolutely No Machete Juggling &raquo; Brief Thoughts on Software Craftsmanship</title>
+        <meta name="viewport" content="width=device-width" />
+        <link rel="alternate" type="application/rss+xml" title="Absolutely No Machete Juggling &raquo; All Posts" href="/rss.xml" />
+        
+        
+          <link rel="alternate" type="application/rss+xml" title="Absolutely No Machete Juggling &raquo; 'Life' Posts Only" href="/category/life/rss.xml" />
+        
+          <link rel="alternate" type="application/rss+xml" title="Absolutely No Machete Juggling &raquo; 'Programming' Posts Only" href="/category/programming/rss.xml" />
+        
+          <link rel="alternate" type="application/rss+xml" title="Absolutely No Machete Juggling &raquo; 'Technology' Posts Only" href="/category/technology/rss.xml" />
+        
+
+        <link rel="alternate" type="application/rss+xml" title="Absolutely No Machete Juggling &raquo; Comments" href="http://nomachetejuggling.disqus.com/latest.rss" />    
+
+        <link rel="icon" href="/assets/favicon.png" type="image/png">
+        <link rel="shortcut icon" href="/assets/favicon.png" type="image/png">
+
+        <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic|Source+Code+Pro|Architects+Daughter' rel='stylesheet' type='text/css'>
+
+        <link rel="stylesheet" href="/css/main.css">
+        <link rel="stylesheet" href="/css/googlecode.css">
+
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    </head>
+<body>
+<div id="page">
+  <div id="headerwrapper">
+    <div class="header">
+      <div class="headertitle">
+        <h1><a href="/" title="Absolutely No Machete Juggling: Rod Hilton&#039;s rants about stuff he cares about way too much.">Absolutely No Machete Juggling</a></h1>
+        <p>Rod Hilton&#039;s rants about stuff he cares about way too much...</p>
+      </div>
+    </div>
+  </div>
+  <div id="navbar">
+    <div id="navcontainer">
+      <ul id="navlist">
+  
+  <li class="cat-item "><a href="/">All</a></li>
+
+  
+    
+    <li class="cat-item "><a href="/category/life">LIFE</a>
+  
+    
+    <li class="cat-item current-cat"><a href="/category/programming">PROGRAMMING</a>
+  
+    
+    <li class="cat-item "><a href="/category/technology">TECHNOLOGY</a>
+  
+
+  
+    
+    <li class="menu-item "><a href="/about.html">ABOUT</a></li>
+  
+    
+    <li class="menu-item "><a href="/resume.html">RéSUMé</a></li>
+  
+    
+    <li class="menu-item "><a href="/projects.html">PROJECTS</a></li>
+  
+    
+    <li class="menu-item "><a href="/contact.html">CONTACT</a></li>
+  
+    
+    <li class="menu-item "><a href="/links.html">LINKS</a></li>
+  
+</ul><!-- /navlist -->
+    </div><!-- /navcontainer -->
+  </div><!-- /navbar -->
+
+  <div id="wrapper">
+    <div id="content">
+      <div class="post">
+	<div class="postheader">
+  	<h1 class="posttitle"><a href="/2013/02/02/brief-thoughts-on-software-craftsmanship/">Brief Thoughts on Software Craftsmanship</a></h1>
+  	<div class="postmeta">
+		<p class="meta">
+		<b title="blogosphere, craftsmanship, and drama">PROGRAMMING</b> - 
+		February 2, 2013 - 
+		1,378 words -
+		<a href="/2013/02/02/brief-thoughts-on-software-craftsmanship/#disqus_thread">Comments</a>
+		</p>
+	</div>
+</div>
+	<div class="postentry">
+		<p>To catch people up on some blogosphere drama:</p>
+
+<p>Last month, Heather Arthur posted on her blog about an unfortunate incident in which some people on Twitter had found some <a href="https://github.com/harthur/replace">code she wrote in GitHub</a>, and <a href="http://harthur.wordpress.com/2013/01/24/771/">people started trashing her on Twitter for it</a>.  Some of those people are considered leaders in the <a href="http://manifesto.softwarecraftsmanship.org/">Software Craftsmanship</a> movement, in particular <a href="http://coreyhaines.com/">Corey Haines</a>.  Corey immediately <a href="http://programmingtour.blogspot.com/2013/01/im-sorry.html">apologized</a> for acting like an asshole, and I think his apology was sincere because I&#39;ve met Corey and frankly the guy is almost annoyingly nice (he went around RubyConf 2012 taking a picture with every damn person there).  But Ted Neward saw this turn of events and concluded that Corey&#39;s actions were not orthogonal to his involvement in Software Craftsmanship, but actually influenced by them, and he <a href="http://blogs.tedneward.com/2013/01/24/On+The+Dark+Side+Of+Craftsmanship.aspx">posted as such on his blog</a>.</p>
+
+<p>Neward&#39;s basic point is that this is the exact kind of behavior we should expect as a side effect of the Software Craftsmanship movement.  By it&#39;s nature, it attempts to create a segregation between those who are &quot;in the know&quot; and those who are not, and he felt the behavior of Corey and others was a byproduct of this segregation.  They saw Heather as an &quot;other&quot; and were overly harsh in their criticisms, emboldened in so doing by their sense of Craftsmanship.  Neward took a lot of shit for this view on Twitter, with most people arguing that this was done by Software Craftsmen, but it wasn&#39;t done <strong>because</strong> they were Software Craftsmen, and it makes no sense to criticize the entire movement based on the action of a few members, regardless of how high their profile is.  Neward responded to all of this feedback in <a href="http://blogs.tedneward.com/2013/01/26/More+On+Craftsmanship.aspx">a second blog post</a>, where he reinforces his original point.</p>
+
+<p>Uncle Bob Martin, one of the first five signers of the Software Craftsmanship Manifesto and author of Clean Code and The Clean Coder, then responded to all of this drama with <a href="http://blog.8thlight.com/uncle-bob/2013/01/30/The-Craftsman-And-The-Laborer.html">his own post</a>.  Bob takes particular issue with Neward&#39;s promotion of what he sees as the opposite of a Software Craftsman, a Software Laborer.  In Neward&#39;s words, a Laborer is someone &quot;who cranked out one crappy app after another in (what else?) Visual Basic [...] their apps were sloppy, bloated, and ugly...cut-and-paste cobbled-together duct-tape wonders.&quot;  At the end of the post, Neward bows &quot;with respect to the &quot;software laborers&quot; of the world, who churn out quality code without concern for &quot;craftsmanship&quot;, because their lives are more than just their code.&quot;</p>
+
+<p>Bob finds these kinds of developers to be problematic, as his experience suggests that people who make a mess of their code create lots of defects and headaches for themselves and other developers.  Finally, Ted Neward responded to Bob as well with one more defense of himself in <a href="http://blogs.tedneward.com/2013/02/02/Last+Thoughts+On+Craftsmanship.aspx">another blog post</a> which he proclaimed on Twitter as his &quot;last word on the subject.&quot;</p>
+
+<p>It was this last post that inspired me to post my own thoughts.  I&#39;m not going to speak much about the drama itself, or the definition of Craftsmanship vs Laborer, follow the links above if you&#39;re interested in that debate.</p>
+
+<p>Something in Neward&#39;s final post struck me.</p>
+
+<blockquote>
+<p>Know what? I think one thing that got lost somewhere in all this debate is that value is only value if it&#39;s of value to the customer. And in a lot of the &quot;craftsmanship&quot; debates, I don&#39;t hear the customer&#39;s voice being brought up all that much.</p>
+
+<p>You remember all those crappy VB apps that Bob maligned earlier? Was the customer happy? Did anybody stop to ask them? Or was the assumption that, since the code was crappy, the customer implicitly must be unhappy as well? Don&#39;t get me wrong, there&#39;s a lot of crappy code out there that doesn&#39;t make the customer happy. As a matter of fact, I&#39;ll argue that any code that doesn&#39;t make the customer happy is crap, regardless of what language it&#39;s written in or what patterns it uses or how decoupled or injected or new databases it stores data into. Value isn&#39;t value unless it&#39;s value to the person who&#39;s paying for the code.</p>
+</blockquote>
+
+<p>This, to me, is the heart of the Software Craftsmanship movement.  Neward intended this as a critique of Craftsmanship, but I see it as it&#39;s greatest strength.</p>
+
+<p>I see the <a href="http://agilemanifesto.org/">Agile Manifesto</a> as being customer-focused.  It&#39;s values are interacting with people, collaborating with customers, releasing working software, and responding to change quickly.  These are things that customers have a good reason to care about.  I want every customer of mine to know that I consider myself an agile developer because I think that conveys to them a certain set of principles that they might value.  </p>
+
+<p>But Ted&#39;s right, customers don&#39;t care much about if code is crappy, and they don&#39;t care if all of these craftspeople meet regularly after work to &quot;hone their craft&quot;.  These are, indeed, not of much concern to customers, at least not directly.  The Craftsmanship movement is for me, not about developers focusing on their customers, but about them also <strong>focusing on other developers</strong>.</p>
+
+<p>I don&#39;t write well-crafted code or go to meetup groups or steadily add value (even if it&#39;s not requested) for the benefit of the customer.  I do it for the other developers I work with, and for those who maintain my code when I can&#39;t.  It&#39;s this additional layer, the &quot;not-only&quot;s of the Software Craftsmanship manifesto that appeal to me: the adoption of a view that we must not only make our customers happy, but make our fellow developers happy as well.</p>
+
+<p>I&#39;m signatory #214 of the Software Craftsmanship Manifesto, and my self-given title on LinkedIn is &quot;Software Craftsman and Computer Science Geek&quot;.  Every so often I see my own LinkedIn profile and this title strikes me as pretentious and annoying, and I consider changing it, but I never do.  I always decide it&#39;s more important to leave it and risk looking like a bit of a pompous, self-important jerk.  Why do I do this?</p>
+
+<p>I do it because I consider it something of a pirate flag for other developers.  It&#39;s important to me that they see this flag, because the label conveys, to my mind, a great deal of meaning to the reader.  It&#39;s a shorthand, it lets other developers know an awful lot amount me with two short words, including that I might be a bit of a pompous, self-important jerk.  <strong>It tells other developers what they can expect of the quality of my work, and what I expect of theirs.</strong>  It is a label that I adopt solely to aid communication between myself and other developers, not customers.</p>
+
+<p>Sure, I think hiring a team of Craftspeople will be beneficial for customers.  I think the codebase will be more easily adaptable to change, I think they&#39;ll get more honest and accurate assessments of when work will be done, and I think they will generally have more positive interactions with their team.  But at the end of the day, this team of Craftspeople has chosen their outlook on software development not out of concern only for the customer, but also out of concern for each other.</p>
+
+<p>If Neward wants to sing the praises of his VB-slinging, cut-and-pasting Software Laborer, that&#39;s fine.  Such a person may make customers very, very happy, and good for them.  But I know that it would make <strong>me</strong> unhappy if I had to work in or maintain their code, just as I know it would make someone else unhappy were I to be a Software Laborer myself.  Frankly, I don&#39;t have much interest in working with Software Laborers as Neward describes them, which is why I fly my Craftsmanship flag high.  Does this make me an elitist snob?  Yeah, a bit.  I&#39;m not trying to be a dick about it, I just know I&#39;d just come home frustrated and drained if I worked for 8 hours a day with a team of people who are just trying to sling enough code to make the customer happy and didn&#39;t care about the codebase itself.  The mentality of &quot;the customer is all that matters&quot; is a fine stance to adopt, particularly from the perspective of the customer, but it&#39;s no way to build a team of happy developers.</p>
+
+<p>-Rod Hilton, Software Craftsman Godammit.</p>
+
+	</div>
+</div>
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'nomachetejuggling'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    
+    </div>  
+
+  </div><!-- /wrapper -->
+
+  <div id="sidebar-wrapper">
+   <div id="sidebars">
+      <div id="sidebar-left" class="sidebar">
+        <ul>
+          <li id="text-3" class="widget widget_text"> 
+            <div class="textwidget">
+              <img src="http://www.gravatar.com/avatar/68ca541f6f4eaedbe7d711cd651cf451.png?s=100" style="float: left; margin: 0px 5px 3px 0; border: 1px solid black; width: 50px; height: 50px" width=50 height=50>Absolutely No Machete Juggling is a blog about software, programming, computers, and me. I'm a programmer working in Colorado, mostly with Java and Ruby. <a href="/about.html">Read More...</a>
+            </div>
+          </li>
+          <li id="recent-posts" class="widget widget_recent_entries"> <h2 class="widgettitle">Recent Posts</h2>
+            <ul>
+                
+                  <li><a href="/2015/07/01/qconny-2015-a-review/">QCon New York 2015: A Review</a></li>
+                
+                  <li><a href="/2014/07/04/uploading-a-jekyll-site-to-rackspace-cloudfiles/">Uploading a Jekyll Site to Rackspace Cloudfiles</a></li>
+                
+                  <li><a href="/2014/06/24/the-worst-programming-interview-question/">The Worst Programming Interview Question</a></li>
+                
+                  <li><a href="/2014/02/05/top-10-career-changing-programming-books/">Top 10 Career-Changing Programming Books</a></li>
+                
+                  <li><a href="/2013/12/17/centurylink-traps-and-caps/">CenturyLink: Traps and Caps</a></li>
+                
+                  <li><a href="/2013/08/30/diving-into-android/">Diving Into Android</a></li>
+                
+                  <li><a href="/2013/07/30/oscon-2013-a-review/">OSCON 2013: A Review</a></li>
+                
+                  <li><a href="/2013/06/10/book-review-presentation-patterns/">Book Review: Presentation Patterns</a></li>
+                
+                  <li><a href="/2013/05/22/spring-2013-semester-in-review/">Spring 2013 Semester in Review</a></li>
+                
+                  <li><a href="/2013/02/02/brief-thoughts-on-software-craftsmanship/">Brief Thoughts on Software Craftsmanship</a></li>
+                
+            </ul>
+          </li> <!-- /recent-posts -->
+          <li id="tag_cloud" class="widget">
+            <h2 class="widgettitle">Tags</h2>
+            <div class="ctc">
+                
+                  <a href="/tag/code" style="font-size: 18pt">
+                    code
+                  </a>
+                
+                  <a href="/tag/java" style="font-size: 13pt">
+                    java
+                  </a>
+                
+                  <a href="/tag/career" style="font-size: 13pt">
+                    career
+                  </a>
+                
+                  <a href="/tag/school" style="font-size: 12pt">
+                    school
+                  </a>
+                
+                  <a href="/tag/ruby" style="font-size: 10pt">
+                    ruby
+                  </a>
+                
+                  <a href="/tag/agile" style="font-size: 10pt">
+                    agile
+                  </a>
+                
+                  <a href="/tag/book" style="font-size: 8pt">
+                    book
+                  </a>
+                
+                  <a href="/tag/computer-science" style="font-size: 8pt">
+                    computer science
+                  </a>
+                
+                  <a href="/tag/interview" style="font-size: 8pt">
+                    interview
+                  </a>
+                
+                  <a href="/tag/software" style="font-size: 8pt">
+                    software
+                  </a>
+                
+                  <a href="/tag/crossposted" style="font-size: 8pt">
+                    crossposted
+                  </a>
+                
+                  <a href="/tag/job" style="font-size: 8pt">
+                    job
+                  </a>
+                
+                  <a href="/tag/rails" style="font-size: 8pt">
+                    rails
+                  </a>
+                
+                  <a href="/tag/linux" style="font-size: 8pt">
+                    linux
+                  </a>
+                
+                  <a href="/tag/ubuntu" style="font-size: 8pt">
+                    ubuntu
+                  </a>
+                
+                  <a href="/tag/continuous-integration" style="font-size: 7pt">
+                    continuous integration
+                  </a>
+                
+                  <a href="/tag/business" style="font-size: 7pt">
+                    business
+                  </a>
+                
+                  <a href="/tag/compsci" style="font-size: 7pt">
+                    compsci
+                  </a>
+                
+                  <a href="/tag/open-source" style="font-size: 7pt">
+                    open source
+                  </a>
+                
+                  <a href="/tag/internet" style="font-size: 7pt">
+                    internet
+                  </a>
+                
+                  <a href="/tag/git" style="font-size: 7pt">
+                    git
+                  </a>
+                
+                  <a href="/tag/complexity" style="font-size: 7pt">
+                    complexity
+                  </a>
+                
+                  <a href="/tag/semester" style="font-size: 7pt">
+                    semester
+                  </a>
+                
+                  <a href="/tag/tdd" style="font-size: 7pt">
+                    tdd
+                  </a>
+                
+                  <a href="/tag/class" style="font-size: 7pt">
+                    class
+                  </a>
+                
+                  <a href="/tag/design" style="font-size: 7pt">
+                    design
+                  </a>
+                
+                  <a href="/tag/rant" style="font-size: 7pt">
+                    rant
+                  </a>
+                
+                  <a href="/tag/windows" style="font-size: 7pt">
+                    windows
+                  </a>
+                
+                  <a href="/tag/refactoring" style="font-size: 7pt">
+                    refactoring
+                  </a>
+                
+                  <a href="/tag/review" style="font-size: 7pt">
+                    review
+                  </a>
+                
+                  <a href="/tag/development" style="font-size: 7pt">
+                    development
+                  </a>
+                
+                  <a href="/tag/technical-debt" style="font-size: 7pt">
+                    technical debt
+                  </a>
+                
+                  <a href="/tag/planning" style="font-size: 7pt">
+                    planning
+                  </a>
+                
+                  <a href="/tag/estimating" style="font-size: 7pt">
+                    estimating
+                  </a>
+                
+                  <a href="/tag/automated-testing" style="font-size: 7pt">
+                    automated testing
+                  </a>
+                
+                  <a href="/tag/brain" style="font-size: 7pt">
+                    brain
+                  </a>
+                
+                  <a href="/tag/productivity" style="font-size: 7pt">
+                    productivity
+                  </a>
+                
+                  <a href="/tag/junit" style="font-size: 7pt">
+                    junit
+                  </a>
+                
+                  <a href="/tag/testing" style="font-size: 7pt">
+                    testing
+                  </a>
+                
+                  <a href="/tag/estimation" style="font-size: 7pt">
+                    estimation
+                  </a>
+                
+                  <a href="/tag/education" style="font-size: 7pt">
+                    education
+                  </a>
+                
+                  <a href="/tag/blog" style="font-size: 7pt">
+                    blog
+                  </a>
+                
+                  <a href="/tag/mac" style="font-size: 7pt">
+                    mac
+                  </a>
+                
+                  <a href="/tag/latex" style="font-size: 7pt">
+                    latex
+                  </a>
+                
+                  <a href="/tag/patch" style="font-size: 7pt">
+                    patch
+                  </a>
+                
+                  <a href="/tag/wordpress" style="font-size: 7pt">
+                    wordpress
+                  </a>
+                
+                  <a href="/tag/certification" style="font-size: 7pt">
+                    certification
+                  </a>
+                
+                  <a href="/tag/tests" style="font-size: 7pt">
+                    tests
+                  </a>
+                
+                  <a href="/tag/quality" style="font-size: 7pt">
+                    quality
+                  </a>
+                
+                  <a href="/tag/jenkins" style="font-size: 7pt">
+                    jenkins
+                  </a>
+                
+                  <a href="/tag/professionalism" style="font-size: 7pt">
+                    professionalism
+                  </a>
+                
+                  <a href="/tag/functional" style="font-size: 7pt">
+                    functional
+                  </a>
+                
+                  <a href="/tag/programming-languages" style="font-size: 7pt">
+                    programming languages
+                  </a>
+                
+                  <a href="/tag/story" style="font-size: 7pt">
+                    story
+                  </a>
+                
+                  <a href="/tag/scala" style="font-size: 7pt">
+                    scala
+                  </a>
+                
+                  <a href="/tag/college" style="font-size: 7pt">
+                    college
+                  </a>
+                
+                  <a href="/tag/rage" style="font-size: 7pt">
+                    rage
+                  </a>
+                
+                  <a href="/tag/c" style="font-size: 7pt">
+                    c#
+                  </a>
+                
+                  <a href="/tag/books" style="font-size: 7pt">
+                    books
+                  </a>
+                
+                  <a href="/tag/conference" style="font-size: 7pt">
+                    conference
+                  </a>
+                
+            </div>
+          </li><!-- /tag-cloud -->
+          <li class="widget widget_text" id="text-4">
+            <div class="textwidget">
+              <div align="center">
+                <a href="http://www.eff.org/action"><img src="/assets/eff.gif"></a>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div><!-- /sidebar-left -->
+
+      <div id="sidebar-right" class="sidebar">
+        <div id="social-icons">
+          
+              <a href="http://about.me/rodhilton" title="about.me" class="social-icon dimmed" style="background-color: #eeb111">
+                <img src="/assets/social/aboutme.png"/>
+              </a>
+          
+              <a href="https://twitter.com/rodhilton" title="Twitter" class="social-icon dimmed" style="background-color: #55acee">
+                <img src="/assets/social/twitter.png"/>
+              </a>
+          
+              <a href="http://www.linkedin.com/in/rodhilton" title="LinkedIn" class="social-icon dimmed" style="background-color: #0976b4">
+                <img src="/assets/social/linkedin.png"/>
+              </a>
+          
+              <a href="http://github.com/rodhilton" title="GitHub" class="social-icon dimmed" style="background-color: #000000">
+                <img src="/assets/social/github.png"/>
+              </a>
+          
+              <a href="http://speakerdeck.com/rodhilton" title="Speakerdeck" class="social-icon dimmed" style="background-color: #218d5e">
+                <img src="/assets/social/speakerdeck.png"/>
+              </a>
+          
+              <a href="https://coderwall.com/p/u/rodhilton" title="Coderwall" class="social-icon dimmed" style="background-color: #3990d0">
+                <img src="/assets/social/coderwall.png"/>
+              </a>
+          
+              <a href="https://facebook.com/rodhilton" title="Facebook" class="social-icon dimmed" style="background-color: #3b5998">
+                <img src="/assets/social/facebook.png"/>
+              </a>
+          
+              <a href="http://www.goodreads.com/user/show/1499157-rodhilton-hilton" title="Goodreads" class="social-icon dimmed" style="background-color: #76420a">
+                <img src="/assets/social/goodreads.png"/>
+              </a>
+          
+              <a href="http://letterboxd.com/rodhilton/films/ratings/" title="Letterboxd" class="social-icon dimmed" style="background-color: #21282f">
+                <img src="/assets/social/letterboxd.png"/>
+              </a>
+          
+              <a href="http://www.grouvee.com/user/rodhilton/shelves/3274-played" title="Grouvee" class="social-icon dimmed" style="background-color: #dda017">
+                <img src="/assets/social/grouvee.png"/>
+              </a>
+          
+              <a href="http://www.last.fm/user/rodhilton" title="Last.fm" class="social-icon dimmed" style="background-color: #c3000d">
+                <img src="/assets/social/lastfm.png"/>
+              </a>
+          
+              <a href="http://www.diigo.com/user/rodhilton" title="Diigo" class="social-icon dimmed" style="background-color: #0079ff">
+                <img src="/assets/social/diigo.png"/>
+              </a>
+          
+        </div>
+      </div><!-- /sidebar-right -->
+
+    </div><!-- /sidebars -->
+    </div><!--/sidebar-wrapper-->
+
+</div> <!-- /page -->
+
+<!-- Javascript -->
+<script type="text/javascript">
+/*The sidebar shouldn't be visible until it's been positioned, but just in case someone disables JS we leave it visible in CSS and immediately hide it here */
+$("#sidebars").css({visibility: "hidden"});
+</script>
+
+<script src="/scripts/editableCodeHighlight.js" type="text/javascript"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js" type="text/javascript"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.0/highlight.min.js"></script>
+
+<script src="/scripts/jquery.lazyload.mini.js"></script>
+
+<script type="text/javascript"
+   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<script src="/scripts/hyphenator/Hyphenator.js" type="text/javascript"></script>
+<script src="/scripts/hyphenator/patterns/en-us.js" type="text/javascript"></script>      
+<script src="/scripts/startup.js" type="text/javascript"></script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [["$$","$$"], ["\\(","\\)"]],
+      displayMath: [["$$$","$$$"],["\\[","\\]"]]
+    },
+    TeX: {
+      extensions: ["AMSmath.js", "AMSsymbols.js"]
+    },
+    "HTML-CSS": {
+      scale: 96
+    }
+  });
+</script>
+
+<script type="text/javascript">
+/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+var disqus_shortname = 'nomachetejuggling'; // required: replace example with your forum shortname
+
+/* * * DON'T EDIT BELOW THIS LINE * * */
+(function () {
+    var s = document.createElement('script'); s.async = true;
+    s.type = 'text/javascript';
+    s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+}());
+</script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-379031-4', 'auto');
+  ga('send', 'pageview');
+
+</script> 
+
+</body>
+</html>

@@ -1,0 +1,617 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Absolutely No Machete Juggling &raquo; Mechanics of Good Pairing</title>
+        <meta name="viewport" content="width=device-width" />
+        <link rel="alternate" type="application/rss+xml" title="Absolutely No Machete Juggling &raquo; All Posts" href="/rss.xml" />
+        
+        
+          <link rel="alternate" type="application/rss+xml" title="Absolutely No Machete Juggling &raquo; 'Life' Posts Only" href="/category/life/rss.xml" />
+        
+          <link rel="alternate" type="application/rss+xml" title="Absolutely No Machete Juggling &raquo; 'Programming' Posts Only" href="/category/programming/rss.xml" />
+        
+          <link rel="alternate" type="application/rss+xml" title="Absolutely No Machete Juggling &raquo; 'Technology' Posts Only" href="/category/technology/rss.xml" />
+        
+
+        <link rel="alternate" type="application/rss+xml" title="Absolutely No Machete Juggling &raquo; Comments" href="http://nomachetejuggling.disqus.com/latest.rss" />    
+
+        <link rel="icon" href="/assets/favicon.png" type="image/png">
+        <link rel="shortcut icon" href="/assets/favicon.png" type="image/png">
+
+        <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic|Source+Code+Pro|Architects+Daughter' rel='stylesheet' type='text/css'>
+
+        <link rel="stylesheet" href="/css/main.css">
+        <link rel="stylesheet" href="/css/googlecode.css">
+
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    </head>
+<body>
+<div id="page">
+  <div id="headerwrapper">
+    <div class="header">
+      <div class="headertitle">
+        <h1><a href="/" title="Absolutely No Machete Juggling: Rod Hilton&#039;s rants about stuff he cares about way too much.">Absolutely No Machete Juggling</a></h1>
+        <p>Rod Hilton&#039;s rants about stuff he cares about way too much...</p>
+      </div>
+    </div>
+  </div>
+  <div id="navbar">
+    <div id="navcontainer">
+      <ul id="navlist">
+  
+  <li class="cat-item "><a href="/">All</a></li>
+
+  
+    
+    <li class="cat-item "><a href="/category/life">LIFE</a>
+  
+    
+    <li class="cat-item current-cat"><a href="/category/programming">PROGRAMMING</a>
+  
+    
+    <li class="cat-item "><a href="/category/technology">TECHNOLOGY</a>
+  
+
+  
+    
+    <li class="menu-item "><a href="/about.html">ABOUT</a></li>
+  
+    
+    <li class="menu-item "><a href="/resume.html">RéSUMé</a></li>
+  
+    
+    <li class="menu-item "><a href="/projects.html">PROJECTS</a></li>
+  
+    
+    <li class="menu-item "><a href="/contact.html">CONTACT</a></li>
+  
+    
+    <li class="menu-item "><a href="/links.html">LINKS</a></li>
+  
+</ul><!-- /navlist -->
+    </div><!-- /navcontainer -->
+  </div><!-- /navbar -->
+
+  <div id="wrapper">
+    <div id="content">
+      <div class="post">
+	<div class="postheader">
+  	<h1 class="posttitle"><a href="/2011/08/25/mechanics-of-good-pairing/">Mechanics of Good Pairing</a></h1>
+  	<div class="postmeta">
+		<p class="meta">
+		<b title="environment, pairing, and team">PROGRAMMING</b> - 
+		August 25, 2011 - 
+		1,481 words -
+		<a href="/2011/08/25/mechanics-of-good-pairing/#disqus_thread">Comments</a>
+		</p>
+	</div>
+</div>
+	<div class="postentry">
+		<div class='toc no-hyphenate'><h1>Contents</h1><ol><li><a href='#toc-level-1-not-pairing'>Level -1: Not Pairing</a></li><li><a href='#toc-level-0-basic-pairing'>Level 0: Basic Pairing</a></li><li><a href='#toc-level-1-good-pairing'>Level 1: Good Pairing</a></li><li><a href='#toc-level-2-great-pairing'>Level 2: Great Pairing</a></li><li><a href='#toc-level-3-awesome-pairing'>Level 3: Awesome Pairing</a></li><li><a href='#toc-level-4-quot-pair-quot-adise-ha'>Level 4: &quot;Pair&quot;-adise (ha!)</a></li></ol></div><p>I&#39;ve made no secret about the fact that <a href="/2009/02/21/i-love-pair-programming/">I Love Pair-Programming</a>.  I&#39;ve tried pair programming with a number of different setups, each one better than the last.</p>
+
+<p>I&#39;ve had a lot of people ask me about how best to set up pair-programming environments at work, so I&#39;m going to take you through a number of different ways to pair-program and discuss the advantages of each.</p>
+
+<h1 id=toc-level-1-not-pairing>Level -1: Not Pairing</h1>
+
+<p>The first level of pairing is something I see surprisingly often.  An inside-corner desk, typically an individual&#39;s workstation.  Another person scoots their chair over and leans in, looking at the same monitor.</p>
+
+<table class='image aligncenter' width='468'><tr><td><img src='/assets/level-1.png' width='462' height='359'/></td></tr></table>
+
+<p>It seems like no coincidence that virtually everyone I&#39;ve seen &quot;pair program&quot; this way dislikes pairing.  That&#39;s because this setup is not actually pairing.  It&#39;s just coding with someone watching over your shoulder.</p>
+
+<p>Nobody likes having someone read over their shoulder, let alone read code they are writing.  This set-up basically ensures that the person writing the code (the driver) and person thinking about the next steps (the navigator) never trade places.  Trading places involves not merely sliding a keyboard over, but actually scooting rolling chairs out of the way, so it never happens.</p>
+
+<p>Just as importantly, the two programmers are not the same distance from the monitor.  The monitor &quot;belongs&quot; to the person sitting closest to it, so the other person is really just watching.  The navigator will probably just zone out and think about something else while the driver codes away, confident that their pairing partner is helping ensure they don&#39;t make mistakes.</p>
+
+<p>This kind of pairing is a waste of time.  Corner desks are the office furniture from hell.  Put it in a cubicle so that it&#39;s basically impossible for two people to fit and you&#39;ve essentially ensured that nobody on your team will ever pair program.</p>
+
+<h1 id=toc-level-0-basic-pairing>Level 0: Basic Pairing</h1>
+
+<p>The first level of actual pairing is simple.  A rectangular desk with two people sitting at it, sharing a computer.</p>
+
+<table class='image aligncenter' width='468'><tr><td><img src='/assets/level0.png' width='462' height='359'/></td></tr></table>
+
+<p>The great advantage to this setup is that it&#39;s free.  As long as you don&#39;t make the mistake of filling your development area with corner desks, all that needs to happen here is have a second person scoot up to another person&#39;s workstation.</p>
+
+<p>The two developers need to make sure they sit equidistant from the monitor so that neither person &quot;owns&quot; the machine and both people feel like they can grab the keyboard at any time.  If this is one person&#39;s workstation that&#39;s been re-appropriated as a pairing machine temporarily, the normal user of it may be more likely to hog the keyboard, so it&#39;s important to be careful to avoid that.</p>
+
+<p>One of the problems of this set up is that it&#39;s probably not a devoted pairing machine.  This means that the environment will be configured for the workstation&#39;s usual user.  Keyboard bindings, IDE color schemes, fonts, installed programs, and so on won&#39;t be what a pair agreed to use, but what a single person prefers.  The person who scooted over may feel like a fish out of water in an unfamiliar environment, leading to another situation where one person is doing all of the driving.   </p>
+
+<p>One way to help this problem is for the owner of the workstation to make a second user on the workstation, with its own desktop.  Most operating systems make it easy to switch between users these days, so having a regular user and a pair user that can be switched into easily is nice.  The only problem is that, of course, sharing information between users is difficult, so it may be hard if there is already work-in-progress when the pairing starts.  </p>
+
+<p>At least this is better than the previous level, since both people can see the monitor equally well.</p>
+
+<h1 id=toc-level-1-good-pairing>Level 1: Good Pairing</h1>
+
+<p>At the next level, we add a second keyboard and a mouse.  Each programmer has his or her own input device set, but the programmers share a monitor.</p>
+
+<table class='image aligncenter' width='468'><tr><td><img src='/assets/level1.png' width='462' height='359'/></td></tr></table>
+
+<p>This is good because it&#39;s easy to upgrade an existing workstation.  All you need to buy is another keyboard and mouse, both of which are generally dirt cheap.</p>
+
+<p>This empowers both developers to feel like they &quot;own&quot; the machine, and they can feel free to take control and write code without any ceremony whatsoever.  Because of the setup, it nearly forces people to sit equidistant to the monitor, further aiding in the sense that both programmers have equal right to code at the machine.</p>
+
+<p>One con of this setup is that there are sometimes &quot;mouse wars&quot; - two people using their mice simultaneously and causing problems.  This doesn&#39;t happen all that often and a little communication resolves it quickly, so it&#39;s easy to move past.</p>
+
+<p>Another problem with this set up is that a lot of mice these days are bluetooth, particularly on Macs.  OS X has given me a lot of trouble with two identical bluetooth mice connecting to it simultaneously, it&#39;s much easier to use a wired mouse.</p>
+
+<p>The biggest win here is that the machine stops seeming like it&#39;s a single developer workstation.  Even when only one person is at it, it &quot;feels&quot; like a devoted pairing machine because there is an extra keyboard and mouse at the machine.  This makes people less likely to apply strange customizations that alienate other programmers.</p>
+
+<p>Finally, the biggest problem with this set up is that, because it forces people to sit equidistant to the monitor, both programmers may find that the monitor is actually too far away from them.  Increasing the font size in the editor helps this greatly, but it still can lead to eyestrain.  Large monitors are very helpful here.</p>
+
+<h1 id=toc-level-2-great-pairing>Level 2: Great Pairing</h1>
+
+<p>At the next level, you add a second monitor to the machine.  These monitors are mirrored, which can be done with either software or <a href="http://www.amazon.com/Cables-Unlimited-DVI-D-Splitter-PCM-2260/dp/B000H09RFM">DVI splitters</a>.</p>
+
+<table class='image aligncenter' width='468'><tr><td><img src='/assets/level2.png' width='462' height='359'/></td></tr></table>
+
+<p>Both programmers feel equal control over the machine, and there are no eyestrain problems.  This is a really pleasant pairing situation, and it only adds the cost of a keyboard, mouse, and extra monitor to a regular workstation.</p>
+
+<p>One common problem is that developers, rather than mirroring the desktop on both monitors, may want simply expand the desktop to both monitors.  This is a mistake.  The main IDE will be on only one of these monitors, and whoever is sitting at that monitor will eventually become the permanent driver and you&#39;re in a situation no better than the Level -1 setup.  This is even worse on OS X, where even the menu bar &quot;belongs&quot; to only one of the monitors (though this can be somewhat <a href="http://blog.boastr.net/?page_id=79">fixed</a>).</p>
+
+<p>The other problem is that the desk can get pretty cramped, particularly for the person the left side, since their mouse may be constantly hitting the keyboard of the person to their right.</p>
+
+<h1 id=toc-level-3-awesome-pairing>Level 3: Awesome Pairing</h1>
+
+<p>The cramped problem can be solved by simply adding an extra desk.  But rather than pushing them next to each other, push them perpendicular to each other.</p>
+
+<table class='image aligncenter' width='468'><tr><td><img src='/assets/level3.png' width='462' height='359'/></td></tr></table>
+
+<p>In addition to giving each developer plenty of space to move around and be comfortable, this sets up both programmers to actually FACE each other while working together by only slightly turning their heads.</p>
+
+<p>Setting up pairing in this way makes a very noticeable difference right away.  Switch a pair from Level 2 to Level 3 and you&#39;ll notice them talking a LOT more.  Developers will discuss design, bounce ideas off each other, and generally collaborate much better, simply because they are facing each other.</p>
+
+<p>This setup takes up quite a bit of room and it looks a little silly, but it is absolutely fantastic.  It leaves room for sticky notes, pens, a developer&#39;s tablet or laptop, and lots of other things.  The entire setup &#39;feels&#39; like a pairing station, and it works exceptionally well.</p>
+
+<p>There aren&#39;t really any problems with this setup, though there is one way it could be better...</p>
+
+<h1 id=toc-level-4-quot-pair-quot-adise-ha>Level 4: &quot;Pair&quot;-adise (ha!)</h1>
+
+<p>Give the pair an extra laptop to share, put it between the programmers.</p>
+
+<table class='image aligncenter' width='468'><tr><td><img src='/assets/level4.png' width='462' height='359'/></td></tr></table>
+
+<p>Often the navigator may want to look something up on Google or StackOverflow, but doesn&#39;t want to take the driver off his current task to do so.  Having a laptop sitting between the programmers allows either one of them to shift away from the code to look things up or even try things out in a REPL environment.</p>
+
+<p>Another nice thing about this setup is that two identical set ups can be pushed together to make a nice square pairing station hub:</p>
+
+<table class='image aligncenter' width='468'><tr><td><img src='/assets/level4-stations.png' width='462' height='359'/></td></tr></table>
+
+<p>Yeah, it&#39;s extremely expensive to go from Level 0 to here, but it&#39;s an absolutely amazing setup.  You may quickly find that, with pairing stations set up like this, developers no longer wish to work alone at all.</p>
+
+	</div>
+</div>
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'nomachetejuggling'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    
+    </div>  
+
+  </div><!-- /wrapper -->
+
+  <div id="sidebar-wrapper">
+   <div id="sidebars">
+      <div id="sidebar-left" class="sidebar">
+        <ul>
+          <li id="text-3" class="widget widget_text"> 
+            <div class="textwidget">
+              <img src="http://www.gravatar.com/avatar/68ca541f6f4eaedbe7d711cd651cf451.png?s=100" style="float: left; margin: 0px 5px 3px 0; border: 1px solid black; width: 50px; height: 50px" width=50 height=50>Absolutely No Machete Juggling is a blog about software, programming, computers, and me. I'm a programmer working in Colorado, mostly with Java and Ruby. <a href="/about.html">Read More...</a>
+            </div>
+          </li>
+          <li id="recent-posts" class="widget widget_recent_entries"> <h2 class="widgettitle">Recent Posts</h2>
+            <ul>
+                
+                  <li><a href="/2015/07/01/qconny-2015-a-review/">QCon New York 2015: A Review</a></li>
+                
+                  <li><a href="/2014/07/04/uploading-a-jekyll-site-to-rackspace-cloudfiles/">Uploading a Jekyll Site to Rackspace Cloudfiles</a></li>
+                
+                  <li><a href="/2014/06/24/the-worst-programming-interview-question/">The Worst Programming Interview Question</a></li>
+                
+                  <li><a href="/2014/02/05/top-10-career-changing-programming-books/">Top 10 Career-Changing Programming Books</a></li>
+                
+                  <li><a href="/2013/12/17/centurylink-traps-and-caps/">CenturyLink: Traps and Caps</a></li>
+                
+                  <li><a href="/2013/08/30/diving-into-android/">Diving Into Android</a></li>
+                
+                  <li><a href="/2013/07/30/oscon-2013-a-review/">OSCON 2013: A Review</a></li>
+                
+                  <li><a href="/2013/06/10/book-review-presentation-patterns/">Book Review: Presentation Patterns</a></li>
+                
+                  <li><a href="/2013/05/22/spring-2013-semester-in-review/">Spring 2013 Semester in Review</a></li>
+                
+                  <li><a href="/2013/02/02/brief-thoughts-on-software-craftsmanship/">Brief Thoughts on Software Craftsmanship</a></li>
+                
+            </ul>
+          </li> <!-- /recent-posts -->
+          <li id="tag_cloud" class="widget">
+            <h2 class="widgettitle">Tags</h2>
+            <div class="ctc">
+                
+                  <a href="/tag/code" style="font-size: 18pt">
+                    code
+                  </a>
+                
+                  <a href="/tag/java" style="font-size: 13pt">
+                    java
+                  </a>
+                
+                  <a href="/tag/career" style="font-size: 13pt">
+                    career
+                  </a>
+                
+                  <a href="/tag/school" style="font-size: 12pt">
+                    school
+                  </a>
+                
+                  <a href="/tag/ruby" style="font-size: 10pt">
+                    ruby
+                  </a>
+                
+                  <a href="/tag/agile" style="font-size: 10pt">
+                    agile
+                  </a>
+                
+                  <a href="/tag/book" style="font-size: 8pt">
+                    book
+                  </a>
+                
+                  <a href="/tag/computer-science" style="font-size: 8pt">
+                    computer science
+                  </a>
+                
+                  <a href="/tag/interview" style="font-size: 8pt">
+                    interview
+                  </a>
+                
+                  <a href="/tag/software" style="font-size: 8pt">
+                    software
+                  </a>
+                
+                  <a href="/tag/crossposted" style="font-size: 8pt">
+                    crossposted
+                  </a>
+                
+                  <a href="/tag/job" style="font-size: 8pt">
+                    job
+                  </a>
+                
+                  <a href="/tag/rails" style="font-size: 8pt">
+                    rails
+                  </a>
+                
+                  <a href="/tag/linux" style="font-size: 8pt">
+                    linux
+                  </a>
+                
+                  <a href="/tag/ubuntu" style="font-size: 8pt">
+                    ubuntu
+                  </a>
+                
+                  <a href="/tag/continuous-integration" style="font-size: 7pt">
+                    continuous integration
+                  </a>
+                
+                  <a href="/tag/business" style="font-size: 7pt">
+                    business
+                  </a>
+                
+                  <a href="/tag/compsci" style="font-size: 7pt">
+                    compsci
+                  </a>
+                
+                  <a href="/tag/open-source" style="font-size: 7pt">
+                    open source
+                  </a>
+                
+                  <a href="/tag/internet" style="font-size: 7pt">
+                    internet
+                  </a>
+                
+                  <a href="/tag/git" style="font-size: 7pt">
+                    git
+                  </a>
+                
+                  <a href="/tag/complexity" style="font-size: 7pt">
+                    complexity
+                  </a>
+                
+                  <a href="/tag/semester" style="font-size: 7pt">
+                    semester
+                  </a>
+                
+                  <a href="/tag/tdd" style="font-size: 7pt">
+                    tdd
+                  </a>
+                
+                  <a href="/tag/class" style="font-size: 7pt">
+                    class
+                  </a>
+                
+                  <a href="/tag/design" style="font-size: 7pt">
+                    design
+                  </a>
+                
+                  <a href="/tag/rant" style="font-size: 7pt">
+                    rant
+                  </a>
+                
+                  <a href="/tag/windows" style="font-size: 7pt">
+                    windows
+                  </a>
+                
+                  <a href="/tag/refactoring" style="font-size: 7pt">
+                    refactoring
+                  </a>
+                
+                  <a href="/tag/review" style="font-size: 7pt">
+                    review
+                  </a>
+                
+                  <a href="/tag/development" style="font-size: 7pt">
+                    development
+                  </a>
+                
+                  <a href="/tag/technical-debt" style="font-size: 7pt">
+                    technical debt
+                  </a>
+                
+                  <a href="/tag/planning" style="font-size: 7pt">
+                    planning
+                  </a>
+                
+                  <a href="/tag/estimating" style="font-size: 7pt">
+                    estimating
+                  </a>
+                
+                  <a href="/tag/automated-testing" style="font-size: 7pt">
+                    automated testing
+                  </a>
+                
+                  <a href="/tag/brain" style="font-size: 7pt">
+                    brain
+                  </a>
+                
+                  <a href="/tag/productivity" style="font-size: 7pt">
+                    productivity
+                  </a>
+                
+                  <a href="/tag/junit" style="font-size: 7pt">
+                    junit
+                  </a>
+                
+                  <a href="/tag/testing" style="font-size: 7pt">
+                    testing
+                  </a>
+                
+                  <a href="/tag/estimation" style="font-size: 7pt">
+                    estimation
+                  </a>
+                
+                  <a href="/tag/education" style="font-size: 7pt">
+                    education
+                  </a>
+                
+                  <a href="/tag/blog" style="font-size: 7pt">
+                    blog
+                  </a>
+                
+                  <a href="/tag/mac" style="font-size: 7pt">
+                    mac
+                  </a>
+                
+                  <a href="/tag/latex" style="font-size: 7pt">
+                    latex
+                  </a>
+                
+                  <a href="/tag/patch" style="font-size: 7pt">
+                    patch
+                  </a>
+                
+                  <a href="/tag/wordpress" style="font-size: 7pt">
+                    wordpress
+                  </a>
+                
+                  <a href="/tag/certification" style="font-size: 7pt">
+                    certification
+                  </a>
+                
+                  <a href="/tag/tests" style="font-size: 7pt">
+                    tests
+                  </a>
+                
+                  <a href="/tag/quality" style="font-size: 7pt">
+                    quality
+                  </a>
+                
+                  <a href="/tag/jenkins" style="font-size: 7pt">
+                    jenkins
+                  </a>
+                
+                  <a href="/tag/professionalism" style="font-size: 7pt">
+                    professionalism
+                  </a>
+                
+                  <a href="/tag/functional" style="font-size: 7pt">
+                    functional
+                  </a>
+                
+                  <a href="/tag/programming-languages" style="font-size: 7pt">
+                    programming languages
+                  </a>
+                
+                  <a href="/tag/story" style="font-size: 7pt">
+                    story
+                  </a>
+                
+                  <a href="/tag/scala" style="font-size: 7pt">
+                    scala
+                  </a>
+                
+                  <a href="/tag/college" style="font-size: 7pt">
+                    college
+                  </a>
+                
+                  <a href="/tag/rage" style="font-size: 7pt">
+                    rage
+                  </a>
+                
+                  <a href="/tag/c" style="font-size: 7pt">
+                    c#
+                  </a>
+                
+                  <a href="/tag/books" style="font-size: 7pt">
+                    books
+                  </a>
+                
+                  <a href="/tag/conference" style="font-size: 7pt">
+                    conference
+                  </a>
+                
+            </div>
+          </li><!-- /tag-cloud -->
+          <li class="widget widget_text" id="text-4">
+            <div class="textwidget">
+              <div align="center">
+                <a href="http://www.eff.org/action"><img src="/assets/eff.gif"></a>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div><!-- /sidebar-left -->
+
+      <div id="sidebar-right" class="sidebar">
+        <div id="social-icons">
+          
+              <a href="http://about.me/rodhilton" title="about.me" class="social-icon dimmed" style="background-color: #eeb111">
+                <img src="/assets/social/aboutme.png"/>
+              </a>
+          
+              <a href="https://twitter.com/rodhilton" title="Twitter" class="social-icon dimmed" style="background-color: #55acee">
+                <img src="/assets/social/twitter.png"/>
+              </a>
+          
+              <a href="http://www.linkedin.com/in/rodhilton" title="LinkedIn" class="social-icon dimmed" style="background-color: #0976b4">
+                <img src="/assets/social/linkedin.png"/>
+              </a>
+          
+              <a href="http://github.com/rodhilton" title="GitHub" class="social-icon dimmed" style="background-color: #000000">
+                <img src="/assets/social/github.png"/>
+              </a>
+          
+              <a href="http://speakerdeck.com/rodhilton" title="Speakerdeck" class="social-icon dimmed" style="background-color: #218d5e">
+                <img src="/assets/social/speakerdeck.png"/>
+              </a>
+          
+              <a href="https://coderwall.com/p/u/rodhilton" title="Coderwall" class="social-icon dimmed" style="background-color: #3990d0">
+                <img src="/assets/social/coderwall.png"/>
+              </a>
+          
+              <a href="https://facebook.com/rodhilton" title="Facebook" class="social-icon dimmed" style="background-color: #3b5998">
+                <img src="/assets/social/facebook.png"/>
+              </a>
+          
+              <a href="http://www.goodreads.com/user/show/1499157-rodhilton-hilton" title="Goodreads" class="social-icon dimmed" style="background-color: #76420a">
+                <img src="/assets/social/goodreads.png"/>
+              </a>
+          
+              <a href="http://letterboxd.com/rodhilton/films/ratings/" title="Letterboxd" class="social-icon dimmed" style="background-color: #21282f">
+                <img src="/assets/social/letterboxd.png"/>
+              </a>
+          
+              <a href="http://www.grouvee.com/user/rodhilton/shelves/3274-played" title="Grouvee" class="social-icon dimmed" style="background-color: #dda017">
+                <img src="/assets/social/grouvee.png"/>
+              </a>
+          
+              <a href="http://www.last.fm/user/rodhilton" title="Last.fm" class="social-icon dimmed" style="background-color: #c3000d">
+                <img src="/assets/social/lastfm.png"/>
+              </a>
+          
+              <a href="http://www.diigo.com/user/rodhilton" title="Diigo" class="social-icon dimmed" style="background-color: #0079ff">
+                <img src="/assets/social/diigo.png"/>
+              </a>
+          
+        </div>
+      </div><!-- /sidebar-right -->
+
+    </div><!-- /sidebars -->
+    </div><!--/sidebar-wrapper-->
+
+</div> <!-- /page -->
+
+<!-- Javascript -->
+<script type="text/javascript">
+/*The sidebar shouldn't be visible until it's been positioned, but just in case someone disables JS we leave it visible in CSS and immediately hide it here */
+$("#sidebars").css({visibility: "hidden"});
+</script>
+
+<script src="/scripts/editableCodeHighlight.js" type="text/javascript"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js" type="text/javascript"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.0/highlight.min.js"></script>
+
+<script src="/scripts/jquery.lazyload.mini.js"></script>
+
+<script type="text/javascript"
+   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<script src="/scripts/hyphenator/Hyphenator.js" type="text/javascript"></script>
+<script src="/scripts/hyphenator/patterns/en-us.js" type="text/javascript"></script>      
+<script src="/scripts/startup.js" type="text/javascript"></script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [["$$","$$"], ["\\(","\\)"]],
+      displayMath: [["$$$","$$$"],["\\[","\\]"]]
+    },
+    TeX: {
+      extensions: ["AMSmath.js", "AMSsymbols.js"]
+    },
+    "HTML-CSS": {
+      scale: 96
+    }
+  });
+</script>
+
+<script type="text/javascript">
+/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+var disqus_shortname = 'nomachetejuggling'; // required: replace example with your forum shortname
+
+/* * * DON'T EDIT BELOW THIS LINE * * */
+(function () {
+    var s = document.createElement('script'); s.async = true;
+    s.type = 'text/javascript';
+    s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+}());
+</script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-379031-4', 'auto');
+  ga('send', 'pageview');
+
+</script> 
+
+</body>
+</html>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Absolutely No Machete Juggling &raquo; School</title>
+		<description>Rod Hilton&amp;#039;s rants about stuff he cares about way too much.</description>		
+		<link>http://www.nomachetejuggling.com</link>
+		<atom:link href="http://www.nomachetejuggling.com/tag/{"name"=>"school", "posts"=>[<Post: /2013/06/10/book-review-presentation-patterns>, <Post: /2013/05/22/spring-2013-semester-in-review>, <Post: /2012/12/20/fall-2012-semester-in-review>, <Post: /2012/12/15/a-stroll-through-the-complexity-zoo>, <Post: /2012/09/14/traveling-salesman-the-most-misunderstood-problem>, <Post: /2012/05/11/spring-2012-semester-in-review>, <Post: /2012/02/02/computer-science-and-telescopes>, <Post: /2011/12/21/fall-2011-semester-in-review>, <Post: /2011/10/29/why-the-complete-bipartite-graph-k33-is-not-planar>, <Post: /2011/04/15/going-back-to-school-again>, <Post: /2009/12/13/quantitatively-evaluating-test-driven-development>], "id"=>"school"}/rss.xml" rel="self" type="application/rss+xml" />
+		
+	</channel>
+</rss>

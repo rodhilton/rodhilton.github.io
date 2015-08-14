@@ -1,0 +1,598 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Absolutely No Machete Juggling &raquo; Avoiding The Big Design Interview Question</title>
+        <meta name="viewport" content="width=device-width" />
+        <link rel="alternate" type="application/rss+xml" title="Absolutely No Machete Juggling &raquo; All Posts" href="/rss.xml" />
+        
+        
+          <link rel="alternate" type="application/rss+xml" title="Absolutely No Machete Juggling &raquo; 'Life' Posts Only" href="/category/life/rss.xml" />
+        
+          <link rel="alternate" type="application/rss+xml" title="Absolutely No Machete Juggling &raquo; 'Programming' Posts Only" href="/category/programming/rss.xml" />
+        
+          <link rel="alternate" type="application/rss+xml" title="Absolutely No Machete Juggling &raquo; 'Technology' Posts Only" href="/category/technology/rss.xml" />
+        
+
+        <link rel="alternate" type="application/rss+xml" title="Absolutely No Machete Juggling &raquo; Comments" href="http://nomachetejuggling.disqus.com/latest.rss" />    
+
+        <link rel="icon" href="/assets/favicon.png" type="image/png">
+        <link rel="shortcut icon" href="/assets/favicon.png" type="image/png">
+
+        <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic|Source+Code+Pro|Architects+Daughter' rel='stylesheet' type='text/css'>
+
+        <link rel="stylesheet" href="/css/main.css">
+        <link rel="stylesheet" href="/css/googlecode.css">
+
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    </head>
+<body>
+<div id="page">
+  <div id="headerwrapper">
+    <div class="header">
+      <div class="headertitle">
+        <h1><a href="/" title="Absolutely No Machete Juggling: Rod Hilton&#039;s rants about stuff he cares about way too much.">Absolutely No Machete Juggling</a></h1>
+        <p>Rod Hilton&#039;s rants about stuff he cares about way too much...</p>
+      </div>
+    </div>
+  </div>
+  <div id="navbar">
+    <div id="navcontainer">
+      <ul id="navlist">
+  
+  <li class="cat-item "><a href="/">All</a></li>
+
+  
+    
+    <li class="cat-item "><a href="/category/life">LIFE</a>
+  
+    
+    <li class="cat-item current-cat"><a href="/category/programming">PROGRAMMING</a>
+  
+    
+    <li class="cat-item "><a href="/category/technology">TECHNOLOGY</a>
+  
+
+  
+    
+    <li class="menu-item "><a href="/about.html">ABOUT</a></li>
+  
+    
+    <li class="menu-item "><a href="/resume.html">RéSUMé</a></li>
+  
+    
+    <li class="menu-item "><a href="/projects.html">PROJECTS</a></li>
+  
+    
+    <li class="menu-item "><a href="/contact.html">CONTACT</a></li>
+  
+    
+    <li class="menu-item "><a href="/links.html">LINKS</a></li>
+  
+</ul><!-- /navlist -->
+    </div><!-- /navcontainer -->
+  </div><!-- /navbar -->
+
+  <div id="wrapper">
+    <div id="content">
+      <div class="post">
+	<div class="postheader">
+  	<h1 class="posttitle"><a href="/2010/04/06/avoiding-the-big-design-interview-question/">Avoiding The Big Design Interview Question</a></h1>
+  	<div class="postmeta">
+		<p class="meta">
+		<b title="Design, interview, oop, and tdd">PROGRAMMING</b> - 
+		April 6, 2010 - 
+		1,643 words -
+		<a href="/2010/04/06/avoiding-the-big-design-interview-question/#disqus_thread">Comments</a>
+		</p>
+	</div>
+</div>
+	<div class="postentry">
+		<div class='toc no-hyphenate'><h1>Contents</h1><ol><li><a href='#toc-evolutionary-design'>Evolutionary Design</a></li><li><a href='#toc-context-is-key'>Context is Key</a></li><li><a href='#toc-how-to-ask-this-question'>How To Ask This Question</a></li><li><a href='#toc-how-to-answer-this-question'>How To Answer This Question</a></li></ol></div><p>There is one common type of question that I think sets up both the candidate and the interviewer for failure.  I&#39;ve seen it asked by my interviewers, my co-interviewers, and even by me. The question takes this format:</p>
+
+<blockquote>
+<p>Sketch out the object model for a (commonplace noun)</p>
+</blockquote>
+
+<p>Generally this question is asked to feel out someone&#39;s OO skills.  Do they understand inheritance, polymorphism, abstraction, etc?  Can they describe the relationship between a <em>plant</em>, <em>flower</em>, and <em>petal</em> (a flower is-a plant, and has-a petal)?</p>
+
+<p>I used to ask this question myself when I was first starting out doing interviews.  I would ask the candidate to describe the object model for a <code>Chicken</code>.  I was expecting the candidate to sketch something resembling the following:</p>
+
+<table class='image aligncenter'><tr><td><img src='http://yuml.me/diagram/scruffy;/class/%5BAnimal%5D%5E%5BChicken%5D,%20%5BChicken%5D+-%5BBeak%5D,%20%5BChicken%5Dproduces-.-%3E%5BEgg%5D.png'/></td></tr></table>
+
+<p>Now, I wouldn&#39;t expect it to be perfect UML or anything like that, but I wanted to see the basic idea that the candidate knew that a <code>Chicken</code> was probably a <code>Animal</code> or a <code>Bird</code>, and maybe <code>Bird</code> is an <code>Animal</code>, and maybe <code>Chicken</code>s have <code>Feather</code>s or <code>Beak</code>s, or maybe those belong to <code>Bird</code>, etc.  I thought this was a great question for gauging a candidate&#39;s comfort with Object Oriented Programming.</p>
+
+<p><strong>I was wrong.</strong></p>
+
+<p>This is actually a terrible question.  I stopped asking it years ago because I never seemed to get an answer I liked, which told me that it was a bad question.  Only recently, however, have I really come to a full understanding of why it&#39;s such a bad question.</p>
+
+<h1 id=toc-evolutionary-design>Evolutionary Design</h1>
+
+<p>A good software developer does not sit down and sketch out all of the objects in the system and their relationships.  Doing so would be a surefire way to add unnecessary complexity to an application.  One particularly interesting example of this can be found <a href="http://www.objectmentor.com/resources/articles/xpepisode.htm">here</a>, a semi-transcript of Bob Koss and Bob Martin sitting down together to create a small program to keep track of bowling scores.</p>
+
+<p>When the Bobs start, they sketch out a <code>Game</code> class, <code>Frame</code> class, and <code>Throw</code> class.  But when they start to write their tests for the <code>Throw</code> class, they realize they have none because it has no behaviors.  They start to write some tests for the <code>Frame</code> class and discover none there as well.  They finally start by writing tests for the <code>Game</code> class itself, which helps them drive all the way to completing the application.  In the end, they only had two classes: <code>Game</code> and <code>Scorer</code>.</p>
+
+<p>When trying to think of the classes outside of the context in which they would be used, the two Bobs failed.  Once they began writing tests to drive out the behavior, they found that the responsibilities they needed belonged not to three different classes, but to two.  The behavior of the system drove the design.</p>
+
+<p>This is a fundamental principle of Agile software development (and, more specifically, XP): <a href="http://www.artima.com/intv/evolution.html">Evolutionary Design</a>.  Good programmers follow the practice of Evolutionary Design because it prevents the system from being over-engineered and overly complex while incrementally making the system more and more resilient to change.  This is a good practice, and I want to hire people who follow it, but when I asked them design the object model for a <code>Chicken</code>, I am essentially asking them to do Big Design Up Front, something I&#39;d prefer them not to do if they join the team.  I&#39;m setting myself up for failure, because anyone who answers this question well may have a tendency to do something I don&#39;t really like.</p>
+
+<h1 id=toc-context-is-key>Context is Key</h1>
+
+<p>Imagine asking a similar question to the <code>Chicken</code> question above.  You request the candidate &quot;design the object model for a Car.&quot;</p>
+
+<p>Maybe you&#39;re expecting the candidate to write something like this:</p>
+
+<table class='image aligncenter'><tr><td><img src='http://yuml.me/diagram/scruffy/class/%5BVehicle%5D%5E%5BCar%5D%2C%20%5BCar%5D+-%5BSteeringWheel%5D%2C%20%5BCar%5D+-%5BTire%5D%2C%20%5BCar%5D+-%5BEngine%5D'/></td></tr></table>
+
+<p>Seems reasonable.  But imagine that the application for which this <code>Car</code> has been designed in a full-fledged CAD-like application for a car designer. The <code>Car</code> will be used by the designer to help determine how the car looks, how the exterior works, how many doors it has, and so on.  It may look like this:</p>
+
+<table class='image aligncenter'><tr><td><img src='http://yuml.me/diagram/scruffy;/class/%5BCar%5D+-%5BHood%5D,%20%5BCar%5D+-%5BRadiator%5D,%20%5BCar%5D+-%5BGrille%5D,%20%5BCar%5D+-%5BBumper%5D,%20%5BCar%5D+-%5BHeadLight%5D,%20%5BCar%5D+-%5BDoor%5D,%20%5BDoor%5D+-%5BDoorHandle%5D,%20%5BCar%5D+-%5BACCondenser%5D,%20%5BCar%5D+-%5BTailLight%5D,%20%5BLight%5D%5E%5BHeadLight%5D,%20%5BLight%5D%5E%5BTailLight%5D,%20%5BCar%5D+-%5BTrunk%5D,%20%5BTrunk%5D+-%5BTrunkLatch%5D,%20%5B%3C%3CHinged%3E%3E%5D%5E-.-%5BTrunk%5D,%20%5B%3C%3CHinged%3E%3E%5D%5E-.-%5BHood%5D,%20%5B%3C%3CHinged%3E%3E%5D%5E-.-%5BDoor%5D.png'/></td></tr></table>
+
+<p>Or imagine instead, that the <code>Car</code> class will be used in a traffic simulator program that&#39;s really meant to test traffic congestion, stop light placement, and so on.  In that application, a Car is really just something with a direction and a velocity, so it would look more like this:</p>
+
+<table class='image aligncenter'><tr><td><img src='http://yuml.me/diagram/scruffy/class/%5BCar%5D'/></td></tr></table>
+
+<p>In the former, the future changes your design should guard against are new types of doors, or new components for a car.  There is no danger of a different kind of Vehicle, such as a Plane, because this is for a Car company.  In the latter, you may need to guard against additional vehicle types such as <code>Bicycle</code> or <code>Scooter</code>.  The design that gets evolved by these two systems will be fundamentally different, so why ask the question without providing information about the system itself?</p>
+
+<p>Ultimately, the problem here is that there is a spectrum of answers to this question, ranging from extremely simple to extremely complex.  But depending on the context, any one of those designs can be the right design.  When an interviewer asks the question, theres a specific place on this spectrum where he or she would like the candidate to answer, and anything below that indicates a poor understanding of OO, while anything above it indicates a tendency to overdesign.  The interviewer has set up the candidate to fail.</p>
+
+<h1 id=toc-how-to-ask-this-question>How To Ask This Question</h1>
+
+<p>If you want to know how comfortable a candidate is with OO, ask them the question in a way that resembles real-life OOP a bit more closely.  Start simple, by providing a single simple requirement.  Though the candidate won&#39;t be able to write and run tests, the requirement serves as a driver for the design.</p>
+
+<p>A good indicator that the question is taking you and the candidate off-track is if the boxes he or she draws on the whiteboard lack method names.  If there are no methods, there are no behaviors, which means the candidate is designing first, regardless of requirements.  Steer the candidate back by asking them to write method names.</p>
+
+<p>For example, ask the candidate to design the object model for a simple bookshelf.  A bookshelf is so simple that there&#39;s virtually no way to overcomplicate it, so you can say that you simply need to be able to add a book to the bookshelf, nothing else.  Once they have done this, give the candidate another &quot;test&quot;, by adding a requirement.  Now say that you want the bookshelf to be a &quot;smart&quot; bookshelf, where you can look up a book by title and get a reference to the book.  The candidate will make some changes to their design.  Continue adding requirements to the thing until you&#39;re satisfied with the evolution of the candidate&#39;s design.</p>
+
+<ul>
+<li>Modify the design to allow me to search the bookshelf by Title, Author, or ISBN</li>
+<li>Allow me to use the bookshelf as an ad-hoc library, so I can &quot;check out&quot; a book, removing it from the bookshelf.  Make it possible to look up books that have been &quot;borrowed&quot;.</li>
+<li>Require a user provide their name when checking out a book.  Give them a return date.  Make it so the bookshelf can generate a list of overdue books and who has them.  Where does that method belong?  Should it be on its own object that Bookshelf uses?</li>
+<li>Make the bookshelf more concrete, so that there is only a certain number of books that can fit on any given shelf in the overall bookshelf.  Make it possible to ask which shelf a book is on.  Make it possible to add a new shelf.</li>
+</ul>
+
+<p>You can obviously pick your own model (Car, Elevator, Fridge, etc) and drive the direction the design should go using requirements.  Have the candidate write method names (but not implementations) where appropriate.  Keep asking if the method is on the right object, or it belongs on another one.</p>
+
+<h1 id=toc-how-to-answer-this-question>How To Answer This Question</h1>
+
+<p>Of course, not everyone reads this blog, so if you&#39;re in an interview you may get the &quot;design an object model for a <em>x</em>&quot; question.    If you find yourself in this situation, you essentially want to ask questions of your interviewer to pull requirements out of them.  The reality is, they probably <strong>DO</strong> have a particular kind of system in mind when they ask the question, so you need to find out what that is.</p>
+
+<p>If you&#39;re supposed to design the <code>Car</code> class, ask if there are other types of vehicles in the system.  If not, don&#39;t make a <code>Vehicle</code> parent class, and explain that you see no need unless the system required additional vehicles.  Before you draw a box named <code>Tire</code>, ask if the car needs to be able to support snow tires or some other kind of interchangeable tire.  If not, why would you make a class or interface for them?  Start as simply as you can and only draw a new box when you&#39;ve extracted enough information from the interviewer to deem it warranted.  If you jump up to the whiteboard and draw two or three boxes before asking any questions, you&#39;re placing your interview at risk because the interviewer may be picturing a completely different usage of this system than you are.</p>
+
+<p>Of course, it&#39;s always possible that the interviewer will keep asking for the same information, arguing that you should show your OO skills off without requirements that drive that design out.  If you want the job, your best bet there is to take a random stab at the appropriate level of complexity and hope that you strike somewhere near what the interviewer wants.  In that situation, however, I&#39;d imagine your interviewer doesn&#39;t know much about designing good software, and their codebase might be an over-engineered mess, so you may not want that job.</p>
+
+	</div>
+</div>
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'nomachetejuggling'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    
+    </div>  
+
+  </div><!-- /wrapper -->
+
+  <div id="sidebar-wrapper">
+   <div id="sidebars">
+      <div id="sidebar-left" class="sidebar">
+        <ul>
+          <li id="text-3" class="widget widget_text"> 
+            <div class="textwidget">
+              <img src="http://www.gravatar.com/avatar/68ca541f6f4eaedbe7d711cd651cf451.png?s=100" style="float: left; margin: 0px 5px 3px 0; border: 1px solid black; width: 50px; height: 50px" width=50 height=50>Absolutely No Machete Juggling is a blog about software, programming, computers, and me. I'm a programmer working in Colorado, mostly with Java and Ruby. <a href="/about.html">Read More...</a>
+            </div>
+          </li>
+          <li id="recent-posts" class="widget widget_recent_entries"> <h2 class="widgettitle">Recent Posts</h2>
+            <ul>
+                
+                  <li><a href="/2015/07/01/qconny-2015-a-review/">QCon New York 2015: A Review</a></li>
+                
+                  <li><a href="/2014/07/04/uploading-a-jekyll-site-to-rackspace-cloudfiles/">Uploading a Jekyll Site to Rackspace Cloudfiles</a></li>
+                
+                  <li><a href="/2014/06/24/the-worst-programming-interview-question/">The Worst Programming Interview Question</a></li>
+                
+                  <li><a href="/2014/02/05/top-10-career-changing-programming-books/">Top 10 Career-Changing Programming Books</a></li>
+                
+                  <li><a href="/2013/12/17/centurylink-traps-and-caps/">CenturyLink: Traps and Caps</a></li>
+                
+                  <li><a href="/2013/08/30/diving-into-android/">Diving Into Android</a></li>
+                
+                  <li><a href="/2013/07/30/oscon-2013-a-review/">OSCON 2013: A Review</a></li>
+                
+                  <li><a href="/2013/06/10/book-review-presentation-patterns/">Book Review: Presentation Patterns</a></li>
+                
+                  <li><a href="/2013/05/22/spring-2013-semester-in-review/">Spring 2013 Semester in Review</a></li>
+                
+                  <li><a href="/2013/02/02/brief-thoughts-on-software-craftsmanship/">Brief Thoughts on Software Craftsmanship</a></li>
+                
+            </ul>
+          </li> <!-- /recent-posts -->
+          <li id="tag_cloud" class="widget">
+            <h2 class="widgettitle">Tags</h2>
+            <div class="ctc">
+                
+                  <a href="/tag/code" style="font-size: 18pt">
+                    code
+                  </a>
+                
+                  <a href="/tag/java" style="font-size: 13pt">
+                    java
+                  </a>
+                
+                  <a href="/tag/career" style="font-size: 13pt">
+                    career
+                  </a>
+                
+                  <a href="/tag/school" style="font-size: 12pt">
+                    school
+                  </a>
+                
+                  <a href="/tag/ruby" style="font-size: 10pt">
+                    ruby
+                  </a>
+                
+                  <a href="/tag/agile" style="font-size: 10pt">
+                    agile
+                  </a>
+                
+                  <a href="/tag/book" style="font-size: 8pt">
+                    book
+                  </a>
+                
+                  <a href="/tag/computer-science" style="font-size: 8pt">
+                    computer science
+                  </a>
+                
+                  <a href="/tag/interview" style="font-size: 8pt">
+                    interview
+                  </a>
+                
+                  <a href="/tag/software" style="font-size: 8pt">
+                    software
+                  </a>
+                
+                  <a href="/tag/crossposted" style="font-size: 8pt">
+                    crossposted
+                  </a>
+                
+                  <a href="/tag/job" style="font-size: 8pt">
+                    job
+                  </a>
+                
+                  <a href="/tag/rails" style="font-size: 8pt">
+                    rails
+                  </a>
+                
+                  <a href="/tag/linux" style="font-size: 8pt">
+                    linux
+                  </a>
+                
+                  <a href="/tag/ubuntu" style="font-size: 8pt">
+                    ubuntu
+                  </a>
+                
+                  <a href="/tag/continuous-integration" style="font-size: 7pt">
+                    continuous integration
+                  </a>
+                
+                  <a href="/tag/business" style="font-size: 7pt">
+                    business
+                  </a>
+                
+                  <a href="/tag/compsci" style="font-size: 7pt">
+                    compsci
+                  </a>
+                
+                  <a href="/tag/open-source" style="font-size: 7pt">
+                    open source
+                  </a>
+                
+                  <a href="/tag/internet" style="font-size: 7pt">
+                    internet
+                  </a>
+                
+                  <a href="/tag/git" style="font-size: 7pt">
+                    git
+                  </a>
+                
+                  <a href="/tag/complexity" style="font-size: 7pt">
+                    complexity
+                  </a>
+                
+                  <a href="/tag/semester" style="font-size: 7pt">
+                    semester
+                  </a>
+                
+                  <a href="/tag/tdd" style="font-size: 7pt">
+                    tdd
+                  </a>
+                
+                  <a href="/tag/class" style="font-size: 7pt">
+                    class
+                  </a>
+                
+                  <a href="/tag/design" style="font-size: 7pt">
+                    design
+                  </a>
+                
+                  <a href="/tag/rant" style="font-size: 7pt">
+                    rant
+                  </a>
+                
+                  <a href="/tag/windows" style="font-size: 7pt">
+                    windows
+                  </a>
+                
+                  <a href="/tag/refactoring" style="font-size: 7pt">
+                    refactoring
+                  </a>
+                
+                  <a href="/tag/review" style="font-size: 7pt">
+                    review
+                  </a>
+                
+                  <a href="/tag/development" style="font-size: 7pt">
+                    development
+                  </a>
+                
+                  <a href="/tag/technical-debt" style="font-size: 7pt">
+                    technical debt
+                  </a>
+                
+                  <a href="/tag/planning" style="font-size: 7pt">
+                    planning
+                  </a>
+                
+                  <a href="/tag/estimating" style="font-size: 7pt">
+                    estimating
+                  </a>
+                
+                  <a href="/tag/automated-testing" style="font-size: 7pt">
+                    automated testing
+                  </a>
+                
+                  <a href="/tag/brain" style="font-size: 7pt">
+                    brain
+                  </a>
+                
+                  <a href="/tag/productivity" style="font-size: 7pt">
+                    productivity
+                  </a>
+                
+                  <a href="/tag/junit" style="font-size: 7pt">
+                    junit
+                  </a>
+                
+                  <a href="/tag/testing" style="font-size: 7pt">
+                    testing
+                  </a>
+                
+                  <a href="/tag/estimation" style="font-size: 7pt">
+                    estimation
+                  </a>
+                
+                  <a href="/tag/education" style="font-size: 7pt">
+                    education
+                  </a>
+                
+                  <a href="/tag/blog" style="font-size: 7pt">
+                    blog
+                  </a>
+                
+                  <a href="/tag/mac" style="font-size: 7pt">
+                    mac
+                  </a>
+                
+                  <a href="/tag/latex" style="font-size: 7pt">
+                    latex
+                  </a>
+                
+                  <a href="/tag/patch" style="font-size: 7pt">
+                    patch
+                  </a>
+                
+                  <a href="/tag/wordpress" style="font-size: 7pt">
+                    wordpress
+                  </a>
+                
+                  <a href="/tag/certification" style="font-size: 7pt">
+                    certification
+                  </a>
+                
+                  <a href="/tag/tests" style="font-size: 7pt">
+                    tests
+                  </a>
+                
+                  <a href="/tag/quality" style="font-size: 7pt">
+                    quality
+                  </a>
+                
+                  <a href="/tag/jenkins" style="font-size: 7pt">
+                    jenkins
+                  </a>
+                
+                  <a href="/tag/professionalism" style="font-size: 7pt">
+                    professionalism
+                  </a>
+                
+                  <a href="/tag/functional" style="font-size: 7pt">
+                    functional
+                  </a>
+                
+                  <a href="/tag/programming-languages" style="font-size: 7pt">
+                    programming languages
+                  </a>
+                
+                  <a href="/tag/story" style="font-size: 7pt">
+                    story
+                  </a>
+                
+                  <a href="/tag/scala" style="font-size: 7pt">
+                    scala
+                  </a>
+                
+                  <a href="/tag/college" style="font-size: 7pt">
+                    college
+                  </a>
+                
+                  <a href="/tag/rage" style="font-size: 7pt">
+                    rage
+                  </a>
+                
+                  <a href="/tag/c" style="font-size: 7pt">
+                    c#
+                  </a>
+                
+                  <a href="/tag/books" style="font-size: 7pt">
+                    books
+                  </a>
+                
+                  <a href="/tag/conference" style="font-size: 7pt">
+                    conference
+                  </a>
+                
+            </div>
+          </li><!-- /tag-cloud -->
+          <li class="widget widget_text" id="text-4">
+            <div class="textwidget">
+              <div align="center">
+                <a href="http://www.eff.org/action"><img src="/assets/eff.gif"></a>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div><!-- /sidebar-left -->
+
+      <div id="sidebar-right" class="sidebar">
+        <div id="social-icons">
+          
+              <a href="http://about.me/rodhilton" title="about.me" class="social-icon dimmed" style="background-color: #eeb111">
+                <img src="/assets/social/aboutme.png"/>
+              </a>
+          
+              <a href="https://twitter.com/rodhilton" title="Twitter" class="social-icon dimmed" style="background-color: #55acee">
+                <img src="/assets/social/twitter.png"/>
+              </a>
+          
+              <a href="http://www.linkedin.com/in/rodhilton" title="LinkedIn" class="social-icon dimmed" style="background-color: #0976b4">
+                <img src="/assets/social/linkedin.png"/>
+              </a>
+          
+              <a href="http://github.com/rodhilton" title="GitHub" class="social-icon dimmed" style="background-color: #000000">
+                <img src="/assets/social/github.png"/>
+              </a>
+          
+              <a href="http://speakerdeck.com/rodhilton" title="Speakerdeck" class="social-icon dimmed" style="background-color: #218d5e">
+                <img src="/assets/social/speakerdeck.png"/>
+              </a>
+          
+              <a href="https://coderwall.com/p/u/rodhilton" title="Coderwall" class="social-icon dimmed" style="background-color: #3990d0">
+                <img src="/assets/social/coderwall.png"/>
+              </a>
+          
+              <a href="https://facebook.com/rodhilton" title="Facebook" class="social-icon dimmed" style="background-color: #3b5998">
+                <img src="/assets/social/facebook.png"/>
+              </a>
+          
+              <a href="http://www.goodreads.com/user/show/1499157-rodhilton-hilton" title="Goodreads" class="social-icon dimmed" style="background-color: #76420a">
+                <img src="/assets/social/goodreads.png"/>
+              </a>
+          
+              <a href="http://letterboxd.com/rodhilton/films/ratings/" title="Letterboxd" class="social-icon dimmed" style="background-color: #21282f">
+                <img src="/assets/social/letterboxd.png"/>
+              </a>
+          
+              <a href="http://www.grouvee.com/user/rodhilton/shelves/3274-played" title="Grouvee" class="social-icon dimmed" style="background-color: #dda017">
+                <img src="/assets/social/grouvee.png"/>
+              </a>
+          
+              <a href="http://www.last.fm/user/rodhilton" title="Last.fm" class="social-icon dimmed" style="background-color: #c3000d">
+                <img src="/assets/social/lastfm.png"/>
+              </a>
+          
+              <a href="http://www.diigo.com/user/rodhilton" title="Diigo" class="social-icon dimmed" style="background-color: #0079ff">
+                <img src="/assets/social/diigo.png"/>
+              </a>
+          
+        </div>
+      </div><!-- /sidebar-right -->
+
+    </div><!-- /sidebars -->
+    </div><!--/sidebar-wrapper-->
+
+</div> <!-- /page -->
+
+<!-- Javascript -->
+<script type="text/javascript">
+/*The sidebar shouldn't be visible until it's been positioned, but just in case someone disables JS we leave it visible in CSS and immediately hide it here */
+$("#sidebars").css({visibility: "hidden"});
+</script>
+
+<script src="/scripts/editableCodeHighlight.js" type="text/javascript"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js" type="text/javascript"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.0/highlight.min.js"></script>
+
+<script src="/scripts/jquery.lazyload.mini.js"></script>
+
+<script type="text/javascript"
+   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<script src="/scripts/hyphenator/Hyphenator.js" type="text/javascript"></script>
+<script src="/scripts/hyphenator/patterns/en-us.js" type="text/javascript"></script>      
+<script src="/scripts/startup.js" type="text/javascript"></script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [["$$","$$"], ["\\(","\\)"]],
+      displayMath: [["$$$","$$$"],["\\[","\\]"]]
+    },
+    TeX: {
+      extensions: ["AMSmath.js", "AMSsymbols.js"]
+    },
+    "HTML-CSS": {
+      scale: 96
+    }
+  });
+</script>
+
+<script type="text/javascript">
+/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+var disqus_shortname = 'nomachetejuggling'; // required: replace example with your forum shortname
+
+/* * * DON'T EDIT BELOW THIS LINE * * */
+(function () {
+    var s = document.createElement('script'); s.async = true;
+    s.type = 'text/javascript';
+    s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+}());
+</script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-379031-4', 'auto');
+  ga('send', 'pageview');
+
+</script> 
+
+</body>
+</html>

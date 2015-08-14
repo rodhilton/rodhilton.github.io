@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Absolutely No Machete Juggling &raquo; Wordpress</title>
+		<description>Rod Hilton&amp;#039;s rants about stuff he cares about way too much.</description>		
+		<link>http://www.nomachetejuggling.com</link>
+		<atom:link href="http://www.nomachetejuggling.com/tag/{"name"=>"wordpress", "posts"=>[<Post: /2011/05/23/adding-dont-hyphenate-class-name-support-to-hyphenator>, <Post: /2011/04/18/adding-scaling-support-in-latex-for-wordpress>], "id"=>"wordpress"}/rss.xml" rel="self" type="application/rss+xml" />
+		
+	</channel>
+</rss>

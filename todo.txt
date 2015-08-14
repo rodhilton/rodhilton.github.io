@@ -1,6 +1,0 @@
-popular posts link? need to pull google analytics data somehow
-
-
-css file cleanup
-
-the image borders arent the same in chrome and firefox... ie is probably h0rked

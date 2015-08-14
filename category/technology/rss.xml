@@ -1,0 +1,778 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Absolutely No Machete Juggling &raquo; Technology</title>
+		<description>Rod Hilton&amp;#039;s rants about stuff he cares about way too much.</description>		
+		<link>http://www.nomachetejuggling.com</link>
+		<atom:link href="http://www.nomachetejuggling.com/category/technology/rss.xml" rel="self" type="application/rss+xml" />
+		
+			<item>
+				<title>CenturyLink: Traps and Caps</title>
+				<description>&lt;p&gt;&lt;em&gt;TL;DR: After a decade of service, CenturyLink decided I wasn&amp;#39;t worth keeping as a customer, so I switched to Comcast Business Internet.  Even if CenturyLink tells you that you have no data caps, you do.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;When I first moved to Colorado nearly a decade ago, I signed up for Comcast&amp;#39;s Residential high-speed internet service, and I hated it.  I had to reset my cable modem once every week because it would stop working properly, and my internet noticeably slowed down when people would get home from school/work in my apartment complex.&lt;/p&gt;
+
+&lt;p&gt;I did some research and determined that, for the kinds of internet speeds being offered at the time (around 1-5Mbps down), Qwest&amp;#39;s DSL had similar prices to Comcast.  Additionally, because it was DSL, I could use my own Netgear router that had a DSL modem built in, and I wouldn&amp;#39;t have to mess with company equipment.  Also, DSL&amp;#39;s speed varies based on your distance to a hub, not based on how many people are currently using it.  I thought I could avoid both of my major problems by switching to DSL for about the same price, so I did, paying for the maximum possible speed at the time, 5Mbps.&lt;/p&gt;
+
+&lt;p&gt;For many years, Qwest was the only monthly bill I never had any trouble with.  Sometimes my cable would go out or look pixelated, sometimes my heating bill would be surprisingly massive, I was always having annoying issues with my cell phone service, but month after month, I never even noticed I had Qwest.  It was just there, it worked, it never went down, it never slowed down.  It was great.&lt;/p&gt;
+
+&lt;table class=&#39;image alignright&#39; width=&#39;306&#39;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/Qwest-300x233.jpg&quot; width=&#39;300&#39; height=&#39;233&#39;/&gt;&lt;p class=&#39;caption&#39;&gt;The good ol&#39; days.&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;As the years went by, Cable speeds seemed to be improving at a faster rate than DSL speeds.  Nonetheless, I was happy with Qwest&amp;#39;s customer service and I had bad experiences with Cable, so I stuck to DSL.  One day, I got a mailer that 10Mbps was now available in my area.  I called Qwest that day and upgraded.  A year or so later, another mailer came with 20Mbps as an offer, and I upgraded immediately.  Each time the price difference was less than double for double the speed, so it seemed worth it.  I use a lot of internet, and I still missed my University&amp;#39;s T3 line.&lt;/p&gt;
+
+&lt;p&gt;Eventually Qwest became CenturyLink after an acquisition/merge.  I was a bit worried at first, I was happy with Qwest not only from a technical standpoint, but from a customer service standpoint.  Would this change?  I could always tell that Qwest representatives were especially friendly to me after they saw how long I&amp;#39;d been a customer, I feared I&amp;#39;d lose my &amp;quot;standing&amp;quot;.  But, CenturyLink one day sent me a letter offering &amp;quot;fiber&amp;quot; internet, 40Mbps down, 5Mbps up.  Upgrading bumped my price up to about $100 a month, which was a lot, but I really do use the everloving crap out of some internet, so I did it.&lt;/p&gt;
+
+&lt;p&gt;Many people on Twitter and Facebook asked me about internet providers, and I&amp;#39;d always talk up CenturyLink.  Fast internet, good customer service, no downtime.  And best of all, this was around the time that cable companies started introducing usage caps on their cable internet.  I found this maddening for both philosophical and technical reasons, but &lt;strong&gt;CenturyLink had no such caps, so I&amp;#39;d often argue it was a better choice for heavy internet users like myself&lt;/strong&gt;.  I know that I influenced a handful of people to get CenturyLink, or even in a few cases to switch to CenturyLink off Comcast.&lt;/p&gt;
+
+&lt;h1&gt;The First Warning&lt;/h1&gt;
+
+&lt;p&gt;In February of this past year, I was at work and decided I wanted something off my computer at home.  I tried to SSH into my workstation at home but was unable to connect.  This was strange.  Like I said earlier, CenturyLink never went down, so it made no sense to me.  Thinking maybe my workstation had crashed or died, I tried connecting to my home VPN, and that didn&amp;#39;t work either.  There are a few services I run on various machines that sync with centralized servers, such as &lt;a href=&quot;http://www.subsonic.org/pages/index.jsp&quot;&gt;Subsonic&lt;/a&gt; and &lt;a href=&quot;http://www.plexapp.com/&quot;&gt;Plex&lt;/a&gt;, so I tried connecting to them, only to discover they too had lost connectivity to my home.  I even tried pulling up my &lt;a href=&quot;https://nest.com/&quot;&gt;Nest&lt;/a&gt;, and saw that even that had lost connectivity to the outside world.&lt;/p&gt;
+
+&lt;p&gt;Here&amp;#39;s how much confidence I had in CenturyLink: &lt;strong&gt;I actually thought the power must be out.&lt;/strong&gt;  I went home at the end of the day, fully expecting to walk into a cold house that had been without power for a portion of the day, and assuming I&amp;#39;d have to go around resetting clocks and booting up computers.  But to my surprise, the house was fine.  All the clocks had the right time on them, the power had never gone out.  It was an internet problem.&lt;/p&gt;
+
+&lt;p&gt;I sat down at a computer and opened up a web browser.  Instead of my home page, I got this:&lt;/p&gt;
+
+&lt;table class=&#39;image aligncenter&#39; width=&#39;586&#39;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/centurylinkuse-580x391.png&quot; width=&#39;580&#39; height=&#39;391&#39;/&gt;&lt;p class=&#39;caption&#39;&gt;No &#39;net for you!&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;This was why none of my devices were connectable.  Every outgoing connection was pulled into some weird walled garden with this message, and I wasn&amp;#39;t able to get my internet back until I clicked Continue to acknowledge I&amp;#39;d gotten the warning.  &lt;/p&gt;
+
+&lt;p&gt;Like I said, and like I had told many people, CenturyLink &lt;strong&gt;had no usage caps&lt;/strong&gt;.  I had never heard of this Excessive Use Policy before, I didn&amp;#39;t remember getting a letter saying one had been implemented.  I used quite a lot more internet in January than usual, but I had no idea it was something I needed to curb. &lt;/p&gt;
+
+&lt;p&gt;Totally baffled by this, I called the number in the notice.  I asked what the policy was and the tech told me to hold on while she looked up my account.  Alright, I thought, this is good.  Generally as soon as they look up my account, they see how long I&amp;#39;ve had service with the company and their tone becomes super-friendly.  Sure enough, when she came back on the line, she was quite friendly.  &lt;strong&gt;She told me that, because I pay for the highest tier internet the company offers, 40Mbps down, that the Excessive Use Policy does not actually apply to me.&lt;/strong&gt;  She said the notice was in error, I wasn&amp;#39;t supposed to get it.  She said she&amp;#39;d flip a flag to make sure I never get another notice again.  I thanked her and asked her to please make a note of this conversation in my account, so that it would be there in case it happened again and I had to call back.  She said she would, but reiterated that it was not necessary, as it would not happen again.&lt;/p&gt;
+
+&lt;p&gt;When I first got the warning message, I posted it to my Twitter, expressing some irritation.  A bunch of friends asked me what happened, since I was always talking up CenturyLink.  After I got off the call, I posted again with an update, that it was all good, and I wasn&amp;#39;t even supposed to get the warning.  I publicly praised CenturyLink&amp;#39;s customer service yet again.&lt;/p&gt;
+
+&lt;blockquote class=&quot;twitter-tweet&quot; lang=&quot;en&quot;&gt;&lt;p&gt;&lt;a href=&quot;https://twitter.com/CenturyLink&quot;&gt;@CenturyLink&lt;/a&gt; resolution: I&amp;#39;ve been removed from the list of accounts that get such notices. Good on you guys, thanks Kensie. &lt;a href=&quot;https://twitter.com/search?q=%23happycustomer&amp;amp;src=hash&quot;&gt;#happycustomer&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&amp;mdash; Rod Hilton (@rodhilton) &lt;a href=&quot;https://twitter.com/rodhilton/statuses/301883017645928449&quot;&gt;February 14, 2013&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;script async src=&quot;//platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;blockquote class=&quot;twitter-tweet&quot; lang=&quot;en&quot;&gt;&lt;p&gt;&lt;a href=&quot;https://twitter.com/CenturyLink&quot;&gt;@CenturyLink&lt;/a&gt;, my tweet about how well you resolved this issue has 2 of my friends considering switching from Comcast. :)&lt;/p&gt;
+&lt;p&gt;&amp;mdash; Rod Hilton (@rodhilton) &lt;a href=&quot;https://twitter.com/rodhilton/statuses/301907519121530881&quot;&gt;February 14, 2013&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;script async src=&quot;//platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;h1&gt;The Second Warning&lt;/h1&gt;
+
+&lt;p&gt;I resumed business as usual, confident that the usage policy did not apply to me, happily using my internet like crazy.  But a few months later, in May, I was working at home and, once again, I was presented with a similar walled-garden message.  The first time I was surprised and alarmed, but now I was annoyed.  I had already discussed this with a representative, and she assured me I wouldn&amp;#39;t get another one of these.&lt;/p&gt;
+
+&lt;p&gt;I called again, and hid my irritation, knowing that if I stayed friendly, as soon as the technician pulled up my account, they would see how long I&amp;#39;ve been a customer and be friendly as well.  Once again, the tech pulled up my account notes, and was immediately accommodating.  I asked if my notes indicated I&amp;#39;d called about this before, and the representative told me &lt;strong&gt;yes, he could see that I had spoken to the company a few months ago, and was told I was not supposed to get these.&lt;/strong&gt;  The representative put me on hold so he could call some other department and be certain that the proper flag was set so that I wouldn&amp;#39;t get any more of these.  After about 10 minutes, he came back and told me it&amp;#39;s done, he&amp;#39;s sure I won&amp;#39;t get any more of these.  I asked him to please make another note in my account that we had this conversation, and he said he did.&lt;/p&gt;
+
+&lt;p&gt;Once again, I live-tweeted most of these interactions.  And once again, people responded to it.  One thing that kept popping up was, people advised me to look into Comcast Business Internet.  They said it was more reliable than Comcast Residential, and had absolutely no data caps because it&amp;#39;s for businesses.  Curious, I looked into it, even going so far as calling a Comcast Business representative to ask some questions and get a plan priced out.  I was surprised to see that the price for Comcast Business Class internet was about the same as what I was paying, for slightly faster access.  All this time, I&amp;#39;d been comparing Qwest/CenturyLink&amp;#39;s price increases for more speed, never really comparing with competitors. &lt;/p&gt;
+
+&lt;p&gt;Comcast Business looked interesting, but in the end, I didn&amp;#39;t like the idea of having to sign up for a year or two of service ahead of time with a contract, and I didn&amp;#39;t fully trust Comcast due to my experiences with the residential cable.  The price of Comcast Business Internet was good, but the only real advantage was the removal of data caps, which I&amp;#39;ve now had two CenturyLink representatives tell me don&amp;#39;t apply to me anyway.  My faith in CenturyLink restored, I once again went about my business.&lt;/p&gt;
+
+&lt;blockquote class=&quot;twitter-tweet&quot; lang=&quot;en&quot;&gt;&lt;p&gt;2nd Excessive Use warning from &lt;a href=&quot;https://twitter.com/CenturyLink&quot;&gt;@CenturyLink&lt;/a&gt;. Called and they said (again) I&amp;#39;d never get another. Love the customer support.&lt;/p&gt;
+&lt;p&gt;&amp;mdash; Rod Hilton (@rodhilton) &lt;a href=&quot;https://twitter.com/rodhilton/statuses/334521053403549697&quot;&gt;May 15, 2013&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;script async src=&quot;//platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;h1&gt;The Letter&lt;/h1&gt;
+
+&lt;p&gt;I never got another walled-garden notice.  Months went by, and I figured that the extra effort the CSR took to get me flagged properly finally worked, and I was in good shape.  Then, on November 21st, I got a letter.  Not a browser notice, not an e-mail, but a paper letter, sent via the post office.  The last 3 times this company sent me something in the mail, it was to alert me of higher speeds in my area.  This letter was decidedly different.&lt;/p&gt;
+
+&lt;table class=&#39;image aligncenter&#39; width=&#39;586&#39;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/centurylinktermination-e1386560161832-580x576.png&quot; width=&#39;580&#39; height=&#39;576&#39;/&gt;&lt;p class=&#39;caption&#39;&gt;You&#39;re Terminated.&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;So many things annoyed me about this letter.  The claim that this was my third notice was questionable, to start.  Though I had gotten two previous warnings, both of them were in error according to CenturyLink customer service.  So as far as I was concerned, I had gotten zero warnings.  Additionally, the termination date was December 3rd, eleven days away.  Eleven days to find a new internet provider, get signed up, schedule an install, get everything working?  Infuriating.&lt;/p&gt;
+
+&lt;p&gt;Once again, I held back my irritation, knowing that being friendly was always met by helpful representatives once they saw how long I&amp;#39;d been a customer.  I called the number on the letter, which connected me to technical support, and person who I will call Jordan. &lt;strong&gt;Jordan checked my account and said that my account was not flagged for termination, had no excessive use flags on it, and was in good standing.&lt;/strong&gt;  He called the letter a &amp;quot;miscommunication&amp;quot; and said I would not have my service ended.  This was good news, so I relaxed a bit.  I did, however, ask if he saw the two notes on my account from previous calls about similar issues, and he said that there were no notes on my account.  That made no sense to me, the second time I called, the person I spoke with specifically mentioned seeing the note from the first time I called, so how could it be gone?  Jordan informed me it might be a &amp;quot;business note&amp;quot; and I should call the business office on Monday, because he only had access to &amp;quot;technical notes&amp;quot;.&lt;/p&gt;
+
+&lt;p&gt;I called the business office on Monday using a number Jordan gave me and spoke to a second CSR, who I will refer to as Taylor.  Taylor verified two things for me.  One, I absolutely did not have any notes on my account about previous phone calls.  And two, &lt;strong&gt;my account was just fine, I was not set to be terminated, I had nothing to worry about&lt;/strong&gt;.  Again, I relaxed some more, but then Taylor suggested we conference-call someone from the &amp;quot;Securities Office&amp;quot; just to triple-check.  She got an employee, who I will refer to as Howard, on the line.&lt;/p&gt;
+
+&lt;p&gt;Howard did some checking and gave me some news that stunned me.  &lt;strong&gt;The excessive use policy &lt;em&gt;does&lt;/em&gt; apply to my account, and I am indeed flagged for termination on the 3rd, now in eight days.&lt;/strong&gt;  I was almost at a loss for words.  I was told to ignore both warnings by CenturyLink employees previously.  I called the number &lt;em&gt;on the termination notice&lt;/em&gt; and was told my account was fine, and even followed up with a second call to double check it.  Even that call said I was fine. It wasn&amp;#39;t until I talked to a third person, fifth overall, that I was finally told for the first time that the policy applied to me, and I was being told not only that but that as a result my service was being terminated in eight days.&lt;/p&gt;
+
+&lt;p&gt;I finally got the details on the Excessive Use Policy from Howard.  He told me that the limit for usage is 250 GB per month for any service at 1.5Mbps and up.  Anything above that was a violation of the policy.  I wasn&amp;#39;t sure I understood, so I asked for clarification, &amp;quot;you mean that someone who is paying for 40Mbps down and someone paying for only 1.5Mbps down have same usage cap?&amp;quot; and Howard answered, &amp;quot;correct.&amp;quot;&lt;/p&gt;
+
+&lt;p&gt;&amp;quot;So even though I&amp;#39;m paying more than quadruple what my 1.5Mbps neighbor is, he and I have the same maximum?&amp;quot;&lt;/p&gt;
+
+&lt;p&gt;&amp;quot;Yes.&amp;quot;&lt;/p&gt;
+
+&lt;p&gt;I did a quick calculation.  40 megabits per second is 5 megabytes per second.  250 GB is 256,000 megabytes.  That means, if I were to saturate the bandwidth I&amp;#39;m paying for, I could use up my entire allotment in 51,200 seconds.  14.2 hours.  I asked Howard if this was the case and he informed me that it was.&lt;/p&gt;
+
+&lt;p&gt;This was about the time I decided to stop being so friendly.  I explained that it was ridiculous that I was having my service terminated in eight days when I&amp;#39;ve gotten, as far as I&amp;#39;m concerned, zero actual warnings that were legitimate.  Howard explained that the CSRs I talked to previously were misinformed, as the policy does apply to me.  He also said I had no notes about previous conversations in my account.  As I mentioned, what&amp;#39;s particularly surprising about that is that the second CSR mentioned the notes of the first, meaning that, if they were gone, they must have been deleted (or the second CSR lied).  Amazing, too, that two independent CSRs would tell me the same thing incorrectly.&lt;/p&gt;
+
+&lt;p&gt;I asked Howard to reset my &amp;quot;warning&amp;quot; counter back to zero, so I at least had a fair chance now that I knew the policy was in place.  He was willing to reset me back to two.  So my internet would no longer be terminated in eight days, but if I violated the policy one more time, I&amp;#39;d get another letter of termination.  In other words, &lt;strong&gt;I was now in a permanent position of possibly having my internet suddenly turned off within about a week&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Howard suggested I look into CenturyLink Business Class, which removes the cap.  He hung up, and Taylor (who was still on the line) conference called someone from the Business Internet department.  The Business CSR informed me that the price would be about $200 a month, double what I was paying at the time.  I asked if it would at least be faster, and was told it would not be, 40/5 is the fastest CenturyLink gets.  I tell him (and Taylor) I need to think about that a little more.  The Business CSR hangs up, which unfortunately disconnects the entire call somehow.&lt;/p&gt;
+
+&lt;p&gt;Ugh.  I still had questions for Taylor, she said she would stay on the line after the Business call.  I call back and get a new CSR, who I will call Brandon.  I asked to be transferred to Taylor because she&amp;#39;s been informed of my extremely long story, and I didn&amp;#39;t want to have to repeat it all.  Brandon informed me they are not able to transfer to people directly, only departments.  I let out a sigh and once again recounted the entire story starting from my first warning up until that very moment.  I explained to Brandon that it doesn&amp;#39;t seem right to give me a data cap so low that I can bust out of it in 14 hours, and it seems that the caps should, at the very least, increase linearly with the speeds.  Brandon agreed with me, agreed that I&amp;#39;m not getting proper treatment, and asked to put me on hold while he gets to the bottom of this.  &lt;strong&gt;While on hold, I was disconnected again&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;At this point I was in full-on pain-in-the-ass-customer mode.  I called again, asked to speak to Taylor or Brandon, and was once again told they can&amp;#39;t do that.  So I asked to speak to the highest manager I can be transferred to, because if I have to tell the whole story again I want it to be at the highest level I can get.  The CSR obliged, transferring me to someone I will call Terry.  I told the entire story again.  By the time I&amp;#39;m done, I&amp;#39;ve been on the phone for three hours in total.  All I wanted at this point is to be reset to zero warnings so that I could try to get my usage down to acceptable levels without living in fear of termination.  Terry told me he can&amp;#39;t really help me as a Customer Support person, and offered to transfer me to Securities.  Fine.&lt;/p&gt;
+
+&lt;p&gt;I was transferred to Securities again and spoke with a Securities Agent.  She looked up my notes and informs me that Howard already did me &amp;quot;a big favor&amp;quot; by resetting me back to 2 warnings.  She said there was nothing further she was willing to do for me.  I asked how, exactly, I&amp;#39;m supposed to even get my usage down to their limit when my next violation means termination.  She told me there are free tools I can install on my computer to monitor usage.  That&amp;#39;s rich.  I&amp;#39;m supposed to install these tools on every computer in my house, both mine and my wife&amp;#39;s, plus our phones, running the gamut of Linux, Windows, OS X, and Android?  The best I can do is look at my router, which tells me how much traffic I used in a day, so I&amp;#39;d have to check it at the end of each day and manually total it up.  I started thinking about writing a shell script for this, and then chastised myself for playing into this nonsense.  The Securities Agent once again recommended I switch to CenturyLink Business Class, all for the low-low price of double what I&amp;#39;m paying now for the exact same service.&lt;/p&gt;
+
+&lt;h1&gt;The Defeat&lt;/h1&gt;
+
+&lt;p&gt;Completely defeated, I hung up, and I started looking at Comcast Business Class again.  If I were willing to pay $200 for internet, I could get Comcast Business Class&amp;#39;s fastest speed, 100Mbps down, 20Mbps up, with no data caps.  Hell, at my current price of $100, I could get 50 down and 10 up, 10Mbps faster downloading, with double the upload speed, and still no cap.&lt;/p&gt;
+
+&lt;p&gt;I called Comcast and got some more info.  I even had a contract drawn up, ready to sign.  At this point, I couldn&amp;#39;t justify staying with CenturyLink any longer.  I could remove the data caps from my life with no additional cost just by switching providers, and I would even get a bonus of slightly faster speed.  I obviously had reservations about Comcast due to my previous experience, but everyone I was talking to on Twitter indicated that the Comcast Business is a completely different branch of the company, that the techs really know their stuff and that the representatives are extremely helpful, because they are used to dealing with businesses.&lt;/p&gt;
+
+&lt;p&gt;Speaking of Twitter, I was naturally live-tweeting everything that was happening with all of this.  In addition to friends and colleagues responding, I actually got a response from CenturyLink itself.  &lt;/p&gt;
+
+&lt;blockquote class=&quot;twitter-tweet&quot; lang=&quot;en&quot;&gt;&lt;p&gt;&lt;a href=&quot;https://twitter.com/rodhilton&quot;&gt;@rodhilton&lt;/a&gt; Hey Rod, our team can help look into that for you. Send us your acct info here &lt;a href=&quot;http://t.co/V7SCkTtg1e&quot;&gt;http://t.co/V7SCkTtg1e&lt;/a&gt;&amp;#10;Thanks, ^AshleyKay&lt;/p&gt;
+&lt;p&gt;&amp;mdash; CenturyLinkHelp Team (@CenturyLinkHelp) &lt;a href=&quot;https://twitter.com/CenturyLinkHelp/statuses/405002367793254400&quot;&gt;November 25, 2013&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;script async src=&quot;//platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;After some more tweeting, I got this as well:&lt;/p&gt;
+
+&lt;blockquote class=&quot;twitter-tweet&quot; lang=&quot;en&quot;&gt;&lt;p&gt;&lt;a href=&quot;https://twitter.com/rodhilton&quot;&gt;@rodhilton&lt;/a&gt; Hi Rod, if you need additional help with this issue we can have our DSL Escalations Team give you a call&amp;#8230;Thanks,Corey&lt;/p&gt;
+&lt;p&gt;&amp;mdash; CenturyLinkHelp Team (@CenturyLinkHelp) &lt;a href=&quot;https://twitter.com/CenturyLinkHelp/statuses/405045978928926720&quot;&gt;November 25, 2013&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;script async src=&quot;//platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;So I decided to bite.  Maybe this is a different team, who might really be able to do something for me.  Again, all I wanted at this point was to be reset to zero warnings so I had a fighting chance.&lt;/p&gt;
+
+&lt;p&gt;I filled out their form, writing 1,414 words explaining this entire story.  I explained that Comcast had them beat on Business Tier service by a wide margin, and I&amp;#39;d leave for Comcast before paying double for the same service from CenturyLink just to avoid being harassed.  I also explained that this is my last attempt to remedy the situation with CenturyLink, that I&amp;#39;d given them three hours of my Monday and I couldn&amp;#39;t give them any more of my time.  I reiterate I&amp;#39;ve been a customer for a long time, and I&amp;#39;d like to stay a customer, but that I needed this situation to be improved.&lt;/p&gt;
+
+&lt;p&gt;I submitted the form and waited.  I had a contract with Comcast Business Internet ready to sign in my inbox.  If CenturyLink&amp;#39;s help team could do something for me, I&amp;#39;d keep them and try to figure out how to get my bandwidth to reasonable levels.  If they wouldn&amp;#39;t do anything for me, I&amp;#39;d switch to Comcast, severing nearly a decade of loyal service. &lt;/p&gt;
+
+&lt;p&gt;That night, I checked with my router to see what my bandwidth use for the day was.  Just a normal day of working from home, no big media downloading, no movie or music streaming, nothing excessive.  I used 10GB that day alone, and that&amp;#39;s with trying my hardest not to use much.  At that rate, I&amp;#39;d hit the cap in 25 days, less than the month I&amp;#39;m paying for.  While I was tweeting about all of this, I had some friends ask me just what the hell I&amp;#39;m doing that&amp;#39;s using so much bandwidth.  To be completely honest, I don&amp;#39;t even understand the question.  After seeing how much bandwidth I use on a day when I&amp;#39;m giving it my full effort to minimize use, I have to wonder just how the hell everyone else is able to stay under their caps at all.  It seems impossible.&lt;/p&gt;
+
+&lt;p&gt;A few days later, I got a response from CenturyLink.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Thanks for reaching out and sending such candid feedback on your experience. I understand your frustration, unfortunately there&amp;#39;s no way I can change or stretch our policy. Up until this year you haven&amp;#39;t hit over 250gb before in, as you mentioned, many years. You have since gone over the usage limit every month so far in 2013. We&amp;#39;ve been very generous in the notices you&amp;#39;ve received and when you&amp;#39;ve received them. I apologize for the 2 representatives that provided you with incorrect information and therefore caused further turmoil in the matter. I am investigating that further so that proper feedback/coaching will be enforced. I wish there was something I could offer as far as a better price goes for the business usage, but there&amp;#39;s no other option other than what you&amp;#39;ve been told already. Please let me know what direction you&amp;#39;d like to go with this and I&amp;#39;ll take care of you to the end. If there&amp;#39;s anything else additional I can help with, let me know as well.&lt;/p&gt;
+
+&lt;p&gt;I wish there was a way for me to guarantee that you&amp;#39;ll go back to &amp;#39;zero&amp;#39;, but that&amp;#39;s not an option. As Howard already did for you, the forgiven process is the best than can be done. I understand your decision to try other venues for service you need. If there&amp;#39;s anything else I can assist you with, please let me know.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1&gt;The Switch&lt;/h1&gt;
+
+&lt;p&gt;A Comcast technician installed my new Business Internet two weeks later.  I know this post is way too long already, and I don&amp;#39;t want to look like some kind of shill for Comcast, so let me just summarize with: &lt;strong&gt;why didn&amp;#39;t I do this sooner?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;table class=&#39;image alignleft&#39; width=&#39;306&#39;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/comcast-business-300x168.png&quot; width=&#39;300&#39; height=&#39;168&#39;/&gt;&lt;p class=&#39;caption&#39;&gt;The good new days&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;We did a speed test before he left, and I was getting 57 Mbps down, 11.5 up.  I&amp;#39;ve had no issues with bandwidth dropping at all, it seems pretty consistent all day long; the lowest I saw was 48 down, which is still faster than my top speed with CenturyLink (about 37).  I haven&amp;#39;t had to reset the cable modem at all, it&amp;#39;s a beefy, boxy beast of a thing from Netgear.  No frills, no wireless, just a black box I hooked up to my existing router.&lt;/p&gt;
+
+&lt;p&gt;I&amp;#39;ve had no blips, no lags.  I&amp;#39;ve worked from home a few times since the install and I&amp;#39;ve seen no drop-offs, disconnections, or slowdowns.  I&amp;#39;ve dealt with Comcast Business Internet representatives in the sales department, billing department, and technical support department, and all of them were extremely helpful and friendly.  The Technical Support guy even helped me fix an issue I was having with my router, even though it wasn&amp;#39;t Comcast-commissioned equipment.&lt;/p&gt;
+
+&lt;p&gt;I actually feel bad for how many people I&amp;#39;ve recommended go to CenturyLink.  I know a nontrivial number of people have signed up with them based on my glowing recommendations over the years (this isn&amp;#39;t self-absorption, they&amp;#39;ve told me this).  I think I&amp;#39;d now only recommend residential CenturyLink to very light internet users, like my parents or in-laws.  There&amp;#39;s no good reason at all to use CenturyLink&amp;#39;s business class service, which is massively overpriced for the service when compared to Comcast&amp;#39;s offering.  And the higher-speed tiers at CenturyLink are all hampered by data caps that can be blown out in less than a day.  If all you want is 1.5-5Mbps down for light internet use, CenturyLink is the way to go for price, but for higher speeds it&amp;#39;s a complete rip-off.  The same high speeds can be found for cheaper at Comcast Business, with no data caps.&lt;/p&gt;
+
+&lt;p&gt;It&amp;#39;s unfortunate that things had to become so unpleasant with CenturyLink but it became clear that the company simply was not interested in keeping me as a customer.  While I wish I could have left CenturyLink on different terms, I&amp;#39;m glad I made the switch, and I hope the quality of service with Comcast Business Internet continues.&lt;/p&gt;
+</description>
+				<pubDate>Tue, 17 Dec 2013 00:00:00 -0700</pubDate>
+				<link>http://www.nomachetejuggling.com/2013/12/17/centurylink-traps-and-caps/</link>
+				<guid isPermaLink="true">http://www.nomachetejuggling.com/2013/12/17/centurylink-traps-and-caps/</guid>
+			</item>
+		
+			<item>
+				<title>Book Review: Presentation Patterns</title>
+				<description>&lt;p&gt;I don&amp;#39;t post book reviews here very often.  Typically I write up a few paragraphs about a book when I finish it and post it to my &lt;a href=&quot;http://www.goodreads.com/user/show/1499157-rod-hilton&quot;&gt;Goodreads account&lt;/a&gt;, which I consider enough of a review for nearly every book I read.&lt;/p&gt;
+
+&lt;p&gt;But &amp;quot;Presentation Patterns: Techniques for Crafting Better Presentations&amp;quot; by Neal Ford, Matthew McCullough, Nathaniel Schutta is a bit more than a book.  I&amp;#39;m not joking when I say this book has actually changed my life.  As such, I felt it was necessary to devote an entire post to it to draw extra attention to it.&lt;/p&gt;
+
+&lt;p&gt;In the interest of full disclosure, I should admit that I know the authors personally, sort of.  I&amp;#39;ve had a conversation or two with Neal and Nathaniel at various developer conferences, though I seriously doubt either of them would remember or even think my face looks familiar.  McCullough I&amp;#39;ve interacted with quite a bit more, but I once managed to get him to tell me he wanted to punch me in the face.  If you&amp;#39;ve ever met Matthew, you&amp;#39;d know this is pretty much like getting Gandhi to call you a stupid asshole.  The point is, I&amp;#39;m not affiliated with the authors or getting anything out of promoting the book.  I just found it extremely valuable and wanted to share it.&lt;/p&gt;
+
+&lt;table class=&#39;image alignright&#39; width=&#39;256&#39;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/pp-cover.jpg&quot; width=&#39;250&#39; height=&#39;320&#39;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;In any case, Presentation Patterns is excellent.  The book is full of tons of real-world, usable tips, ranging from how to speak clearly to how to organize your thoughts to the actual mechanics of doing specific things in Keynote and Powerpoint. It&amp;#39;s very detailed in this way, rarely leaving the reader wondering how to do a thing the book describes.  Reading this book after seeing many presentations by speakers like Ford, McCullough, and Schutta was an eye-opening experience, something akin to seeing how the sausage is made.&lt;/p&gt;
+
+&lt;p&gt;The book also contains a number of Antipatterns, so it&amp;#39;s a valuable resource for learning what to avoid.  Many of the most common patterns we see with Powerpoint are identified here, with explanations of why they are so terrible and should be avoided.  It rang very true for me, pretty much every presentation that has bored me has been an exemplar of these antipatterns.&lt;/p&gt;
+
+&lt;p&gt;One complaint is that the book is a bit short on visual examples, in some places. I think every pattern covered should have had actual screenshots from powerpoints which illustrate the pattern (or antipattern). Many of the entries had such screenshots, but not all. Some patterns and antipatterns left me wondering what they would look like in real life.  I happen to know because I&amp;#39;ve seen so many talks by the authors, but I think more graphics would have benefitted those who do not regularly attend conferences and user groups.&lt;/p&gt;
+
+&lt;p&gt;I particularly liked that the book didn&amp;#39;t spend much time dealing with basic speaking concerns, like getting over nervousness or imagining your audience in their underwear. The approach the book takes is that you will beat nervousness by knowing what you&amp;#39;re talking about and what you&amp;#39;re doing, and the book aims to give you those tools. Getting over nerves comes naturally when you have a killer presentation. In effect, this book isn&amp;#39;t &amp;quot;Public Speaking for Dummies&amp;quot; it almost assumes you&amp;#39;ve already read such a book, and specifically want to get the delta between regular public speaking and giving technical presentations.&lt;/p&gt;
+
+&lt;p&gt;The reason I say this is more than a book is that it has drastically altered my life in a very positive way.  I&amp;#39;ve always wanted to speak more, but I&amp;#39;ve had a crippling fear of public speaking for as long as I can remember.  Whenever I&amp;#39;d watch talks or see friends prepare to give their own talks, I was extremely jealous of how easily it came to them, since the mere thought of speaking in front of a large crowd would send me into a panic.&lt;/p&gt;
+
+&lt;p&gt;I&amp;#39;ve known that giving technical talks is important for my career, and I&amp;#39;ve always wanted to do it, so I hoped to pick up this book to see if it had any good tips.  I discovered as I read it that most of my fear of public speaking actually came from a fear of looking foolish or ignorant of my subject.  What this book gave me was more than a handful of tips, it gave me real tools to build confidence in my own presentations.  The &lt;a href=&quot;https://speakerdeck.com/rodhilton/sat-the-cook-levin-theorem&quot;&gt;very next presentation I built&lt;/a&gt; has so much obvious influence from this book that it probably borders on trademark infringement.  Compare that to &lt;a href=&quot;https://speakerdeck.com/rodhilton/quantitatively-evaluating-test-driven-development&quot;&gt;the presentation I built for my master&amp;#39;s thesis&lt;/a&gt; and I think you&amp;#39;ll see how much benefit this book provides.&lt;/p&gt;
+
+&lt;p&gt;I had given one presentation in the 29 years of my life prior to reading this book.  I built and gave one presentation during the process of reading it as well.  Since completing it a little over a year ago, I&amp;#39;ve given 4 more.  If that&amp;#39;s not a transformative experience, I don&amp;#39;t know what is.&lt;/p&gt;
+
+&lt;p&gt;Not only am I more comfortable speaking now, I&amp;#39;ve discovered I&amp;#39;m actually pretty good at it.  After &lt;a href=&quot;https://speakerdeck.com/rodhilton/breaking-monoalphabetic-substitution-ciphers-using-generic-algorithms&quot;&gt;my first presentation&lt;/a&gt;, I was asked by my CS professor to re-present the material to the Math department as well.  After my most recent &lt;a href=&quot;https://speakerdeck.com/rodhilton/rectangle-visibility-and-elusive-k23&quot;&gt;full-class lecture&lt;/a&gt; (1 hour, 15 minutes in front of about 40 people), students told me that I was a really interesting teacher and asked me if I&amp;#39;d take over a particular class they didn&amp;#39;t like.  &lt;a href=&quot;https://speakerdeck.com/rodhilton/detecting-codes&quot;&gt;Another presentation&lt;/a&gt; had students staying 15 minutes after class to discuss my presentation because they found it so interesting; I watched as I presented, and I had the eyeballs of almost every student, which wasn&amp;#39;t the case for the other student presenters.  &lt;a href=&quot;https://speakerdeck.com/rodhilton/priming-for-steganography&quot;&gt;Another still&lt;/a&gt; resulted in the professor telling I gave &amp;quot;one of the best student presentations [he&amp;#39;s] ever seen.&amp;quot;&lt;/p&gt;
+
+&lt;p&gt;I had a peer tell me he thinks I go overboard with animations and that it comes off as unprofessional.  Two years ago, feedback like this would have devastated me.  Today, I&amp;#39;m actually so confident that I&amp;#39;m not overusing animation but actually using it effectively to demonstrate information that I can shrug off his feedback as being, simply, wrong.&lt;/p&gt;
+
+&lt;p&gt;Having presentations backed by known-effective patterns rather than my own best guesses has resulted in a level of confidence in my presentations that I never would have imagined for myself.  One singular book took me from having a crippling fear of public speaking to &amp;quot;one of the best&amp;quot; presenters one of my professors has ever seen.  If you&amp;#39;ve got an interest in giving technical presentations, I cannot recommend this book highly enough.&lt;/p&gt;
+</description>
+				<pubDate>Mon, 10 Jun 2013 00:00:00 -0600</pubDate>
+				<link>http://www.nomachetejuggling.com/2013/06/10/book-review-presentation-patterns/</link>
+				<guid isPermaLink="true">http://www.nomachetejuggling.com/2013/06/10/book-review-presentation-patterns/</guid>
+			</item>
+		
+			<item>
+				<title>Personal Wiki using GitHub and Gollum on OS X</title>
+				<description>&lt;p&gt;I&amp;#39;ve been struggling for a while to get a good personal wiki solution going.  I have a bunch of requirements that have made this quite difficult:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Access and edit wiki from browser&lt;/li&gt;
+&lt;li&gt;Run in OS X (Laptop) and Linux (Workstation)&lt;/li&gt;
+&lt;li&gt;Synchronized across all machines&lt;/li&gt;
+&lt;li&gt;Can use offline&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I tried using &lt;a href=&quot;http://tiddlywiki.org/&quot;&gt;TiddlyWiki&lt;/a&gt; with DropBox as the cloud-based sync mechanism, but I use Google Chrome as my browser, which has a lot of trouble with the Java plugin that does the saving.  There are command line arguments for Chrome that fix this, but that&amp;#39;s weirdly difficult to deal with on OS X.&lt;/p&gt;
+
+&lt;p&gt;So my final solution, subject to improvement, is to use &lt;a href=&quot;https://github.com/github/gollum&quot;&gt;Gollum&lt;/a&gt;.  Gollum is a Ruby-based wiki server that runs completely self-contained (you don&amp;#39;t need to install PHP or a database) and is backed by Git.  I use a Git repo cloned off a private &lt;a href=&quot;http://www.github.com&quot;&gt;GitHub&lt;/a&gt; repository for sync functionality.&lt;/p&gt;
+
+&lt;p&gt;There are a number of steps to getting this set up, so I&amp;#39;ve decided to document them here, both for the benefit of anyone else who wants to do this, as well as for myself if I have to set it up on another machine.&lt;/p&gt;
+
+&lt;p&gt;These instructions are geared toward OS X, largely because I found it more difficult to set up on OS X than Linux, simply because OS X&amp;#39;s support for scheduled and startup script running is clunky and stupid.&lt;/p&gt;
+
+&lt;h1&gt;GitHub&lt;/h1&gt;
+
+&lt;p&gt;The reason I like &lt;a href=&quot;http://www.github.com&quot;&gt;GitHub&lt;/a&gt; for backup/sync is that their web interface has a built-in editor that supports &lt;a href=&quot;http://daringfireball.net/projects/markdown/syntax&quot;&gt;Markdown&lt;/a&gt;, the same Wiki syntax I&amp;#39;m using in Gollum (Gollum actually supports many different formats, but Markdown is one of the easiest to install).  This means I can view, edit, and preview using the GitHub web interface alone, in case I need to access my wiki data from a machine that does not have Gollum set up, but does have a web browser.  My smartphone, for example.&lt;/p&gt;
+
+&lt;p&gt;A private repository on GitHub will cost you $7 per month, which is a little pricey if all you&amp;#39;re going to do is have a personal wiki stored there.  You could open source your wiki to get around this, or you could also use &lt;a href=&quot;https://bitbucket.org/&quot;&gt;BitBucket&lt;/a&gt;, which offers free private git repos, but doesn&amp;#39;t have the slick web interface for viewing or hand-editing the markdown files Gollum uses.&lt;/p&gt;
+
+&lt;p&gt;In any case, get a Git repo set up on either GitHub or BitBucket.  Since I think GitHub is better for this purpose, I&amp;#39;ll be using &lt;code&gt;git@github.com:rodhilton/personalwiki.git&lt;/code&gt; as my repository URL.&lt;/p&gt;
+
+&lt;h1&gt;Gollum&lt;/h1&gt;
+
+&lt;p&gt;The easiest way to install Gollum in OS X is to run &lt;code&gt;gem install gollum&lt;/code&gt;.  This requires that you have Ruby and RubyGems set up correctly.  OS X 10.5 and up have this already, so this shouldn&amp;#39;t require any work on your part.&lt;/p&gt;
+
+&lt;p&gt;Once Gollum is installed, you need to install support for a wiki syntax.  I&amp;#39;m using Markdown, so I run &lt;code&gt;gem install redcarpet&lt;/code&gt;.  Instructions for how to use alternative formats can be found in the &lt;a href=&quot;https://github.com/github/gollum#installation&quot;&gt;Gollum installation README&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Now, clone your personal wiki somewhere handy.  I&amp;#39;m putting it in my home directory, so I merely run &lt;code&gt;git clone git@github.com:rodhilton/personalwiki.git&lt;/code&gt; from Terminal in &lt;code&gt;~&lt;/code&gt;.  This will check things out at &lt;code&gt;~/personalwiki&lt;/code&gt;.  Change into that directory and run &lt;code&gt;gollum&lt;/code&gt;.  You should see something like:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-output&quot; data-lang=&quot;output&quot;&gt;== Sinatra/1.3.2 has taken the stage on 4567 for development with backup from Mongrel
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Open a browser and load &lt;code&gt;http://localhost:4567&lt;/code&gt; to verify things are working correctly.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Pro-tip:&lt;/strong&gt; Gollum allows you to create files called &lt;code&gt;_Footer.ext&lt;/code&gt; and &lt;code&gt;_Sidebar.ext&lt;/code&gt; in the root of your repo that will show on every wiki page, where &lt;code&gt;.ext&lt;/code&gt; is the extension for the wiki format you&amp;#39;re using.  In Markdown&amp;#39;s case, &lt;code&gt;.md&lt;/code&gt;.  The files must be added and committed by hand.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;/blockquote&gt;&lt;/p&gt;
+
+&lt;h2&gt;Alternative Installation&lt;/h2&gt;
+
+&lt;p&gt;I often find that installing gems under rvm and then trying to run those gems outside of the shell (like, at login) gives me trouble.  Another way to install Gollum, and the method I&amp;#39;m using on one of my machines, is to check it out from source and use &lt;a href=&quot;http://gembundler.com/&quot;&gt;bundler&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;To do this, clone the &lt;a href=&quot;https://github.com/github/gollum&quot;&gt;Gollum repo&lt;/a&gt; to somewhere on disk, such as &lt;code&gt;/usr/share/&lt;/code&gt;.  Then in &lt;code&gt;/usr/share/gollum&lt;/code&gt;, run &lt;code&gt;sudo bundle install&lt;/code&gt;.  This will install everything you need.&lt;/p&gt;
+
+&lt;p&gt;When I need to reference the absolute path of gollum, it&amp;#39;s now &lt;code&gt;/usr/share/gollum/bin/gollum&lt;/code&gt; so I can work around rvm&amp;#39;s oddities.&lt;/p&gt;
+
+&lt;h1&gt;Synchronization with GitHub&lt;/h1&gt;
+
+&lt;p&gt;Gollum makes local commits only, it doesn&amp;#39;t push those commits to any remotes.  This means that nothing is going up to GitHub yet, which prevents me from synchronizing across multiple computers.&lt;/p&gt;
+
+&lt;p&gt;To solve this, we&amp;#39;re going to periodically run &lt;code&gt;git pull &amp;amp;&amp;amp; git push&lt;/code&gt; from our repository.  This will pull any outstanding changes and push any local changes up to GitHub for us automatically.&lt;/p&gt;
+
+&lt;p&gt;There is potential here to get merge conflicts.  If I were to edit a wiki entry in Linux, then switch to my Mac and edit the same file, I&amp;#39;m going to get a merge conflict that prevents the sync from executing. This kind of conflict requires manual intervention, but since I&amp;#39;m running the sync commands non-interactively, I wouldn&amp;#39;t see this happen and know to fix it.  To mitigate this problem, I&amp;#39;m going to have the sync command run every 60 seconds.  This makes the window for getting a merge conflict very small, though having a machine disconnected from the internet for an extended period of time enlarges this window considerably.&lt;/p&gt;
+
+&lt;p&gt;Gollum stores each wiki page in a separate file and uses a very simple markdown syntax for them all.  There are no database files being shared or single-file indexes, so a conflict can only arise by editing the same wiki page, in approximately the same place.  Otherwise Git will be able to merge the files and handle things without intervention.  So far, I have not actually gotten a merge conflict that needed to be dealt with manually, so the windows seem small enough.&lt;/p&gt;
+
+&lt;p&gt;In any case, I&amp;#39;ve added a script to my &lt;code&gt;~/personalwiki&lt;/code&gt; named &lt;code&gt;.sync.sh&lt;/code&gt; which looks like this:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;DIR=&amp;quot;$( cd -P &amp;quot;$( dirname &amp;quot;${BASH_SOURCE[0]}&amp;quot; )&amp;quot; &amp;amp;&amp;amp; pwd )&amp;quot;
+(cd $DIR &amp;amp;&amp;amp; git pull &amp;amp;&amp;amp; git push)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;What this is doing is figuring out the directory of the &lt;code&gt;.sync.sh&lt;/code&gt; script itself, changing to it, then running git pull (to pull any changes from GitHub) and then git push (to push any changes back up to GitHub).  Make sure to set the script to executable by running &lt;code&gt;chmod a+x .sync.sh&lt;/code&gt;.  Also make sure to make a local commit of this file (otherwise, ironically, it won&amp;#39;t be able to run itself since your git working tree is dirty) by running &lt;code&gt;git add .sync.sh &amp;amp;&amp;amp; git commit -m &amp;quot;Sync script&amp;quot;&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;This script can be run from anywhere (this is important) and it will sync the wiki.  Now it needs to be set to run periodically.  On OS X, we&amp;#39;re going to use Apple&amp;#39;s incredibly stupid and terrible &lt;a href=&quot;http://en.wikipedia.org/wiki/Launchd&quot;&gt;launchd&lt;/a&gt;, because &lt;a href=&quot;http://apple.stackexchange.com/questions/12819/why-is-cron-being-deprecated&quot;&gt;crontab has been deprecated&lt;/a&gt; for reasons that are behind my comprehsion.&lt;/p&gt;
+
+&lt;p&gt;Add a file called &lt;code&gt;com.personalwiki.sync.plist&lt;/code&gt; to &lt;code&gt;~/Library/LaunchAgents/&lt;/code&gt; which looks like this:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot;?&amp;gt;
+&amp;lt;!DOCTYPE plist PUBLIC &amp;quot;-//Apple//DTD PLIST 1.0//EN&amp;quot; &amp;quot;http://www.apple.com/DTDs/PropertyList-1.0.dtd&amp;quot;&amp;gt;
+&amp;lt;plist version=&amp;quot;1.0&amp;quot;&amp;gt;
+&amp;lt;dict&amp;gt;
+  &amp;lt;key&amp;gt;Label&amp;lt;/key&amp;gt;
+  &amp;lt;string&amp;gt;com.personalwiki.sync&amp;lt;/string&amp;gt;
+  &amp;lt;key&amp;gt;RunAtLoad&amp;lt;/key&amp;gt;
+  &amp;lt;true/&amp;gt;
+  &amp;lt;key&amp;gt;ProgramArguments&amp;lt;/key&amp;gt;
+  &amp;lt;array&amp;gt;
+    &amp;lt;string&amp;gt;/Users/air0day/.wiki/.sync.sh&amp;lt;/string&amp;gt;
+  &amp;lt;/array&amp;gt;
+  &amp;lt;key&amp;gt;StartInterval&amp;lt;/key&amp;gt;
+  &amp;lt;integer&amp;gt;60&amp;lt;/integer&amp;gt;
+&amp;lt;/dict&amp;gt;
+&amp;lt;/plist&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;You can have this run more often by decreasing the &amp;quot;60&amp;quot;, obviously, but per-minute seems fine for me.&lt;/p&gt;
+
+&lt;h1&gt;Running Gollum on Startup&lt;/h1&gt;
+
+&lt;p&gt;First, we&amp;#39;re going to make a script that runs Gollum for us.  Place a script in &lt;code&gt;~/personalwiki&lt;/code&gt; named &lt;code&gt;.gollum.sh&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;DIR=&amp;quot;$( cd -P &amp;quot;$( dirname &amp;quot;${BASH_SOURCE[0]}&amp;quot; )&amp;quot; &amp;amp;&amp;amp; pwd )&amp;quot;
+/usr/bin/gollum --css $DIR
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Again, the goal here is that the script can run from anywhere, so it has to first figure out where it is, then run Gollum on that path.  It&amp;#39;s a good idea to provide an absolute path to the &lt;code&gt;gollum&lt;/code&gt; executable, particularly if you are using &lt;code&gt;rvm&lt;/code&gt; or something similar.  To get this, just run &lt;code&gt;which gollum&lt;/code&gt; to see where gollum is running from, then use that path.&lt;/p&gt;
+
+&lt;p&gt;If you want gollum to run on a different port, you can add --port [number] like so:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-terminal&quot; data-lang=&quot;terminal&quot;&gt;$ /Users/your_name/.gem/ruby/1.8/bin/gollum --port 7890 $DIR
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Again, make sure you make this script executable (&lt;code&gt;chmod a+x .gollum.sh&lt;/code&gt;) and commit it to your git repo (&lt;code&gt;git add .gollum.sh &amp;amp;&amp;amp; git commit -m &amp;quot;Gollum script&amp;quot;&lt;/code&gt;).&lt;/p&gt;
+
+&lt;p&gt;Now we need to make this script run at startup.  There are lots of ways to run things on startup in OS X.  I think LoginHooks are dangerous because they are difficult to track down, so we&amp;#39;re going to stick with OS X&amp;#39;s abysmal launchd nonsense.&lt;/p&gt;
+
+&lt;p&gt;Place a file named &lt;code&gt;com.personalwiki.gollum.plist&lt;/code&gt; in &lt;code&gt;~/Library/LaunchAgents/&lt;/code&gt; which looks like this:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot;?&amp;gt;
+&amp;lt;!DOCTYPE plist PUBLIC &amp;quot;-//Apple//DTD PLIST 1.0//EN&amp;quot; &amp;quot;http://www.apple.com/DTDs/PropertyList-1.0.dtd&amp;quot;&amp;gt;
+&amp;lt;plist version=&amp;quot;1.0&amp;quot;&amp;gt;
+&amp;lt;dict&amp;gt;
+  &amp;lt;key&amp;gt;Label&amp;lt;/key&amp;gt;
+  &amp;lt;string&amp;gt;com.rodhilton.gollum&amp;lt;/string&amp;gt;
+  &amp;lt;key&amp;gt;ProgramArguments&amp;lt;/key&amp;gt;
+  &amp;lt;array&amp;gt;
+    &amp;lt;string&amp;gt;/Users/air0day/.wiki/.gollum.sh&amp;lt;/string&amp;gt;
+  &amp;lt;/array&amp;gt;
+  &amp;lt;key&amp;gt;RunAtLoad&amp;lt;/key&amp;gt;
+  &amp;lt;true/&amp;gt;
+&amp;lt;/dict&amp;gt;
+&amp;lt;/plist&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;God that&amp;#39;s hideous.  &lt;code&gt;/etc/init.d/&lt;/code&gt; too good for you, Apple?&lt;/p&gt;
+
+&lt;p&gt;Anyway, you should now be able to log out and back in, and have everything work.&lt;/p&gt;
+
+&lt;h1&gt;Testing and Troubleshooting&lt;/h1&gt;
+
+&lt;p&gt;When you log back in, open up &lt;code&gt;http://localhost:4567&lt;/code&gt; and make a change.  Within a minute, this change should show up in your GitHub account.  If it doesn&amp;#39;t, launch &amp;quot;Console&amp;quot; from Spotlight, and type &amp;quot;personalwiki&amp;quot; in the filter to see if there were any problems running your scripts.&lt;/p&gt;
+
+&lt;table class=&#39;image aligncenter&#39; width=&#39;586&#39;&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&#39;http://www.nomachetejuggling.com/files/Screen-shot-2012-05-15-at-11.45.56-AM.png&#39;&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/Screen-shot-2012-05-15-at-11.45.56-AM-580x83.png&quot; width=&#39;580&#39; height=&#39;83&#39;/&gt;&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;That should do it, now you&amp;#39;ve got a GitHub-synced personal wiki.  I actually run two on my machine (that&amp;#39;s why I included the bit about the port) one for personal wiki stuff which backs to my GitHub account and one for work-related stuff which backs to my corporate GitHub Enterprise account.  I make sure these always run on the same ports on every machine, so I&amp;#39;ve got bookmarks in my browser bar that always work across machines.&lt;/p&gt;
+
+&lt;p&gt;So far I&amp;#39;m pretty pleased with this solution.  I wish it was easier to sync via Dropbox instead of Git but the benefit of Markdown support in GitHub almost turns this con into a pro.&lt;/p&gt;
+</description>
+				<pubDate>Tue, 15 May 2012 00:00:00 -0600</pubDate>
+				<link>http://www.nomachetejuggling.com/2012/05/15/personal-wiki-using-github-and-gollum-on-os-x/</link>
+				<guid isPermaLink="true">http://www.nomachetejuggling.com/2012/05/15/personal-wiki-using-github-and-gollum-on-os-x/</guid>
+			</item>
+		
+			<item>
+				<title>How To: Convert Audible .aa Files to .mp3 Quickly</title>
+				<description>&lt;p&gt;I do not belong to the cult of iPod.  I use a nonstandard mp3 player and I hate iTunes.  If I&amp;#39;m going to use an mp3 player, it needs to show up as a USB drive on my Linux workstation, my Windows desktop, and my Mac laptop.  I need to be able to drag files over and be done with it.  So far, I&amp;#39;ve been successful at accomplishing this.&lt;/p&gt;
+
+&lt;p&gt;But the simplicity comes with a price.  I cannot download books from &lt;a href=&quot;http://www.audible.com&quot;&gt;Audible.com&lt;/a&gt; and put them on my player to listen to them.  I have to convert all of the files I download from Audible into DRM-free mp3 files.  There are lots of ways to do this, and even software tools that will do this automatically, but &lt;strong&gt;all of them just play the file in iTunes and capture the audio stream to a file&lt;/strong&gt;.  I want something completely digital, which can run in the background without me having to worry about my operating system making other sounds that interfere with the result.&lt;/p&gt;
+
+&lt;p&gt;I have developed an alternative to this method, which lets you convert your Audible audio book downloads to DRM-free mp3s in just a few minutes, with a very small amount of manual work.&lt;/p&gt;
+
+&lt;h1&gt;You Will Need&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Windows (sorry, the programs needed only run in Windows)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.nero.com/enu/store-nero9.html&quot;&gt;Nero&lt;/a&gt; for Windows (cost: $70, free trial available) &lt;strong&gt;Note:&lt;/strong&gt; Do not use versions later than 9.4.  Apparently the functionality this tutorial depends on has been removed.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.ezbsystems.com/ultraiso/&quot;&gt;UltraISO&lt;/a&gt; for Windows (cost: $30, free trial available)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://rubyinstaller.rubyforge.org/wiki/wiki.pl&quot;&gt;Ruby&lt;/a&gt; for Windows (free)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.free-codecs.com/download/Lame_Encoder.htm&quot;&gt;Lame&lt;/a&gt; for Windows (free)&lt;/li&gt;
+&lt;li&gt;An &lt;a href=&quot;http://www.audible.com&quot;&gt;Audible.com&lt;/a&gt; account&lt;/li&gt;
+&lt;li&gt;Some patience&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1&gt;Step 1: Download The .aa Files&lt;/h1&gt;
+
+&lt;p&gt;On Audible.com, find the book you want and download it.  Make sure that it downloads using the Audible Download Manager and results in you getting .aa files for the book.  If Audible tries to make you download something else, you may have to add a new device on Audible.com.  Pick something simple (not an iPod) and select &amp;#39;Format 4&amp;#39; for the desired type.&lt;/p&gt;
+
+&lt;h1&gt;Step 2: Burn to images using Nero&lt;/h1&gt;
+
+&lt;p&gt;Once you have your .aa file (or two), open up Nero.&lt;/p&gt;
+
+&lt;p&gt;Create a new compilation, select &amp;#39;CD&amp;#39; as the type, and scroll down to &amp;#39;Audiobook CD&amp;#39;&lt;/p&gt;
+
+&lt;table class=&#39;image aligncenter&#39; width=&#39;586&#39;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/nero_audiobookselect-580x437.png&quot; width=&#39;580&#39; height=&#39;437&#39;/&gt;&lt;p class=&#39;caption&#39;&gt;Selecting the Audiobook Type&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;Now drag your .aa file into the Nero.  Select &amp;#39;Image Recorder&amp;#39; from the list of recorders.  Then click Burn.&lt;/p&gt;
+
+&lt;table class=&#39;image aligncenter&#39; width=&#39;586&#39;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/nero_compilation1-580x452.png&quot; width=&#39;580&#39; height=&#39;452&#39;/&gt;&lt;p class=&#39;caption&#39;&gt;Nero Compilation Screen&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;Before the &amp;#39;discs&amp;#39; start burning, you&amp;#39;ll be asked for a name.  The default, &amp;quot;Image&amp;#39; is probably fine.  &lt;strong&gt;Make sure you are saving into a COMPLETELY EMPTY directory.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;You will be asked if you want to manually select new file names or Autocreate them.  Choose auto create so you can do something else while they are &amp;#39;burning&amp;#39;. &lt;/p&gt;
+
+&lt;p&gt;The goal here is to get the .aa files, which represent multiple burnable discs, into .nrg files, one file for each &amp;#39;disc&amp;#39;.  You&amp;#39;ll have to do this step once for every .aa file in your book (long books sometimes have two .aa files).  This is the most manual part of the process, after this it&amp;#39;s smooth sailing.&lt;/p&gt;
+
+&lt;h1&gt;Step 3: Convert to mp3&lt;/h1&gt;
+
+&lt;p&gt;Now, you have a directory somewhere that contains files that look like Image.nrg, Image02.nrg, Image03.nrg, etc.  Let&amp;#39;s call that directory &lt;code&gt;C:\MyBook&lt;/code&gt; for the purposes of this tutorial.&lt;/p&gt;
+
+&lt;p&gt;You will need to install some more software before you can proceed.  Download and install UltraISO and Lame (links above).  Let&amp;#39;s assume you have installed those to &lt;code&gt;C:\Program Files\UltraISO\&lt;/code&gt; and &lt;code&gt;C:\Program Files\Lame\&lt;/code&gt;, respectively.  Also make sure you install Ruby.&lt;/p&gt;
+
+&lt;p&gt;You will also need to download this ruby script that I wrote (click &amp;#39;view source&amp;#39; in the top right, copy the contents, and paste into a new file using notepad):&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;# Written by Rod Hilton, nomachetejuggling.com
+# Modify these to be the paths to your copies of ultraiso.exe and lame.exe.
+# Remember to do \\ for backslashes, and don&amp;#39;t use /
+
+ULTRAISO_PATH = &amp;quot;c:\\program files\\ultraiso\\ultraiso.exe&amp;quot;
+LAME_PATH = &amp;quot;c:\\program files\\lame\\lame.exe&amp;quot;
+
+# Read the directory to convert from the command line.
+
+@workingdir = ARGV[0]
+if @workingdir.nil? or not File.directory?(@workingdir)
+    abort &amp;quot;Usage: ruby #{File.basename(__FILE__)} &amp;lt;path to directory&amp;gt;&amp;quot;
+end
+
+# Deletes a file
+
+def delete(filepath)
+    shortname = File.basename(filepath).slice(0..50)
+    print &amp;quot;  Deleting #{shortname}...&amp;quot;;
+    print File.delete(filepath) ? &amp;quot;Done!\n&amp;quot; : &amp;quot;Failed!\n&amp;quot;
+end
+
+# Convert method.  Converts all files in the working directory with
+
+# a specific extension using a function block
+
+def convert(extension, options = {}, &amp;amp;function)
+    Dir.foreach(@workingdir) do |file|
+        if(file.match(/.#{extension}$/))
+            filepath = File.join(@workingdir, file)
+            command = function.call(filepath)
+            print &amp;quot;  Converting #{file.slice(0..50)}...&amp;quot;
+            retval = system command
+            if(retval)
+                print &amp;quot;Done!\n&amp;quot;
+                delete(filepath) if options[:delete_after]
+            else
+                abort &amp;quot;Failed!&amp;quot;
+            end
+        end
+    end
+end
+
+puts &amp;quot;--Converting in #{@workingdir}--&amp;quot;
+
+puts &amp;quot;Converting all .nrg files to .wav files...&amp;quot;
+convert(&amp;quot;nrg&amp;quot;, :delete_after=&amp;gt;true) do |filepath|
+    &amp;quot;\&amp;quot;#{ULTRAISO_PATH}\&amp;quot; -in \&amp;quot;#{filepath}\&amp;quot; -extract \&amp;quot;#{@workingdir}\&amp;quot;&amp;quot;
+end
+
+puts &amp;quot;Converting all .wav files to .mp3 files...&amp;quot;
+convert(&amp;quot;wav&amp;quot;, :delete_after=&amp;gt;true) do |filepath|
+    &amp;quot;\&amp;quot;#{LAME_PATH}\&amp;quot; --abr 56 -mm -S \&amp;quot;#{filepath}\&amp;quot;&amp;quot;
+end
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;This script basically uses UltraISO to extract .wav files from the .nrg files, then uses lame to convert the .wav files to .mp3 files.&lt;/p&gt;
+
+&lt;p&gt;If you installed UltraISO or Lame to different directories, change the top few lines to reflect their real paths.&lt;/p&gt;
+
+&lt;p&gt;Let&amp;#39;s assume you saved this file to &lt;code&gt;C:\nrg2mp3.rb&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Now, open up a command prompt (Start-&amp;gt;Run-&amp;gt;type &amp;#39;cmd&amp;#39; and hit enter).  Type:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-terminal&quot; data-lang=&quot;terminal&quot;&gt;$ ruby C:\nrg2mp3.rb &amp;quot;C:\MyBook&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Make sure that you use the quotes if you have spaces in your directory name.&lt;/p&gt;
+
+&lt;p&gt;Now just sit back and wait.  The script will convert all of the nrg files to mp3 files.  It will delete all of the .nrg files when it is done with them.  If you&amp;#39;d like to tell the script not to do that, modify line 43 to remove the :delete_after stuff, like so:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;convert(&amp;quot;nrg&amp;quot;) do |filepath|
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;There are lots of ways to do this, but I believe this one involves the fewest number of manual steps, and I believe it is the only method that does no analog conversion (no recording your sound card as the file plays).  It is also, as far as I&amp;#39;m aware, the fastest method.  Ripping the wavs out using UltraISO only takes a few seconds for me, and converting them to mp3 doesn&amp;#39;t take very long at all.&lt;/p&gt;
+
+&lt;p&gt;If you can think of a way to make this process faster and require fewer non-free programs (or, ideally, a way to make this work in Linux), leave a comment.&lt;/p&gt;
+</description>
+				<pubDate>Sun, 02 Aug 2009 00:00:00 -0600</pubDate>
+				<link>http://www.nomachetejuggling.com/2009/08/02/how-to-convert-audible-aa-files-to-mp3/</link>
+				<guid isPermaLink="true">http://www.nomachetejuggling.com/2009/08/02/how-to-convert-audible-aa-files-to-mp3/</guid>
+			</item>
+		
+			<item>
+				<title>Managing The Firehose: Controlling RSS Through Pipes</title>
+				<description>&lt;p&gt;I love RSS feeds.  I love the fact that I live in a time where the vast majority of sites that I find interesting have managed to export their data, updated live, in a universal format that I can pull together in a single place.  I can read what&amp;#39;s going on with hundreds of sites I care about by visiting a single site like Google Reader, or through a single piece of software or a browser plugin.  It&amp;#39;s great.&lt;/p&gt;
+
+&lt;p&gt;But this comes with a downside.  I have almost 200 subscriptions in my Google Reader account.  Many of these subscriptions are to sites, such as &lt;a href=&quot;http://reddit.com&quot;&gt;Reddit&lt;/a&gt; or &lt;a href=&quot;http://digg.com&quot;&gt;Digg&lt;/a&gt;, that themselves, aggregate other sites.  I have divided my Google Reader subscriptions along various categorical tags (such as politics, development, movies, etc) as well as priority tags (Must Read, Should Read, Can Read, Can Ignore, and Should Ignore) but even that isn&amp;#39;t quite enough to manage the firehose of information coming my way via RSS.&lt;/p&gt;
+
+&lt;p&gt;I have utilized &lt;a href=&quot;http://pipes.yahoo.com&quot;&gt;Yahoo Pipes&lt;/a&gt; to manage this deluge of information and I thought I&amp;#39;d take some time to share how.  This article will serve both as a basic tutorial for using Yahoo Pipes to manage your RSS feeds as well as a place to show some specific examples I use to control my feeds that you can use as well if you subscribe to the same sites I do.&lt;/p&gt;
+
+&lt;h1&gt;Yahoo Pipes&lt;/h1&gt;
+
+&lt;p&gt;Yahoo Pipes, if you&amp;#39;ve never used it, is simultaneously both intimidating and insulting the first time you use it.  You drag components around on a screen and connect them together with little paths.  It feels like you&amp;#39;re programming in Visio or something.  Yet, even though you feel like a child dragging components around, you find yourself simultaneously overwhelmed by the number of components that exist in the system.  Yahoo Pipes is tough to get used to.&lt;/p&gt;
+
+&lt;p&gt;Pipes allow you to essentially define a source of data as a starting point, then run it through a series of operators and output something else when done.  But it&amp;#39;s more than just a regular expression being run on a page - it works best with sources that consist of a list of SOMETHINGs, and the operators tend to perform their transformations on every item in the list.&lt;/p&gt;
+
+&lt;p&gt;The source we&amp;#39;ll be using in this article is the RSS feed source.  Everything we do will be done to take an RSS feed with too much data, then run it through a series of filters and transformations to re-output the same feed, but with only the items we care about.&lt;/p&gt;
+
+&lt;p&gt;Once you have a pipe that outputs a transformed list, you can get an RSS url to the output of the Pipe itself, then subscribe to that with your feed reader in place of the original feed.  &lt;/p&gt;
+
+&lt;p&gt;For example, let&amp;#39;s say that I find far too many posts in the RSS feed for &lt;a href=&quot;http://digg.com/technology&quot;&gt;Digg.com/technology&lt;/a&gt;.  Let&amp;#39;s say, for me, I only care about the items that relate specifically to Apple, because I&amp;#39;m a digg user and I love Apple to death like all good Digg users.  Rather than subscribe to the RSS feed for Digg/Technology in my Google Reader, I&amp;#39;ll create a pipe that uses that feed as a source, filters out all of the posts that do not relate to Apple, and then subscribe to the RSS feed of my pipe.  I can even rename the subscription &amp;quot;Digg/Technology&amp;quot; in Google Reader, hiding the fact that it&amp;#39;s even going through Yahoo Pipes.&lt;/p&gt;
+
+&lt;h1&gt;Basic Example: Simple Filter&lt;/h1&gt;
+
+&lt;p&gt;Let&amp;#39;s start with a simple filter.  I like to read &lt;a href=&quot;http://www.screwattack.com&quot;&gt;ScrewAttack.com&lt;/a&gt;, so naturally I wanted to subscribe to their RSS feed.  But unfortunately for me, they post new videos every day and I&amp;#39;m only interested in some of them.  They have many categories of videos, but the only ones I really like are &amp;quot;Hard News,&amp;quot; &amp;quot;Jose&amp;#39;s Puntos,&amp;quot; and &amp;quot;Trailer Dump&amp;quot;.  In particular, I hate their &amp;quot;SideScrollers&amp;quot; feature because I don&amp;#39;t listen to podcasts.&lt;/p&gt;
+
+&lt;p&gt;So head on over to ScrewAttack and copy the RSS feed URL to your clipboard: &lt;a href=&quot;http://screwattack.com/rss.xml&quot;&gt;http://screwattack.com/rss.xml&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Then go to Yahoo Pipes and create a new Pipe (you may need to make a Yahoo account).  Open the &amp;quot;Sources&amp;quot; menu on the left and drag the &amp;quot;Fetch Feed&amp;quot; element into your work area.  Paste the ScrewAttack RSS feed into the box.  You can now click on the titlebar of the source and see the output in the lower portion of the screen.&lt;/p&gt;
+
+&lt;p&gt;Now, open the Operators list and drag &amp;quot;Filter&amp;quot; into your work area.  Click on the circle at the bottom of the Fetch Feed box and drag the line to the circle on the top of the Filter box, connecting the two.&lt;/p&gt;
+
+&lt;p&gt;Change &amp;quot;Block&amp;quot; to &amp;quot;Permit&amp;quot; and change &amp;quot;all&amp;quot; to &amp;quot;any&amp;quot;.  Underneath &amp;quot;Rules&amp;quot; click the arrow next to the leftmost box and select &amp;quot;item.category.content&amp;quot;.  This makes the filter look at the item/category/content field of the RSS xml.  Leave the dropdown at &amp;quot;Contains&amp;quot; and type in &amp;quot;Hard News&amp;quot; into the box on the right.  Click &amp;quot;Refresh&amp;quot; in the output preview at the bottom and you&amp;#39;ll see that the recent Hard News posts (and only those) show up.&lt;/p&gt;
+
+&lt;p&gt;Now click the plus icon next to &amp;quot;Rules&amp;quot; to create another rule.  Select the same thing for the left drop down (for the category) but put &amp;quot;Trailers&amp;quot; in the right.  Do it again for &amp;quot;Jose&amp;quot;.  Click refresh again and you&amp;#39;ll see the interesting stuff on the site only.  You can obviously customize this however you wish if you care about different categories.  &lt;/p&gt;
+
+&lt;p&gt;Last, drag the circle at the bottom of the &amp;quot;Filter&amp;quot; box to the circle at the top of the &amp;quot;Output&amp;quot; box.  Your pipe is now done.  Click output and see a preview of what your pipe outputs.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;assets/picture-2.png&quot; alt=&quot;&quot; title=&quot;Screwattack Pipe&quot; width=&quot;500&quot; height=&quot;153&quot; class=&quot;aligncenter size-full wp-image-317&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Save your pipe in the upper right corner.  A flare will pop up at the top telling you it&amp;#39;s been saved.  Click &amp;#39;Run Pipe&amp;#39; and you will be brought to the Yahoo Pipes interface for a running pipe.  Click &amp;quot;Get an RSS&amp;quot; and you have your new RSS feed URL.  Feel free to change the name of your pipe if you wish at any time, the RSS feed URL never changes.&lt;/p&gt;
+
+&lt;p&gt;Please note that this RSS feed is PUBLIC (it has to be if you want to subscribe to it through something like Google Reader), but not LISTED.  If you publish your feed it will show up in the searchable feeds database on yahoo.  But don&amp;#39;t make pipes out of private data.&lt;/p&gt;
+
+&lt;p&gt;The later examples will be less more complex and less detailed.  Play around with Yahoo Pipes to see what you can do if you are not already familiar.&lt;/p&gt;
+
+&lt;h1&gt;Reddit Filter: Only Talked-About Posts&lt;/h1&gt;
+
+&lt;p&gt;One of the reasons I generally prefer &lt;a href=&quot;http://www.reddit.com&quot;&gt;Reddit&lt;/a&gt; to &lt;a href=&quot;http://www.digg.com&quot;&gt;Digg&lt;/a&gt; is that I find the conversation on Reddit to be a bit more intelligent.  The top comment is usually some snarky one liner, and the second comment is usually some joke or reference to a meme, but after that there&amp;#39;s usually some interesting conversation.&lt;/p&gt;
+
+&lt;p&gt;As a result, the way I&amp;#39;d like to limit my Reddit RSS feeds is by only selecting the the posts that reach a certain threshold of comments.  This number is different for the different subreddits I read (less popular subreddits need fewer comments to be considered talked-about than, say, the front page).&lt;/p&gt;
+
+&lt;p&gt;Let&amp;#39;s construct a filter for the &lt;a href=&quot;http://www.reddit.com/r/programming/&quot;&gt;programming subreddit&lt;/a&gt; (or &amp;quot;proggit) using the RSS feed &lt;a href=&quot;http://www.reddit.com/r/programming/.rss&quot;&gt;http://www.reddit.com/r/programming/.rss&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;If we create a feed source and look through the structure of the object that Pipes has to work with, we can see that in the &amp;quot;Description&amp;quot; element is a link to comments, and it contains the number of them.&lt;/p&gt;
+
+&lt;table class=&#39;image aligncenter&#39; width=&#39;335&#39;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/picture-3.png&quot; width=&#39;329&#39; height=&#39;136&#39;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;What we&amp;#39;re going to do is construct a regular expression that pulls that information out, and only permits posts with more than 20 comments.&lt;/p&gt;
+
+&lt;p&gt;Create a &amp;quot;Loop&amp;quot; element and connect the output of the feed to the input of the loop.  The loop allows you to perform an operation on every item in the feed and save the result to a new element in the feed (or overwrite an existing one).  This allows you to add information to the feed that it didn&amp;#39;t have, which you can then use in subsequent filters.&lt;/p&gt;
+
+&lt;p&gt;Drag the &amp;quot;String Regex&amp;quot; element into the inside of the loop and tell it to replace the regex &lt;code&gt;.*?(\d*) comments?.*&lt;/code&gt; with &lt;code&gt;$1&lt;/code&gt;.  Since the number of comments is the capturing group, it is essentially just extracting the number of comments.  Tell the loop to assign the the result to &amp;quot;item.comments&amp;quot;.&lt;/p&gt;
+
+&lt;p&gt;Now your feed has a &amp;quot;comments&amp;quot; element that contains the number of comments on the post.  Pipe the output of the loop to a new &amp;quot;Filter&amp;quot; element and tell it to permit only items that have item.comments greater than 20.  Connect that to your output and voila, you&amp;#39;ve got a version of the programming reddit RSS feed that only shows the items with more than 20 comments.&lt;/p&gt;
+
+&lt;table class=&#39;image aligncenter&#39; width=&#39;724&#39;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/picture-5.png&quot; width=&#39;718&#39; height=&#39;346&#39;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;If a post that was filtered out because it had, say, 5 comments, were to become more popular and get 21 comments, it would start showing up in the feed (and therefore in your reader).&lt;/p&gt;
+
+&lt;p&gt;You can make this pipe even more useful by introducing User Inputs.  User inputs let you send parameters to the feed, which can then be used by the pipe.  For our case, it would be handy to provide the url of the subreddit as a parameter, as well as the number of comments for the inclusion threshold.&lt;/p&gt;
+
+&lt;p&gt;Drag a new user input URL element into the work area.  Give it the name &amp;quot;redditurl&amp;quot; and the prompt &amp;quot;URL to Reddit RSS Feed&amp;quot;.  Paste the programming reddit RSS feed into the &amp;quot;debug&amp;quot; field.  This allows you to test out that your feed is still working correctly, but when you re-use the pipe it won&amp;#39;t use the value in the field.  Pipe the output of that input into the small box to the right of the field in the &amp;quot;Fetch Feed&amp;quot; box.  Your pipe should still be working as normal if you check the output, but if you paste a different reddit rss feed URL into the debug box and click refresh, you&amp;#39;ll have a new set of filtered data.&lt;/p&gt;
+
+&lt;p&gt;If you run the pipe, you&amp;#39;ll now see that you are prompted to input the feed URL before you can run the pipe.  If you paste the feed in here and run the pipe, you can grab the RSS feed for just that subreddit.  If you paste a different RSS feed URL into the box, you will get the filtered feed for a different reddit.&lt;/p&gt;
+
+&lt;p&gt;You can do the same thing with a &amp;quot;number input&amp;quot; to control the comment count threshold.  You could also use the &amp;quot;Sort&amp;quot; operator to sort by the number of comments, moving the more popular items to the top.&lt;/p&gt;
+
+&lt;table class=&#39;image aligncenter&#39; width=&#39;657&#39;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/picture-7.png&quot; width=&#39;651&#39; height=&#39;486&#39;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;If you don&amp;#39;t want to bother going through all this work, you can feel free to simply use my published version of this pipe &lt;a href=&quot;http://pipes.yahoo.com/rodhilton/redditfilter&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h1&gt;Digg Filter&lt;/h1&gt;
+
+&lt;p&gt;Very much like Reddit, Digg is a link aggregation site that allows users to vote links up or down.  However, for me, the Digg comments aren&amp;#39;t as valuable as Reddit comments, so I&amp;#39;m more interested in links based on the number of Diggs they receive, rather than the number of comments they have.&lt;/p&gt;
+
+&lt;p&gt;Handily, the Digg RSS feeds actually include the number of Diggs that items have received in the XML, so we can key off that to build a new pipe.  The element can be found at &lt;code&gt;item.digg:diggCount&lt;/code&gt;, so all you need is a filter that permits entries with a high enough diggCount.  In the example below, I&amp;#39;ve also included a sorting mechanism.&lt;/p&gt;
+
+&lt;table class=&#39;image aligncenter&#39; width=&#39;652&#39;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/picture-8.png&quot; width=&#39;646&#39; height=&#39;406&#39;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;As with the Reddit filter, you may feel free to just use the pipe that I&amp;#39;ve published &lt;a href=&quot;http://pipes.yahoo.com/rodhilton/diggfilter&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h1&gt;DZone Filters&lt;/h1&gt;
+
+&lt;p&gt;DZone is like Reddit and Digg, but geared specifically toward software developers.  Just like Reddit and Digg, you can key off of certain elements in the RSS feed XML to determine how popular an item is and filter accordingly.&lt;/p&gt;
+
+&lt;p&gt;DZone is slightly more complicated, however, because there are actually two different kinds of sites on DZone.  First, there are different Zone&amp;#39;s, such as &lt;a href=&quot;http://agile.dzone.com/&quot;&gt;Agile Zone&lt;/a&gt;, where you can key off the number of times a post has been read. Then there are the links collections, such as &lt;a href=&quot;http://www.dzone.com/links/tag/agile.html&quot;&gt;Agile Links&lt;/a&gt; which is more like Digg/Reddit and you can key off the number of votes.&lt;/p&gt;
+
+&lt;p&gt;The first type is relatively simple, so I won&amp;#39;t even cover it (it works just like the Digg filter, but keying off the number of reads embedded in the feed).  You can use mine &lt;a href=&quot;http://pipes.yahoo.com/rodhilton/dzonefilter&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The Links feeds are more interesting.  Even though the site displays the &amp;quot;net vote&amp;quot;, the XML only contains the number of up votes and the number of down votes.  That means you need to do the subtraction in your pipe to get the actual net vote count.&lt;/p&gt;
+
+&lt;p&gt;We&amp;#39;re going to do the subtraction in a loop and assign the results to a new element, then filter by that.&lt;/p&gt;
+
+&lt;table class=&#39;image aligncenter&#39; width=&#39;734&#39;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/picture-9.png&quot; width=&#39;728&#39; height=&#39;555&#39;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;As usual, you can just use mine &lt;a href=&quot;http://pipes.yahoo.com/rodhilton/dzonelinksfilter&quot;&gt;here&lt;/a&gt; if you wish.&lt;/p&gt;
+
+&lt;h1&gt;Conclusion&lt;/h1&gt;
+
+&lt;p&gt;Digg, Reddit, DZone, and feeds in which I only care about a subset of the entries make up a major chunk of my RSS subscriptions.  Replacing those subscriptions with hand-tuned versions of feeds coming out of these pipes allowed me do a great deal toward managing the firehose.&lt;/p&gt;
+
+&lt;p&gt;Yahoo Pipes can do a lot more than I&amp;#39;ve covered in this post, and I encourage you to experiment with it.  If you make a particularly interesting (and generic, reusable) pipe, feel free to post about it here in the comments.&lt;/p&gt;
+</description>
+				<pubDate>Fri, 27 Mar 2009 00:00:00 -0600</pubDate>
+				<link>http://www.nomachetejuggling.com/2009/03/27/managing-the-firehose/</link>
+				<guid isPermaLink="true">http://www.nomachetejuggling.com/2009/03/27/managing-the-firehose/</guid>
+			</item>
+		
+			<item>
+				<title>Apple: Semi-First Impressions</title>
+				<description>&lt;p&gt;Two months ago, I took a new job.  I&amp;#39;ll write a post about the company some other time, but I do want to highlight one aspect of the company: the usage of Apple products.&lt;/p&gt;
+
+&lt;p&gt;I spent most of my youth in Windows, but I switched to Linux a few years back and greatly enjoyed it.  It annoyed me that I didn&amp;#39;t know my way around Mac OS, the only remaining one of the &amp;quot;big three&amp;quot; with which I was not proficient.  When I took the job at Rally, I was excited to find out that they were an Apple shop.  All of the developers had powerful mac machines, the pairing stations were all iMacs, and pretty much everyone owned a Macbook or iPhone, or both.  Rally was going to be a good place to learn my way around the world of Apple, so I was excited.&lt;/p&gt;
+
+&lt;p&gt;To give a little background on myself, I am a bit of an open source zealot.  Even when I was a Windows user (for a while, I worked as a Flash programmer and Flash didn&amp;#39;t run in Linux), I replaced the Windows shell with &lt;a href=&quot;http://www.ls-universe.info/news.php&quot;&gt;LiteStep&lt;/a&gt;, an open source shell.  I ran open source Windows software almost exclusively - my goal was to make the Windows Kernel the only proprietary thing running on my machine.&lt;/p&gt;
+
+&lt;p&gt;The only Apple product I had owned up until I took the new job had been an iPod, but I replaced the iPod firmware with &lt;a href=&quot;http://www.rockbox.org/&quot;&gt;Rockbox&lt;/a&gt;, which is open source.  A year ago I wanted to upgrade my iPod Nano to the newer, smaller model, but when I brought it home and tried to install Rockbox on it, I found out that the newer Nanos had some kind of protection that prevented firmware replacement.  My response was to actually return the Nano to the store and keep my old one, which I still use.&lt;/p&gt;
+
+&lt;p&gt;So suffice it to say, &amp;#39;closed&amp;#39; systems irritate me, and Apple products are arguably the most closed hardware/software products available for purchase.  I decided to go into this process with an open mind, since I wanted to learn my way around Mac OS X, but the odds were definitely stacked against Apple, so take what I say here as a fundamentally biased view of the world.&lt;/p&gt;
+
+&lt;p&gt;Here are my observations about using Mac OS X (Leopard).  Remember, I have only been using this system for two months, and I only purchased a MacBook for home one month ago.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Setup Is Easier, Perfection Is Harder&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The most noticeable difference between OS X and, say, Ubuntu has been the ease/difficulty of getting things to be the way I like them.  In Linux, it takes quite a while before you can get your environment from nonfunctional to functional.  This means editing your xorg.conf file for your monitor, setting up your mail application, and everything else.  Going from nothing working to basic functionality is very difficult and time-consuming in Linux.  In OS X, it takes mere seconds.  The Mac OS goes out of its way to make basic configuration as easy as possible.  One thing that stood out to me was the fact that, when setting up my e-mail accounts in Apple Mail, I didn&amp;#39;t have to select if I was using SSL or not - the mail client seemed to just try SSL and, if it worked, used it, but otherwise tried to connect without it.  This took a very small amount of code I&amp;#39;m sure, but it made the process of set-up so much easier.&lt;/p&gt;
+
+&lt;p&gt;That said, it takes about the same amount of time in Linux going from nonfunctional to functional as it does to go from functional to ideal.  By this I mean, making the tiny little tweaks that make your environment &amp;#39;perfect&amp;#39; for you.  Binding applications and commands to global keyboard shortcuts, managing your workspaces, etc - everything that makes your machine perfectly suited for you.  It&amp;#39;s time consuming in Linux, but very possible, and it takes about as long as it takes to get things working at all.  In the world of Mac, this is not the case.  Very, very frequently making these little &amp;#39;perfection&amp;#39; tweaks proved exceedingly difficult, bordering on impossible.  When I asked my Apple fanboy friends how to do this or that, the response was overwhelmingly &amp;quot;don&amp;#39;t do it that way, do it the Mac(tm) way.&amp;quot;  &lt;/p&gt;
+
+&lt;p&gt;I had to spend a lot of time adjusting my Linux environment to the way I like to work, but I&amp;#39;ve had to spend a lot of time adjusting how I like to work to the Mac environment.  This isn&amp;#39;t necessarily &lt;strong&gt;wrong&lt;/strong&gt;, but it&amp;#39;s certainly a difference.  The Apple philosophy seems to be to make applications more intuitive and easier to work with, at the expense of some degree of power and control.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;The Apple Community Likes Open Source, Sort Of&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;In the Linux community, open source is not just a decent way to write software.  It&amp;#39;s the predominant philosophy driving all decisions.  Open Source is more than a means to an end in Linux, it&amp;#39;s a moral and ethical imperative.   The fact that Mac OS is based on BSD under the hood, the easy available of a good terminal, and the existence of projects like Macports make Mac OS something like the ideal Operating System for people that like Open Source, but don&amp;#39;t like it enough to futz with their wireless drivers for three hours to get on someone else&amp;#39;s wireless network.  As a result, the community is strangely split between people that love open source and people that only love it because it makes it easier for small projects to get off the ground.&lt;/p&gt;
+
+&lt;p&gt;It&amp;#39;s weird for someone with my open source zealotry to see people behave as though Mac OS is somehow more open because it &lt;strong&gt;feels&lt;/strong&gt; more like Linux.  When I say to people at work that, so far I prefer Linux to Leopard, they respond along the lines of &amp;quot;Why?  You can still use the command line&amp;quot; as though the reason to prefer Linux is that I have to do everything through vim.  If anything, that&amp;#39;s the worst part of using Linux, not the best part.  I prefer the commandline to a GUI for a lot of things, but I can&amp;#39;t make the argument that it&amp;#39;s somehow better.&lt;/p&gt;
+
+&lt;p&gt;I don&amp;#39;t have access to the source code of my operating system in Leopard.  It is, therefore, fundamentally un-Linux-like.  Having a terminal doesn&amp;#39;t make it open source, anymore than installing cygwin in Windows makes Windows open source.  I&amp;#39;ll grant that the BSD backend and Unix-like file system make it more &lt;em&gt;familiar&lt;/em&gt; to me as a Linux person, but that&amp;#39;s where the similarities end.  It still kind of boggles my mind that I see people giving presentations about the power of open source software on their MacBooks.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Application Competition Is Thin&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;In Windows and Linux, there are tons of FTP programs.  Linux gives me at least 15 different ways to manage and play my mp3 library.  I can easily replace Windows&amp;#39;s Notepad with at least 30 different plain text editors.  The competition between applications for your hard drive space in Windows and Linux is very high.  It&amp;#39;s not a function of popularity either, because it&amp;#39;s still true in Linux despite having the lowest desktop market share of the Big Three Operating Systems.&lt;/p&gt;
+
+&lt;p&gt;Excluding multiplatform applications that run in all three operating systems, in Mac OS, there&amp;#39;s basically one IM client: Adium.  There&amp;#39;s basically one file manager: Finder.  There&amp;#39;s basically one music player: iTunes.  I&amp;#39;m sure that commenters can point out a few straggling applications in each of these arenas, but the fact of the matter is that they are simply not on the radar, realistically.&lt;/p&gt;
+
+&lt;p&gt;There are other application categories where this is true as well.  What I consistently found when I would do a search for something like &amp;quot;Mac OS FTP programs&amp;quot; the internet would always respond with a single, clear winner.  Doing this sort of search for Linux tends to bring up forums in which (sometimes very heated) arguments rage on trying to answer the question.  There is rarely a &amp;quot;best&amp;quot; application, but a small handful of &amp;quot;best depending on what you&amp;#39;re looking for&amp;quot; applications.  With Mac OS, there is one application, and it&amp;#39;s the best, and if you don&amp;#39;t like it, hey, what the hell is wrong with you?&lt;/p&gt;
+
+&lt;p&gt;The worst offender in this area is iTunes.  I &lt;strong&gt;loathe&lt;/strong&gt; iTunes.  I don&amp;#39;t need anything fancy in a music player: list my files, let me play them, let me have a shuffle mode.  iTunes goes so far beyond what I require that it&amp;#39;s clearly not suited for me, but ideally any music playing appliation should serve as a superset of the functionality I require.  iTunes does not.  I have less than 100 gigs of music, but I mount it over a network via NFS.  Adding my entire library to Audacious (an indirect descendant of XMMS) in Linux takes 2 minutes.  I timed it: 120 seconds.  Adding my library to iTunes takes, I kid you not, 3 hours.  Three hours from clicking &amp;quot;Open&amp;quot; to being able to play my music.  I turned off as much as iTunes would let me to speed this up, and three hours is the best I can do (before doing anything, it was five). I told iTunes not to copy music to the local disk, I told it not to sort my music for me, everything.  And what happens if you try to ask someone what you can use other than iTunes?  You&amp;#39;re asked why on earth you don&amp;#39;t like iTunes.  Say &amp;quot;because it takes 3 hours to load my music&amp;quot; and they will tell you that you have too much music.  Explain you don&amp;#39;t have that much, but it&amp;#39;s mounted on a network and they&amp;#39;ll tell you to copy it to your hard drive.  Those aren&amp;#39;t solutions, they are workarounds.  iTunes sucks.&lt;/p&gt;
+
+&lt;p&gt;I&amp;#39;ve tried MacAmp (crashes), Play (freezes), Audion (freezes), and Cog (crashes).  Cog is the most promising of the group, so I tried a number of different nightly builds of it, but it&amp;#39;s still not quite there.&lt;/p&gt;
+
+&lt;p&gt;Even if I manage to find a better music player, deviating from Apple&amp;#39;s philosophy has costs.  Based on a few hours of research, even if I find player I like, I&amp;#39;ll be unable to make the keyboards multimedia keys control it.  Those are, apparently, reserved for iTunes.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Concluding Remarks&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Overall, I like Mac OS, but I do not love it the way I love Linux.  I like the fact that my wireless worked right out of the box, and that I can hook my MacBook up to external monitors without any pain whatsoever.  I like that I can just expect everything on my Mac to be easy to configure, and I like that application interfaces are so intuitive that I can get up to speed quickly.  My level of proficiency with Mac OS after only two months is far, far higher than my level was after working with Linux for only two months, and that&amp;#39;s worthy of note.&lt;/p&gt;
+
+&lt;p&gt;But I do greatly detest the lack of control I have over my system and it&amp;#39;s applications.  I loathe the fact that the home and end keys do something that nobody would ever want to do (Start and end of buffer? Seriously?  How worthless) and that my ability to modify this behavior is pretty severely limited, and largely up to the application.  I hate the fact that there doesn&amp;#39;t seem to be a particularly strong notion of &amp;#39;global shortcuts&amp;#39; vs &amp;#39;local shortcuts&amp;#39; (in Windows the Win key means &amp;#39;global&amp;#39;, and in Linux the Super key means the same thing, yet in Mac OS Command-Space globally brings up your spotlight, but Command-Q locally quits your current application).  And seriously, iTunes is garbage.&lt;/p&gt;
+
+&lt;p&gt;Most of my gripes are minor, aside from the staggering level of suckiness that is iTunes.  I don&amp;#39;t anticipate ever becoming an &amp;quot;Apple Convert&amp;quot; like so many others, and I still prefer Linux on my desktop, but there are a lot of positive things to say about my Mac.  &lt;/p&gt;
+
+&lt;p&gt;I can easily see an Apple OS running on any and all laptops I ever use, but I can&amp;#39;t see it on my phone (I still have high hopes for Android and I eagerly await a Verizon Android phone).  I&amp;#39;m definitely not an Apple fanboy, but I am a fan of my Apple.&lt;/p&gt;
+</description>
+				<pubDate>Fri, 05 Dec 2008 00:00:00 -0700</pubDate>
+				<link>http://www.nomachetejuggling.com/2008/12/05/apple-semi-first-impressions/</link>
+				<guid isPermaLink="true">http://www.nomachetejuggling.com/2008/12/05/apple-semi-first-impressions/</guid>
+			</item>
+		
+			<item>
+				<title>Saying Goodbye To Windows</title>
+				<description>&lt;p&gt;I&amp;#39;ve been a lifelong Windows user.  The first computer I ever had ran Windows 3.1 and I eagerly upgraded to Windows 95, 98, and 2000.  I considered myself a power user of these operating systems.  Yes, I ran Windows, but I also developed in Windows frequently, and I understood Windows at an accomplished level.&lt;/p&gt;
+
+&lt;p&gt;Though I&amp;#39;ve been an Open-Source advocate for quite some time, I frequently experienced major problems when trying out Linux.  &lt;/p&gt;
+
+&lt;p&gt;I tried a version of RedHat when I was in high school, and I tried Mandrake, Gentoo, and Fedora when I was in college. Whenever I tried to use Linux, I was met with some kind of problem that I couldn&amp;#39;t overcome by myself.  A &amp;quot;deal-breaker&amp;quot;, as I called it, that left me to transition back to Windows with frustration.&lt;/p&gt;
+
+&lt;p&gt;I lived on the Computer Interest Floor when I was in college, and a lot of my friends ran Linux, so I figured it would be a great time to evaluate Linux.  I tried many times to run Linux with the help of these friends, but even they, as Linux Gurus, discovered my problems couldn&amp;#39;t be overcome.  I used my computer for everything - work, school, multimedia, and even television.  Not being able to do my job (which was writing Flash applications) was a dealbreaker one year.  Not being able to use my tv-card in Linux was a dealbreaker another year.&lt;/p&gt;
+
+&lt;p&gt;Despite being a huge fan of open-source as a philosophy, Linux was always not quite ready for me as a user.  By the time I had &amp;quot;given up&amp;quot; on Linux, I was running Windows 2000 exclusively (I liked 2000 a lot more than XP, which I found obnoxious).  Every machine I set up ran Windows 2000.  I replaced the shell with the open-source LiteStep and a custom theme I wrote.  I replaced the file manager with the freeware x2explorer.  I ran OpenOffice rather than MS Office, and FireFox rather than IE.   I liked joking that the only part of Windows I used was the kernel - everything on top of it was free, and usually open.&lt;/p&gt;
+
+&lt;p&gt;A year or so ago, when I started reading about Vista, I knew I was in for trouble.  I resisted XP because I didn&amp;#39;t like the direction it took, and Vista seemed even worse.  DRM drivers, &amp;quot;call-home&amp;quot; spyware, and a general lack of control in the hands of users all really irked me.  I kept reading articles about planned features for Vista, and eventually I discovered something that was new to me.&lt;/p&gt;
+
+&lt;p&gt;A dealbreaker.  In Windows.  At first I tried to convince myself that it was just a rumor, but as more articles were published it became clear that there was no way around it.  Windows Vista binds itself to your computer hardware.  If I install Windows Vista on a certain machine, then decide to replace the motherboard in that machine, Vista considers that to be a &amp;quot;new&amp;quot; computer.  Despite the fact that the &amp;quot;old computer&amp;quot; is just a scrapped motherboard sitting in a box in my closet, and despite the fact that the hard drive upon which Vista was installed remains, Vista considers it a brand new computer.&lt;/p&gt;
+
+&lt;p&gt;They give you the first &amp;quot;new computer&amp;quot; categorized in this manner a free pass.  Upgrade the motherboard again, however, and you need to buy a new copy of Vista.&lt;/p&gt;
+
+&lt;p&gt;My main desktop, which I call &amp;quot;wrath&amp;quot; has been my main desktop for many years.  It has run Windows 2000 as long as it has existed, and it has been through at least 5 motherboards, 10 hard drives, 10 ram sticks, 3 cases, and 3 video cards.  The hardware has changed regularly, but I always considered it the same machine, because it was my ONLY desktop machine and the components that made up my previous desktop went into a box in the closet.  This means that the copy of Windows 2000 I purchased for use as my desktop OS has always been active on only one machine.  This is a legitimate use of my Windows 2000 CD, well within legality and with a clear intention NOT to unfairly pirate the OS in any way.  Yet, as of Vista, I would have needed to buy 2 or 3 copies of Vista for this.  That&amp;#39;s simply unacceptable.  That&amp;#39;s a dealbreaker.&lt;/p&gt;
+
+&lt;p&gt;As the days ticked by, they approached two important dates: the day of release for Windows Vista and the official day that Windows 2000 would stop being supported.  No more patches, no more security upgrades for 2000 users.  I was a Windows fan, but I&amp;#39;m not stupid: running Windows without security patches is technological suicide.  I could buy myself some time by biting the bullet and upgrading to XP, but that wasn&amp;#39;t really a permanent solution.  I absolutely would never be willing to install Vista, so I had to come up with a way to continue using my computer in spite of that.  It was time to return to my old rival, Linux.&lt;/p&gt;
+
+&lt;p&gt;About 8 months ago, I began a process of migrating to Linux.  This was not my usual &amp;quot;install Linux and see how I like it&amp;quot; process - this was a full-on switch, with the intention of being permanent.  When the process was complete, I&amp;#39;d be using Linux as my main desktop operating system.  I was out of options for Windows, so I was embracing Linux entirely.  &lt;/p&gt;
+
+&lt;p&gt;I needed to be competent with Linux by the time Vista came out.  That meant no copping-out and dual-booting, and it meant not building a spare Linux box to &amp;quot;play around with&amp;quot;.  I had to immerse myself in Linux if I were going to really learn it.&lt;/p&gt;
+
+&lt;p&gt;Instead, I would build a spare Windows box to &amp;quot;play around with&amp;quot; so that I could continue running games and video editing tools.  I did all of my multimedia tv-watching on an XP Box in the living room, so I wouldn&amp;#39;t have to depend on Linux for that (since it has always given me trouble). With my requirements from my desktop machine relaxed, I had a much better chance of being successful with Linux.&lt;/p&gt;
+
+&lt;p&gt;It took some time to get the multimedia box stable, the windows machine built, and a network-storage solution enabled in my home so I could share things like music across my network. I was able to finally switch to Ubuntu Linux about 3 months ago.&lt;/p&gt;
+
+&lt;p&gt;How has it been?&lt;/p&gt;
+
+&lt;p&gt;Getting my mouse to work correctly has been a pain.  Making Ubuntu play nicely with my Western Digital NetCenter was something of a &lt;a href=&quot;http://www.nomachetejuggling.com/2007/01/13/using-western-digital-netcenter-with-ubuntu-linux/&quot;&gt;nightmare&lt;/a&gt;.  Linux can&amp;#39;t seem to handle my KVM switch without disabling my mouse wheel.  Every torrent app for Linux is inferior to uTorrent.  I&amp;#39;ve definitely dealt with a lot of frustration in Ubuntu - frustration with things that I took for granted when I used Windows.  Despite these frustrations, there has been a noticeable lack of something important: a dealbreaker.&lt;/p&gt;
+
+&lt;p&gt;As obnoxious as Ubuntu can be at times, nothing so far has made me give up and re-install Windows.  Nothing has gone past the level of annoyance.&lt;/p&gt;
+
+&lt;p&gt;This week Vista was released to the world.  Linux has no dealbreakers, only annoyances.  Windows has a dealbreaker.  For the first time since I started using a computer, the roles of Linux and Windows have switched for me.  I&amp;#39;ve enjoyed Ubuntu so much that I&amp;#39;m considering installing it on my laptop.&lt;/p&gt;
+
+&lt;p&gt;Have I learned enough about Linux to consider myself &amp;quot;competent&amp;quot; with it in time for Vista&amp;#39;s release?  Not as much as I&amp;#39;d like, but I&amp;#39;m quick enough performing tasks in Linux that I feel like I&amp;#39;ve moved past the hardest part of the learning curve.  By the time XP stops being patched, I think I will be comfortable enough with Linux to put it on my multimedia machine.  By the time Windows 2000 stops being supported, I think I&amp;#39;ll be okay with the idea of shutting down my backup Windows machine permanently.&lt;/p&gt;
+
+&lt;p&gt;A new version of Windows is out, and for the first time I don&amp;#39;t care.&lt;/p&gt;
+
+&lt;p&gt;I&amp;#39;m a Linux User now.&lt;/p&gt;
+</description>
+				<pubDate>Mon, 29 Jan 2007 00:00:00 -0700</pubDate>
+				<link>http://www.nomachetejuggling.com/2007/01/29/saying-goodbye-to-windows/</link>
+				<guid isPermaLink="true">http://www.nomachetejuggling.com/2007/01/29/saying-goodbye-to-windows/</guid>
+			</item>
+		
+			<item>
+				<title>Using Western Digital NetCenter with Ubuntu Linux</title>
+				<description>&lt;p&gt;I bought a Western Digital NetCenter drive in anticipation of switching to Linux not too long ago (wanted a place for multimedia).  While Windows had no problem using the shares I set up on the drive, getting it to work in Linux has been a nightmare.  After a lot of failed discussions in #ubuntu on the IRC Server, as well as a post on the Ubuntu Forum that went unanswered for a month, I figured out the problems and decided to post my own tutorial so that poor schmoes like me searching for NetCenter-specific information could find it.&lt;/p&gt;
+
+&lt;p&gt;Before I go through this, you&amp;#39;ll need to see if my goal with the NetCenter is close to your own.  Basically, I wanted a place for multimedia on the network, such as mp3s and the like.  I wanted to be able to still download stuff using my Linux machine (my main Desktop computer), but then move stuff to the network drive.  This meant that I wanted a simple directory somewhere within Linux that behaved as though I had all of my multimedia on the machine itself.  In Windows, I&amp;#39;d map my MP3 Share to the Z: drive, so my mp3s were always at Z:.  I wanted it to be similarly simple in Linux.&lt;/p&gt;
+
+&lt;h1&gt;Preparing the Shares&lt;/h1&gt;
+
+&lt;p&gt;Step one is to enable NFS on your shares.  When you make a share in the NetCenter web admin tool, you must make sure that, for the security settings for your folder, you enable NFS.&lt;/p&gt;
+
+&lt;p&gt;I believe the NetCenter comes with some kind of Windows-centric application to manage shares, but I didn&amp;#39;t bother with that.  Once you find out your NetCenter&amp;#39;s ip address, you can simply load that IP in your web browser and find the web admin tool.  Make your shares through that.&lt;/p&gt;
+
+&lt;p&gt;I&amp;#39;m going to assume you have made a share called MUSIC, and you intend to place all of your mp3s there.  I&amp;#39;m also going to assume you are making it a PUBLIC share, rather than password-protected.  I&amp;#39;m assuming this because that&amp;#39;s what I did, and thus I have no idea how to work with the password-protected shares.  I can only assume it&amp;#39;s about as painless as simple as working with public shares, which is to say I imagine you&amp;#39;re going to want to pull your eyeballs out and eat them if you attempt such a thing.&lt;/p&gt;
+
+&lt;h1&gt;Mounting in Linux&lt;/h1&gt;
+
+&lt;p&gt;Almost all of the other tutorials on the web that discuss this kind of thing have you mount your shares using SMBFS.  This is an awful idea, because SMBFS apparently has some bug in it.  The end-result of this bug is that, if two threads try to access the mount concurrently, the entire mount will freeze, any application reading from it will freeze, and any program that tries to access it again will freeze.  This will last a few hours (3 for me) before the share is magically available again.  Oh, and if you have other mounts going to the same machine, those will freeze too.&lt;/p&gt;
+
+&lt;p&gt;This is particularly frustrating when you are storing MP3 files, because when you scan your library most programs will do so in a threaded manner, thus instantly breaking everything for a good 3 hours or so.&lt;/p&gt;
+
+&lt;p&gt;The workaround for this, I found, is to avoid SMBFS entirely and use NFS instead.&lt;/p&gt;
+
+&lt;p&gt;First, you need to make a directory for what you will mount to.  A lot of people mount this kind of stuff inside /media, so I&amp;#39;ll assume you want to as well (I didn&amp;#39;t, but whatever).&lt;/p&gt;
+
+&lt;p&gt;Type &lt;code&gt;sudo mkdir /media/mp3&lt;/code&gt;.  This will make an mp3 directory that you will map your MUSIC share to.  Now, let&amp;#39;s mount it.  Let&amp;#39;s assume the IP address of your NetCenter drive is 192.168.0.200.&lt;/p&gt;
+
+&lt;p&gt;Type &lt;code&gt;sudo mount -t nfs 192.168.0.200:/shares/Main/MUSIC /media/mp3&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;That should be it.  Cd into /media/mp3 and list some files.  To unmount it, type &lt;code&gt;sudo umount /media/mp3&lt;/code&gt;.  &lt;/p&gt;
+
+&lt;p&gt;If you wanted to mount with cifs instead, the path would simply be //IP/MUSIC, so you might be wondering what the /shares/Main is for.  The Western Digital runs a flavor of linux itself, which is why using NFS is so much better.  However, it hides the location of your shares in /shares/volume&lt;em&gt;name/share&lt;/em&gt;name.  This isn&amp;#39;t found anywhere in any documentation, and if you send Western Digital an e-mail simply asking &amp;quot;I&amp;#39;m trying to mount using NFS, what&amp;#39;s the path to my share on the drive?&amp;quot; they will respond by telling you they do not support Linux.  If you respond and tell them you aren&amp;#39;t asking about Linux, you are asking about NFS, which the drive clearly supports as there is a checkbox for enabling it for every share you make, they will reply again by telling you they do not support Linux.&lt;/p&gt;
+
+&lt;p&gt;Western Digital loses major points with me for how they have handled this situation.  It&amp;#39;s frustrating enough that they don&amp;#39;t support Linux on a network-attached storage device (since the most common use of NAS is enterprise, and a lot of companies run on Linux). but to refuse to help with an actual feature of their device was particularly infuriating.  If support is important to you, do NOT buy a Western Digital NetCenter drive.  The drive works great once you get it working correctly, but WD will not help you.&lt;/p&gt;
+
+&lt;h1&gt;Automounting&lt;/h1&gt;
+
+&lt;p&gt;To make it so that this is mounted when you boot your machine, type &lt;code&gt;sudo gedit /etc/fstab&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Then add this line to your file:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;192.168.0.200:/shares/Main/MUSIC   /media/mp3  nfs  rw,user  0       0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Save the file, and do &lt;code&gt;sudo mount -a&lt;/code&gt; in a terminal.  This should reload the file and mount whatever is there.  This will occur automatically when you boot from now on.&lt;/p&gt;
+
+&lt;p&gt;You will also notice that an icon appears on your desktop for this drive.  I found this bothersome, and if you do as well, simply remove the &amp;quot;,user&amp;quot; from the config line.&lt;/p&gt;
+
+&lt;h1&gt;Writing to the directory&lt;/h1&gt;
+
+&lt;p&gt;You may find as you try to move files into the share, that you cannot write.  In my case, I moved a lot of files onto the drive from Windows before switching to Linux, so all of my music and multimedia was already on the drive.  I discovered I couldn&amp;#39;t read any of it or move additional files to existing directories.&lt;/p&gt;
+
+&lt;p&gt;The following steps will 1) Make all of the directories writable for EVERYONE on the network 2) Make all of the files readable and writable for everyone on the network and 3) Change the owner of everything on the drive to &amp;quot;root&amp;quot;.&lt;/p&gt;
+
+&lt;p&gt;This is an extremely permissive way to set up your network share.  The reason I provide instructions like this is that, when the WD NetCenter is set to &amp;quot;public&amp;quot;, the behavior of the drive is that everyone in windows can read and write to everything on that share.  Thus, I am trying to emulate that behavior in Linux.   If you want to use a more restrictive permissions scheme, you can go ahead.  Feel free to add to these instructions in the comments if that is the case for you.&lt;/p&gt;
+
+&lt;p&gt;In any case, the first thing you need to do is set all of the directories on the drive to be read/write/execute for everyone.  Type this: &lt;code&gt;sudo chmod -R a+rwX /media/mp3&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;This will set +rw for everyone, and set the X bit for everyone if it&amp;#39;s already set for the user (since directories have this bit set to allow directory listing, the end-effect is that directories will be set correctly).  This also sets all files to be +rw, but not +x.&lt;/p&gt;
+
+&lt;p&gt;The next thing to do is change the owner.  This is mostly for cosmetic purposes: sudo chown -R root:root /media/mp3.&lt;/p&gt;
+
+&lt;p&gt;That&amp;#39;s it.  Your drive should now be usable by you without having to sudo.&lt;/p&gt;
+</description>
+				<pubDate>Sat, 13 Jan 2007 00:00:00 -0700</pubDate>
+				<link>http://www.nomachetejuggling.com/2007/01/13/using-western-digital-netcenter-with-ubuntu-linux/</link>
+				<guid isPermaLink="true">http://www.nomachetejuggling.com/2007/01/13/using-western-digital-netcenter-with-ubuntu-linux/</guid>
+			</item>
+		
+			<item>
+				<title>Buffalo Buffalo Buffalo</title>
+				<description>&lt;p&gt;Back in college, I remember having a discussion with a fellow Computer Science student about the word Buffalo, and how it could be used to form an infinitely long sentence.  Somewhat recently, I mentioned this to some co-workers, who thought I was a stupid crazy person.  While it is easy to prove this true, very often a mathematical proof isn&amp;#39;t enough to convince a normal human being (which is humorous, since the straightforward explanation that DOES tend to convince them is far less rigorous than the proof).&lt;/p&gt;
+
+&lt;p&gt;I shall attempt to explain this oddity of the English language here.  First, let&amp;#39;s start with something simple.  A sentence is valid if it consists of a subject followed by a verb, as long as that verb does not require a direct object.  For example &amp;quot;Fish swim.&amp;quot; is a valid sentence.  &lt;/p&gt;
+
+&lt;p&gt;Seems simple so far.  Let&amp;#39;s come back to that.  We also know that we can write a sentence such as &amp;quot;I don&amp;#39;t like dogs that people love.&amp;quot;  Indeed, I can say &amp;quot;I don&amp;#39;t like...&amp;quot; and follow that with any noun or noun phrase.&lt;/p&gt;
+
+&lt;p&gt;We also can write &amp;quot;dogs that people love&amp;quot; without the superfluous &amp;quot;that&amp;quot;: &amp;quot;dogs people love&amp;quot;.  So I don&amp;#39;t like dogs people love.  Clearly dogs people love is a valid noun phrase.  A &amp;quot;dog someone loves&amp;quot; is a single subject.  So it would also be valid to say &amp;quot;dogs people love bark.&amp;quot;  Here I am simply saying that dogs, specifically dogs that people love, tend to bark.  Nothing wrong here.&lt;/p&gt;
+
+&lt;p&gt;Now let&amp;#39;s make things a big more complicated.  Let&amp;#39;s say rather than talking about dogs, people, and love, we&amp;#39;re talking only about people.  In the same way that &amp;quot;dogs that people love&amp;quot; can be written as &amp;quot;dogs people love&amp;quot;, we can refer to &amp;quot;people that other people slap&amp;quot; as &amp;quot;people people slap.&amp;quot;  That&amp;#39;s a valid subject of a sentence.  And a sentence can be merely a subject followed by a verb, so how about: &amp;quot;People people slap scream.&amp;quot;  Here I&amp;#39;m simply saying that people (who other people slap) tend to scream.&lt;/p&gt;
+
+&lt;p&gt;Well what if, rather than scream, they themselves also slap?  People people slap slap.  Fun sentence, eh?  So if we can refer to &amp;quot;people [subject] slap&amp;quot; as a subject itself in another sentence, then that means the [subject] there can, in fact, be &amp;quot;people people slap&amp;quot;.  This means that &amp;quot;People people people slap slap slap.&amp;quot; is also a valid sentence.  This is saying that there are people which people slap.  They are the subject of another sentence, in which they slap people who, themselves, slap.  You can see how I can come up with an infinitely long sentence here.&lt;/p&gt;
+
+&lt;p&gt;Well, it so happens that Buffalo is a plural noun, referring to the animal.  But it also is a verb, meaning to trick.  So if we replace &amp;quot;people&amp;quot; with buffalo the noun and &amp;quot;slap&amp;quot; with buffalo the verb, I can say &amp;quot;Buffalo buffalo buffalo buffalo buffalo buffalo.&amp;quot;  As long as there are an even number of &amp;quot;buffalo&amp;quot;, the sentence is fine.  But what if it&amp;#39;s odd?  Then it&amp;#39;s just a subject without the last verb, making it not a sentence.  That&amp;#39;s easy.  Now the last buffalo is the direct object of the verb &amp;quot;buffalo&amp;quot;.  Rather than simply saying that Buffalo (the noun) buffalo (the verb), you say that Buffalo (the noun) buffalo (the verb) other buffalo (direct object).  So the last buffalo in an odd-numbered string is the buffalo being buffaloed by the subject defined in the rest of the sentence.&lt;/p&gt;
+
+&lt;p&gt;Alternatively, you could say that the first Buffalo is an adjective describing the first buffalo mentioned.  Like Buffalo residents describe people from Buffalo, Buffalo buffalo describe buffalo from Buffalo.&lt;/p&gt;
+
+&lt;p&gt;Buffalo buffalo buffalo buffalo buffalo buffalo buffalo buffalo buffalo buffalo buffalo.&lt;/p&gt;
+</description>
+				<pubDate>Tue, 31 Jan 2006 00:00:00 -0700</pubDate>
+				<link>http://www.nomachetejuggling.com/2006/01/31/buffalo-buffalo-buffalo/</link>
+				<guid isPermaLink="true">http://www.nomachetejuggling.com/2006/01/31/buffalo-buffalo-buffalo/</guid>
+			</item>
+		
+	</channel>
+</rss>
