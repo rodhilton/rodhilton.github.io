@@ -32,7 +32,7 @@
 
 &lt;p&gt;I also really liked there being a special &amp;quot;Modern Computer Science in the Real World&amp;quot; track - it&amp;#39;s rare to see really heavy CS stuff at programmer conferences, I liked it.&lt;/p&gt;
 
-&lt;table class=&#39;image aligncenter&#39; width=&#39;646&#39;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/qcon_sessions.jpg&quot; width=&#39;640&#39; height=&#39;427&#39;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;table class='image aligncenter' width='646'&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/qcon_sessions.jpg&quot; width='640' height='427'/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 
 &lt;h2&gt;Mini-Talks&lt;/h2&gt;
 
@@ -72,7 +72,7 @@
 
 &lt;p&gt;I can&amp;#39;t complain much about the vendor room, they gave cool stuff away and getting your nametag scanned for the low low price of being pestered via e-mail later on earned you a spot in a drawing.  There were enough giveaways that your chances were fairly decent, in fact I won a Lego Mindstorm set.&lt;/p&gt;
 
-&lt;table class=&#39;image aligncenter&#39; width=&#39;646&#39;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/qcon_haul.jpg&quot; width=&#39;640&#39; height=&#39;360&#39;/&gt;&lt;p class=&#39;caption&#39;&gt;Swag!&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;table class='image aligncenter' width='646'&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/qcon_haul.jpg&quot; width='640' height='360'/&gt;&lt;p class='caption'&gt;Swag!&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 
 &lt;p&gt;I still think the coolest version of this I&amp;#39;ve ever seen is at OSCON, where the Expo Hall was gigantic and had all sorts of interesting stuff in it, with a lot of demos and products (even a car).  QCon&amp;#39;s room being so much smaller meant that you could go see every booth in just a few minutes, but then were stuck going through the same room multiple times throughout the conference.  It also could get extremely crowded in the room, with both booth traffic and just-passing-through traffic, which discouraged me from wanting to spend much time booth hopping.&lt;/p&gt;
 
@@ -121,13 +121,13 @@
 
 &lt;p&gt;To my great surprise, a &lt;a href=&quot;http://www.reddit.com/r/programming/comments/2986e4/the_worst_programming_interview_question/&quot;&gt;few&lt;/a&gt; &lt;a href=&quot;http://www.reddit.com/r/programming/comments/hn1fx/a_different_kind_of_technical_interview/&quot;&gt;of&lt;/a&gt; &lt;a href=&quot;http://www.reddit.com/r/programming/comments/yvr9/my_interview_with_google/&quot;&gt;my&lt;/a&gt; &lt;a href=&quot;http://www.reddit.com/r/TrueReddit/comments/q98ld/the_star_wars_saga_suggested_viewing_order_iv_v/&quot;&gt;posts&lt;/a&gt; have found their way to the front page of &lt;a href=&quot;http://www.reddit.com/domain/nomachetejuggling.com&quot;&gt;reddit&lt;/a&gt;.  My &lt;a href=&quot;http://www.nomachetejuggling.com/2011/11/11/the-star-wars-saga-suggested-viewing-order/&quot;&gt;post about Star Wars&lt;/a&gt; has been mentioned on &lt;a href=&quot;https://www.youtube.com/watch?v=effD1u4oCRE&quot;&gt;King of the Nerds&lt;/a&gt; and &lt;a href=&quot;https://www.youtube.com/watch?v=keSFjjhUyVA&quot;&gt;The Big Bang Theory&lt;/a&gt;, and even landed me an &lt;a href=&quot;http://www.npr.org/2014/03/20/291977042/theres-more-than-one-way-to-watch-star-wars&quot;&gt;Interview on NPR&lt;/a&gt;.  &lt;/p&gt;
 
-&lt;table class=&#39;image aligncenter&#39;&gt;&lt;tr&gt;&lt;td&gt;&lt;script type=&quot;text/javascript&quot; src=&quot;//www.google.com/trends/embed.js?hl=en-US&amp;q=Machete+Order&amp;cmpt=q&amp;content=1&amp;cid=TIMESERIES_GRAPH_0&amp;export=5&amp;w=600&amp;h=330&quot;&gt;&lt;/script&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;table class='image aligncenter'&gt;&lt;tr&gt;&lt;td&gt;&lt;script type=&quot;text/javascript&quot; src=&quot;//www.google.com/trends/embed.js?hl=en-US&amp;q=Machete+Order&amp;cmpt=q&amp;content=1&amp;cid=TIMESERIES_GRAPH_0&amp;export=5&amp;w=600&amp;h=330&quot;&gt;&lt;/script&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 
 &lt;p&gt;Needless to say, the traffic to my blog has been both extremely unexpected and unpredictable.  The Star Wars post had been online for months with virtually no traffic before &lt;a href=&quot;http://archive.wired.com/geekdad/2012/02/machete-order-star-wars/&quot;&gt;Wired&lt;/a&gt; suddenly linked to it, instantly decimating my web server.  I&amp;#39;ve fought and fought with various configurations for Wordpress, used &lt;a href=&quot;http://wordpress.org/plugins/w3-total-cache/&quot;&gt;as much caching&lt;/a&gt; as possible, and even had my &lt;a href=&quot;https://www.servint.net/&quot;&gt;web host&lt;/a&gt; temporarily upgrade my service, all trying to keep a web site that makes no money online even when traffic increases by a factor of 100 overnight.  &lt;strong&gt;When my site goes down, it&amp;#39;s embarrassing, because even though it&amp;#39;s just a personal blog on a shared host, it gives the impression that I, as a software developer, don&amp;#39;t know how to make a web site scale&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;h1&gt;Switching to Jekyll&lt;/h1&gt;
 
-&lt;table class=&#39;image alignright&#39; width=&#39;306&#39;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/jekyll-logo.png&quot; width=&#39;300&#39; height=&#39;141&#39;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;table class='image alignright' width='306'&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/jekyll-logo.png&quot; width='300' height='141'/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 
 &lt;p&gt;So after the most recent pummeling I took due to a &lt;a href=&quot;https://news.ycombinator.com/item?id=7953725&quot;&gt;Hacker News link&lt;/a&gt;, I decided it was time to &lt;strong&gt;bite the bullet and convert the entire site to &lt;a href=&quot;http://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt;&lt;/strong&gt;.  I&amp;#39;ve messed around with the technology before to build another, smaller, blog, so I was somewhat familiar with the constructs and idioms.  A lot of work and ten custom plugins later, the entire site was converted, with very little loss of functionality.&lt;/p&gt;
 
@@ -299,7 +299,7 @@
 
 &lt;h2&gt;&lt;a href=&quot;http://www.amazon.com/The-Pragmatic-Programmer-Journeyman-Master/dp/020161622X&quot;&gt;The Pragmatic Programmer&lt;/a&gt;&lt;/h2&gt;
 
-&lt;table class=&#39;image alignright&#39; width=&#39;244&#39;&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&#39;http://www.amazon.com/The-Pragmatic-Programmer-Journeyman-Master/dp/020161622X&#39;&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/pragprog-238x300.jpg&quot; width=&#39;238&#39; height=&#39;300&#39;/&gt;&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;table class='image alignright' width='244'&gt;&lt;tr&gt;&lt;td&gt;&lt;a href='http://www.amazon.com/The-Pragmatic-Programmer-Journeyman-Master/dp/020161622X'&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/pragprog-238x300.jpg&quot; width='238' height='300'/&gt;&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 
 &lt;p&gt;I know, I know.  Every list you&amp;#39;ve ever seen on the internet includes this book.  I&amp;#39;m sorry, I wish I could be more original, but this book really is an eye-opener.  &lt;em&gt;The Pragmatic Programmer&lt;/em&gt; contains 46 tips for software professionals that are simply indispensable.  As the name implies, the book avoids falling into any kind of religious wars with its tips, it&amp;#39;s simply about pragmatism.&lt;/p&gt;
 
@@ -313,7 +313,7 @@
 
 &lt;h2&gt;&lt;a href=&quot;http://www.amazon.com/Continuous-Delivery-Deployment-Automation-Addison-Wesley/dp/0321601912&quot;&gt;Continuous Delivery&lt;/a&gt;&lt;/h2&gt;
 
-&lt;table class=&#39;image alignright&#39; width=&#39;233&#39;&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&#39;http://www.amazon.com/Continuous-Delivery-Deployment-Automation-Addison-Wesley/dp/0321601912&#39;&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/continuousDelivery-227x300.jpg&quot; width=&#39;227&#39; height=&#39;300&#39;/&gt;&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;table class='image alignright' width='233'&gt;&lt;tr&gt;&lt;td&gt;&lt;a href='http://www.amazon.com/Continuous-Delivery-Deployment-Automation-Addison-Wesley/dp/0321601912'&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/continuousDelivery-227x300.jpg&quot; width='227' height='300'/&gt;&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 
 &lt;p&gt;Releasing software is one of the most stressful parts of the job.  I can&amp;#39;t tell you how many times in my career I&amp;#39;ve been part of a botched launch, or up until the wee hours of the morning on a conference call trying to get software into the hands of customers.  When do we branch, what goes in what branch, how do we build the artifacts, what process do we walk through to get them where they need to go?  It can be one of the most complex, error-prone, and difficult parts of professional programming.&lt;/p&gt;
 
@@ -327,7 +327,7 @@
 
 &lt;h2&gt;&lt;a href=&quot;http://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882&quot;&gt;Clean Code&lt;/a&gt; / &lt;a href=&quot;http://www.amazon.com/The-Clean-Coder-Professional-Programmers/dp/0137081073&quot;&gt;The Clean Coder&lt;/a&gt;&lt;/h2&gt;
 
-&lt;table class=&#39;image alignright&#39; width=&#39;306&#39;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/cleanduology-300x191.jpg&quot; width=&#39;300&#39; height=&#39;191&#39;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;table class='image alignright' width='306'&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/cleanduology-300x191.jpg&quot; width='300' height='191'/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 
 &lt;p&gt;Look at this, only a few items into my list and I&amp;#39;ve already cheated by including two books as a single entry.  Yes, &lt;em&gt;Clean Code&lt;/em&gt; and &lt;em&gt;The Clean Coder&lt;/em&gt; are two separate books, but honestly they&amp;#39;re both very short, and very similar.  Both books are about how a programmer should conduct him or herself professionally, they simply cover different aspects.  Professional software developers communicate with their coworkers in two ways: through code and through everything else.  &lt;em&gt;Clean Code&lt;/em&gt; is about how you communicate with your co-workers (fellow programmers) through code itself, and &lt;em&gt;The Clean Coder&lt;/em&gt; is about how you communicate verbally, or through e-mail.&lt;/p&gt;
 
@@ -341,7 +341,7 @@
 
 &lt;h2&gt;&lt;a href=&quot;http://www.amazon.com/Release-It-Production-Ready-Pragmatic-Programmers/dp/0978739213&quot;&gt;Release It!&lt;/a&gt;&lt;/h2&gt;
 
-&lt;table class=&#39;image alignright&#39; width=&#39;256&#39;&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&#39;http://www.amazon.com/Release-It-Production-Ready-Pragmatic-Programmers/dp/0978739213&#39;&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/releaseit-250x300.jpg&quot; width=&#39;250&#39; height=&#39;300&#39;/&gt;&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;table class='image alignright' width='256'&gt;&lt;tr&gt;&lt;td&gt;&lt;a href='http://www.amazon.com/Release-It-Production-Ready-Pragmatic-Programmers/dp/0978739213'&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/releaseit-250x300.jpg&quot; width='250' height='300'/&gt;&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 
 &lt;p&gt;A product&amp;#39;s life doesn&amp;#39;t begin when you first create the source code repository, or write the first line of code, or even finish the first story.  It begins as soon as it&amp;#39;s launched into production, into the hands of real users.  Everything before that is just bits, just plain text files on disks.  So in a lot of ways, it&amp;#39;s astonishing how much thought is put into the code for the period of time before it&amp;#39;s really born.&lt;/p&gt;
 
@@ -355,7 +355,7 @@
 
 &lt;h2&gt;&lt;a href=&quot;http://www.amazon.com/First-Design-Patterns-Elisabeth-Freeman/dp/0596007124&quot;&gt;Head First Design Patterns&lt;/a&gt; / &lt;a href=&quot;http://www.amazon.com/Patterns-Enterprise-Application-Architecture-Martin/dp/0321127420&quot;&gt;Patterns of Enterprise Application Architecture&lt;/a&gt;&lt;/h2&gt;
 
-&lt;table class=&#39;image alignright&#39; width=&#39;306&#39;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/patterns-300x189.jpg&quot; width=&#39;300&#39; height=&#39;189&#39;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;table class='image alignright' width='306'&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/patterns-300x189.jpg&quot; width='300' height='189'/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 
 &lt;p&gt;No list like this would be complete without a book about design patterns.  But where&amp;#39;s the famous &amp;quot;Gang of Four&amp;quot; book, you ask?  Not on this list, that&amp;#39;s where.  Honestly, GoF was a pretty groundbreaking book at the time, but I personally think the presentation of the information it contains is awful.  I believe everything presented in GoF is presented better in &lt;em&gt;Head First Design Patterns&lt;/em&gt;.  I know that not everyone is crazy about the Head First series, and even I find the structure and layout of the book grating at times, but I think the diagrams and visuals are light years better than those of GoF.  &lt;/p&gt;
 
@@ -369,7 +369,7 @@
 
 &lt;h2&gt;&lt;a href=&quot;http://www.amazon.com/Working-Effectively-Legacy-Michael-Feathers/dp/0131177052&quot;&gt;Working Effectively with Legacy Code&lt;/a&gt;&lt;/h2&gt;
 
-&lt;table class=&#39;image alignright&#39; width=&#39;232&#39;&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&#39;http://www.amazon.com/Working-Effectively-Legacy-Michael-Feathers/dp/0131177052&#39;&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/legacycode-226x300.jpg&quot; width=&#39;226&#39; height=&#39;300&#39;/&gt;&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;table class='image alignright' width='232'&gt;&lt;tr&gt;&lt;td&gt;&lt;a href='http://www.amazon.com/Working-Effectively-Legacy-Michael-Feathers/dp/0131177052'&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/legacycode-226x300.jpg&quot; width='226' height='300'/&gt;&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 
 &lt;p&gt;My first job out of college was replacing a developer who had left the company, as the sole responsible engineer on a massive and extremely complex codebase.  Working in this codebase was terrifying, any change I made had the potential to break almost anything, and there was no way to test any changes without pushing a jar to the production system and watching it go.  I checked over every change I made about a thousand times, and hand-constructed little &lt;code&gt;public static void main&lt;/code&gt; classes just to instantiate classes and invoke methods, and then hand-check results.  I had never heard of unit tests at this point (evidently, neither had my predecessor), so everything was done with kid gloves.&lt;/p&gt;
 
@@ -383,7 +383,7 @@
 
 &lt;h2&gt;&lt;a href=&quot;http://www.amazon.com/Refactoring-Improving-Design-Existing-Code/dp/0201485672&quot;&gt;Refactoring&lt;/a&gt; / &lt;a href=&quot;http://www.amazon.com/xUnit-Test-Patterns-Refactoring-Code/dp/0131495054/&quot;&gt;xUnit Test Patterns&lt;/a&gt;&lt;/h2&gt;
 
-&lt;table class=&#39;image alignright&#39; width=&#39;306&#39;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/refactoring_xunit-300x196.jpg&quot; width=&#39;300&#39; height=&#39;196&#39;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;table class='image alignright' width='306'&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/refactoring_xunit-300x196.jpg&quot; width='300' height='196'/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 
 &lt;p&gt;I think most recent college graduates, myself included at the time, are &amp;quot;cowboy&amp;quot; coders.  I used to have all the changes in my head, and just tried to get them fed from my brain into the compiler as quickly as I could, before I forgot all the stuff I wanted to do.  Today, I cringe when I think about how many characters of code I&amp;#39;d type between actually running or testing my software; &amp;quot;waiting for the compiler is just going to slow me down, let me get all the code written first and then I&amp;#39;ll debug it!&amp;quot;&lt;/p&gt;
 
@@ -397,7 +397,7 @@
 
 &lt;h2&gt;&lt;a href=&quot;http://www.amazon.com/The-Passionate-Programmer-Remarkable-Development/dp/1934356344&quot;&gt;The Passionate Programmer&lt;/a&gt; / &lt;a href=&quot;http://www.amazon.com/Land-Tech-Love-Pragmatic-Life/dp/1934356263&quot;&gt;Land the Tech Job You Love&lt;/a&gt;&lt;/h2&gt;
 
-&lt;table class=&#39;image alignright&#39; width=&#39;306&#39;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/career_books-300x225.jpg&quot; width=&#39;300&#39; height=&#39;225&#39;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;table class='image alignright' width='306'&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/career_books-300x225.jpg&quot; width='300' height='225'/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 
 &lt;p&gt;Okay, I get it, I&amp;#39;m terrible at making these lists, and clearly should have just done a &amp;quot;Top 15&amp;quot; or something.  In any case, landing that first job out of college is tough, but eventually the day comes when it&amp;#39;s time to move on.  &lt;em&gt;The Passionate Programmer&lt;/em&gt; is largely about how to find the right kind of job for you, what to look for in tech companies, and how to manage the direction of your career.  It&amp;#39;s pretty high level, but full of extraordinarily important advice to ensure you find yourself at companies that fit you and that you fit into well.  &lt;em&gt;Land the Tech Job You Love&lt;/em&gt; is more about the mechanics of this process, how to write a resume, how to interview, how to negotiate a salary, and the like.  This is another situation where really two books are so closely related that they&amp;#39;d be better as a single larger book.&lt;/p&gt;
 
@@ -411,7 +411,7 @@
 
 &lt;h2&gt;&lt;a href=&quot;http://www.amazon.com/Apprenticeship-Patterns-Guidance-Aspiring-Craftsman/dp/0596518382/&quot;&gt;Apprenticeship Patterns&lt;/a&gt;&lt;/h2&gt;
 
-&lt;table class=&#39;image alignright&#39; width=&#39;234&#39;&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&#39;http://www.amazon.com/Apprenticeship-Patterns-Guidance-Aspiring-Craftsman/dp/0596518382/&#39;&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/apprenticeship-patterns-228x300.jpg&quot; width=&#39;228&#39; height=&#39;300&#39;/&gt;&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;table class='image alignright' width='234'&gt;&lt;tr&gt;&lt;td&gt;&lt;a href='http://www.amazon.com/Apprenticeship-Patterns-Guidance-Aspiring-Craftsman/dp/0596518382/'&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/apprenticeship-patterns-228x300.jpg&quot; width='228' height='300'/&gt;&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 
 &lt;p&gt;&lt;em&gt;Apprenticeship Patterns&lt;/em&gt; isn&amp;#39;t really a patterns book as the name implies, but it&amp;#39;s content has been kind of shoehorned into the format, I assume to increase sales.  Ignoring that flaw, &lt;em&gt;Apprenticeship Patterns&lt;/em&gt; is the best book on Software Craftsmanship I&amp;#39;ve read, and I&amp;#39;ve read quite a few.  I actually recommend it above &lt;a href=&quot;http://www.amazon.com/Software-Craftsmanship-The-New-Imperative/dp/0201733862&quot;&gt;Pete McBreen&amp;#39;s Software Craftsmanship&lt;/a&gt;, because it covers pretty much everything useful from that book, but excises some of the more unrealistic or naive bits, as well as the extremely long and pointless section about salary.  &lt;em&gt;Apprenticeship Patterns&lt;/em&gt; is a bugfix release for &lt;em&gt;Software Craftsmanship&lt;/em&gt;.&lt;/p&gt;
 
@@ -425,7 +425,7 @@
 
 &lt;h2&gt;&lt;a href=&quot;http://www.amazon.com/Art-Agile-Development-James-Shore/dp/0596527675&quot;&gt;The Art of Agile Development&lt;/a&gt;&lt;/h2&gt;
 
-&lt;table class=&#39;image alignright&#39; width=&#39;234&#39;&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&#39;http://www.amazon.com/Art-Agile-Development-James-Shore/dp/0596527675&#39;&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/theartofagiledevelopment-228x300.jpg&quot; width=&#39;228&#39; height=&#39;300&#39;/&gt;&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;table class='image alignright' width='234'&gt;&lt;tr&gt;&lt;td&gt;&lt;a href='http://www.amazon.com/Art-Agile-Development-James-Shore/dp/0596527675'&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/theartofagiledevelopment-228x300.jpg&quot; width='228' height='300'/&gt;&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 
 &lt;p&gt;The first job I had out of college was pure chaos.  No process, no estimation, no planning, nothing.  Generally someone from marketing would stop by a programmer&amp;#39;s cubicle and inform them that they just sold a few thousand dollars worth of seats based on a feature that didn&amp;#39;t exist yet, so how long would it take to implement it?  Being my first post-college job, I was in &amp;quot;sponge mode,&amp;quot; so I simply thought this was how it worked in the real world.  It wasn&amp;#39;t until my next job that I was introduced to Agile Development methodologies by way of Scrum, which was like mana from heaven.  I was hooked.&lt;/p&gt;
 
@@ -484,7 +484,7 @@
 &lt;li&gt;Work well in airplane mode (I usually use this at the gym to avoid getting phone calls and texts)&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;table class=&#39;image alignright&#39; width=&#39;174&#39;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/Screenshot_2013-08-25-15-10-59-168x300.png&quot; width=&#39;168&#39; height=&#39;300&#39;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;table class='image alignright' width='174'&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/Screenshot_2013-08-25-15-10-59-168x300.png&quot; width='168' height='300'/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 
 &lt;p&gt;In other words, &lt;strong&gt;a clipboard, piece of paper, pencil, and stopwatch, but on a phone&lt;/strong&gt;.  I didn&amp;#39;t want it to have any more features than this, because I felt that would risk it being another app that just gets in my way and tries to dictate how I should work out.  In fact, I specifically insisted that this app not even need internet permission, instead writing all log data out to the SD card for the user to sync however they please (I&amp;#39;m using &lt;a href=&quot;https://play.google.com/store/apps/details?id=com.ttxapps.dropsync&amp;amp;hl=en&quot;&gt;Dropsync&lt;/a&gt;).&lt;/p&gt;
 
@@ -496,7 +496,7 @@
 
 &lt;p&gt;I used Eclipse for development, despite being an IntelliJ user, because we used Eclipse for the OSCON session and I wanted to hit the ground running.  &lt;strong&gt;I hated using Eclipse&lt;/strong&gt;, it&amp;#39;s even more clunky and annoying than I remember.  Obviously the keyboard shortcuts were unfamiliar, but honestly I find it to be a less capable IDE overall, and I found some of its quirks maddening.  One thing that happened constantly was I&amp;#39;d copy some code with Command-C, delete it, go somewhere to paste it, and it would paste the thing that was in my buffer previously, with the copy having been ignored.  I&amp;#39;d have to then undo the deletion, re-copy, re-delete, and re-paste.  And before you say I probably wasn&amp;#39;t hitting Command-C correctly or something, bear in mind that I use the clipboard like this in every application I use, including IntelliJ, and this only happens in Eclipse.  The Android tools themselves were great, particularly the wizard for creating Android XML files with different constraints, and the UI/Layout editor.  Hopefully I know enough now about Android that I can confidently use the new IntelliJ environment.&lt;/p&gt;
 
-&lt;table class=&#39;image aligncenter&#39; width=&#39;586&#39;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/Screen-Shot-2013-08-30-at-4.07.48-PM-580x423.png&quot; width=&#39;580&#39; height=&#39;423&#39;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;table class='image aligncenter' width='586'&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/Screen-Shot-2013-08-30-at-4.07.48-PM-580x423.png&quot; width='580' height='423'/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 
 &lt;p&gt;Overall, development went very smoothly.  I felt like there was an enormous mountain to climb in terms of my lack of knowledge, but that the learning curve wasn&amp;#39;t steep at all.  Most development felt very natural, often the way to do something was the way I&amp;#39;d expect to, so the principle of least surprise was satisfied.  &lt;strong&gt;I generally found that, if you were meant to do something, the Android API made it dirt simple to do, and if you weren&amp;#39;t, a StackOverflow post told you how&lt;/strong&gt;.&lt;/p&gt;
 
@@ -504,7 +504,7 @@
 
 &lt;p&gt;The two biggest challenges were, by far, layout and managing state.  Layout was the easier of the two, largely because of the quality of the Eclipse tools.  Managing state was very tricky however, in that you basically have instance fields in your activities, but can&amp;#39;t trust that they have the values you think.  Assignment to and from these fields needs to happen through various lifecycle methods and, while there are diagrams that illustrate the flow, it&amp;#39;s sometimes difficult to know which lifecycle methods get called when, and it&amp;#39;s tricky to trace through these steps to ensure that data is where you expect it to be.  For example, if you call one activity from another, the lifecycle methods that get called on the parent differ depending on whether you return to it by hitting the &amp;quot;up&amp;quot; button on the action bar or hit the &amp;quot;back&amp;quot; button of your device.&lt;/p&gt;
 
-&lt;table class=&#39;image alignleft&#39; width=&#39;174&#39;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/Screenshot_2013-08-30-12-50-37-168x300.png&quot; width=&#39;168&#39; height=&#39;300&#39;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;table class='image alignleft' width='174'&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/Screenshot_2013-08-30-12-50-37-168x300.png&quot; width='168' height='300'/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 
 &lt;p&gt;Managing state was a particular challenge for this app, because I refused to store any persistent data inside of internal databases the way most apps do.  Instead, I wanted to read and write from a large collection of json files on the SD card, which means disk access on the slowest part of the phone, reading from a particularly slow-to-parse file format, and serializing/deserializing frequently.  In other words, &lt;strong&gt;my persistence and unpersistence operations were particularly slow&lt;/strong&gt;, and I had to take a lot of extra precautions to avoid working with them in the main UI thread to avoid the dreaded &amp;quot;Force Close&amp;quot; popup.&lt;/p&gt;
 
@@ -518,7 +518,7 @@
 
 &lt;p&gt;The Android SDK and related tools provide a way to run emulators of various devices for testing your apps, and I did this for a while but frankly found the whole process very slow.  In the end, &lt;em&gt;I wound up doing almost all development with my actual phone connected&lt;/em&gt;.  This was faster, gave me a more accurate sense of how the app would work, and frankly I got a kick out of seeing something I wrote on my actual phone that I use every day.  As a bonus, my phone always had the last version I tested on it, so I was easily able to test my app at the gym to work out kinks (get it? WORK OUT kinks? har har har) well before releasing it.  I also had a tablet that I tested on, but never ran the emulator again after using my phone, so I have no idea if my app works like shit on other devices.&lt;/p&gt;
 
-&lt;table class=&#39;image alignright&#39; width=&#39;174&#39;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/Screenshot_2013-08-25-15-11-33-168x300.png&quot; width=&#39;168&#39; height=&#39;300&#39;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;table class='image alignright' width='174'&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/Screenshot_2013-08-25-15-11-33-168x300.png&quot; width='168' height='300'/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 
 &lt;p&gt;I dealt with the Android version fragmentation as poorly as I could have: &lt;strong&gt;screw you if you have an old phone&lt;/strong&gt;.  I would write code using specific features of the Android API, and whenever ADT would warn me that I was using an API that was newer than my target API, I just bumped my target API.  What originally started as an app that would work on Froyo quickly became an app that would work on Honeycomb, as I found the hoop-jumping needed to work around not having an ActionBar simply not worth the hassle.  Shortly after, I wound up wanting to use some simple function that required Ice Cream Sandwich as the target.  This function would have been easy to write on my own, but it was even easier to just bump my target API again.  Not exactly the tactic I&amp;#39;d take if I were doing Android professionally, but good enough for something I&amp;#39;m doing in my spare time.  Hey, I made a setting to let people switch from Imperial to Metric units even though I live in the U.S., what more do you people want from me?&lt;/p&gt;
 
@@ -538,7 +538,7 @@
 
 &lt;p&gt;I really enjoyed my Android experience.  In fact, I set about writing the followup, &lt;a href=&quot;https://play.google.com/store/apps/details?id=com.nomachetejuggling.scl&amp;amp;hl=en&quot;&gt;Simple Cardio Log&lt;/a&gt;, and completed it in about 4 days, largely stealing a lot of code from Simple Strength Log.  While developing it, I learned a bit more, especially about the Android UI, that I wound up backporting back into the Strength Log.&lt;/p&gt;
 
-&lt;table class=&#39;image alignright&#39; width=&#39;174&#39;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/Screenshot_2013-08-29-21-07-13-168x300.png&quot; width=&#39;168&#39; height=&#39;300&#39;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;table class='image alignright' width='174'&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/Screenshot_2013-08-29-21-07-13-168x300.png&quot; width='168' height='300'/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 
 &lt;p&gt;I definitely intend on doing more Android development.  I do indeed plan to write the followup apps like Simple Food Log (my next one) and maybe even a non-free apps that work with the output files.&lt;/p&gt;
 
@@ -559,7 +559,7 @@
 
 &lt;p&gt;OSCON was a radical departure for me.  UberConf is a &amp;quot;Java/Agility&amp;quot; conference, and since I work almost exclusively with the JVM in an Agile environment, it&amp;#39;s more or less custom-tailored to my interests.  OSCON, however, had a huge variety of different tracks and a similarly varied group of attendees.  There were Python folks, Ruby folks, hardware hackers, system admins, operations gurus, cloud nerds, data geeks, perl wonks, and more.  I picked OSCON because, while the variety was less tailored to my interests, the sheer number of tracks (18 concurrent sessions per time slot!) made up for it.&lt;/p&gt;
 
-&lt;table class=&#39;image aligncenter&#39; width=&#39;586&#39;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/IMG_20130721_145702-580x435.jpg&quot; width=&#39;580&#39; height=&#39;435&#39;/&gt;&lt;p class=&#39;caption&#39;&gt;OSCON!&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;table class='image aligncenter' width='586'&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/IMG_20130721_145702-580x435.jpg&quot; width='580' height='435'/&gt;&lt;p class='caption'&gt;OSCON!&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 
 &lt;p&gt;Here is my review of the OSCON experience.  OSCON was the first conference I&amp;#39;ve been to outside of my home state, and really the first one not run by the Rocky Mountain Software Symposium.  As such, it will be unavoidable that I will be comparing it largely to my UberConf experience, since it&amp;#39;s my only real frame of reference.  I will try to address each element of the conference separately.&lt;/p&gt;
 
@@ -571,7 +571,7 @@
 
 &lt;p&gt;Only a few times did this wide focus hurt my session-taking ability.  One example that comes to mind was a talk on how to keep long-running server applications alive.  The topic sounded interesting, and at a JVM-focused conference this would have probably been about JVM tuning, garbage collection tweaking, Tomcat, and similar topics.  Here it was all about server daemons, cron jobs, signal interceptions, and the like.  I was bummed because I liked the idea of the talk but the technology it applied to was too far out out my zone of usefulness that I skipped it.  Another talk that seemed interesting used Erlang as the basis language, and having never used it, I was worried the talk would be over my head in detail so I skipped that too.  These occurrences were rare, but frustrating.&lt;/p&gt;
 
-&lt;table class=&#39;image alignleft&#39; width=&#39;306&#39;&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&#39;http://www.flickr.com/photos/oreillyconf/9356688516/in/set-72157634769772086&#39;&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/oscon_session-300x200.jpg&quot; width=&#39;300&#39; height=&#39;200&#39;/&gt;&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;table class='image alignleft' width='306'&gt;&lt;tr&gt;&lt;td&gt;&lt;a href='http://www.flickr.com/photos/oreillyconf/9356688516/in/set-72157634769772086'&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/oscon_session-300x200.jpg&quot; width='300' height='200'/&gt;&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 
 &lt;p&gt;One thing lacking were &amp;quot;agility&amp;quot;-based talks.  I actually liked this, I&amp;#39;ve found that almost every talk I&amp;#39;ve ever attended on something related to agile is really high-level and borderline useless.  They always tend to be like &amp;quot;you should read this book, it&amp;#39;s good&amp;quot; and full of a lot of filler or academic advice.  Having virtually no talks like that cleared space for more technical talks, which are the kind I enjoy more, so I appreciated that.  I think someone that enjoys talks like that might have had a tougher time at OSCON, but I enjoyed it.&lt;/p&gt;
 
@@ -579,7 +579,7 @@
 
 &lt;p&gt;The number of parallel tracks was excellent.  There was only one time slot where none of the sessions excited me, every other time slot forced me to choose between 2 or 3 that I really wanted.  That&amp;#39;s a great problem to have.  I like choice.&lt;/p&gt;
 
-&lt;table class=&#39;image alignright&#39; width=&#39;306&#39;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/picard-facepalm-300x197.jpg&quot; width=&#39;300&#39; height=&#39;197&#39;/&gt;&lt;p class=&#39;caption&#39;&gt;Not this &#39;not this shit again&#39; shit again.&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;table class='image alignright' width='306'&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/picard-facepalm-300x197.jpg&quot; width='300' height='197'/&gt;&lt;p class='caption'&gt;Not this 'not this shit again' shit again.&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 
 &lt;p&gt;One thing I have to complain about is a trend I&amp;#39;m noticing in more and more talks.  This was present at UberConf last year, I see it in User Group talks, and it was out in spades at OSCON.  &lt;strong&gt;People putting stupid meme image macros in their slides&lt;/strong&gt;.  Dumb pictures of rage comic faces, grumpy cat, tired old memes that I&amp;#39;ve seen reposted to reddit about a billion times.  I saw the &lt;a href=&quot;http://knowyourmeme.com/memes/facepalm&quot;&gt;Picard facepalm image&lt;/a&gt; three separate times.  It was like a damn &amp;quot;applause&amp;quot; sign for a sitcom studio audience, whenever the speaker needed a quick chuckle, something would pop up with huge Impact font.  I unsubscribed from every default subreddit to get away from this hackneyed, unfunny crap, why do so many speakers feel compelled to put this &amp;quot;omg guise I&amp;#39;m on reddit too!!!&amp;quot; narwhal baconing crap in their slides? Grr.&lt;/p&gt;
 
@@ -601,7 +601,7 @@
 
 &lt;p&gt;We got to see an &lt;a href=&quot;http://www.youtube.com/embed/Ty9QDqV-_Ak?autoplay=1&quot;&gt;AR drone being controlled by Clojure&lt;/a&gt; (I want one), hear about choosing licenses for GitHub projects, learn about the &lt;em&gt;cough&lt;/em&gt;total-bullshit&lt;em&gt;cough&lt;/em&gt; We The People project, and Piers Cawley showed up to &lt;a href=&quot;http://www.youtube.com/watch?v=YNeTBKyrHeY&amp;amp;t=1m49s&quot;&gt;sing a song about space&lt;/a&gt; and, I&amp;#39;m pretty sure, &lt;a href=&quot;http://www.youtube.com/watch?v=YNeTBKyrHeY&amp;amp;t=4m41s&quot;&gt;chastise us for swearing too much&lt;/a&gt;.&lt;/p&gt;
 
-&lt;table class=&#39;image alignleft&#39; width=&#39;306&#39;&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&#39;http://www.flickr.com/photos/oreillyconf/9363469980/in/set-72157634769772086&#39;&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/oscon_keynotes-300x200.jpg&quot; width=&#39;300&#39; height=&#39;200&#39;/&gt;&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;table class='image alignleft' width='306'&gt;&lt;tr&gt;&lt;td&gt;&lt;a href='http://www.flickr.com/photos/oreillyconf/9363469980/in/set-72157634769772086'&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/oscon_keynotes-300x200.jpg&quot; width='300' height='200'/&gt;&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 
 &lt;p&gt;Overall, I liked the short-format Keynotes.  I think the longer keynotes have to be extremely broad and high-level to be applicable to everyone in attendance, which generally means they&amp;#39;re not technical at all so I hate them.  The 10-minute keynote format meant that a whole bunch of different speakers could talk on different topics which actually allowed them to be more technical and interesting.&lt;/p&gt;
 
@@ -615,7 +615,7 @@
 
 &lt;p&gt;OSCON also ran this puzzle game, where you had to collect all of these little puzzle pieces and the first 500 people to finish the puzzle got an OSCON sweatshirt and were entered into a drawing for prizes.  The only way to get most of the puzzle pieces was by visiting specific vendor booths.  I really wanted the sweatshirt, so I took this game really, really seriously.  Like, &lt;strong&gt;way too seriously&lt;/strong&gt;.  Okay, I actually walked to a Walgreen&amp;#39;s and bought a bottle of glue so that I could glue down all of my pieces on Tuesday night so that when I collected the final piece from attending the Wednesday morning keynotes, I could immediately run to the registration booth and turn in my puzzle.  They were still unboxing the sweatshirts when I turned mine in, I think I wound up being the first person done.  I was worried that everyone was going to take it super seriously and I wouldn&amp;#39;t get the sweatshirt, and I figured pre-gluing my puzzle would give me an edge over anyone just starting to assemble the puzzle after getting the last piece.  In retrospect, I was being a complete psychopath, because people were still completing their puzzles Thursday night and getting sweatshirts, so clearly I&amp;#39;m an insane person.&lt;/p&gt;
 
-&lt;table class=&#39;image alignright&#39; width=&#39;306&#39;&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&#39;http://www.flickr.com/photos/oreillyconf/9353919205/in/set-72157634769772086&#39;&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/oscon_expo-300x200.jpg&quot; width=&#39;300&#39; height=&#39;200&#39;/&gt;&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;table class='image alignright' width='306'&gt;&lt;tr&gt;&lt;td&gt;&lt;a href='http://www.flickr.com/photos/oreillyconf/9353919205/in/set-72157634769772086'&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/oscon_expo-300x200.jpg&quot; width='300' height='200'/&gt;&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 
 &lt;p&gt;I really enjoyed the Expo Hall, I found myself kind of wandering around it whenever I had some time to kill, or checking it out just before leaving for the day to see if there were any extra goodies.  I didn&amp;#39;t even get too heavily marketed to, I only occasionally got stuck listening to a marketing spiel while waiting for a T-Shirt. On one occasion I was told by a Rackspace representative that the only way to get the shirt was to play a game, but when I looked at the game it looked like some kind of Wii-like activity on a big TV screen in front of approximately eighty billion people.  I said nevermind and started to walk away, dejected, which kind of saddened me because I actually wanted a Rackspace shirt due to already &lt;strong&gt;being&lt;/strong&gt; a Rackspace customer and liking the product.  As I started leaving, a different representative said &amp;quot;I&amp;#39;ll give you a shirt man, what size?&amp;quot; and gave me a shirt without making me act like an idiot in the middle of the huge expo hall.  Thanks, random Rackspace dude, I don&amp;#39;t know why a company would make someone jump through hoops for the honor of becoming a walking billboard for that company for free.&lt;/p&gt;
 
@@ -625,7 +625,7 @@
 
 &lt;p&gt;I wish I had a lot to say about the crowd at OSCON, but I don&amp;#39;t.  A colleague of mine warned me that he&amp;#39;d been before and that the crowd was &amp;quot;neckbeardy&amp;quot; but I didn&amp;#39;t notice much difference between them and the UberConf crowd.  Lots of nerdy T-Shirts, and overall far too much facial and body hair in general, but the crowd didn&amp;#39;t strike me as obnoxious.  I am glad I decided not to pack my &lt;a href=&quot;https://supporters.eff.org/shop&quot;&gt;EFF T-Shirt&lt;/a&gt;, which almost looked like some kind of a uniform with this crowd.&lt;/p&gt;
 
-&lt;table class=&#39;image alignleft&#39; width=&#39;306&#39;&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&#39;http://www.flickr.com/photos/oreillyconf/9360697295/in/set-72157634769772086&#39;&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/oscon_lunch-300x200.jpg&quot; width=&#39;300&#39; height=&#39;200&#39;/&gt;&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;table class='image alignleft' width='306'&gt;&lt;tr&gt;&lt;td&gt;&lt;a href='http://www.flickr.com/photos/oreillyconf/9360697295/in/set-72157634769772086'&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/oscon_lunch-300x200.jpg&quot; width='300' height='200'/&gt;&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 
 &lt;p&gt;Everyone seemed smart and very passionate about their particular areas of interest.  One neat thing OSCON had were these networking ribbons you could pick up with the names of things you might like (&amp;quot;Perl&amp;quot;, &amp;quot;Java&amp;quot;, &amp;quot;Big Data&amp;quot;, etc.) and attach them to your conference badge; O&amp;#39;Reilly also set aside a number of labeled tables at lunch for like-minded folks to gather together and geek out.&lt;/p&gt;
 
@@ -655,7 +655,7 @@
 
 &lt;p&gt;One neat touch of OSCON that I enjoyed was the personalized schedule.  One of my biggest challenges with these conferences is figuring out which sessions to go to, I often print out the schedules and use an elaborate system of markings to indicate preferences and possible substitutions, it&amp;#39;s all very A Beautiful Mind.  OSCON allows you to log in and actually mark sessions right there on the site.  What&amp;#39;s more, you can subscribe to an iCal feed of your personalized schedule, and you can sync it to a special OSCON smartphone app that displays the rooms for the sessions and can be set to notify you before they start.  Freaking cool.&lt;/p&gt;
 
-&lt;table class=&#39;image aligncenter&#39; width=&#39;586&#39;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/IMG_20130727_205308-e1375128008444-580x494.jpg&quot; width=&#39;580&#39; height=&#39;494&#39;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;table class='image aligncenter' width='586'&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/IMG_20130727_205308-e1375128008444-580x494.jpg&quot; width='580' height='494'/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 
 &lt;p&gt;I really had a great time at OSCON, I&amp;#39;m very glad I went.  I do wish for something that&amp;#39;s a bit more of a happy medium between OSCON and UberConf, with one-hour sessions, and I really wish these conventions would start putting the hammer down on what allows a session to be called a &amp;quot;workshop&amp;quot;, but I definitely enjoyed the experience and I hope to go again next year.&lt;/p&gt;
 </description>
@@ -715,7 +715,7 @@
 
 &lt;p&gt;For a final paper, we had to pick a topic of our own choosing in Complexity Theory and research it on our own.  For my topic, I choose to explore a bunch of the other important classes in complexity theory.  I had never had any exposure to any of these classes before, so I really enjoyed this project, though I was unable to cover as many classes as I&amp;#39;d have liked, and none of them in as much depth as I was hoping.&lt;/p&gt;
 
-&lt;table class=&#39;image alignright&#39; width=&#39;306&#39;&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&#39;http://jeremykun.wordpress.com/2012/02/29/other-complexity-classes/&#39;&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/chp_venn_diagram-300x270.jpg&quot; width=&#39;300&#39; height=&#39;270&#39;/&gt;&lt;/a&gt;&lt;p class=&#39;caption&#39;&gt;Complexity Classes, from Math ∩ Programming&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;table class='image alignright' width='306'&gt;&lt;tr&gt;&lt;td&gt;&lt;a href='http://jeremykun.wordpress.com/2012/02/29/other-complexity-classes/'&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/chp_venn_diagram-300x270.jpg&quot; width='300' height='270'/&gt;&lt;/a&gt;&lt;p class='caption'&gt;Complexity Classes, from Math ∩ Programming&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 
 &lt;p&gt;Nonetheless, I&amp;#39;m pretty happy with my paper, which provides an undergraduate-level explanation of 26 other complexity classes, based off &lt;a href=&quot;http://complexityzoo.uwaterloo.ca/Complexity_Zoo&quot;&gt;The Complexity Zoo&lt;/a&gt;, kept by MIT professor Scott Aaronson.  I tried to boil these classes down to the bare essentials and explain them with examples in plain english as much as I could.  The goal of the paper is to expose those new to Complexity Theory or early in their Computer Science careers to a handful of interesting classes and explain how they relate to each other, the more common classes, and of course the $$P =? NP$$ question.&lt;/p&gt;
 
@@ -754,7 +754,7 @@
 
 &lt;h1&gt;Cool Stuff in Scala&lt;/h1&gt;
 
-&lt;table class=&#39;image aligncenter&#39;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/artinodersky-209x300.jpg&quot;/&gt;&lt;p class=&#39;caption&#39;&gt;Close your eyes during lectures, it sometimes it sounds like Schwarzenegger is teaching you programming.&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;table class='image aligncenter'&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/artinodersky-209x300.jpg&quot;/&gt;&lt;p class='caption'&gt;Close your eyes during lectures, it sometimes it sounds like Schwarzenegger is teaching you programming.&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 
 &lt;p&gt;I really like how strict Scala is in terms of the compiler.  Many developers are embracing increasingly dynamic languages, but Scala bucks the trend.  The ability to define generics, covariant types, contravariant types, as well as the existence of classes like Any, AnyRef, and Nothing, allow developers to rely on the compiler to check things that, in other languages, can only be checked at runtime.  It&amp;#39;s possible to be this strict in Java most of the time, but somehow I feel like the way Scala handles this complexity is cleaner and more elegant.  At work, we implemented our own Dependency Injection system that checks all injections at compile time, no XML required.&lt;/p&gt;
 
@@ -780,7 +780,7 @@
 
 &lt;p&gt;There are a few nags I have about Scala.  It&amp;#39;s power comes with a price - even though I understand Scala pretty well now, it&amp;#39;s still common for me to encounter code that looks almost unreadable, sometimes resembling particularly bad Perl programs.  I have to really sit and stare at this code to parse it, which can be time-consuming.  This seems to be common even among seasoned Scala vets, which is disheartening.&lt;/p&gt;
 
-&lt;table class=&#39;image alignleft&#39; width=&#39;306&#39;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/scala_logo-e1323974677125-300x83.png&quot; width=&#39;300&#39; height=&#39;83&#39;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;table class='image alignleft' width='306'&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/scala_logo-e1323974677125-300x83.png&quot; width='300' height='83'/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 
 &lt;p&gt;There are also some nags I have about the language design itself.  I hate that XML is treated as a first class type with lots of compiler support, but regular expressions are not.  In 2012, it&amp;#39;s difficult for me to take an expressive language seriously if I can&amp;#39;t define a regex without first creating a String.  It also annoys me that there is an annotation that makes the compiler check for tail recursion, but not one that provides automatic function memoization.&lt;/p&gt;
 
@@ -805,7 +805,7 @@
 
 &lt;p&gt;&amp;quot;The Career Programmer&amp;quot; is meant to be a dispensation of wisdom from a sage, a book that gives younger programmers keen insights from someone who has been in the industry for a long, long time.  I tend to really enjoy books like this, so I picked up a copy.  Unfortunately, it comes across as an anachronism, like the book time-traveled out of the mid-90&amp;#39;s. While reading it, I felt compelled to double-check the publication year, and was absolutely astonished that it was printed in 2006. The &amp;quot;wisdom&amp;quot; of the book is so hopelessly out of date with the current state of software development that I cannot recommend it to absolutely anyone.&lt;/p&gt;
 
-&lt;table class=&#39;image alignright&#39; width=&#39;156&#39;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/5818099394_e53fa3eb39_o-150x150.png&quot; width=&#39;150&#39; height=&#39;150&#39;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;table class='image alignright' width='156'&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/5818099394_e53fa3eb39_o-150x150.png&quot; width='150' height='150'/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 
 &lt;p&gt;Duncan&amp;#39;s view of software development is straight out of Dilbert. Managers are idiots that hold all the power, programmers are just lackeys that do what they are told. In his world, &amp;quot;shit rolls downhill&amp;quot; and programmers are at the bottom of the hill. Duncan has over a decade of experience in the industry, which is the basis for his advice. Well, I also have a decade of experience and I have never, ever worked in a place as dysfunctional as what he describes as typical. Perhaps I am extremely lucky or just extremely talented, but I doubt either of those are true.  If I found myself at a company like those Duncan describes, I&amp;#39;d leave immediately and get a new job, I certainly wouldn&amp;#39;t build a 10-year career stringing those experiences together.&lt;/p&gt;
 
@@ -817,7 +817,7 @@
 
 &lt;p&gt;Duncan&amp;#39;s book is meant to contain tips for avoiding this scenario, but I&amp;#39;ve avoided this scenario my whole life without them.  In my 10-year career, I have worked late on exactly 3 occasions, each lasting no longer than one week. On these occasions, I was home by 9pm. On 2 of those 3 occasions, my team and I worked late not because it was expected of us, but because we had messed up and supplied a commitment we shouldn&amp;#39;t have, and we felt honor-bound to meet it. Any other work outside of office hours has typically been a midnight deployment, and the expectation has always been that I&amp;#39;d be sleeping in and coming in late the following day. &lt;/p&gt;
 
-&lt;table class=&#39;image alignleft&#39; width=&#39;306&#39;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/pillows-for-working-late_2-300x200.jpg&quot; width=&#39;300&#39; height=&#39;200&#39;/&gt;&lt;p class=&#39;caption&#39;&gt;Probably not his best work.&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;table class='image alignleft' width='306'&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/pillows-for-working-late_2-300x200.jpg&quot; width='300' height='200'/&gt;&lt;p class='caption'&gt;Probably not his best work.&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 
 &lt;p&gt;Pointy-haired bosses have never demanded I work late to meet a deadline. In my experience, programmers that habitually work late are the worst programmers, constantly digging themselves into spaghetti code nightmares that result in them making up for lost time.  Working late is an admission that you suck too much to get your job done during business hours, and most managers know this. I don&amp;#39;t think my experiences are the exception, I think they are the rule.  Most companies simply don&amp;#39;t operate this way anymore, and those that do tend not to have developers for long.  &lt;/p&gt;
 
@@ -833,7 +833,7 @@
 
 &lt;p&gt;The book constantly references the &amp;quot;maintenance programmer,&amp;quot; the concept of a programmer that takes over maintaining the system after the Serious Developers have built it. This type of development is such a glaring antipattern I can hardly have imagined someone mentioning it in any positive context in 2006. The programmers that write the system should maintain it, end of story. All programming is maintenance programming, developing a system and throwing it over the wall is a recipe for long-term disaster.  Again, I haven&amp;#39;t heard anyone talk this way in a long, long time.  Duncan&amp;#39;s notions of software are a blast from the past.&lt;/p&gt;
 
-&lt;table class=&#39;image alignright&#39; width=&#39;306&#39;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/spaghetti-300x225.jpg&quot; width=&#39;300&#39; height=&#39;225&#39;/&gt;&lt;p class=&#39;caption&#39;&gt;To be eaten, not compiled.&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;table class='image alignright' width='306'&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/spaghetti-300x225.jpg&quot; width='300' height='225'/&gt;&lt;p class='caption'&gt;To be eaten, not compiled.&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 
 &lt;p&gt;The real clincher for me was Duncan&amp;#39;s chapter on Effective Design Under Fire. Duncan acknowledges that there are many &amp;quot;excellent books on the software design process lining your shelves&amp;quot; but that he has &amp;quot;rarely been in a shop in which management gave the developers even a fraction of the time necessary to fully implement these methodologies.&amp;quot; First of all, writing well-crafted, maintainable, high-quality code is not management&amp;#39;s call, it&amp;#39;s &lt;em&gt;yours&lt;/em&gt; as a professional. &lt;strong&gt;To shirk your professional responsibility because of deadlines is to be professionally negligent.&lt;/strong&gt; Duncan confirms my worst suspicions when he states:&lt;/p&gt;
 
@@ -851,7 +851,7 @@
 &lt;p&gt;&amp;quot;just to be on the safe side and make sure we have a little cushion in case things go wrong, we multiply [our estimates] by two and give it to the project manager [who then will] multiply the numbers he was given by two and turn the estimate in&amp;quot;&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;table class=&#39;image alignleft&#39; width=&#39;306&#39;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/23458550-300x225.jpg&quot; width=&#39;300&#39; height=&#39;225&#39;/&gt;&lt;p class=&#39;caption&#39;&gt;Padding estimates.&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;table class='image alignleft' width='306'&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/23458550-300x225.jpg&quot; width='300' height='225'/&gt;&lt;p class='caption'&gt;Padding estimates.&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 
 &lt;p&gt;Duncan&amp;#39;s strategy for estimates is to pad all estimates by a factor of 4. Why 4? Why not 2, 3, or 8? What a completely unprofessional stab in the dark. How is possible to be this criminally unaware of scrum, sprints, story points, and velocity in 2006? For crying out loud, as our industry has matured and improved, even Scrum is out of date in favor of a more metrics-oriented planning within a Kanban framework - Duncan is two process methodologies behind the times.&lt;/p&gt;
 

@@ -112,13 +112,13 @@ public class Calculator {
 
   public int calculate(char operation, int operand1, int operand2) {
     switch (operation) {
-    case &#39;+&#39;:
+    case '+':
       return operand1 + operand2;
-    case &#39;-&#39;:
+    case '-':
       return operand1 - operand2;
     default:
       throw new UnsupportedOperationException(String.format(
-          &quot;&#39;%s&#39; is not a known operation&quot;, operation));
+          &quot;'%s' is not a known operation&quot;, operation));
     }
   }
 
@@ -143,17 +143,17 @@ public class CalculatorTest {
 
   @Test
   public void shouldAdd() {
-    assertEquals(5, calculator.calculate(&#39;+&#39;, 2, 3));
+    assertEquals(5, calculator.calculate('+', 2, 3));
   }
 
   @Test
   public void shouldSubtract() {
-    assertEquals(1, calculator.calculate(&#39;-&#39;, 5, 4));
+    assertEquals(1, calculator.calculate('-', 5, 4));
   }
 
   @Test(expected = UnsupportedOperationException.class)
   public void shouldThrowExceptionForUnknownOperation() {
-    calculator.calculate(&#39;Q&#39;, 1, 2);
+    calculator.calculate('Q', 1, 2);
   }
 }
 </code></pre></div>
@@ -186,9 +186,9 @@ public class NewCalculator {
 
   public int calculate(char operation, int operand1, int operand2) {
     switch (operation) {
-    case &#39;+&#39;:
+    case '+':
       return calculationProcessor.add(operand1, operand2);
-    case &#39;-&#39;:
+    case '-':
       return calculationProcessor.subtract(operand1, operand2);
     default:
       throw new UnsupportedOperationException(String.format(
@@ -223,19 +223,19 @@ public class NewCalculatorBadTest {
 
   @Test
   public void shouldAdd() {
-    calculator.calculate(&#39;+&#39;, 2, 3);
+    calculator.calculate('+', 2, 3);
     verify(mockCalculationProcessor).add(2,3);
   }
 
   @Test
   public void shouldSubtract() {
-    calculator.calculate(&#39;-&#39;, 2, 3);
+    calculator.calculate('-', 2, 3);
     verify(mockCalculationProcessor).subtract(2,3);
   }
 
   @Test(expected=UnsupportedOperationException.class)
   public void shouldThrowExceptionForUnknownOperation() {
-    calculator.calculate(&#39;Q&#39;, 1, 2);
+    calculator.calculate('Q', 1, 2);
   }
 }
 </code></pre></div>
@@ -264,17 +264,17 @@ public class NewCalculatorBetterTest {
 
   @Test
   public void shouldAdd() {
-    assertEquals(5, calculator.calculate(&#39;+&#39;, 2, 3));
+    assertEquals(5, calculator.calculate('+', 2, 3));
   }
 
   @Test
   public void shouldSubtract() {
-    assertEquals(1, calculator.calculate(&#39;-&#39;, 5, 4));
+    assertEquals(1, calculator.calculate('-', 5, 4));
   }
 
   @Test(expected = UnsupportedOperationException.class)
   public void shouldThrowExceptionForUnknownOperation() {
-    calculator.calculate(&#39;Q&#39;, 1, 2);
+    calculator.calculate('Q', 1, 2);
   }
 }
 </code></pre></div>

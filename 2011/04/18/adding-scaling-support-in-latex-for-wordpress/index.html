@@ -112,15 +112,15 @@ index e5bb652..87d2b90 100644
     if ($_REQUEST[&quot;latex_img_server&quot;] != &quot;custom&quot;)
         update_option(&quot;latex_img_server&quot;, $_REQUEST[&quot;latex_img_server&quot;]);
 @@ -125,9 +126,19 @@ if (isset($_REQUEST[&quot;update_latex_option&quot;])){
-             &lt;?php echo get_option(&#39;mathjax_server&#39;)==&#39;&#39;?&#39;checked=&quot;checked&quot;&#39;:&#39;&#39;;?&gt;
+             &lt;?php echo get_option('mathjax_server')==''?'checked=&quot;checked&quot;':'';?&gt;
             value=&quot;&quot; class=&quot;tog&quot;&gt;Turn off&lt;/label&gt;&lt;/th&gt;
-            &lt;td&gt;Displaying fourmula as images is good enough for me, and I don&#39;t want to use MathJax.&lt;/td&gt;
+            &lt;td&gt;Displaying fourmula as images is good enough for me, and I don't want to use MathJax.&lt;/td&gt;
 -       &lt;/tr&gt;
 +       &lt;/tr&gt;
 +&lt;tr&gt;
 +                        &lt;th scope=&quot;row&quot;&gt;Custom Config for MathJax&lt;/th&gt;
 +                        &lt;td&gt;
-+                                &lt;textarea name=&quot;mathjax_config&quot; rows=&quot;4&quot; cols=&quot;50&quot;&gt;&lt;?php echo get_option(&#39;mathjax_config&#39;);?&gt;&lt;/textarea&gt;&lt;br/&gt;
++                                &lt;textarea name=&quot;mathjax_config&quot; rows=&quot;4&quot; cols=&quot;50&quot;&gt;&lt;?php echo get_option('mathjax_config');?&gt;&lt;/textarea&gt;&lt;br/&gt;
 +For more information, consult the &lt;a href=&quot;http://www.mathjax.org/docs/1.1/options/HTML-CSS.html&quot;&gt;MathJax Config&lt;/a&gt; documentation.
 +
 +           &lt;/td&gt;
@@ -131,11 +131,11 @@ index e5bb652..87d2b90 100644
 -
 +
 
-    &lt;p class=&quot;submit&quot;&gt;&lt;input type=&quot;submit&quot; name=&#39;update_latex_option&#39; class=&quot;button-primary&quot; value=&quot;Update LaTeX Options&quot;&gt;&lt;/p&gt;
+    &lt;p class=&quot;submit&quot;&gt;&lt;input type=&quot;submit&quot; name='update_latex_option' class=&quot;button-primary&quot; value=&quot;Update LaTeX Options&quot;&gt;&lt;/p&gt;
     &lt;/form&gt;
 @@ -140,4 +151,4 @@ if (isset($_REQUEST[&quot;update_latex_option&quot;])){
         you need to delete your caches before the images are refreshing.&lt;/p&gt;
-        &lt;p class=&quot;submit&quot;&gt;&lt;input type=&quot;submit&quot; name=&#39;delete_cache&#39; class=&quot;button-primary&quot; value=&quot;Delete LaTex Caches&quot;&gt;&lt;/p&gt;
+        &lt;p class=&quot;submit&quot;&gt;&lt;input type=&quot;submit&quot; name='delete_cache' class=&quot;button-primary&quot; value=&quot;Delete LaTex Caches&quot;&gt;&lt;/p&gt;
     &lt;/form&gt;
 -&lt;/div&gt;
 \ No newline at end of file
@@ -151,19 +151,19 @@ index 1094c15..ce46e15 100644
 +       update_option(&quot;mathjax_config&quot;, &quot;scale:85&quot;);
  }
 
- register_activation_hook( __FILE__, &#39;latex_for_wp_activate&#39; );
+ register_activation_hook( __FILE__, 'latex_for_wp_activate' );
 @@ -173,7 +174,7 @@ function add_latex_mathjax_code(){
-    echo &#39;&lt;script type=&quot;text/x-mathjax-config&quot;&gt;
+    echo '&lt;script type=&quot;text/x-mathjax-config&quot;&gt;
         MathJax.Hub.Config({
         &quot;HTML-CSS&quot;: {
 -           scale: 85
-+           &#39;.get_option(&quot;mathjax_config&quot;).&#39;
++           '.get_option(&quot;mathjax_config&quot;).'
         }
     });&lt;/script&gt;
-    &lt;script type=&quot;text/javascript&quot; src=&quot;&#39;.get_option(&quot;mathjax_server&quot;).&#39;&quot;&gt;&lt;/script&gt;&#39;;
+    &lt;script type=&quot;text/javascript&quot; src=&quot;'.get_option(&quot;mathjax_server&quot;).'&quot;&gt;&lt;/script&gt;';
 @@ -192,4 +193,4 @@ $latex_qmr_work_tags = array(
  foreach ( $latex_qmr_work_tags as $latex_qmr_work_tag ) {
-    remove_filter ($latex_qmr_work_tag, &#39;wptexturize&#39;);
+    remove_filter ($latex_qmr_work_tag, 'wptexturize');
  }
 -?&gt;
 \ No newline at end of file

@@ -101,7 +101,7 @@
 <p>So our idea was to combine two metrics: the class complexity (based on <a href="http://en.wikipedia.org/wiki/Cyclomatic_complexity">McCabe Cyclomatic Complexity</a>) and the number of times a file has been modified in the codebase.  The idea here was, every time a file has to be modified, it has to be read.  A complex file is harder to read, making the engineer more likely to misunderstand or make a mistake while editing the file.</p>
 
 <p>Luckily, git makes it quite easy to count the number of modifications to files in the codebase:</p>
-<div class="highlight"><pre><code class="language-terminal" data-lang="terminal">git whatchanged | grep &#39;^:.*alm-webapp/src/main/java/.*\.java$&#39; | cut -c65- | sed -e &#39;s/\//./g&#39; -e &#39;s/.java//&#39; | sort | uniq -c | sort -r
+<div class="highlight"><pre><code class="language-terminal" data-lang="terminal">git whatchanged | grep '^:.*alm-webapp/src/main/java/.*\.java$' | cut -c65- | sed -e 's/\//./g' -e 's/.java//' | sort | uniq -c | sort -r
 </code></pre></div>
 <p>Obviously, the grep and cut would have to be modified slightly depending on your codebase structure.  The grep is used to ensure only our code is looked at, excluding any third-party code in the system.  The cut and seds are mostly just about munging the filenames into &quot;probable&quot; classnames, since that&#39;s more useful (and what Sonar stores).</p>
 
@@ -113,7 +113,7 @@ FROM snapshots, project_measures, projects
 WHERE islast = 1
   AND project_measures.snapshot_id = snapshots.id
   AND project_measures.metric_id = 12
-  AND snapshots.qualifier = &#39;CLA&#39;
+  AND snapshots.qualifier = 'CLA'
   AND snapshots.project_id = projects.id
 </code></pre></div>
 <p>We wrote a Ruby script that pulled the data from these two sources and correlated them together, deriving an eventual &quot;weighted rank&quot; from the two.  We went on to include a few more metrics in the final equation.   Output from the script looks like this:</p>
@@ -171,7 +171,7 @@ def add_complexity_data(class_data)
     WHERE islast = 1
       AND project_measures.snapshot_id = snapshots.id
       AND project_measures.metric_id in (#{METRICS.keys.join(&quot;,&quot;)})
-      AND snapshots.qualifier = &#39;CLA&#39;
+      AND snapshots.qualifier = 'CLA'
       AND snapshots.project_id = projects.id
     EOF
 
@@ -193,7 +193,7 @@ end
 
 def add_revision_data(class_data)
   print_around &quot;Calculating revision data from git&quot; do
-    file_changes = `git whatchanged | grep &#39;^:.*alm-webapp/src/main/java/.*\.java$&#39; | cut -c65- | sed -e &#39;s/\//./g&#39; -e &#39;s/.java//&#39; | sort | uniq -c | sort -r`
+    file_changes = `git whatchanged | grep '^:.*alm-webapp/src/main/java/.*\.java$' | cut -c65- | sed -e 's/\//./g' -e 's/.java//' | sort | uniq -c | sort -r`
     # file_changes = `cat modified.txt`
 
     file_changes.each do |file_change_line|
