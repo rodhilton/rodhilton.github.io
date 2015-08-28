@@ -10,10 +10,7 @@
 				<title>Testing Against Template Renders in Grails</title>
 				<description>&lt;p&gt;I work with Grails a lot and while I really enjoy it for the most part, there are definitely some weird quirks of the framework.&lt;/p&gt;
 
-&lt;p&gt;One such quirk is something I encounter whenever I want to write unit tests against grails controller methods that render out templates directly.  This isn&amp;#39;t something I do very often - generally I prefer rendering out JSON and parsing it with client-JS - but in some cases when there&amp;#39;s a lot of markup for a page element that you want to be updateable via ajax, it makes sense to render out a template like so:&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-groovy&quot; data-lang=&quot;groovy&quot;&gt;render(template: 'payMyBill')
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Directly from a controller method.&lt;/p&gt;
+&lt;p&gt;One such quirk is something I encounter whenever I want to write unit tests against grails controller methods that render out templates directly.  This isn&amp;#39;t something I do very often - generally I prefer rendering out JSON and parsing it with client-JS - but in some cases when there&amp;#39;s a lot of markup for a page element that you want to be updateable via ajax, it makes sense to render out a template like &lt;code&gt;render(template: &amp;#39;somePartial&amp;#39;)&lt;/code&gt; directly from a controller method.&lt;/p&gt;
 
 &lt;p&gt;Unfortunately, these kinds of methods are very difficult to write tests against.  While a normal render exposes a &lt;code&gt;model&lt;/code&gt; and &lt;code&gt;view&lt;/code&gt; variable that you can test against, for some reason using a render with a template doesn&amp;#39;t seem to do this.&lt;/p&gt;
 

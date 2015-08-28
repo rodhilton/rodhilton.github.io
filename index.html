@@ -87,13 +87,13 @@
 		<p class="meta">
 		<b title="grails and code">PROGRAMMING</b> - 
 		August 27, 2015 - 
-		398 words -
+		393 words -
 		<a href="/2015/08/27/testing-against-template-renders-in-grails/#disqus_thread">Comments</a>
 		</p>
 	</div>
 </div>
 		  	<div class="postentry">
-				<p>I work with Grails a lot and while I really enjoy it for the most part, there are definitely some weird quirks of the framework.</p><p>One such quirk is something I encounter whenever I want to write unit tests against grails controller methods that render out templates directly.  This isn&#39;t something I do very often - generally I prefer rendering out JSON and parsing it with client-JS - but in some cases when there&#39;s a lot of markup for a page element that you want to be updateable via ajax, it makes sense to render out a template like so:</p><p>Directly from a controller method.</p><p>Unfortunately, these kinds of methods are very difficult to write tests against.  While a normal render exposes a <code>model</code> and <code>view</code> variable that you can test against, for some reason using a render with a template doesn&#39;t seem to do this.</p>
+				<p>I work with Grails a lot and while I really enjoy it for the most part, there are definitely some weird quirks of the framework.</p><p>One such quirk is something I encounter whenever I want to write unit tests against grails controller methods that render out templates directly.  This isn&#39;t something I do very often - generally I prefer rendering out JSON and parsing it with client-JS - but in some cases when there&#39;s a lot of markup for a page element that you want to be updateable via ajax, it makes sense to render out a template like <code>render(template: &#39;somePartial&#39;)</code> directly from a controller method.</p><p>Unfortunately, these kinds of methods are very difficult to write tests against.  While a normal render exposes a <code>model</code> and <code>view</code> variable that you can test against, for some reason using a render with a template doesn&#39;t seem to do this.</p><p>I&#39;ve seen lots of solutions where you stuff a fake string matching the name of the template using some metaclass wizardry, but then you&#39;re stuck dealing with some semi-view stuff in what you might want to simply be a unit test about the model values placed by the controller method.</p>
 
         <p><a href="/2015/08/27/testing-against-template-renders-in-grails/">Read the rest of "Testing Against Template Renders in Grails" &raquo;</a></p>
 			</div>
