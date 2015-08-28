@@ -7,6 +7,77 @@
 		<atom:link href="http://www.nomachetejuggling.com/category/programming/rss.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
+				<title>Testing Against Template Renders in Grails</title>
+				<description>&lt;p&gt;I work with Grails a lot and while I really enjoy it for the most part, there are definitely some weird quirks of the framework.&lt;/p&gt;
+
+&lt;p&gt;One such quirk is something I encounter whenever I want to write unit tests against grails controller methods that render out templates directly.  This isn&amp;#39;t something I do very often - generally I prefer rendering out JSON and parsing it with client-JS - but in some cases when there&amp;#39;s a lot of markup for a page element that you want to be updateable via ajax, it makes sense to render out a template like so:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-groovy&quot; data-lang=&quot;groovy&quot;&gt;render(template: 'payMyBill')
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Directly from a controller method.&lt;/p&gt;
+
+&lt;p&gt;Unfortunately, these kinds of methods are very difficult to write tests against.  While a normal render exposes a &lt;code&gt;model&lt;/code&gt; and &lt;code&gt;view&lt;/code&gt; variable that you can test against, for some reason using a render with a template doesn&amp;#39;t seem to do this.&lt;/p&gt;
+
+&lt;p&gt;I&amp;#39;ve seen lots of solutions where you stuff a fake string matching the name of the template using some metaclass wizardry, but then you&amp;#39;re stuck dealing with some semi-view stuff in what you might want to simply be a unit test about the model values placed by the controller method.&lt;/p&gt;
+
+&lt;p&gt;However, based on &lt;a href=&quot;http://stackoverflow.com/questions/15141319/grails-controller-test-making-assertions-about-model-when-rendering-a-template&quot;&gt;this StackOverflow post&lt;/a&gt;, I&amp;#39;ve written a quick-and-dirty little monkeypatch that exposes the &lt;code&gt;model&lt;/code&gt; and &lt;code&gt;view&lt;/code&gt; variables in your test, and populated with the values relevant to the template.&lt;/p&gt;
+
+&lt;p&gt;I&amp;#39;ve got this method in a &lt;code&gt;TestUtil&lt;/code&gt; class:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-groovy&quot; data-lang=&quot;groovy&quot;&gt;static def ensureModelForTemplates(con) {
+    def originalMethod = con.metaClass.getMetaMethod('render', [Map] as Class[])
+    con.metaClass.render = { Map args -&amp;gt;
+        if (args[&amp;quot;template&amp;quot;]) {
+            con.modelAndView = new ModelAndView(
+                args[&amp;quot;template&amp;quot;] as String, 
+                args[&amp;quot;model&amp;quot;] as Map
+            )
+        }
+        originalMethod.invoke(delegate, args)
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Then I can call this method with the controller as a parameter anywhere before I invoke the controller action.  It can go in a &lt;code&gt;setup&lt;/code&gt; or &lt;code&gt;@Before&lt;/code&gt; method, it seems to work from both Spock tests and the builtin Grails testing framework.&lt;/p&gt;
+
+&lt;p&gt;So if we have this example:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-groovy&quot; data-lang=&quot;groovy&quot;&gt;class ExampleController {
+
+    def index() {
+        def bigName = params.name.toUpperCase()
+
+        render(template: &amp;quot;partial&amp;quot;, model: [
+            one: &amp;quot;hello&amp;quot;,
+            two: bigName
+        ])
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;This test will do what we want:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-groovy&quot; data-lang=&quot;groovy&quot;&gt;@TestFor(ExampleController)
+class ExampleControllerSpec extends Specification {
+
+    def setup() {
+        TestUtil.ensureModelForTemplates(controller)
+    }
+
+    def shouldHaveModelAndViewExposed() {
+        given:
+        params.name = &amp;quot;Rod&amp;quot;
+
+        when:
+        controller.index()
+
+        then:
+        view == &amp;quot;partial&amp;quot;
+        model.one == &amp;quot;hello&amp;quot;
+        model.two == &amp;quot;ROD&amp;quot;
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+				<pubDate>Thu, 27 Aug 2015 00:00:00 -0600</pubDate>
+				<link>http://www.nomachetejuggling.com/2015/08/27/testing-against-template-renders-in-grails/</link>
+				<guid isPermaLink="true">http://www.nomachetejuggling.com/2015/08/27/testing-against-template-renders-in-grails/</guid>
+			</item>
+		
+			<item>
 				<title>QCon New York 2015: A Review</title>
 				<description>&lt;p&gt;My default yearly conference, for many years, has been &lt;a href=&quot;http://uberconf.com/conference/denver/2015/07/home&quot;&gt;UberConf&lt;/a&gt;.  I really enjoy UberConf because it&amp;#39;s packed full of lots of great sessions, and it&amp;#39;s conveniently local.  However, because I go to various local user groups and attend so often, I find that, if I go two years in a row there are too many sessions I&amp;#39;ve seen before, and I wind up disappointed.  So for the past few years, I&amp;#39;ve been alternating between UberConf and something new.  Two years ago, it was &lt;a href=&quot;http://www.nomachetejuggling.com/2013/07/30/oscon-2013-a-review/&quot;&gt;OSCON&lt;/a&gt;, and this year it was &lt;a href=&quot;https://qconnewyork.com/&quot;&gt;QCon New York&lt;/a&gt;.&lt;/p&gt;
 
@@ -797,86 +868,6 @@
 				<pubDate>Fri, 26 Oct 2012 00:00:00 -0600</pubDate>
 				<link>http://www.nomachetejuggling.com/2012/10/26/scala-second-impressions/</link>
 				<guid isPermaLink="true">http://www.nomachetejuggling.com/2012/10/26/scala-second-impressions/</guid>
-			</item>
-		
-			<item>
-				<title>Book Review: The Career Programmer</title>
-				<description>&lt;p&gt;I recently read a book called &lt;a href=&quot;http://www.amazon.com/The-Career-Programmer-Guerilla-Imperfect/dp/1590596242&quot;&gt;The Career Programmer&lt;/a&gt; by &lt;a href=&quot;http://christopherduncan.com/&quot;&gt;Christopher Duncan&lt;/a&gt;.  I typically don&amp;#39;t post book reviews unless I really love a book and want to spread the word, but in this case I felt compelled to post in order to spread the warning.  I can&amp;#39;t remember a book I&amp;#39;ve hated more.&lt;/p&gt;
-
-&lt;p&gt;&amp;quot;The Career Programmer&amp;quot; is meant to be a dispensation of wisdom from a sage, a book that gives younger programmers keen insights from someone who has been in the industry for a long, long time.  I tend to really enjoy books like this, so I picked up a copy.  Unfortunately, it comes across as an anachronism, like the book time-traveled out of the mid-90&amp;#39;s. While reading it, I felt compelled to double-check the publication year, and was absolutely astonished that it was printed in 2006. The &amp;quot;wisdom&amp;quot; of the book is so hopelessly out of date with the current state of software development that I cannot recommend it to absolutely anyone.&lt;/p&gt;
-
-&lt;table class='image alignright' width='156'&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/5818099394_e53fa3eb39_o-150x150.png&quot; width='150' height='150'/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-
-&lt;p&gt;Duncan&amp;#39;s view of software development is straight out of Dilbert. Managers are idiots that hold all the power, programmers are just lackeys that do what they are told. In his world, &amp;quot;shit rolls downhill&amp;quot; and programmers are at the bottom of the hill. Duncan has over a decade of experience in the industry, which is the basis for his advice. Well, I also have a decade of experience and I have never, ever worked in a place as dysfunctional as what he describes as typical. Perhaps I am extremely lucky or just extremely talented, but I doubt either of those are true.  If I found myself at a company like those Duncan describes, I&amp;#39;d leave immediately and get a new job, I certainly wouldn&amp;#39;t build a 10-year career stringing those experiences together.&lt;/p&gt;
-
-&lt;p&gt;As an example of what I&amp;#39;m talking about, Duncan describes that programmers are expected to &amp;quot;do whatever it takes&amp;quot; to get the job done, which means:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&amp;quot;Now would be a great time to rent out your house because you&amp;#39;re not going to be seeing much of it until after the deadline. You will code, eat, and do everything but bathe in your cube for as many consecutive hours as you can manage to stay conscious.&amp;quot; &lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Duncan&amp;#39;s book is meant to contain tips for avoiding this scenario, but I&amp;#39;ve avoided this scenario my whole life without them.  In my 10-year career, I have worked late on exactly 3 occasions, each lasting no longer than one week. On these occasions, I was home by 9pm. On 2 of those 3 occasions, my team and I worked late not because it was expected of us, but because we had messed up and supplied a commitment we shouldn&amp;#39;t have, and we felt honor-bound to meet it. Any other work outside of office hours has typically been a midnight deployment, and the expectation has always been that I&amp;#39;d be sleeping in and coming in late the following day. &lt;/p&gt;
-
-&lt;table class='image alignleft' width='306'&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/pillows-for-working-late_2-300x200.jpg&quot; width='300' height='200'/&gt;&lt;p class='caption'&gt;Probably not his best work.&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-
-&lt;p&gt;Pointy-haired bosses have never demanded I work late to meet a deadline. In my experience, programmers that habitually work late are the worst programmers, constantly digging themselves into spaghetti code nightmares that result in them making up for lost time.  Working late is an admission that you suck too much to get your job done during business hours, and most managers know this. I don&amp;#39;t think my experiences are the exception, I think they are the rule.  Most companies simply don&amp;#39;t operate this way anymore, and those that do tend not to have developers for long.  &lt;/p&gt;
-
-&lt;p&gt;He goes on to talk about vague requirements with tight deadlines. He states:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&amp;quot;It&amp;#39;s almost completely unheard of in our business for management to ask us for a system without attaching a timetable of some sort.&amp;quot; &lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;This is nonsense, and can come only from a programmer who has had absolutely no experience with agile development. This kind of death march was common in a time when people were all-Waterfall, but in the post-&lt;a href=&quot;http://agilemanifesto.org/&quot;&gt;agile-manifesto&lt;/a&gt; world, this kind of thing is vanishingly rare. Almost every project I&amp;#39;ve worked on has either had a fixed delivery date with variable scope, or fixed scope with a variable delivery date; very rarely are both dimensions fixed.&lt;/p&gt;
-
-&lt;p&gt;Duncan confirms that his view of the world is based in Waterfall when he talks in Chapter 2 about how management often shortchanges the &amp;quot;Analysis and Design Phase&amp;quot; - terminology right out of Waterfall. Chapter 4 talks about gathering requirements in an official requirements gathering phase, and getting them &amp;quot;set in stone&amp;quot;. He argues that a formal requirements document gives you &amp;quot;ammunition further down the road when someone comes along and wants you to add additional features.&amp;quot; This kind of thing is dinosaur-talk, people who know what they are doing don&amp;#39;t develop software this way.  They gather small numbers of isolated requirements in user stories, and get those stories finished and in the hands of users.  In real life, &lt;strong&gt;software requirements are going to change&lt;/strong&gt; - pretending you can get requirements set in stone to protect yourself later on is simply divorced from reality. It&amp;#39;s far better to embrace a process that allows for that kind of shift, as virtually any professional software developer I&amp;#39;ve met in the last ten years would attest.&lt;/p&gt;
-
-&lt;p&gt;The book constantly references the &amp;quot;maintenance programmer,&amp;quot; the concept of a programmer that takes over maintaining the system after the Serious Developers have built it. This type of development is such a glaring antipattern I can hardly have imagined someone mentioning it in any positive context in 2006. The programmers that write the system should maintain it, end of story. All programming is maintenance programming, developing a system and throwing it over the wall is a recipe for long-term disaster.  Again, I haven&amp;#39;t heard anyone talk this way in a long, long time.  Duncan&amp;#39;s notions of software are a blast from the past.&lt;/p&gt;
-
-&lt;table class='image alignright' width='306'&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/spaghetti-300x225.jpg&quot; width='300' height='225'/&gt;&lt;p class='caption'&gt;To be eaten, not compiled.&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-
-&lt;p&gt;The real clincher for me was Duncan&amp;#39;s chapter on Effective Design Under Fire. Duncan acknowledges that there are many &amp;quot;excellent books on the software design process lining your shelves&amp;quot; but that he has &amp;quot;rarely been in a shop in which management gave the developers even a fraction of the time necessary to fully implement these methodologies.&amp;quot; First of all, writing well-crafted, maintainable, high-quality code is not management&amp;#39;s call, it&amp;#39;s &lt;em&gt;yours&lt;/em&gt; as a professional. &lt;strong&gt;To shirk your professional responsibility because of deadlines is to be professionally negligent.&lt;/strong&gt; Duncan confirms my worst suspicions when he states:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&amp;quot;I&amp;#39;m about to ... destroy my reputation in the eyes of credible and respectable professionals everywhere. However, I&amp;#39;ve got deadlines to meet, and I&amp;#39;ve always been more interested in that than looking respectable.&amp;quot;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Combine this attitude with Duncan&amp;#39;s belief in the &amp;quot;maintenance programmer&amp;quot; and the fact that he spent most of his 10-year career as a contractor and a pretty clear portrait is painted: Christopher Duncan comes off as someone who writes crappy code and then bounces to another job before having to maintain it. Duncan seems like the worst type of programmer: the guy who doesn&amp;#39;t worry about writing quality code because there&amp;#39;s Just No Time and then believes it&amp;#39;s someone else&amp;#39;s job to clean up after his mess.&lt;/p&gt;
-
-&lt;p&gt;When Duncan is explaining some tactics for good design, he advocates Big Design Up Front (wrong) but suggests to basically rush it as much as possible (doubly wrong). He argues for prototyping systems before actually building them (often wrong) but describes prototypes that are fully-functional UIs (wrong) with nonfunctional implementations (wrong). If you&amp;#39;re going to build a prototype, you should build a steel-thread prototype with a garbage UI - there is literally no point to the kind of prototype Duncan describes except to mislead your stakeholders about the progress of the system. His view couldn&amp;#39;t be more wrong.&lt;/p&gt;
-
-&lt;p&gt;Duncan argues that accurate estimates are essential. He devotes a chapter to improving your estimation technique which boils down to this:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&amp;quot;just to be on the safe side and make sure we have a little cushion in case things go wrong, we multiply [our estimates] by two and give it to the project manager [who then will] multiply the numbers he was given by two and turn the estimate in&amp;quot;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;table class='image alignleft' width='306'&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/23458550-300x225.jpg&quot; width='300' height='225'/&gt;&lt;p class='caption'&gt;Padding estimates.&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-
-&lt;p&gt;Duncan&amp;#39;s strategy for estimates is to pad all estimates by a factor of 4. Why 4? Why not 2, 3, or 8? What a completely unprofessional stab in the dark. How is possible to be this criminally unaware of scrum, sprints, story points, and velocity in 2006? For crying out loud, as our industry has matured and improved, even Scrum is out of date in favor of a more metrics-oriented planning within a Kanban framework - Duncan is two process methodologies behind the times.&lt;/p&gt;
-
-&lt;p&gt;The book is well-written and entertaining, so at a technical level it is good, but the advice is presents is the worst possible.&lt;/p&gt;
-
-&lt;p&gt;I really don&amp;#39;t mean to be too harsh on Christopher Duncan. He seems like a genuinely funny, nice guy, and my issue is not with him personally, but with the advice contained in this book.  He was a Windows C++ programmer who spent most of his career developing software that shipped on CDs. Towards the end of his career, he saw a sudden shift toward the Web for delivery, and attempted to learn Web-related technologies, then soon after quit the industry and became a full-time speaker and author. Maybe if Duncan had stuck with it, he would have matured and grown along with the rest of us rather than stay stuck in his antiquated notions of professional software development. But the fact of the matter is, he didn&amp;#39;t, and the world has changed without his awareness. To publish a book full of outdated wisdom as though it had any applicability to today seems borderline careless. I shudder thinking of young programmers reading his book for career advice, taking it to heart, and then joining a team I&amp;#39;m on. Is it illegal to screen out any job applicants who like it?  *&lt;em&gt;The attitudes in The Career Programmer are absolute poison for a good software engineering team. *&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Everything about this book is wrong.  Every aspect of The Career Programmer is covered better, by people who know what they are talking about, in other books.  Here&amp;#39;s my list of suggestions for similar books that are all vastly superior to this one:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.amazon.com/The-Pragmatic-Programmer-Journeyman-Master/dp/020161622X&quot;&gt;The Pragmatic Programmer&lt;/a&gt; - Full of general tips for programmers to improve their skills.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.amazon.com/Emergent-Design-Evolutionary-Professional-Development/dp/0321509366&quot;&gt;Emergent Design&lt;/a&gt; - Describes the ACTUAL way to handle design under pressure: by organically growing and evolving the design of the code as needed.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.amazon.com/Passionate-Programmer-Remarkable-Development-Pragmatic/dp/1934356344/&quot;&gt;The Passionate Programmer&lt;/a&gt; - Covers how to handle your career development.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.amazon.com/Agile-Estimating-Planning-Mike-Cohn/dp/0131479415&quot;&gt;Agile Estimating and Planning&lt;/a&gt; - Describes how to estimate work well within an agile framework.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.amazon.com/User-Stories-Applied-Software-Development/dp/0321205685&quot;&gt;User Stories Applied&lt;/a&gt; - Talks about how to gather requirements properly.  Another good one is &lt;a href=&quot;http://www.amazon.com/Agile-Software-Requirements-Enterprise-Development/dp/0321635841&quot;&gt;Agile Software Requirements&lt;/a&gt;, which is quite a bit more in depth.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.amazon.com/Clean-Coder-Conduct-Professional-Programmers/dp/0137081073&quot;&gt;The Clean Coder&lt;/a&gt; - All about how to conduct yourself professionally, how to interact with the business and handle &amp;quot;politics&amp;quot;. &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The Clean Coder is the one that is most similar to The Career Programmer in terms of purpose, but in almost every way it is the polar opposite.  I think every programmer should read The Clean Coder, but even moreso if one finds him or herself tempted to read The Career Programmer.&lt;/p&gt;
-
-&lt;p&gt;Do not, under any circumstances, read this book. It will bore and annoy you at best, and ruin you at worst. &lt;/p&gt;
-</description>
-				<pubDate>Fri, 19 Oct 2012 00:00:00 -0600</pubDate>
-				<link>http://www.nomachetejuggling.com/2012/10/19/book-review-the-career-programmer/</link>
-				<guid isPermaLink="true">http://www.nomachetejuggling.com/2012/10/19/book-review-the-career-programmer/</guid>
 			</item>
 		
 	</channel>

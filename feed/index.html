@@ -7,6 +7,77 @@
 		<atom:link href="http://www.nomachetejuggling.com/rss.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
+				<title>Testing Against Template Renders in Grails</title>
+				<description>&lt;p&gt;I work with Grails a lot and while I really enjoy it for the most part, there are definitely some weird quirks of the framework.&lt;/p&gt;
+
+&lt;p&gt;One such quirk is something I encounter whenever I want to write unit tests against grails controller methods that render out templates directly.  This isn&amp;#39;t something I do very often - generally I prefer rendering out JSON and parsing it with client-JS - but in some cases when there&amp;#39;s a lot of markup for a page element that you want to be updateable via ajax, it makes sense to render out a template like so:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-groovy&quot; data-lang=&quot;groovy&quot;&gt;render(template: 'payMyBill')
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Directly from a controller method.&lt;/p&gt;
+
+&lt;p&gt;Unfortunately, these kinds of methods are very difficult to write tests against.  While a normal render exposes a &lt;code&gt;model&lt;/code&gt; and &lt;code&gt;view&lt;/code&gt; variable that you can test against, for some reason using a render with a template doesn&amp;#39;t seem to do this.&lt;/p&gt;
+
+&lt;p&gt;I&amp;#39;ve seen lots of solutions where you stuff a fake string matching the name of the template using some metaclass wizardry, but then you&amp;#39;re stuck dealing with some semi-view stuff in what you might want to simply be a unit test about the model values placed by the controller method.&lt;/p&gt;
+
+&lt;p&gt;However, based on &lt;a href=&quot;http://stackoverflow.com/questions/15141319/grails-controller-test-making-assertions-about-model-when-rendering-a-template&quot;&gt;this StackOverflow post&lt;/a&gt;, I&amp;#39;ve written a quick-and-dirty little monkeypatch that exposes the &lt;code&gt;model&lt;/code&gt; and &lt;code&gt;view&lt;/code&gt; variables in your test, and populated with the values relevant to the template.&lt;/p&gt;
+
+&lt;p&gt;I&amp;#39;ve got this method in a &lt;code&gt;TestUtil&lt;/code&gt; class:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-groovy&quot; data-lang=&quot;groovy&quot;&gt;static def ensureModelForTemplates(con) {
+    def originalMethod = con.metaClass.getMetaMethod('render', [Map] as Class[])
+    con.metaClass.render = { Map args -&amp;gt;
+        if (args[&amp;quot;template&amp;quot;]) {
+            con.modelAndView = new ModelAndView(
+                args[&amp;quot;template&amp;quot;] as String, 
+                args[&amp;quot;model&amp;quot;] as Map
+            )
+        }
+        originalMethod.invoke(delegate, args)
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Then I can call this method with the controller as a parameter anywhere before I invoke the controller action.  It can go in a &lt;code&gt;setup&lt;/code&gt; or &lt;code&gt;@Before&lt;/code&gt; method, it seems to work from both Spock tests and the builtin Grails testing framework.&lt;/p&gt;
+
+&lt;p&gt;So if we have this example:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-groovy&quot; data-lang=&quot;groovy&quot;&gt;class ExampleController {
+
+    def index() {
+        def bigName = params.name.toUpperCase()
+
+        render(template: &amp;quot;partial&amp;quot;, model: [
+            one: &amp;quot;hello&amp;quot;,
+            two: bigName
+        ])
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;This test will do what we want:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-groovy&quot; data-lang=&quot;groovy&quot;&gt;@TestFor(ExampleController)
+class ExampleControllerSpec extends Specification {
+
+    def setup() {
+        TestUtil.ensureModelForTemplates(controller)
+    }
+
+    def shouldHaveModelAndViewExposed() {
+        given:
+        params.name = &amp;quot;Rod&amp;quot;
+
+        when:
+        controller.index()
+
+        then:
+        view == &amp;quot;partial&amp;quot;
+        model.one == &amp;quot;hello&amp;quot;
+        model.two == &amp;quot;ROD&amp;quot;
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+				<pubDate>Thu, 27 Aug 2015 00:00:00 -0600</pubDate>
+				<link>http://www.nomachetejuggling.com/2015/08/27/testing-against-template-renders-in-grails/</link>
+				<guid isPermaLink="true">http://www.nomachetejuggling.com/2015/08/27/testing-against-template-renders-in-grails/</guid>
+			</item>
+		
+			<item>
 				<title>QCon New York 2015: A Review</title>
 				<description>&lt;p&gt;My default yearly conference, for many years, has been &lt;a href=&quot;http://uberconf.com/conference/denver/2015/07/home&quot;&gt;UberConf&lt;/a&gt;.  I really enjoy UberConf because it&amp;#39;s packed full of lots of great sessions, and it&amp;#39;s conveniently local.  However, because I go to various local user groups and attend so often, I find that, if I go two years in a row there are too many sessions I&amp;#39;ve seen before, and I wind up disappointed.  So for the past few years, I&amp;#39;ve been alternating between UberConf and something new.  Two years ago, it was &lt;a href=&quot;http://www.nomachetejuggling.com/2013/07/30/oscon-2013-a-review/&quot;&gt;OSCON&lt;/a&gt;, and this year it was &lt;a href=&quot;https://qconnewyork.com/&quot;&gt;QCon New York&lt;/a&gt;.&lt;/p&gt;
 
@@ -944,51 +1015,6 @@
 				<pubDate>Wed, 22 May 2013 00:00:00 -0600</pubDate>
 				<link>http://www.nomachetejuggling.com/2013/05/22/spring-2013-semester-in-review/</link>
 				<guid isPermaLink="true">http://www.nomachetejuggling.com/2013/05/22/spring-2013-semester-in-review/</guid>
-			</item>
-		
-			<item>
-				<title>Brief Thoughts on Software Craftsmanship</title>
-				<description>&lt;p&gt;To catch people up on some blogosphere drama:&lt;/p&gt;
-
-&lt;p&gt;Last month, Heather Arthur posted on her blog about an unfortunate incident in which some people on Twitter had found some &lt;a href=&quot;https://github.com/harthur/replace&quot;&gt;code she wrote in GitHub&lt;/a&gt;, and &lt;a href=&quot;http://harthur.wordpress.com/2013/01/24/771/&quot;&gt;people started trashing her on Twitter for it&lt;/a&gt;.  Some of those people are considered leaders in the &lt;a href=&quot;http://manifesto.softwarecraftsmanship.org/&quot;&gt;Software Craftsmanship&lt;/a&gt; movement, in particular &lt;a href=&quot;http://coreyhaines.com/&quot;&gt;Corey Haines&lt;/a&gt;.  Corey immediately &lt;a href=&quot;http://programmingtour.blogspot.com/2013/01/im-sorry.html&quot;&gt;apologized&lt;/a&gt; for acting like an asshole, and I think his apology was sincere because I&amp;#39;ve met Corey and frankly the guy is almost annoyingly nice (he went around RubyConf 2012 taking a picture with every damn person there).  But Ted Neward saw this turn of events and concluded that Corey&amp;#39;s actions were not orthogonal to his involvement in Software Craftsmanship, but actually influenced by them, and he &lt;a href=&quot;http://blogs.tedneward.com/2013/01/24/On+The+Dark+Side+Of+Craftsmanship.aspx&quot;&gt;posted as such on his blog&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Neward&amp;#39;s basic point is that this is the exact kind of behavior we should expect as a side effect of the Software Craftsmanship movement.  By it&amp;#39;s nature, it attempts to create a segregation between those who are &amp;quot;in the know&amp;quot; and those who are not, and he felt the behavior of Corey and others was a byproduct of this segregation.  They saw Heather as an &amp;quot;other&amp;quot; and were overly harsh in their criticisms, emboldened in so doing by their sense of Craftsmanship.  Neward took a lot of shit for this view on Twitter, with most people arguing that this was done by Software Craftsmen, but it wasn&amp;#39;t done &lt;strong&gt;because&lt;/strong&gt; they were Software Craftsmen, and it makes no sense to criticize the entire movement based on the action of a few members, regardless of how high their profile is.  Neward responded to all of this feedback in &lt;a href=&quot;http://blogs.tedneward.com/2013/01/26/More+On+Craftsmanship.aspx&quot;&gt;a second blog post&lt;/a&gt;, where he reinforces his original point.&lt;/p&gt;
-
-&lt;p&gt;Uncle Bob Martin, one of the first five signers of the Software Craftsmanship Manifesto and author of Clean Code and The Clean Coder, then responded to all of this drama with &lt;a href=&quot;http://blog.8thlight.com/uncle-bob/2013/01/30/The-Craftsman-And-The-Laborer.html&quot;&gt;his own post&lt;/a&gt;.  Bob takes particular issue with Neward&amp;#39;s promotion of what he sees as the opposite of a Software Craftsman, a Software Laborer.  In Neward&amp;#39;s words, a Laborer is someone &amp;quot;who cranked out one crappy app after another in (what else?) Visual Basic [...] their apps were sloppy, bloated, and ugly...cut-and-paste cobbled-together duct-tape wonders.&amp;quot;  At the end of the post, Neward bows &amp;quot;with respect to the &amp;quot;software laborers&amp;quot; of the world, who churn out quality code without concern for &amp;quot;craftsmanship&amp;quot;, because their lives are more than just their code.&amp;quot;&lt;/p&gt;
-
-&lt;p&gt;Bob finds these kinds of developers to be problematic, as his experience suggests that people who make a mess of their code create lots of defects and headaches for themselves and other developers.  Finally, Ted Neward responded to Bob as well with one more defense of himself in &lt;a href=&quot;http://blogs.tedneward.com/2013/02/02/Last+Thoughts+On+Craftsmanship.aspx&quot;&gt;another blog post&lt;/a&gt; which he proclaimed on Twitter as his &amp;quot;last word on the subject.&amp;quot;&lt;/p&gt;
-
-&lt;p&gt;It was this last post that inspired me to post my own thoughts.  I&amp;#39;m not going to speak much about the drama itself, or the definition of Craftsmanship vs Laborer, follow the links above if you&amp;#39;re interested in that debate.&lt;/p&gt;
-
-&lt;p&gt;Something in Neward&amp;#39;s final post struck me.&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Know what? I think one thing that got lost somewhere in all this debate is that value is only value if it&amp;#39;s of value to the customer. And in a lot of the &amp;quot;craftsmanship&amp;quot; debates, I don&amp;#39;t hear the customer&amp;#39;s voice being brought up all that much.&lt;/p&gt;
-
-&lt;p&gt;You remember all those crappy VB apps that Bob maligned earlier? Was the customer happy? Did anybody stop to ask them? Or was the assumption that, since the code was crappy, the customer implicitly must be unhappy as well? Don&amp;#39;t get me wrong, there&amp;#39;s a lot of crappy code out there that doesn&amp;#39;t make the customer happy. As a matter of fact, I&amp;#39;ll argue that any code that doesn&amp;#39;t make the customer happy is crap, regardless of what language it&amp;#39;s written in or what patterns it uses or how decoupled or injected or new databases it stores data into. Value isn&amp;#39;t value unless it&amp;#39;s value to the person who&amp;#39;s paying for the code.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;This, to me, is the heart of the Software Craftsmanship movement.  Neward intended this as a critique of Craftsmanship, but I see it as it&amp;#39;s greatest strength.&lt;/p&gt;
-
-&lt;p&gt;I see the &lt;a href=&quot;http://agilemanifesto.org/&quot;&gt;Agile Manifesto&lt;/a&gt; as being customer-focused.  It&amp;#39;s values are interacting with people, collaborating with customers, releasing working software, and responding to change quickly.  These are things that customers have a good reason to care about.  I want every customer of mine to know that I consider myself an agile developer because I think that conveys to them a certain set of principles that they might value.  &lt;/p&gt;
-
-&lt;p&gt;But Ted&amp;#39;s right, customers don&amp;#39;t care much about if code is crappy, and they don&amp;#39;t care if all of these craftspeople meet regularly after work to &amp;quot;hone their craft&amp;quot;.  These are, indeed, not of much concern to customers, at least not directly.  The Craftsmanship movement is for me, not about developers focusing on their customers, but about them also &lt;strong&gt;focusing on other developers&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;I don&amp;#39;t write well-crafted code or go to meetup groups or steadily add value (even if it&amp;#39;s not requested) for the benefit of the customer.  I do it for the other developers I work with, and for those who maintain my code when I can&amp;#39;t.  It&amp;#39;s this additional layer, the &amp;quot;not-only&amp;quot;s of the Software Craftsmanship manifesto that appeal to me: the adoption of a view that we must not only make our customers happy, but make our fellow developers happy as well.&lt;/p&gt;
-
-&lt;p&gt;I&amp;#39;m signatory #214 of the Software Craftsmanship Manifesto, and my self-given title on LinkedIn is &amp;quot;Software Craftsman and Computer Science Geek&amp;quot;.  Every so often I see my own LinkedIn profile and this title strikes me as pretentious and annoying, and I consider changing it, but I never do.  I always decide it&amp;#39;s more important to leave it and risk looking like a bit of a pompous, self-important jerk.  Why do I do this?&lt;/p&gt;
-
-&lt;p&gt;I do it because I consider it something of a pirate flag for other developers.  It&amp;#39;s important to me that they see this flag, because the label conveys, to my mind, a great deal of meaning to the reader.  It&amp;#39;s a shorthand, it lets other developers know an awful lot amount me with two short words, including that I might be a bit of a pompous, self-important jerk.  &lt;strong&gt;It tells other developers what they can expect of the quality of my work, and what I expect of theirs.&lt;/strong&gt;  It is a label that I adopt solely to aid communication between myself and other developers, not customers.&lt;/p&gt;
-
-&lt;p&gt;Sure, I think hiring a team of Craftspeople will be beneficial for customers.  I think the codebase will be more easily adaptable to change, I think they&amp;#39;ll get more honest and accurate assessments of when work will be done, and I think they will generally have more positive interactions with their team.  But at the end of the day, this team of Craftspeople has chosen their outlook on software development not out of concern only for the customer, but also out of concern for each other.&lt;/p&gt;
-
-&lt;p&gt;If Neward wants to sing the praises of his VB-slinging, cut-and-pasting Software Laborer, that&amp;#39;s fine.  Such a person may make customers very, very happy, and good for them.  But I know that it would make &lt;strong&gt;me&lt;/strong&gt; unhappy if I had to work in or maintain their code, just as I know it would make someone else unhappy were I to be a Software Laborer myself.  Frankly, I don&amp;#39;t have much interest in working with Software Laborers as Neward describes them, which is why I fly my Craftsmanship flag high.  Does this make me an elitist snob?  Yeah, a bit.  I&amp;#39;m not trying to be a dick about it, I just know I&amp;#39;d just come home frustrated and drained if I worked for 8 hours a day with a team of people who are just trying to sling enough code to make the customer happy and didn&amp;#39;t care about the codebase itself.  The mentality of &amp;quot;the customer is all that matters&amp;quot; is a fine stance to adopt, particularly from the perspective of the customer, but it&amp;#39;s no way to build a team of happy developers.&lt;/p&gt;
-
-&lt;p&gt;-Rod Hilton, Software Craftsman Godammit.&lt;/p&gt;
-</description>
-				<pubDate>Sat, 02 Feb 2013 00:00:00 -0700</pubDate>
-				<link>http://www.nomachetejuggling.com/2013/02/02/brief-thoughts-on-software-craftsmanship/</link>
-				<guid isPermaLink="true">http://www.nomachetejuggling.com/2013/02/02/brief-thoughts-on-software-craftsmanship/</guid>
 			</item>
 		
 	</channel>
