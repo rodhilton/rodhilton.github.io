@@ -592,8 +592,9 @@ abbr {
     border-bottom: 1px solid #33627f;
     text-decoration: none; }
   .post .postentry .footnotes {
-    border-top: 1px dotted #b4b4b7;
-    border-bottom: 1px dotted #b4b4b7; }
+    border-bottom: 1px dotted #b4b4b7;
+    font-size: 75%;
+    line-height: 1.2em; }
     .post .postentry .footnotes a.reversefootnote {
       font-size: 60%;
       text-decoration: none;
