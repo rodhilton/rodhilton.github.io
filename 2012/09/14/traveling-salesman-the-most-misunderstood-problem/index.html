@@ -106,7 +106,7 @@
 
 <p>What does it mean for a problem to be in NP?  It&#39;s actually simpler than it is often made out to be: <strong>A problem is in NP if, given a correct answer (a certificate) to that problem, you could verify that it is correct on a deterministic turing machine, in polynomial time.</strong> </p>
 
-<p>That&#39;s it.  Some might object to this definition, wondering &quot;doesn&#39;t the algorithm that solves the problem have to run in $$O(2^n)$$ or some other terrible runtime?&quot;  In fact, no.  Every problem in P is also in NP since P is a subset of NP.  Every problem in P has a deterministic, polynomial-time verifier - they must, since they have polynomial time deciders!  Having a polynomial-time verifier is necessary and sufficient for a problem to be in NP.</p>
+<p>That&#39;s it.  Some might object to this definition, wondering &quot;doesn&#39;t the algorithm that solves the problem have to run in $$O(2<sup>n)$$</sup> or some other terrible runtime?&quot;  In fact, no.  Every problem in P is also in NP since P is a subset of NP.  Every problem in P has a deterministic, polynomial-time verifier - they must, since they have polynomial time deciders!  Having a polynomial-time verifier is necessary and sufficient for a problem to be in NP.</p>
 
 <p>So what&#39;s NP-Hard?  A problem is NP-Hard if every problem in NP can be reduced to it, meaning it is at least as hard or harder than any problem in NP.</p>
 
