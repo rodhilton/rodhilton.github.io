@@ -82,6 +82,25 @@
 	
 		<div class="post-preview">
 		  	<div class="postheader">
+  	<h1 class="posttitle"><a href="/2011/08/19/conditionally-running-tests-with-junit-4/">Conditionally Running Tests With JUnit 4</a></h1>
+  	<div class="postmeta">
+		<p class="meta">
+		<b title="code, groovy, hamcrest, integration, java, junit, tdd, and testing">PROGRAMMING</b> - 
+		August 19, 2011 - 
+		767 words -
+		<a href="/2011/08/19/conditionally-running-tests-with-junit-4/#disqus_thread">Comments</a>
+		</p>
+	</div>
+</div>
+		  	<div class="postentry">
+				<p>At work, I&#39;m building a module that interfaces with a customer billing system.  Writing unit tests for something like this is easy using mocks, but I really wanted to write an integration test the ensured the two systems worked together correctly.</p><p>Unfortunately, because the system is a billing system, it is considered sensitive, even the developer instance.  This means that, though the Continuous Integration environment (which is hosted in a secure location) is able to access the billing system, the remote office in Denver (where I work) is not.</p><p>This can be solved by opening up an <a href="http://www.engadget.com/2006/03/21/how-to-ssh-tunnels-for-secure-network-access/">SSH tunnel</a> to the CI environment, allowing me to tunnel traffic through HTTP to the remote billing system.  But that presents a separate problem.</p><p>My integration will work in the CI environment, it will work locally when the tunnel is open, but it will fail any other time.  So if I check this code in, every other developer on my team will have to know that, before they run all of the tests locally, they have to open an SSH tunnel, even if they&#39;re working on a component totally unrelated to my work.</p>
+
+        <p><a href="/2011/08/19/conditionally-running-tests-with-junit-4/">Read the rest of "Conditionally Running Tests With JUnit 4" &raquo;</a></p>
+			</div>
+		</div>
+	
+		<div class="post-preview">
+		  	<div class="postheader">
   	<h1 class="posttitle"><a href="/2011/08/16/what-is-technical-debt/">What Is Technical Debt?</a></h1>
   	<div class="postmeta">
 		<p class="meta">
@@ -251,25 +270,6 @@
 			</div>
 		</div>
 	
-		<div class="post-preview">
-		  	<div class="postheader">
-  	<h1 class="posttitle"><a href="/2011/04/15/going-back-to-school-again/">Going Back to School (Again)</a></h1>
-  	<div class="postmeta">
-		<p class="meta">
-		<b title="computer science, education, and school">LIFE</b> - 
-		April 15, 2011 - 
-		1,026 words -
-		<a href="/2011/04/15/going-back-to-school-again/#disqus_thread">Comments</a>
-		</p>
-	</div>
-</div>
-		  	<div class="postentry">
-				<p>Within the broad spectrum of human feeling, there lies an emotion very much unlike its biochemical brethren: the sense of regret. What separates regret from other emotions is not its potency, but its resilience. Joy, misery, love, and even grief can dull or dissipate given enough time, but regret endures, gnawing at the back of one’s mind, reminding each of us of what could have been, but is not. Regret never wanes and it never dissolves; <strong>regret festers</strong>. </p><p>Like so many others, I have accumulated a number of regrets over my life.  Though I’ve learned to live with many of these, one regret in particular has lingered in my mind for the past six years: I regret the limitations I placed on myself as an undergraduate at the University of Rochester.</p><p>Since I was a child, I’ve known that what I wanted to do with my life was write computer programs.  From the moment of my first experience writing code on the glowing box attached to a 286 in my father’s study, I’ve been driven by a vivid, clear goal of writing software professionally.  Since the age of 6, whenever someone asked me what I wanted to be when I grew up, I gave the same answer.  When I told my high school guidance counselor, he told me that I needed to go to school and major in Computer Science, so that’s what I did.</p><p>What I found as early as my first year at school was that my selected major included a variety of subjects that I was not expecting.  I was exposed to material that seemed wholly unrelated to writing programs professionally.  Algorithmic complexity?  Turing machines?  Chomsky Normal Form?  It all seemed too theoretical, too far removed from the actual process of programming.  I needed to prepare myself for my career, and I felt I had no time for theory.  I decided to spend the next four years avoiding the theoretical material as much as possible.  Instead, I focused on my systems classes, which I found both engrossing and practical.  <strong>I even recall how proud I was for passing a particular theory class without more than a cursory glance at the textbook</strong>.</p>
-
-        <p><a href="/2011/04/15/going-back-to-school-again/">Read the rest of "Going Back to School (Again)" &raquo;</a></p>
-			</div>
-		</div>
-	
 	</div>
 </div>
 
@@ -298,6 +298,8 @@
           <li id="recent-posts" class="widget widget_recent_entries"> <h2 class="widgettitle">Recent Posts</h2>
             <ul>
                 
+                  <li><a href="/2015/11/13/phd-research-status-report/">PhD Status Report</a></li>
+                
                   <li><a href="/2015/08/27/testing-against-template-renders-in-grails/">Testing Against Template Renders in Grails</a></li>
                 
                   <li><a href="/2015/07/01/qconny-2015-a-review/">QCon New York 2015: A Review</a></li>
@@ -315,8 +317,6 @@
                   <li><a href="/2013/07/30/oscon-2013-a-review/">OSCON 2013: A Review</a></li>
                 
                   <li><a href="/2013/06/10/book-review-presentation-patterns/">Book Review: Presentation Patterns</a></li>
-                
-                  <li><a href="/2013/05/22/spring-2013-semester-in-review/">Spring 2013 Semester in Review</a></li>
                 
             </ul>
           </li> <!-- /recent-posts -->
@@ -348,8 +348,16 @@
                     agile
                   </a>
                 
+                  <a href="/tag/crossposted" style="font-size: 8pt">
+                    crossposted
+                  </a>
+                
                   <a href="/tag/book" style="font-size: 8pt">
                     book
+                  </a>
+                
+                  <a href="/tag/software" style="font-size: 8pt">
+                    software
                   </a>
                 
                   <a href="/tag/computer-science" style="font-size: 8pt">
@@ -360,20 +368,24 @@
                     interview
                   </a>
                 
-                  <a href="/tag/software" style="font-size: 8pt">
-                    software
-                  </a>
-                
-                  <a href="/tag/crossposted" style="font-size: 8pt">
-                    crossposted
-                  </a>
-                
                   <a href="/tag/job" style="font-size: 8pt">
                     job
                   </a>
                 
+                  <a href="/tag/semester" style="font-size: 8pt">
+                    semester
+                  </a>
+                
+                  <a href="/tag/review" style="font-size: 8pt">
+                    review
+                  </a>
+                
                   <a href="/tag/rails" style="font-size: 8pt">
                     rails
+                  </a>
+                
+                  <a href="/tag/class" style="font-size: 8pt">
+                    class
                   </a>
                 
                   <a href="/tag/linux" style="font-size: 8pt">
@@ -384,6 +396,14 @@
                     ubuntu
                   </a>
                 
+                  <a href="/tag/complexity" style="font-size: 7pt">
+                    complexity
+                  </a>
+                
+                  <a href="/tag/development" style="font-size: 7pt">
+                    development
+                  </a>
+                
                   <a href="/tag/continuous-integration" style="font-size: 7pt">
                     continuous integration
                   </a>
@@ -392,76 +412,56 @@
                     business
                   </a>
                 
-                  <a href="/tag/compsci" style="font-size: 7pt">
-                    compsci
-                  </a>
-                
                   <a href="/tag/open-source" style="font-size: 7pt">
                     open source
-                  </a>
-                
-                  <a href="/tag/internet" style="font-size: 7pt">
-                    internet
-                  </a>
-                
-                  <a href="/tag/git" style="font-size: 7pt">
-                    git
-                  </a>
-                
-                  <a href="/tag/complexity" style="font-size: 7pt">
-                    complexity
-                  </a>
-                
-                  <a href="/tag/semester" style="font-size: 7pt">
-                    semester
                   </a>
                 
                   <a href="/tag/tdd" style="font-size: 7pt">
                     tdd
                   </a>
                 
-                  <a href="/tag/class" style="font-size: 7pt">
-                    class
+                  <a href="/tag/rant" style="font-size: 7pt">
+                    rant
                   </a>
                 
                   <a href="/tag/design" style="font-size: 7pt">
                     design
                   </a>
                 
-                  <a href="/tag/rant" style="font-size: 7pt">
-                    rant
-                  </a>
-                
                   <a href="/tag/windows" style="font-size: 7pt">
                     windows
+                  </a>
+                
+                  <a href="/tag/internet" style="font-size: 7pt">
+                    internet
                   </a>
                 
                   <a href="/tag/refactoring" style="font-size: 7pt">
                     refactoring
                   </a>
                 
-                  <a href="/tag/review" style="font-size: 7pt">
-                    review
+                  <a href="/tag/college" style="font-size: 7pt">
+                    college
                   </a>
                 
-                  <a href="/tag/development" style="font-size: 7pt">
-                    development
+                  <a href="/tag/git" style="font-size: 7pt">
+                    git
+                  </a>
+                
+                  <a href="/tag/compsci" style="font-size: 7pt">
+                    compsci
                   </a>
                 
                   <a href="/tag/technical-debt" style="font-size: 7pt">
                     technical debt
                   </a>
                 
-                  <a href="/tag/planning" style="font-size: 7pt">
-                    planning
-                  </a>
-                
                   <a href="/tag/estimating" style="font-size: 7pt">
                     estimating
                   </a>
                 
-                  <a href="/tag/automated-testing" style="font-size: 7pt">
-                    automated testing
+                  <a href="/tag/quality" style="font-size: 7pt">
+                    quality
                   </a>
                 
                   <a href="/tag/brain" style="font-size: 7pt">
@@ -470,6 +470,10 @@
                 
                   <a href="/tag/productivity" style="font-size: 7pt">
                     productivity
+                  </a>
+                
+                  <a href="/tag/automated-testing" style="font-size: 7pt">
+                    automated testing
                   </a>
                 
                   <a href="/tag/junit" style="font-size: 7pt">
@@ -488,12 +492,12 @@
                     education
                   </a>
                 
-                  <a href="/tag/blog" style="font-size: 7pt">
-                    blog
-                  </a>
-                
                   <a href="/tag/mac" style="font-size: 7pt">
                     mac
+                  </a>
+                
+                  <a href="/tag/blog" style="font-size: 7pt">
+                    blog
                   </a>
                 
                   <a href="/tag/latex" style="font-size: 7pt">
@@ -504,10 +508,6 @@
                     patch
                   </a>
                 
-                  <a href="/tag/wordpress" style="font-size: 7pt">
-                    wordpress
-                  </a>
-                
                   <a href="/tag/certification" style="font-size: 7pt">
                     certification
                   </a>
@@ -516,8 +516,12 @@
                     tests
                   </a>
                 
-                  <a href="/tag/quality" style="font-size: 7pt">
-                    quality
+                  <a href="/tag/wordpress" style="font-size: 7pt">
+                    wordpress
+                  </a>
+                
+                  <a href="/tag/planning" style="font-size: 7pt">
+                    planning
                   </a>
                 
                   <a href="/tag/jenkins" style="font-size: 7pt">
@@ -532,20 +536,16 @@
                     functional
                   </a>
                 
-                  <a href="/tag/programming-languages" style="font-size: 7pt">
-                    programming languages
-                  </a>
-                
                   <a href="/tag/story" style="font-size: 7pt">
                     story
                   </a>
                 
-                  <a href="/tag/scala" style="font-size: 7pt">
-                    scala
+                  <a href="/tag/programming-languages" style="font-size: 7pt">
+                    programming languages
                   </a>
                 
-                  <a href="/tag/college" style="font-size: 7pt">
-                    college
+                  <a href="/tag/scala" style="font-size: 7pt">
+                    scala
                   </a>
                 
                   <a href="/tag/rage" style="font-size: 7pt">
