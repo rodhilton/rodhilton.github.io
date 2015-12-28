@@ -561,6 +561,7 @@ abbr {
       font-family: "Architects Daughter", "Lucida Grande", Verdana, Arial, sans-serif; }
     .post .postentry .image.aligncenter {
       max-width: 1px;
+      align: center;
       margin: 20px auto 20px auto; }
       .post .postentry .image.aligncenter img {
         max-width: 624px; }
