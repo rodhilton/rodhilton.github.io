@@ -7,6 +7,176 @@
 		<atom:link href="http://www.nomachetejuggling.com/rss.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
+				<title>My StrengthsFinder Results</title>
+				<description>&lt;p&gt;At work, the BigWigs paid for a bunch of employees, including myself, to take the &lt;a href=&quot;http://strengths.gallup.com/110440/About-StrengthsFinder-20.aspx&quot;&gt;Gallup StrengthsFinder&lt;/a&gt; test.  This test gives the taker a series of choices between two things that aren&amp;#39;t exactly opposites, and you have to select which one you identify closer with.  In the end, the test tells you which of 34 possible strengths are your top 5.&lt;/p&gt;
+
+&lt;p&gt;I enjoy taking personality tests for fun, but the way that the aforementioned BigWigs were attaching tremendous levels of importance to the results of the test made me a bit weary.  Personality tests can often have a horoscope vibe, where they all say something so nice about the taker that everyone who reads it says &amp;quot;yep, that&amp;#39;s me!&amp;quot;.&lt;/p&gt;
+
+&lt;p&gt;So before the test, I took a look at the 34 possible strengths that the test would identify.  I figured they&amp;#39;d all be things I liked, so that when the top 5 were output, the taker would like the results.  To my surprise, there were a number of strengths, about 10 of the 34, that I would have been downright irritated if they appeared in my top 5.  To an extent that, if the exercise told me any of those 10 were strengths of mine, I&amp;#39;d be able to instantly disqualify the test as bunk.&lt;/p&gt;
+
+&lt;p&gt;So I took the test with a skeptical eye toward it, but I was actually incredibly surprised by the results.  I think the test absolutely nailed me, and I&amp;#39;m so impressed by the accuracy of my test results that I think it&amp;#39;s worth sharing here.  These strengths are ranked from strongest to less-strong (I don&amp;#39;t say weakest because it&amp;#39;s only the top 5 of all 34 strengths, so all 5 are very strong).&lt;/p&gt;
+
+&lt;h1&gt;Strengths&lt;/h1&gt;
+
+&lt;h2&gt;#1: Analytical&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;People exceptionally talented in the Analytical theme search for reasons and causes.  They have the ability to think about all the factors that might affect a situation.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;I&amp;#39;m not sure I agree that this is my #1 strength, but it&amp;#39;s definitely very accurate for me.  I think this goes hand in hand with the fact that I love being a programmer, and I enjoy debugging code.  I&amp;#39;ve never been satisfied with any explanation that something &amp;quot;just is&amp;quot; - I have to understand why something happened or I can&amp;#39;t relax about it.  It&amp;#39;s not enough for a stressful production outage to be over, I need to get to the root cause of it.  This is true even in the rare instance that there&amp;#39;s nothing I can do about it, and thus get no value out of knowing the cause - the knowledge is the reward for me.&lt;/p&gt;
+
+&lt;p&gt;I have a tendency to demand people &amp;quot;prove it&amp;quot; when making claims, even believable ones.  Similarly, I expect other people to hold me to the same standard - I actually enjoy when I have an explanation for something and friends or co-workers are able to shoot it down.  I want to believe as many true things as possible, and disbelieve as many false ones.&lt;/p&gt;
+
+&lt;p&gt;Nothing is ever noise for me - there&amp;#39;s always some kind of pattern that I want to find in the noise.&lt;/p&gt;
+
+&lt;h2&gt;#2: Deliberative&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;People exceptionally talented in the Deliberative theme are best described by the serious care they take in making decisions or choices.  They anticipate obstacles.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Yep, this is absolutely me.  This &amp;quot;strength&amp;quot; is so strong within me that it can often be a weakness, one that I actively try to overcome regularly - I often can get &amp;quot;analysis paralysis&amp;quot;.  &lt;/p&gt;
+
+&lt;p&gt;It takes a great deal of information gathering before I&amp;#39;m willing to make any big decision - I ask an annoyingly large number of questions.  Even for day-to-day things, the number of questions I asked my realtor when buying my first house actually caused him to become so exasperated that he and I had to part ways.&lt;/p&gt;
+
+&lt;p&gt;When facing any decision, the first thing I want to know is what the risks are, and I try to plan for every possible outcome.  If I don&amp;#39;t feel like I understand the risks of a decision, I often cannot make one.&lt;/p&gt;
+
+&lt;p&gt;One of the ways I try to address the analysis paralysis weakness is by plowing forward with functional spikes and throwaway code experiments, that way I&amp;#39;m not just stuck reading wikipedia pages or StackOverflow posts.  Experimentation is often the best way to acquire real knowledge.&lt;/p&gt;
+
+&lt;h2&gt;#3: Learner&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;People exceptionally talented in the Learner theme have a great desire to learn and want to continuously improve.  The process of learning, rather than the outcome, excites them.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Kind of surprised this one wasn&amp;#39;t higher, though 3 out of 34 is still pretty high.  I&amp;#39;ve been accused of being a &amp;quot;perpetual student&amp;quot; on more than one occasion, which is fair since I&amp;#39;ve only been able to last one year after graduating before wanting to go back to school for another degree.&lt;/p&gt;
+
+&lt;p&gt;I regularly take MOOC classes, attend conferences, and watch talks online.  The level of excitement I felt when the company I worked for announced that engineers could get free accounts on O&amp;#39;Reilly Safari and Pluralsight is, frankly, embarassing.  I read nonfiction constantly, usually jumping between 3 or 4 books at a time, and I consider reading fiction a waste of time because I don&amp;#39;t learn anything while reading, and that time could be better spent learning.&lt;/p&gt;
+
+&lt;p&gt;One of the things that Gallup says I should try to focus on as an action item as a Learner is:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Seek roles that require some form of technical competence. You will enjoy the process of acquiring and maintaining this competence.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;A-yup, the fact that it&amp;#39;s basically impossible to ever feel &amp;quot;caught up&amp;quot; in this industry is one of my favorite things about it.  There&amp;#39;s always stuff to learn, and I love mastering new skills, languages, and technologies.&lt;/p&gt;
+
+&lt;h2&gt;#4: Intellection&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;People exceptionally talented in the Intellection theme are characterized by their intellectual activity.  They are introspective and appreciate intellectual discussions.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Very accurate.  One of my favorite pastimes is discussing totally unimportant nerd shit with friends for hours and hours. &lt;/p&gt;
+
+&lt;p&gt;I like exercising my brain muscles, solving problems, and challenging myself.  When I was narrowing down college choices, eventually the deciding factor between my last two options was that I simply wanted to go to the school that I thought would be harder (the one that didn&amp;#39;t offer me a full ride, much to my father&amp;#39;s chagrin).&lt;/p&gt;
+
+&lt;p&gt;I&amp;#39;ve often changed my opinions on issues because I challenged myself on some of my beliefs, and tried to reason my way from first principles to a new conclusion, and found myself on the oppsosite side of an issue than my gut reaction.&lt;/p&gt;
+
+&lt;p&gt;I don&amp;#39;t think the test is telling me I&amp;#39;m &amp;quot;smart&amp;quot;, which would definitely be horoscope territory.  But I think you can be dumb and really enjoy thinking, so I think this description is still fair.  &lt;/p&gt;
+
+&lt;h2&gt;#5: Restorative&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;People exceptionally talented in the Restorative theme are adept at dealing with problems.  They are good at figuring out what is wrong and resolving it.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;I think this is, in a lot of ways, a natural result of some of the other strengths.  As I said before, I love debugging and solving problems.  I have a co-worker who is fond of saying that he wouldn&amp;#39;t want to be a murderer if I was the detective assigned to the case.&lt;/p&gt;
+
+&lt;p&gt;Some of my &amp;quot;action items&amp;quot; for this strength are particularly entertaining to me.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Seek roles in which you are paid to solve problems. You might particularly enjoy roles in medicine, consulting, &lt;strong&gt;computer programming&lt;/strong&gt;, or customer service, in which your success depends on your ability to restore and resolve.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Uh, yeah.&lt;/p&gt;
+
+&lt;h1&gt;Weaknesses&lt;/h1&gt;
+
+&lt;p&gt;After taking a class with the guy at work is so gung-ho for this test, he released my full ranking of all 34 strengths.  This means I am able to see what my bottom 5 strengths (weaknesses) are.&lt;/p&gt;
+
+&lt;p&gt;When I saw my bottom 5 weaknesses, I was very happy to discover that they came out of that pool of 10 strengths where I&amp;#39;d have dismissed the entire test if it had told me I was strong with one of them.&lt;/p&gt;
+
+&lt;p&gt;So here they are, in reverse order, meaning starting with my biggest weakness.&lt;/p&gt;
+
+&lt;h2&gt;#1: Developer&lt;/h2&gt;
+
+&lt;p&gt;The name of this strength fooled me at first, I was extremely annoyed the test said I shouldn&amp;#39;t be a Developer.  But in fact, this is the description:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;People who are especially talented in the Developer theme recognize and cultivate the potential in others. They spot the signs of each small improvement and derive satisfaction from these improvements.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Oh, yeah, that&amp;#39;s me, fine.  Really not big on cultivating the potential in others.  I won&amp;#39;t try to beat someone else down or something, but I&amp;#39;m much more interested in cultivating the potential in myself than some other bozo.  Executive material I am not.&lt;/p&gt;
+
+&lt;h2&gt;#2: Positivity&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;People who are especially talented in the Positivity theme have an enthusiasm that is contagious. They are upbeat and can get others excited about what they are going to do.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Hah, yep.  Not me.  I&amp;#39;m almost bummed that &amp;quot;Negativity&amp;quot; isn&amp;#39;t one of the 34 strengths - I guess in a way the Deliberative strength is that - it&amp;#39;s hard to be positive when your main thing trying to figure out the risks of every possible decision.&lt;/p&gt;
+
+&lt;h2&gt;#3: Includer&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;People who are especially talented in the Includer theme are accepting of others. They show awareness of those who feel left out, and make an effort to include them.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Guilty as charged.  I don&amp;#39;t exclude people, but I definitely don&amp;#39;t go out of my way to include anyone.  I treat everyone pretty much the same (&amp;#39;Consistency&amp;#39; is my #8) and don&amp;#39;t go out of my way to treat anyone special.&lt;/p&gt;
+
+&lt;h2&gt;#4: Woo&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;People who are especially talented in the Woo theme love the challenge of meeting new people and winning them over. They derive satisfaction from breaking the ice and making a connection with another person.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;How is this not my bottom one?  I&amp;#39;d be downright offended if this test told me I was good at this.  The notion of &amp;quot;winning people over&amp;quot; is about as far from me as you could get.&lt;/p&gt;
+
+&lt;h2&gt;#5: Empathy&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;People who are especially talented in the Empathy theme can sense the feelings of other people by imagining themselves in others’ lives or others’ situations.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Alright Gallup, I get it.  I&amp;#39;m misanthropic as hell.  In my defense, I&amp;#39;m more personable and enjoyable to be around than a lot of engineers I&amp;#39;ve met.&lt;/p&gt;
+
+&lt;h1&gt;Conclusions&lt;/h1&gt;
+
+&lt;p&gt;I really liked this test, and I think it definitely nailed me.  Basically the test tells me that I&amp;#39;m doing exactly what I ought to be doing in terms of career choices, which is nice.&lt;/p&gt;
+
+&lt;p&gt;The book that surrounds this test (and the BigWigs who introduced it at work) put a lot of stock into these results.  We&amp;#39;re actually supposed to include our Top 5 in our e-mail signatures, and everyone is supposed to cater how they interact with people to the recipient&amp;#39;s strengths.  I&amp;#39;m not entirely sure how I would do such a thing, like what would it mean if I was talking to someone who&amp;#39;s really good at Empathy?  Should I talk not about the facts of a task, but of how it makes me feel so they empathize?  Weird.&lt;/p&gt;
+
+&lt;p&gt;One of the things the book and surrounding material pushes though, is playing to your strengths rather than trying to cover your weaknesses.  This advice makes sense to me - essentially you want to emphasize the areas where you&amp;#39;re strongest, so I should embrace the fact that I&amp;#39;m an analytical, deliberative, learning, thinking problem-solver and try to make sure that, in my day-to-day work, I&amp;#39;m giving those strengths a chance to shine.&lt;/p&gt;
+
+&lt;p&gt;There&amp;#39;s also value in knowing your true &amp;quot;lesser strengths&amp;quot;, like the things I got ranked #6-15 for example.  Those are truly areas where I am strong, but could be stronger, and it&amp;#39;s worth investing in improvement.  My bottom 5, on the other hand, are probably permanently out of reach, so there&amp;#39;s no point in putting myself into a situation where I need to improve my Woo skills, as an example.&lt;/p&gt;
+
+&lt;p&gt;My #6-15 strengths are:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Futuristic (inspired by the future and what could be)&lt;/li&gt;
+&lt;li&gt;Relator (enjoy close relationships with others)&lt;/li&gt;
+&lt;li&gt;Consistency (treat people the same)&lt;/li&gt;
+&lt;li&gt;Input (like to collect and archive information)&lt;/li&gt;
+&lt;li&gt;Strategic (create alternative ways to succeed)&lt;/li&gt;
+&lt;li&gt;Focus (follow through and stay on track)&lt;/li&gt;
+&lt;li&gt;Achiever (hard worker, likes staying busy)&lt;/li&gt;
+&lt;li&gt;Command (take control of a situation and make decisions)&lt;/li&gt;
+&lt;li&gt;Responsibility (take ownership of what you say you&amp;#39;ll do)&lt;/li&gt;
+&lt;li&gt;Discipline (enjoy routine and structure)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I think this assessment is very fair as well.  All ten of those things are things I&amp;#39;m good at, but I could improve, and I definitely understand why they&amp;#39;d be ranked lower than my more-dominant top 5 strengths.  &lt;strong&gt;These are all things that there&amp;#39;s value in working on, whereas my bottom 5 are basically a lost cause, so it&amp;#39;s an inefficient use of my time and energy to really focus on them.&lt;/strong&gt;  It&amp;#39;d be better to focus on my strengths, and improve my almost-as-strong strengths.&lt;/p&gt;
+
+&lt;p&gt;I know a few co-workers who took this test and disagreed with the results so strongly that they took it multiple times until they got different results.  That makes it even harder to want to actually cater my interactions with people to &lt;em&gt;their&lt;/em&gt; strengths.  But for me, I think this test absolutely got my number and I think it&amp;#39;s worth doing.   The book that goes with this test, &lt;a href=&quot;http://www.amazon.com/Strengths-Based-Leadership-Leaders-People/dp/1595620257&quot;&gt;Strengths Based Leadership&lt;/a&gt;, costs less than $20 and comes with an access code to take the test.  I&amp;#39;ve only skimmed the book so I can&amp;#39;t speak to it&amp;#39;s quality, but I definitely recommend taking the test.&lt;/p&gt;
+</description>
+				<pubDate>Sat, 30 Apr 2016 00:00:00 -0400</pubDate>
+				<link>http://www.nomachetejuggling.com/2016/04/30/strengthsfinder/</link>
+				<guid isPermaLink="true">http://www.nomachetejuggling.com/2016/04/30/strengthsfinder/</guid>
+			</item>
+		
+			<item>
 				<title>Star Wars Machete Order: Update and FAQ</title>
 				<description>&lt;p&gt;Wow, this &lt;a href=&quot;http://www.nomachetejuggling.com/2011/11/11/the-star-wars-saga-suggested-viewing-order/&quot;&gt;Machete Order&lt;/a&gt; thing got big!  After the post first &amp;quot;went viral&amp;quot; and got mentioned on &lt;a href=&quot;http://www.wired.com/2012/02/machete-order-star-wars&quot;&gt;Wired.com&lt;/a&gt;, I started getting around 2,000 visitors to it per day, which I thought was a lot.  But then in the months before &lt;em&gt;Star Wars Episode VII: The Force Awakens&lt;/em&gt; was released, it blew up like Alderaan, peaking at 50,000 visitors DAILY.  This year, over 1.5 million unique users visited the page.  &lt;a href=&quot;http://www.google.com/trends/explore?hl=en-US&amp;amp;q=machete+order,+cure+for+cancer,+lindsay+lohan+naked&amp;amp;cmpt=q&amp;amp;tz=Etc/GMT%2B5&amp;amp;tz=Etc/GMT%2B5&amp;amp;content=1&quot;&gt;It&amp;#39;s been nuts&lt;/a&gt;.&lt;/p&gt;
 
@@ -1013,117 +1183,6 @@ class ExampleControllerSpec extends Specification {
 				<pubDate>Fri, 30 Aug 2013 00:00:00 -0400</pubDate>
 				<link>http://www.nomachetejuggling.com/2013/08/30/diving-into-android/</link>
 				<guid isPermaLink="true">http://www.nomachetejuggling.com/2013/08/30/diving-into-android/</guid>
-			</item>
-		
-			<item>
-				<title>OSCON 2013: A Review</title>
-				<description>&lt;p&gt;This year, I went to O&amp;#39;Reilly&amp;#39;s Open Source Convention, &lt;a href=&quot;http://www.oscon.com/oscon2013&quot;&gt;OSCON&lt;/a&gt;.  Every year for the last four years, I&amp;#39;ve gone to a big tech conference.  For the last three, I went to NoFluffJustStuff, which was later renamed &lt;a href=&quot;http://uberconf.com/&quot;&gt;UberConf&lt;/a&gt;.  UberConf is held in my home state, I can drive to it from my house every day so there&amp;#39;s no plane or hotel involved, which makes it inexpensive enough that I&amp;#39;ve been able to get my employers to pay for it.  However, due to having attended UberConf consecutively for three years, last year I&amp;#39;d seen about half the sessions already either in previous years on at local Java User Group meetings, so I decided that this year I&amp;#39;d try something different.&lt;/p&gt;
-
-&lt;p&gt;OSCON was a radical departure for me.  UberConf is a &amp;quot;Java/Agility&amp;quot; conference, and since I work almost exclusively with the JVM in an Agile environment, it&amp;#39;s more or less custom-tailored to my interests.  OSCON, however, had a huge variety of different tracks and a similarly varied group of attendees.  There were Python folks, Ruby folks, hardware hackers, system admins, operations gurus, cloud nerds, data geeks, perl wonks, and more.  I picked OSCON because, while the variety was less tailored to my interests, the sheer number of tracks (18 concurrent sessions per time slot!) made up for it.&lt;/p&gt;
-
-&lt;table class='image aligncenter' width='586'&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/IMG_20130721_145702-580x435.jpg&quot; width='580' height='435'/&gt;&lt;p class='caption'&gt;OSCON!&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-
-&lt;p&gt;Here is my review of the OSCON experience.  OSCON was the first conference I&amp;#39;ve been to outside of my home state, and really the first one not run by the Rocky Mountain Software Symposium.  As such, it will be unavoidable that I will be comparing it largely to my UberConf experience, since it&amp;#39;s my only real frame of reference.  I will try to address each element of the conference separately.&lt;/p&gt;
-
-&lt;h1&gt;Sessions&lt;/h1&gt;
-
-&lt;p&gt;First thing&amp;#39;s first, how were the sessions?  I don&amp;#39;t go to tech conferences to network or hand out business cards, though I hear that&amp;#39;s half the point.  I treat conferences like an intense week of school, I take notes and try to learn as much as I can in the sessions.  A tech conference&amp;#39;s quality is going to be 95% the quality of the sessions for me, so they&amp;#39;re the most important thing by far.&lt;/p&gt;
-
-&lt;p&gt;As I mentioned earlier, I was initially worried that the lack of narrow focus on my area of work would make it difficult to find sessions I wanted to attend.  For the most part, this wound up not being the case.  I actually really enjoyed being able to venture out of my typical comfort zone and, while most of my sessions did still revolve around the JVM, I attended a few sessions about Google Go, Hadoop, Android development, ops, Erlang, vim, JavaScript, mathematics, Arduino, and NoSQL.  I probably learned more from the JVM-related sessions, but it was fun to attend some of these sessions and learn about stuff I&amp;#39;m not normally exposed to.&lt;/p&gt;
-
-&lt;p&gt;Only a few times did this wide focus hurt my session-taking ability.  One example that comes to mind was a talk on how to keep long-running server applications alive.  The topic sounded interesting, and at a JVM-focused conference this would have probably been about JVM tuning, garbage collection tweaking, Tomcat, and similar topics.  Here it was all about server daemons, cron jobs, signal interceptions, and the like.  I was bummed because I liked the idea of the talk but the technology it applied to was too far out out my zone of usefulness that I skipped it.  Another talk that seemed interesting used Erlang as the basis language, and having never used it, I was worried the talk would be over my head in detail so I skipped that too.  These occurrences were rare, but frustrating.&lt;/p&gt;
-
-&lt;table class='image alignleft' width='306'&gt;&lt;tr&gt;&lt;td&gt;&lt;a href='http://www.flickr.com/photos/oreillyconf/9356688516/in/set-72157634769772086'&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/oscon_session-300x200.jpg&quot; width='300' height='200'/&gt;&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-
-&lt;p&gt;One thing lacking were &amp;quot;agility&amp;quot;-based talks.  I actually liked this, I&amp;#39;ve found that almost every talk I&amp;#39;ve ever attended on something related to agile is really high-level and borderline useless.  They always tend to be like &amp;quot;you should read this book, it&amp;#39;s good&amp;quot; and full of a lot of filler or academic advice.  Having virtually no talks like that cleared space for more technical talks, which are the kind I enjoy more, so I appreciated that.  I think someone that enjoys talks like that might have had a tougher time at OSCON, but I enjoyed it.&lt;/p&gt;
-
-&lt;p&gt;One thing of significant note is session length.  At UberConf, all of the sessions are 90 minutes, but all of OSCON&amp;#39;s sessions were 40 minutes.  The longer sessions mean that a 6-session day goes from 8:30 AM to 10 PM, which basically means your brain is too exhausted to learn anything in the last session.  I&amp;#39;ve often felt like speakers doing 90 minute sessions were padding their talks, but OSCON sessions have the opposite problem: the talks often felt too short, and it was clear that speakers struggled to make some of their talks fit into 40 minutes.  Often sessions would run long or get cut off just when they were getting good.  On the upshot, it almost never felt like there were any filler moments, picking a bad session was only a 40 minute cost, and the day ended before my brain gave out, which was good.  I think I&amp;#39;d like to see sessions that are 60 minutes, it seems like such a length would avoid the problem of the too-short 40 minutes and the too-long 90.  &lt;/p&gt;
-
-&lt;p&gt;The number of parallel tracks was excellent.  There was only one time slot where none of the sessions excited me, every other time slot forced me to choose between 2 or 3 that I really wanted.  That&amp;#39;s a great problem to have.  I like choice.&lt;/p&gt;
-
-&lt;table class='image alignright' width='306'&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/picard-facepalm-300x197.jpg&quot; width='300' height='197'/&gt;&lt;p class='caption'&gt;Not this 'not this shit again' shit again.&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-
-&lt;p&gt;One thing I have to complain about is a trend I&amp;#39;m noticing in more and more talks.  This was present at UberConf last year, I see it in User Group talks, and it was out in spades at OSCON.  &lt;strong&gt;People putting stupid meme image macros in their slides&lt;/strong&gt;.  Dumb pictures of rage comic faces, grumpy cat, tired old memes that I&amp;#39;ve seen reposted to reddit about a billion times.  I saw the &lt;a href=&quot;http://knowyourmeme.com/memes/facepalm&quot;&gt;Picard facepalm image&lt;/a&gt; three separate times.  It was like a damn &amp;quot;applause&amp;quot; sign for a sitcom studio audience, whenever the speaker needed a quick chuckle, something would pop up with huge Impact font.  I unsubscribed from every default subreddit to get away from this hackneyed, unfunny crap, why do so many speakers feel compelled to put this &amp;quot;omg guise I&amp;#39;m on reddit too!!!&amp;quot; narwhal baconing crap in their slides? Grr.&lt;/p&gt;
-
-&lt;p&gt;Overall, the talks were great.  I took a ton of notes, and learned a whole bunch of stuff.  Good speakers with lots of good information.  I would always like to see a wider selection of advanced talks available, but what was offered was definitely high quality.&lt;/p&gt;
-
-&lt;h2&gt;Workshops&lt;/h2&gt;
-
-&lt;p&gt;One thing present at OSCON that I was used to from UberConf was a separate day set aside for extra-long sessions.  Generally called &amp;quot;Workshops&amp;quot; these are intended to be more hands-on sessions where you focus on learning a specific thing with the help of a teacher.  At UberConf, there are two types of workshops: 9-hour, all-day sessions with a single topic, and workshops during during the regular week that just take up 2 slots back-to-back for a total of 3 hours.  At OSCON, there are two full days set aside for workshops, which are 3 hours and 30 minutes each, two workshops per day.&lt;/p&gt;
-
-&lt;p&gt;I actually like the all-day format of UberConf&amp;#39;s Tuesday workshops the most, because a full day really is enough time to thoroughly learn something.  Of the shorter variety, I preferred OSCON&amp;#39;s workshop format, simply because they were all separated to their own workshop days. Having workshops in the middle of the week means that you&amp;#39;re giving up two sessions to take the workshop, and every year I&amp;#39;d have multiple occurrences of wanting to attend a particular session but having it conflict with half of a workshop.&lt;/p&gt;
-
-&lt;p&gt;That being said, &lt;strong&gt;many&lt;/strong&gt; of these workshops (at both conferences) suffer from the same basic problem, that speakers who don&amp;#39;t want to invest the time in actually running a workshop simply use them as a place to give super-long talks.  Here&amp;#39;s the deal: if I&amp;#39;m not typing code into my laptop, it&amp;#39;s not a workshop, it&amp;#39;s just a really long lecture.  Too many times at both UberConf and OSCON I have attended a workshop that was really just an excuse to include more slides.  And every time that happens, I get bored halfway through and my attention wanders.&lt;/p&gt;
-
-&lt;p&gt;I attended the Android workshop at OSCON this year and it went extremely well, we jumped right into Android development, I actually learned more at it than at BOTH of the full-day, 9-hour Android workshops I attended in previous years combined.  I also attended a workshop on Google Go that wound up just being a group follow-along of the &lt;a href=&quot;http://tour.golang.org/&quot;&gt;Google Go tour&lt;/a&gt;, which disappointed me a bit so I bailed and went to the Hadoop talk, which wound up just being a really long slide lecture.  I learned a lot at both of these talks actually, but I don&amp;#39;t know that I&amp;#39;d have classified either of them as &amp;quot;Workshops&amp;quot;.  I also attended workshops on Clojure and Erlang - both of these were largely just lectures, with some encouragement to type what you see in the slides in a REPL.  Again, I learned a lot and really enjoyed them, but I&amp;#39;d still hesitate to call them workshops.&lt;/p&gt;
-
-&lt;h1&gt;Keynotes&lt;/h1&gt;
-
-&lt;p&gt;Another huge difference from what I&amp;#39;m used to was the Keynote style.  I&amp;#39;m used to a 60 minute keynote presentation during dinner.  OSCON had a series of 10-minute keynotes first thing in the morning, before any sessions.  These keynotes covered all sorts of stuff (&amp;quot;open source&amp;quot; is a pretty wide umbrella).&lt;/p&gt;
-
-&lt;p&gt;We got to see an &lt;a href=&quot;http://www.youtube.com/embed/Ty9QDqV-_Ak?autoplay=1&quot;&gt;AR drone being controlled by Clojure&lt;/a&gt; (I want one), hear about choosing licenses for GitHub projects, learn about the &lt;em&gt;cough&lt;/em&gt;total-bullshit&lt;em&gt;cough&lt;/em&gt; We The People project, and Piers Cawley showed up to &lt;a href=&quot;http://www.youtube.com/watch?v=YNeTBKyrHeY&amp;amp;t=1m49s&quot;&gt;sing a song about space&lt;/a&gt; and, I&amp;#39;m pretty sure, &lt;a href=&quot;http://www.youtube.com/watch?v=YNeTBKyrHeY&amp;amp;t=4m41s&quot;&gt;chastise us for swearing too much&lt;/a&gt;.&lt;/p&gt;
-
-&lt;table class='image alignleft' width='306'&gt;&lt;tr&gt;&lt;td&gt;&lt;a href='http://www.flickr.com/photos/oreillyconf/9363469980/in/set-72157634769772086'&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/oscon_keynotes-300x200.jpg&quot; width='300' height='200'/&gt;&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-
-&lt;p&gt;Overall, I liked the short-format Keynotes.  I think the longer keynotes have to be extremely broad and high-level to be applicable to everyone in attendance, which generally means they&amp;#39;re not technical at all so I hate them.  The 10-minute keynote format meant that a whole bunch of different speakers could talk on different topics which actually allowed them to be more technical and interesting.&lt;/p&gt;
-
-&lt;p&gt;Most importantly, all of the Keynotes were streamed live, which meant I could sleep in and watch them in my hotel room before heading to the convention center.  Oh plus I can share them with people and blah blah blah.  Point is, keynotes in my pajamas.  Awesome.&lt;/p&gt;
-
-&lt;h1&gt;Expo Hall&lt;/h1&gt;
-
-&lt;p&gt;One thing that was totally new to me was the Exhibition Hall at OSCON.  As the name implies, the &amp;quot;No Fluff, Just Stuff&amp;quot; conference series prides itself on a minimum level of sponsorship, so there were never trade booths or anything like that.&lt;/p&gt;
-
-&lt;p&gt;I actually had no problem with the expo hall, in fact I really enjoyed it.  I was never forced to go there, I never had to walk through it to get somewhere, and any sponsored session was clearly labeled as such.  I was frequently &lt;em&gt;enticed&lt;/em&gt; to go to the expo hall because often the snacks and goodies were there (but not meals), but it was always optional.  I had a good time, I got to look at some cool stuff in the booths, and I collected a ton of little trinkets and stickers plus a whopping &lt;strong&gt;25 T-shirts&lt;/strong&gt;.  No kidding, 25.&lt;/p&gt;
-
-&lt;p&gt;OSCON also ran this puzzle game, where you had to collect all of these little puzzle pieces and the first 500 people to finish the puzzle got an OSCON sweatshirt and were entered into a drawing for prizes.  The only way to get most of the puzzle pieces was by visiting specific vendor booths.  I really wanted the sweatshirt, so I took this game really, really seriously.  Like, &lt;strong&gt;way too seriously&lt;/strong&gt;.  Okay, I actually walked to a Walgreen&amp;#39;s and bought a bottle of glue so that I could glue down all of my pieces on Tuesday night so that when I collected the final piece from attending the Wednesday morning keynotes, I could immediately run to the registration booth and turn in my puzzle.  They were still unboxing the sweatshirts when I turned mine in, I think I wound up being the first person done.  I was worried that everyone was going to take it super seriously and I wouldn&amp;#39;t get the sweatshirt, and I figured pre-gluing my puzzle would give me an edge over anyone just starting to assemble the puzzle after getting the last piece.  In retrospect, I was being a complete psychopath, because people were still completing their puzzles Thursday night and getting sweatshirts, so clearly I&amp;#39;m an insane person.&lt;/p&gt;
-
-&lt;table class='image alignright' width='306'&gt;&lt;tr&gt;&lt;td&gt;&lt;a href='http://www.flickr.com/photos/oreillyconf/9353919205/in/set-72157634769772086'&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/oscon_expo-300x200.jpg&quot; width='300' height='200'/&gt;&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-
-&lt;p&gt;I really enjoyed the Expo Hall, I found myself kind of wandering around it whenever I had some time to kill, or checking it out just before leaving for the day to see if there were any extra goodies.  I didn&amp;#39;t even get too heavily marketed to, I only occasionally got stuck listening to a marketing spiel while waiting for a T-Shirt. On one occasion I was told by a Rackspace representative that the only way to get the shirt was to play a game, but when I looked at the game it looked like some kind of Wii-like activity on a big TV screen in front of approximately eighty billion people.  I said nevermind and started to walk away, dejected, which kind of saddened me because I actually wanted a Rackspace shirt due to already &lt;strong&gt;being&lt;/strong&gt; a Rackspace customer and liking the product.  As I started leaving, a different representative said &amp;quot;I&amp;#39;ll give you a shirt man, what size?&amp;quot; and gave me a shirt without making me act like an idiot in the middle of the huge expo hall.  Thanks, random Rackspace dude, I don&amp;#39;t know why a company would make someone jump through hoops for the honor of becoming a walking billboard for that company for free.&lt;/p&gt;
-
-&lt;p&gt;Two humorous standouts at the expo hall were GM and Microsoft.  GM was there to showcase... actually, I have no idea why the hell GM was there.  But they had a big fancy car in the middle of the hall, some luxury sportscar that you could sit in if you wanted to, I dunno, feel what it would be like to own a nice car?  Anyway, someone tweeted about how misguided it was to bring a big gas-guzzler to an Open Source convention instead of some green hybrid-type deal.  I thought that was funny, but not nearly as funny as Microsoft for setting up a booth with a bunch of Windows Phones on display.  Yeah Microsoft, I&amp;#39;m not sure the Open Source crowd is exactly your target market for a device running Windows of all things.  Literally across from them was the Ubuntu booth with a couple of &lt;a href=&quot;http://www.indiegogo.com/projects/ubuntu-edge&quot;&gt;Edge prototypes&lt;/a&gt;.  There was usually a line to see the Edge.&lt;/p&gt;
-
-&lt;h1&gt;Attendees&lt;/h1&gt;
-
-&lt;p&gt;I wish I had a lot to say about the crowd at OSCON, but I don&amp;#39;t.  A colleague of mine warned me that he&amp;#39;d been before and that the crowd was &amp;quot;neckbeardy&amp;quot; but I didn&amp;#39;t notice much difference between them and the UberConf crowd.  Lots of nerdy T-Shirts, and overall far too much facial and body hair in general, but the crowd didn&amp;#39;t strike me as obnoxious.  I am glad I decided not to pack my &lt;a href=&quot;https://supporters.eff.org/shop&quot;&gt;EFF T-Shirt&lt;/a&gt;, which almost looked like some kind of a uniform with this crowd.&lt;/p&gt;
-
-&lt;table class='image alignleft' width='306'&gt;&lt;tr&gt;&lt;td&gt;&lt;a href='http://www.flickr.com/photos/oreillyconf/9360697295/in/set-72157634769772086'&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/oscon_lunch-300x200.jpg&quot; width='300' height='200'/&gt;&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-
-&lt;p&gt;Everyone seemed smart and very passionate about their particular areas of interest.  One neat thing OSCON had were these networking ribbons you could pick up with the names of things you might like (&amp;quot;Perl&amp;quot;, &amp;quot;Java&amp;quot;, &amp;quot;Big Data&amp;quot;, etc.) and attach them to your conference badge; O&amp;#39;Reilly also set aside a number of labeled tables at lunch for like-minded folks to gather together and geek out.&lt;/p&gt;
-
-&lt;p&gt;I saw an awful lot of people wearing Google Glass.  I realized that photos really don&amp;#39;t do Glass justice, you have to see it in person just to realize how ridiculous someone looks wearing those things.  Seriously though, I felt myself feeling &lt;em&gt;extremely&lt;/em&gt; paranoid whenever someone wearing one was even looking in my direction, like I very well may be getting put into a photo or video.  I actually disliked being &lt;em&gt;looked at&lt;/em&gt; by someone wearing Glass.  I really hate it.  Also, I really want one.&lt;/p&gt;
-
-&lt;p&gt;Overall, everyone was very friendly.  Everyone but me, that is.  I&amp;#39;m not friendly, and thus went out of my way not to really talk to anyone or network.  It&amp;#39;s how I roll.&lt;/p&gt;
-
-&lt;h1&gt;Venue&lt;/h1&gt;
-
-&lt;p&gt;UberConf is typically held in the conference rooms of a large hotel, but OSCON was held at the &lt;a href=&quot;http://www.oregoncc.org/&quot;&gt;Oregon Convention Center&lt;/a&gt;.  I believe this allowed OSCON to definitely have more rooms overall, but both locations have always been very comfortable.&lt;/p&gt;
-
-&lt;p&gt;UberConf sessions almost always have rows of tables with chairs, good for laptops and notetaking.  Aside from the workshops, I don&amp;#39;t think any of the OSCON sessions had tables set up, everything was just chairs, and they were pretty cramped.  Sometimes this made notetaking difficult, but I will say OSCON did a generally better job of having sufficient power available, I almost never struggled to find a place to plug in my laptop.  I&amp;#39;m glad I brought my laptop for notes instead of my tablet, which requires a flat service to prop up and type on.&lt;/p&gt;
-
-&lt;p&gt;A couple things irked me a little bit about the venue staff at OSCON.  I frequently saw A/V staff being condescending and rude to speakers who were trying to get set up, as if they were annoyed the speakers didn&amp;#39;t know more about microphones and video equipment.  They did a good job of making sure the projection systems worked and the speakers were clear over the audio system, but whenever they had to basically do anything at all many of them would take this sarcastic tone of voice when talking to the speakers.  It was weird.&lt;/p&gt;
-
-&lt;p&gt;I&amp;#39;m pretty sure the A/V crew is contracted out by the convention center, not actual center employees, but the actual convention center staff could be kind of annoying as well.  Frequently convention center staff would harass people for sitting on the floor in overfull rooms, or turn people away from popular sessions for having too many people.  In one instance one of the staffers guarding entry to a room told me the speaker wasn&amp;#39;t there yet and he&amp;#39;s not supposed to let me in because they might want a few minutes to get set up with the room empty.  Why?  I also got turned away from entering the expo hall to get a missing puzzle piece at 9:59 because the hall didn&amp;#39;t open until 10.  He literally watched his phone tick over to 10:00 before letting me through.  Chill out man, you&amp;#39;re not guarding the president.&lt;/p&gt;
-
-&lt;p&gt;The food was good, too.  Pretty much convention buffet food, not many choices at lunch but the quality was decent.  This may sound strange, but I appreciated that the venue only supplied lunch, whereas UberConf typically provides breakfast, lunch, and dinner.  It made it much easier to follow my diet, which I guess is a weird thing to appreciate, but this is my dumb blog and I liked it.&lt;/p&gt;
-
-&lt;p&gt;The Convention Center was located in Portland, right near a public transit rail line, and the convention included a ticket.  I didn&amp;#39;t rent a car and instead took the transit system everywhere, which was pretty convenient.  I walked from my hotel to the convention center every day; I even took a break back in my room to drop off some of those shirts because they were weighing me down.  I was also walking distance to a movie theater, where I went to catch a movie and wind down one night.  I felt safe everywhere, though when I checked into the Denny&amp;#39;s across from my hotel on Foursquare for breakfast one morning, I noticed someone complaining that it wasn&amp;#39;t open 24 hours a day, with a response posted &amp;quot;LOL, you be willing to work in that part of town at 3am and we&amp;#39;ll talk.&amp;quot;  What the hell part of town was I in?&lt;/p&gt;
-
-&lt;p&gt;Sticking with public transit made it difficult to attend the various parties being thrown by tech companies in the area, so I didn&amp;#39;t go to any of those.  It would have been nice for there to be buses or something, but frankly I didn&amp;#39;t stay at the actual O&amp;#39;Reilly party that was &lt;strong&gt;at&lt;/strong&gt; the convention center for more than 10 minutes, so I can&amp;#39;t honestly say I&amp;#39;d have used them.&lt;/p&gt;
-
-&lt;p&gt;Overall, Portland is a cool place for a convention and the convention center was a cool venue with a lot of rooms.  I missed being able to come home in the evenings, but I liked the convenience of the location and the proximity to my hotel, plus how quickly and easily I was able to get to lots of good restaurants and the like.&lt;/p&gt;
-
-&lt;h1&gt;Misc&lt;/h1&gt;
-
-&lt;p&gt;One neat touch of OSCON that I enjoyed was the personalized schedule.  One of my biggest challenges with these conferences is figuring out which sessions to go to, I often print out the schedules and use an elaborate system of markings to indicate preferences and possible substitutions, it&amp;#39;s all very A Beautiful Mind.  OSCON allows you to log in and actually mark sessions right there on the site.  What&amp;#39;s more, you can subscribe to an iCal feed of your personalized schedule, and you can sync it to a special OSCON smartphone app that displays the rooms for the sessions and can be set to notify you before they start.  Freaking cool.&lt;/p&gt;
-
-&lt;table class='image aligncenter' width='586'&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/IMG_20130727_205308-e1375128008444-580x494.jpg&quot; width='580' height='494'/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-
-&lt;p&gt;I really had a great time at OSCON, I&amp;#39;m very glad I went.  I do wish for something that&amp;#39;s a bit more of a happy medium between OSCON and UberConf, with one-hour sessions, and I really wish these conventions would start putting the hammer down on what allows a session to be called a &amp;quot;workshop&amp;quot;, but I definitely enjoyed the experience and I hope to go again next year.&lt;/p&gt;
-</description>
-				<pubDate>Tue, 30 Jul 2013 00:00:00 -0400</pubDate>
-				<link>http://www.nomachetejuggling.com/2013/07/30/oscon-2013-a-review/</link>
-				<guid isPermaLink="true">http://www.nomachetejuggling.com/2013/07/30/oscon-2013-a-review/</guid>
 			</item>
 		
 	</channel>

@@ -82,6 +82,25 @@
 	
 		<div class="post-preview">
 		  	<div class="postheader">
+  	<h1 class="posttitle"><a href="/2008/02/01/changing-logging-behavior-of-rails-via-extensions/">Changing Logging Behavior of Rails via Extensions</a></h1>
+  	<div class="postmeta">
+		<p class="meta">
+		<b title="code, rails, and ruby">PROGRAMMING</b> - 
+		February 1, 2008 - 
+		1,097 words -
+		<a href="/2008/02/01/changing-logging-behavior-of-rails-via-extensions/#disqus_thread">Comments</a>
+		</p>
+	</div>
+</div>
+		  	<div class="postentry">
+				<p>One of the nicest things about Ruby is how well it supports metaprogramming.  You can dynamically, at runtime, change the behavior of any other class or module in the system, even private methods.  </p><p>When I was first learning Ruby, this seemed like a flaw, and while I still feel that this ability can be abused, it is definitely handy.</p><p>I&#39;m going to explain a simple method of changing the behavior of part of Rails by a real-life example from work.</p><p>For a Ruby on Rails project I&#39;m currently working on, we had a somewhat uncommon requirement.  We&#39;re dealing with a lot of data, which we store for other companies.  For various reasons, one of the concerns is that we may be subpoenaed and forced to provide all of our records for legal reasons.  In order to fully protect the identities of our customers, our system was designed around never actually storing any identifying information about our customers.  Instead, customers get a special code that identifies them, and we only have the ability to know the code, but we can&#39;t tie the code to any specific organization.  This may seem like a strange restriction, but for our application it was important.</p>
+
+        <p><a href="/2008/02/01/changing-logging-behavior-of-rails-via-extensions/">Read the rest of "Changing Logging Behavior of Rails via Extensions" &raquo;</a></p>
+			</div>
+		</div>
+	
+		<div class="post-preview">
+		  	<div class="postheader">
   	<h1 class="posttitle"><a href="/2007/10/10/java-compiler-generating-secret-methods/">Java Compiler Generating Secret Methods</a></h1>
   	<div class="postmeta">
 		<p class="meta">
@@ -251,25 +270,6 @@
 			</div>
 		</div>
 	
-		<div class="post-preview">
-		  	<div class="postheader">
-  	<h1 class="posttitle"><a href="/2006/04/27/password-change-policies/">Password Change Policies</a></h1>
-  	<div class="postmeta">
-		<p class="meta">
-		<b title="code and java">LIFE</b> - 
-		April 27, 2006 - 
-		1,746 words -
-		<a href="/2006/04/27/password-change-policies/#disqus_thread">Comments</a>
-		</p>
-	</div>
-</div>
-		  	<div class="postentry">
-				<p>I&#39;m no security guru by any stretch, but I am someone who cares a great deal about security.  I&#39;ve studied encryption academically a great deal, I&#39;ve read a number <a href="http://www.amazon.com/gp/product/0471117099/">excellent</a> <a href="http://www.amazon.com/gp/product/0387026207">books</a> <a href="http://www.amazon.com/gp/product/076454280X/">about</a> <a href="http://www.amazon.com/gp/product/0764574817/">security</a>, and I&#39;m a huge fan of <a href="http://www.schneier.com/blog/">Bruce Schneier</a>.  My point here is that I&#39;m not a security genius, but I do think a lot about it, so take this post with the same grain of salt you&#39;d take anything by a non-expert.</p><p>That being said, something that has always bugged me has been corporate password change policies. Despite how <a href="http://www.cerias.purdue.edu/weblogs/spaf/general/post-30/">pointless</a> it is to implement a change policy, it seems to be the standard. The problem is, when I have to change my password monthly, I can&#39;t use the handful of secure passwords I memorized long ago because I don&#39;t have that many, and thus I am forced to pick passwords that I can remember (which makes them more breakable) or write them down and keep them with me (which is better, but still has flaws).</p><p>Because I dislike both options, I devised a system that allows me to maintain a monthly-changing password, without having to write it down where someone can find it, and without having to make my password weaker so that I can memorize it.</p><p>I will describe this system and post some usable source code in this post.  I do this for two reasons:</p>
-
-        <p><a href="/2006/04/27/password-change-policies/">Read the rest of "Password Change Policies" &raquo;</a></p>
-			</div>
-		</div>
-	
 	</div>
 </div>
 
@@ -298,6 +298,8 @@
           <li id="recent-posts" class="widget widget_recent_entries"> <h2 class="widgettitle">Recent Posts</h2>
             <ul>
                 
+                  <li><a href="/2016/04/30/strengthsfinder/">My StrengthsFinder Results</a></li>
+                
                   <li><a href="/2015/12/28/machete-order-update-and-faq/">Star Wars Machete Order: Update and FAQ</a></li>
                 
                   <li><a href="/2015/11/13/phd-research-status-report/">PhD Status Report</a></li>
@@ -315,8 +317,6 @@
                   <li><a href="/2013/12/17/centurylink-traps-and-caps/">CenturyLink: Traps and Caps</a></li>
                 
                   <li><a href="/2013/08/30/diving-into-android/">Diving Into Android</a></li>
-                
-                  <li><a href="/2013/07/30/oscon-2013-a-review/">OSCON 2013: A Review</a></li>
                 
             </ul>
           </li> <!-- /recent-posts -->
@@ -344,7 +344,7 @@
                     ruby
                   </a>
                 
-                  <a href="/tag/agile" style="font-size: 10pt">
+                  <a href="/tag/agile" style="font-size: 9pt">
                     agile
                   </a>
                 

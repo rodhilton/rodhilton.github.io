@@ -82,6 +82,25 @@
 	
 		<div class="post-preview">
 		  	<div class="postheader">
+  	<h1 class="posttitle"><a href="/2011/05/23/adding-dont-hyphenate-class-name-support-to-hyphenator/">Adding 'Dont Hyphenate Classname" Support to Hyphenator</a></h1>
+  	<div class="postmeta">
+		<p class="meta">
+		<b title="blog, code, formatting, patch, and wordpress">PROGRAMMING</b> - 
+		May 23, 2011 - 
+		391 words -
+		<a href="/2011/05/23/adding-dont-hyphenate-class-name-support-to-hyphenator/#disqus_thread">Comments</a>
+		</p>
+	</div>
+</div>
+		  	<div class="postentry">
+				<p>The Wordpress <a href="http://wordpress.org/extend/plugins/hyphenator/">Hyphenator</a> plugin is a great plugin that uses <a href="http://code.google.com/p/hyphenator/">Hyphenator.js</a> to perform client-side hyphenation of blog posts.  I think this makes full-justified posts look much nicer, and I use it extensively on this site.</p><p>Hyphenator.js relies on being told what classnames to look for in a page to know what can be hyphenated, but it also has an option called <code>donthyphenateclassname</code> which allows one to specify classnames that never get hyphenated, even when they are inside of a class that ought to be.</p><p>Unfortunately, the Hyphenator Wordpress plugin does not support this option.  I needed support for it, so I added it.  I don&#39;t really know of a place to submit this patch, so I&#39;m posting it here.  This patch has been applied to <a href="http://wordpress.org/extend/plugins/hyphenator/download/">version 3.2.0 of Hyphenator</a>.</p>
+
+        <p><a href="/2011/05/23/adding-dont-hyphenate-class-name-support-to-hyphenator/">Read the rest of "Adding 'Dont Hyphenate Classname" Support to Hyphenator" &raquo;</a></p>
+			</div>
+		</div>
+	
+		<div class="post-preview">
+		  	<div class="postheader">
   	<h1 class="posttitle"><a href="/2011/04/18/adding-scaling-support-in-latex-for-wordpress/">Adding Scaling Support in Latex for Wordpress</a></h1>
   	<div class="postmeta">
 		<p class="meta">
@@ -251,25 +270,6 @@
 			</div>
 		</div>
 	
-		<div class="post-preview">
-		  	<div class="postheader">
-  	<h1 class="posttitle"><a href="/2009/08/21/my-personal-3-pillars-of-job-satisfaction/">My Personal 3 Pillars of Job Satisfaction</a></h1>
-  	<div class="postmeta">
-		<p class="meta">
-		<b title="career and job">PROGRAMMING</b> - 
-		August 21, 2009 - 
-		1,092 words -
-		<a href="/2009/08/21/my-personal-3-pillars-of-job-satisfaction/#disqus_thread">Comments</a>
-		</p>
-	</div>
-</div>
-		  	<div class="postentry">
-				<p>As I grow through my career as a software developer, I have tried to remain aware of what makes me happy or unhappy at a job.   What I decided was that there were three factors in job satisfaction, so I found myself amazed that someone else had posted something similar: Alan Skorkin explains his <a href="http://www.skorks.com/2009/08/the-3-pillars-of-job-satisfaction/">Three Pillars of Job Satisfaction</a>.</p><p>I agree that there are three pillars, but I disagree about what the pillars are, at least for myself.</p><p>I&#39;ve found that these are the main three factors in determining how happy I am at a job:</p><p>Some of these may seem redundant, so let me elaborate.</p>
-
-        <p><a href="/2009/08/21/my-personal-3-pillars-of-job-satisfaction/">Read the rest of "My Personal 3 Pillars of Job Satisfaction" &raquo;</a></p>
-			</div>
-		</div>
-	
 	</div>
 </div>
 
@@ -298,6 +298,8 @@
           <li id="recent-posts" class="widget widget_recent_entries"> <h2 class="widgettitle">Recent Posts</h2>
             <ul>
                 
+                  <li><a href="/2016/04/30/strengthsfinder/">My StrengthsFinder Results</a></li>
+                
                   <li><a href="/2015/12/28/machete-order-update-and-faq/">Star Wars Machete Order: Update and FAQ</a></li>
                 
                   <li><a href="/2015/11/13/phd-research-status-report/">PhD Status Report</a></li>
@@ -315,8 +317,6 @@
                   <li><a href="/2013/12/17/centurylink-traps-and-caps/">CenturyLink: Traps and Caps</a></li>
                 
                   <li><a href="/2013/08/30/diving-into-android/">Diving Into Android</a></li>
-                
-                  <li><a href="/2013/07/30/oscon-2013-a-review/">OSCON 2013: A Review</a></li>
                 
             </ul>
           </li> <!-- /recent-posts -->
@@ -344,7 +344,7 @@
                     ruby
                   </a>
                 
-                  <a href="/tag/agile" style="font-size: 10pt">
+                  <a href="/tag/agile" style="font-size: 9pt">
                     agile
                   </a>
                 

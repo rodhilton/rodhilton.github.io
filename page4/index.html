@@ -82,6 +82,25 @@
 	
 		<div class="post-preview">
 		  	<div class="postheader">
+  	<h1 class="posttitle"><a href="/2011/09/12/moving-one-git-repo-into-another-as-subdirectory/">Moving One Git Repository Into Another As A Subdirectory</a></h1>
+  	<div class="postmeta">
+		<p class="meta">
+		<b title="git and scm">PROGRAMMING</b> - 
+		September 12, 2011 - 
+		487 words -
+		<a href="/2011/09/12/moving-one-git-repo-into-another-as-subdirectory/#disqus_thread">Comments</a>
+		</p>
+	</div>
+</div>
+		  	<div class="postentry">
+				<p>I recently had to merge a number of independent projects into a larger project to enable a long-term project reorganization effort.  Since we&#39;re using Git for both projects, this was quite easy, but it required some investigating to figure out how to do it.</p><p>So you have two projects, <code>old-project</code> and <code>new-project</code>.  You want to end up with a subdirectory inside of <code>new-project</code> called <code>old-project</code> with all of the code from <code>old-project</code>, and you want to preserve that project&#39;s history.</p><p>Here&#39;s an overview of what we&#39;re going to do here, in the abstract:</p><p>For the purposes of this demonstration, <code>old-project</code> is cloned at <code>/home/machete/old-project</code> and <code>new-project</code> is cloned at <code>/home/machete/new-project</code>.</p>
+
+        <p><a href="/2011/09/12/moving-one-git-repo-into-another-as-subdirectory/">Read the rest of "Moving One Git Repository Into Another As A Subdirectory" &raquo;</a></p>
+			</div>
+		</div>
+	
+		<div class="post-preview">
+		  	<div class="postheader">
   	<h1 class="posttitle"><a href="/2011/08/25/mechanics-of-good-pairing/">Mechanics of Good Pairing</a></h1>
   	<div class="postmeta">
 		<p class="meta">
@@ -251,25 +270,6 @@
 			</div>
 		</div>
 	
-		<div class="post-preview">
-		  	<div class="postheader">
-  	<h1 class="posttitle"><a href="/2011/05/23/adding-dont-hyphenate-class-name-support-to-hyphenator/">Adding 'Dont Hyphenate Classname" Support to Hyphenator</a></h1>
-  	<div class="postmeta">
-		<p class="meta">
-		<b title="blog, code, formatting, patch, and wordpress">PROGRAMMING</b> - 
-		May 23, 2011 - 
-		391 words -
-		<a href="/2011/05/23/adding-dont-hyphenate-class-name-support-to-hyphenator/#disqus_thread">Comments</a>
-		</p>
-	</div>
-</div>
-		  	<div class="postentry">
-				<p>The Wordpress <a href="http://wordpress.org/extend/plugins/hyphenator/">Hyphenator</a> plugin is a great plugin that uses <a href="http://code.google.com/p/hyphenator/">Hyphenator.js</a> to perform client-side hyphenation of blog posts.  I think this makes full-justified posts look much nicer, and I use it extensively on this site.</p><p>Hyphenator.js relies on being told what classnames to look for in a page to know what can be hyphenated, but it also has an option called <code>donthyphenateclassname</code> which allows one to specify classnames that never get hyphenated, even when they are inside of a class that ought to be.</p><p>Unfortunately, the Hyphenator Wordpress plugin does not support this option.  I needed support for it, so I added it.  I don&#39;t really know of a place to submit this patch, so I&#39;m posting it here.  This patch has been applied to <a href="http://wordpress.org/extend/plugins/hyphenator/download/">version 3.2.0 of Hyphenator</a>.</p>
-
-        <p><a href="/2011/05/23/adding-dont-hyphenate-class-name-support-to-hyphenator/">Read the rest of "Adding 'Dont Hyphenate Classname" Support to Hyphenator" &raquo;</a></p>
-			</div>
-		</div>
-	
 	</div>
 </div>
 
@@ -298,6 +298,8 @@
           <li id="recent-posts" class="widget widget_recent_entries"> <h2 class="widgettitle">Recent Posts</h2>
             <ul>
                 
+                  <li><a href="/2016/04/30/strengthsfinder/">My StrengthsFinder Results</a></li>
+                
                   <li><a href="/2015/12/28/machete-order-update-and-faq/">Star Wars Machete Order: Update and FAQ</a></li>
                 
                   <li><a href="/2015/11/13/phd-research-status-report/">PhD Status Report</a></li>
@@ -315,8 +317,6 @@
                   <li><a href="/2013/12/17/centurylink-traps-and-caps/">CenturyLink: Traps and Caps</a></li>
                 
                   <li><a href="/2013/08/30/diving-into-android/">Diving Into Android</a></li>
-                
-                  <li><a href="/2013/07/30/oscon-2013-a-review/">OSCON 2013: A Review</a></li>
                 
             </ul>
           </li> <!-- /recent-posts -->
@@ -344,7 +344,7 @@
                     ruby
                   </a>
                 
-                  <a href="/tag/agile" style="font-size: 10pt">
+                  <a href="/tag/agile" style="font-size: 9pt">
                     agile
                   </a>
                 
