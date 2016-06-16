@@ -7,7 +7,7 @@
 		<atom:link href="http://www.nomachetejuggling.com/category/programming/rss.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
-				<title>My Software Engineering Guiding Principles - Part 1</title>
+				<title>Software Engineering Guiding Principles - Part 1</title>
 				<description>&lt;p&gt;I find that I repeat myself often at work.  There are a handful of things I say so often when discussing decisions that I&amp;#39;ve been called out for it on occasion for acting like a broken record.&lt;/p&gt;
 
 &lt;p&gt;But the reason I keep repeating these phrases is that I think they inform a great deal of my decision-making.  They are, in effect, my guiding principles when developing software professionally.&lt;/p&gt;
