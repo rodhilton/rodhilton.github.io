@@ -29,46 +29,46 @@
       $(this).addClass("dimmed");
     });
 
-    var navBar = $("#navbar");
-    var body = $("body");
-    var win = $(window);
-    var smallLogo = $("#small-logo");
-    var sidebars = $("#sidebars");      
-    var content = $("#content");
+    // var navBar = $("#navbar");
+    // var body = $("body");
+    // var win = $(window);
+    // var smallLogo = $("#small-logo");
+    // var sidebars = $("#sidebars");      
+    // var content = $("#content");
 
-    var navBarHeight = navBar.height();
+    // var navBarHeight = navBar.height();
 
-    function fixNav() {
-      var navBarTop = navBar.position().top;
-      var sideBarTop = navBarTop + navBarHeight + 1
+    // function fixNav() {
+    //   // var navBarTop = navBar.position().top;
+    //   // var sideBarTop = navBarTop + navBarHeight + 1
 
-      var position = sidebars.css("position");
-      if(position == "absolute") {
-          sidebars.
-            css({ 
-              top: (sideBarTop)+"px",
-              left: (content.position().left+content.width()+20)+"px",
-              visibility: "visible"
-            });
-      } else if (position == "relative") {
-        sidebars.
-            css({ 
-              top: "",
-              left: "0px",
-              visibility: "visible"
-            });
-      }
-    }
+    //   // var position = sidebars.css("position");
+    //   // if(position == "absolute") {
+    //   //     sidebars.
+    //   //       css({ 
+    //   //         top: (sideBarTop)+"px",
+    //   //         left: (content.position().left+content.width()+20)+"px",
+    //   //         visibility: "visible"
+    //   //       });
+    //   // } else if (position == "relative") {
+    //   //   sidebars.
+    //   //       css({ 
+    //   //         top: "",
+    //   //         left: "0px",
+    //   //         visibility: "visible"
+    //   //       });
+    //   // }
+    // }
 
     // jQuery(document).scroll(function(evt) {
     //   fixNav();
     // })
 
-    jQuery(window).resize(function(evt) {
-      fixNav();
-    });
+    // jQuery(window).resize(function(evt) {
+    //   fixNav();
+    // });
 
-    fixNav();
+    // fixNav();
   });
 
 }).call(this);

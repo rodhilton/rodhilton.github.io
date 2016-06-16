@@ -84,8 +84,8 @@ abbr {
   float: left;
   width: 780px; }
 
-#sidebars {
-  width: 250px;
+#sidebar-wrapper {
+  float: left;
   background: -moz-linear-gradient(top, #f8f8fb, 0%, rgba(248, 248, 251, 0) 100%);
   /* FF3.6+ */
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f8f8fb), color-stop(100%, rgba(248, 248, 251, 0)));
@@ -98,8 +98,11 @@ abbr {
   /* IE10+ */
   background: linear-gradient(to bottom, #f8f8fb 0%, rgba(248, 248, 251, 0) 100%);
   /* W3C */
-  position: absolute;
-  margin: 0; }
+  margin-left: 20px; }
+
+#sidebars {
+  width: 250px;
+  position: relative; }
 
 .sidebar {
   float: left;
@@ -791,21 +794,25 @@ dl.links dd {
       .resume ul ul LI:last-child {
         margin-bottom: 1em; }
 
-@media screen and (max-width: 1320px) {
+@media screen and (max-width: 1340px) {
   #sidebar-right {
     display: none; }
 
   #sidebars {
     width: 196px; } }
-@media screen and (max-width: 1212px) {
-  #wrapper, #navcontainer, #headerwrapper .header {
-    margin: 0 0 0 20px; } }
-@media screen and (max-width: 1016px) {
+@media screen and (max-width: 1232px) {
+  #page {
+    margin-left: -185px; } }
+@media screen and (max-width: 1056px) {
   html {
     margin-bottom: 0; }
 
   body {
     padding: 0; }
+
+  #page {
+    margin: 0 auto;
+    margin-left: auto; }
 
   #headerwrapper {
     padding: 0;
@@ -835,7 +842,8 @@ dl.links dd {
     width: 100%;
     border-top: 1px solid black;
     margin-top: 20px;
-    background: #f8f8fb; }
+    background: #f8f8fb;
+    margin-left: 0; }
 
   #sidebars {
     font-size: 140%;
@@ -871,7 +879,11 @@ dl.links dd {
     margin: 0 auto; } }
 @media screen and (max-width: 820px) {
   body {
-    /*font-size: 50%;*/ }
+    /*font-size: 50%;*/
+    min-width: 600px; }
+
+  #page {
+    min-width: 600px; }
 
   #wrapper, #navcontainer, #headerwrapper .header {
     width: 96%;
