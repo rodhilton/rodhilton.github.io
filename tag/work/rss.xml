@@ -4,7 +4,7 @@
 		<title>Absolutely No Machete Juggling &raquo; Work</title>
 		<description>Rod Hilton&amp;#039;s rants about stuff he cares about way too much.</description>		
 		<link>http://www.nomachetejuggling.com</link>
-		<atom:link href="http://www.nomachetejuggling.com/tag/{"name"=>"work", "posts"=>[<Post: /2016/04/30/strengthsfinder>], "id"=>"work"}/rss.xml" rel="self" type="application/rss+xml" />
+		<atom:link href="http://www.nomachetejuggling.com/tag/{"name"=>"work", "posts"=>[<Post: /2016/06/15/guidingprinciples-part1>, <Post: /2016/04/30/strengthsfinder>], "id"=>"work"}/rss.xml" rel="self" type="application/rss+xml" />
 		
 	</channel>
 </rss>

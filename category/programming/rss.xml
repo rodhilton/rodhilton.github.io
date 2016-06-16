@@ -7,6 +7,154 @@
 		<atom:link href="http://www.nomachetejuggling.com/category/programming/rss.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
+				<title>My Software Engineering Guiding Principles - Part 1</title>
+				<description>&lt;p&gt;I find that I repeat myself often at work.  There are a handful of things I say so often when discussing decisions that I&amp;#39;ve been called out for it on occasion for acting like a broken record.&lt;/p&gt;
+
+&lt;p&gt;But the reason I keep repeating these phrases is that I think they inform a great deal of my decision-making.  They are, in effect, my guiding principles when developing software professionally.&lt;/p&gt;
+
+&lt;p&gt;I thought it might be fun to write a few of these things down because I think that they&amp;#39;re worth sharing - I feel like these principles have steered me in the right direction time and time again.  Obviously, there are exceptions to these and there are times when they should be ignored (after all, not being a zealot is one of the principles) but I think they will generally take an engineer down the right path.&lt;/p&gt;
+
+&lt;h1&gt;Have Strong Opinions, Weakly Held&amp;quot;&lt;/h1&gt;
+
+&lt;p&gt;I think the phrase I&amp;#39;ve heard more than any other in my life is &amp;quot;tell us how you really feel!&amp;quot; which is I guess people&amp;#39;s way of telling me I&amp;#39;ve made them uncomfortable by expressing an opinion too aggressively.  It&amp;#39;s true, I can be very strongly opinionated, and I&amp;#39;ve gotten into more than my fair share of, oh, let&amp;#39;s call them &amp;quot;passionate discussions&amp;quot; in the workplace.  I&amp;#39;m never insulting or personal, but I have strong opinions on how to do things.&lt;/p&gt;
+
+&lt;p&gt;That said, I think it&amp;#39;s important to always be open to having my mind changed.  If anything, I think I&amp;#39;m TOO easy to convince to change my mind on something, often it takes only one strong counterpoint to completely demolish an opinion I&amp;#39;ve held firm to for years.  My opinions are informed by years and years of experience, but that experience doesn&amp;#39;t always apply in every situation, so it&amp;#39;s important to be willing to adjust in light of new information or facts.&lt;/p&gt;
+
+&lt;p&gt;Apparently this phrase &amp;quot;strong opinions, weakly held&amp;quot; comes from Stanford Professor Bob Sutton.  I think it&amp;#39;s a good way to approach every opinion really.  I&amp;#39;ve switched between polar opposite positions on a number of issues, including political and philosophical issues that I won&amp;#39;t get into on this blog, but I think I do a good job of allowing my convictions of experience to be suspended to make way for alternative arguments.  &lt;strong&gt;I never assume I&amp;#39;m objectively right just because I care&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;table class='image alignright' width='306'&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/zealot.jpg&quot; width='300' height='259'/&gt;&lt;p class='caption'&gt;Unless you hunger for battle, don't be a zealot&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;It&amp;#39;s important that the thing that makes an opinion weakly held is a strong, rational, logical argument for the alternative position.  I won&amp;#39;t back down on something I think is important because of how passionately another person disagrees, or how upset it makes them that they&amp;#39;ve met opposition.  This is what makes the opinion strong: I genuinely care about believing the largest possible number of true and correct things, so the only way to dislodge a strong opinion is with true and correct things that work to counter it.&lt;/p&gt;
+
+&lt;h2&gt;Don&amp;#39;t Be A Jerk&lt;/h2&gt;
+
+&lt;p&gt;I cringed when I watched Season 3, Episode 6 of my favorite show Silicon Valley, as the main character Richard felt so strongly about Tabs over Spaces that he alienated everyone in his life over it.  These debates are so incredibly pointless to me, I do not understand how people waste so much time caring about them.  &lt;strong&gt;Strong opinions are not the same as zealotry&lt;/strong&gt;, zealotry is company and team poison.  Strong opinions only matter if the things they&amp;#39;re about matter.  Having extremely strong opinions about tabs vs spaces, or emacs vs vim makes you borderline un-hireable to me, bringing zealots onto your team violates the &lt;a href=&quot;https://smile.amazon.com/Asshole-Rule-Civilized-Workplace-Surviving/dp/0446698202&quot;&gt;No Asshole Rule&lt;/a&gt; (though for the record, spaces and vim, #sorrynotsorry).&lt;/p&gt;
+
+&lt;p&gt;Additionally, it&amp;#39;s fine to have strong opinions but if you find yourself belittling or mocking other people in order to stand by them, they probably aren&amp;#39;t that strong.  Your positions on technical matters should stand on their own weight, without needing to knock people down.  Don&amp;#39;t be one of those people that walks around acting like a jerk and then justifying it by saying you have strong opinions.  The best engineers I&amp;#39;ve worked with have consistently been skilled at &lt;strong&gt;not only having well-reasoned strong opinions, but communicating those opinions respectfully to others.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span data-pullquote=&quot;It's better to have a hole in your team than an asshole. &quot; class=&quot;left&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;Being a technical wizard doesn&amp;#39;t give someone the right to be a pompous ass to everyone else.  I&amp;#39;m a strong advocate of taking people who are, at a personal level, insufferable, and firing them for being a poor cultural fit, regardless of how much they know about this or that technology.  It&amp;#39;s better to have a hole in your team than an asshole.&lt;/p&gt;
+
+&lt;p&gt;I started this list with this one in particular because it&amp;#39;s important.  The rest of this list is, essentially, a list of strongly held opinions I maintain.  But it&amp;#39;s important that even these opinions, having reaching Guiding Principle level, are subject to change in the light of strong counterarguments, or subject to suspension in light of unique circumstances.&lt;/p&gt;
+
+&lt;h1&gt;The Team Unqualified to Refactor is Unqualified to Rewrite&lt;/h1&gt;
+
+&lt;p&gt;I strongly, strongly believe that a full-on code rewrite is nearly always the wrong thing to do.  Either you pull everyone off the current iteration of the product to do the rewrite, which means your main product languishes, or you pull some people off to do the rewrite, meaning the rewrite team has to always be catching up with the ever-growing main product.&lt;/p&gt;
+
+&lt;p&gt;From a simple project management standpoint, this is a disaster.  Want to know how long the rewrite will take?  Well in the former case, you&amp;#39;re working with a team that&amp;#39;s dealing with new technology and new development, so there&amp;#39;s no way to apply any previously recorded team velocity as a prediction of future performance.  Moreover, you don&amp;#39;t actually have any sense of the scope of the project, because the requirements are basically &amp;quot;everything the app does now&amp;quot;, which will include weird corner cases that have long since been forgotten.  So you have an unknown scope and an unknown team velocity, and you&amp;#39;re trying to make a prediction of when this work will be completed?  So development is going to stop on the main product line for an indeterminate amount of time.  And this is the BEST case scenario, the one where everyone can focus on doing the rewrite.&lt;/p&gt;
+
+&lt;p&gt;In the latter case, it&amp;#39;s even more unpredictable - you still have the unknown scope issue, but it&amp;#39;s worse because you also have to include, in the scope, getting to parity with whatever else is built while the rewrite is being worked on.  If the rewrite would take 3 months, you have 3 months worth of new features on the main product to catch up to.  If it would take 6 months, you have 6 months of features to catch up on.  And since you don&amp;#39;t know how long it will take just to reach current parity, you can&amp;#39;t predict how far in the hole you&amp;#39;re going to be when it&amp;#39;s &amp;quot;done&amp;quot;, which means it adds ANOTHER layer of unknown time into the mix.  And remember, the velocity of the &amp;quot;main product&amp;quot; team will be affected by the loss of resources who peel off to do the rewrite, so you have little sense of the velocity of not one, but both teams.  If you know your car&amp;#39;s speed, you can predict when it will pass a landmark - but you can&amp;#39;t possibly know when it will pass another moving car if you don&amp;#39;t also know that car&amp;#39;s speed perfectly.  If you know neither car&amp;#39;s speed, you&amp;#39;re utterly done for.&lt;/p&gt;
+
+&lt;table class='image alignleft' width='306'&gt;&lt;tr&gt;&lt;td&gt;&lt;a href='https://www.flickr.com/photos/8047705@N02/5463789169/in/photolist-9jPmax-9DDYgg-nuZtxE-qhFho-ejtid-6c7xeY-ze5cZ-nmKFqr-b1AcSK-9FVdCx-b1AhTZ-b1A75H-dZkGN1-nB5JZn-qhFau-2DKnb-f4N574-cBqwpb-dD7wZD-5cTVaL-zCEF8-9F679e-ogasoM-aDd8E1-9bBdFG-4LeSwt-aDd8s9-J1y1LF-aD9gKD-Curwec-8MGTB8-9cP1vZ-dfCV95-HHBNMQ-oqYWpW-CUmf1-6Skbcz-5SptQa-5qD4Md-4mtSKC-eftGLt-8P76u6-oHB4w9-F8KKsW-7pZA7u-9XRFMM-tPAFC-7xYyVJ-6YmJXf-9BVWnR'&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/sorry.jpg&quot; width='300' height='199'/&gt;&lt;/a&gt;&lt;p class='caption'&gt;Go back to start&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;Moreover, from an engineering standpoint this is a terrible idea.  Everyone likes doing greenfield work because it&amp;#39;s new and exciting, but you have to ask, why the engineers want to avoid maintaining and refactoring the existing product?  Is the codebase such a spaghetti mess that it&amp;#39;s too difficult to add anything, so the team wants to try again from scratch?  &lt;strong&gt;Who the hell do you think made that dumpster fire in the first place?&lt;/strong&gt;  Why on earth would that same team suddenly do it right the second time around?  Especially when under the pressure of &amp;quot;we have to get caught up&amp;quot; and the time-pressure of the company&amp;#39;s primary software products being frozen or at least slowed while the team develops it?  It&amp;#39;s even MORE likely that corners will be cut and quality will suffer, not less likely.&lt;/p&gt;
+
+&lt;p&gt;Refactoring the codebase is almost always the right way to go.  Take the awful parts that you want to rewrite and slowly but surely refactor them into the clean codebase you want.  It might take overall longer to be &amp;quot;done&amp;quot; with the effort, but the entire time it&amp;#39;s happening the main product is still in active development without the &amp;quot;two cars racing&amp;quot; situation.  Refactoring code is, though slower, also easier to do than rewriting it from scratch, because you&amp;#39;re able to do it in small steps with (hopefully) the support of a huge test suite to ensure you don&amp;#39;t break anything.  &lt;strong&gt;Since refactoring is easier than rewriting, any team that says &amp;quot;it&amp;#39;s too hard&amp;quot; to the idea of refactoring the existing codebase instead of rewriting it is inherently not good enough to do the rewrite.&lt;/strong&gt;  The end result will actually be worse.&lt;/p&gt;
+
+&lt;h2&gt;Exceptions&lt;/h2&gt;
+
+&lt;p&gt;There are a couple noteworthy exceptions to this.  One, when the reason for the rewrite is a complete change in technology, specifically the language of implementation.  If you&amp;#39;re working with Java and want to rewrite in Scala or Clojure, the team should be able to refactor piece by piece since it all compiles to the same bytecode.  However, if the team needs to move from a dead technology such as ColdFusion to something else like .NET, a full rewrite is the only way to go.  This may also apply in the case of using a prototyping technology to develop the first iteration of a product, only to discover that there&amp;#39;s no way to make the system scale, such as in the case of Twitter&amp;#39;s abandonment of &lt;a href=&quot;http://www.gmarwaha.com/blog/2011/04/11/twitter-moves-from-rails-to-java/&quot;&gt;Rails in favor of Scala&lt;/a&gt;.  Not every company has the resources to &lt;a href=&quot;http://readwrite.com/2010/02/02/update_facebook_rewrites_php_runtime_with_project/&quot;&gt;develop a new PHP runtime&lt;/a&gt; just to avoid rewriting their codebase in something other than PHP, sometimes you have to bite the bullet and pick different technology.&lt;/p&gt;
+
+&lt;p&gt;Another exception is when you find yourself in an &amp;quot;over the wall&amp;quot; situation.  Perhaps a team of contractors or consultants or offshore engineers were hired to develop the first iteration of a project, and then the codebase was tossed over the wall to another team to maintain.  In this case, the new team may in fact be qualified to both refactor OR rewrite the codebase, and may simply decide the codebase as-is is too much of a mess to bother with and do a rewrite.  In this instance, I still would encourage exploring every possibly opportunity to refactor first, but believe me when I say I&amp;#39;ve been on the recieving end of these codebase bombs enough to fully appreciate that sometimes you just need to rewrite the whole thing.&lt;/p&gt;
+
+&lt;h1&gt;Choose Boring Technology&lt;/h1&gt;
+
+&lt;p&gt;I really can&amp;#39;t say this any better than Dan McKinley&amp;#39;s original post &lt;a href=&quot;http://mcfunley.com/choose-boring-technology&quot;&gt;Choose Boring Technology&lt;/a&gt;.  In it, McKinley argues that every team or company should start out with three innovation tokens.  You can spend these tokens whenever and however you please, but they don&amp;#39;t replenish quickly.  Every time you pick an exciting or buzzwordy or cutting edge technology instead of an old standard, you spend a token.&lt;/p&gt;
+
+&lt;p&gt;Relational Databases are boring.  Java is boring.  JQuery is boring.  Apache is boring.  Linux is boring.  Tomcat is boring.  Choose something &amp;quot;cool&amp;quot; instead of something boring, and you&amp;#39;ve spent an innovation token.  Boring technology is boring because it&amp;#39;s &lt;em&gt;known&lt;/em&gt;, not because it&amp;#39;s &lt;em&gt;bad&lt;/em&gt;.  It&amp;#39;s failure modes are understood, and it probably has a host of libraries and support tools make it easier to live with in the long term.&lt;/p&gt;
+
+&lt;p&gt;There&amp;#39;s nothing wrong with Java, tons of scalable applications have been built on Java, and &amp;quot;it&amp;#39;s boring&amp;quot; isn&amp;#39;t a good enough reason to choose something else.  If your team truly feels like Scala or Clojure or Erlang or whatever is the right tool for the job, by all means use it, but that&amp;#39;s one innovation token spent.  Pick MongoDB over MySQL or Oracle and you&amp;#39;ve got one left.  Any time you COULD use technology you&amp;#39;re already using (&amp;quot;our other codebase is .NET&amp;quot;) but decide to pick something new instead, you spend a token.&lt;/p&gt;
+
+&lt;p&gt;Boring Technology is easy to pick up, easy to research, easy to debug, and frankly easy to staff for.  I&amp;#39;m sure the engineering team is happy to pad their resumes with cool buzzwords while simultaneously making themselves irreplaceable, but is that really the best thing for the product and the company?  When boring technology fails you, there are stacks of books and internet forums available to assist you - there&amp;#39;s nothing worse than the feeling of excitement you get when you search for your error message and find that someone else has had the EXACT same problem as you before, only to be followed by the crushing blow of zero replies.&lt;/p&gt;
+
+&lt;script async class=&quot;speakerdeck-embed&quot; data-slide=&quot;47&quot; data-id=&quot;454e3843ac184d3f8bcb0e4a50d3811a&quot; data-ratio=&quot;1.31113956466069&quot; src=&quot;//speakerdeck.com/assets/embed.js&quot;&gt;&lt;/script&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;I&amp;#39;ve worked plenty of jobs where the team was building plan old Java Web Applications using Spring, backed by MySQL or Oracle databases and you know what?  Those products worked just fine.  Did the teams have the &lt;em&gt;most&lt;/em&gt; fun in the world writing that code?  No, probably not, but we got the job done and the products performed quite well (and were easy to fix when they didn&amp;#39;t).  At my current gig, we decided to build a 150,000-line codebase using Scala.  Scala seemed like the right tool for the job, given the particular constraints we had about scalability and throughput in the system.  I like Scala a lot, and there&amp;#39;s no doubt that we&amp;#39;ve made tremendous productivity gains by utilizing features exclusive to Scala, but if I&amp;#39;m truly honest with myself did we actually make a net productivity gain?  When you factor in time lost trying to understand confusing code, time lost by the compiler doing a &lt;a href=&quot;https://wiki.scala-lang.org/display/SIW/Overview+of+Compiler+Phases&quot;&gt;twenty-pass compilation&lt;/a&gt; (holy shit), and time lost by having to manually perform refactorings that our IDEs couldn&amp;#39;t automate due to weak tooling support, I&amp;#39;m not actually sure we came out ahead.  Especially given Java 8&amp;#39;s functional programming features, I&amp;#39;m not sure I&amp;#39;d bother picking Scala over Java 8 today, as much fun as I have working with it.&lt;/p&gt;
+
+&lt;p&gt;Ultimately, it&amp;#39;s really not about me or how much I enjoy working with particular tools and technologies.  My job isn&amp;#39;t to write code - my job is to solve business problems, and it so happens the best tool I&amp;#39;m most competent using for that is code.  It&amp;#39;s important to stay up to speed on the latest and greatest technologies so that you as an engineer have the knowledge to know when it&amp;#39;s time to spend an innovation token, but honestly I think most of that effort should be relegated to conference attendance, reading, and personal github accounts.  Don&amp;#39;t make company decisions based on how many buzzwords you can add to your resume.&lt;/p&gt;
+
+&lt;h2&gt;Inventing Languages&lt;/h2&gt;
+
+&lt;p&gt;I&amp;#39;d like to add that &amp;quot;writing your own programming language&amp;quot; should be worth four innovation tokens all on its own.  If you develop an in-house programming language, you&amp;#39;d better have a staggeringly good reason.  Good programming languages are hard to write, and unless you have a number of Computer Science PhDs with specializations in Programming Language Design and Implementation on the team, chances are all you&amp;#39;re actually doing is writing an overly complex DSL.  The kind of thing whose compiler/transpiler/transliterator fails with &amp;quot;syntax error&amp;quot; in the event of a mistyped character, rather than a helpful diagnostic and a line number.  I&amp;#39;ve seen more than one company brag about how they developed their own in-house programming language to solve their ultra-complex problem space, but it&amp;#39;s okay because they open sourced it!  Yeah, that&amp;#39;ll really come in handy when I&amp;#39;m searching StackOverflow for your language and find 2 posts.&lt;/p&gt;
+
+&lt;p&gt;Don&amp;#39;t create your own programming language.  Your language will be weak, your tools will be poor, and language support within other tools will be nonexistent.  You probably aren&amp;#39;t going to properly staff the design and support of the language you&amp;#39;ve created.  Whatever huge productivity gains you think your new language is offering your team, they&amp;#39;ll be canceled out and then some.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;99 times out of 100, a new language isn&amp;#39;t what you want to build, but a library or a framework is&lt;/strong&gt;.  By all means, develop those in house if need be (but staff their development).  Unless you&amp;#39;re developing a language as part of your core business, like Apple developing Swift, don&amp;#39;t do it.&lt;/p&gt;
+
+&lt;h1&gt;Will You Understand This at 3AM?&lt;/h1&gt;
+
+&lt;p&gt;Frequently John Carmack is cited as an example of an eccentric genius, the kind of guy who is way ahead of his time.  I have to admit, I&amp;#39;m also in awe of a great deal of what he&amp;#39;s done with code.  Take this square root function he wrote for Quake III arena:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c&quot; data-lang=&quot;c&quot;&gt;float Q_rsqrt( float number )
+{
+    long i;
+    float x2, y;
+    const float threehalfs = 1.5F;
+
+    x2 = number * 0.5F;
+    y  = number;
+    i  = * ( long * ) &amp;amp;y;                       // evil floating point bit level hacking
+    i  = 0x5f3759df - ( i &amp;gt;&amp;gt; 1 );               // what the fuck? 
+    y  = * ( float * ) &amp;amp;i;
+    y  = y * ( threehalfs - ( x2 * y * y ) );   // 1st iteration
+//  y  = y * ( threehalfs - ( x2 * y * y ) );   // 2nd iteration, this can be removed
+
+    return y;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;But notice line 10, &lt;code&gt;i  = 0x5f3759df - ( i &amp;gt;&amp;gt; 1 );&lt;/code&gt;?  It&amp;#39;s easy to find, because it&amp;#39;s helpfully annotated with a helpful &lt;code&gt;what the fuck?&lt;/code&gt; comment.  There&amp;#39;s no doubt that this code is extremely clever, and it&amp;#39;s beyond question that it&amp;#39;s extremely fast.  It also requires an entire &lt;a href=&quot;https://en.wikipedia.org/wiki/Fast_inverse_square_root&quot;&gt;2000-word Wikipedia article&lt;/a&gt; to understand.&lt;/p&gt;
+
+&lt;p&gt;In fact, Carmack himself wasn&amp;#39;t even the creator of this bit of wizardry, it came from Terje Mathisen, an assembly programmer who had contributed it to id Software previously.  And in fact, he likely got it from another developer, who had gotten it from someone else.  This is why the comment &lt;code&gt;what the fuck?&lt;/code&gt; is right there - nobody understood it.  And yet there it was, pasted into the Quake III engine code because it seemed to work and it was fast.  Obviously this worked out for id, and &lt;a href=&quot;https://www.youtube.com/watch?v=PcbpIntnG8c&quot;&gt;Quake III is awesome&lt;/a&gt;, but it probably wasn&amp;#39;t the wisest idea to stake their company&amp;#39;s product on code that nobody understood.&lt;/p&gt;
+
+&lt;p&gt;Was it clever?  Absolutely.  &lt;strong&gt;But &lt;a href=&quot;https://simpleprogrammer.com/2015/03/16/11-rules-all-programmers-should-live-by/&quot;&gt;clever is the enemy of clear&lt;/a&gt;.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;I try not to ever write comments in my code.  Comments should never be used to explain how something works, that should be apparent from the code itself.  And if that means adding a few temporary variables so that their names can be helpful (or inspected while debugging), or having some comically long method names, so be it.  Often people say that comments can be used to explain &amp;quot;why&amp;quot; something works instead, but frankly I find that a few unit tests for the code in question will do a better job of explaining the why than a comment ever could - at the very least, take the comment you&amp;#39;d write explaining why and make it the name of the test.  &lt;strong&gt;Code is for &lt;em&gt;what&lt;/em&gt;, tests are for &lt;em&gt;why&lt;/em&gt;.  Comments are for jokes.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Obviously it&amp;#39;s difficult not to be proud of yourself when you&amp;#39;ve gotten some long method down to a one-liner (even if it is one incredibly long line) or invented some massively clever solution to a problem.  And indeed, sometimes these clever tricks really are necessary to get the required performance out of a system (as in the Quake III square root example).  That&amp;#39;s why I&amp;#39;ve found this heuristic so handy (hattip to &lt;a href=&quot;http://neidetcher.com/&quot;&gt;Demian Neidetcher&lt;/a&gt;):&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;If your cell phone rings at 3AM because this code causes a production outage a year from now, will you be able to understand and reason about the code enough well enough to fix it?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Imagine that your job is basically on the line here, you&amp;#39;re now in a conference call with your boss, your boss&amp;#39;s boss, your boss&amp;#39;s boss&amp;#39;s boss, and the CTO.  Hell, maybe the CEO is on talking about the millions of dollars in lost revenue every minute the product is offline.  Your heart is racing from being startled awake, and your eyes are barely able to focus enough to read your laptop screen.  Do you &lt;em&gt;really&lt;/em&gt; want this to be what comes into focus in the middle of the night?&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;(n: Int) =&amp;gt; (2 to n) |&amp;gt; (
+    r =&amp;gt; r.foldLeft(r.toSet)((ps, x) =&amp;gt; 
+        if (ps(x)) ps -- (x * x to n by x) else ps)
+)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Yes it&amp;#39;s clever, yes it&amp;#39;s fast, congratulations on how smart you are.  But your company code repository isn&amp;#39;t the place to show off your l33t coding ski11z, do that shit in your personal github account.  You&amp;#39;re not being paid to fluff your e-peen, you&amp;#39;re being paid to solve the company&amp;#39;s business problems, and that means writing something that can be understood by the other people they hired.  Code&amp;#39;s primary purpose is to be read by other human beings, otherwise we&amp;#39;d all be writing directly in machine language.  So if this future version of yourself won&amp;#39;t understand the code just from being tired, what chance does the dumbest person on your team have of understanding it?  Stop showing off, your job may someday depend on it.&lt;/p&gt;
+
+&lt;h1&gt;Deliver Working Software Early and Often&lt;/h1&gt;
+
+&lt;p&gt;I realize this is just a rewording of a standard part of the &lt;a href=&quot;http://www.agilemanifesto.org/&quot;&gt;Agile Manifesto&lt;/a&gt;, and I could just as easily say &amp;quot;Be Agile!&amp;quot; here.  But I think the truth is Agile has come to mean a lot of different things to a lot of different people, and has become a term so overloaded and hijacked that it&amp;#39;s effectively become &lt;a href=&quot;https://pragdave.me/blog/2014/03/04/time-to-kill-agile/&quot;&gt;useless as a phrase&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I like most of the ideas of the Agile Manifesto, but I think the most important thing to take away from it is the unparalleled value of getting working software into the hands of users as quickly and frequently as possible.  I absolutely detest when features are held back so that they can be released in a &amp;quot;big bang&amp;quot; to really wow and excite users (hey Product Owners, your users really don&amp;#39;t give as much of a shit as you think).  As long as a feature actually works end to end, get it into the hands of users and solicit feedback right away, every day you keep working code behind a gate is a day you give your competitors to steal users away from you.  It&amp;#39;s also a day that you are effectively lying to your users - the most important people to your software - about what your product is capable of doing.  &lt;/p&gt;
+
+&lt;p&gt;I despise long-running feature branches in version control as well, almost any time you want to make a branch I think it&amp;#39;s better to make a feature flag that people (specifically, product owners) can turn on and off at will.  Long-running branches are incredibly susceptible to &lt;a href=&quot;https://en.wikipedia.org/wiki/Ninety-ninety_rule&quot;&gt;the 90/90 rule&lt;/a&gt;.  &lt;/p&gt;
+
+&lt;p&gt;Every &amp;quot;big bang&amp;quot; release I&amp;#39;ve been a (reluctant) part of has ended in some form of failure.  People think that the software is mostly done and then the effort spins its wheels at the end, trying to &amp;quot;harden&amp;quot; the release and remove bugs.  Or the software is finally delivered only to discover that &lt;a href=&quot;https://en.wikipedia.org/wiki/Pareto_principle&quot;&gt;80% of the users are only using 20% of the features&lt;/a&gt;, meaning that a more targeted, earlier release of those top 20% features would have been a far better use of engineering time and resources.&lt;/p&gt;
+
+&lt;h2&gt;Plans are The Opposite of Working Software&lt;/h2&gt;
+
+&lt;p&gt;I think a corollary to this rule is, don&amp;#39;t sell your users on non-working software.  I really hate the tendency for &amp;quot;marketing&amp;quot; to &lt;em&gt;need&lt;/em&gt; delivery dates on software features so that they can start selling the features now, a situation I&amp;#39;ve seen at company after company.  Don&amp;#39;t try to sell users on features you plan on delivering, even if you&amp;#39;re nearly certain about when those features will be done (but, hint, you&amp;#39;re probably less certain than you think).  That&amp;#39;s selling vaporware, anything can change between now and then causing those features to be shelved or to not work properly.  Instead, deliver working software early and often, and let the marketing folks sell users on what features are actually &lt;em&gt;done&lt;/em&gt;, because more stuff will actually &lt;em&gt;be&lt;/em&gt; done due to the team not wasting tons of time coming up with estimates (&lt;a href=&quot;https://www.happybearsoftware.com/all-estimates-are-still-lies&quot;&gt;read: lies&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;
+&lt;blockquote class=&quot;twitter-tweet&quot; data-lang=&quot;en&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;Just start referring to “estimates” as lies.&lt;br&gt;&lt;br&gt;“how long will that take?”&lt;br&gt;“well, if I had to lie, a week?”&lt;/p&gt;&amp;mdash; Trek Glowacki (@trek) &lt;a href=&quot;https://twitter.com/trek/status/636286667087851520&quot;&gt;August 25, 2015&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&quot;//platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;Obviously sometimes there are occasions where people need some sense of how long something will take, most notably when the company is deciding between two different features to implement and they&amp;#39;re performing an analysis based on their cost (though in my experience, rarely does this happen and usually both features are requested anyway).  But for the most part, using some roadmap or a plan to inform the company on how to sell their products is a mistake - give engineers the time to properly implement features well, and then when the features are done sell people on them.  And remember, &lt;a href=&quot;http://www.bloomberg.com/news/articles/2016-05-18/this-5-billion-software-company-has-no-sales-staff&quot;&gt;good software sells itself&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h1&gt;Part 2...&lt;/h1&gt;
+
+&lt;p&gt;I split this list into two posts for really no good reason aside from length.  I&amp;#39;ll be posting the other half of my Top 10 shortly.&lt;/p&gt;
+</description>
+				<pubDate>Wed, 15 Jun 2016 00:00:00 -0400</pubDate>
+				<link>http://www.nomachetejuggling.com/2016/06/15/guidingprinciples-part1/</link>
+				<guid isPermaLink="true">http://www.nomachetejuggling.com/2016/06/15/guidingprinciples-part1/</guid>
+			</item>
+		
+			<item>
 				<title>Testing Against Template Renders in Grails</title>
 				<description>&lt;p&gt;I work with Grails a lot and while I really enjoy it for the most part, there are definitely some weird quirks of the framework.&lt;/p&gt;
 
@@ -796,75 +944,6 @@ class ExampleControllerSpec extends Specification {
 				<pubDate>Sat, 15 Dec 2012 00:00:00 -0500</pubDate>
 				<link>http://www.nomachetejuggling.com/2012/12/15/a-stroll-through-the-complexity-zoo/</link>
 				<guid isPermaLink="true">http://www.nomachetejuggling.com/2012/12/15/a-stroll-through-the-complexity-zoo/</guid>
-			</item>
-		
-			<item>
-				<title>Scala Second Impressions</title>
-				<description>&lt;p&gt;In December, I posted about &lt;a href=&quot;http://www.nomachetejuggling.com/2011/12/15/scala-first-impressions/&quot;&gt;my early thoughts&lt;/a&gt; on Scala after using it for a short time.  Initially, I thought that using Scala didn&amp;#39;t buy very much - the functional style could be adopted in in Java, and the syntax and libraries could be ugly.&lt;/p&gt;
-
-&lt;p&gt;Since that time, I&amp;#39;ve been using Scala almost exclusively, and I wish to revise my view: &lt;strong&gt;Scala is awesome&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;While some of my initial thoughts still stand, particularly that Scala APIs often overuse operator overloading, much of my perception has shifted otherwise.  Scala not only allows, but encourages solid functional programming principles that are difficult or impossible in Java.&lt;/p&gt;
-
-&lt;h1&gt;Comfort and Training&lt;/h1&gt;
-
-&lt;p&gt;A great deal of my perception shift has been due to familiarity and training.  I realize that a lot of my earlier issues with Scala were due to my own lack of comfort with the language, and over the last year I&amp;#39;ve done a great deal to level up my Scala skills significantly, like:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Read the entirety of Odersky et. al.&amp;#39;s &lt;a href=&quot;http://www.artima.com/shop/programming_in_scala_2ed&quot;&gt;Programming in Scala&lt;/a&gt; cover to cover&lt;/li&gt;
-&lt;li&gt;Attended Dick Wall and Bill Venner&amp;#39;s excellent &lt;a href=&quot;http://www.artima.com/shop/stairway_to_scala&quot;&gt;Stairway to Scala&lt;/a&gt; week-long workshop (this probably made the biggest contribution to me getting over the Scala hump).&lt;/li&gt;
-&lt;li&gt;Read what was available of the MEAP &lt;a href=&quot;http://www.manning.com/bjarnason/&quot;&gt;Functional Programming in Scala&lt;/a&gt;, a book focused not on Scala but on Functional Programming principles&lt;/li&gt;
-&lt;li&gt;Enrolled in Odersky&amp;#39;s &lt;a href=&quot;https://www.coursera.org/course/progfun&quot;&gt;Functional Programming Principles in Scala&lt;/a&gt; class on Coursera.&lt;/li&gt;
-&lt;li&gt;Currently reading Josh Suereth&amp;#39;s &lt;a href=&quot;http://www.manning.com/suereth/&quot;&gt;Scala in Depth&lt;/a&gt;, which actually wound up being the Effective Scala book I wanted in the previous post.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;All of these resources, combined with a continued daily use of Scala, led to me using Scala in a much meatier way than previously, enabling me to write some extremely expressive code.&lt;/p&gt;
-
-&lt;h1&gt;Cool Stuff in Scala&lt;/h1&gt;
-
-&lt;table class='image aligncenter'&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/artinodersky-209x300.jpg&quot;/&gt;&lt;p class='caption'&gt;Close your eyes during lectures, it sometimes it sounds like Schwarzenegger is teaching you programming.&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-
-&lt;p&gt;I really like how strict Scala is in terms of the compiler.  Many developers are embracing increasingly dynamic languages, but Scala bucks the trend.  The ability to define generics, covariant types, contravariant types, as well as the existence of classes like Any, AnyRef, and Nothing, allow developers to rely on the compiler to check things that, in other languages, can only be checked at runtime.  It&amp;#39;s possible to be this strict in Java most of the time, but somehow I feel like the way Scala handles this complexity is cleaner and more elegant.  At work, we implemented our own Dependency Injection system that checks all injections at compile time, no XML required.&lt;/p&gt;
-
-&lt;p&gt;Scala makes it easy to implement good Functional Programming paradigms, like higher-order functions, function composition, and currying.  Though possible to implement the Option pattern in other languages, Scala&amp;#39;s type hierarchy and rich generics support makes it much easier to cleanly avoid exceptions.  Being able to perform flatMaps on collections of Options in a way that feels natural is excellent.&lt;/p&gt;
-
-&lt;p&gt;Pattern matching is simply awesome.  Declaring extractors for types has allowed me to write some incredibly cool code.  Pattern matching can have a tendency to lead to deeply nested matcher blocks, but I still like them overall.  My biggest complaint is that, while they work so well at matching against Regular Expressions, Regexes not being a first-class type makes working with them a little clunky.  You have to declare Regex variables by calling the &lt;code&gt;r()&lt;/code&gt; method on a String (usually triple-quoted).  It would be much easier to work with regular expressions &lt;code&gt;/like this/&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;As with all other languages I enjoy, I love being able to return multiple things from a method and perform multiple assignments in a single line.  And being able to pass a type to a method which solely defines the type anonymously in terms of which method(s) it must have is a super cool feature that can be abused.&lt;/p&gt;
-
-&lt;p&gt;I initially complained about operator overloading, and I still feel like it can be overused, but I&amp;#39;ve always felt like Java should at least support limited operator overloading, at least on the basics like +, -, &amp;lt;, &amp;gt;, and so on.  Scala supports totally arbitrary operator overloading, which gives me what I want at the expense of allowing other people to overuse it.  Additionally, the rules that Scala has to follow to allow for normal order of operations with infix operator overloading are a bit ridiculous (check page 135 of the Odersky et. al. book), but that&amp;#39;s the price you pay to keep infix support, I suppose.&lt;/p&gt;
-
-&lt;h1&gt;The Point of Scala&lt;/h1&gt;
-
-&lt;p&gt;Scala is a great language because it&amp;#39;s to FP what C++ was to OO.  It&amp;#39;s familiar to users of the more traditional programming paradigm, but capable of a different one.  It allows people to gradually shift towards Functional Programming as they gain comfort with the ideas, and it allows programmers to use Object-Oriented Programming where it&amp;#39;s the best tool for the job.  Scala lets you leverage the power of a functional language and the power of an OO language simultaneously, catering your code to the strengths of each paradigm where more appropriate.  Code that would be henious in OO land might be very reasonable in FP style, and code that would be unweildy and complex in FP might be totally understandable in OO.  Scala lets you choose whichever works best for what you&amp;#39;re doing.&lt;/p&gt;
-
-&lt;p&gt;I&amp;#39;m not aware of any other languages that embrace both FP and OO as thoroughly as Scala.  Programmers are free to use it as an even stricter, more statically compiled Java (with less boilerplate and some handy convenience features like case classes and traits) if they wish, or they can go whole-hog into the Functional style and leverage lazy evaluation, tail recursive functions, currying, partial application, monads, and so on.&lt;/p&gt;
-
-&lt;p&gt;This allows me to use the power of Scala without losing my knowledge of the JVM, the huge library of open source code written in Java, or even JVM-based frameworks.  I&amp;#39;m not totally on board with any of the web frameworks for Scala, so I&amp;#39;m using Groovy/Grails for a client-facing site, which connects to a bunch of backend services written in Scala.  Being able to do this is great (though the switch can be a bit jarring at times).&lt;/p&gt;
-
-&lt;p&gt;Overall, Scala is exactly what it needs to be, and it&amp;#39;s an incredibly well-designed and clever language.&lt;/p&gt;
-
-&lt;h1&gt;Still Some Woes&lt;/h1&gt;
-
-&lt;p&gt;There are a few nags I have about Scala.  It&amp;#39;s power comes with a price - even though I understand Scala pretty well now, it&amp;#39;s still common for me to encounter code that looks almost unreadable, sometimes resembling particularly bad Perl programs.  I have to really sit and stare at this code to parse it, which can be time-consuming.  This seems to be common even among seasoned Scala vets, which is disheartening.&lt;/p&gt;
-
-&lt;table class='image alignleft' width='306'&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/scala_logo-e1323974677125-300x83.png&quot; width='300' height='83'/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-
-&lt;p&gt;There are also some nags I have about the language design itself.  I hate that XML is treated as a first class type with lots of compiler support, but regular expressions are not.  In 2012, it&amp;#39;s difficult for me to take an expressive language seriously if I can&amp;#39;t define a regex without first creating a String.  It also annoys me that there is an annotation that makes the compiler check for tail recursion, but not one that provides automatic function memoization.&lt;/p&gt;
-
-&lt;p&gt;Interop between Java and Scala still seems to suck pretty bad, especially around Collections.  You can do some things to make this problem less severe, but it&amp;#39;s still harder than it needs to be, and I&amp;#39;m not convinced there&amp;#39;s a good reason.&lt;/p&gt;
-
-&lt;p&gt;My biggest complaint is with the Scala ecosystem.  IDE support is tolerable but not excellent, but more importantly the build tools are terrible.  All of this power and all of the things the compiler does for you causes compilation to be extremely slow.  A large Scala project can take ten minutes just to compile.  &lt;/p&gt;
-
-&lt;p&gt;The only workaround for this seems to be to use SBT and leverage its built-in incremental compilation, but SBT happens to be extremely difficult to understand and use.  Unfortunately, SBT seems to be the only game in town for Scala; we tried a Gradle build for our large Scala project and converted to SBT after spending a great deal of effort and still failing to make the full build in Gradle take fewer than 40 minutes.  &lt;/p&gt;
-
-&lt;p&gt;Basically, you&amp;#39;re using either Maven or Gradle to build your project but it takes forever, or you&amp;#39;re using SBT and it builds quickly, but modifying your build takes forever instead.  My understanding is that some work is going on in the Twitter/Foursquare land to create a new build system that perhaps leverages the incremental compiler, so I&amp;#39;m excited to see what comes out of that.&lt;/p&gt;
-
-&lt;p&gt;All in all, I&amp;#39;m very happy using Scala regularly now, and I often find myself missing it when I&amp;#39;m using another language.  The community seems to have exploded in the last year or so, with excellent online courses based on Scala, and tons of fantastic functional programming books having been released or currently being written using Scala as the base language.  I think it still has a ways to go in terms of good tooling support and compilation speed, but I&amp;#39;ve definitely come around to the Scala way of thinking this past year.&lt;/p&gt;
-</description>
-				<pubDate>Fri, 26 Oct 2012 00:00:00 -0400</pubDate>
-				<link>http://www.nomachetejuggling.com/2012/10/26/scala-second-impressions/</link>
-				<guid isPermaLink="true">http://www.nomachetejuggling.com/2012/10/26/scala-second-impressions/</guid>
 			</item>
 		
 	</channel>

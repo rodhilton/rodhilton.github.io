@@ -82,6 +82,25 @@
 	
 		<div class="post-preview">
 		  	<div class="postheader">
+  	<h1 class="posttitle"><a href="/2006/06/13/java-5-global-exception-handling/">Java 5 Global Exception Handling</a></h1>
+  	<div class="postmeta">
+		<p class="meta">
+		<b title="code and java">PROGRAMMING</b> - 
+		June 13, 2006 - 
+		349 words -
+		<a href="/2006/06/13/java-5-global-exception-handling/#disqus_thread">Comments</a>
+		</p>
+	</div>
+</div>
+		  	<div class="postentry">
+				<p>Ever since Java 5 came out, many articles and blog posts have been written talking about the new features.  Just recently, however, I came upon a feature new to Java 5 that I had never seen mentioned in any of the articles I read: global exception handling.</p><p>There is a way to set a default handler for any exceptions that are thrown which are not caught.  This is very handy for adding handlers for <code>RuntimeException</code>s, since they are unchecked and the compiler will not tell you to catch them.</p><p>For example, you may want to write a handler that will catch any <code>NullPointerException</code>, and e-mail the development team to let them know someone has made a coding mistake.  There are many useful purposes for this feature.  It should also be noted, however, that it breaks the idea of capturing an exception as close to the point of origin as possible.  You should try to keep exception handling close to the exception, so that you have as much contextual information as possible to deal with the error and recover from it gracefully.</p><p>There is no denying, though, that we all write empty catch blocks, or catch blocks that print a trace to a log file and ignore it.  For those, this is handy.</p>
+
+        <p><a href="/2006/06/13/java-5-global-exception-handling/">Read the rest of "Java 5 Global Exception Handling" &raquo;</a></p>
+			</div>
+		</div>
+	
+		<div class="post-preview">
+		  	<div class="postheader">
   	<h1 class="posttitle"><a href="/2006/04/27/password-change-policies/">Password Change Policies</a></h1>
   	<div class="postmeta">
 		<p class="meta">
@@ -241,6 +260,8 @@
           <li id="recent-posts" class="widget widget_recent_entries"> <h2 class="widgettitle">Recent Posts</h2>
             <ul>
                 
+                  <li><a href="/2016/06/15/guidingprinciples-part1/">My Software Engineering Guiding Principles - Part 1</a></li>
+                
                   <li><a href="/2016/04/30/strengthsfinder/">My StrengthsFinder Results</a></li>
                 
                   <li><a href="/2015/12/28/machete-order-update-and-faq/">Star Wars Machete Order: Update and FAQ</a></li>
@@ -259,24 +280,22 @@
                 
                   <li><a href="/2013/12/17/centurylink-traps-and-caps/">CenturyLink: Traps and Caps</a></li>
                 
-                  <li><a href="/2013/08/30/diving-into-android/">Diving Into Android</a></li>
-                
             </ul>
           </li> <!-- /recent-posts -->
           <li id="tag_cloud" class="widget">
             <h2 class="widgettitle">Tags</h2>
             <div class="ctc">
                 
-                  <a href="/tag/code" style="font-size: 19pt">
+                  <a href="/tag/code" style="font-size: 18pt">
                     code
-                  </a>
-                
-                  <a href="/tag/java" style="font-size: 13pt">
-                    java
                   </a>
                 
                   <a href="/tag/career" style="font-size: 13pt">
                     career
+                  </a>
+                
+                  <a href="/tag/java" style="font-size: 13pt">
+                    java
                   </a>
                 
                   <a href="/tag/school" style="font-size: 12pt">
@@ -315,20 +334,20 @@
                     job
                   </a>
                 
-                  <a href="/tag/ubuntu" style="font-size: 8pt">
-                    ubuntu
-                  </a>
-                
                   <a href="/tag/semester" style="font-size: 8pt">
                     semester
+                  </a>
+                
+                  <a href="/tag/class" style="font-size: 8pt">
+                    class
                   </a>
                 
                   <a href="/tag/review" style="font-size: 8pt">
                     review
                   </a>
                 
-                  <a href="/tag/class" style="font-size: 8pt">
-                    class
+                  <a href="/tag/ubuntu" style="font-size: 8pt">
+                    ubuntu
                   </a>
                 
                   <a href="/tag/linux" style="font-size: 8pt">
@@ -355,6 +374,10 @@
                     rant
                   </a>
                 
+                  <a href="/tag/college" style="font-size: 7pt">
+                    college
+                  </a>
+                
                   <a href="/tag/continuous-integration" style="font-size: 7pt">
                     continuous integration
                   </a>
@@ -363,40 +386,40 @@
                     complexity
                   </a>
                 
-                  <a href="/tag/college" style="font-size: 7pt">
-                    college
+                  <a href="/tag/development" style="font-size: 7pt">
+                    development
                   </a>
                 
                   <a href="/tag/tdd" style="font-size: 7pt">
                     tdd
                   </a>
                 
-                  <a href="/tag/development" style="font-size: 7pt">
-                    development
+                  <a href="/tag/business" style="font-size: 7pt">
+                    business
                   </a>
                 
                   <a href="/tag/design" style="font-size: 7pt">
                     design
                   </a>
                 
-                  <a href="/tag/business" style="font-size: 7pt">
-                    business
-                  </a>
-                
                   <a href="/tag/open-source" style="font-size: 7pt">
                     open source
-                  </a>
-                
-                  <a href="/tag/refactoring" style="font-size: 7pt">
-                    refactoring
                   </a>
                 
                   <a href="/tag/compsci" style="font-size: 7pt">
                     compsci
                   </a>
                 
+                  <a href="/tag/refactoring" style="font-size: 7pt">
+                    refactoring
+                  </a>
+                
                   <a href="/tag/professionalism" style="font-size: 7pt">
                     professionalism
+                  </a>
+                
+                  <a href="/tag/automated-testing" style="font-size: 7pt">
+                    automated testing
                   </a>
                 
                   <a href="/tag/quality" style="font-size: 7pt">
@@ -411,8 +434,8 @@
                     estimating
                   </a>
                 
-                  <a href="/tag/patch" style="font-size: 7pt">
-                    patch
+                  <a href="/tag/jenkins" style="font-size: 7pt">
+                    jenkins
                   </a>
                 
                   <a href="/tag/brain" style="font-size: 7pt">
@@ -423,40 +446,40 @@
                     productivity
                   </a>
                 
-                  <a href="/tag/jenkins" style="font-size: 7pt">
-                    jenkins
-                  </a>
-                
-                  <a href="/tag/automated-testing" style="font-size: 7pt">
-                    automated testing
-                  </a>
-                
                   <a href="/tag/junit" style="font-size: 7pt">
                     junit
-                  </a>
-                
-                  <a href="/tag/nerd" style="font-size: 7pt">
-                    nerd
                   </a>
                 
                   <a href="/tag/testing" style="font-size: 7pt">
                     testing
                   </a>
                 
-                  <a href="/tag/mac" style="font-size: 7pt">
-                    mac
+                  <a href="/tag/nerd" style="font-size: 7pt">
+                    nerd
                   </a>
                 
                   <a href="/tag/star-wars" style="font-size: 7pt">
                     star wars
                   </a>
                 
-                  <a href="/tag/technical-debt" style="font-size: 7pt">
-                    technical debt
+                  <a href="/tag/wordpress" style="font-size: 7pt">
+                    wordpress
+                  </a>
+                
+                  <a href="/tag/mac" style="font-size: 7pt">
+                    mac
+                  </a>
+                
+                  <a href="/tag/functional" style="font-size: 7pt">
+                    functional
                   </a>
                 
                   <a href="/tag/estimation" style="font-size: 7pt">
                     estimation
+                  </a>
+                
+                  <a href="/tag/education" style="font-size: 7pt">
+                    education
                   </a>
                 
                   <a href="/tag/certification" style="font-size: 7pt">
@@ -467,10 +490,6 @@
                     tests
                   </a>
                 
-                  <a href="/tag/functional" style="font-size: 7pt">
-                    functional
-                  </a>
-                
                   <a href="/tag/programming-languages" style="font-size: 7pt">
                     programming languages
                   </a>
@@ -479,40 +498,44 @@
                     scala
                   </a>
                 
-                  <a href="/tag/education" style="font-size: 7pt">
-                    education
-                  </a>
-                
-                  <a href="/tag/wordpress" style="font-size: 7pt">
-                    wordpress
-                  </a>
-                
-                  <a href="/tag/story" style="font-size: 7pt">
-                    story
-                  </a>
-                
-                  <a href="/tag/rage" style="font-size: 7pt">
-                    rage
+                  <a href="/tag/technical-debt" style="font-size: 7pt">
+                    technical debt
                   </a>
                 
                   <a href="/tag/blog" style="font-size: 7pt">
                     blog
                   </a>
                 
-                  <a href="/tag/latex" style="font-size: 7pt">
-                    latex
+                  <a href="/tag/rage" style="font-size: 7pt">
+                    rage
                   </a>
                 
-                  <a href="/tag/c" style="font-size: 7pt">
-                    c#
+                  <a href="/tag/story" style="font-size: 7pt">
+                    story
                   </a>
                 
                   <a href="/tag/books" style="font-size: 7pt">
                     books
                   </a>
                 
+                  <a href="/tag/latex" style="font-size: 7pt">
+                    latex
+                  </a>
+                
+                  <a href="/tag/patch" style="font-size: 7pt">
+                    patch
+                  </a>
+                
+                  <a href="/tag/c" style="font-size: 7pt">
+                    c#
+                  </a>
+                
                   <a href="/tag/conference" style="font-size: 7pt">
                     conference
+                  </a>
+                
+                  <a href="/tag/work" style="font-size: 7pt">
+                    work
                   </a>
                 
             </div>
