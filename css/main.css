@@ -454,15 +454,16 @@ abbr {
   .post .postentry blockquote blockquote {
     margin-left: 0;
     font-size: 1em; }
-  .post .postentry iframe.twitter-tweet {
+  .post .postentry .twitter-tweet {
+    word-spacing: normal;
+    line-height: 1em;
+    letter-spacing: normal;
     margin: 0 auto !important;
-    border: 2px solid #55acee;
+    border: 1px solid #55acee;
     background-color: white;
     font-family: "Helvetica Neue",Arial,sans-serif;
     font-size: 14px;
-    letter-spacing: normal;
     line-height: 18px;
-    word-spacing: normal;
     text-align: left;
     width: 500px !important; }
   .post .postentry blockquote.email {
