@@ -93,7 +93,13 @@
 	</div>
 </div>
 		  	<div class="postentry">
-				<p>Whenever people start talking about NP-Complete problems, or even NP problems, one of the first examples they reach for is the classic Traveling Salesperson Problem.  TSP makes sense because it intuitively can&#39;t be solved quickly due to how difficult the problem sounds, so it&#39;s reasonable for people to use it in discussions about P versus NP.</p><p>The problem is, 99% of the time people discuss Traveling Salesperson being NP-Complete, <strong>they are wrong.</strong>  The Traveling Salesperson Problem, as it is usually described, isn&#39;t NP-Complete at all.  In fact, it&#39;s not even in NP.</p><p>The Traveling Salesperson Problem is typically described as &quot;given a graph of cities various distances away from each other, find the shortest path for a salesperson to visit every city exactly once and return to the origin city.&quot;</p><p>More formally, TSP is &quot;Given a graph $$G$$ of vertices $$V$$ connected via nonzero cost edges $$E$$, find the lowest-cost Hamiltonian circuit&quot;</p>
+				<p>Whenever people start talking about NP-Complete problems, or even NP problems, one of the first examples they reach for is the classic Traveling Salesperson Problem.  TSP makes sense because it intuitively can&#39;t be solved quickly due to how difficult the problem sounds, so it&#39;s reasonable for people to use it in discussions about P versus NP.</p>
+
+<p>The problem is, 99% of the time people discuss Traveling Salesperson being NP-Complete, <strong>they are wrong.</strong>  The Traveling Salesperson Problem, as it is usually described, isn&#39;t NP-Complete at all.  In fact, it&#39;s not even in NP.</p>
+
+<p>The Traveling Salesperson Problem is typically described as &quot;given a graph of cities various distances away from each other, find the shortest path for a salesperson to visit every city exactly once and return to the origin city.&quot;</p>
+
+<p>More formally, TSP is &quot;Given a graph $$G$$ of vertices $$V$$ connected via nonzero cost edges $$E$$, find the lowest-cost Hamiltonian circuit&quot;</p>
 
         <p><a href="/2012/09/14/traveling-salesman-the-most-misunderstood-problem/">Read the rest of "Traveling Salesperson: The Most Misunderstood Problem" &raquo;</a></p>
 			</div>
@@ -112,7 +118,19 @@
 	</div>
 </div>
 		  	<div class="postentry">
-				<p>I love Test-Driven Development, but I&#39;ve found that there are a number of different ways people actually do TDD in real-world projects.  Over time, I have discovered that I have a particular way of working that I prefer above all others, and I would like to describe it.</p><p>Imagine you are writing some software that will have a number of interacting components.  I&#39;m going to suggest a toy example, one that will help illustrate what I&#39;m talking about, but is not so complex to actually warrant it.  Imagine you are going to write a Lottery game.  Players will have lottery tickets, and they will listen for Callers to read out the winning lottery number (think Observer pattern).  The Callers will use a Hopper with numbered balls, selecting the appropriate number of balls and then calling out the winning number at the end.</p><p>To follow the <a href="http://en.wikipedia.org/wiki/Single_responsibility_principle">Single-Responsibility Principle</a>, you think your game will probably have three classes:</p><p>The <code>Player</code> is going to interact with the <code>Caller</code>, and the <code>Caller</code> is going to interact with the Hopper.</p>
+				<p>I love Test-Driven Development, but I&#39;ve found that there are a number of different ways people actually do TDD in real-world projects.  Over time, I have discovered that I have a particular way of working that I prefer above all others, and I would like to describe it.</p>
+
+<p>Imagine you are writing some software that will have a number of interacting components.  I&#39;m going to suggest a toy example, one that will help illustrate what I&#39;m talking about, but is not so complex to actually warrant it.  Imagine you are going to write a Lottery game.  Players will have lottery tickets, and they will listen for Callers to read out the winning lottery number (think Observer pattern).  The Callers will use a Hopper with numbered balls, selecting the appropriate number of balls and then calling out the winning number at the end.</p>
+
+<p>To follow the <a href="http://en.wikipedia.org/wiki/Single_responsibility_principle">Single-Responsibility Principle</a>, you think your game will probably have three classes:</p>
+
+<ol>
+<li>The <code>Hopper</code> - this contains all of the numbered balls and, when asked, returns one to the caller (removing it).</li>
+<li>The <code>Caller</code> - once the lottery has started, this will ask the <code>Hopper</code> for numbers and call out the final sequence of numbers to registered <code>Player</code>s</li>
+<li>The <code>Player</code> - this will observe the <code>Caller</code>, listening for numbers to be called and determine if he is a winner by comparing the numbers to his array of numbers (given at construction).</li>
+</ol>
+
+<p>The <code>Player</code> is going to interact with the <code>Caller</code>, and the <code>Caller</code> is going to interact with the Hopper.</p>
 
         <p><a href="/2012/08/10/need-driven-development/">Read the rest of "Need-Driven Development" &raquo;</a></p>
 			</div>
@@ -131,7 +149,20 @@
 	</div>
 </div>
 		  	<div class="postentry">
-				<p>I&#39;ve been struggling for a while to get a good personal wiki solution going.  I have a bunch of requirements that have made this quite difficult:</p><p>I tried using <a href="http://tiddlywiki.org/">TiddlyWiki</a> with DropBox as the cloud-based sync mechanism, but I use Google Chrome as my browser, which has a lot of trouble with the Java plugin that does the saving.  There are command line arguments for Chrome that fix this, but that&#39;s weirdly difficult to deal with on OS X.</p><p>So my final solution, subject to improvement, is to use <a href="https://github.com/github/gollum">Gollum</a>.  Gollum is a Ruby-based wiki server that runs completely self-contained (you don&#39;t need to install PHP or a database) and is backed by Git.  I use a Git repo cloned off a private <a href="http://www.github.com">GitHub</a> repository for sync functionality.</p><p>There are a number of steps to getting this set up, so I&#39;ve decided to document them here, both for the benefit of anyone else who wants to do this, as well as for myself if I have to set it up on another machine.</p>
+				<p>I&#39;ve been struggling for a while to get a good personal wiki solution going.  I have a bunch of requirements that have made this quite difficult:</p>
+
+<ul>
+<li>Access and edit wiki from browser</li>
+<li>Run in OS X (Laptop) and Linux (Workstation)</li>
+<li>Synchronized across all machines</li>
+<li>Can use offline</li>
+</ul>
+
+<p>I tried using <a href="http://tiddlywiki.org/">TiddlyWiki</a> with DropBox as the cloud-based sync mechanism, but I use Google Chrome as my browser, which has a lot of trouble with the Java plugin that does the saving.  There are command line arguments for Chrome that fix this, but that&#39;s weirdly difficult to deal with on OS X.</p>
+
+<p>So my final solution, subject to improvement, is to use <a href="https://github.com/github/gollum">Gollum</a>.  Gollum is a Ruby-based wiki server that runs completely self-contained (you don&#39;t need to install PHP or a database) and is backed by Git.  I use a Git repo cloned off a private <a href="http://www.github.com">GitHub</a> repository for sync functionality.</p>
+
+<p>There are a number of steps to getting this set up, so I&#39;ve decided to document them here, both for the benefit of anyone else who wants to do this, as well as for myself if I have to set it up on another machine.</p>
 
         <p><a href="/2012/05/15/personal-wiki-using-github-and-gollum-on-os-x/">Read the rest of "Personal Wiki using GitHub and Gollum on OS X" &raquo;</a></p>
 			</div>
@@ -150,7 +181,17 @@
 	</div>
 </div>
 		  	<div class="postentry">
-				<p>The second semester in my PhD program had me crank up the difficulty level a bit.  Since I got A&#39;s in both of my classes in the Fall, I figured I could extend myself and take on a bigger challenge: taking my first 7000-level course.</p><p>5000-level classes are Master&#39;s classes, 7000-level classes are PhD classes.  PhD students need to take 6 Master&#39;s classes and 4 PhD classes (plus 30 credit hours of research), and ideally 3 of those 6 Master&#39;s classes will be transferred for me.  Basically, I had to get my ass in gear and take a PhD-level class.</p><p>I still stuck with 2 classes per semester, though next semester I&#39;m registered for 3 PhD-level classes, which is probably stupid and may change.</p><p>Textbook: <a href="http://www.cs.uky.edu/%7Elewis/texts/theory/title.pdf">Essentials of Theoretical Computer Science</a></p>
+				<p>The second semester in my PhD program had me crank up the difficulty level a bit.  Since I got A&#39;s in both of my classes in the Fall, I figured I could extend myself and take on a bigger challenge: taking my first 7000-level course.</p>
+
+<p>5000-level classes are Master&#39;s classes, 7000-level classes are PhD classes.  PhD students need to take 6 Master&#39;s classes and 4 PhD classes (plus 30 credit hours of research), and ideally 3 of those 6 Master&#39;s classes will be transferred for me.  Basically, I had to get my ass in gear and take a PhD-level class.</p>
+
+<p>I still stuck with 2 classes per semester, though next semester I&#39;m registered for 3 PhD-level classes, which is probably stupid and may change.</p>
+
+<h1>Classes</h1>
+
+<h2>Theory of Automata</h2>
+
+<p>Textbook: <a href="http://www.cs.uky.edu/%7Elewis/texts/theory/title.pdf">Essentials of Theoretical Computer Science</a></p>
 
         <p><a href="/2012/05/11/spring-2012-semester-in-review/">Read the rest of "Spring 2012 Semester In Review" &raquo;</a></p>
 			</div>
@@ -169,7 +210,15 @@
 	</div>
 </div>
 		  	<div class="postentry">
-				<p>Whenever there is a discussion about what Computer Science is and what it is not, it is a near-certainty that a particular quote will soon be used.</p><p>Computer science is no more about computers than astronomy is about telescopes.</p><p>This quote, attributed to the brilliant <a href="http://en.wikipedia.org/wiki/Edsger_W._Dijkstra">Edsger Dijkstra</a> is such a perfect little summary of what Computer Science is, and it explains so much about the field in a very short space, it&#39;s ideal for explaining CS to those outside of the field.</p><p>The problem is, <strong>it&#39;s bullshit</strong>.</p>
+				<p>Whenever there is a discussion about what Computer Science is and what it is not, it is a near-certainty that a particular quote will soon be used.</p>
+
+<blockquote>
+<p>Computer science is no more about computers than astronomy is about telescopes.</p>
+</blockquote>
+
+<p>This quote, attributed to the brilliant <a href="http://en.wikipedia.org/wiki/Edsger_W._Dijkstra">Edsger Dijkstra</a> is such a perfect little summary of what Computer Science is, and it explains so much about the field in a very short space, it&#39;s ideal for explaining CS to those outside of the field.</p>
+
+<p>The problem is, <strong>it&#39;s bullshit</strong>.</p>
 
         <p><a href="/2012/02/02/computer-science-and-telescopes/">Read the rest of "Computer Science and Telescopes" &raquo;</a></p>
 			</div>
@@ -188,7 +237,17 @@
 	</div>
 </div>
 		  	<div class="postentry">
-				<p>In August, I started graduate school at the <a href="http://www.ucdenver.edu/pages/ucdwelcomepage.aspx">University of Colorado at Denver</a>, joining their <a href="http://www.ucdenver.edu/academics/colleges/Engineering/Programs/Computer-Science-and-Engineering/DegreePrograms/DoctorPhilosophy/Pages/PhDComputerScienceInformationSystems.aspx">PhD program in Computer Science and Information Systems</a> with a focus on Theory and Algorithms.</p><p>This return to school was the first time since I graduated from the <a href="http://www.rochester.edu/">University of Rochester</a> that I attended actual classes on a campus (my Master&#39;s program was entirely distance learning).  I wanted to record some of my thoughts about returning to school, since it&#39;s been such an adjustment for me.</p><p>The University of Colorado at Denver turned out to be exactly the kind of school I wanted.  </p><p>The University of Rochester was a great school, considered to be one of the &quot;<a href="http://www.rochester.edu/news/new_ivy.html">New Ivy</a>&quot; institutions.  The Computer Science program was very intensive there, and I was barely able to survive a few of my classes.  This was good for me as an undergrad - that was the right time in my life for an extremely intensive program, since I was in school full-time and focused on nothing else.  These days, however, I&#39;m a full-time Software Engineer professionally, and I didn&#39;t want to be part of such an intense program for graduate school.  I went back to grad school for fun, not for my career, and I wanted a program that would not burn me out due to difficulty.  Often I found undergrad classes so difficult that I was unable to comprehend some material, leaving me to feel lost, like I** was missing out on interesting stuff because I couldn&#39;t understand it before moving on**.  I wasn&#39;t interested in that kind of experience.</p>
+				<p>In August, I started graduate school at the <a href="http://www.ucdenver.edu/pages/ucdwelcomepage.aspx">University of Colorado at Denver</a>, joining their <a href="http://www.ucdenver.edu/academics/colleges/Engineering/Programs/Computer-Science-and-Engineering/DegreePrograms/DoctorPhilosophy/Pages/PhDComputerScienceInformationSystems.aspx">PhD program in Computer Science and Information Systems</a> with a focus on Theory and Algorithms.</p>
+
+<p>This return to school was the first time since I graduated from the <a href="http://www.rochester.edu/">University of Rochester</a> that I attended actual classes on a campus (my Master&#39;s program was entirely distance learning).  I wanted to record some of my thoughts about returning to school, since it&#39;s been such an adjustment for me.</p>
+
+<h1>University of Colorado at Denver</h1>
+
+<p>The University of Colorado at Denver turned out to be exactly the kind of school I wanted.  </p>
+
+<table class='image alignright' width='306'><tr><td><img src='/assets/ucd-300x199.jpg' width='300' height='199'/></td></tr></table>
+
+<p>The University of Rochester was a great school, considered to be one of the &quot;<a href="http://www.rochester.edu/news/new_ivy.html">New Ivy</a>&quot; institutions.  The Computer Science program was very intensive there, and I was barely able to survive a few of my classes.  This was good for me as an undergrad - that was the right time in my life for an extremely intensive program, since I was in school full-time and focused on nothing else.  These days, however, I&#39;m a full-time Software Engineer professionally, and I didn&#39;t want to be part of such an intense program for graduate school.  I went back to grad school for fun, not for my career, and I wanted a program that would not burn me out due to difficulty.  Often I found undergrad classes so difficult that I was unable to comprehend some material, leaving me to feel lost, like I** was missing out on interesting stuff because I couldn&#39;t understand it before moving on**.  I wasn&#39;t interested in that kind of experience.</p>
 
         <p><a href="/2011/12/21/fall-2011-semester-in-review/">Read the rest of "Fall 2011 Semester In Review" &raquo;</a></p>
 			</div>
@@ -207,7 +266,13 @@
 	</div>
 </div>
 		  	<div class="postentry">
-				<p>A few months ago, my co-workers and I converted a central part of our codebase from Java and Groovy into <a href="http://www.scala-lang.org/">Scala</a>.  Though I am, by no means, a Scala expert at this point, I wanted to share some of my initial thoughts on the programming language.</p><p>Writing this blog post is probably a mistake.  A few years ago I shared <a href="/2007/09/10/language-marathon-first-impressions-of-ruby-python-and-c/">my thoughts on Ruby</a> after a similar amount of time using it.  When I went back and re-read that post to get the link for this one, I was stunned.  I don&#39;t even remember disliking Ruby at any point.  <strong>Today, Ruby is one of my favorite programming languages</strong>, and the tool I reach for most readily for almost any project outside of work.  I still love Python as I did in that post, but my view of Ruby has, apparently, completely changed.</p><p>Nonetheless, I have some thoughts on Scala and because I have a blog, I suffer from the delusion that there are people who give a shit what I think about it.  </p><p>As with any &quot;first impressions&quot; post, it&#39;s entirely possible I will literally discover something that invalidates my complaints tomorrow (maybe even in a comment on this post), so take this with a grain of salt.</p>
+				<p>A few months ago, my co-workers and I converted a central part of our codebase from Java and Groovy into <a href="http://www.scala-lang.org/">Scala</a>.  Though I am, by no means, a Scala expert at this point, I wanted to share some of my initial thoughts on the programming language.</p>
+
+<p>Writing this blog post is probably a mistake.  A few years ago I shared <a href="/2007/09/10/language-marathon-first-impressions-of-ruby-python-and-c/">my thoughts on Ruby</a> after a similar amount of time using it.  When I went back and re-read that post to get the link for this one, I was stunned.  I don&#39;t even remember disliking Ruby at any point.  <strong>Today, Ruby is one of my favorite programming languages</strong>, and the tool I reach for most readily for almost any project outside of work.  I still love Python as I did in that post, but my view of Ruby has, apparently, completely changed.</p>
+
+<p>Nonetheless, I have some thoughts on Scala and because I have a blog, I suffer from the delusion that there are people who give a shit what I think about it.  </p>
+
+<p>As with any &quot;first impressions&quot; post, it&#39;s entirely possible I will literally discover something that invalidates my complaints tomorrow (maybe even in a comment on this post), so take this with a grain of salt.</p>
 
         <p><a href="/2011/12/15/scala-first-impressions/">Read the rest of "Scala First Impressions" &raquo;</a></p>
 			</div>
@@ -226,7 +291,15 @@
 	</div>
 </div>
 		  	<div class="postentry">
-				<p>Brace yourselves, what follows is an amazingly long blog post about the best order in which to watch Star Wars.</p><p>First, let me say this: for people that couldn&#39;t care less about the prequel trilogy, I suggest <a href="http://originaltrilogy.com/forum/topic.cfm/Harmys-STAR-WARS-Despecialized-Edition-HD-AVCHD-DVD9-and-NTSC-DVD5-AVAILABLE-see-1st-post/topic/12713/">Harmy&#39;s Despecialized Editions</a>.  They are 720p videos that are the result of &quot;Harmy&quot; from <a href="http://originaltrilogy.com">The Original Trilogy forums</a> painstakingly reconstructing the theatrical releases of all three films utilizing a wide variety of video sources as well as custom mattes.  Downloading, burning, labeling, and printing cases for these films is one of the neckbeardiest things I&#39;ve done (aside from writing this blog post), and I&#39;m extremely glad I did it.  <strong>If the &quot;proper order&quot; for Star Wars for you is the original trilogy and nothing else, stop reading now and find the Despecialized Editions.</strong></p><p>So, with that out of the way, what can you do if you <em>do</em> wish to involve the prequel trilogy?  Maybe you don&#39;t want to mess around with fan edits or the pirate bay, and you just want to watch the <a href="http://www.amazon.com/Star-Wars-Complete-Episodes-Blu-ray/dp/B015AJOKFG">official Blu-rays</a> with your kids.  Maybe you&#39;ve accepted that the original theatrical editions are no longer considered canon, and you&#39;re a nerd that cares about things like that.  Hell, maybe you actually <strong>like</strong> the prequels (seriously?).</p><p>Whatever your reason, if you are showing someone the <strong>official editions</strong> of Star Wars for the first time, you have to make a decision about which order to watch the films.</p>
+				<p>Brace yourselves, what follows is an amazingly long blog post about the best order in which to watch Star Wars.</p>
+
+<p>First, let me say this: for people that couldn&#39;t care less about the prequel trilogy, I suggest <a href="http://originaltrilogy.com/forum/topic.cfm/Harmys-STAR-WARS-Despecialized-Edition-HD-AVCHD-DVD9-and-NTSC-DVD5-AVAILABLE-see-1st-post/topic/12713/">Harmy&#39;s Despecialized Editions</a>.  They are 720p videos that are the result of &quot;Harmy&quot; from <a href="http://originaltrilogy.com">The Original Trilogy forums</a> painstakingly reconstructing the theatrical releases of all three films utilizing a wide variety of video sources as well as custom mattes.  Downloading, burning, labeling, and printing cases for these films is one of the neckbeardiest things I&#39;ve done (aside from writing this blog post), and I&#39;m extremely glad I did it.  <strong>If the &quot;proper order&quot; for Star Wars for you is the original trilogy and nothing else, stop reading now and find the Despecialized Editions.</strong></p>
+
+<table class='image aligncenter' width='586'><tr><td><img src='/assets/2011-10-21_22-52-35_694-e1319259575859-580x329.jpg' width='580' height='329'/><p class='caption'>Harmy, King of the Nerds!</p></td></tr></table>
+
+<p>So, with that out of the way, what can you do if you <em>do</em> wish to involve the prequel trilogy?  Maybe you don&#39;t want to mess around with fan edits or the pirate bay, and you just want to watch the <a href="http://www.amazon.com/Star-Wars-Complete-Episodes-Blu-ray/dp/B015AJOKFG">official Blu-rays</a> with your kids.  Maybe you&#39;ve accepted that the original theatrical editions are no longer considered canon, and you&#39;re a nerd that cares about things like that.  Hell, maybe you actually <strong>like</strong> the prequels (seriously?).</p>
+
+<p>Whatever your reason, if you are showing someone the <strong>official editions</strong> of Star Wars for the first time, you have to make a decision about which order to watch the films.</p>
 
         <p><a href="/2011/11/11/the-star-wars-saga-suggested-viewing-order/">Read the rest of "The Star Wars Saga: Introducing Machete Order" &raquo;</a></p>
 			</div>
@@ -245,7 +318,17 @@
 	</div>
 </div>
 		  	<div class="postentry">
-				<p>The graphs $$K_5$$ and $$K_{3,3}$$ are two of the most important graphs within the subject of planarity in graph theory.  <a href="http://en.wikipedia.org/wiki/Planar_graph#Kuratowski.27s_and_Wagner.27s_theorems">Kuratowski&#39;s theorem</a> tells us that, if we can find a subgraph in any graph that is <a href="http://en.wikipedia.org/wiki/Homeomorphism_(graph_theory)">homeomorphic</a> to $$K_5$$ or $$K_{3,3}$$, then the graph is not planar, meaning it&#39;s not possible for the edges to be redrawn such that they are none overlapping.</p><p>Of course, this theorem relies on the fact that $$K_5$$ and $$K_{3,3}$$ are, themselves, not planar.  While it&#39;s pretty easy to see $$K_5$$ is not planar, $$K_{3,3}$$ is a bit more involved.  I&#39;ve read a lot of proofs of this, but frankly I found most of them sorely lacking.  Here I try my hand at providing a clearer proof than what you may find elsewhere.  Hopefully my explanation will make things click for a Googling student.</p><p>First I want to simply convince you.  This won&#39;t be as formal a proof as I intend to provide, but I want to give a sense of the intuition.  I&#39;m a visual learner, so often I find that an informal explanation or a series of examples is more convincing to me personally than a proof.</p><p>First, let&#39;s remove three edges from $$K_{3,3}$$.  This will be a new graph that we&#39;ll call $$G$$.  The edges we&#39;re removing are going to be the straight vertical edges, the ones that join a vertex with it&#39;s counterpart on the opposite side of the graph (treating the top and bottom as sides).  We&#39;ll be adding these back later, but we&#39;re going to remove them for now.</p>
+				<p>The graphs $$K_5$$ and $$K_{3,3}$$ are two of the most important graphs within the subject of planarity in graph theory.  <a href="http://en.wikipedia.org/wiki/Planar_graph#Kuratowski.27s_and_Wagner.27s_theorems">Kuratowski&#39;s theorem</a> tells us that, if we can find a subgraph in any graph that is <a href="http://en.wikipedia.org/wiki/Homeomorphism_(graph_theory)">homeomorphic</a> to $$K_5$$ or $$K_{3,3}$$, then the graph is not planar, meaning it&#39;s not possible for the edges to be redrawn such that they are none overlapping.</p>
+
+<table class='image aligncenter' width='408'><tr><td><img src='/assets/k33andk5.png' width='402' height='122'/><p class='caption'>$$K_5$$ and $$K_{3,3}$$</p></td></tr></table>
+
+<p>Of course, this theorem relies on the fact that $$K_5$$ and $$K_{3,3}$$ are, themselves, not planar.  While it&#39;s pretty easy to see $$K_5$$ is not planar, $$K_{3,3}$$ is a bit more involved.  I&#39;ve read a lot of proofs of this, but frankly I found most of them sorely lacking.  Here I try my hand at providing a clearer proof than what you may find elsewhere.  Hopefully my explanation will make things click for a Googling student.</p>
+
+<h1>Intuition</h1>
+
+<p>First I want to simply convince you.  This won&#39;t be as formal a proof as I intend to provide, but I want to give a sense of the intuition.  I&#39;m a visual learner, so often I find that an informal explanation or a series of examples is more convincing to me personally than a proof.</p>
+
+<p>First, let&#39;s remove three edges from $$K_{3,3}$$.  This will be a new graph that we&#39;ll call $$G$$.  The edges we&#39;re removing are going to be the straight vertical edges, the ones that join a vertex with it&#39;s counterpart on the opposite side of the graph (treating the top and bottom as sides).  We&#39;ll be adding these back later, but we&#39;re going to remove them for now.</p>
 
         <p><a href="/2011/10/29/why-the-complete-bipartite-graph-k33-is-not-planar/">Read the rest of "Why The Complete Bipartite Graph K3,3 Is Not Planar" &raquo;</a></p>
 			</div>
@@ -264,7 +347,20 @@
 	</div>
 </div>
 		  	<div class="postentry">
-				<p>One of the most enjoyable parts of my last job was that we hired a lot of junior developers and interns.  I really enjoy working with younger people than me, because they&#39;re as eager to learn new things as I am.  I also really enjoy discussing technical things with them, largely for selfish reasons: explaining something to someone else makes me understand that thing much better.</p><p>One particular intern on my old team was a lot of fun for me.  The company was the first place he worked since graduating with his B.S. in Computer Science.  The things he said were so similar to things I said when I first graduated, and his approaches to problems reminded me so much of my own approaches to problems eight years earlier that it bordered on creepy.</p><p>One particular exchange between him and I stood out in my mind.  It was exactly the conversation that 28-year-old me would have had with 20-year-old me.</p><p>He was frustrated the other team had made a change and not even run the application.  They had checked code in without even giving it a run-through in the application live.  <strong>How unprofessional could you be?</strong></p>
+				<p>One of the most enjoyable parts of my last job was that we hired a lot of junior developers and interns.  I really enjoy working with younger people than me, because they&#39;re as eager to learn new things as I am.  I also really enjoy discussing technical things with them, largely for selfish reasons: explaining something to someone else makes me understand that thing much better.</p>
+
+<p>One particular intern on my old team was a lot of fun for me.  The company was the first place he worked since graduating with his B.S. in Computer Science.  The things he said were so similar to things I said when I first graduated, and his approaches to problems reminded me so much of my own approaches to problems eight years earlier that it bordered on creepy.</p>
+
+<p>One particular exchange between him and I stood out in my mind.  It was exactly the conversation that 28-year-old me would have had with 20-year-old me.</p>
+
+<dl class='chat-transcript'><dt class='chat-highlight'><strong>Him:</strong></dt><dd>Arggh, the other team changed the interface of something my code is using, and now it's broken.</dd>
+<dt class='chat-highlight'><strong>Me:</strong></dt><dd>So?  Just fix it.</dd>
+<dt class='chat-highlight'><strong>Him:</strong></dt><dd>I will, but it's annoying.  I mean, if they had just started the application they would have seen it's broken.  They're such idiots.</dd>
+<dt class='chat-highlight'><strong>Me:</strong></dt><dd>Wait, it breaks right away?</dd>
+<dt class='chat-highlight'><strong>Him:</strong></dt><dd>Yeah, you get an error when you hit the front page.  The front page!</dd>
+<dt class='chat-highlight'><strong>Me:</strong></dt><dd>Sounds like we're the idiots.</dd></dl>
+
+<p>He was frustrated the other team had made a change and not even run the application.  They had checked code in without even giving it a run-through in the application live.  <strong>How unprofessional could you be?</strong></p>
 
         <p><a href="/2011/10/21/i-broke-your-code-and-its-your-fault/">Read the rest of "I Broke Your Code, And It's Your Fault" &raquo;</a></p>
 			</div>

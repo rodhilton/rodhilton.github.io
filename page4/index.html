@@ -93,7 +93,15 @@
 	</div>
 </div>
 		  	<div class="postentry">
-				<p>Software development is a strange beast sometimes.  Despite the fact that it is <a href="http://www.artima.com/intv/garden.html">not predictable enough</a> or <a href="http://www.cs.usfca.edu/%7Eparrt/doc/software-not-engineering.html">constant enough</a> to qualify as true engineering, it&#39;s often referred to as Software Engineering anyway.</p><p>There are no rules in software development.  Some suggest the existence of <a href="http://www.ibm.com/developerworks/websphere/library/techarticles/0306_perks/perks2.html">best practices</a>, but really there are only guidelines and recommendations.</p><p>Despite these truths, there are a number of alleged &quot;rules&quot; in software development, often suffixed with &quot;<a href="http://en.wikipedia.org/wiki/Considered_harmful">considered harmful</a>&quot; as a reference to Edsger Dijkstra&#39;s famous &quot;<a href="http://www.cs.utexas.edu/users/EWD/ewd02xx/EWD215.PDF">Go To Statement Considered Harmful</a>&quot; essay.  I want to look at one of these rules a bit more closely.</p><p>&quot;Magic Constants,&quot; also often referred to as &quot;Magic Numbers&quot; break what is regarded as one of the oldest &quot;rules of programming&quot;, dating back as far as the manuals for COBOL and FORTRAN in the 60&#39;s.</p>
+				<p>Software development is a strange beast sometimes.  Despite the fact that it is <a href="http://www.artima.com/intv/garden.html">not predictable enough</a> or <a href="http://www.cs.usfca.edu/%7Eparrt/doc/software-not-engineering.html">constant enough</a> to qualify as true engineering, it&#39;s often referred to as Software Engineering anyway.</p>
+
+<p>There are no rules in software development.  Some suggest the existence of <a href="http://www.ibm.com/developerworks/websphere/library/techarticles/0306_perks/perks2.html">best practices</a>, but really there are only guidelines and recommendations.</p>
+
+<p>Despite these truths, there are a number of alleged &quot;rules&quot; in software development, often suffixed with &quot;<a href="http://en.wikipedia.org/wiki/Considered_harmful">considered harmful</a>&quot; as a reference to Edsger Dijkstra&#39;s famous &quot;<a href="http://www.cs.utexas.edu/users/EWD/ewd02xx/EWD215.PDF">Go To Statement Considered Harmful</a>&quot; essay.  I want to look at one of these rules a bit more closely.</p>
+
+<h1>Magic Constants Considered Harmful</h1>
+
+<p>&quot;Magic Constants,&quot; also often referred to as &quot;Magic Numbers&quot; break what is regarded as one of the oldest &quot;rules of programming&quot;, dating back as far as the manuals for COBOL and FORTRAN in the 60&#39;s.</p>
 
         <p><a href="/2011/09/27/magic-variables-arent-always-magic/">Read the rest of "Magic Variables Aren't Always Magic" &raquo;</a></p>
 			</div>
@@ -112,7 +120,20 @@
 	</div>
 </div>
 		  	<div class="postentry">
-				<p>I recently had to merge a number of independent projects into a larger project to enable a long-term project reorganization effort.  Since we&#39;re using Git for both projects, this was quite easy, but it required some investigating to figure out how to do it.</p><p>So you have two projects, <code>old-project</code> and <code>new-project</code>.  You want to end up with a subdirectory inside of <code>new-project</code> called <code>old-project</code> with all of the code from <code>old-project</code>, and you want to preserve that project&#39;s history.</p><p>Here&#39;s an overview of what we&#39;re going to do here, in the abstract:</p><p>For the purposes of this demonstration, <code>old-project</code> is cloned at <code>/home/machete/old-project</code> and <code>new-project</code> is cloned at <code>/home/machete/new-project</code>.</p>
+				<p>I recently had to merge a number of independent projects into a larger project to enable a long-term project reorganization effort.  Since we&#39;re using Git for both projects, this was quite easy, but it required some investigating to figure out how to do it.</p>
+
+<p>So you have two projects, <code>old-project</code> and <code>new-project</code>.  You want to end up with a subdirectory inside of <code>new-project</code> called <code>old-project</code> with all of the code from <code>old-project</code>, and you want to preserve that project&#39;s history.</p>
+
+<p>Here&#39;s an overview of what we&#39;re going to do here, in the abstract:</p>
+
+<ol>
+<li>Get a local copy of the repository containing the project being pulled in</li>
+<li>Modify the local copy to move all of the files into a subdirectory</li>
+<li>Add the local copy as a fake &quot;remote&quot; to our larger project</li>
+<li>Pull the local &quot;remote&quot; in, thereby pulling the entire history along with it</li>
+</ol>
+
+<p>For the purposes of this demonstration, <code>old-project</code> is cloned at <code>/home/machete/old-project</code> and <code>new-project</code> is cloned at <code>/home/machete/new-project</code>.</p>
 
         <p><a href="/2011/09/12/moving-one-git-repo-into-another-as-subdirectory/">Read the rest of "Moving One Git Repository Into Another As A Subdirectory" &raquo;</a></p>
 			</div>
@@ -131,7 +152,17 @@
 	</div>
 </div>
 		  	<div class="postentry">
-				<p>I&#39;ve made no secret about the fact that <a href="/2009/02/21/i-love-pair-programming/">I Love Pair-Programming</a>.  I&#39;ve tried pair programming with a number of different setups, each one better than the last.</p><p>I&#39;ve had a lot of people ask me about how best to set up pair-programming environments at work, so I&#39;m going to take you through a number of different ways to pair-program and discuss the advantages of each.</p><p>The first level of pairing is something I see surprisingly often.  An inside-corner desk, typically an individual&#39;s workstation.  Another person scoots their chair over and leans in, looking at the same monitor.</p><p>It seems like no coincidence that virtually everyone I&#39;ve seen &quot;pair program&quot; this way dislikes pairing.  That&#39;s because this setup is not actually pairing.  It&#39;s just coding with someone watching over your shoulder.</p>
+				<p>I&#39;ve made no secret about the fact that <a href="/2009/02/21/i-love-pair-programming/">I Love Pair-Programming</a>.  I&#39;ve tried pair programming with a number of different setups, each one better than the last.</p>
+
+<p>I&#39;ve had a lot of people ask me about how best to set up pair-programming environments at work, so I&#39;m going to take you through a number of different ways to pair-program and discuss the advantages of each.</p>
+
+<h1>Level -1: Not Pairing</h1>
+
+<p>The first level of pairing is something I see surprisingly often.  An inside-corner desk, typically an individual&#39;s workstation.  Another person scoots their chair over and leans in, looking at the same monitor.</p>
+
+<table class='image aligncenter' width='468'><tr><td><img src='/assets/level-1.png' width='462' height='359'/></td></tr></table>
+
+<p>It seems like no coincidence that virtually everyone I&#39;ve seen &quot;pair program&quot; this way dislikes pairing.  That&#39;s because this setup is not actually pairing.  It&#39;s just coding with someone watching over your shoulder.</p>
 
         <p><a href="/2011/08/25/mechanics-of-good-pairing/">Read the rest of "Mechanics of Good Pairing" &raquo;</a></p>
 			</div>
@@ -150,7 +181,13 @@
 	</div>
 </div>
 		  	<div class="postentry">
-				<p>At work, I&#39;m building a module that interfaces with a customer billing system.  Writing unit tests for something like this is easy using mocks, but I really wanted to write an integration test the ensured the two systems worked together correctly.</p><p>Unfortunately, because the system is a billing system, it is considered sensitive, even the developer instance.  This means that, though the Continuous Integration environment (which is hosted in a secure location) is able to access the billing system, the remote office in Denver (where I work) is not.</p><p>This can be solved by opening up an <a href="http://www.engadget.com/2006/03/21/how-to-ssh-tunnels-for-secure-network-access/">SSH tunnel</a> to the CI environment, allowing me to tunnel traffic through HTTP to the remote billing system.  But that presents a separate problem.</p><p>My integration will work in the CI environment, it will work locally when the tunnel is open, but it will fail any other time.  So if I check this code in, every other developer on my team will have to know that, before they run all of the tests locally, they have to open an SSH tunnel, even if they&#39;re working on a component totally unrelated to my work.</p>
+				<p>At work, I&#39;m building a module that interfaces with a customer billing system.  Writing unit tests for something like this is easy using mocks, but I really wanted to write an integration test the ensured the two systems worked together correctly.</p>
+
+<p>Unfortunately, because the system is a billing system, it is considered sensitive, even the developer instance.  This means that, though the Continuous Integration environment (which is hosted in a secure location) is able to access the billing system, the remote office in Denver (where I work) is not.</p>
+
+<p>This can be solved by opening up an <a href="http://www.engadget.com/2006/03/21/how-to-ssh-tunnels-for-secure-network-access/">SSH tunnel</a> to the CI environment, allowing me to tunnel traffic through HTTP to the remote billing system.  But that presents a separate problem.</p>
+
+<p>My integration will work in the CI environment, it will work locally when the tunnel is open, but it will fail any other time.  So if I check this code in, every other developer on my team will have to know that, before they run all of the tests locally, they have to open an SSH tunnel, even if they&#39;re working on a component totally unrelated to my work.</p>
 
         <p><a href="/2011/08/19/conditionally-running-tests-with-junit-4/">Read the rest of "Conditionally Running Tests With JUnit 4" &raquo;</a></p>
 			</div>
@@ -169,7 +206,15 @@
 	</div>
 </div>
 		  	<div class="postentry">
-				<p>Paul Dyson has made a blog post entitled &quot;<a href="http://pauldyson.wordpress.com/2011/08/15/technical-debt-and-the-lean-startup/">Technical Debt and the Lean Startup</a>&quot; as well as commented on my post about <a href="http://www.nomachetejuggling.com/2011/07/22/when-to-work-on-technical-debt/">When To Work On Technical Debt</a>, challenging some of my claims.  I read through his post and, while it makes a number of good points, I think it ultimately advocates for a risky manner of running a business.  I started typing this as a response to his comment, but realized that it was long enough to warrant a separate post, so I&#39;d like to go through his post&#39;s points one by one.</p><p>Let&#39;s look at his first example: that it&#39;s okay in a lean start-up to have an area of the system only understood by a single person.  He basically argues that, in a small start-up, you don&#39;t have enough people to pair-program on everything, so having a single person understand the system is alright.  This is a false dichotomy, he is saying that code must be either <em>paired</em> or it must be <em>understood by only one person.</em>  Even if you do not have the resources to pair-program every task, you can still have collective code ownership by simply having regular code reviews with your team.  It&#39;s not quite as good as pairing, but it&#39;s leaps and bounds better than a single person knowing the system.</p><p>Having an area of the system understood by only one person is unbelievably risky, so much so that I&#39;m a bit stunned that someone as experienced as Paul would advocate it publicly.  If that one person fell ill, or took an offer at another company, he would have been royally screwed.  Development would have to completely stop while the other members of his team came up to speed on that aspect of the system, unable to ask questions of the original developer.  This situation would be even worse if he had very few developers; he may have to wait and continue development only after hiring a replacement.</p><p>What he&#39;s basically saying is &quot;look, I know people say you need to drive with glasses if you have poor eyesight, but I have poor eyesight and I&#39;ve been driving for years without getting in an accident.  If you have poor eyesight, you should consider driving without glasses too.&quot;</p>
+				<p>Paul Dyson has made a blog post entitled &quot;<a href="http://pauldyson.wordpress.com/2011/08/15/technical-debt-and-the-lean-startup/">Technical Debt and the Lean Startup</a>&quot; as well as commented on my post about <a href="http://www.nomachetejuggling.com/2011/07/22/when-to-work-on-technical-debt/">When To Work On Technical Debt</a>, challenging some of my claims.  I read through his post and, while it makes a number of good points, I think it ultimately advocates for a risky manner of running a business.  I started typing this as a response to his comment, but realized that it was long enough to warrant a separate post, so I&#39;d like to go through his post&#39;s points one by one.</p>
+
+<h1>Hit-By-A-Bus Syndrome</h1>
+
+<p>Let&#39;s look at his first example: that it&#39;s okay in a lean start-up to have an area of the system only understood by a single person.  He basically argues that, in a small start-up, you don&#39;t have enough people to pair-program on everything, so having a single person understand the system is alright.  This is a false dichotomy, he is saying that code must be either <em>paired</em> or it must be <em>understood by only one person.</em>  Even if you do not have the resources to pair-program every task, you can still have collective code ownership by simply having regular code reviews with your team.  It&#39;s not quite as good as pairing, but it&#39;s leaps and bounds better than a single person knowing the system.</p>
+
+<p>Having an area of the system understood by only one person is unbelievably risky, so much so that I&#39;m a bit stunned that someone as experienced as Paul would advocate it publicly.  If that one person fell ill, or took an offer at another company, he would have been royally screwed.  Development would have to completely stop while the other members of his team came up to speed on that aspect of the system, unable to ask questions of the original developer.  This situation would be even worse if he had very few developers; he may have to wait and continue development only after hiring a replacement.</p>
+
+<p>What he&#39;s basically saying is &quot;look, I know people say you need to drive with glasses if you have poor eyesight, but I have poor eyesight and I&#39;ve been driving for years without getting in an accident.  If you have poor eyesight, you should consider driving without glasses too.&quot;</p>
 
         <p><a href="/2011/08/16/what-is-technical-debt/">Read the rest of "What Is Technical Debt?" &raquo;</a></p>
 			</div>
@@ -188,7 +233,13 @@
 	</div>
 </div>
 		  	<div class="postentry">
-				<p>We&#39;ve got a common library used by a number of projects.  This library has it&#39;s own git repository and it&#39;s own job in Jenkins to build it. </p><p>One of the tasks of the Jenkins job is to, when the tests pass, copy the jar file artifact into a team-wide <a href="http://nexus.sonatype.org/">Nexus</a> instance, which is added as a repository in our other projects.</p><p>Lately I started having a problem where a new project that used this library was unable to run tests correctly - strange failures that seemed unrelated to any actual changes.  The culprit wound up being an unlikely source: Clover.</p><p>The Jenkins Maven build goal for our library used to look like this:</p>
+				<p>We&#39;ve got a common library used by a number of projects.  This library has it&#39;s own git repository and it&#39;s own job in Jenkins to build it. </p>
+
+<p>One of the tasks of the Jenkins job is to, when the tests pass, copy the jar file artifact into a team-wide <a href="http://nexus.sonatype.org/">Nexus</a> instance, which is added as a repository in our other projects.</p>
+
+<p>Lately I started having a problem where a new project that used this library was unable to run tests correctly - strange failures that seemed unrelated to any actual changes.  The culprit wound up being an unlikely source: Clover.</p>
+
+<p>The Jenkins Maven build goal for our library used to look like this:</p>
 
         <p><a href="/2011/08/05/be-careful-with-clover-in-jenkins/">Read the rest of "Be Careful With Clover in Jenkins" &raquo;</a></p>
 			</div>
@@ -207,7 +258,13 @@
 	</div>
 </div>
 		  	<div class="postentry">
-				<p>I recently wanted to set up Jenkins on my personal workstation to manage builds for side and personal projects.  I was already running Tomcat on the system since I use that to run Subsonic, so I wanted to install Jenkins in the same container.</p><p>The process of getting everything working was just short of a nightmare, but I managed to eventually get my Jenkins inside of Tomcat successfully checking out and building projects through Git.  While I was dealing with various errors, I was doing a lot of Googling.  My searches seemed to indicate that very few people were trying to set things up as I was, because the internet was very little help.  When hours of Googling turns up nothing, you know you either have a) a technical problem that nobody else has tried to solve or b) a weird fetish.</p><p>So I&#39;ve written this post to explain how to set things up.  But rather than a simple tutorial, I&#39;ve written it as a step-by-step account of the various difficulties I had setting it up.  I&#39;ve done this partially to draw a little bit of attention to a gap in the error messaging of these tools, but mostly so that the next person who Googles for specific error messages may come across this page and avoid some headaches.</p><p>Ultimately, what I wanted was Jenkins installed in Tomcat running as a system service in Ubuntu to be able to check out projects via Git repositories via the SSH protocol.  I will assume you already have Git installed because it is awesome, but if not it&#39;s as easy as using your package manager.</p>
+				<p>I recently wanted to set up Jenkins on my personal workstation to manage builds for side and personal projects.  I was already running Tomcat on the system since I use that to run Subsonic, so I wanted to install Jenkins in the same container.</p>
+
+<p>The process of getting everything working was just short of a nightmare, but I managed to eventually get my Jenkins inside of Tomcat successfully checking out and building projects through Git.  While I was dealing with various errors, I was doing a lot of Googling.  My searches seemed to indicate that very few people were trying to set things up as I was, because the internet was very little help.  When hours of Googling turns up nothing, you know you either have a) a technical problem that nobody else has tried to solve or b) a weird fetish.</p>
+
+<p>So I&#39;ve written this post to explain how to set things up.  But rather than a simple tutorial, I&#39;ve written it as a step-by-step account of the various difficulties I had setting it up.  I&#39;ve done this partially to draw a little bit of attention to a gap in the error messaging of these tools, but mostly so that the next person who Googles for specific error messages may come across this page and avoid some headaches.</p>
+
+<p>Ultimately, what I wanted was Jenkins installed in Tomcat running as a system service in Ubuntu to be able to check out projects via Git repositories via the SSH protocol.  I will assume you already have Git installed because it is awesome, but if not it&#39;s as easy as using your package manager.</p>
 
         <p><a href="/2011/07/31/ubuntu-tomcat-jenkins-git-ssh-togethe/">Read the rest of "Ubuntu, Tomcat, Jenkins, Git, and SSH Together" &raquo;</a></p>
 			</div>
@@ -226,7 +283,15 @@
 	</div>
 </div>
 		  	<div class="postentry">
-				<p>I hear the same complaints and concerns from all sorts of different software development organizations.  It seems that development teams only suffer from a small handful of problems in the broad sense, and nearly every team seems to share them.</p><p>One problem I encounter constantly is this: <strong>&quot;We don&#39;t have time to address our technical debt!&quot;</strong></p><p>Every company I&#39;ve ever worked for has had this problem to some degree.  The development team realizes that there are some parts of the system that need to be cleaned up, but for a wide variety of different reasons, they feel like they don&#39;t have the time to actually work on improving those areas of the system.</p><p>The truth is, this is not actually that difficult a problem to deal solve.  As software developers, we deal with significantly more complex problems on a regular basis.</p>
+				<p>I hear the same complaints and concerns from all sorts of different software development organizations.  It seems that development teams only suffer from a small handful of problems in the broad sense, and nearly every team seems to share them.</p>
+
+<p>One problem I encounter constantly is this: <strong>&quot;We don&#39;t have time to address our technical debt!&quot;</strong></p>
+
+<p>Every company I&#39;ve ever worked for has had this problem to some degree.  The development team realizes that there are some parts of the system that need to be cleaned up, but for a wide variety of different reasons, they feel like they don&#39;t have the time to actually work on improving those areas of the system.</p>
+
+<table class='image alignright' width='306'><tr><td><img src='/assets/panic-300x225.jpg' width='300' height='225'/></td></tr></table>
+
+<p>The truth is, this is not actually that difficult a problem to deal solve.  As software developers, we deal with significantly more complex problems on a regular basis.</p>
 
         <p><a href="/2011/07/22/when-to-work-on-technical-debt/">Read the rest of "When To Work On Technical Debt" &raquo;</a></p>
 			</div>
@@ -245,7 +310,20 @@
 	</div>
 </div>
 		  	<div class="postentry">
-				<p>I care, probably more than I should, about my résumé.  I sort of think of it like a real-life character sheet, so I like to keep it current at all times.  But my résumé has always been a source of irritation for me as well, as I have a number of things I would like to do with it that I&#39;ve been unable to do.</p><p>I started building some tools that would let me accomplish this, including a specialized résumé data format that I called &quot;rml&quot; but I quickly realized that not everyone wants to store the same data on their résumé, so I kept generalizing and generalizing the tool until I had something usable: <a href="https://github.com/rodhilton/templator">Templator</a>.</p><p>Templator is a general tool that allows someone to store data in a text file and run that data through various template files to get generated output.  It utilizes <a href="http://www.yaml.org/">YAML</a> and <a href="http://www.ruby-doc.org/stdlib/libdoc/erb/rdoc/">ERB</a>, so Ruby programmers should already be comfortable with it.</p><p>In this article I&#39;m going to explain how to use Templator to store a version-controllable, customizable résumé.</p>
+				<p>I care, probably more than I should, about my résumé.  I sort of think of it like a real-life character sheet, so I like to keep it current at all times.  But my résumé has always been a source of irritation for me as well, as I have a number of things I would like to do with it that I&#39;ve been unable to do.</p>
+
+<ol>
+<li>I want to have it version-controlled, so it should be plain text.</li>
+<li>I want to have a plain HTML version of it that I can post on my blog, <a href="http://www.nomachetejuggling.com/resume/">here</a></li>
+<li>I want to have a $$\LaTeX$$ version of it, because I like the way it looks, and I&#39;d like to send that version to potential employers.</li>
+<li>I would like to have a &quot;master&quot; version of the résumé with all of my data, but be able to easily build customized versions of it.  For example, I want to include the sections on what courses I took in school if I&#39;m sending my résumé to an academic institution, but I want to leave that off if I&#39;m applying for an industry job.</li>
+</ol>
+
+<p>I started building some tools that would let me accomplish this, including a specialized résumé data format that I called &quot;rml&quot; but I quickly realized that not everyone wants to store the same data on their résumé, so I kept generalizing and generalizing the tool until I had something usable: <a href="https://github.com/rodhilton/templator">Templator</a>.</p>
+
+<p>Templator is a general tool that allows someone to store data in a text file and run that data through various template files to get generated output.  It utilizes <a href="http://www.yaml.org/">YAML</a> and <a href="http://www.ruby-doc.org/stdlib/libdoc/erb/rdoc/">ERB</a>, so Ruby programmers should already be comfortable with it.</p>
+
+<p>In this article I&#39;m going to explain how to use Templator to store a version-controllable, customizable résumé.</p>
 
         <p><a href="/2011/06/09/building-a-resume-with-templator/">Read the rest of "Building a Résumé With Templator" &raquo;</a></p>
 			</div>
@@ -264,7 +342,15 @@
 	</div>
 </div>
 		  	<div class="postentry">
-				<p>Today was my last day at <a href="http://www.rallydev.com">Rally Software</a>.  In two weeks, I will be starting a new job, working on a variety of web services, mostly with Java and Groovy.</p><p>Leaving Rally was tough for me.  It&#39;s easy to leave a job when I&#39;m unhappy, or irritated with management, or tired of a project, or if I&#39;m just not learning anything new.  But none of these were the case with Rally.  I&#39;m leaving not because anything is wrong with Rally, but because there&#39;s simply a better opportunity for me elsewhere.  Time Warner is in downtown Denver (right near campus), they have a great benefits and tuition reimbursement program, they&#39;re working with technology I want to know more about, and their staff reads like a fantasy league of my career (I already know half the developers from other jobs).  The switch just made sense for me, but it wasn&#39;t easy to leave.</p><p>When I started at Rally nearly 3 years ago, it was a company that was struggling.  Not financially, but technologically.  For a long time, the company had done very well spreading agile to various customers, led by a product that was having features added to it at a breakneck pace.  <strong>From the outside, the company seemed to have things together, but internally the codebase was a monument of technical debt and hasty decisions.</strong></p><p>The company had survived in &quot;startup mode&quot; for years, but the team was starting to buckle under the pressure of technical debt.  Feature development was slowing, and external bug reports were flooding in. Things weren&#39;t looking good.</p>
+				<p>Today was my last day at <a href="http://www.rallydev.com">Rally Software</a>.  In two weeks, I will be starting a new job, working on a variety of web services, mostly with Java and Groovy.</p>
+
+<table class='image alignright' width='306'><tr><td><img src='/assets/IMG_20110531_104216-300x224.jpg' width='300' height='224'/></td></tr></table>
+
+<p>Leaving Rally was tough for me.  It&#39;s easy to leave a job when I&#39;m unhappy, or irritated with management, or tired of a project, or if I&#39;m just not learning anything new.  But none of these were the case with Rally.  I&#39;m leaving not because anything is wrong with Rally, but because there&#39;s simply a better opportunity for me elsewhere.  Time Warner is in downtown Denver (right near campus), they have a great benefits and tuition reimbursement program, they&#39;re working with technology I want to know more about, and their staff reads like a fantasy league of my career (I already know half the developers from other jobs).  The switch just made sense for me, but it wasn&#39;t easy to leave.</p>
+
+<p>When I started at Rally nearly 3 years ago, it was a company that was struggling.  Not financially, but technologically.  For a long time, the company had done very well spreading agile to various customers, led by a product that was having features added to it at a breakneck pace.  <strong>From the outside, the company seemed to have things together, but internally the codebase was a monument of technical debt and hasty decisions.</strong></p>
+
+<p>The company had survived in &quot;startup mode&quot; for years, but the team was starting to buckle under the pressure of technical debt.  Feature development was slowing, and external bug reports were flooding in. Things weren&#39;t looking good.</p>
 
         <p><a href="/2011/05/31/leaving-rally/">Read the rest of "Leaving Rally" &raquo;</a></p>
 			</div>
