@@ -7,6 +7,205 @@
 		<atom:link href="http://www.nomachetejuggling.com/category/programming/rss.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
+				<title>Software Engineering Guiding Principles - Part 2</title>
+				<description>&lt;p&gt;Here are five more Guiding Principles I use when making technical decisions as a software engineer.  You can also check out &lt;a href=&quot;http://www.nomachetejuggling.com/2016/06/15/guidingprinciples-part1/&quot;&gt;Part 1&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;As before, this list is really a list of principles I use when making difficult technical decisions or mantras I use to snap myself out of being stuck - it&amp;#39;s really not about just how I try to write good code (SOLID, DRY, etc) although there is a little bit of that as well.&lt;/p&gt;
+
+&lt;h1&gt;Perfect is the Enemy of Good&lt;/h1&gt;
+
+&lt;p&gt;When it comes to designing code, I think it&amp;#39;s better to get started as soon as possible and make changes and modifications via refactoring as needed.  It&amp;#39;s better to get something up and working quickly, rather than spending time debating in front of whiteboards about the correct way to do things.  In my experience, engineers in particular have such an affinity for elegance that we can get wrapped around the axle trying to figure out the perfect, most elegant solution.&lt;/p&gt;
+
+&lt;p&gt;I&amp;#39;m not saying to write shitty code, obviously.  It&amp;#39;s still important to follow good design principles like &lt;a href=&quot;https://en.wikipedia.org/wiki/SOLID_(object-oriented_design)&quot;&gt;SOLID&lt;/a&gt;, the &lt;a href=&quot;https://en.wikipedia.org/wiki/Law_of_Demeter&quot;&gt;Law of Demeter&lt;/a&gt;, &lt;a href=&quot;https://en.wikipedia.org/wiki/KISS_principle&quot;&gt;KISS&lt;/a&gt;, &lt;a href=&quot;https://en.wikipedia.org/wiki/Defensive_programming&quot;&gt;defensive programming&lt;/a&gt;, &lt;a href=&quot;https://christiantietze.de/posts/2015/09/clean-code/&quot;&gt;CLEAN&lt;/a&gt;, &lt;a href=&quot;https://en.wikipedia.org/wiki/Separation_of_concerns&quot;&gt;separation of concerns&lt;/a&gt; and so on.  It&amp;#39;s just that you don&amp;#39;t have to get every little thing perfect, it&amp;#39;s better to get something that&amp;#39;s imperfect but works built and then refactor to perfection later.&lt;/p&gt;
+
+&lt;p&gt;Remember &lt;a href=&quot;https://en.wikipedia.org/wiki/John_Gall_(author)&quot;&gt;Gall&amp;#39;s Law&lt;/a&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;A complex system that works is invariably found to have evolved from a simple system that worked.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;It&amp;#39;s important to realize when you or your team have gotten into a state of &lt;strong&gt;analysis paralysis&lt;/strong&gt;, which is one of the reasons I like Pair Programming so much - it&amp;#39;s handy to have a second person around to recognize when you&amp;#39;re wrapped up analyzing instead of building.  Nobody really asked you to build the world&amp;#39;s greatest, most reusable, most well-designed system on the planet.  &lt;strong&gt;The company doesn&amp;#39;t need the perfect solution, it just needs one that&amp;#39;s good enough&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;There are lots of ways engineers can get gridlocked doing analysis, and it&amp;#39;s important to recognize all of them.&lt;/p&gt;
+
+&lt;h2&gt;Premature Optimization&lt;/h2&gt;
+
+&lt;p&gt;Don Knuth calls Premature Optimization the &lt;a href=&quot;http://c2.com/cgi/wiki?PrematureOptimization&quot;&gt;root of all evil&lt;/a&gt;.  It can happen both in code/design, as well as architecture.&lt;/p&gt;
+
+&lt;p&gt;If you find yourselves talking about caching layers, circuit breakers, or geo redundancy before building even the first version of the software, you might be getting ahead of yourself.  &lt;strong&gt;Those things are all just as easy to add later as they are to add now&lt;/strong&gt;, so there&amp;#39;s no reason to get wrapped up on these concerns early.&lt;/p&gt;
+
+&lt;p&gt;Obviously I&amp;#39;m not advocating writing inefficient algorithms when an efficient one is just as easy to implement, but if the code is substantially cleaner with something less efficient, leave well enough alone and just get it working.  Even dumbass bubble sort is usually good enough, and it has the advantage that you remember how it works right now without double checking anything on Wikipedia.  &lt;/p&gt;
+
+&lt;h2&gt;Bike Shedding&lt;/h2&gt;
+
+&lt;p&gt;Otherwise known as the &lt;a href=&quot;https://en.wikipedia.org/wiki/Law_of_triviality&quot;&gt;Law of Triviality&lt;/a&gt;, this is when a disproportionate amount of weight is given to trivial concerns when designing something.  The term comes from the fact that teams will tend to focus on the minor issues that are easy to understand, such as what color to paint the staff bike shed.&lt;/p&gt;
+
+&lt;table class='image alignright' width='306'&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/sheldon-cooper.png&quot; width='300' height='187'/&gt;&lt;p class='caption'&gt;You're in my spot&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;The more time you devote to making a decision, the more you need to periodically ask yourself &amp;quot;does this really matter?&amp;quot;  A lot of times, it doesn&amp;#39;t matter to anyone else on the team, it doesn&amp;#39;t matter to your users, and it certainly doesn&amp;#39;t matter to the company.  &lt;strong&gt;If it only matters to you, you&amp;#39;re probably being kind, you know, kind of a dork&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;An entire team can bike shed as well.  Recognize when your team is bike shedding and stop the conversation, drive it toward the things that matter.  If people keep gravitating toward the trivial, it means that there&amp;#39;s a lack of comprehension of the difficult decisions that actually matter.  You either need to stop and get everyone on the same page about the challenging stuff, or you have the wrong group of people making the decision.&lt;/p&gt;
+
+&lt;h2&gt;Overengineering&lt;/h2&gt;
+
+&lt;p&gt;Premature reusability.  Engineers have a tendency to want to design components to be as generic and reusable as possible, there&amp;#39;s an old joke from Nathaniel Borenstein I&amp;#39;m fond of:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;No ethically-trained software engineer would ever consent to write a DestroyBaghdad procedure. &lt;/p&gt;
+
+&lt;p&gt;Basic professional ethics would instead require him to write a DestroyCity procedure, to which Baghdad could be given as a parameter.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;A really great example of over-engineering is found in Bob Martin&amp;#39;s &lt;a href=&quot;https://smile.amazon.com/Software-Development-Principles-Patterns-Practices/dp/0135974445?sa-no-redirect=1&quot;&gt;Agile Software Development&lt;/a&gt;.  In it, Bob Martin and Bob Ross sit down to do the &lt;a href=&quot;http://butunclebob.com/ArticleS.UncleBob.TheBowlingGameKata&quot;&gt;Bowling Game Kata&lt;/a&gt;, a programming exercise where you simply write code to calculate the scores for a bowling game.&lt;/p&gt;
+
+&lt;p&gt;The two engineers started talking about what classes they were going to have.  There would need to be a &lt;code&gt;Game&lt;/code&gt;, which of course would have 10 &lt;code&gt;Frame&lt;/code&gt; instances, each of which would have between 1 and 3 &lt;code&gt;Throw&lt;/code&gt; instances.  This seemed natural, like how you might answer a &amp;quot;design a the object model for a bowling game&amp;quot; question in an interview.&lt;/p&gt;
+
+&lt;p&gt;But as they tried to write tests to drive out the behavior of &lt;code&gt;Frame&lt;/code&gt; and &lt;code&gt;Throw&lt;/code&gt; they found that there were no behaviors to those classes.  A &lt;code&gt;Throw&lt;/code&gt; is really just an &lt;code&gt;int&lt;/code&gt;.  In the end, they wound up with a simple &lt;code&gt;Game&lt;/code&gt; class and nothing else, with a handful of methods on it to say how many pins were hit, and a method to get the score.&lt;/p&gt;
+
+&lt;table class='image aligncenter'&gt;&lt;tr&gt;&lt;td&gt;&lt;a href='http://xkcd.com/974/'&gt;&lt;img src='http://imgs.xkcd.com/comics/the_general_problem.png'/&gt;&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;Don&amp;#39;t start any large endeavor with a mind on generality and reuse.  Follow the &lt;a href=&quot;https://blog.codinghorror.com/rule-of-three/&quot;&gt;Rule of Three&lt;/a&gt; - make everything designed for single use and naturally you will eventually discover reusable components falling out when refactoring after you&amp;#39;ve done the same or similar things in multiple places.&lt;/p&gt;
+
+&lt;h2&gt;Exception - Architecture&lt;/h2&gt;
+
+&lt;p&gt;It&amp;#39;s important to note that there is one exception to this idea: your code &lt;em&gt;design&lt;/em&gt; can be just good enough.  But your system &lt;em&gt;architecture&lt;/em&gt; needs to basically be perfect from the start.  This can be extremely difficult to get right, but it&amp;#39;s important, so a little bit of analysis paralysis is somewhat forgivable.&lt;/p&gt;
+
+&lt;p&gt;When it comes to code design, evolutionary design is the way to go - just build it and evolve it.  But for architecture, get the team into a room with a whiteboard and hash out the details before you start building.  &lt;strong&gt;Evolutionary design, up-front architecture&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;How do you know the difference between design and architecture?  One analogy I&amp;#39;m fond of is that architecture is strategy while design is tactics.  Doing the right thing vs doing things right.  That&amp;#39;s a helpful distinction but I find myself most fond of &lt;a href=&quot;http://www.ibm.com/developerworks/library/j-eaed10/&quot;&gt;Martin Fowler&amp;#39;s definition&lt;/a&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Architecture is the stuff that&amp;#39;s hard to change later. And there should be as little of that stuff as possible.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Anything that would be extremely difficult to change later on is something deserving of a substantial amount of upfront analysis.  The language you choose for your code is architecture because changing it would require a full rewrite.  If you&amp;#39;re using a highly opinionated framework like Rails, Grails, or something that spreads throughout your entire codebase like Spring, that&amp;#39;s architecture.  &lt;/p&gt;
+
+&lt;p&gt;If you go with microservices, lots of decisions that are typically architecture suddenly become design, because you could swap one microservice for another easily, or quickly swap out the language or framework of one service.  However, now the contracts between services - which would be easy to refactor if they were all in a single codebase together as simple classes - cease being design and become architecture.  And of course the decision to use microservices or not altogether &lt;em&gt;is&lt;/em&gt; architecture. &lt;/p&gt;
+
+&lt;table class='image alignleft' width='306'&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/architecture.jpg&quot; width='300' height='188'/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;The data store you use is likely architecture.  It can sometimes be easy to swap out MySQL for Oracle if you&amp;#39;re using a strong database abstraction layer or relying on JPA or ActiveRecord something similar, but as your data needs grow you&amp;#39;ll quickly find yourself using customized queries or perhaps even stored procedures, and migrating becomes difficult.  Even if you choose something like Postgres and try to keep the option open to switch to Oracle or MariaDB, you&amp;#39;re still picking a relational database at all, and switching to a NoSQL store would be extremely difficult so no matter how you slice it, it&amp;#39;s architecture.&lt;/p&gt;
+
+&lt;p&gt;Public-facing APIs are a strange middle ground.  Once you&amp;#39;ve decided on the APIs, they&amp;#39;re impossible to change without affecting your users, so they&amp;#39;re architecture.  However, you can introduce a new API version later fairly easily, so it&amp;#39;s not that hard to change your mind, making it sort of design?  Of course, the WAY you version the APIs in general is architecture, because if you provide no facility for versioning early on it becomes difficult to add a new version later.&lt;/p&gt;
+
+&lt;p&gt;Overall the dichotomy is subjective so you need to use your best judgement, but what&amp;#39;s important is that you don&amp;#39;t spin your wheels making something perfect that could be perfected later if it can be good enough now.&lt;/p&gt;
+
+&lt;h1&gt;If You Break My Code, It&amp;#39;s My Fault&lt;/h1&gt;
+
+&lt;p&gt;I&amp;#39;ve blogged about this one before, under the more provocative title &amp;quot;&lt;a href=&quot;http://www.nomachetejuggling.com/2011/10/21/i-broke-your-code-and-its-your-fault/&quot;&gt;I Broke Your Code, and It&amp;#39;s Your Fault&lt;/a&gt;&amp;quot;.  In fact, there was even a &lt;a href=&quot;https://www.reddit.com/r/programming/comments/qbg9y/i_broke_your_code_and_its_your_fault/&quot;&gt;lengthy reddit discussion&lt;/a&gt; about it in which folks tried to decide if I was clinically insane, or just a regular moron.&lt;/p&gt;
+
+&lt;p&gt;Provocative title aside, I still stand by the original point.  Even if someone else does something as annoying as change the interface I was depending on in my code, it shouldn&amp;#39;t be possible for them to so thoroughly break the code I wrote without SOMETHING telling them that they did so.  &lt;strong&gt;All it takes is one failed test to say &amp;quot;hold up, you broke shit.&amp;quot;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;When I push code up to the shared repository, it&amp;#39;s my job to ensure it works, not QAs.  But it&amp;#39;s also my job to ensure that a junior engineer or a new hire can&amp;#39;t just break it without something telling him or her it happened.  When I write code, I try to imagine, what would happen if some other engineer came in and modified the class I just wrote, maybe didn&amp;#39;t understand why I was doing &lt;code&gt;-1&lt;/code&gt; somewhere, and so they just removed it?  Would that be an annoying thing to do?  Sure, and I would hope that the other engineer might ask me why I was doing it if I failed to make it obvious from the code itself.  But maybe this is years from now and I&amp;#39;m not even at the company anymore, so they remove the &lt;code&gt;-1&lt;/code&gt;, or they think my code sucks so they rewrote the entire function from scratch.  The instant they do that, a test I wrote somewhere should fail (hopefully with an explanation of why it needed to be the way it was).&lt;/p&gt;
+
+&lt;p&gt;By writing my code like this, and creating what reddit argued is &lt;em&gt;too many tests&lt;/em&gt;, I am encouraging the other members of my team to embrace &lt;strong&gt;fearless refactoring&lt;/strong&gt;.  Don&amp;#39;t like how I wrote something?  Refactor it, and don&amp;#39;t worry about breaking anything - I wrote enough tests to ensure that you can&amp;#39;t.  Is it possible I&amp;#39;ll make a mistake and fail to cover something I should have?  Of course it is, but when this happens, the refactor-er in question did me a favor by highlighting a mutation that I missed.&lt;/p&gt;
+
+&lt;p&gt;Top comment on that thread questions the wisdom of being happy that an app breakage highlights a missing test we can add.  The commenter says to try telling the client about your unit test suite while they&amp;#39;re losing customers left and right due to the bug.  I guess that&amp;#39;s a fair poi-- wait, what?  You&amp;#39;re developing applications where breakages and bugs can utterly destroy your company, and you&amp;#39;re &lt;em&gt;not&lt;/em&gt; writing a metric ton of tests?  That&amp;#39;s some serious Evel Knievel shit right there.  Um, Evel Knievel was a stuntman in the 70&amp;#39;s.  Er, the 70&amp;#39;s were a decade about 30 years before Spongebob first aired.  Nevermind.&lt;/p&gt;
+
+&lt;table class='image alignright' width='306'&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/safetynet.jpg&quot; width='300' height='300'/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;Look, the safety net of an overabundance of unit tests combined with some high-level smoke tests to ensure that basic functionality is always working should give the entire team the freedom to refactor and rewrite anything they don&amp;#39;t like.  If everyone on a team is able to adopt this attitude, the end result is code that is incredibly clean.  &lt;strong&gt;If the team isn&amp;#39;t fearlessly refactoring, and they&amp;#39;re afraid to make tiny changes and improvements because something might break somewhere, your team is hamstrung&lt;/strong&gt;.  Modules start to have a &amp;quot;here be dragons&amp;quot; vibe, with everyone afraid to improve them and so they rot until your entire codebase is rotten and you think you need to rewrite it (we talked about that &lt;a href=&quot;http://www.nomachetejuggling.com/2016/06/15/guidingprinciples-part1/#toc-the-team-unqualified-to-refactor-is-unqualified-to-rewrite&quot;&gt;already&lt;/a&gt; though).&lt;/p&gt;
+
+&lt;p&gt;I&amp;#39;m not saying it should be impossible to break my code.  Changing the interfaces of things I depend on, or literally going in and modifying what I wrote could easily make it behave incorrectly.  I can&amp;#39;t stop that.  I&amp;#39;m saying it &lt;strong&gt;should be impossible to break it without a test automatically telling you that it happened&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;When you actually imagine that another engineers might come in and accidentally (or maliciously) modify your code, your tests get much stronger.  You&amp;#39;ll find that your assertions are better when you try to guard against this sort of thing, which is really what unit testing is all about.  Lots of people track coverage for tests, but coverage basically just counts lines hit during the testing phase.  You could write a suite of unit tests that actually hits every single line of code, giving you 100% code coverage, but makes no assertions whatsoever.  Your coverage is high, but your tests are borderline useless in this case.  &lt;strong&gt;Raw coverage isn&amp;#39;t what I&amp;#39;m talking about here&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;It&amp;#39;s not about how many tests you have or how many lines they cover, it&amp;#39;s about how strong the tests you have are.  And approaching your tests with the attitude that it should be impossible to break your code without a test failing is how you make them strong.&lt;/p&gt;
+
+&lt;h2&gt;Zealotry&lt;/h2&gt;
+
+&lt;p&gt;This is probably the &lt;em&gt;strong opinion&lt;/em&gt; I hold that comes closest to zealotry for me.  As a counterexample, I really &lt;a href=&quot;http://www.nomachetejuggling.com/2009/02/21/i-love-pair-programming/&quot;&gt;love pair programming&lt;/a&gt; but I left the gig where I did it regularly and took a job where the team really didn&amp;#39;t like pairing, and I adjusted fine to not pairing.   I usually write my tests first and enjoy the TDD red-green-refactor cycle, but there are times when I suspend this practice and write tests later.  There are plenty of things I really love doing that I&amp;#39;m more than happy to stop doing as the situation demands, but I don&amp;#39;t think I can go back to not testing at all, and I might be unwilling to listen to arguments to convince me to.&lt;/p&gt;
+
+&lt;p&gt;At this point in my career, the level of physical discomfort I feel writing code with no tests at all is unbearable.  Not too long ago I was extremely busy with one task but was forced to switch gears to implement a small change I didn&amp;#39;t really agree with to an unrelated part of the code.  As some kind of juvenile form of protest, I half-assed the code and wrote no tests, just to get it done and off my plate so I could go back to what I was doing.  I pushed it up to the central git repo and felt so uncomfortable with what I had done that I lasted about 60 seconds before going back in and writing some tests to cover the change and explain why in the test case.  My rebellion was brief, I am not a badass.&lt;/p&gt;
+
+&lt;p&gt;I&amp;#39;ve heard of places where bosses will declare that unit tests are a waste of time that slow down development, and I genuinely don&amp;#39;t think I could work in a place like that anymore.  Ten years ago and I wouldn&amp;#39;t have cared, but today it just seems like an impossible request that I don&amp;#39;t write tests, like asking me to drink lighter fluid or something.  I&amp;#39;ve fallen into such a comfortable cycle of code-a-little, test-a-little that eschewing the process feels completely unnatural and foreign; whiteboard coding interviews seem so bizarre to me now, I&amp;#39;d never write so many lines of code without tests at work.  My god, there&amp;#39;s an &lt;code&gt;if&lt;/code&gt; statement in it, that&amp;#39;s two tests!&lt;/p&gt;
+
+&lt;p&gt;My code design has vastly improved by thinking about testability.  Once upon a time I&amp;#39;d have used &lt;code&gt;Math.random()&lt;/code&gt; or &lt;code&gt;System.currentTimeMillis()&lt;/code&gt; or &lt;code&gt;new Filereader(&amp;quot;whatever.txt&amp;quot;)&lt;/code&gt; without a second thought, but viewing code through the lens of testability made me realize that all of those things are subtle integration dependencies on the underlying system.  Figuring out how to write unit tests for code that depends on random number generators, a clock, or the filesystem has forced me to consider things as candidates for dependency injection that I&amp;#39;d never have considered without those tests.  Even if I were to delete those tests afterwards, the code is still cleaner and better for having been designed with them in mind.&lt;/p&gt;
+
+&lt;h1&gt;If You Hate It, Do It More&lt;/h1&gt;
+
+&lt;p&gt;This one is easy to say, but very hard in practice to commit to.  Basically, whenever I find myself dragging my feet on something I don&amp;#39;t want to do, I need to sit down and ask myself why I hate doing it.  Chances are, when I get to the root cause of my disdain or anxiety, I find that it&amp;#39;s because something is extremely inefficient or error-prone.&lt;/p&gt;
+
+&lt;p&gt;Hate performing deployments?  Why?  There&amp;#39;s a good chance it&amp;#39;s because it involves a bunch of manual steps, handbuilding artifacts and manually uploading them somewhere, then shelling into multiple boxes and executing commands.  The desire to get away from anything unpleasant is very strong, but it&amp;#39;s these situations that would benefit the most from doubling down and doing it more often.&lt;/p&gt;
+
+&lt;p&gt;If you&amp;#39;re deploying every quarter because it&amp;#39;s such a pain, you need to start deploying every month.  If you still hate it, every week.  If you still hate it, every day.  At some point you&amp;#39;ll hit a point where you say enough is enough, and if you&amp;#39;re going to deploy this crap every day then it needs to be easier.  And that&amp;#39;s when you start developing deployment pipelines and writing automated scripts.  &lt;strong&gt;The more you do something you hate, the better you&amp;#39;ll get at doing it&lt;/strong&gt;, if only to keep your sanity.&lt;/p&gt;
+
+&lt;table class='image alignleft' width='306'&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/hate.jpg&quot; width='300' height='196'/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;Hate provisioning machines?  Start adding and removing boxes from clusters on a regular basis.  At first it will be difficult and annoying - &lt;em&gt;that&amp;#39;s good&lt;/em&gt;, that&amp;#39;s what will make you better.  In no time you&amp;#39;ll be using OpenStack or AWS, augmenting setup with Puppet or Chef, or maybe even containerizing you entire process with Docker.  Your infrastructure will be better for it, everything that you hate doing is likely a weak spot in your development.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Hating something is your brain&amp;#39;s way of telling you &amp;quot;this sucks,&amp;quot; but instead of responding by hating it, respond by taming it.&lt;/strong&gt;  The more you do it, the easier it is to figure out which parts suck the most, and how you can improve them.&lt;/p&gt;
+
+&lt;p&gt;One of my favorite examples of this is Netflix&amp;#39;s &lt;a href=&quot;http://techblog.netflix.com/2012/07/chaos-monkey-released-into-wild.html&quot;&gt;Chaos Monkey&lt;/a&gt; approach.  Dealing with failure was such a negative experience for Netflix that they started doing it all the time, so often that they built software that would randomly fail-out nodes, clusters, or even entire regions.  It forced Netflix to revisit how their software works, and handle failure better.  What came out the other end was a vastly superior product.  And also Daredevil.&lt;/p&gt;
+
+&lt;p&gt;This principle is tough because it&amp;#39;s a lot like cleaning an incredibly messy room or a trainwreck of a garage.  Things start pretty bad, but the real issue is that &lt;strong&gt;things have to get worse before they can get better&lt;/strong&gt;.  Only by embracing the things you hate doing the most do you force your own hand, resulting in something that can do the horrible job you hate automatically, on-demand, and quickly.&lt;/p&gt;
+
+&lt;h2&gt;Meetings&lt;/h2&gt;
+
+&lt;p&gt;Yes, this principle applies to basically every aspect of your job.  This one is particularly tough for me but: if you hate meetings, have more of them.  Start having daily meetings if you need to.  In so doing, you and the rest of the team will discover exactly what it is you hate about meetings so much.  The only way to really figure out EXACTLY what you hate about meetings is to expose yourself to them so often that it becomes immediately apparent what doesn&amp;#39;t work about them for you.&lt;/p&gt;
+
+&lt;p&gt;Once you&amp;#39;ve identified what meeting dysfunctions make you despise them so much, it&amp;#39;s easier to fix those things and make meetings more enjoyable.  Honestly, I hate meetings too but I need to ask myself: geeze, why?  Should it really be so unpleasant to meet and chat with other engineers I respect and enjoy working with?  Are we really such misanthropic jerks that we can&amp;#39;t enjoy exchanging ideas?  And don&amp;#39;t say that the reason you hate meetings is because they prevent you from doing &lt;a href=&quot;http://www.nomachetejuggling.com/2012/10/05/getting-real-work-done/&quot;&gt;Real Work&lt;/a&gt;, I&amp;#39;ve already talked about how dumb that is.&lt;/p&gt;
+
+&lt;p&gt;After you and your team realize what doesn&amp;#39;t work about meetings, you can take steps to address them until meetings aren&amp;#39;t something you despise.  And once you don&amp;#39;t hate it, the inverse of the rule applies: &lt;strong&gt;if you like it, you can survive doing it less&lt;/strong&gt;.  Dial your meeting schedule back down once the thing you hate is &lt;em&gt;not meeting&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h1&gt;Be the Worst Person in the Band&lt;/h1&gt;
+
+&lt;p&gt;I got this from Chad Fowler&amp;#39;s &amp;quot;&lt;a href=&quot;https://amazon.com/Passionate-Programmer-Remarkable-Development-Pragmatic-ebook/dp/B00AYQNR5U/&quot;&gt;The Passionate Programmer&lt;/a&gt;&amp;quot; who in turn took it from jazz guitarist Pat Metheny, who said:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Always be the worst guy in every band you’re in.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;This idea has resonated with me ever since.  Is it uncomfortable to be the worst person on the team?  Yeah, it sure is.  And it&amp;#39;s this discomfort that will drive you to be better.  When you&amp;#39;re the best person in the band, you walk around with tons of confidence but you aren&amp;#39;t learning anything and you aren&amp;#39;t improving, because nothing is driving you to.  When you&amp;#39;re the worst, you have to step it up.&lt;/p&gt;
+
+&lt;p&gt;One of the great things about this career is that it&amp;#39;s absolutely impossible to ever know all of it.  It&amp;#39;s growing and new tools and ideas are being added at a rate faster than you can possibly learn them.  I can see this being stressful for some people, but it&amp;#39;s my favorite thing about it.  There&amp;#39;s always, &lt;strong&gt;always&lt;/strong&gt; more stuff to learn and improve.  It&amp;#39;s like being a bookworm and walking into a library of infinite size.&lt;/p&gt;
+
+&lt;table class='image alignright' width='306'&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/yoko.png&quot; width='300' height='205'/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;Nothing makes me want to learn more and be better than being surrounded by people who are better than me.  I&amp;#39;ve worked plenty of jobs where I was the worst guy in the band, and plenty where I was the best, and I always come out of the ones where I was the worst guy in the band feeling like I just spent the entire time leveling up like crazy.  Being the best fills you with confidence, which is nice on an emotional level, but it&amp;#39;s nowhere near as satisfying as coming out the other end of a job a vastly improved person.  &lt;/p&gt;
+
+&lt;p&gt;I&amp;#39;ve modified this slightly to &lt;strong&gt;be the second worst guy in the band&lt;/strong&gt;.  Being the truly worst can make you feel useless, like you&amp;#39;re not making any valuable contribution.  Plus it actually helps to be able to mentor someone, one of the most effective ways to learn something is by teaching.  In any case, definitely don&amp;#39;t be the best person in the band.&lt;/p&gt;
+
+&lt;p&gt;Another way I&amp;#39;ve heard this phrased comes from Scott Bain as quoted in &lt;a href=&quot;https://smile.amazon.com/Beyond-Legacy-Code-Practices-Software/dp/1680500791&quot;&gt;Beyond Legacy Code&lt;/a&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Always strive to be mentoring someone and to be mentored by someone.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;You can subscribe to all the blogs, read all the books, and attend all the conferences, but nothing will help you learn and keep up with the ever-changing world of software development like working every day with someone better than you.  The more people that you&amp;#39;re working with that are better than you, the stronger this effect. &lt;/p&gt;
+
+&lt;h1&gt;Your First Loyalty is to Your Users&lt;/h1&gt;
+
+&lt;p&gt;This one might be a little controversial, and proudly proclaiming it on my blog might make me unemployable.  But at the end of the day, I as a software engineer answer to an authority greater than my product owner, my boss, my VP, my CTO, or anyone else who signs my paychecks: I owe my users quality software.  If I wouldn&amp;#39;t be willing to attach my personal cell phone number to the feature I&amp;#39;m developing, I shouldn&amp;#39;t write it.&lt;/p&gt;
+
+&lt;table class='image alignleft' width='306'&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/tron2.jpg&quot; width='300' height='169'/&gt;&lt;p class='caption'&gt;I fight for the users&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;I have, on more than one occasion, gotten into a heated debate with a product owner or even a supervisor about a feature I was asked to implement.  Often, this stems from situations where the people who are USING the product aren&amp;#39;t the ones PAYING for it, and the client&amp;#39;s higher-ups are writing the checks for features that their underlings using the product might dislike.  I&amp;#39;ve found myself usually able to win these arguments by helping the product owners understand how unhappy their users will be, and pointing out that happy users will eventually leave their current company and become a sales lead at their next gig, but the most heated and intense arguments I&amp;#39;ve been involved in at work always stemmed from me advocating on behalf of the voiceless users who would end up on the receiving end of antagonistic features.&lt;/p&gt;
+
+&lt;p&gt;Unlike most the other principles on this list, this one won&amp;#39;t result in better quality codebases or more SOLID or testable designs - it actually affects the product I build at a business level.  I will never do anything half-assed, never lie or mislead my users, never take advantage of them, and never intentionally create a negative experience for them because it will line my or someone else&amp;#39;s wallet.  This is especially true when my end-users are not engineers themselves - &lt;strong&gt;they have no power or control in this software-centric world, so taking advantage of the power imbalance is particularly unethical&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;I&amp;#39;m not arguing that everything you build needs to make the world a better place at some cosmic level, or that you need to be carbon neutral in every facet of your life or anything like that.  I understand that sometimes you need to pay the bills.  But what I&amp;#39;m saying is to never, ever forget that at the end of the day some poor schmuck is going to be using the thing you&amp;#39;re building, and this person has people who care about him or her as much as you care about your loved ones.  Imagine your mother or husband or best friend using your software - do you feel good about yourself?  If not, don&amp;#39;t build it.&lt;/p&gt;
+
+&lt;p&gt;Don&amp;#39;t write software that &lt;a href=&quot;https://en.wikipedia.org/wiki/Volkswagen_emissions_scandal&quot;&gt;tricks emissions tests&lt;/a&gt; just because your asshole boss told you to.  Don&amp;#39;t write &lt;a href=&quot;https://en.wikipedia.org/wiki/Sony_BMG_copy_protection_rootkit_scandal&quot;&gt;copy protection schemes that phone home with a user&amp;#39;s private data&lt;/a&gt; just because your CEO thinks he&amp;#39;s entitled.  Don&amp;#39;t develop code that &lt;a href=&quot;http://www.cnet.com/news/e-tailers-snagged-in-marketing-scam-blame-customers/&quot;&gt;opts users into monthly charges if they are dumb enough to trust you when using your product&lt;/a&gt;, there&amp;#39;s no such thing as a &amp;quot;stupid tax&amp;quot;, &lt;strong&gt;your stupidest users need your advocacy the most.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Just remember, someday there might be a scandal and a court case that involves engineers being held accountable for the features they built, and &amp;quot;I was just following orders&amp;quot; may not be enough to save you.  Be proud of what you create.  It&amp;#39;s not enough to assume &lt;a href=&quot;https://groups.google.com/forum/#!msg/comp.lang.c++/rYCO5yn4lXw/oITtSkZOtoUJ&quot;&gt;the guy who ends up maintaining your code will be a violent psychopath who knows where you live.&lt;/a&gt; - assume that your poor users are as well.&lt;/p&gt;
+
+&lt;table class='image alignright' width='306'&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/uncle-ben.jpg&quot; width='300' height='226'/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;I think there&amp;#39;s a tendency for developers to &amp;quot;just do what they&amp;#39;re told.&amp;quot;  The users and their experience is the concern of the product owners, marketing types, salespeople, and other stakeholders - the developers just build the software according to the requirements, right?.  In all honesty, I wish that this was a safe mindset to adopt - I&amp;#39;d rather concern myself only with the code and my fellow developers who have to work with it, and leave the features and user experiences up to other people.  But time and time again, I&amp;#39;ve found that for whatever reason the folks in those positions lose sight of the user experience and request antagonistic features.  At the end of the day, the engineer is where the rubber meets the road - we&amp;#39;re the gatekeepers on what actually gets created, so &lt;strong&gt;we&amp;#39;re the last line of defense before something goes out the door that will make the lives of users worse&lt;/strong&gt;.  Product Owners and marketers can draw boxes and do photoshop mockup designs all they want, but the engineers are the only ones with the &lt;em&gt;power&lt;/em&gt; to actually build the stuff users will be interacting with, and as the sole wielders of this power, we have the &lt;em&gt;responsibility&lt;/em&gt; to consider those users even when others don&amp;#39;t.&lt;/p&gt;
+
+&lt;h1&gt;Conclusion&lt;/h1&gt;
+
+&lt;p&gt;I feel like there are more things I wind up saying a lot, but one of the most challenging parts of writing up this list was even stepping back enough to realize which things could be written down.  When you live by certain ideals long enough, they become so ingrained that it&amp;#39;s hard to even remember what the principles are.   Most of the ones on this list I realized only because I&amp;#39;ve been called out by other people for saying them so often.&lt;/p&gt;
+
+&lt;p&gt;Anything missing?  Any principles that you live by as an engineer?  Leave a comment, I&amp;#39;m curious what other people see as their &lt;strong&gt;Software Engineering Golden Rules&lt;/strong&gt;.&lt;/p&gt;
+</description>
+				<pubDate>Mon, 20 Jun 2016 00:00:00 -0400</pubDate>
+				<link>http://www.nomachetejuggling.com/2016/06/20/guidingprinciples-part2/</link>
+				<guid isPermaLink="true">http://www.nomachetejuggling.com/2016/06/20/guidingprinciples-part2/</guid>
+			</item>
+		
+			<item>
 				<title>Software Engineering Guiding Principles - Part 1</title>
 				<description>&lt;p&gt;I find that I repeat myself often at work.  There are a handful of things I say so often when discussing decisions that I&amp;#39;ve been called out for it on occasion for acting like a broken record.&lt;/p&gt;
 
@@ -151,7 +350,7 @@
 
 &lt;h1&gt;Part 2...&lt;/h1&gt;
 
-&lt;p&gt;I split this list into two posts for really no good reason aside from length.  I&amp;#39;ll be posting the other half of my Top 10 shortly.&lt;/p&gt;
+&lt;p&gt;I split this list into two posts for really no good reason aside from length.  If you want more, check out &lt;a href=&quot;http://www.nomachetejuggling.com/2016/06/20/guidingprinciples-part2/&quot;&gt;Part 2&lt;/a&gt;.&lt;/p&gt;
 </description>
 				<pubDate>Wed, 15 Jun 2016 00:00:00 -0400</pubDate>
 				<link>http://www.nomachetejuggling.com/2016/06/15/guidingprinciples-part1/</link>
@@ -300,7 +499,7 @@ class ExampleControllerSpec extends Specification {
 
 &lt;p&gt;&lt;strong&gt;I really liked the class of people at QCon, it seemed like mostly seasoned veterans in the world of software engineering&lt;/strong&gt;.  There weren&amp;#39;t a lot of young hipsters or brogrammers or anything like that, it seemed like a lot of graybeards.  I&amp;#39;m a fan of that, I think our industry generally undervalues people that have been in the field for a while, so it was nice to see such a seasoned group.&lt;/p&gt;
 
-&lt;p&gt;Of course, I mostly avoided talking to people because I hate networking, so I can&amp;#39;t say much more than that.  All I can say is I didn&amp;#39;t overhear conversations that made me cringe with people saying dumb shit like &amp;quot;what&amp;#39;s the big deal with functional programming, I&amp;#39;ve been using C++ for years and it&amp;#39;s fine&amp;quot; (a real thing I heard at a conference once).  So it seemed like a brighter group of people overall than I&amp;#39;ve seen at some other conferences.&lt;/p&gt;
+&lt;p&gt;Of course, I mostly avoided talking to people because I hate networking, so I can&amp;#39;t say much more than that.  All I can say is I didn&amp;#39;t overhear conversations that made me cringe, so it seemed like a brighter group of people overall than I&amp;#39;ve seen at some other conferences.&lt;/p&gt;
 
 &lt;p&gt;One thing I will say, I really liked how QCon set up their lunch tables.  Lunch is typically when most of the socializing happens, and OSCON for example has tables for people with similar interests to meet and mingle.  QCon had a similar setup, but I appreciated that they also had a handful of rectangular tables pushed against the walls on the perimeter of the lunchroom.  A clear set of &amp;quot;I don&amp;#39;t want to mingle&amp;quot; tables.  Good stuff if you hate chit-chat like I do.&lt;/p&gt;
 
@@ -927,27 +1126,6 @@ class ExampleControllerSpec extends Specification {
 				<pubDate>Sat, 02 Feb 2013 00:00:00 -0500</pubDate>
 				<link>http://www.nomachetejuggling.com/2013/02/02/brief-thoughts-on-software-craftsmanship/</link>
 				<guid isPermaLink="true">http://www.nomachetejuggling.com/2013/02/02/brief-thoughts-on-software-craftsmanship/</guid>
-			</item>
-		
-			<item>
-				<title>A Stroll Through the Complexity Zoo</title>
-				<description>&lt;p&gt;This Fall, I took a course on Computational Complexity.  I&amp;#39;ve been exposed to complexity in Computer Science before, but as an undergrad it rarely went beyond discussing P, NP, and NP-Complete.  While I enjoyed the class a great deal, I was slightly disappointed that we mostly studied some of the space complexity classes like PSPACE as well as went much, much deeper in depth on P, NP, and NP-Complete, without covering many of the other complexity classes, of which there are lots.&lt;/p&gt;
-
-&lt;p&gt;For a final paper, we had to pick a topic of our own choosing in Complexity Theory and research it on our own.  For my topic, I choose to explore a bunch of the other important classes in complexity theory.  I had never had any exposure to any of these classes before, so I really enjoyed this project, though I was unable to cover as many classes as I&amp;#39;d have liked, and none of them in as much depth as I was hoping.&lt;/p&gt;
-
-&lt;table class='image alignright' width='306'&gt;&lt;tr&gt;&lt;td&gt;&lt;a href='http://jeremykun.wordpress.com/2012/02/29/other-complexity-classes/'&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/chp_venn_diagram-300x270.jpg&quot; width='300' height='270'/&gt;&lt;/a&gt;&lt;p class='caption'&gt;Complexity Classes, from Math ∩ Programming&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-
-&lt;p&gt;Nonetheless, I&amp;#39;m pretty happy with my paper, which provides an undergraduate-level explanation of 26 other complexity classes, based off &lt;a href=&quot;http://complexityzoo.uwaterloo.ca/Complexity_Zoo&quot;&gt;The Complexity Zoo&lt;/a&gt;, kept by MIT professor Scott Aaronson.  I tried to boil these classes down to the bare essentials and explain them with examples in plain english as much as I could.  The goal of the paper is to expose those new to Complexity Theory or early in their Computer Science careers to a handful of interesting classes and explain how they relate to each other, the more common classes, and of course the $$P =? NP$$ question.&lt;/p&gt;
-
-&lt;p&gt;You can download the paper &lt;strong&gt;&lt;a href=&quot;http://www.nomachetejuggling.com/files/complexity_zoo.pdf&quot;&gt;here&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;Please note, this paper has not been peer-reviewed in any fashion.  It has not been (nor will it be) submitted to any academic journals, and it makes no novel contributions to the field.  It&amp;#39;s purely an overview of other classes, a literature review at best.  I post it here in case others might find it interesting or informative, but it is &lt;strong&gt;not to be cited&lt;/strong&gt;.  If you somehow find something valuable for your own research, I suggest you follow the citations in the paper and look up the references yourself, then use those as a source.&lt;/p&gt;
-
-&lt;p&gt;I also cannot stress enough how incomplete this paper is.  It only covers 26 classes, leaving out over 450.  There is a great deal of information about these classes as well as those not covered, which I do not touch upon at all.  The paper is intended as an introduction to these complexity classes, so don&amp;#39;t be surprised if things are left out.  I tried my best to avoid errors, and I had a few corrections issued by my professor where my language was misleading (for example, claiming a problem was not in $$NP$$ when in fact it was simply not &lt;strong&gt;known&lt;/strong&gt; to be in $$NP$$), but if you find something confusing or surprising, I suggest using the references provided, as this paper may have some mistakes.  If you find any, feel free to leave a comment and I&amp;#39;ll correct them.&lt;/p&gt;
-</description>
-				<pubDate>Sat, 15 Dec 2012 00:00:00 -0500</pubDate>
-				<link>http://www.nomachetejuggling.com/2012/12/15/a-stroll-through-the-complexity-zoo/</link>
-				<guid isPermaLink="true">http://www.nomachetejuggling.com/2012/12/15/a-stroll-through-the-complexity-zoo/</guid>
 			</item>
 		
 	</channel>
