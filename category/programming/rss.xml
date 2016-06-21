@@ -322,7 +322,7 @@
 &lt;p&gt;&lt;strong&gt;If your cell phone rings at 3AM because this code causes a production outage a year from now, will you be able to understand and reason about the code enough well enough to fix it?&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;Imagine that your job is basically on the line here, you&amp;#39;re now in a conference call with your boss, your boss&amp;#39;s boss, your boss&amp;#39;s boss&amp;#39;s boss, and the CTO.  Hell, maybe the CEO is on talking about the millions of dollars in lost revenue every minute the product is offline.  Your heart is racing from being startled awake, and your eyes are barely able to focus enough to read your laptop screen.  Do you &lt;em&gt;really&lt;/em&gt; want this to be what comes into focus in the middle of the night?&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;(n: Int) =&amp;gt; (2 to n) |&amp;gt; (
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-scala&quot; data-lang=&quot;scala&quot;&gt;(n: Int) =&amp;gt; (2 to n) |&amp;gt; (
     r =&amp;gt; r.foldLeft(r.toSet)((ps, x) =&amp;gt; 
         if (ps(x)) ps -- (x * x to n by x) else ps)
 )

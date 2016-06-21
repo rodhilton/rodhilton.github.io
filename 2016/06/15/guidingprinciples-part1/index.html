@@ -205,7 +205,7 @@
 <p><strong>If your cell phone rings at 3AM because this code causes a production outage a year from now, will you be able to understand and reason about the code enough well enough to fix it?</strong></p>
 
 <p>Imagine that your job is basically on the line here, you&#39;re now in a conference call with your boss, your boss&#39;s boss, your boss&#39;s boss&#39;s boss, and the CTO.  Hell, maybe the CEO is on talking about the millions of dollars in lost revenue every minute the product is offline.  Your heart is racing from being startled awake, and your eyes are barely able to focus enough to read your laptop screen.  Do you <em>really</em> want this to be what comes into focus in the middle of the night?</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">(n: Int) =&gt; (2 to n) |&gt; (
+<div class="highlight"><pre><code class="language-scala" data-lang="scala">(n: Int) =&gt; (2 to n) |&gt; (
     r =&gt; r.foldLeft(r.toSet)((ps, x) =&gt; 
         if (ps(x)) ps -- (x * x to n by x) else ps)
 )
