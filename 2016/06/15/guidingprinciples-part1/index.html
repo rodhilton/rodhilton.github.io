@@ -84,7 +84,7 @@
 		<p class="meta">
 		<b title="work, career, and principles">PROGRAMMING</b> - 
 		June 15, 2016 - 
-		4,583 words -
+		4,584 words -
 		<a href="/2016/06/15/guidingprinciples-part1/#disqus_thread">Comments</a>
 		</p>
 	</div>
@@ -130,7 +130,7 @@
 
 <table class='image alignleft' width='306'><tr><td><a href='https://www.flickr.com/photos/8047705@N02/5463789169/in/photolist-9jPmax-9DDYgg-nuZtxE-qhFho-ejtid-6c7xeY-ze5cZ-nmKFqr-b1AcSK-9FVdCx-b1AhTZ-b1A75H-dZkGN1-nB5JZn-qhFau-2DKnb-f4N574-cBqwpb-dD7wZD-5cTVaL-zCEF8-9F679e-ogasoM-aDd8E1-9bBdFG-4LeSwt-aDd8s9-J1y1LF-aD9gKD-Curwec-8MGTB8-9cP1vZ-dfCV95-HHBNMQ-oqYWpW-CUmf1-6Skbcz-5SptQa-5qD4Md-4mtSKC-eftGLt-8P76u6-oHB4w9-F8KKsW-7pZA7u-9XRFMM-tPAFC-7xYyVJ-6YmJXf-9BVWnR'><img src='/assets/sorry.jpg' width='300' height='199'/></a><p class='caption'>Go back to start</p></td></tr></table>
 
-<p>Moreover, from an engineering standpoint this is a terrible idea.  Everyone likes doing greenfield work because it&#39;s new and exciting, but you have to ask, why the engineers want to avoid maintaining and refactoring the existing product?  Is the codebase such a spaghetti mess that it&#39;s too difficult to add anything, so the team wants to try again from scratch?  <strong>Who the hell do you think made that dumpster fire in the first place?</strong>  Why on earth would that same team suddenly do it right the second time around?  Especially when under the pressure of &quot;we have to get caught up&quot; and the time-pressure of the company&#39;s primary software products being frozen or at least slowed while the team develops it?  It&#39;s even MORE likely that corners will be cut and quality will suffer, not less likely.</p>
+<p>Moreover, from an engineering standpoint this is a terrible idea.  Everyone likes doing greenfield work because it&#39;s new and exciting, but you have to ask, why do the engineers want to avoid maintaining and refactoring the existing product?  Is the codebase such a spaghetti mess that it&#39;s too difficult to add anything, so the team wants to try again from scratch?  <strong>Who the hell do you think made that dumpster fire in the first place?</strong>  Why on earth would that same team suddenly do it right the second time around?  Especially when under the pressure of &quot;we have to get caught up&quot; and the time-pressure of the company&#39;s primary software products being frozen or at least slowed while the team develops it?  It&#39;s even MORE likely that corners will be cut and quality will suffer, not less likely.</p>
 
 <p>Refactoring the codebase is almost always the right way to go.  Take the awful parts that you want to rewrite and slowly but surely refactor them into the clean codebase you want.  It might take overall longer to be &quot;done&quot; with the effort, but the entire time it&#39;s happening the main product is still in active development without the &quot;two cars racing&quot; situation.  Refactoring code is, though slower, also easier to do than rewriting it from scratch, because you&#39;re able to do it in small steps with (hopefully) the support of a huge test suite to ensure you don&#39;t break anything.  <strong>Since refactoring is easier than rewriting, any team that says &quot;it&#39;s too hard&quot; to the idea of refactoring the existing codebase instead of rewriting it is inherently not good enough to do the rewrite.</strong>  The end result will actually be worse.</p>
 
