@@ -84,7 +84,7 @@
 		<p class="meta">
 		<b title="work, career, and principles">PROGRAMMING</b> - 
 		June 15, 2016 - 
-		4,585 words -
+		4,586 words -
 		<a href="/2016/06/15/guidingprinciples-part1/#disqus_thread">Comments</a>
 		</p>
 	</div>
@@ -166,7 +166,7 @@
 
 <h2 id=toc-inventing-languages>Inventing Languages</h2>
 
-<p>I&#39;d like to add that &quot;writing your own programming language&quot; should be worth four innovation tokens all on its own.  If you develop an in-house programming language, you&#39;d better have a staggeringly good reason.  Good programming languages are hard to write, and unless you have a number of Computer Science PhDs with specializations in Programming Language Design and Implementation on the team, chances are all you&#39;re actually doing is writing an overly complex DSL.  The kind of thing whose compiler/transpiler/transliterator fails with &quot;syntax error&quot; in the event of a mistyped character, rather than a helpful diagnostic and a line number.</p>
+<p>I&#39;d like to add that &quot;writing your own programming language&quot; should be worth four innovation tokens all on its own.  If you develop an in-house programming language, you&#39;d better have a staggeringly good reason.  Good programming languages are hard to write, and unless you have a number of Computer Science PhDs with specializations in Programming Language Design and Implementation on the team, chances are all you&#39;re actually doing is writing an overly complex DSL.  The kind of thing whose compiler/transpiler/transliterator fails with &quot;syntax error somewhere&quot; in the event of a mistyped character, rather than a helpful diagnostic and a line number.</p>
 
 <p>Don&#39;t create your own programming language.  Your language will be weak, your tools will be poor, and language support within other tools will be nonexistent.  You probably aren&#39;t going to properly staff the design and support of the language you&#39;ve created.  Unless you have an entire team of people devoted exclusively to maintaining that language and writing Eclipse plugins for it or whatnot, your technical debt is so crater-like that you can&#39;t even tell you&#39;re standing in a hole because it extends past the horizon.  Whatever huge productivity gains you think your new language is offering your team, they&#39;ll be canceled out and then some.</p>
 
@@ -198,7 +198,7 @@
 
 <p>Was it clever?  Absolutely.  <strong>But <a href="https://simpleprogrammer.com/2015/03/16/11-rules-all-programmers-should-live-by/">clever is the enemy of clear</a>.</strong></p>
 
-<p>I try not to ever write comments in my code.  Comments should never be used to explain how something works, that should be apparent from the code itself.  And if that means adding a few temporary variables so that their names can be helpful (or inspected while debugging), or having some comically long method names, so be it.  Often people say that comments can be used to explain &quot;why&quot; something works instead, but frankly I find that a few unit tests for the code in question will do a better job of explaining the why than a comment ever could - at the very least, take the comment you&#39;d write explaining why and make it the name of the test.  <strong>Code is for <em>what</em>, tests are for <em>why</em>.  Comments are for jokes.</strong></p>
+<p>I try not to ever write comments in my code.  Comments should not be used to explain how something works, that should be apparent from the code itself.  And if that means adding a few temporary variables so that their names can be helpful (or inspected while debugging), or having some comically long method names, so be it.  Often people say that comments can be used to explain &quot;why&quot; something works instead, but frankly I find that a few unit tests for the code in question will do a better job of explaining the why than a comment ever could - at the very least, take the comment you&#39;d write explaining why and make it the name of the test.  <strong>Code is for <em>what</em>, tests are for <em>why</em>.  Comments are for jokes.</strong></p>
 
 <p>Obviously it&#39;s difficult not to be proud of yourself when you&#39;ve gotten some long method down to a one-liner (even if it is one incredibly long line) or invented some massively clever solution to a problem.  And indeed, sometimes these clever tricks really are necessary to get the required performance out of a system (as in the Quake III square root example).  That&#39;s why I&#39;ve found this heuristic so handy (hattip to <a href="http://neidetcher.com/">Demian Neidetcher</a>):</p>
 
