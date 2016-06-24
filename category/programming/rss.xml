@@ -617,94 +617,6 @@ class ExampleControllerSpec extends Specification {
 			</item>
 		
 			<item>
-				<title>The Worst Programming Interview Question</title>
-				<description>&lt;p&gt;Years ago, I wrote about a &lt;a href=&quot;http://www.nomachetejuggling.com/2008/12/11/my-least-favorite-interview-question/&quot;&gt;particular type of interview question&lt;/a&gt; that I despise.  Today I&amp;#39;d like to discuss a much more specific question, rather than a type.  I&amp;#39;ve never been asked this question myself, but I have seen it asked in an actual interview, and I officially nominate it as the worst question I&amp;#39;ve ever heard in an interview.&lt;/p&gt;
-
-&lt;p&gt;I think this question perfectly represents everything that can go wrong with an interview question, so I&amp;#39;d like to discuss it here to explain why it&amp;#39;s almost hilariously awful as an interview question:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;Write a function that can detect a cycle in a linked list.&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Seems like your basic algorithm coding question at first, right?  Hop up and write the function on the white board; totally reasonable, right?  Except it&amp;#39;s not, it&amp;#39;s brain-meltingly terrible.  Let&amp;#39;s break it down.&lt;/p&gt;
-
-&lt;!-- more --&gt;
-
-&lt;h1&gt;1. It&amp;#39;s completely inappropriate&lt;/h1&gt;
-
-&lt;p&gt;This is a job interview.  You have a dynamic where you&amp;#39;re talking to someone who is interviewing for a job.  It&amp;#39;s naturally nerve-wracking, and &amp;quot;puzzler&amp;quot; questions where there&amp;#39;s some &amp;quot;a-ha&amp;quot; moment of clarity are the worst kind of programming questions you can ask.  If you don&amp;#39;t have the a-ha moment in the interview, you won&amp;#39;t get it, and a good chunk of your brain will be devoted to thinking &amp;quot;oh shit I&amp;#39;m blowing this interview&amp;quot; rather than focusing on the question at hand.&lt;/p&gt;
-
-&lt;p&gt;People like to pose puzzlers to &amp;quot;see how people think&amp;quot; but that&amp;#39;s nonsense in the case of puzzler questions.  &lt;strong&gt;You can&amp;#39;t reason your way through a puzzler, that&amp;#39;s why it&amp;#39;s a puzzler&lt;/strong&gt;.  You just have to hope you have the a-ha moment.  Sometimes I&amp;#39;ve heard people like to &amp;quot;see how people handle pressure&amp;quot; but they&amp;#39;re &lt;em&gt;already&lt;/em&gt; in an interview, the pressure is already there.&lt;/p&gt;
-
-&lt;p&gt;Asking puzzler questions is a complete waste of time, &lt;strong&gt;all you&amp;#39;re doing is testing if someone has seen your particular puzzler before or not&lt;/strong&gt;.  You may also be testing their acting chops, as the person who has heard the question before pretends it&amp;#39;s their first time hearing it, and they feign reasoning their way through the problem to arrive at the answer they already know as soon as the question comes out of your mouth.&lt;/p&gt;
-
-&lt;p&gt;This particular problem is the worst offender in this regard.  Why, you ask?  Well, imagine if someone truly &lt;em&gt;was&lt;/em&gt; hearing this problem for the first time, and you&amp;#39;re expecting them to reason their way to the answer. &lt;/p&gt;
-
-&lt;p&gt;In this case, the generally &amp;quot;correct&amp;quot; answer is a tortoise-and-hare algorithm, where you have two pointers at the head of your linked list, one traverses the list two nodes at a time, and one traverses the list one node at a time; if ever the pointers point to the same node, you have a cycle somewhere.&lt;/p&gt;
-
-&lt;p&gt;Sure, there are easier answers, like marking each node with some kind of &amp;#39;seen&amp;#39; boolean, or traversing the list from each node to see if you come back to it, or duplicating the list into a hash and looking for a collision, but as soon as you provide those answers, the interviewer will add restrictions saying to use less memory or use less time or don&amp;#39;t modify the underlying data structure.  The only one that makes the question &amp;quot;stop&amp;quot; is the tortoise-and-hare algorithm.&lt;/p&gt;
-
-&lt;p&gt;Is it reasonable to expect someone to think of this, from scratch?  After all, you&amp;#39;re pretty confident you could think of it, right?  Well, the Linked List as a data structure was &lt;a href=&quot;http://en.wikipedia.org/wiki/Linked_list#History&quot;&gt;discovered by Allen Newell, Cliff Shaw and Herbert A. Simon&lt;/a&gt; in 1955.  The &amp;quot;correct&amp;quot; cycle detection algorithm for a Linked List is named &amp;quot;Floyd&amp;#39;s cycle-finding algorithm&amp;quot; in honor of its inventor, Robert W. Floyd, who discovered it in &lt;a href=&quot;http://dl.acm.org/citation.cfm?doid=321420.321422&quot;&gt;a 1967 paper&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Between 1955 and 1967, the problem of &amp;quot;how do we determine if there is a cycle in a linked list without modifying the list&amp;quot; was an open problem.  Meaning, any number of PhD candidates in Mathematics or Computer Science could have written about it as part of their dissertation.  With all of those hundreds and hundreds of minds, &lt;strong&gt;this problem remained open for 12 years&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;Do you honestly think you could, in a twenty minute interview, from scratch, come up with the solution to a problem that remained open in the field for 12 years, all under a pressure far more intense than any academic?  Seems pretty damn unlikely, &lt;strong&gt;the only reason you think you could do so is that you&amp;#39;ve heard the answer before, and it seems obvious and simple in retrospect&lt;/strong&gt;.  In other words, &amp;quot;a-ha!&amp;quot;&lt;/p&gt;
-
-&lt;h1&gt;2. It&amp;#39;s completely disconnected from reality&lt;/h1&gt;
-
-&lt;p&gt;As if the above weren&amp;#39;t reason enough for this to be a laughably bad question, you have to also ask yourself, is this even a good question for determining if this engineer has the skills they need for the job?&lt;/p&gt;
-
-&lt;p&gt;Let me challenge the question altogether: &lt;strong&gt;why would you ever find yourself in a situation where your linked list has a cycle?&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;In the real-world, what could lead to this?  I don&amp;#39;t mean mechanically, obviously you get a cycle if you have a node whose &amp;quot;next&amp;quot; pointer is upstream of that node.  I mean, how does it actually happen in real life?&lt;/p&gt;
-
-&lt;p&gt;See, a Linked List is a data structure, it&amp;#39;s not an abstract data type.  Generally you wouldn&amp;#39;t be making a &lt;code&gt;LinkedList&lt;/code&gt; class, you&amp;#39;d be making a &lt;code&gt;Stack&lt;/code&gt; or a &lt;code&gt;Queue&lt;/code&gt; or something like that.  Those would be the classes you&amp;#39;re writing and exposing to a consumer of your class, and it would just so happen that your internal &lt;em&gt;implementation&lt;/em&gt; of those types is a linked list.  So what are the methods on your &lt;code&gt;Stack&lt;/code&gt; class, for example?  &lt;code&gt;push&lt;/code&gt;, &lt;code&gt;pop&lt;/code&gt;, &lt;code&gt;peek&lt;/code&gt;, etc?  Well, if someone is using those methods, how on earth are you going to get a cycle in your list?  They&amp;#39;re not messing with the &lt;code&gt;next&lt;/code&gt; or &lt;code&gt;prev&lt;/code&gt; pointers, they&amp;#39;re just pushing and popping with objects of some type.&lt;/p&gt;
-
-&lt;p&gt;Even if you wrote a &lt;code&gt;LinkedList&lt;/code&gt; class for some library, you still can&amp;#39;t find yourself in this situation.  Take a look at &lt;a href=&quot;http://docs.oracle.com/javase/7/docs/api/java/util/LinkedList.html&quot;&gt;Java&amp;#39;s &lt;code&gt;LinkedList&lt;/code&gt;&lt;/a&gt; class.  There is no way to manipulate the pointers for the node&amp;#39;s next or previous references.  You can get the first, or get the last, or add an object to a specific place in the list, or remove an object by index or by value.  &lt;/p&gt;
-
-&lt;p&gt;Take a look at the Java source code and you&amp;#39;ll find those next and previous pointers are here, inside of &lt;code&gt;LinkedList&lt;/code&gt;:&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;    private static class Entry &amp;lt;E&amp;gt; {
-      E element;
-
-      java.util.LinkedList.Entry&amp;lt;E&amp;gt; next;
-      java.util.LinkedList.Entry&amp;lt;E&amp;gt; previous;
-
-      Entry(E e, java.util.LinkedList.Entry&amp;lt;E&amp;gt; entry, java.util.LinkedList.Entry&amp;lt;E&amp;gt; entry1) { /* compiled code */ }
-    }
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;This is a &lt;code&gt;private static&lt;/code&gt; class, inside of &lt;code&gt;LinkedList&lt;/code&gt;.  You can&amp;#39;t instantiate a &lt;code&gt;LinkedList.Entry&lt;/code&gt;.  You have no way to manipulate these &lt;code&gt;next&lt;/code&gt; or &lt;code&gt;previous&lt;/code&gt; pointers.  Because those things are the state of the list, and &lt;strong&gt;&lt;code&gt;LinkedList&lt;/code&gt; encapsulates the behaviors with the state inside of the class,&lt;/strong&gt; like it ought to.&lt;/p&gt;
-
-&lt;p&gt;If your &lt;code&gt;LinkedList&lt;/code&gt; class were vulnerable to any kind of cycle creation, you&amp;#39;ve done a poor job of encapsulation.  You either have a design failure in your interface, or a bug in your implementation.  In either case, your time would be better spent addressing your error rather than coding up some kind of cycle detection mechanism.&lt;/p&gt;
-
-&lt;p&gt;Here&amp;#39;s the only cycle detector you&amp;#39;ll ever need to write for your &lt;code&gt;LinkedList&lt;/code&gt;:&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;public class LinkedList {
-    public boolean containsCycle() {
-        return false;
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;There is no real situation in which this method&amp;#39;s return value would be different than one that uses a tortoise-and-hare algorithm.&lt;/p&gt;
-
-&lt;p&gt;In the real world of actual coding, you&amp;#39;d very rarely find yourself ever needing to code up a linked list implementation from scratch, but if you did, you&amp;#39;d certainly have no reason to expose methods that would allow someone using your code to create a cycle.  The only way it could be done is through intentional, malicious metaprogramming or reflection of some kind, which could just as easily bypass your &lt;code&gt;detectCycle&lt;/code&gt; method anyway.&lt;/p&gt;
-
-&lt;h1&gt;Conclusion&lt;/h1&gt;
-
-&lt;p&gt;Many interview questions fail for one of these two reasons.  Either the question is too much of a puzzler to reasonably be solved in an interview setting, or it&amp;#39;s so far removed from the skillset required to do the job (&amp;quot;how would you move Mt. Fuji&amp;quot;) that it&amp;#39;s useless.&lt;/p&gt;
-
-&lt;p&gt;This question, hilariously, suffers from both of these major problems, and it suffers from each about as hard as it possibly could.&lt;/p&gt;
-
-&lt;p&gt;If you&amp;#39;re asking this question, everyone who has ever answered it to your satisfaction was merely proving they have good memory recall abilities from their Computer Science curriculum, nothing more.  Folks you turned away from the job for failing to answer this question may have been more qualified than you realize, and your company maybe should have turned you away instead.&lt;/p&gt;
-
-&lt;p&gt;Linked List cycle detection: just don&amp;#39;t ask it.&lt;/p&gt;
-
-&lt;p&gt;Update: One commenter pointed out that if the data structure in question was a digraph where every node has an out degree of at most one, the question still applies.  Totally valid point, in that case you &lt;strong&gt;are&lt;/strong&gt; exposing methods that allow consumers of your structure to manually set the pointers.  That&amp;#39;s a far more reasonable question but, again, I think you&amp;#39;re still just asking someone how well they recall their computer science classes, or you&amp;#39;re asking an unreasonable question in an interview, unless you&amp;#39;re willing to accept answers with worse runtime or space complexity than the tortoise-and-hare algorithm.&lt;/p&gt;
-</description>
-				<pubDate>Tue, 24 Jun 2014 00:00:00 -0400</pubDate>
-				<link>http://www.nomachetejuggling.com/2014/06/24/the-worst-programming-interview-question/</link>
-				<guid isPermaLink="true">http://www.nomachetejuggling.com/2014/06/24/the-worst-programming-interview-question/</guid>
-			</item>
-		
-			<item>
 				<title>Top 10 Career-Changing Programming Books</title>
 				<description>&lt;p&gt;When I graduated with a Computer Science degree ten years ago, I was excited to dive into the world of professional programming.  I had done well in school, and I thought I was completely ready to be employed doing my dream job: writing code.  What I discovered in my very first interview, however, was that I was massively underprepared to be an actual professional programmer.  I knew all about data structures and algorithms, but nothing about how actual professional, &amp;quot;enterprise&amp;quot; software was written.  I was lucky to find a job at a place willing to take a chance on me, and proceeded to learn as much as I could as quickly as I could to make up for my deficiencies.  This involved reading a LOT of books.&lt;/p&gt;
 
@@ -1126,6 +1038,27 @@ class ExampleControllerSpec extends Specification {
 				<pubDate>Sat, 02 Feb 2013 00:00:00 -0500</pubDate>
 				<link>http://www.nomachetejuggling.com/2013/02/02/brief-thoughts-on-software-craftsmanship/</link>
 				<guid isPermaLink="true">http://www.nomachetejuggling.com/2013/02/02/brief-thoughts-on-software-craftsmanship/</guid>
+			</item>
+		
+			<item>
+				<title>A Stroll Through the Complexity Zoo</title>
+				<description>&lt;p&gt;This Fall, I took a course on Computational Complexity.  I&amp;#39;ve been exposed to complexity in Computer Science before, but as an undergrad it rarely went beyond discussing P, NP, and NP-Complete.  While I enjoyed the class a great deal, I was slightly disappointed that we mostly studied some of the space complexity classes like PSPACE as well as went much, much deeper in depth on P, NP, and NP-Complete, without covering many of the other complexity classes, of which there are lots.&lt;/p&gt;
+
+&lt;p&gt;For a final paper, we had to pick a topic of our own choosing in Complexity Theory and research it on our own.  For my topic, I choose to explore a bunch of the other important classes in complexity theory.  I had never had any exposure to any of these classes before, so I really enjoyed this project, though I was unable to cover as many classes as I&amp;#39;d have liked, and none of them in as much depth as I was hoping.&lt;/p&gt;
+
+&lt;table class='image alignright' width='306'&gt;&lt;tr&gt;&lt;td&gt;&lt;a href='http://jeremykun.wordpress.com/2012/02/29/other-complexity-classes/'&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/chp_venn_diagram-300x270.jpg&quot; width='300' height='270'/&gt;&lt;/a&gt;&lt;p class='caption'&gt;Complexity Classes, from Math ∩ Programming&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;Nonetheless, I&amp;#39;m pretty happy with my paper, which provides an undergraduate-level explanation of 26 other complexity classes, based off &lt;a href=&quot;http://complexityzoo.uwaterloo.ca/Complexity_Zoo&quot;&gt;The Complexity Zoo&lt;/a&gt;, kept by MIT professor Scott Aaronson.  I tried to boil these classes down to the bare essentials and explain them with examples in plain english as much as I could.  The goal of the paper is to expose those new to Complexity Theory or early in their Computer Science careers to a handful of interesting classes and explain how they relate to each other, the more common classes, and of course the $$P =? NP$$ question.&lt;/p&gt;
+
+&lt;p&gt;You can download the paper &lt;strong&gt;&lt;a href=&quot;http://www.nomachetejuggling.com/files/complexity_zoo.pdf&quot;&gt;here&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Please note, this paper has not been peer-reviewed in any fashion.  It has not been (nor will it be) submitted to any academic journals, and it makes no novel contributions to the field.  It&amp;#39;s purely an overview of other classes, a literature review at best.  I post it here in case others might find it interesting or informative, but it is &lt;strong&gt;not to be cited&lt;/strong&gt;.  If you somehow find something valuable for your own research, I suggest you follow the citations in the paper and look up the references yourself, then use those as a source.&lt;/p&gt;
+
+&lt;p&gt;I also cannot stress enough how incomplete this paper is.  It only covers 26 classes, leaving out over 450.  There is a great deal of information about these classes as well as those not covered, which I do not touch upon at all.  The paper is intended as an introduction to these complexity classes, so don&amp;#39;t be surprised if things are left out.  I tried my best to avoid errors, and I had a few corrections issued by my professor where my language was misleading (for example, claiming a problem was not in $$NP$$ when in fact it was simply not &lt;strong&gt;known&lt;/strong&gt; to be in $$NP$$), but if you find something confusing or surprising, I suggest using the references provided, as this paper may have some mistakes.  If you find any, feel free to leave a comment and I&amp;#39;ll correct them.&lt;/p&gt;
+</description>
+				<pubDate>Sat, 15 Dec 2012 00:00:00 -0500</pubDate>
+				<link>http://www.nomachetejuggling.com/2012/12/15/a-stroll-through-the-complexity-zoo/</link>
+				<guid isPermaLink="true">http://www.nomachetejuggling.com/2012/12/15/a-stroll-through-the-complexity-zoo/</guid>
 			</item>
 		
 	</channel>

@@ -82,33 +82,6 @@
 	
 		<div class="post-preview">
 		  	<div class="postheader">
-  	<h1 class="posttitle"><a href="/2011/05/31/leaving-rally/">Leaving Rally</a></h1>
-  	<div class="postmeta">
-		<p class="meta">
-		<b title="career">LIFE</b> - 
-		May 31, 2011 - 
-		996 words -
-		<a href="/2011/05/31/leaving-rally/#disqus_thread">Comments</a>
-		</p>
-	</div>
-</div>
-		  	<div class="postentry">
-				<p>Today was my last day at <a href="http://www.rallydev.com">Rally Software</a>.  In two weeks, I will be starting a new job, working on a variety of web services, mostly with Java and Groovy.</p>
-
-<table class='image alignright' width='306'><tr><td><img src='/assets/IMG_20110531_104216-300x224.jpg' width='300' height='224'/></td></tr></table>
-
-<p>Leaving Rally was tough for me.  It&#39;s easy to leave a job when I&#39;m unhappy, or irritated with management, or tired of a project, or if I&#39;m just not learning anything new.  But none of these were the case with Rally.  I&#39;m leaving not because anything is wrong with Rally, but because there&#39;s simply a better opportunity for me elsewhere.  Time Warner is in downtown Denver (right near campus), they have a great benefits and tuition reimbursement program, they&#39;re working with technology I want to know more about, and their staff reads like a fantasy league of my career (I already know half the developers from other jobs).  The switch just made sense for me, but it wasn&#39;t easy to leave.</p>
-
-<p>When I started at Rally nearly 3 years ago, it was a company that was struggling.  Not financially, but technologically.  For a long time, the company had done very well spreading agile to various customers, led by a product that was having features added to it at a breakneck pace.  <strong>From the outside, the company seemed to have things together, but internally the codebase was a monument of technical debt and hasty decisions.</strong></p>
-
-<p>The company had survived in &quot;startup mode&quot; for years, but the team was starting to buckle under the pressure of technical debt.  Feature development was slowing, and external bug reports were flooding in. Things weren&#39;t looking good.</p>
-
-        <p><a href="/2011/05/31/leaving-rally/">Read the rest of "Leaving Rally" &raquo;</a></p>
-			</div>
-		</div>
-	
-		<div class="post-preview">
-		  	<div class="postheader">
   	<h1 class="posttitle"><a href="/2011/05/27/a-different-kind-of-technical-interview/">A Different Kind of Technical Interview</a></h1>
   	<div class="postmeta">
 		<p class="meta">
@@ -340,6 +313,36 @@
 			</div>
 		</div>
 	
+		<div class="post-preview">
+		  	<div class="postheader">
+  	<h1 class="posttitle"><a href="/2009/11/17/units-are-not-classes-improving-unit-testing-by-removing-artificial-boundaries/">Units are Not Classes: Improving Unit Testing By Removing Artificial Boundaries</a></h1>
+  	<div class="postmeta">
+		<p class="meta">
+		<b title="Automated Testing, bdd, code, crossposted, java, junit, mocking, mockito, Refactoring, and testing">PROGRAMMING</b> - 
+		November 17, 2009 - 
+		1,880 words -
+		<a href="/2009/11/17/units-are-not-classes-improving-unit-testing-by-removing-artificial-boundaries/#disqus_thread">Comments</a>
+		</p>
+	</div>
+</div>
+		  	<div class="postentry">
+				<p>Many developers think of unit tests as tests that test a single class.  In fact, I myself once thought this way.  If I wanted to write unit tests for a two-class system in which a class used another class, I&#39;d write two unit tests.  After all, if I created instances of both classes in my test, that wouldn&#39;t <strong>really</strong> be a unit test, would it?</p>
+
+<p>In recent years, I have revised my stance on this matter.  This distinction between what is and is not a unit test is one I no longer draw in the same way.</p>
+
+<p>Unit Tests need to be:</p>
+
+<ul>
+<li><strong>Fast</strong>: Unit Tests should never run so slowly that they discourage developers from running them all the time.</li>
+<li><strong>Focused</strong>: Unit Tests should focus on a single area so that they can isolate problems to that area when they fail.</li>
+</ul>
+
+<p>Once upon a time, I thought &#8216;focused&#39; meant that it should be focused on a single class.  Instead, it should focus on an area, but that area can include multiple classes.</p>
+
+        <p><a href="/2009/11/17/units-are-not-classes-improving-unit-testing-by-removing-artificial-boundaries/">Read the rest of "Units are Not Classes: Improving Unit Testing By Removing Artificial Boundaries" &raquo;</a></p>
+			</div>
+		</div>
+	
 	</div>
 </div>
 
@@ -384,9 +387,9 @@
                 
                   <li><a href="/2014/07/04/uploading-a-jekyll-site-to-rackspace-cloudfiles/">Uploading a Jekyll Site to Rackspace Cloudfiles</a></li>
                 
-                  <li><a href="/2014/06/24/the-worst-programming-interview-question/">The Worst Programming Interview Question</a></li>
-                
                   <li><a href="/2014/02/05/top-10-career-changing-programming-books/">Top 10 Career-Changing Programming Books</a></li>
+                
+                  <li><a href="/2013/12/17/centurylink-traps-and-caps/">CenturyLink: Traps and Caps</a></li>
                 
             </ul>
           </li> <!-- /recent-posts -->
@@ -414,12 +417,8 @@
                     ruby
                   </a>
                 
-                  <a href="/tag/agile" style="font-size: 9pt">
+                  <a href="/tag/agile" style="font-size: 10pt">
                     agile
-                  </a>
-                
-                  <a href="/tag/interview" style="font-size: 8pt">
-                    interview
                   </a>
                 
                   <a href="/tag/book" style="font-size: 8pt">
@@ -448,6 +447,10 @@
                 
                   <a href="/tag/class" style="font-size: 8pt">
                     class
+                  </a>
+                
+                  <a href="/tag/interview" style="font-size: 8pt">
+                    interview
                   </a>
                 
                   <a href="/tag/review" style="font-size: 8pt">

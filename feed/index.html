@@ -1031,94 +1031,6 @@ class ExampleControllerSpec extends Specification {
 			</item>
 		
 			<item>
-				<title>The Worst Programming Interview Question</title>
-				<description>&lt;p&gt;Years ago, I wrote about a &lt;a href=&quot;http://www.nomachetejuggling.com/2008/12/11/my-least-favorite-interview-question/&quot;&gt;particular type of interview question&lt;/a&gt; that I despise.  Today I&amp;#39;d like to discuss a much more specific question, rather than a type.  I&amp;#39;ve never been asked this question myself, but I have seen it asked in an actual interview, and I officially nominate it as the worst question I&amp;#39;ve ever heard in an interview.&lt;/p&gt;
-
-&lt;p&gt;I think this question perfectly represents everything that can go wrong with an interview question, so I&amp;#39;d like to discuss it here to explain why it&amp;#39;s almost hilariously awful as an interview question:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;Write a function that can detect a cycle in a linked list.&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Seems like your basic algorithm coding question at first, right?  Hop up and write the function on the white board; totally reasonable, right?  Except it&amp;#39;s not, it&amp;#39;s brain-meltingly terrible.  Let&amp;#39;s break it down.&lt;/p&gt;
-
-&lt;!-- more --&gt;
-
-&lt;h1&gt;1. It&amp;#39;s completely inappropriate&lt;/h1&gt;
-
-&lt;p&gt;This is a job interview.  You have a dynamic where you&amp;#39;re talking to someone who is interviewing for a job.  It&amp;#39;s naturally nerve-wracking, and &amp;quot;puzzler&amp;quot; questions where there&amp;#39;s some &amp;quot;a-ha&amp;quot; moment of clarity are the worst kind of programming questions you can ask.  If you don&amp;#39;t have the a-ha moment in the interview, you won&amp;#39;t get it, and a good chunk of your brain will be devoted to thinking &amp;quot;oh shit I&amp;#39;m blowing this interview&amp;quot; rather than focusing on the question at hand.&lt;/p&gt;
-
-&lt;p&gt;People like to pose puzzlers to &amp;quot;see how people think&amp;quot; but that&amp;#39;s nonsense in the case of puzzler questions.  &lt;strong&gt;You can&amp;#39;t reason your way through a puzzler, that&amp;#39;s why it&amp;#39;s a puzzler&lt;/strong&gt;.  You just have to hope you have the a-ha moment.  Sometimes I&amp;#39;ve heard people like to &amp;quot;see how people handle pressure&amp;quot; but they&amp;#39;re &lt;em&gt;already&lt;/em&gt; in an interview, the pressure is already there.&lt;/p&gt;
-
-&lt;p&gt;Asking puzzler questions is a complete waste of time, &lt;strong&gt;all you&amp;#39;re doing is testing if someone has seen your particular puzzler before or not&lt;/strong&gt;.  You may also be testing their acting chops, as the person who has heard the question before pretends it&amp;#39;s their first time hearing it, and they feign reasoning their way through the problem to arrive at the answer they already know as soon as the question comes out of your mouth.&lt;/p&gt;
-
-&lt;p&gt;This particular problem is the worst offender in this regard.  Why, you ask?  Well, imagine if someone truly &lt;em&gt;was&lt;/em&gt; hearing this problem for the first time, and you&amp;#39;re expecting them to reason their way to the answer. &lt;/p&gt;
-
-&lt;p&gt;In this case, the generally &amp;quot;correct&amp;quot; answer is a tortoise-and-hare algorithm, where you have two pointers at the head of your linked list, one traverses the list two nodes at a time, and one traverses the list one node at a time; if ever the pointers point to the same node, you have a cycle somewhere.&lt;/p&gt;
-
-&lt;p&gt;Sure, there are easier answers, like marking each node with some kind of &amp;#39;seen&amp;#39; boolean, or traversing the list from each node to see if you come back to it, or duplicating the list into a hash and looking for a collision, but as soon as you provide those answers, the interviewer will add restrictions saying to use less memory or use less time or don&amp;#39;t modify the underlying data structure.  The only one that makes the question &amp;quot;stop&amp;quot; is the tortoise-and-hare algorithm.&lt;/p&gt;
-
-&lt;p&gt;Is it reasonable to expect someone to think of this, from scratch?  After all, you&amp;#39;re pretty confident you could think of it, right?  Well, the Linked List as a data structure was &lt;a href=&quot;http://en.wikipedia.org/wiki/Linked_list#History&quot;&gt;discovered by Allen Newell, Cliff Shaw and Herbert A. Simon&lt;/a&gt; in 1955.  The &amp;quot;correct&amp;quot; cycle detection algorithm for a Linked List is named &amp;quot;Floyd&amp;#39;s cycle-finding algorithm&amp;quot; in honor of its inventor, Robert W. Floyd, who discovered it in &lt;a href=&quot;http://dl.acm.org/citation.cfm?doid=321420.321422&quot;&gt;a 1967 paper&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Between 1955 and 1967, the problem of &amp;quot;how do we determine if there is a cycle in a linked list without modifying the list&amp;quot; was an open problem.  Meaning, any number of PhD candidates in Mathematics or Computer Science could have written about it as part of their dissertation.  With all of those hundreds and hundreds of minds, &lt;strong&gt;this problem remained open for 12 years&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;Do you honestly think you could, in a twenty minute interview, from scratch, come up with the solution to a problem that remained open in the field for 12 years, all under a pressure far more intense than any academic?  Seems pretty damn unlikely, &lt;strong&gt;the only reason you think you could do so is that you&amp;#39;ve heard the answer before, and it seems obvious and simple in retrospect&lt;/strong&gt;.  In other words, &amp;quot;a-ha!&amp;quot;&lt;/p&gt;
-
-&lt;h1&gt;2. It&amp;#39;s completely disconnected from reality&lt;/h1&gt;
-
-&lt;p&gt;As if the above weren&amp;#39;t reason enough for this to be a laughably bad question, you have to also ask yourself, is this even a good question for determining if this engineer has the skills they need for the job?&lt;/p&gt;
-
-&lt;p&gt;Let me challenge the question altogether: &lt;strong&gt;why would you ever find yourself in a situation where your linked list has a cycle?&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;In the real-world, what could lead to this?  I don&amp;#39;t mean mechanically, obviously you get a cycle if you have a node whose &amp;quot;next&amp;quot; pointer is upstream of that node.  I mean, how does it actually happen in real life?&lt;/p&gt;
-
-&lt;p&gt;See, a Linked List is a data structure, it&amp;#39;s not an abstract data type.  Generally you wouldn&amp;#39;t be making a &lt;code&gt;LinkedList&lt;/code&gt; class, you&amp;#39;d be making a &lt;code&gt;Stack&lt;/code&gt; or a &lt;code&gt;Queue&lt;/code&gt; or something like that.  Those would be the classes you&amp;#39;re writing and exposing to a consumer of your class, and it would just so happen that your internal &lt;em&gt;implementation&lt;/em&gt; of those types is a linked list.  So what are the methods on your &lt;code&gt;Stack&lt;/code&gt; class, for example?  &lt;code&gt;push&lt;/code&gt;, &lt;code&gt;pop&lt;/code&gt;, &lt;code&gt;peek&lt;/code&gt;, etc?  Well, if someone is using those methods, how on earth are you going to get a cycle in your list?  They&amp;#39;re not messing with the &lt;code&gt;next&lt;/code&gt; or &lt;code&gt;prev&lt;/code&gt; pointers, they&amp;#39;re just pushing and popping with objects of some type.&lt;/p&gt;
-
-&lt;p&gt;Even if you wrote a &lt;code&gt;LinkedList&lt;/code&gt; class for some library, you still can&amp;#39;t find yourself in this situation.  Take a look at &lt;a href=&quot;http://docs.oracle.com/javase/7/docs/api/java/util/LinkedList.html&quot;&gt;Java&amp;#39;s &lt;code&gt;LinkedList&lt;/code&gt;&lt;/a&gt; class.  There is no way to manipulate the pointers for the node&amp;#39;s next or previous references.  You can get the first, or get the last, or add an object to a specific place in the list, or remove an object by index or by value.  &lt;/p&gt;
-
-&lt;p&gt;Take a look at the Java source code and you&amp;#39;ll find those next and previous pointers are here, inside of &lt;code&gt;LinkedList&lt;/code&gt;:&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;    private static class Entry &amp;lt;E&amp;gt; {
-      E element;
-
-      java.util.LinkedList.Entry&amp;lt;E&amp;gt; next;
-      java.util.LinkedList.Entry&amp;lt;E&amp;gt; previous;
-
-      Entry(E e, java.util.LinkedList.Entry&amp;lt;E&amp;gt; entry, java.util.LinkedList.Entry&amp;lt;E&amp;gt; entry1) { /* compiled code */ }
-    }
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;This is a &lt;code&gt;private static&lt;/code&gt; class, inside of &lt;code&gt;LinkedList&lt;/code&gt;.  You can&amp;#39;t instantiate a &lt;code&gt;LinkedList.Entry&lt;/code&gt;.  You have no way to manipulate these &lt;code&gt;next&lt;/code&gt; or &lt;code&gt;previous&lt;/code&gt; pointers.  Because those things are the state of the list, and &lt;strong&gt;&lt;code&gt;LinkedList&lt;/code&gt; encapsulates the behaviors with the state inside of the class,&lt;/strong&gt; like it ought to.&lt;/p&gt;
-
-&lt;p&gt;If your &lt;code&gt;LinkedList&lt;/code&gt; class were vulnerable to any kind of cycle creation, you&amp;#39;ve done a poor job of encapsulation.  You either have a design failure in your interface, or a bug in your implementation.  In either case, your time would be better spent addressing your error rather than coding up some kind of cycle detection mechanism.&lt;/p&gt;
-
-&lt;p&gt;Here&amp;#39;s the only cycle detector you&amp;#39;ll ever need to write for your &lt;code&gt;LinkedList&lt;/code&gt;:&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;public class LinkedList {
-    public boolean containsCycle() {
-        return false;
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;There is no real situation in which this method&amp;#39;s return value would be different than one that uses a tortoise-and-hare algorithm.&lt;/p&gt;
-
-&lt;p&gt;In the real world of actual coding, you&amp;#39;d very rarely find yourself ever needing to code up a linked list implementation from scratch, but if you did, you&amp;#39;d certainly have no reason to expose methods that would allow someone using your code to create a cycle.  The only way it could be done is through intentional, malicious metaprogramming or reflection of some kind, which could just as easily bypass your &lt;code&gt;detectCycle&lt;/code&gt; method anyway.&lt;/p&gt;
-
-&lt;h1&gt;Conclusion&lt;/h1&gt;
-
-&lt;p&gt;Many interview questions fail for one of these two reasons.  Either the question is too much of a puzzler to reasonably be solved in an interview setting, or it&amp;#39;s so far removed from the skillset required to do the job (&amp;quot;how would you move Mt. Fuji&amp;quot;) that it&amp;#39;s useless.&lt;/p&gt;
-
-&lt;p&gt;This question, hilariously, suffers from both of these major problems, and it suffers from each about as hard as it possibly could.&lt;/p&gt;
-
-&lt;p&gt;If you&amp;#39;re asking this question, everyone who has ever answered it to your satisfaction was merely proving they have good memory recall abilities from their Computer Science curriculum, nothing more.  Folks you turned away from the job for failing to answer this question may have been more qualified than you realize, and your company maybe should have turned you away instead.&lt;/p&gt;
-
-&lt;p&gt;Linked List cycle detection: just don&amp;#39;t ask it.&lt;/p&gt;
-
-&lt;p&gt;Update: One commenter pointed out that if the data structure in question was a digraph where every node has an out degree of at most one, the question still applies.  Totally valid point, in that case you &lt;strong&gt;are&lt;/strong&gt; exposing methods that allow consumers of your structure to manually set the pointers.  That&amp;#39;s a far more reasonable question but, again, I think you&amp;#39;re still just asking someone how well they recall their computer science classes, or you&amp;#39;re asking an unreasonable question in an interview, unless you&amp;#39;re willing to accept answers with worse runtime or space complexity than the tortoise-and-hare algorithm.&lt;/p&gt;
-</description>
-				<pubDate>Tue, 24 Jun 2014 00:00:00 -0400</pubDate>
-				<link>http://www.nomachetejuggling.com/2014/06/24/the-worst-programming-interview-question/</link>
-				<guid isPermaLink="true">http://www.nomachetejuggling.com/2014/06/24/the-worst-programming-interview-question/</guid>
-			</item>
-		
-			<item>
 				<title>Top 10 Career-Changing Programming Books</title>
 				<description>&lt;p&gt;When I graduated with a Computer Science degree ten years ago, I was excited to dive into the world of professional programming.  I had done well in school, and I thought I was completely ready to be employed doing my dream job: writing code.  What I discovered in my very first interview, however, was that I was massively underprepared to be an actual professional programmer.  I knew all about data structures and algorithms, but nothing about how actual professional, &amp;quot;enterprise&amp;quot; software was written.  I was lucky to find a job at a place willing to take a chance on me, and proceeded to learn as much as I could as quickly as I could to make up for my deficiencies.  This involved reading a LOT of books.&lt;/p&gt;
 
@@ -1290,6 +1202,156 @@ class ExampleControllerSpec extends Specification {
 				<pubDate>Wed, 05 Feb 2014 00:00:00 -0500</pubDate>
 				<link>http://www.nomachetejuggling.com/2014/02/05/top-10-career-changing-programming-books/</link>
 				<guid isPermaLink="true">http://www.nomachetejuggling.com/2014/02/05/top-10-career-changing-programming-books/</guid>
+			</item>
+		
+			<item>
+				<title>CenturyLink: Traps and Caps</title>
+				<description>&lt;p&gt;&lt;em&gt;TL;DR: After a decade of service, CenturyLink decided I wasn&amp;#39;t worth keeping as a customer, so I switched to Comcast Business Internet.  Even if CenturyLink tells you that you have no data caps, you do.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;When I first moved to Colorado nearly a decade ago, I signed up for Comcast&amp;#39;s Residential high-speed internet service, and I hated it.  I had to reset my cable modem once every week because it would stop working properly, and my internet noticeably slowed down when people would get home from school/work in my apartment complex.&lt;/p&gt;
+
+&lt;p&gt;I did some research and determined that, for the kinds of internet speeds being offered at the time (around 1-5Mbps down), Qwest&amp;#39;s DSL had similar prices to Comcast.  Additionally, because it was DSL, I could use my own Netgear router that had a DSL modem built in, and I wouldn&amp;#39;t have to mess with company equipment.  Also, DSL&amp;#39;s speed varies based on your distance to a hub, not based on how many people are currently using it.  I thought I could avoid both of my major problems by switching to DSL for about the same price, so I did, paying for the maximum possible speed at the time, 5Mbps.&lt;/p&gt;
+
+&lt;p&gt;For many years, Qwest was the only monthly bill I never had any trouble with.  Sometimes my cable would go out or look pixelated, sometimes my heating bill would be surprisingly massive, I was always having annoying issues with my cell phone service, but month after month, I never even noticed I had Qwest.  It was just there, it worked, it never went down, it never slowed down.  It was great.&lt;/p&gt;
+
+&lt;table class='image alignright' width='306'&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/Qwest-300x233.jpg&quot; width='300' height='233'/&gt;&lt;p class='caption'&gt;The good ol' days.&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;As the years went by, Cable speeds seemed to be improving at a faster rate than DSL speeds.  Nonetheless, I was happy with Qwest&amp;#39;s customer service and I had bad experiences with Cable, so I stuck to DSL.  One day, I got a mailer that 10Mbps was now available in my area.  I called Qwest that day and upgraded.  A year or so later, another mailer came with 20Mbps as an offer, and I upgraded immediately.  Each time the price difference was less than double for double the speed, so it seemed worth it.  I use a lot of internet, and I still missed my University&amp;#39;s T3 line.&lt;/p&gt;
+
+&lt;p&gt;Eventually Qwest became CenturyLink after an acquisition/merge.  I was a bit worried at first, I was happy with Qwest not only from a technical standpoint, but from a customer service standpoint.  Would this change?  I could always tell that Qwest representatives were especially friendly to me after they saw how long I&amp;#39;d been a customer, I feared I&amp;#39;d lose my &amp;quot;standing&amp;quot;.  But, CenturyLink one day sent me a letter offering &amp;quot;fiber&amp;quot; internet, 40Mbps down, 5Mbps up.  Upgrading bumped my price up to about $100 a month, which was a lot, but I really do use the everloving crap out of some internet, so I did it.&lt;/p&gt;
+
+&lt;p&gt;Many people on Twitter and Facebook asked me about internet providers, and I&amp;#39;d always talk up CenturyLink.  Fast internet, good customer service, no downtime.  And best of all, this was around the time that cable companies started introducing usage caps on their cable internet.  I found this maddening for both philosophical and technical reasons, but &lt;strong&gt;CenturyLink had no such caps, so I&amp;#39;d often argue it was a better choice for heavy internet users like myself&lt;/strong&gt;.  I know that I influenced a handful of people to get CenturyLink, or even in a few cases to switch to CenturyLink off Comcast.&lt;/p&gt;
+
+&lt;h1&gt;The First Warning&lt;/h1&gt;
+
+&lt;p&gt;In February of this past year, I was at work and decided I wanted something off my computer at home.  I tried to SSH into my workstation at home but was unable to connect.  This was strange.  Like I said earlier, CenturyLink never went down, so it made no sense to me.  Thinking maybe my workstation had crashed or died, I tried connecting to my home VPN, and that didn&amp;#39;t work either.  There are a few services I run on various machines that sync with centralized servers, such as &lt;a href=&quot;http://www.subsonic.org/pages/index.jsp&quot;&gt;Subsonic&lt;/a&gt; and &lt;a href=&quot;http://www.plexapp.com/&quot;&gt;Plex&lt;/a&gt;, so I tried connecting to them, only to discover they too had lost connectivity to my home.  I even tried pulling up my &lt;a href=&quot;https://nest.com/&quot;&gt;Nest&lt;/a&gt;, and saw that even that had lost connectivity to the outside world.&lt;/p&gt;
+
+&lt;p&gt;Here&amp;#39;s how much confidence I had in CenturyLink: &lt;strong&gt;I actually thought the power must be out.&lt;/strong&gt;  I went home at the end of the day, fully expecting to walk into a cold house that had been without power for a portion of the day, and assuming I&amp;#39;d have to go around resetting clocks and booting up computers.  But to my surprise, the house was fine.  All the clocks had the right time on them, the power had never gone out.  It was an internet problem.&lt;/p&gt;
+
+&lt;p&gt;I sat down at a computer and opened up a web browser.  Instead of my home page, I got this:&lt;/p&gt;
+
+&lt;table class='image aligncenter' width='586'&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/centurylinkuse-580x391.png&quot; width='580' height='391'/&gt;&lt;p class='caption'&gt;No 'net for you!&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;This was why none of my devices were connectable.  Every outgoing connection was pulled into some weird walled garden with this message, and I wasn&amp;#39;t able to get my internet back until I clicked Continue to acknowledge I&amp;#39;d gotten the warning.  &lt;/p&gt;
+
+&lt;p&gt;Like I said, and like I had told many people, CenturyLink &lt;strong&gt;had no usage caps&lt;/strong&gt;.  I had never heard of this Excessive Use Policy before, I didn&amp;#39;t remember getting a letter saying one had been implemented.  I used quite a lot more internet in January than usual, but I had no idea it was something I needed to curb. &lt;/p&gt;
+
+&lt;p&gt;Totally baffled by this, I called the number in the notice.  I asked what the policy was and the tech told me to hold on while she looked up my account.  Alright, I thought, this is good.  Generally as soon as they look up my account, they see how long I&amp;#39;ve had service with the company and their tone becomes super-friendly.  Sure enough, when she came back on the line, she was quite friendly.  &lt;strong&gt;She told me that, because I pay for the highest tier internet the company offers, 40Mbps down, that the Excessive Use Policy does not actually apply to me.&lt;/strong&gt;  She said the notice was in error, I wasn&amp;#39;t supposed to get it.  She said she&amp;#39;d flip a flag to make sure I never get another notice again.  I thanked her and asked her to please make a note of this conversation in my account, so that it would be there in case it happened again and I had to call back.  She said she would, but reiterated that it was not necessary, as it would not happen again.&lt;/p&gt;
+
+&lt;p&gt;When I first got the warning message, I posted it to my Twitter, expressing some irritation.  A bunch of friends asked me what happened, since I was always talking up CenturyLink.  After I got off the call, I posted again with an update, that it was all good, and I wasn&amp;#39;t even supposed to get the warning.  I publicly praised CenturyLink&amp;#39;s customer service yet again.&lt;/p&gt;
+
+&lt;blockquote class=&quot;twitter-tweet&quot; lang=&quot;en&quot;&gt;&lt;p&gt;&lt;a href=&quot;https://twitter.com/CenturyLink&quot;&gt;@CenturyLink&lt;/a&gt; resolution: I&amp;#39;ve been removed from the list of accounts that get such notices. Good on you guys, thanks Kensie. &lt;a href=&quot;https://twitter.com/search?q=%23happycustomer&amp;amp;src=hash&quot;&gt;#happycustomer&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&amp;mdash; Rod Hilton (@rodhilton) &lt;a href=&quot;https://twitter.com/rodhilton/statuses/301883017645928449&quot;&gt;February 14, 2013&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;script async src=&quot;//platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;blockquote class=&quot;twitter-tweet&quot; lang=&quot;en&quot;&gt;&lt;p&gt;&lt;a href=&quot;https://twitter.com/CenturyLink&quot;&gt;@CenturyLink&lt;/a&gt;, my tweet about how well you resolved this issue has 2 of my friends considering switching from Comcast. :)&lt;/p&gt;
+&lt;p&gt;&amp;mdash; Rod Hilton (@rodhilton) &lt;a href=&quot;https://twitter.com/rodhilton/statuses/301907519121530881&quot;&gt;February 14, 2013&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;script async src=&quot;//platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;h1&gt;The Second Warning&lt;/h1&gt;
+
+&lt;p&gt;I resumed business as usual, confident that the usage policy did not apply to me, happily using my internet like crazy.  But a few months later, in May, I was working at home and, once again, I was presented with a similar walled-garden message.  The first time I was surprised and alarmed, but now I was annoyed.  I had already discussed this with a representative, and she assured me I wouldn&amp;#39;t get another one of these.&lt;/p&gt;
+
+&lt;p&gt;I called again, and hid my irritation, knowing that if I stayed friendly, as soon as the technician pulled up my account, they would see how long I&amp;#39;ve been a customer and be friendly as well.  Once again, the tech pulled up my account notes, and was immediately accommodating.  I asked if my notes indicated I&amp;#39;d called about this before, and the representative told me &lt;strong&gt;yes, he could see that I had spoken to the company a few months ago, and was told I was not supposed to get these.&lt;/strong&gt;  The representative put me on hold so he could call some other department and be certain that the proper flag was set so that I wouldn&amp;#39;t get any more of these.  After about 10 minutes, he came back and told me it&amp;#39;s done, he&amp;#39;s sure I won&amp;#39;t get any more of these.  I asked him to please make another note in my account that we had this conversation, and he said he did.&lt;/p&gt;
+
+&lt;p&gt;Once again, I live-tweeted most of these interactions.  And once again, people responded to it.  One thing that kept popping up was, people advised me to look into Comcast Business Internet.  They said it was more reliable than Comcast Residential, and had absolutely no data caps because it&amp;#39;s for businesses.  Curious, I looked into it, even going so far as calling a Comcast Business representative to ask some questions and get a plan priced out.  I was surprised to see that the price for Comcast Business Class internet was about the same as what I was paying, for slightly faster access.  All this time, I&amp;#39;d been comparing Qwest/CenturyLink&amp;#39;s price increases for more speed, never really comparing with competitors. &lt;/p&gt;
+
+&lt;p&gt;Comcast Business looked interesting, but in the end, I didn&amp;#39;t like the idea of having to sign up for a year or two of service ahead of time with a contract, and I didn&amp;#39;t fully trust Comcast due to my experiences with the residential cable.  The price of Comcast Business Internet was good, but the only real advantage was the removal of data caps, which I&amp;#39;ve now had two CenturyLink representatives tell me don&amp;#39;t apply to me anyway.  My faith in CenturyLink restored, I once again went about my business.&lt;/p&gt;
+
+&lt;blockquote class=&quot;twitter-tweet&quot; lang=&quot;en&quot;&gt;&lt;p&gt;2nd Excessive Use warning from &lt;a href=&quot;https://twitter.com/CenturyLink&quot;&gt;@CenturyLink&lt;/a&gt;. Called and they said (again) I&amp;#39;d never get another. Love the customer support.&lt;/p&gt;
+&lt;p&gt;&amp;mdash; Rod Hilton (@rodhilton) &lt;a href=&quot;https://twitter.com/rodhilton/statuses/334521053403549697&quot;&gt;May 15, 2013&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;script async src=&quot;//platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;h1&gt;The Letter&lt;/h1&gt;
+
+&lt;p&gt;I never got another walled-garden notice.  Months went by, and I figured that the extra effort the CSR took to get me flagged properly finally worked, and I was in good shape.  Then, on November 21st, I got a letter.  Not a browser notice, not an e-mail, but a paper letter, sent via the post office.  The last 3 times this company sent me something in the mail, it was to alert me of higher speeds in my area.  This letter was decidedly different.&lt;/p&gt;
+
+&lt;table class='image aligncenter' width='586'&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/centurylinktermination-e1386560161832-580x576.png&quot; width='580' height='576'/&gt;&lt;p class='caption'&gt;You're Terminated.&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;So many things annoyed me about this letter.  The claim that this was my third notice was questionable, to start.  Though I had gotten two previous warnings, both of them were in error according to CenturyLink customer service.  So as far as I was concerned, I had gotten zero warnings.  Additionally, the termination date was December 3rd, eleven days away.  Eleven days to find a new internet provider, get signed up, schedule an install, get everything working?  Infuriating.&lt;/p&gt;
+
+&lt;p&gt;Once again, I held back my irritation, knowing that being friendly was always met by helpful representatives once they saw how long I&amp;#39;d been a customer.  I called the number on the letter, which connected me to technical support, and person who I will call Jordan. &lt;strong&gt;Jordan checked my account and said that my account was not flagged for termination, had no excessive use flags on it, and was in good standing.&lt;/strong&gt;  He called the letter a &amp;quot;miscommunication&amp;quot; and said I would not have my service ended.  This was good news, so I relaxed a bit.  I did, however, ask if he saw the two notes on my account from previous calls about similar issues, and he said that there were no notes on my account.  That made no sense to me, the second time I called, the person I spoke with specifically mentioned seeing the note from the first time I called, so how could it be gone?  Jordan informed me it might be a &amp;quot;business note&amp;quot; and I should call the business office on Monday, because he only had access to &amp;quot;technical notes&amp;quot;.&lt;/p&gt;
+
+&lt;p&gt;I called the business office on Monday using a number Jordan gave me and spoke to a second CSR, who I will refer to as Taylor.  Taylor verified two things for me.  One, I absolutely did not have any notes on my account about previous phone calls.  And two, &lt;strong&gt;my account was just fine, I was not set to be terminated, I had nothing to worry about&lt;/strong&gt;.  Again, I relaxed some more, but then Taylor suggested we conference-call someone from the &amp;quot;Securities Office&amp;quot; just to triple-check.  She got an employee, who I will refer to as Howard, on the line.&lt;/p&gt;
+
+&lt;p&gt;Howard did some checking and gave me some news that stunned me.  &lt;strong&gt;The excessive use policy &lt;em&gt;does&lt;/em&gt; apply to my account, and I am indeed flagged for termination on the 3rd, now in eight days.&lt;/strong&gt;  I was almost at a loss for words.  I was told to ignore both warnings by CenturyLink employees previously.  I called the number &lt;em&gt;on the termination notice&lt;/em&gt; and was told my account was fine, and even followed up with a second call to double check it.  Even that call said I was fine. It wasn&amp;#39;t until I talked to a third person, fifth overall, that I was finally told for the first time that the policy applied to me, and I was being told not only that but that as a result my service was being terminated in eight days.&lt;/p&gt;
+
+&lt;p&gt;I finally got the details on the Excessive Use Policy from Howard.  He told me that the limit for usage is 250 GB per month for any service at 1.5Mbps and up.  Anything above that was a violation of the policy.  I wasn&amp;#39;t sure I understood, so I asked for clarification, &amp;quot;you mean that someone who is paying for 40Mbps down and someone paying for only 1.5Mbps down have same usage cap?&amp;quot; and Howard answered, &amp;quot;correct.&amp;quot;&lt;/p&gt;
+
+&lt;p&gt;&amp;quot;So even though I&amp;#39;m paying more than quadruple what my 1.5Mbps neighbor is, he and I have the same maximum?&amp;quot;&lt;/p&gt;
+
+&lt;p&gt;&amp;quot;Yes.&amp;quot;&lt;/p&gt;
+
+&lt;p&gt;I did a quick calculation.  40 megabits per second is 5 megabytes per second.  250 GB is 256,000 megabytes.  That means, if I were to saturate the bandwidth I&amp;#39;m paying for, I could use up my entire allotment in 51,200 seconds.  14.2 hours.  I asked Howard if this was the case and he informed me that it was.&lt;/p&gt;
+
+&lt;p&gt;This was about the time I decided to stop being so friendly.  I explained that it was ridiculous that I was having my service terminated in eight days when I&amp;#39;ve gotten, as far as I&amp;#39;m concerned, zero actual warnings that were legitimate.  Howard explained that the CSRs I talked to previously were misinformed, as the policy does apply to me.  He also said I had no notes about previous conversations in my account.  As I mentioned, what&amp;#39;s particularly surprising about that is that the second CSR mentioned the notes of the first, meaning that, if they were gone, they must have been deleted (or the second CSR lied).  Amazing, too, that two independent CSRs would tell me the same thing incorrectly.&lt;/p&gt;
+
+&lt;p&gt;I asked Howard to reset my &amp;quot;warning&amp;quot; counter back to zero, so I at least had a fair chance now that I knew the policy was in place.  He was willing to reset me back to two.  So my internet would no longer be terminated in eight days, but if I violated the policy one more time, I&amp;#39;d get another letter of termination.  In other words, &lt;strong&gt;I was now in a permanent position of possibly having my internet suddenly turned off within about a week&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Howard suggested I look into CenturyLink Business Class, which removes the cap.  He hung up, and Taylor (who was still on the line) conference called someone from the Business Internet department.  The Business CSR informed me that the price would be about $200 a month, double what I was paying at the time.  I asked if it would at least be faster, and was told it would not be, 40/5 is the fastest CenturyLink gets.  I tell him (and Taylor) I need to think about that a little more.  The Business CSR hangs up, which unfortunately disconnects the entire call somehow.&lt;/p&gt;
+
+&lt;p&gt;Ugh.  I still had questions for Taylor, she said she would stay on the line after the Business call.  I call back and get a new CSR, who I will call Brandon.  I asked to be transferred to Taylor because she&amp;#39;s been informed of my extremely long story, and I didn&amp;#39;t want to have to repeat it all.  Brandon informed me they are not able to transfer to people directly, only departments.  I let out a sigh and once again recounted the entire story starting from my first warning up until that very moment.  I explained to Brandon that it doesn&amp;#39;t seem right to give me a data cap so low that I can bust out of it in 14 hours, and it seems that the caps should, at the very least, increase linearly with the speeds.  Brandon agreed with me, agreed that I&amp;#39;m not getting proper treatment, and asked to put me on hold while he gets to the bottom of this.  &lt;strong&gt;While on hold, I was disconnected again&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;At this point I was in full-on pain-in-the-ass-customer mode.  I called again, asked to speak to Taylor or Brandon, and was once again told they can&amp;#39;t do that.  So I asked to speak to the highest manager I can be transferred to, because if I have to tell the whole story again I want it to be at the highest level I can get.  The CSR obliged, transferring me to someone I will call Terry.  I told the entire story again.  By the time I&amp;#39;m done, I&amp;#39;ve been on the phone for three hours in total.  All I wanted at this point is to be reset to zero warnings so that I could try to get my usage down to acceptable levels without living in fear of termination.  Terry told me he can&amp;#39;t really help me as a Customer Support person, and offered to transfer me to Securities.  Fine.&lt;/p&gt;
+
+&lt;p&gt;I was transferred to Securities again and spoke with a Securities Agent.  She looked up my notes and informs me that Howard already did me &amp;quot;a big favor&amp;quot; by resetting me back to 2 warnings.  She said there was nothing further she was willing to do for me.  I asked how, exactly, I&amp;#39;m supposed to even get my usage down to their limit when my next violation means termination.  She told me there are free tools I can install on my computer to monitor usage.  That&amp;#39;s rich.  I&amp;#39;m supposed to install these tools on every computer in my house, both mine and my wife&amp;#39;s, plus our phones, running the gamut of Linux, Windows, OS X, and Android?  The best I can do is look at my router, which tells me how much traffic I used in a day, so I&amp;#39;d have to check it at the end of each day and manually total it up.  I started thinking about writing a shell script for this, and then chastised myself for playing into this nonsense.  The Securities Agent once again recommended I switch to CenturyLink Business Class, all for the low-low price of double what I&amp;#39;m paying now for the exact same service.&lt;/p&gt;
+
+&lt;h1&gt;The Defeat&lt;/h1&gt;
+
+&lt;p&gt;Completely defeated, I hung up, and I started looking at Comcast Business Class again.  If I were willing to pay $200 for internet, I could get Comcast Business Class&amp;#39;s fastest speed, 100Mbps down, 20Mbps up, with no data caps.  Hell, at my current price of $100, I could get 50 down and 10 up, 10Mbps faster downloading, with double the upload speed, and still no cap.&lt;/p&gt;
+
+&lt;p&gt;I called Comcast and got some more info.  I even had a contract drawn up, ready to sign.  At this point, I couldn&amp;#39;t justify staying with CenturyLink any longer.  I could remove the data caps from my life with no additional cost just by switching providers, and I would even get a bonus of slightly faster speed.  I obviously had reservations about Comcast due to my previous experience, but everyone I was talking to on Twitter indicated that the Comcast Business is a completely different branch of the company, that the techs really know their stuff and that the representatives are extremely helpful, because they are used to dealing with businesses.&lt;/p&gt;
+
+&lt;p&gt;Speaking of Twitter, I was naturally live-tweeting everything that was happening with all of this.  In addition to friends and colleagues responding, I actually got a response from CenturyLink itself.  &lt;/p&gt;
+
+&lt;blockquote class=&quot;twitter-tweet&quot; lang=&quot;en&quot;&gt;&lt;p&gt;&lt;a href=&quot;https://twitter.com/rodhilton&quot;&gt;@rodhilton&lt;/a&gt; Hey Rod, our team can help look into that for you. Send us your acct info here &lt;a href=&quot;http://t.co/V7SCkTtg1e&quot;&gt;http://t.co/V7SCkTtg1e&lt;/a&gt;&amp;#10;Thanks, ^AshleyKay&lt;/p&gt;
+&lt;p&gt;&amp;mdash; CenturyLinkHelp Team (@CenturyLinkHelp) &lt;a href=&quot;https://twitter.com/CenturyLinkHelp/statuses/405002367793254400&quot;&gt;November 25, 2013&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;script async src=&quot;//platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;After some more tweeting, I got this as well:&lt;/p&gt;
+
+&lt;blockquote class=&quot;twitter-tweet&quot; lang=&quot;en&quot;&gt;&lt;p&gt;&lt;a href=&quot;https://twitter.com/rodhilton&quot;&gt;@rodhilton&lt;/a&gt; Hi Rod, if you need additional help with this issue we can have our DSL Escalations Team give you a call&amp;#8230;Thanks,Corey&lt;/p&gt;
+&lt;p&gt;&amp;mdash; CenturyLinkHelp Team (@CenturyLinkHelp) &lt;a href=&quot;https://twitter.com/CenturyLinkHelp/statuses/405045978928926720&quot;&gt;November 25, 2013&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;script async src=&quot;//platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;So I decided to bite.  Maybe this is a different team, who might really be able to do something for me.  Again, all I wanted at this point was to be reset to zero warnings so I had a fighting chance.&lt;/p&gt;
+
+&lt;p&gt;I filled out their form, writing 1,414 words explaining this entire story.  I explained that Comcast had them beat on Business Tier service by a wide margin, and I&amp;#39;d leave for Comcast before paying double for the same service from CenturyLink just to avoid being harassed.  I also explained that this is my last attempt to remedy the situation with CenturyLink, that I&amp;#39;d given them three hours of my Monday and I couldn&amp;#39;t give them any more of my time.  I reiterate I&amp;#39;ve been a customer for a long time, and I&amp;#39;d like to stay a customer, but that I needed this situation to be improved.&lt;/p&gt;
+
+&lt;p&gt;I submitted the form and waited.  I had a contract with Comcast Business Internet ready to sign in my inbox.  If CenturyLink&amp;#39;s help team could do something for me, I&amp;#39;d keep them and try to figure out how to get my bandwidth to reasonable levels.  If they wouldn&amp;#39;t do anything for me, I&amp;#39;d switch to Comcast, severing nearly a decade of loyal service. &lt;/p&gt;
+
+&lt;p&gt;That night, I checked with my router to see what my bandwidth use for the day was.  Just a normal day of working from home, no big media downloading, no movie or music streaming, nothing excessive.  I used 10GB that day alone, and that&amp;#39;s with trying my hardest not to use much.  At that rate, I&amp;#39;d hit the cap in 25 days, less than the month I&amp;#39;m paying for.  While I was tweeting about all of this, I had some friends ask me just what the hell I&amp;#39;m doing that&amp;#39;s using so much bandwidth.  To be completely honest, I don&amp;#39;t even understand the question.  After seeing how much bandwidth I use on a day when I&amp;#39;m giving it my full effort to minimize use, I have to wonder just how the hell everyone else is able to stay under their caps at all.  It seems impossible.&lt;/p&gt;
+
+&lt;p&gt;A few days later, I got a response from CenturyLink.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Thanks for reaching out and sending such candid feedback on your experience. I understand your frustration, unfortunately there&amp;#39;s no way I can change or stretch our policy. Up until this year you haven&amp;#39;t hit over 250gb before in, as you mentioned, many years. You have since gone over the usage limit every month so far in 2013. We&amp;#39;ve been very generous in the notices you&amp;#39;ve received and when you&amp;#39;ve received them. I apologize for the 2 representatives that provided you with incorrect information and therefore caused further turmoil in the matter. I am investigating that further so that proper feedback/coaching will be enforced. I wish there was something I could offer as far as a better price goes for the business usage, but there&amp;#39;s no other option other than what you&amp;#39;ve been told already. Please let me know what direction you&amp;#39;d like to go with this and I&amp;#39;ll take care of you to the end. If there&amp;#39;s anything else additional I can help with, let me know as well.&lt;/p&gt;
+
+&lt;p&gt;I wish there was a way for me to guarantee that you&amp;#39;ll go back to &amp;#39;zero&amp;#39;, but that&amp;#39;s not an option. As Howard already did for you, the forgiven process is the best than can be done. I understand your decision to try other venues for service you need. If there&amp;#39;s anything else I can assist you with, please let me know.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1&gt;The Switch&lt;/h1&gt;
+
+&lt;p&gt;A Comcast technician installed my new Business Internet two weeks later.  I know this post is way too long already, and I don&amp;#39;t want to look like some kind of shill for Comcast, so let me just summarize with: &lt;strong&gt;why didn&amp;#39;t I do this sooner?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;table class='image alignleft' width='306'&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/comcast-business-300x168.png&quot; width='300' height='168'/&gt;&lt;p class='caption'&gt;The good new days&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;We did a speed test before he left, and I was getting 57 Mbps down, 11.5 up.  I&amp;#39;ve had no issues with bandwidth dropping at all, it seems pretty consistent all day long; the lowest I saw was 48 down, which is still faster than my top speed with CenturyLink (about 37).  I haven&amp;#39;t had to reset the cable modem at all, it&amp;#39;s a beefy, boxy beast of a thing from Netgear.  No frills, no wireless, just a black box I hooked up to my existing router.&lt;/p&gt;
+
+&lt;p&gt;I&amp;#39;ve had no blips, no lags.  I&amp;#39;ve worked from home a few times since the install and I&amp;#39;ve seen no drop-offs, disconnections, or slowdowns.  I&amp;#39;ve dealt with Comcast Business Internet representatives in the sales department, billing department, and technical support department, and all of them were extremely helpful and friendly.  The Technical Support guy even helped me fix an issue I was having with my router, even though it wasn&amp;#39;t Comcast-commissioned equipment.&lt;/p&gt;
+
+&lt;p&gt;I actually feel bad for how many people I&amp;#39;ve recommended go to CenturyLink.  I know a nontrivial number of people have signed up with them based on my glowing recommendations over the years (this isn&amp;#39;t self-absorption, they&amp;#39;ve told me this).  I think I&amp;#39;d now only recommend residential CenturyLink to very light internet users, like my parents or in-laws.  There&amp;#39;s no good reason at all to use CenturyLink&amp;#39;s business class service, which is massively overpriced for the service when compared to Comcast&amp;#39;s offering.  And the higher-speed tiers at CenturyLink are all hampered by data caps that can be blown out in less than a day.  If all you want is 1.5-5Mbps down for light internet use, CenturyLink is the way to go for price, but for higher speeds it&amp;#39;s a complete rip-off.  The same high speeds can be found for cheaper at Comcast Business, with no data caps.&lt;/p&gt;
+
+&lt;p&gt;It&amp;#39;s unfortunate that things had to become so unpleasant with CenturyLink but it became clear that the company simply was not interested in keeping me as a customer.  While I wish I could have left CenturyLink on different terms, I&amp;#39;m glad I made the switch, and I hope the quality of service with Comcast Business Internet continues.&lt;/p&gt;
+</description>
+				<pubDate>Tue, 17 Dec 2013 00:00:00 -0500</pubDate>
+				<link>http://www.nomachetejuggling.com/2013/12/17/centurylink-traps-and-caps/</link>
+				<guid isPermaLink="true">http://www.nomachetejuggling.com/2013/12/17/centurylink-traps-and-caps/</guid>
 			</item>
 		
 	</channel>
