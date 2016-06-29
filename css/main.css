@@ -4,7 +4,7 @@ html {
 body {
   margin: 0;
   background: #fff;
-  color: #444;
+  color: #444444;
   font-size: 62.5%;
   /* Resets 1em to 10px */
   font-family: "Lucida Grande", Verdana, Arial, sans-serif;
@@ -21,7 +21,7 @@ a:hover {
 
 h1, h1 a, h2, h2 a, h3, h4, h5, h6 {
   margin-bottom: 0;
-  color: #f00;
+  color: red;
   text-align: left; }
 
 h1 {
@@ -144,7 +144,7 @@ abbr {
   /* IE10+ */
   background: radial-gradient(ellipse at center, transparent 0%, rgba(0, 0, 0, 0.14) 100%);
   /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#24000000',GradientType=1 );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#24000000',GradientType=1 );
   /* IE6-9 fallback on horizontal gradient */
   -webkit-box-shadow: 3px 3px 4px 0px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 3px 3px 4px 0px rgba(0, 0, 0, 0.3);
@@ -189,7 +189,7 @@ abbr {
       font-family: "Trebuchet MS", sans-serif;
       font-size: 18px; }
       #thinheaderwrapper .header p a {
-        color: #f00; }
+        color: red; }
     #thinheaderwrapper .header #small-logo {
       float: right;
       width: 20px;
@@ -232,7 +232,7 @@ abbr {
         font-weight: normal; }
         #headerwrapper .header .headertitle h1 a {
           background: transparent;
-          color: #f00; }
+          color: red; }
           #headerwrapper .header .headertitle h1 a:hover {
             text-decoration: none; }
       #headerwrapper .header .headertitle p {
@@ -358,7 +358,7 @@ abbr {
 .sidebar ul h2 {
   margin: 0;
   padding: 0;
-  color: #f00;
+  color: red;
   font-size: 1.2em;
   text-transform: uppercase; }
 .sidebar ul ul li {
@@ -496,7 +496,7 @@ abbr {
       background-repeat: no-repeat; }
     .post .postentry .tweet a, .post .postentry .tweet a:hover {
       text-decoration: none !important;
-      color: #444;
+      color: #444444;
       border: 0; }
   .post .postentry code {
     font: 14px "Source Code Pro", monospace;
@@ -617,7 +617,7 @@ abbr {
     text-align: center;
     font-family: "Architects Daughter", "Lucida Grande", Verdana, Arial, sans-serif;
     font-size: 20px;
-    color: #a00; }
+    color: #aa0000; }
   .post span[data-pullquote].right:before {
     float: right;
     margin-right: 0px;
@@ -711,7 +711,7 @@ abbr {
       margin: .2em 0;
       font-size: 1.2em;
       font-weight: bold;
-      color: #444;
+      color: #444444;
       text-align: center; }
   .post .toc ol {
     margin: 0 5px;
@@ -779,7 +779,7 @@ dl.links dd {
     font-size: 85% !important;
     font-weight: bold !important;
     margin: .8em 0;
-    color: #444; }
+    color: #444444; }
   .resume ul {
     list-style-type: none;
     margin-left: -3em; }
