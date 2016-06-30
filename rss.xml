@@ -94,7 +94,7 @@
 
 &lt;p&gt;I&amp;#39;ve blogged about this one before, under the more provocative title &amp;quot;&lt;a href=&quot;http://www.nomachetejuggling.com/2011/10/21/i-broke-your-code-and-its-your-fault/&quot;&gt;I Broke Your Code, and It&amp;#39;s Your Fault&lt;/a&gt;&amp;quot;.  In fact, there was even a &lt;a href=&quot;https://www.reddit.com/r/programming/comments/qbg9y/i_broke_your_code_and_its_your_fault/&quot;&gt;lengthy reddit discussion&lt;/a&gt; about it in which folks tried to decide if I was clinically insane, or just a regular moron.&lt;/p&gt;
 
-&lt;p&gt;Provocative title aside, I still stand by the original point.  Even if someone else does something as annoying as change the interface I was depending on in my code, it shouldn&amp;#39;t be possible for them to so thoroughly break the code I wrote without SOMETHING telling them that they did so.  &lt;strong&gt;All it takes is one failed test to say &amp;quot;hold up, you broke shit.&amp;quot;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Hyperbolic title aside, I still stand by the original point.  Even if someone else does something as annoying as change the interface I was depending on in my code, it shouldn&amp;#39;t be possible for them to so thoroughly break the code I wrote without SOMETHING telling them that they did so.  &lt;strong&gt;All it takes is one failed test to say &amp;quot;hold up, you broke shit.&amp;quot;&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;When I push code up to the shared repository, it&amp;#39;s my job to ensure it works, not QAs.  But it&amp;#39;s also my job to ensure that a junior engineer or a new hire can&amp;#39;t just break it without something telling him or her it happened.  When I write code, I try to imagine, what would happen if some other engineer came in and modified the class I just wrote, maybe didn&amp;#39;t understand why I was doing &lt;code&gt;-1&lt;/code&gt; somewhere, and so they just removed it?  Would that be an annoying thing to do?  Sure, and I would hope that the other engineer might ask me why I was doing it if I failed to make it obvious from the code itself.  But maybe this is years from now and I&amp;#39;m not even at the company anymore, so they remove the &lt;code&gt;-1&lt;/code&gt;, or they think my code sucks so they rewrote the entire function from scratch.  The instant they do that, a test I wrote somewhere should fail (hopefully with an explanation of why it needed to be the way it was).&lt;/p&gt;
 
@@ -200,7 +200,7 @@
 
 &lt;p&gt;Anything missing?  Any principles that you live by as an engineer?  Leave a comment, I&amp;#39;m curious what other people see as their &lt;strong&gt;Software Engineering Golden Rules&lt;/strong&gt;.&lt;/p&gt;
 </description>
-				<pubDate>Mon, 20 Jun 2016 00:00:00 -0600</pubDate>
+				<pubDate>Mon, 20 Jun 2016 00:00:00 -0400</pubDate>
 				<link>http://www.nomachetejuggling.com/2016/06/20/guidingprinciples-part2/</link>
 				<guid isPermaLink="true">http://www.nomachetejuggling.com/2016/06/20/guidingprinciples-part2/</guid>
 			</item>
@@ -354,7 +354,7 @@
 
 &lt;p&gt;I split this list into two posts for really no good reason aside from length.  If you want more, check out &lt;a href=&quot;http://www.nomachetejuggling.com/2016/06/20/guidingprinciples-part2/&quot;&gt;Part 2&lt;/a&gt;.&lt;/p&gt;
 </description>
-				<pubDate>Wed, 15 Jun 2016 00:00:00 -0600</pubDate>
+				<pubDate>Wed, 15 Jun 2016 00:00:00 -0400</pubDate>
 				<link>http://www.nomachetejuggling.com/2016/06/15/guidingprinciples-part1/</link>
 				<guid isPermaLink="true">http://www.nomachetejuggling.com/2016/06/15/guidingprinciples-part1/</guid>
 			</item>
@@ -524,7 +524,7 @@
 
 &lt;p&gt;Some co-workers who took this test disagreed with the results so strongly that they took it multiple times until they got different results.  That makes it even harder to want to actually cater my interactions with people to &lt;em&gt;their&lt;/em&gt; strengths.  But for me, I think this test absolutely got my number and I think it&amp;#39;s worth doing.   The book that goes with this test, &lt;a href=&quot;http://www.amazon.com/Strengths-Based-Leadership-Leaders-People/dp/1595620257&quot;&gt;Strengths Based Leadership&lt;/a&gt;, costs less than $20 and comes with an access code to take the test.  I&amp;#39;ve only skimmed the book so I can&amp;#39;t speak to it&amp;#39;s quality, but I definitely recommend taking the test.&lt;/p&gt;
 </description>
-				<pubDate>Sat, 30 Apr 2016 00:00:00 -0600</pubDate>
+				<pubDate>Sat, 30 Apr 2016 00:00:00 -0400</pubDate>
 				<link>http://www.nomachetejuggling.com/2016/04/30/strengthsfinder/</link>
 				<guid isPermaLink="true">http://www.nomachetejuggling.com/2016/04/30/strengthsfinder/</guid>
 			</item>
@@ -679,7 +679,7 @@
 
 &lt;p&gt;May the Force be with you, always.&lt;/p&gt;
 </description>
-				<pubDate>Mon, 28 Dec 2015 00:00:00 -0700</pubDate>
+				<pubDate>Mon, 28 Dec 2015 00:00:00 -0500</pubDate>
 				<link>http://www.nomachetejuggling.com/2015/12/28/machete-order-update-and-faq/</link>
 				<guid isPermaLink="true">http://www.nomachetejuggling.com/2015/12/28/machete-order-update-and-faq/</guid>
 			</item>
@@ -768,7 +768,7 @@
 &lt;p&gt;I decided the research project I&amp;#39;ve been working on for two years was a dead-end.  I almost decided to walk away from the program entirely, but instead have started over with a radically different project to give it one last shot before calling it quits.&lt;/p&gt;
 &lt;/blockquote&gt;
 </description>
-				<pubDate>Fri, 13 Nov 2015 00:00:00 -0700</pubDate>
+				<pubDate>Fri, 13 Nov 2015 00:00:00 -0500</pubDate>
 				<link>http://www.nomachetejuggling.com/2015/11/13/phd-research-status-report/</link>
 				<guid isPermaLink="true">http://www.nomachetejuggling.com/2015/11/13/phd-research-status-report/</guid>
 			</item>
@@ -836,7 +836,7 @@ class ExampleControllerSpec extends Specification {
     }
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
-				<pubDate>Thu, 27 Aug 2015 00:00:00 -0600</pubDate>
+				<pubDate>Thu, 27 Aug 2015 00:00:00 -0400</pubDate>
 				<link>http://www.nomachetejuggling.com/2015/08/27/testing-against-template-renders-in-grails/</link>
 				<guid isPermaLink="true">http://www.nomachetejuggling.com/2015/08/27/testing-against-template-renders-in-grails/</guid>
 			</item>
@@ -945,7 +945,7 @@ class ExampleControllerSpec extends Specification {
 
 &lt;p&gt;&lt;strong&gt;Overall, I really enjoyed my QCon experience and it&amp;#39;s definitely on my radar for a conference to attend again in the future&lt;/strong&gt;.  However, most of the things I disliked about the conference were related to its physical location and venue, which makes me wonder if it&amp;#39;s worth the (very high) price tag since the best part (the recorded sessions) are eventually made available on the internet.&lt;/p&gt;
 </description>
-				<pubDate>Wed, 01 Jul 2015 00:00:00 -0600</pubDate>
+				<pubDate>Wed, 01 Jul 2015 00:00:00 -0400</pubDate>
 				<link>http://www.nomachetejuggling.com/2015/07/01/qconny-2015-a-review/</link>
 				<guid isPermaLink="true">http://www.nomachetejuggling.com/2015/07/01/qconny-2015-a-review/</guid>
 			</item>
@@ -1025,7 +1025,7 @@ class ExampleControllerSpec extends Specification {
 
 &lt;p&gt;I may eventually put some of these plugins into GitHub as well, and I wound up writing a pretty handy extension to &lt;a href=&quot;http://highlightjs.org/&quot;&gt;highlight.js&lt;/a&gt; that makes it easier to copy and paste syntax highlighted code which I think others might find useful.  But easily, the most useful thing I wrote to support this effort - aside from a highly customized script that ran my blog post&amp;#39;s html files through forty regular expressions to convert them to markdown - was the &lt;code&gt;cloudfiles_upload.rb&lt;/code&gt; script.  Hopefully others may find it useful as well.&lt;/p&gt;
 </description>
-				<pubDate>Fri, 04 Jul 2014 00:00:00 -0600</pubDate>
+				<pubDate>Fri, 04 Jul 2014 00:00:00 -0400</pubDate>
 				<link>http://www.nomachetejuggling.com/2014/07/04/uploading-a-jekyll-site-to-rackspace-cloudfiles/</link>
 				<guid isPermaLink="true">http://www.nomachetejuggling.com/2014/07/04/uploading-a-jekyll-site-to-rackspace-cloudfiles/</guid>
 			</item>
@@ -1199,7 +1199,7 @@ class ExampleControllerSpec extends Specification {
 
 &lt;p&gt;Have some books you want to add?  Feel like telling me one of my favorite books is inferior to one of yours?  Want to yell at me for not including &lt;a href=&quot;http://www-cs-faculty.stanford.edu/%7Euno/taocp.html&quot;&gt;&lt;em&gt;The Art of Computer Programming&lt;/em&gt;&lt;/a&gt; (come on, you never read that shit and you know it)?  Leave a comment!&lt;/p&gt;
 </description>
-				<pubDate>Wed, 05 Feb 2014 00:00:00 -0700</pubDate>
+				<pubDate>Wed, 05 Feb 2014 00:00:00 -0500</pubDate>
 				<link>http://www.nomachetejuggling.com/2014/02/05/top-10-career-changing-programming-books/</link>
 				<guid isPermaLink="true">http://www.nomachetejuggling.com/2014/02/05/top-10-career-changing-programming-books/</guid>
 			</item>
@@ -1349,7 +1349,7 @@ class ExampleControllerSpec extends Specification {
 
 &lt;p&gt;It&amp;#39;s unfortunate that things had to become so unpleasant with CenturyLink but it became clear that the company simply was not interested in keeping me as a customer.  While I wish I could have left CenturyLink on different terms, I&amp;#39;m glad I made the switch, and I hope the quality of service with Comcast Business Internet continues.&lt;/p&gt;
 </description>
-				<pubDate>Tue, 17 Dec 2013 00:00:00 -0700</pubDate>
+				<pubDate>Tue, 17 Dec 2013 00:00:00 -0500</pubDate>
 				<link>http://www.nomachetejuggling.com/2013/12/17/centurylink-traps-and-caps/</link>
 				<guid isPermaLink="true">http://www.nomachetejuggling.com/2013/12/17/centurylink-traps-and-caps/</guid>
 			</item>
