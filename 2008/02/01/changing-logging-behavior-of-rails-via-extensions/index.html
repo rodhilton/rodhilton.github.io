@@ -151,7 +151,7 @@ end
 <p>Save the above code into a file called &quot;extensions.rb&quot; inside of the &quot;extras&quot; directory under my rails project directory.</p>
 
 <p>Then, go into your environment.rb file and add this line to the bottom:</p>
-<div class="highlight"><pre><code class="language-ruby" data-lang="ruby">require File.join(RAILS_ROOT, 'extras', 'extensions')
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby">require File.join(RAILS_ROOT, &#39;extras&#39;, &#39;extensions&#39;)
 </code></pre></div>
 <p>The reason I suggest the bottom of the file (after the Rails::Initializer.run) is that you want to make sure all of the rails libraries are loaded first, otherwise they will overwrite YOUR method, instead of the other way around.</p>
 

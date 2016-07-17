@@ -125,7 +125,7 @@
 <p>Deploying a webapp to Tomcat is more Java-y than Linux-y, so copy the war file to <code>/var/lib/tomcat6/webapps</code>.  As long as the war file is readable, Tomcat will extract it into a new directory of it&#39;s own creation, so this should go pretty smoothly.</p>
 
 <p>If you check <code>http://localhost:8080/jenkins</code> now, you&#39;ll get your first error:</p>
-<div class="highlight"><pre><code class="language-output" data-lang="output">Unable to create the home directory '/usr/share/tomcat6/.jenkins'. This is most likely a permission problem.
+<div class="highlight"><pre><code class="language-output" data-lang="output">Unable to create the home directory &#39;/usr/share/tomcat6/.jenkins&#39;. This is most likely a permission problem.
 
 To change the home directory, use JENKINS_HOME environment variable or set the JENKINS_HOME system property. See Container-specific documentation for more details of how to do this.
 </code></pre></div>
@@ -269,7 +269,7 @@ $ sudo chown tomcat6:nogroup /usr/share/tomcat6/.ssh/known_hosts
 <h2 id=toc-avoid>Avoid ~</h2>
 
 <p>Build again.  You may see an error that looks like this:</p>
-<div class="highlight"><pre><code class="language-output" data-lang="output">fatal: '~/git/project.git ' does not appear to be a git repository
+<div class="highlight"><pre><code class="language-output" data-lang="output">fatal: &#39;~/git/project.git &#39; does not appear to be a git repository
 fatal: The remote end hung up unexpectedly
 
 Trying next repository

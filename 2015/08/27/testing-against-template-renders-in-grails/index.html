@@ -102,7 +102,7 @@
 
 <p>I&#39;ve got this method in a <code>TestUtil</code> class:</p>
 <div class="highlight"><pre><code class="language-groovy" data-lang="groovy">static def ensureModelForTemplates(con) {
-    def originalMethod = con.metaClass.getMetaMethod('render', [Map] as Class[])
+    def originalMethod = con.metaClass.getMetaMethod(&#39;render&#39;, [Map] as Class[])
     con.metaClass.render = { Map args -&gt;
         if (args[&quot;template&quot;]) {
             con.modelAndView = new ModelAndView(
