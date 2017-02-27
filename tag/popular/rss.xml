@@ -4,7 +4,7 @@
 		<title>Absolutely No Machete Juggling &raquo; Popular</title>
 		<description>Rod Hilton&amp;#039;s rants about stuff he cares about way too much.</description>		
 		<link>http://www.nomachetejuggling.com</link>
-		<atom:link href="http://www.nomachetejuggling.com/tag/{"name"=>"popular", "posts"=>[<Post: /2015/12/28/machete-order-update-and-faq>, <Post: /2014/02/05/top-10-career-changing-programming-books>, <Post: /2011/11/11/the-star-wars-saga-suggested-viewing-order>], "id"=>"popular"}/rss.xml" rel="self" type="application/rss+xml" />
+		<atom:link href="http://www.nomachetejuggling.com/tag/{"name"=>"popular", "posts"=>[<Post: /2015/12/28/machete-order-update-and-faq>, <Post: /2014/02/05/top-10-career-changing-programming-books>, <Post: /2012/05/15/personal-wiki-using-github-and-gollum-on-os-x>, <Post: /2011/11/11/the-star-wars-saga-suggested-viewing-order>, <Post: /2011/10/29/why-the-complete-bipartite-graph-k33-is-not-planar>, <Post: /2011/09/12/moving-one-git-repo-into-another-as-subdirectory>], "id"=>"popular"}/rss.xml" rel="self" type="application/rss+xml" />
 		
 	</channel>
 </rss>
