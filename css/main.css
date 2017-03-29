@@ -227,7 +227,7 @@ abbr {
       margin: 0 0 0 0; }
       #headerwrapper .header .headertitle h1 {
         margin: 0;
-        font-size: 3.3em;
+        font-size: 330%;
         font-family: "Trebuchet MS", Joystix;
         font-weight: normal; }
         #headerwrapper .header .headertitle h1 a {
@@ -340,7 +340,7 @@ abbr {
   padding: 0;
   margin: 0;
   list-style: none;
-  font-size: 1.1em;
+  font-size: 110%;
   overflow: hidden; }
 .sidebar ul ul {
   font-size: 1em; }
@@ -359,7 +359,7 @@ abbr {
   margin: 0;
   padding: 0;
   color: #f00;
-  font-size: 1.2em;
+  font-size: 120%;
   text-transform: uppercase; }
 .sidebar ul ul li {
   border-bottom: 1px dotted #68C;
@@ -384,7 +384,7 @@ abbr {
   margin: 0; }
 
 .post-listing .postheader h1 {
-  font-size: 1.6em; }
+  font-size: 160%; }
 
 .post-listing .post-preview {
   border-bottom: 1px dotted #b4b4b7;
@@ -398,7 +398,7 @@ abbr {
   margin: 0;
   padding: 20px 0;
   font-family: "Lora", serif;
-  font-size: 1.6em;
+  font-size: 160%;
   letter-spacing: 0.015em !important;
   word-spacing: .2em;
   line-height: 1.45em;
@@ -481,7 +481,7 @@ abbr {
     text-align: left; }
   .post .postentry pre {
     font: 14px "Source Code Pro", monospace !important;
-    font-size: .9em !important;
+    font-size: 90% !important;
     word-spacing: normal;
     letter-spacing: normal; }
   .post .postentry .tweet {
@@ -587,12 +587,12 @@ abbr {
     font-weight: normal;
     margin: 1.4em 0 .8em 0; }
   .post .postentry h1 {
-    font-size: 1.4em;
+    font-size: 140%;
     margin-top: 1.8em; }
   .post .postentry h2 {
-    font-size: 1.1em; }
+    font-size: 110%; }
   .post .postentry h3 {
-    font-size: 1.0em; }
+    font-size: 100%; }
   .post .postentry a {
     border-bottom: 1px solid #ddd; }
   .post .postentry a:hover {
@@ -644,17 +644,17 @@ abbr {
         .post .postheader .posttitle a:hover {
           text-decoration: none; }
     .post .postheader h1 {
-      font-size: 2.2em; }
+      font-size: 220%; }
     .post .postheader h2 {
-      font-size: 2.0em; }
+      font-size: 200%; }
     .post .postheader h3 {
-      font-size: 1.8em; }
+      font-size: 180%; }
     .post .postheader h4 {
-      font-size: 1.6em; }
+      font-size: 160%; }
     .post .postheader h5 {
-      font-size: 1.4em; }
+      font-size: 140%; }
     .post .postheader h6 {
-      font-size: 1.2em; }
+      font-size: 120%; }
     .post .postheader .postmeta {
       height: 20px;
       line-height: 20px; }
@@ -677,19 +677,19 @@ abbr {
       .post .postheader .postdate .month {
         height: 20px;
         line-height: 20px;
-        font-size: 1.3em;
+        font-size: 130%;
         background-color: #4786b2;
         color: #e7e7ea; }
       .post .postheader .postdate .day {
         height: 30px;
         line-height: 25px;
-        font-size: 1.6em;
+        font-size: 160%;
         color: #4786b2; }
   .post .toc {
     font-family: "Trebuchet MS", sans-serif;
     padding: 5px;
     float: right;
-    font-size: .7em;
+    font-size: 70%;
     line-height: 1.1em;
     letter-spacing: 0;
     word-spacing: 0;
@@ -709,7 +709,7 @@ abbr {
       border: none; }
     .post .toc h1 {
       margin: .2em 0;
-      font-size: 1.2em;
+      font-size: 120%;
       font-weight: bold;
       color: #444;
       text-align: center; }
@@ -737,12 +737,12 @@ dl.links dd {
 
 .postmetadata {
   margin: 1em 0;
-  font-size: 1.1em;
+  font-size: 110%;
   color: #888;
   text-align: justify; }
 
 .navigation {
-  font-size: 1.1em;
+  font-size: 110%;
   padding: 20px 0; }
   .navigation .alignleft {
     float: left; }
@@ -897,3 +897,31 @@ dl.links dd {
 
   #navlist .menu-item {
     display: none; } }
+@media screen and (max-width: 600px) {
+  body {
+    /*font-size: 50%;*/
+    min-width: 320px;
+    font-size: 60% !important; }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-size: 80%; }
+
+  #headerwrapper {
+    /* background: $header_color; */ }
+    #headerwrapper .header {
+      font-size: 80%;
+      height: 40px;
+      background-image: none;
+      /* color: white;
+
+      // .headertitle h1, p, a{
+      //   color: white !important;
+      // }
+      */ }
+
+  #page {
+    /*font-size: 50%;*/
+    min-width: 320px; }
+
+  .post .postentry .image.aligncenter img {
+    max-width: 98% !important; } }
