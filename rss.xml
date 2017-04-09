@@ -7,6 +7,262 @@
 		<atom:link href="http://www.nomachetejuggling.com/rss.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
+				<title>A Different Successful Git Branching Model: Three-Flow</title>
+				<description>&lt;p&gt;Of all the conversations I find myself having over and over in this field, I think more than anything else I&amp;#39;ve been a broken record convincing teams &lt;strong&gt;not&lt;/strong&gt; to adopt &lt;a href=&quot;http://nvie.com/posts/a-successful-git-branching-model/&quot;&gt;GitFlow&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Vincent Driessen&amp;#39;s post &amp;quot;&lt;a href=&quot;http://nvie.com/posts/a-successful-git-branching-model/&quot;&gt;A successful Git branching model&lt;/a&gt;&amp;quot; -- or, as it&amp;#39;s become commonly known for some reason, &amp;quot;GitFlow&amp;quot; -- has become the de facto standard for how to successfully adopt git into your team.  If you search for &lt;a href=&quot;https://encrypted.google.com/search?q=git+branching+strategy&quot;&gt;&amp;quot;git branching strategy&amp;quot; on Google&lt;/a&gt;, it&amp;#39;s the number one result.  Atlassian has even adopted it as one of their &lt;a href=&quot;https://www.atlassian.com/git/tutorials/comparing-workflows#gitflow-workflow&quot;&gt;primary tutorials&lt;/a&gt; for adopting Git.&lt;/p&gt;
+
+&lt;p&gt;Personally, I hate GitFlow, and I&amp;#39;ve (successfully) convinced many teams to avoid using it and, I believe, saved them &lt;a href=&quot;http://endoflineblog.com/gitflow-considered-harmful&quot;&gt;tremendous headaches&lt;/a&gt; down the road.  GitFlow, I believe, leads most teams down the wrong path for how to manage their changes.  But since it&amp;#39;s such a popular result, a team with no guidance or technical leadership will simple search for an example of something that works, and the blog post mentions that it&amp;#39;s &amp;quot;successful&amp;quot; right in the title so it&amp;#39;s very attractive.  &lt;strong&gt;I&amp;#39;m hoping to possibly change that with this post, by explaining a different, simpler branching strategy that I&amp;#39;ve used in multiple teams with great success&lt;/strong&gt;.  I&amp;#39;ve seen GitFlow fail spectacularly for teams, but the strategy I outline here has worked very well.&lt;/p&gt;
+
+&lt;p&gt;I&amp;#39;m dubbing this &lt;strong&gt;Three-Flow&lt;/strong&gt; because there are exactly three branches&lt;sup id=&quot;fnref1&quot;&gt;&lt;a href=&quot;#fn1&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;. Not four.  Not two.  Three.&lt;/p&gt;
+
+&lt;p&gt;First, a word of warning.  This is not a panacea.  This will not work for all teams or all kinds of development work.  In fact off the top of my head, I don&amp;#39;t believe it would work well for 1) embedded programming 2) shrinkwrap release software or 3) open source projects.  &lt;strong&gt;Basically Three-Flow works when:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Everyone committing to a codebase works together.&lt;/strong&gt;  If not on the same team, at least at the same company.  If you&amp;#39;re taking code from external developers via GitHub or something, this won&amp;#39;t work.  Everyone making commits is &amp;quot;trusted.&amp;quot;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;The product can be replaced live with another version without user awareness&lt;/strong&gt;.  In other words, hosted web applications and SaaS offerings.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1&gt;What&amp;#39;s wrong with GitFlow?&lt;/h1&gt;
+
+&lt;p&gt;In brief, &lt;strong&gt;the primary flaw with GitFlow is feature branches&lt;/strong&gt;.  Feature branches are the root of all evil, pretty much everything that results from using feature branches is terrible.  If you take nothing else away from this post, or hell even if you stop reading entirely, please internalize an utter disgust for feature branches.&lt;/p&gt;
+
+&lt;table class='image aligncenter' width='606'&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/boo_feature_branches.png&quot; width='600' height='795'/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;To be fair, Driessen&amp;#39;s post specifically does say that feature branches &amp;quot;typically exist in developer repos only, not in origin&amp;quot; but the graphics really don&amp;#39;t convey that very well, including a specific image of &amp;quot;origin&amp;quot; which includes a pink feature branch with three commmits.  Moreover, I&amp;#39;ve encountered many teams that have adopted or are considering adopting GitFlow and none of them have ever noticed that Driessen recommends branches only exist on a developer&amp;#39;s machine.  Everyone I&amp;#39;ve ever met that adopts GitFlow has long-running remote feature branches.&lt;/p&gt;
+
+&lt;p&gt;There&amp;#39;s nothing wrong with making a feature branch on your local machine.  It&amp;#39;s a good way to hop between different features you might be working on, or have a clean &lt;code&gt;master&lt;/code&gt; in case you need to make a commit to mainline without pulling in what you&amp;#39;re working on.  But I&amp;#39;ll go further than the original GitFlow post and say &lt;strong&gt;feature branches should &lt;em&gt;never&lt;/em&gt; be pushed to origin&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;When you have long-running feature branches, &lt;a href=&quot;http://c2.com/xp/IntegrationHell.html&quot;&gt;integration hell is almost inevitable&lt;/a&gt;.  Two engineers are happily working away making commit after commit to their own respective feature branches, but neither of their branches are seeing the other&amp;#39;s code.  Even if they&amp;#39;re regularly pulling off mainline, they&amp;#39;re still only seeing the commits that make it into the main branch, not each others.  Developer A merges their code into mainline, then Developer B pulls and merges theirs, but now they have to deal with tons of merge conflicts.  Developer B might not be in the best position to understand and resolve those conflicts if they don&amp;#39;t fully understand what Developer A is doing, and depending on how long these branches have been alive, they might have tons of code to resolve.&lt;/p&gt;
+
+&lt;p&gt;&lt;span data-pullquote=&quot;A developer's primary form of communication with other developers is source code.  Long-running branches are silence. &quot; class=&quot;left&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;Long-running feature branches are the exact opposite of what you want.  &lt;strong&gt;A developer&amp;#39;s primary form of communication with other developers is source code&lt;/strong&gt;.  It doesn&amp;#39;t matter how often you have stand-up meetings, when it comes to the central method of communication, &lt;strong&gt;long-running branches represent dead silence&lt;/strong&gt;.  &lt;a href=&quot;https://blog.newrelic.com/2012/11/14/long-running-branches-considered-harmful/&quot;&gt;Long-running branches are the worst&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Feature branches also scale terribly.  You can get away with one developer having a long-running feature branch, but as your team grows and you have more and more engineers in the same codebase, each pair of developers running feature branches is failing to communicate effectively about their work.  If you have a mere 8 engineers each running their own feature branch, you have $\frac{8&lt;sup&gt;2}{2}&lt;/sup&gt; = 32$ different failed communication lines.  Add another engineer and it&amp;#39;s 40 missed lines of communication.&lt;/p&gt;
+
+&lt;h2&gt;Use Feature Toggles&lt;/h2&gt;
+
+&lt;p&gt;Instead of using feature branches, use &lt;a href=&quot;https://www.martinfowler.com/articles/feature-toggles.html&quot;&gt;feature toggles&lt;/a&gt; in your code.  Feature toggles are essentially boolean values that allow you to not execute new code that isn&amp;#39;t ready for production while still sharing or possibly even deploying that code.  It looks in code exactly as you might expect:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;if(newCodeEnabled) {
+    //new code
+} else {
+    //old code
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;The old code will continue executing until the newCodeEnabled toggle is flipped.  These toggles can be implemented through a config file or even some kind of globally accessible boolean, though in my experience the best way is to use an external config like &lt;a href=&quot;https://www.consul.io/docs/agent/options.html&quot;&gt;Consul&lt;/a&gt; or &lt;a href=&quot;https://zookeeper.apache.org/&quot;&gt;Zookeeper&lt;/a&gt; so that features can be toggled on or off without requiring a redeployment.  &lt;strong&gt;Product owners and other stakeholders love being able to view a dashboard of toggles and turn features on and off without asking developers.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;If two developers are working from the same branch but using different feature toggles, the chances for a conflict are far lower.  And since they&amp;#39;re working off the same branch, they can pull and push multiple times per day to stay in-sync.  At a bare minimum, developers should pull at the start of the day and push at the end of the day, so that no two local repositories are out of sync by more than a workday.&lt;/p&gt;
+
+&lt;p&gt;Automated tests should be written for the cases where the toggle is both on and off.  This basically means that when a new feature is being developed, the existing tests simply need to be adjusted to setUp with the flag off.  Then new tests get added with the flag on.  The test suite ensures that the &amp;quot;old way&amp;quot; never breaks.  Sometimes the execution path through the code can be affected by more than one toggle.  If you have two toggles that intersect in some way, you need 4 groups of tests (both off, both on, and both variants of one on and one off).  Again this ensures that two developers working in the same area of the code are regularly seeing each other&amp;#39;s changes and integrating constantly.  Code coverage tools can easily tell you if you&amp;#39;re missing a potential path through the code.&lt;/p&gt;
+
+&lt;table class='image alignright' width='306'&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/toggle.jpg&quot; width='300' height='223'/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;Feature Toggles can also be expanded to be more dynamic.  Rather than simply being booleans, you could build your system so that toggles could depend on the status of users, allowing users or groups of users to &amp;quot;opt-in&amp;quot; to a beta program that gives access to bleeding edge features as they&amp;#39;re developed to solicit customer feedback.  Toggles could be dependent on geographic location or even a dice-roll, allowing for A/B testing and canary releases when features are ready to be turned on.&lt;/p&gt;
+
+&lt;p&gt;When the feature is finished and turned on in production, you can schedule a small cleanup task to delete the old code paths and the toggle itself.  Or you can leave the code in place if it&amp;#39;s a feature that may have reason to turn off again in the future - I&amp;#39;ve left feature toggles in place that have really saved the day down the road when some major backend system was experiencing a catastrophic problem and stakeholders wanted to simply turn the feature off temporarily.  If you do intend to remove the toggle, it&amp;#39;s a good idea to schedule it into your regular process as soon as you start the feature, lest the team forget when bigger, shinier work comes along.&lt;/p&gt;
+
+&lt;p&gt;I cannot overstate the value of feature toggles enough.  &lt;strong&gt;I can virtually guarantee that if you start using toggles instead of branches for long-developed features, you&amp;#39;ll never look back or want to use feature branches again&lt;/strong&gt;.  In nearly every case that I gave in to a team member that pushed hard for a feature branch because of this or that reason, it wound up being a massive pain later on that delayed the release of important software.  I&amp;#39;ve pretty much always regretted feature branches, and never once regretted making a feature toggle.  It takes some getting used to, particularly if you&amp;#39;re accustomed to long-running branches, but the positive impact toggles have on your team is tremendous.&lt;/p&gt;
+
+&lt;h1&gt;Introducing Three-Flow&lt;/h1&gt;
+
+&lt;p&gt;Alright, now that we&amp;#39;ve gotten feature branching off the table, we can talk about the workflow that I&amp;#39;ve used successfully on multiple teams.&lt;/p&gt;
+
+&lt;table class='image aligncenter' width='583'&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/three-flow.png&quot; width='577' height='747'/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;In this approach, all developers work off &lt;code&gt;master&lt;/code&gt;.  If a feature is going to need to be in development for a while, it&amp;#39;s put behind a feature toggle, and still kept on master with all the other code.  &lt;strong&gt;All commits to master are rebased&lt;/strong&gt;.  It&amp;#39;s a good idea to set &lt;a href=&quot;http://stevenharman.net/git-pull-with-automatic-rebase&quot;&gt;automatic rebase on pulls&lt;/a&gt;.  If you have a local feature branch for your work, it should be rebased onto master, there should be no trace of the branch in origin.&lt;/p&gt;
+
+&lt;p&gt;That&amp;#39;s it.  That&amp;#39;s where all the main development work happens.  You have one branch, the default &lt;code&gt;master&lt;/code&gt; branch.  And everyone codes there.  Everything else about Three-Flow is concerned with managing releases.&lt;/p&gt;
+
+&lt;h2&gt;Releasing&lt;/h2&gt;
+
+&lt;p&gt;When it&amp;#39;s time to do a release (regular cadence or whenever the stakeholders want it, your call), the &lt;code&gt;master&lt;/code&gt; branch is &amp;quot;cut&amp;quot; to the &lt;code&gt;candidate&lt;/code&gt; branch. The same &lt;code&gt;candidate&lt;/code&gt; branch is used over and over again for this purpose.&lt;/p&gt;
+
+&lt;p&gt;The purpose of &lt;code&gt;candidate&lt;/code&gt; is to allow a QA team to do any kind of regression testing it would like to do.  Theoretically, all of the features themselves have been tested as part of accepting that the work is done.  But this release candidate branch allows one last check to make sure everything is in order before going to production.  The &lt;code&gt;master&lt;/code&gt; branch where all the work is done and accepted should be tested in a production-like environment where &lt;strong&gt;the relevant feature toggles are on&lt;/strong&gt;.  The &lt;code&gt;candidate&lt;/code&gt; branch where work is sanity-checked before release should be tested in a production-like environment where &lt;strong&gt;the relevant feature toggles are off&lt;/strong&gt;.  In other words, it should run the code the same way that production itself will, with the new toggles defaulted to off.&lt;/p&gt;
+
+&lt;p&gt;To cut a release candidate, you&amp;#39;d do this:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-output&quot; data-lang=&quot;output&quot;&gt;$ git checkout candidate  #assume candidate already tracks origin/candidate
+$ git pull #make sure we're up to date locally
+$ git merge --no-ff origin/master
+$ git tag candidate-3.2.645
+$ git push --follow-tags
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;The reason for using --no-ff is to force git to create a merge commit (a new commit with two parents).  This commit will have one parent that&amp;#39;s the previous HEAD of &lt;code&gt;candidate&lt;/code&gt; and one that&amp;#39;s the current HEAD of &lt;code&gt;master&lt;/code&gt;.  This allows you to easily view your git history and see when branches were cut, by whom, and which commits were pulled over.&lt;/p&gt;
+
+&lt;p&gt;You&amp;#39;ll also noticed we tagged the release.  More on that in a bit.&lt;/p&gt;
+
+&lt;p&gt;If bugs are found in the &lt;code&gt;candidate&lt;/code&gt; branch as part of the testing effort, they are fixed in &lt;code&gt;candidate&lt;/code&gt;, tagged with a new release tag, and then merged down into &lt;code&gt;master&lt;/code&gt;.  These merges should also use the &lt;code&gt;--no-ff&lt;/code&gt; parameter, so as to accurately reflect code moving between the two branches.&lt;/p&gt;
+
+&lt;p&gt;When a release candidate is ready to go out the door, we update the &lt;code&gt;release&lt;/code&gt; branch so that it&amp;#39;s HEAD points to the same commit as the HEAD of the &lt;code&gt;candidate&lt;/code&gt; branch.  Since we&amp;#39;re tagging every release we make on the &lt;code&gt;candidate&lt;/code&gt; branch &lt;strong&gt;we can simply push the tag itself to be the new HEAD of &lt;code&gt;release&lt;/code&gt;&lt;/strong&gt;:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-output&quot; data-lang=&quot;output&quot;&gt;$ git push --force origin candidate-3.2.647:release
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;The --force basically means to ignore whatever else is on the origin &lt;code&gt;release&lt;/code&gt; branch and set it&amp;#39;s HEAD to point at the same commit that &lt;code&gt;candidate-3.2.647&lt;/code&gt; points to.  Note that this is not a merge - we don&amp;#39;t want to complicate the git history with this, really the only reason we&amp;#39;re even bothering with the &lt;code&gt;release&lt;/code&gt; branch at all is so that we have a branch to make production hotfixes to if need be.  Yes, this force push means any hotfix work in &lt;code&gt;release&lt;/code&gt; would get overwritten - if you find yourself releasing new candidates to production while there is ongoing hotfix production work, your team has a serious coordination/communication issue that needs to be addressed.  Either that or you&amp;#39;re doing way too many production hotfixes and have a major quality problem.  &lt;strong&gt;Production hotfixes should be possible but rare&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;The reason we do a --force push rather than a merge is that if you do a merge, it means that the commit at the HEAD of &lt;code&gt;candidate&lt;/code&gt; and the commit at the head of &lt;code&gt;release&lt;/code&gt; may have different sha-1&amp;#39;s, which isn&amp;#39;t what we want.  We don&amp;#39;t want to make a &lt;em&gt;new&lt;/em&gt; commit for the release, we want &lt;em&gt;exactly&lt;/em&gt; what was QA&amp;#39;d and that&amp;#39;s the commit at the HEAD of &lt;code&gt;candidate&lt;/code&gt;.  So rather than create a merge, we forcefully tell git to make the tip of &lt;code&gt;release&lt;/code&gt; exactly match that of the release candidate, the HEAD of &lt;code&gt;candidate&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Any production hotfixes that need to happen are made to &lt;code&gt;release&lt;/code&gt; and then merged into &lt;code&gt;candidate&lt;/code&gt; and then into &lt;code&gt;master&lt;/code&gt;, all with &lt;code&gt;--no-ff&lt;/code&gt;.  This is quite a bit of git work for a production hotfix (2 distinct merge operations), but production hotfixes should be rare anyway.&lt;/p&gt;
+
+&lt;p&gt;If you follow this workflow exactly, then when you view your git history as a graph it will look pretty much exactly like the above picture, showing exactly which commits moved between branches.&lt;/p&gt;
+
+&lt;table class='image aligncenter' width='606'&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/threeflow-history.png&quot; width='600' height='472'/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;You&amp;#39;ll notice that the way the above graph does NOT resemble the earlier picture is that you don&amp;#39;t see the dotted lines pushing to &lt;code&gt;release&lt;/code&gt;.  That&amp;#39;s because we always do a &lt;code&gt;--force&lt;/code&gt; push, meaning that every time we release to production, we completely ignore what production once was.  This is intentional - it doesn&amp;#39;t matter what was on production and when, all that matters is what&amp;#39;s on production &lt;em&gt;right now&lt;/em&gt; so we can hotfix it in case of a production emergency.  The only time you&amp;#39;ll even see the &lt;code&gt;release&lt;/code&gt; branch at all on this graph is for whatever is currently in production, and whenever hotfixes were made that had to be merged into &lt;code&gt;candidate&lt;/code&gt; and &lt;code&gt;master&lt;/code&gt;.  This is exactly what we want: no unnecessary information adding noise to our graph.&lt;/p&gt;
+
+&lt;h2&gt;Release Notes&lt;/h2&gt;
+
+&lt;p&gt;You can easily generate &amp;quot;release notes&amp;quot; for a deployment to production.  You just need to compare the tag for the current &lt;code&gt;release&lt;/code&gt; branch to the tag for the current &lt;code&gt;candidate&lt;/code&gt; branch. &lt;/p&gt;
+
+&lt;p&gt;If you&amp;#39;re using tags, you can do this comparison by using the tag names.  It&amp;#39;s easy to remind yourself of which tag is in production, because every time we force an update of the &lt;code&gt;release&lt;/code&gt; branch pointer, we use the tag.  That means that there&amp;#39;s always exactly a tag that points to the same commit that the HEAD of &lt;code&gt;release&lt;/code&gt; points to.  You can find out which tag this is by running:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-output&quot; data-lang=&quot;output&quot;&gt;$ git describe --tags release
+candidate-3.2.248
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;So if we know that our &lt;code&gt;candidate&lt;/code&gt; branch has been tagged as &lt;code&gt;candidate-3.2.259&lt;/code&gt; you can get the list of commits that make up the difference between those two tags like so:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-output&quot; data-lang=&quot;output&quot;&gt;$ git log --oneline candidate-3.2.248..candidate-3.2.259
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;You could also do this if you didn&amp;#39;t want to mess with tags.  The following will always just compare what&amp;#39;s on &lt;code&gt;release&lt;/code&gt; (production) with what&amp;#39;s on &lt;code&gt;candidate&lt;/code&gt; (what&amp;#39;s set to go to production):&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-output&quot; data-lang=&quot;output&quot;&gt;$ git log --oneline release..candidate
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Running these commands will show you every single commmit that is in the new candidate that wasn&amp;#39;t in the previous release.  At my last gig, we liked to include the ticket numbers for our issue tracker in our commits, which allowed a script to cross-index this list of commits with actual work items in Jira.&lt;/p&gt;
+
+&lt;h1&gt;Common Operations&lt;/h1&gt;
+
+&lt;p&gt;Just to summarize a bit, here are some of the operations you might want to be able to do.  All of these examples assume that your local branches are properly set up to track the remote branches, and that those local branches are up to date.  If you&amp;#39;re not sure, it&amp;#39;s often a good idea to do a &lt;code&gt;git fetch&lt;/code&gt; and then use names like &lt;code&gt;origin/master&lt;/code&gt; instead of &lt;code&gt;master&lt;/code&gt; to ensure you&amp;#39;re using the origin&amp;#39;s version of the branch in case yours is stale.&lt;/p&gt;
+
+&lt;h2&gt;How do I cut a release candidate off master?&lt;/h2&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-output&quot; data-lang=&quot;output&quot;&gt;$ git checkout candidate
+$ git pull
+$ git merge --no-ff master
+$ git tag candidate-3.2.645 #optionally tag the candidate
+$ git push --follow-tags
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;How do I release a candidate?&lt;/h2&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-output&quot; data-lang=&quot;output&quot;&gt;$ git push --force origin &amp;lt;tag for the candidate&amp;gt;:release
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Alternatively if you aren&amp;#39;t using tags you could just do:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-output&quot; data-lang=&quot;output&quot;&gt;$ git push --force origin candidate:release
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;or, if you&amp;#39;re not sure you&amp;#39;re up to date locally:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-output&quot; data-lang=&quot;output&quot;&gt;$ git fetch
+$ git push --force origin origin/candidate:release
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;How do I find which branches have a particular commit on them?&lt;/h2&gt;
+
+&lt;p&gt;Often people want to know if a particular code change is currently in production or set to go out to production in the next release.  Here&amp;#39;s an easy way to find which of the three branches a commit is on.&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-output&quot; data-lang=&quot;output&quot;&gt;$ git branch -r -contains &amp;lt;sha of commit&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;How do I find which tag a branch is pointing to?&lt;/h2&gt;
+
+&lt;p&gt;Or in more accurate terms, for a given branch pointer, how do I find which tag(s) point to the same commit as the branch HEAD?&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-output&quot; data-lang=&quot;output&quot;&gt;$ git describe --tags &amp;lt;branch&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;How do I find out which commits are going to go out with a release?&lt;/h2&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-output&quot; data-lang=&quot;output&quot;&gt;$ git log --oneline release..&amp;lt;tag of release candidate&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;You could also do this if you didn&amp;#39;t want to mess with tags:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-output&quot; data-lang=&quot;output&quot;&gt;$ git log --oneline release..origin/candidate
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;How do I set up the candidate and release branches for the first time?&lt;/h2&gt;
+
+&lt;p&gt;You can create what&amp;#39;s called an &amp;#39;orphan&amp;#39; branch with no commits to it, but you&amp;#39;ll be unable to push it to origin to set up the remote branch until you have some kind of commit.&lt;/p&gt;
+
+&lt;p&gt;Pretty much every project starts with an initial commit, usually just a readme or something.  I recommend just making a branch off that commit and pushing that.  What you&amp;#39;re looking for is the first merge commit into &lt;code&gt;candidate&lt;/code&gt; to have two parents so that it shows up in logs correctly.  So really, any commit on &lt;code&gt;candidate&lt;/code&gt; will work, may as well choose the first one.&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-output&quot; data-lang=&quot;output&quot;&gt;$ git branch candidate `git log --format=%H --reverse | head -1`
+$ git checkout candidate
+$ git push
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;If you try the approach where you create a fresh orphan commit, you&amp;#39;ll find that the first time you try to merge, git will tell you &amp;quot;refusing to merge unrelated histories&amp;quot;.  You basically need the branches to all share a commit, so it may as well be the first commit.  Word of warning though, you might get merge conflicts the very first time you actually cut a release candidate (but probably not).&lt;/p&gt;
+
+&lt;p&gt;To set up the release branch for the first time, just do a release.  As soon as you force push the right commit to the remote &lt;code&gt;release&lt;/code&gt; branch, it will be set.  You&amp;#39;ll also want to check out a local copy of the same branch for any hotfixes you may want to do:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-output&quot; data-lang=&quot;output&quot;&gt;$ git branch release
+$ git branch release --set-upstream-to=origin/release
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h1&gt;Questions&lt;/h1&gt;
+
+&lt;h2&gt;Isn&amp;#39;t this just cactus model?&lt;/h2&gt;
+
+&lt;p&gt;You may be wondering if Three-Flow is simply Jussi Judin&amp;#39;s &lt;a href=&quot;https://barro.github.io/2016/02/a-succesful-git-branching-model-considered-harmful/&quot;&gt;cactus model&lt;/a&gt;, an alternative to GitFlow that uses the default &lt;code&gt;master&lt;/code&gt; branch for all development work.&lt;/p&gt;
+
+&lt;p&gt;For the most part, yes, it is.  The key difference is that Judin recommends moving commits between the &lt;code&gt;master&lt;/code&gt; and &lt;code&gt;release&lt;/code&gt; branches via cherry-picks.  I very much recommend against that, cherry-picks are a last resort, to only be used when correcting a mistake.  I prefer rebasing to merging, and I prefer merging to cherry-picking.  I think it&amp;#39;s important to be able to use merge commits to actually see when and what commits were merged, and by whom.  Being able to pull up an accurate graph of merges is important.  I only use cherry-picking when I put a commit on the wrong branch by mistake.&lt;/p&gt;
+
+&lt;p&gt;The other main difference is the &lt;code&gt;candidate&lt;/code&gt; branch which I accept as something of a necessary evil.  While my goal is always an always-deployable master where all commits automatically go to production, I&amp;#39;ve found that most organizations and teams are not ready or comfortable with that kind of deployment schedule.  Most groups like to have some kind of QA buffer time and that&amp;#39;s basically what &lt;code&gt;candidate&lt;/code&gt; provides.  The goal of the team should be to remove the need for the &lt;code&gt;candidate&lt;/code&gt; crutch but in the mean time Three-Flow provides a very usable, simple branching model that generally gives teams everything they need to be successful with git.&lt;/p&gt;
+
+&lt;h2&gt;Isn&amp;#39;t this just GitFlow without feature branches?&lt;/h2&gt;
+
+&lt;p&gt;I have actually explained this branching strategy to GitFlow adopters by telling them it is essentially just GitFlow except that you don&amp;#39;t have feature branches, all development happens on &lt;code&gt;develop&lt;/code&gt; but you rename GitFlow&amp;#39;s &lt;code&gt;develop&lt;/code&gt; to &lt;code&gt;master&lt;/code&gt; and you rename GitFlow&amp;#39;s &lt;code&gt;master&lt;/code&gt; to &lt;code&gt;release&lt;/code&gt;.&lt;/p&gt;
+
+&lt;table class='image alignleft' width='306'&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/always3.png&quot; width='300' height='175'/&gt;&lt;p class='caption'&gt;Always 3 there are. No more, no less.&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;The motivator behind Three-Flow is simplicity.  GitFlow encourages the creation of a multitude of feature branches, release branches, and hotfix branches.  As a project goes on, the log can start to look impossibly complex.  With Three-Flow, there are no feature branches or hotfix branches.  Hotfixes simply happen on the production &lt;code&gt;release&lt;/code&gt; branch.  And instead of having multiple release branches, you have a single &lt;code&gt;candidate&lt;/code&gt; branch that you just keep reusing.&lt;/p&gt;
+
+&lt;p&gt;You don&amp;#39;t need a system of what to name your branches because there are literally exactly three branches in origin: &lt;code&gt;master&lt;/code&gt;, &lt;code&gt;candidate&lt;/code&gt;, &lt;code&gt;release&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Answering the question of &amp;quot;where does my code go?&amp;quot; is very straightforward.  Is it a production hotfix?  If so, it goes in &lt;code&gt;release&lt;/code&gt;.  Is it fixing a bug that was found while QAing the release candidate?  If so, it goes in &lt;code&gt;candidate&lt;/code&gt;.  Anything else and it goes in &lt;code&gt;master&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h2&gt;What about code reviews?&lt;/h2&gt;
+
+&lt;p&gt;If you have a system where you do code reviews before commits can get into the mainline, I recommend basically adding another branch, maybe &lt;code&gt;review&lt;/code&gt; or even &lt;code&gt;develop&lt;/code&gt; to borrow a term from GitFlow.  All regular development goes on there, and code is reviewed and then cherry-picked into &lt;code&gt;master&lt;/code&gt;.  Of course, it can be tricky to keep track of which commits have and have not been reviewed.  &lt;/p&gt;
+
+&lt;p&gt;I don&amp;#39;t entirely love this approach, frankly I think &amp;quot;all code must be code reviewed&amp;quot; might put you in the camp where Three-Flow won&amp;#39;t work for your team, and you&amp;#39;d be better off doing a GitHub-style pull request model like most open source projects.  I&amp;#39;ve heard &lt;a href=&quot;https://www.gerritcodereview.com/&quot;&gt;Gerrit&lt;/a&gt; might be a good solution, every other &amp;quot;GitFlow sucks&amp;quot; post I&amp;#39;ve ever read usually mentions it but I must confess I&amp;#39;ve never used it myself.&lt;/p&gt;
+
+&lt;h2&gt;What about a codebase with multiple artifacts?&lt;/h2&gt;
+
+&lt;p&gt;A lot of people have a single codebase that builds multiple, independently deployable artifacts.  Those individual buildable artifacts need their own separate QA cycles and different artifacts will have different version numbers in production.  How does Three-Flow work with such a setup?&lt;/p&gt;
+
+&lt;p&gt;I&amp;#39;ve actually worked this way very recently.  We had a single git repository that built multiple different artifacts that deployed independently.  The solution was simple, and each independent artifact only adds two branches to Three-Flow.&lt;/p&gt;
+
+&lt;p&gt;You still have a single shared codebase in &lt;code&gt;master&lt;/code&gt; and you use feature toggles instead of branches.  But let&amp;#39;s say you have two artifacts foo and bar.  You simply have a &lt;code&gt;foo_candidate&lt;/code&gt;, &lt;code&gt;foo_release&lt;/code&gt;, &lt;code&gt;bar_candidate&lt;/code&gt;, and &lt;code&gt;bar_release&lt;/code&gt;.  When you tag release candidates, you tag in the format &lt;code&gt;foo-candidate-2.1.423&lt;/code&gt; and &lt;code&gt;bar-candidate-3.2.126&lt;/code&gt;.  &lt;/p&gt;
+
+&lt;p&gt;Otherwise the process works exactly the same way.  This scales better than you might expect, I was very recently on a large project that had 4 different independently deployable artifacts that came out of a single codebase.  8 &lt;code&gt;candidate&lt;/code&gt; and &lt;code&gt;release&lt;/code&gt; branches, plus &lt;code&gt;master&lt;/code&gt;.  Generally there was a pretty strong mapping between an individual &amp;quot;team&amp;quot; and one of these artifacts, so a team or a group still just worked with 3 branches.&lt;/p&gt;
+
+&lt;h2&gt;Can&amp;#39;t I just use merging for the release branch?&lt;/h2&gt;
+
+&lt;p&gt;First of all, you can do whatever you want.  This is just a strategy that worked for me on multiple different teams and I wanted to spread it around because I think it&amp;#39;s much simpler than GitFlow.&lt;/p&gt;
+
+&lt;p&gt;But moreover, yes, if you don&amp;#39;t like the idea of doing a `&lt;code&gt;push --force&lt;/code&gt; to update &lt;code&gt;release&lt;/code&gt; and losing some historical information, but would rather just do a &lt;code&gt;merge --no-ff&lt;/code&gt;, by all means do it.  This has the advantage of being fewer things to remember how to do, basically any time you move code between the three branches you&amp;#39;re doing a &lt;code&gt;merge --no-ff&lt;/code&gt;.  &lt;/p&gt;
+
+&lt;p&gt;In fact, an early version of this strategy did just that, &lt;code&gt;--no-ff&lt;/code&gt; merges to &lt;code&gt;release&lt;/code&gt;.  It worked out fine, reading the git history was really straightforward.  The only thing I don&amp;#39;t like about it is that it&amp;#39;s &lt;em&gt;kind of&lt;/em&gt; a fib, in that what goes out to production should be the exact same HEAD of &lt;code&gt;candidate&lt;/code&gt; that went through QA, and doing a merge commit creates a brand new commit on &lt;code&gt;release&lt;/code&gt; that didn&amp;#39;t necessarily get tested.  You could, of course, not do a merge commit to &lt;code&gt;release&lt;/code&gt; and only do fast-forwarding commits.  But then you sort of lose the history anyway, and there&amp;#39;s always a chance that the branch can&amp;#39;t be fast-forwarded and you need a merge commit anyway.  &lt;/p&gt;
+
+&lt;p&gt;For my money, doing the force pushes kind of reinforces that &lt;code&gt;release&lt;/code&gt; isn&amp;#39;t really a branch and shouldn&amp;#39;t be treated like one.  It&amp;#39;s really just an updated pointer to production.  It&amp;#39;s basically just a series of tags, except that since it&amp;#39;s a branch you can easily make a new commit on it for production hotfixes.  To each their own though, there are definitely some simplicity advantages to always doing the same thing with &lt;code&gt;candidate&lt;/code&gt; that you do with &lt;code&gt;release&lt;/code&gt;.  But hell, either way is preferable to using GitFlow.  Have I mentioned how much I hate GitFlow?  It&amp;#39;s a &lt;em&gt;bunch&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h1&gt;Summary&lt;/h1&gt;
+
+&lt;p&gt;To summarize the main Three-Flow branching model outlined here:&lt;/p&gt;
+
+&lt;table class='image alignright' width='306'&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/triforce-threeflow.png&quot; width='300' height='200'/&gt;&lt;p class='caption'&gt;It's dangerous to git alone.  Take this.&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;ul&gt;
+&lt;li&gt;There are three branches in origin: &lt;code&gt;master&lt;/code&gt;, &lt;code&gt;candidate&lt;/code&gt;, &lt;code&gt;release&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Normal development happens on &lt;code&gt;master&lt;/code&gt;.  All new commits are rebased.&lt;/li&gt;
+&lt;li&gt;Features that are incomplete are put behind feature toggles, ideally dynamic toggles that can be changed without a redeploy&lt;/li&gt;
+&lt;li&gt;To cut a release, &lt;code&gt;master&lt;/code&gt; is merged into &lt;code&gt;candidate&lt;/code&gt; with a &lt;code&gt;--no-ff&lt;/code&gt; merge commit&lt;/li&gt;
+&lt;li&gt;Any bugs found during a candidate&amp;#39;s QA phase are fixed in &lt;code&gt;candidate&lt;/code&gt; and then merged into &lt;code&gt;master&lt;/code&gt; with a &lt;code&gt;--no-ff&lt;/code&gt; merge commit&lt;/li&gt;
+&lt;li&gt;When a candidate is released to production, it&amp;#39;s &lt;code&gt;push --forced&lt;/code&gt; to the tip of &lt;code&gt;release&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Any production hotfixes happen in &lt;code&gt;release&lt;/code&gt; and are then merged into &lt;code&gt;candidate&lt;/code&gt; which is then merged into &lt;code&gt;master&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;That&amp;#39;s really all there is to it.  Like I say above, there are all kinds of development paradigms that this won&amp;#39;t apply to, it&amp;#39;s largely geared toward web applications.  But if you think Three-Flow might work for your organization, I highly recommend giving it a shot before adopting the future headache and incomprehensible git history that is GitFlow.  &lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;In my opinion, Three-Flow is the quickest and easiest way to get up and running with a sensible branching strategy with minimal rules to follow and the fewest complexities to understand.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Tried something similar and loved it?  Tried something similar and found an issue that you solved?  Think my use of &lt;code&gt;--force&lt;/code&gt; is a blasphemous use of git and I&amp;#39;m the stupidest dumb idiot that ever ate his own boogers?  Feel free to leave a comment below.&lt;/p&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+
+&lt;li id=&quot;fn1&quot;&gt;
+&lt;p&gt;It was everything I could muster to not call this HiltonFlow or MacheteFlow.  You&amp;#39;re welcome, anyone who wants to actually try and convince their team to do this.&amp;nbsp;&lt;a href=&quot;#fnref1&quot; rev=&quot;footnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+				<pubDate>Sun, 09 Apr 2017 00:00:00 -0400</pubDate>
+				<link>http://www.nomachetejuggling.com/2017/04/09/a-different-branching-strategy/</link>
+				<guid isPermaLink="true">http://www.nomachetejuggling.com/2017/04/09/a-different-branching-strategy/</guid>
+			</item>
+		
+			<item>
 				<title>Software Engineering Guiding Principles - Part 2</title>
 				<description>&lt;p&gt;Here are five more Guiding Principles I use when making technical decisions as a software engineer.  You can also check out &lt;a href=&quot;http://www.nomachetejuggling.com/2016/06/15/guidingprinciples-part1/&quot;&gt;Part 1&lt;/a&gt;.&lt;/p&gt;
 
@@ -1206,156 +1462,6 @@ class ExampleControllerSpec extends Specification {
 				<pubDate>Wed, 05 Feb 2014 00:00:00 -0500</pubDate>
 				<link>http://www.nomachetejuggling.com/2014/02/05/top-10-career-changing-programming-books/</link>
 				<guid isPermaLink="true">http://www.nomachetejuggling.com/2014/02/05/top-10-career-changing-programming-books/</guid>
-			</item>
-		
-			<item>
-				<title>CenturyLink: Traps and Caps</title>
-				<description>&lt;p&gt;&lt;em&gt;TL;DR: After a decade of service, CenturyLink decided I wasn&amp;#39;t worth keeping as a customer, so I switched to Comcast Business Internet.  Even if CenturyLink tells you that you have no data caps, you do.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;When I first moved to Colorado nearly a decade ago, I signed up for Comcast&amp;#39;s Residential high-speed internet service, and I hated it.  I had to reset my cable modem once every week because it would stop working properly, and my internet noticeably slowed down when people would get home from school/work in my apartment complex.&lt;/p&gt;
-
-&lt;p&gt;I did some research and determined that, for the kinds of internet speeds being offered at the time (around 1-5Mbps down), Qwest&amp;#39;s DSL had similar prices to Comcast.  Additionally, because it was DSL, I could use my own Netgear router that had a DSL modem built in, and I wouldn&amp;#39;t have to mess with company equipment.  Also, DSL&amp;#39;s speed varies based on your distance to a hub, not based on how many people are currently using it.  I thought I could avoid both of my major problems by switching to DSL for about the same price, so I did, paying for the maximum possible speed at the time, 5Mbps.&lt;/p&gt;
-
-&lt;p&gt;For many years, Qwest was the only monthly bill I never had any trouble with.  Sometimes my cable would go out or look pixelated, sometimes my heating bill would be surprisingly massive, I was always having annoying issues with my cell phone service, but month after month, I never even noticed I had Qwest.  It was just there, it worked, it never went down, it never slowed down.  It was great.&lt;/p&gt;
-
-&lt;table class='image alignright' width='306'&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/Qwest-300x233.jpg&quot; width='300' height='233'/&gt;&lt;p class='caption'&gt;The good ol' days.&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-
-&lt;p&gt;As the years went by, Cable speeds seemed to be improving at a faster rate than DSL speeds.  Nonetheless, I was happy with Qwest&amp;#39;s customer service and I had bad experiences with Cable, so I stuck to DSL.  One day, I got a mailer that 10Mbps was now available in my area.  I called Qwest that day and upgraded.  A year or so later, another mailer came with 20Mbps as an offer, and I upgraded immediately.  Each time the price difference was less than double for double the speed, so it seemed worth it.  I use a lot of internet, and I still missed my University&amp;#39;s T3 line.&lt;/p&gt;
-
-&lt;p&gt;Eventually Qwest became CenturyLink after an acquisition/merge.  I was a bit worried at first, I was happy with Qwest not only from a technical standpoint, but from a customer service standpoint.  Would this change?  I could always tell that Qwest representatives were especially friendly to me after they saw how long I&amp;#39;d been a customer, I feared I&amp;#39;d lose my &amp;quot;standing&amp;quot;.  But, CenturyLink one day sent me a letter offering &amp;quot;fiber&amp;quot; internet, 40Mbps down, 5Mbps up.  Upgrading bumped my price up to about $100 a month, which was a lot, but I really do use the everloving crap out of some internet, so I did it.&lt;/p&gt;
-
-&lt;p&gt;Many people on Twitter and Facebook asked me about internet providers, and I&amp;#39;d always talk up CenturyLink.  Fast internet, good customer service, no downtime.  And best of all, this was around the time that cable companies started introducing usage caps on their cable internet.  I found this maddening for both philosophical and technical reasons, but &lt;strong&gt;CenturyLink had no such caps, so I&amp;#39;d often argue it was a better choice for heavy internet users like myself&lt;/strong&gt;.  I know that I influenced a handful of people to get CenturyLink, or even in a few cases to switch to CenturyLink off Comcast.&lt;/p&gt;
-
-&lt;h1&gt;The First Warning&lt;/h1&gt;
-
-&lt;p&gt;In February of this past year, I was at work and decided I wanted something off my computer at home.  I tried to SSH into my workstation at home but was unable to connect.  This was strange.  Like I said earlier, CenturyLink never went down, so it made no sense to me.  Thinking maybe my workstation had crashed or died, I tried connecting to my home VPN, and that didn&amp;#39;t work either.  There are a few services I run on various machines that sync with centralized servers, such as &lt;a href=&quot;http://www.subsonic.org/pages/index.jsp&quot;&gt;Subsonic&lt;/a&gt; and &lt;a href=&quot;http://www.plexapp.com/&quot;&gt;Plex&lt;/a&gt;, so I tried connecting to them, only to discover they too had lost connectivity to my home.  I even tried pulling up my &lt;a href=&quot;https://nest.com/&quot;&gt;Nest&lt;/a&gt;, and saw that even that had lost connectivity to the outside world.&lt;/p&gt;
-
-&lt;p&gt;Here&amp;#39;s how much confidence I had in CenturyLink: &lt;strong&gt;I actually thought the power must be out.&lt;/strong&gt;  I went home at the end of the day, fully expecting to walk into a cold house that had been without power for a portion of the day, and assuming I&amp;#39;d have to go around resetting clocks and booting up computers.  But to my surprise, the house was fine.  All the clocks had the right time on them, the power had never gone out.  It was an internet problem.&lt;/p&gt;
-
-&lt;p&gt;I sat down at a computer and opened up a web browser.  Instead of my home page, I got this:&lt;/p&gt;
-
-&lt;table class='image aligncenter' width='586'&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/centurylinkuse-580x391.png&quot; width='580' height='391'/&gt;&lt;p class='caption'&gt;No 'net for you!&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-
-&lt;p&gt;This was why none of my devices were connectable.  Every outgoing connection was pulled into some weird walled garden with this message, and I wasn&amp;#39;t able to get my internet back until I clicked Continue to acknowledge I&amp;#39;d gotten the warning.  &lt;/p&gt;
-
-&lt;p&gt;Like I said, and like I had told many people, CenturyLink &lt;strong&gt;had no usage caps&lt;/strong&gt;.  I had never heard of this Excessive Use Policy before, I didn&amp;#39;t remember getting a letter saying one had been implemented.  I used quite a lot more internet in January than usual, but I had no idea it was something I needed to curb. &lt;/p&gt;
-
-&lt;p&gt;Totally baffled by this, I called the number in the notice.  I asked what the policy was and the tech told me to hold on while she looked up my account.  Alright, I thought, this is good.  Generally as soon as they look up my account, they see how long I&amp;#39;ve had service with the company and their tone becomes super-friendly.  Sure enough, when she came back on the line, she was quite friendly.  &lt;strong&gt;She told me that, because I pay for the highest tier internet the company offers, 40Mbps down, that the Excessive Use Policy does not actually apply to me.&lt;/strong&gt;  She said the notice was in error, I wasn&amp;#39;t supposed to get it.  She said she&amp;#39;d flip a flag to make sure I never get another notice again.  I thanked her and asked her to please make a note of this conversation in my account, so that it would be there in case it happened again and I had to call back.  She said she would, but reiterated that it was not necessary, as it would not happen again.&lt;/p&gt;
-
-&lt;p&gt;When I first got the warning message, I posted it to my Twitter, expressing some irritation.  A bunch of friends asked me what happened, since I was always talking up CenturyLink.  After I got off the call, I posted again with an update, that it was all good, and I wasn&amp;#39;t even supposed to get the warning.  I publicly praised CenturyLink&amp;#39;s customer service yet again.&lt;/p&gt;
-
-&lt;blockquote class=&quot;twitter-tweet&quot; lang=&quot;en&quot;&gt;&lt;p&gt;&lt;a href=&quot;https://twitter.com/CenturyLink&quot;&gt;@CenturyLink&lt;/a&gt; resolution: I&amp;#39;ve been removed from the list of accounts that get such notices. Good on you guys, thanks Kensie. &lt;a href=&quot;https://twitter.com/search?q=%23happycustomer&amp;amp;src=hash&quot;&gt;#happycustomer&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&amp;mdash; Rod Hilton (@rodhilton) &lt;a href=&quot;https://twitter.com/rodhilton/statuses/301883017645928449&quot;&gt;February 14, 2013&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;script async src=&quot;//platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;blockquote class=&quot;twitter-tweet&quot; lang=&quot;en&quot;&gt;&lt;p&gt;&lt;a href=&quot;https://twitter.com/CenturyLink&quot;&gt;@CenturyLink&lt;/a&gt;, my tweet about how well you resolved this issue has 2 of my friends considering switching from Comcast. :)&lt;/p&gt;
-&lt;p&gt;&amp;mdash; Rod Hilton (@rodhilton) &lt;a href=&quot;https://twitter.com/rodhilton/statuses/301907519121530881&quot;&gt;February 14, 2013&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;script async src=&quot;//platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;h1&gt;The Second Warning&lt;/h1&gt;
-
-&lt;p&gt;I resumed business as usual, confident that the usage policy did not apply to me, happily using my internet like crazy.  But a few months later, in May, I was working at home and, once again, I was presented with a similar walled-garden message.  The first time I was surprised and alarmed, but now I was annoyed.  I had already discussed this with a representative, and she assured me I wouldn&amp;#39;t get another one of these.&lt;/p&gt;
-
-&lt;p&gt;I called again, and hid my irritation, knowing that if I stayed friendly, as soon as the technician pulled up my account, they would see how long I&amp;#39;ve been a customer and be friendly as well.  Once again, the tech pulled up my account notes, and was immediately accommodating.  I asked if my notes indicated I&amp;#39;d called about this before, and the representative told me &lt;strong&gt;yes, he could see that I had spoken to the company a few months ago, and was told I was not supposed to get these.&lt;/strong&gt;  The representative put me on hold so he could call some other department and be certain that the proper flag was set so that I wouldn&amp;#39;t get any more of these.  After about 10 minutes, he came back and told me it&amp;#39;s done, he&amp;#39;s sure I won&amp;#39;t get any more of these.  I asked him to please make another note in my account that we had this conversation, and he said he did.&lt;/p&gt;
-
-&lt;p&gt;Once again, I live-tweeted most of these interactions.  And once again, people responded to it.  One thing that kept popping up was, people advised me to look into Comcast Business Internet.  They said it was more reliable than Comcast Residential, and had absolutely no data caps because it&amp;#39;s for businesses.  Curious, I looked into it, even going so far as calling a Comcast Business representative to ask some questions and get a plan priced out.  I was surprised to see that the price for Comcast Business Class internet was about the same as what I was paying, for slightly faster access.  All this time, I&amp;#39;d been comparing Qwest/CenturyLink&amp;#39;s price increases for more speed, never really comparing with competitors. &lt;/p&gt;
-
-&lt;p&gt;Comcast Business looked interesting, but in the end, I didn&amp;#39;t like the idea of having to sign up for a year or two of service ahead of time with a contract, and I didn&amp;#39;t fully trust Comcast due to my experiences with the residential cable.  The price of Comcast Business Internet was good, but the only real advantage was the removal of data caps, which I&amp;#39;ve now had two CenturyLink representatives tell me don&amp;#39;t apply to me anyway.  My faith in CenturyLink restored, I once again went about my business.&lt;/p&gt;
-
-&lt;blockquote class=&quot;twitter-tweet&quot; lang=&quot;en&quot;&gt;&lt;p&gt;2nd Excessive Use warning from &lt;a href=&quot;https://twitter.com/CenturyLink&quot;&gt;@CenturyLink&lt;/a&gt;. Called and they said (again) I&amp;#39;d never get another. Love the customer support.&lt;/p&gt;
-&lt;p&gt;&amp;mdash; Rod Hilton (@rodhilton) &lt;a href=&quot;https://twitter.com/rodhilton/statuses/334521053403549697&quot;&gt;May 15, 2013&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;script async src=&quot;//platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;h1&gt;The Letter&lt;/h1&gt;
-
-&lt;p&gt;I never got another walled-garden notice.  Months went by, and I figured that the extra effort the CSR took to get me flagged properly finally worked, and I was in good shape.  Then, on November 21st, I got a letter.  Not a browser notice, not an e-mail, but a paper letter, sent via the post office.  The last 3 times this company sent me something in the mail, it was to alert me of higher speeds in my area.  This letter was decidedly different.&lt;/p&gt;
-
-&lt;table class='image aligncenter' width='586'&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/centurylinktermination-e1386560161832-580x576.png&quot; width='580' height='576'/&gt;&lt;p class='caption'&gt;You're Terminated.&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-
-&lt;p&gt;So many things annoyed me about this letter.  The claim that this was my third notice was questionable, to start.  Though I had gotten two previous warnings, both of them were in error according to CenturyLink customer service.  So as far as I was concerned, I had gotten zero warnings.  Additionally, the termination date was December 3rd, eleven days away.  Eleven days to find a new internet provider, get signed up, schedule an install, get everything working?  Infuriating.&lt;/p&gt;
-
-&lt;p&gt;Once again, I held back my irritation, knowing that being friendly was always met by helpful representatives once they saw how long I&amp;#39;d been a customer.  I called the number on the letter, which connected me to technical support, and person who I will call Jordan. &lt;strong&gt;Jordan checked my account and said that my account was not flagged for termination, had no excessive use flags on it, and was in good standing.&lt;/strong&gt;  He called the letter a &amp;quot;miscommunication&amp;quot; and said I would not have my service ended.  This was good news, so I relaxed a bit.  I did, however, ask if he saw the two notes on my account from previous calls about similar issues, and he said that there were no notes on my account.  That made no sense to me, the second time I called, the person I spoke with specifically mentioned seeing the note from the first time I called, so how could it be gone?  Jordan informed me it might be a &amp;quot;business note&amp;quot; and I should call the business office on Monday, because he only had access to &amp;quot;technical notes&amp;quot;.&lt;/p&gt;
-
-&lt;p&gt;I called the business office on Monday using a number Jordan gave me and spoke to a second CSR, who I will refer to as Taylor.  Taylor verified two things for me.  One, I absolutely did not have any notes on my account about previous phone calls.  And two, &lt;strong&gt;my account was just fine, I was not set to be terminated, I had nothing to worry about&lt;/strong&gt;.  Again, I relaxed some more, but then Taylor suggested we conference-call someone from the &amp;quot;Securities Office&amp;quot; just to triple-check.  She got an employee, who I will refer to as Howard, on the line.&lt;/p&gt;
-
-&lt;p&gt;Howard did some checking and gave me some news that stunned me.  &lt;strong&gt;The excessive use policy &lt;em&gt;does&lt;/em&gt; apply to my account, and I am indeed flagged for termination on the 3rd, now in eight days.&lt;/strong&gt;  I was almost at a loss for words.  I was told to ignore both warnings by CenturyLink employees previously.  I called the number &lt;em&gt;on the termination notice&lt;/em&gt; and was told my account was fine, and even followed up with a second call to double check it.  Even that call said I was fine. It wasn&amp;#39;t until I talked to a third person, fifth overall, that I was finally told for the first time that the policy applied to me, and I was being told not only that but that as a result my service was being terminated in eight days.&lt;/p&gt;
-
-&lt;p&gt;I finally got the details on the Excessive Use Policy from Howard.  He told me that the limit for usage is 250 GB per month for any service at 1.5Mbps and up.  Anything above that was a violation of the policy.  I wasn&amp;#39;t sure I understood, so I asked for clarification, &amp;quot;you mean that someone who is paying for 40Mbps down and someone paying for only 1.5Mbps down have same usage cap?&amp;quot; and Howard answered, &amp;quot;correct.&amp;quot;&lt;/p&gt;
-
-&lt;p&gt;&amp;quot;So even though I&amp;#39;m paying more than quadruple what my 1.5Mbps neighbor is, he and I have the same maximum?&amp;quot;&lt;/p&gt;
-
-&lt;p&gt;&amp;quot;Yes.&amp;quot;&lt;/p&gt;
-
-&lt;p&gt;I did a quick calculation.  40 megabits per second is 5 megabytes per second.  250 GB is 256,000 megabytes.  That means, if I were to saturate the bandwidth I&amp;#39;m paying for, I could use up my entire allotment in 51,200 seconds.  14.2 hours.  I asked Howard if this was the case and he informed me that it was.&lt;/p&gt;
-
-&lt;p&gt;This was about the time I decided to stop being so friendly.  I explained that it was ridiculous that I was having my service terminated in eight days when I&amp;#39;ve gotten, as far as I&amp;#39;m concerned, zero actual warnings that were legitimate.  Howard explained that the CSRs I talked to previously were misinformed, as the policy does apply to me.  He also said I had no notes about previous conversations in my account.  As I mentioned, what&amp;#39;s particularly surprising about that is that the second CSR mentioned the notes of the first, meaning that, if they were gone, they must have been deleted (or the second CSR lied).  Amazing, too, that two independent CSRs would tell me the same thing incorrectly.&lt;/p&gt;
-
-&lt;p&gt;I asked Howard to reset my &amp;quot;warning&amp;quot; counter back to zero, so I at least had a fair chance now that I knew the policy was in place.  He was willing to reset me back to two.  So my internet would no longer be terminated in eight days, but if I violated the policy one more time, I&amp;#39;d get another letter of termination.  In other words, &lt;strong&gt;I was now in a permanent position of possibly having my internet suddenly turned off within about a week&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;Howard suggested I look into CenturyLink Business Class, which removes the cap.  He hung up, and Taylor (who was still on the line) conference called someone from the Business Internet department.  The Business CSR informed me that the price would be about $200 a month, double what I was paying at the time.  I asked if it would at least be faster, and was told it would not be, 40/5 is the fastest CenturyLink gets.  I tell him (and Taylor) I need to think about that a little more.  The Business CSR hangs up, which unfortunately disconnects the entire call somehow.&lt;/p&gt;
-
-&lt;p&gt;Ugh.  I still had questions for Taylor, she said she would stay on the line after the Business call.  I call back and get a new CSR, who I will call Brandon.  I asked to be transferred to Taylor because she&amp;#39;s been informed of my extremely long story, and I didn&amp;#39;t want to have to repeat it all.  Brandon informed me they are not able to transfer to people directly, only departments.  I let out a sigh and once again recounted the entire story starting from my first warning up until that very moment.  I explained to Brandon that it doesn&amp;#39;t seem right to give me a data cap so low that I can bust out of it in 14 hours, and it seems that the caps should, at the very least, increase linearly with the speeds.  Brandon agreed with me, agreed that I&amp;#39;m not getting proper treatment, and asked to put me on hold while he gets to the bottom of this.  &lt;strong&gt;While on hold, I was disconnected again&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;At this point I was in full-on pain-in-the-ass-customer mode.  I called again, asked to speak to Taylor or Brandon, and was once again told they can&amp;#39;t do that.  So I asked to speak to the highest manager I can be transferred to, because if I have to tell the whole story again I want it to be at the highest level I can get.  The CSR obliged, transferring me to someone I will call Terry.  I told the entire story again.  By the time I&amp;#39;m done, I&amp;#39;ve been on the phone for three hours in total.  All I wanted at this point is to be reset to zero warnings so that I could try to get my usage down to acceptable levels without living in fear of termination.  Terry told me he can&amp;#39;t really help me as a Customer Support person, and offered to transfer me to Securities.  Fine.&lt;/p&gt;
-
-&lt;p&gt;I was transferred to Securities again and spoke with a Securities Agent.  She looked up my notes and informs me that Howard already did me &amp;quot;a big favor&amp;quot; by resetting me back to 2 warnings.  She said there was nothing further she was willing to do for me.  I asked how, exactly, I&amp;#39;m supposed to even get my usage down to their limit when my next violation means termination.  She told me there are free tools I can install on my computer to monitor usage.  That&amp;#39;s rich.  I&amp;#39;m supposed to install these tools on every computer in my house, both mine and my wife&amp;#39;s, plus our phones, running the gamut of Linux, Windows, OS X, and Android?  The best I can do is look at my router, which tells me how much traffic I used in a day, so I&amp;#39;d have to check it at the end of each day and manually total it up.  I started thinking about writing a shell script for this, and then chastised myself for playing into this nonsense.  The Securities Agent once again recommended I switch to CenturyLink Business Class, all for the low-low price of double what I&amp;#39;m paying now for the exact same service.&lt;/p&gt;
-
-&lt;h1&gt;The Defeat&lt;/h1&gt;
-
-&lt;p&gt;Completely defeated, I hung up, and I started looking at Comcast Business Class again.  If I were willing to pay $200 for internet, I could get Comcast Business Class&amp;#39;s fastest speed, 100Mbps down, 20Mbps up, with no data caps.  Hell, at my current price of $100, I could get 50 down and 10 up, 10Mbps faster downloading, with double the upload speed, and still no cap.&lt;/p&gt;
-
-&lt;p&gt;I called Comcast and got some more info.  I even had a contract drawn up, ready to sign.  At this point, I couldn&amp;#39;t justify staying with CenturyLink any longer.  I could remove the data caps from my life with no additional cost just by switching providers, and I would even get a bonus of slightly faster speed.  I obviously had reservations about Comcast due to my previous experience, but everyone I was talking to on Twitter indicated that the Comcast Business is a completely different branch of the company, that the techs really know their stuff and that the representatives are extremely helpful, because they are used to dealing with businesses.&lt;/p&gt;
-
-&lt;p&gt;Speaking of Twitter, I was naturally live-tweeting everything that was happening with all of this.  In addition to friends and colleagues responding, I actually got a response from CenturyLink itself.  &lt;/p&gt;
-
-&lt;blockquote class=&quot;twitter-tweet&quot; lang=&quot;en&quot;&gt;&lt;p&gt;&lt;a href=&quot;https://twitter.com/rodhilton&quot;&gt;@rodhilton&lt;/a&gt; Hey Rod, our team can help look into that for you. Send us your acct info here &lt;a href=&quot;http://t.co/V7SCkTtg1e&quot;&gt;http://t.co/V7SCkTtg1e&lt;/a&gt;&amp;#10;Thanks, ^AshleyKay&lt;/p&gt;
-&lt;p&gt;&amp;mdash; CenturyLinkHelp Team (@CenturyLinkHelp) &lt;a href=&quot;https://twitter.com/CenturyLinkHelp/statuses/405002367793254400&quot;&gt;November 25, 2013&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;script async src=&quot;//platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;After some more tweeting, I got this as well:&lt;/p&gt;
-
-&lt;blockquote class=&quot;twitter-tweet&quot; lang=&quot;en&quot;&gt;&lt;p&gt;&lt;a href=&quot;https://twitter.com/rodhilton&quot;&gt;@rodhilton&lt;/a&gt; Hi Rod, if you need additional help with this issue we can have our DSL Escalations Team give you a call&amp;#8230;Thanks,Corey&lt;/p&gt;
-&lt;p&gt;&amp;mdash; CenturyLinkHelp Team (@CenturyLinkHelp) &lt;a href=&quot;https://twitter.com/CenturyLinkHelp/statuses/405045978928926720&quot;&gt;November 25, 2013&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;script async src=&quot;//platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;So I decided to bite.  Maybe this is a different team, who might really be able to do something for me.  Again, all I wanted at this point was to be reset to zero warnings so I had a fighting chance.&lt;/p&gt;
-
-&lt;p&gt;I filled out their form, writing 1,414 words explaining this entire story.  I explained that Comcast had them beat on Business Tier service by a wide margin, and I&amp;#39;d leave for Comcast before paying double for the same service from CenturyLink just to avoid being harassed.  I also explained that this is my last attempt to remedy the situation with CenturyLink, that I&amp;#39;d given them three hours of my Monday and I couldn&amp;#39;t give them any more of my time.  I reiterate I&amp;#39;ve been a customer for a long time, and I&amp;#39;d like to stay a customer, but that I needed this situation to be improved.&lt;/p&gt;
-
-&lt;p&gt;I submitted the form and waited.  I had a contract with Comcast Business Internet ready to sign in my inbox.  If CenturyLink&amp;#39;s help team could do something for me, I&amp;#39;d keep them and try to figure out how to get my bandwidth to reasonable levels.  If they wouldn&amp;#39;t do anything for me, I&amp;#39;d switch to Comcast, severing nearly a decade of loyal service. &lt;/p&gt;
-
-&lt;p&gt;That night, I checked with my router to see what my bandwidth use for the day was.  Just a normal day of working from home, no big media downloading, no movie or music streaming, nothing excessive.  I used 10GB that day alone, and that&amp;#39;s with trying my hardest not to use much.  At that rate, I&amp;#39;d hit the cap in 25 days, less than the month I&amp;#39;m paying for.  While I was tweeting about all of this, I had some friends ask me just what the hell I&amp;#39;m doing that&amp;#39;s using so much bandwidth.  To be completely honest, I don&amp;#39;t even understand the question.  After seeing how much bandwidth I use on a day when I&amp;#39;m giving it my full effort to minimize use, I have to wonder just how the hell everyone else is able to stay under their caps at all.  It seems impossible.&lt;/p&gt;
-
-&lt;p&gt;A few days later, I got a response from CenturyLink.&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Thanks for reaching out and sending such candid feedback on your experience. I understand your frustration, unfortunately there&amp;#39;s no way I can change or stretch our policy. Up until this year you haven&amp;#39;t hit over 250gb before in, as you mentioned, many years. You have since gone over the usage limit every month so far in 2013. We&amp;#39;ve been very generous in the notices you&amp;#39;ve received and when you&amp;#39;ve received them. I apologize for the 2 representatives that provided you with incorrect information and therefore caused further turmoil in the matter. I am investigating that further so that proper feedback/coaching will be enforced. I wish there was something I could offer as far as a better price goes for the business usage, but there&amp;#39;s no other option other than what you&amp;#39;ve been told already. Please let me know what direction you&amp;#39;d like to go with this and I&amp;#39;ll take care of you to the end. If there&amp;#39;s anything else additional I can help with, let me know as well.&lt;/p&gt;
-
-&lt;p&gt;I wish there was a way for me to guarantee that you&amp;#39;ll go back to &amp;#39;zero&amp;#39;, but that&amp;#39;s not an option. As Howard already did for you, the forgiven process is the best than can be done. I understand your decision to try other venues for service you need. If there&amp;#39;s anything else I can assist you with, please let me know.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h1&gt;The Switch&lt;/h1&gt;
-
-&lt;p&gt;A Comcast technician installed my new Business Internet two weeks later.  I know this post is way too long already, and I don&amp;#39;t want to look like some kind of shill for Comcast, so let me just summarize with: &lt;strong&gt;why didn&amp;#39;t I do this sooner?&lt;/strong&gt;&lt;/p&gt;
-
-&lt;table class='image alignleft' width='306'&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;http://www.nomachetejuggling.com/assets/comcast-business-300x168.png&quot; width='300' height='168'/&gt;&lt;p class='caption'&gt;The good new days&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-
-&lt;p&gt;We did a speed test before he left, and I was getting 57 Mbps down, 11.5 up.  I&amp;#39;ve had no issues with bandwidth dropping at all, it seems pretty consistent all day long; the lowest I saw was 48 down, which is still faster than my top speed with CenturyLink (about 37).  I haven&amp;#39;t had to reset the cable modem at all, it&amp;#39;s a beefy, boxy beast of a thing from Netgear.  No frills, no wireless, just a black box I hooked up to my existing router.&lt;/p&gt;
-
-&lt;p&gt;I&amp;#39;ve had no blips, no lags.  I&amp;#39;ve worked from home a few times since the install and I&amp;#39;ve seen no drop-offs, disconnections, or slowdowns.  I&amp;#39;ve dealt with Comcast Business Internet representatives in the sales department, billing department, and technical support department, and all of them were extremely helpful and friendly.  The Technical Support guy even helped me fix an issue I was having with my router, even though it wasn&amp;#39;t Comcast-commissioned equipment.&lt;/p&gt;
-
-&lt;p&gt;I actually feel bad for how many people I&amp;#39;ve recommended go to CenturyLink.  I know a nontrivial number of people have signed up with them based on my glowing recommendations over the years (this isn&amp;#39;t self-absorption, they&amp;#39;ve told me this).  I think I&amp;#39;d now only recommend residential CenturyLink to very light internet users, like my parents or in-laws.  There&amp;#39;s no good reason at all to use CenturyLink&amp;#39;s business class service, which is massively overpriced for the service when compared to Comcast&amp;#39;s offering.  And the higher-speed tiers at CenturyLink are all hampered by data caps that can be blown out in less than a day.  If all you want is 1.5-5Mbps down for light internet use, CenturyLink is the way to go for price, but for higher speeds it&amp;#39;s a complete rip-off.  The same high speeds can be found for cheaper at Comcast Business, with no data caps.&lt;/p&gt;
-
-&lt;p&gt;It&amp;#39;s unfortunate that things had to become so unpleasant with CenturyLink but it became clear that the company simply was not interested in keeping me as a customer.  While I wish I could have left CenturyLink on different terms, I&amp;#39;m glad I made the switch, and I hope the quality of service with Comcast Business Internet continues.&lt;/p&gt;
-</description>
-				<pubDate>Tue, 17 Dec 2013 00:00:00 -0500</pubDate>
-				<link>http://www.nomachetejuggling.com/2013/12/17/centurylink-traps-and-caps/</link>
-				<guid isPermaLink="true">http://www.nomachetejuggling.com/2013/12/17/centurylink-traps-and-caps/</guid>
 			</item>
 		
 	</channel>

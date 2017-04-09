@@ -82,6 +82,31 @@
 	
 		<div class="post-preview">
 		  	<div class="postheader">
+  	<h1 class="posttitle"><a href="/2006/06/13/java-5-global-exception-handling/">Java 5 Global Exception Handling</a></h1>
+  	<div class="postmeta">
+		<p class="meta">
+		<b title="code and java">PROGRAMMING</b> - 
+		June 13, 2006 - 
+		349 words -
+		<a href="/2006/06/13/java-5-global-exception-handling/#disqus_thread">Comments</a>
+		</p>
+	</div>
+</div>
+		  	<div class="postentry">
+				<p>Ever since Java 5 came out, many articles and blog posts have been written talking about the new features.  Just recently, however, I came upon a feature new to Java 5 that I had never seen mentioned in any of the articles I read: global exception handling.</p>
+
+<p>There is a way to set a default handler for any exceptions that are thrown which are not caught.  This is very handy for adding handlers for <code>RuntimeException</code>s, since they are unchecked and the compiler will not tell you to catch them.</p>
+
+<p>For example, you may want to write a handler that will catch any <code>NullPointerException</code>, and e-mail the development team to let them know someone has made a coding mistake.  There are many useful purposes for this feature.  It should also be noted, however, that it breaks the idea of capturing an exception as close to the point of origin as possible.  You should try to keep exception handling close to the exception, so that you have as much contextual information as possible to deal with the error and recover from it gracefully.</p>
+
+<p>There is no denying, though, that we all write empty catch blocks, or catch blocks that print a trace to a log file and ignore it.  For those, this is handy.</p>
+
+        <p><a href="/2006/06/13/java-5-global-exception-handling/">Read the rest of "Java 5 Global Exception Handling" &raquo;</a></p>
+			</div>
+		</div>
+	
+		<div class="post-preview">
+		  	<div class="postheader">
   	<h1 class="posttitle"><a href="/2006/04/27/password-change-policies/">Password Change Policies</a></h1>
   	<div class="postmeta">
 		<p class="meta">
@@ -277,6 +302,8 @@
           <li id="recent-posts" class="widget widget_recent_entries"> <h2 class="widgettitle">Recent Posts</h2>
             <ul>
                 
+                  <li><a href="/2017/04/09/a-different-branching-strategy/">A Different Successful Git Branching Model: Three-Flow</a></li>
+                
                   <li><a href="/2016/06/20/guidingprinciples-part2/">Software Engineering Guiding Principles - Part 2</a></li>
                 
                   <li><a href="/2016/06/15/guidingprinciples-part1/">Software Engineering Guiding Principles - Part 1</a></li>
@@ -294,8 +321,6 @@
                   <li><a href="/2014/07/04/uploading-a-jekyll-site-to-rackspace-cloudfiles/">Uploading a Jekyll Site to Rackspace Cloudfiles</a></li>
                 
                   <li><a href="/2014/02/05/top-10-career-changing-programming-books/">Top 10 Career-Changing Programming Books</a></li>
-                
-                  <li><a href="/2013/12/17/centurylink-traps-and-caps/">CenturyLink: Traps and Caps</a></li>
                 
             </ul>
           </li> <!-- /recent-posts -->
@@ -1160,6 +1185,8 @@
                 
                     
                     <li><a href="/2015/12/28/machete-order-update-and-faq/">Star Wars Machete Order: Update and FAQ</a></li>
+                
+                
                 
                 
                 
