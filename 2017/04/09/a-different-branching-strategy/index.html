@@ -84,13 +84,13 @@
 		<p class="meta">
 		<b title="">PROGRAMMING</b> - 
 		April 9, 2017 - 
-		4,860 words -
+		5,046 words -
 		<a href="/2017/04/09/a-different-branching-strategy/#disqus_thread">Comments</a>
 		</p>
 	</div>
 </div>
 	<div class="postentry">
-		<div class='toc no-hyphenate'><h1>Contents</h1><ol><li><a href='#toc-what-39-s-wrong-with-gitflow'>What&#39;s wrong with GitFlow?</a></li><ol><li><a href='#toc-use-feature-toggles'>Use Feature Toggles</a></li></ol><li><a href='#toc-introducing-three-flow'>Introducing Three-Flow</a></li><ol><li><a href='#toc-releasing'>Releasing</a></li><li><a href='#toc-release-notes'>Release Notes</a></li><li><a href='#toc-common-operations'>Common Operations</a></li><ol><li><a href='#toc-how-do-i-cut-a-release-candidate-off-master'>How do I cut a release candidate off master?</a></li><li><a href='#toc-how-do-i-release-a-candidate'>How do I release a candidate?</a></li><li><a href='#toc-how-do-i-find-which-branches-have-a-particular-commit-on-them'>How do I find which branches have a particular commit on them?</a></li><li><a href='#toc-how-do-i-find-which-tag-a-branch-is-pointing-to'>How do I find which tag a branch is pointing to?</a></li><li><a href='#toc-how-do-i-find-out-which-commits-are-going-to-go-out-with-a-release'>How do I find out which commits are going to go out with a release?</a></li><li><a href='#toc-how-do-i-set-up-the-candidate-and-release-branches-for-the-first-time'>How do I set up the candidate and release branches for the first time?</a></li></ol></ol><li><a href='#toc-questions'>Questions</a></li><ol><li><a href='#toc-isn-39-t-this-just-cactus-model'>Isn&#39;t this just cactus model?</a></li><li><a href='#toc-isn-39-t-this-just-gitflow-without-feature-branches'>Isn&#39;t this just GitFlow without feature branches?</a></li><li><a href='#toc-what-about-code-reviews'>What about code reviews?</a></li><li><a href='#toc-what-about-a-codebase-with-multiple-artifacts'>What about a codebase with multiple artifacts?</a></li><li><a href='#toc-can-39-t-i-just-use-merging-for-the-release-branch'>Can&#39;t I just use merging for the release branch?</a></li></ol><li><a href='#toc-summary'>Summary</a></li></ol></div><p>Of all the conversations I find myself having over and over in this field, I think more than anything else I&#39;ve been a broken record convincing teams <strong>not</strong> to adopt <a href="http://nvie.com/posts/a-successful-git-branching-model/">GitFlow</a>.</p>
+		<div class='toc no-hyphenate'><h1>Contents</h1><ol><li><a href='#toc-what-39-s-wrong-with-gitflow'>What&#39;s wrong with GitFlow?</a></li><ol><li><a href='#toc-use-feature-toggles'>Use Feature Toggles</a></li></ol><li><a href='#toc-introducing-three-flow'>Introducing Three-Flow</a></li><ol><li><a href='#toc-releasing'>Releasing</a></li><li><a href='#toc-release-notes'>Release Notes</a></li><li><a href='#toc-common-operations'>Common Operations</a></li><ol><li><a href='#toc-how-do-i-cut-a-release-candidate-off-master'>How do I cut a release candidate off master?</a></li><li><a href='#toc-how-do-i-release-a-candidate'>How do I release a candidate?</a></li><li><a href='#toc-how-do-i-find-which-branches-have-a-particular-commit-on-them'>How do I find which branches have a particular commit on them?</a></li><li><a href='#toc-how-do-i-find-which-tag-a-branch-is-pointing-to'>How do I find which tag a branch is pointing to?</a></li><li><a href='#toc-how-do-i-find-out-which-commits-are-going-to-go-out-with-a-release'>How do I find out which commits are going to go out with a release?</a></li><li><a href='#toc-how-do-i-set-up-the-candidate-and-release-branches-for-the-first-time'>How do I set up the candidate and release branches for the first time?</a></li></ol></ol><li><a href='#toc-questions'>Questions</a></li><ol><li><a href='#toc-isn-39-t-this-just-cactus-model'>Isn&#39;t this just cactus model?</a></li><li><a href='#toc-isn-39-t-this-just-gitflow-without-feature-branches'>Isn&#39;t this just GitFlow without feature branches?</a></li><li><a href='#toc-what-about-code-reviews'>What about code reviews?</a></li><li><a href='#toc-what-about-a-codebase-with-multiple-artifacts'>What about a codebase with multiple artifacts?</a></li><li><a href='#toc-can-39-t-i-just-use-merging-for-the-release-branch'>Can&#39;t I just use merging for the release branch?</a></li><li><a href='#toc-is-there-a-way-to-not-have-to-manually-type-so-many-arguments'>Is there a way to not have to manually type so many arguments?</a></li></ol><li><a href='#toc-summary'>Summary</a></li></ol></div><p>Of all the conversations I find myself having over and over in this field, I think more than anything else I&#39;ve been a broken record convincing teams <strong>not</strong> to adopt <a href="http://nvie.com/posts/a-successful-git-branching-model/">GitFlow</a>.</p>
 
 <p>Vincent Driessen&#39;s post &quot;<a href="http://nvie.com/posts/a-successful-git-branching-model/">A successful Git branching model</a>&quot; -- or, as it&#39;s become commonly known for some reason, &quot;GitFlow&quot; -- has become the de facto standard for how to successfully adopt git into your team.  If you search for <a href="https://encrypted.google.com/search?q=git+branching+strategy">&quot;git branching strategy&quot; on Google</a>, it&#39;s the number one result.  Atlassian has even adopted it as one of their <a href="https://www.atlassian.com/git/tutorials/comparing-workflows#gitflow-workflow">primary tutorials</a> for adopting Git.</p>
 
@@ -196,10 +196,10 @@ $ git push --follow-tags
 
 <p>If you&#39;re using tags, you can do this comparison by using the tag names.  It&#39;s easy to remind yourself of which tag is in production, because every time we force an update of the <code>release</code> branch pointer, we use the tag.  That means that there&#39;s always exactly a tag that points to the same commit that the HEAD of <code>release</code> points to.  You can find out which tag this is by running:</p>
 <div class="highlight"><pre><code class="language-output" data-lang="output">$ git describe --tags release
-candidate-3.2.248
+candidate-3.1.248
 </code></pre></div>
 <p>So if we know that our <code>candidate</code> branch has been tagged as <code>candidate-3.2.259</code> you can get the list of commits that make up the difference between those two tags like so:</p>
-<div class="highlight"><pre><code class="language-output" data-lang="output">$ git log --oneline candidate-3.2.248..candidate-3.2.259
+<div class="highlight"><pre><code class="language-output" data-lang="output">$ git log --oneline candidate-3.1.248..candidate-3.2.259
 </code></pre></div>
 <p>You could also do this if you didn&#39;t want to mess with tags.  The following will always just compare what&#39;s on <code>release</code> (production) with what&#39;s on <code>candidate</code> (what&#39;s planned to go to production):</p>
 <div class="highlight"><pre><code class="language-output" data-lang="output">$ git log --oneline release..candidate
@@ -306,6 +306,23 @@ $ git branch release --set-upstream-to=origin/release
 
 <p>For my money, doing the force pushes kind of reinforces that <code>release</code> isn&#39;t really a branch and shouldn&#39;t be treated like one.  It&#39;s really just an updated pointer to production.  It&#39;s basically just a series of tags, except that since it&#39;s a branch you can easily make a new commit on it for production hotfixes.  To each their own though, there are definitely some simplicity advantages to always doing the same thing with <code>candidate</code> that you do with <code>release</code>.  But hell, either way is preferable to using GitFlow.  Have I mentioned how much I hate GitFlow?  It&#39;s like, a <em>bunch</em>.</p>
 
+<h2 id=toc-is-there-a-way-to-not-have-to-manually-type-so-many-arguments>Is there a way to not have to manually type so many arguments?</h2>
+
+<p>One of the weirder aspects of this flow is that pretty much every command I suggest typing into get has additional arguments.</p>
+
+<p>Any time you do a <code>merge</code>, I&#39;m asking you do to a <code>merge --no-ff</code>.  When you cut a release and tag it I suggest you <code>push</code> using <code>push --follow-tags</code> so your tag gets up to origin as well.</p>
+
+<p>You can actually set these arguments to be defaults.  Since there&#39;s all merging in Three-Flow uses <code>--no-ff</code>, you&#39;re safe to run:</p>
+<div class="highlight"><pre><code class="language-output" data-lang="output">$ git config --global merge.ff no
+</code></pre></div>
+<p>You could leave out the --global so it only applies to this particular project as well.  If you run this then you can simply run <code>git merge</code> without the <code>--no-ff</code> argument.</p>
+
+<p>Similarly, you can set <code>push</code> to always push locally-created tags:</p>
+<div class="highlight"><pre><code class="language-output" data-lang="output">$ git config --global push.followTags true
+</code></pre></div>
+<p>And I mentioned this up above but it&#39;s a good idea to set your branches to automatically rebase whenever you pull.  You can do this like so:</p>
+<div class="highlight"><pre><code class="language-output" data-lang="output">$ git config branch.master.rebase true
+</code></pre></div>
 <h1 id=toc-summary>Summary</h1>
 
 <p>To summarize the main Three-Flow branching model outlined here:</p>
