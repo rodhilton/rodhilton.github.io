@@ -223,14 +223,19 @@ $ git branch release --set-upstream-to=origin/release
 &lt;p&gt;You can actually set these arguments to be defaults.  Since there&amp;#39;s all merging in Three-Flow uses &lt;code&gt;--no-ff&lt;/code&gt;, you&amp;#39;re safe to run:&lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-output&quot; data-lang=&quot;output&quot;&gt;$ git config --global merge.ff no
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;You could leave out the --global so it only applies to this particular project as well.  If you run this then you can simply run &lt;code&gt;git merge&lt;/code&gt; without the &lt;code&gt;--no-ff&lt;/code&gt; argument.&lt;/p&gt;
+&lt;p&gt;If you run this then you can simply run &lt;code&gt;git merge&lt;/code&gt; without the &lt;code&gt;--no-ff&lt;/code&gt; argument.&lt;/p&gt;
 
 &lt;p&gt;Similarly, you can set &lt;code&gt;push&lt;/code&gt; to always push locally-created tags:&lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-output&quot; data-lang=&quot;output&quot;&gt;$ git config --global push.followTags true
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;And I mentioned this up above but it&amp;#39;s a good idea to set your branches to automatically rebase whenever you pull.  You can do this like so:&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-output&quot; data-lang=&quot;output&quot;&gt;$ git config branch.master.rebase true
+&lt;p&gt;And I mentioned this up above but it&amp;#39;s a good idea to set your master branch to automatically rebase whenever you pull.  You can do this like so:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-output&quot; data-lang=&quot;output&quot;&gt;$ git config --global branch.master.rebase true
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;You can actually set any new branch to automatically rebase on pulls in case you&amp;#39;re making local feature branches that track master.&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-output&quot; data-lang=&quot;output&quot;&gt;$ git config --global branch.autosetuprebase always
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;You could leave out the --global from any of these commands so the configuration only applies to the specific git repository you&amp;#39;re working in, as well.&lt;/p&gt;
+
 &lt;h2&gt;Can&amp;#39;t I just use merging for the release branch?&lt;/h2&gt;
 
 &lt;p&gt;First of all, you can do whatever you want.  This is just a strategy that worked for me on multiple different teams and I wanted to spread it around because I think it&amp;#39;s much simpler than GitFlow.&lt;/p&gt;

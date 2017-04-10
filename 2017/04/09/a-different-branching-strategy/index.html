@@ -84,7 +84,7 @@
 		<p class="meta">
 		<b title="">PROGRAMMING</b> - 
 		April 9, 2017 - 
-		5,046 words -
+		5,088 words -
 		<a href="/2017/04/09/a-different-branching-strategy/#disqus_thread">Comments</a>
 		</p>
 	</div>
@@ -305,14 +305,19 @@ $ git branch release --set-upstream-to=origin/release
 <p>You can actually set these arguments to be defaults.  Since there&#39;s all merging in Three-Flow uses <code>--no-ff</code>, you&#39;re safe to run:</p>
 <div class="highlight"><pre><code class="language-output" data-lang="output">$ git config --global merge.ff no
 </code></pre></div>
-<p>You could leave out the --global so it only applies to this particular project as well.  If you run this then you can simply run <code>git merge</code> without the <code>--no-ff</code> argument.</p>
+<p>If you run this then you can simply run <code>git merge</code> without the <code>--no-ff</code> argument.</p>
 
 <p>Similarly, you can set <code>push</code> to always push locally-created tags:</p>
 <div class="highlight"><pre><code class="language-output" data-lang="output">$ git config --global push.followTags true
 </code></pre></div>
-<p>And I mentioned this up above but it&#39;s a good idea to set your branches to automatically rebase whenever you pull.  You can do this like so:</p>
-<div class="highlight"><pre><code class="language-output" data-lang="output">$ git config branch.master.rebase true
+<p>And I mentioned this up above but it&#39;s a good idea to set your master branch to automatically rebase whenever you pull.  You can do this like so:</p>
+<div class="highlight"><pre><code class="language-output" data-lang="output">$ git config --global branch.master.rebase true
 </code></pre></div>
+<p>You can actually set any new branch to automatically rebase on pulls in case you&#39;re making local feature branches that track master.</p>
+<div class="highlight"><pre><code class="language-output" data-lang="output">$ git config --global branch.autosetuprebase always
+</code></pre></div>
+<p>You could leave out the --global from any of these commands so the configuration only applies to the specific git repository you&#39;re working in, as well.</p>
+
 <h2 id=toc-can-39-t-i-just-use-merging-for-the-release-branch>Can&#39;t I just use merging for the release branch?</h2>
 
 <p>First of all, you can do whatever you want.  This is just a strategy that worked for me on multiple different teams and I wanted to spread it around because I think it&#39;s much simpler than GitFlow.</p>
