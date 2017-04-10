@@ -214,16 +214,6 @@ $ git branch release --set-upstream-to=origin/release
 
 &lt;p&gt;Otherwise the process works exactly the same way.  This scales better than you might expect, I was very recently on a large project that had 4 different independently deployable artifacts that came out of a single codebase.  8 &lt;code&gt;candidate&lt;/code&gt; and &lt;code&gt;release&lt;/code&gt; branches, plus &lt;code&gt;master&lt;/code&gt;.  Generally there was a pretty strong mapping between an individual &amp;quot;team&amp;quot; and one of these artifacts, so a team or a group still just worked with 3 branches.&lt;/p&gt;
 
-&lt;h2&gt;Can&amp;#39;t I just use merging for the release branch?&lt;/h2&gt;
-
-&lt;p&gt;First of all, you can do whatever you want.  This is just a strategy that worked for me on multiple different teams and I wanted to spread it around because I think it&amp;#39;s much simpler than GitFlow.&lt;/p&gt;
-
-&lt;p&gt;But moreover, yes, if you don&amp;#39;t like the idea of doing a `&lt;code&gt;push --force&lt;/code&gt; to update &lt;code&gt;release&lt;/code&gt; and losing some historical information, but would rather just do a &lt;code&gt;merge --no-ff&lt;/code&gt;, by all means do it.  This has the advantage of being fewer things to remember how to do, basically any time you move code between the three branches you&amp;#39;re doing a &lt;code&gt;merge --no-ff&lt;/code&gt;.  &lt;/p&gt;
-
-&lt;p&gt;In fact, an early version of this strategy did just that, &lt;code&gt;--no-ff&lt;/code&gt; merges to &lt;code&gt;release&lt;/code&gt;.  It worked out fine, reading the git history was really straightforward.  The only thing I don&amp;#39;t like about it is that it&amp;#39;s &lt;em&gt;kind of&lt;/em&gt; a fib, in that what goes out to production should be the exact same HEAD of &lt;code&gt;candidate&lt;/code&gt; that went through QA, and doing a merge commit creates a brand new commit on &lt;code&gt;release&lt;/code&gt; that didn&amp;#39;t necessarily get tested.  You could, of course, not do a merge commit to &lt;code&gt;release&lt;/code&gt; and only do fast-forwarding commits.  But then you sort of lose the history anyway, and there&amp;#39;s always a chance that the branch can&amp;#39;t be fast-forwarded and you need a merge commit anyway.  And forget about rebasing to &lt;code&gt;release&lt;/code&gt;, you&amp;#39;re pretty much guaranteed to have to work your way through a ton of merge conflicts, often very similar ones over and over as you individually resolve each commit in the release.&lt;/p&gt;
-
-&lt;p&gt;For my money, doing the force pushes kind of reinforces that &lt;code&gt;release&lt;/code&gt; isn&amp;#39;t really a branch and shouldn&amp;#39;t be treated like one.  It&amp;#39;s really just an updated pointer to production.  It&amp;#39;s basically just a series of tags, except that since it&amp;#39;s a branch you can easily make a new commit on it for production hotfixes.  To each their own though, there are definitely some simplicity advantages to always doing the same thing with &lt;code&gt;candidate&lt;/code&gt; that you do with &lt;code&gt;release&lt;/code&gt;.  But hell, either way is preferable to using GitFlow.  Have I mentioned how much I hate GitFlow?  It&amp;#39;s like, a &lt;em&gt;bunch&lt;/em&gt;.&lt;/p&gt;
-
 &lt;h2&gt;Is there a way to not have to manually type so many arguments?&lt;/h2&gt;
 
 &lt;p&gt;One of the weirder aspects of this flow is that pretty much every command I suggest typing into get has additional arguments.&lt;/p&gt;
@@ -241,6 +231,16 @@ $ git branch release --set-upstream-to=origin/release
 &lt;p&gt;And I mentioned this up above but it&amp;#39;s a good idea to set your branches to automatically rebase whenever you pull.  You can do this like so:&lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-output&quot; data-lang=&quot;output&quot;&gt;$ git config branch.master.rebase true
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Can&amp;#39;t I just use merging for the release branch?&lt;/h2&gt;
+
+&lt;p&gt;First of all, you can do whatever you want.  This is just a strategy that worked for me on multiple different teams and I wanted to spread it around because I think it&amp;#39;s much simpler than GitFlow.&lt;/p&gt;
+
+&lt;p&gt;But moreover, yes, if you don&amp;#39;t like the idea of doing a `&lt;code&gt;push --force&lt;/code&gt; to update &lt;code&gt;release&lt;/code&gt; and losing some historical information, but would rather just do a &lt;code&gt;merge --no-ff&lt;/code&gt;, by all means do it.  This has the advantage of being fewer things to remember how to do, basically any time you move code between the three branches you&amp;#39;re doing a &lt;code&gt;merge --no-ff&lt;/code&gt;.  &lt;/p&gt;
+
+&lt;p&gt;In fact, an early version of this strategy did just that, &lt;code&gt;--no-ff&lt;/code&gt; merges to &lt;code&gt;release&lt;/code&gt;.  It worked out fine, reading the git history was really straightforward.  The only thing I don&amp;#39;t like about it is that it&amp;#39;s &lt;em&gt;kind of&lt;/em&gt; a fib, in that what goes out to production should be the exact same HEAD of &lt;code&gt;candidate&lt;/code&gt; that went through QA, and doing a merge commit creates a brand new commit on &lt;code&gt;release&lt;/code&gt; that didn&amp;#39;t necessarily get tested.  You could, of course, not do a merge commit to &lt;code&gt;release&lt;/code&gt; and only do fast-forwarding commits.  But then you sort of lose the history anyway, and there&amp;#39;s always a chance that the branch can&amp;#39;t be fast-forwarded and you need a merge commit anyway.  And forget about rebasing to &lt;code&gt;release&lt;/code&gt;, you&amp;#39;re pretty much guaranteed to have to work your way through a ton of merge conflicts, often very similar ones over and over as you individually resolve each commit in the release.&lt;/p&gt;
+
+&lt;p&gt;For my money, doing the force pushes kind of reinforces that &lt;code&gt;release&lt;/code&gt; isn&amp;#39;t really a branch and shouldn&amp;#39;t be treated like one.  It&amp;#39;s really just an updated pointer to production.  It&amp;#39;s basically just a series of tags, except that since it&amp;#39;s a branch you can easily make a new commit on it for production hotfixes.  To each their own though, there are definitely some simplicity advantages to always doing the same thing with &lt;code&gt;candidate&lt;/code&gt; that you do with &lt;code&gt;release&lt;/code&gt;.  But hell, either way is preferable to using GitFlow.  Have I mentioned how much I hate GitFlow?  It&amp;#39;s like, a &lt;em&gt;bunch&lt;/em&gt;.&lt;/p&gt;
+
 &lt;h1&gt;Summary&lt;/h1&gt;
 
 &lt;p&gt;To summarize the main Three-Flow branching model outlined here:&lt;/p&gt;
