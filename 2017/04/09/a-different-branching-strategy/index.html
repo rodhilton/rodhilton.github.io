@@ -313,10 +313,10 @@ $ git branch release --set-upstream-to=origin/release
 <p>And I mentioned this up above but it&#39;s a good idea to set your master branch to automatically rebase whenever you pull.  You can do this like so:</p>
 <div class="highlight"><pre><code class="language-output" data-lang="output">$ git config --global branch.master.rebase true
 </code></pre></div>
-<p>You can actually set any new branch to automatically rebase on pulls in case you&#39;re making local feature branches that track master.</p>
+<p>You can actually set any new branch to automatically rebase on pulls in case you&#39;re making local feature branches that track master:</p>
 <div class="highlight"><pre><code class="language-output" data-lang="output">$ git config --global branch.autosetuprebase always
 </code></pre></div>
-<p>You could leave out the --global from any of these commands so the configuration only applies to the specific git repository you&#39;re working in, as well.</p>
+<p>You could leave out the <code>--global</code> from any of these commands so the configuration only applies to the specific git repository you&#39;re working in, as well.</p>
 
 <h2 id=toc-can-39-t-i-just-use-merging-for-the-release-branch>Can&#39;t I just use merging for the release branch?</h2>
 
