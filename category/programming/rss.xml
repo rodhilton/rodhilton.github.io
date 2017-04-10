@@ -124,18 +124,18 @@ candidate-3.2.248
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Running these commands will show you every single commmit that is in the new candidate that wasn&amp;#39;t in the previous release.  At my last gig, we liked to include the ticket numbers for our issue tracker in our commits, which allowed a script to cross-index this list of commits with actual work items in Jira.&lt;/p&gt;
 
-&lt;h1&gt;Common Operations&lt;/h1&gt;
+&lt;h2&gt;Common Operations&lt;/h2&gt;
 
 &lt;p&gt;Just to summarize a bit, here are some of the operations you might want to be able to do.  All of these examples assume that your local branches are properly set up to track the remote branches, and that those local branches are up to date.  If you&amp;#39;re not sure, it&amp;#39;s often a good idea to do a &lt;code&gt;git fetch&lt;/code&gt; and then use names like &lt;code&gt;origin/master&lt;/code&gt; instead of &lt;code&gt;master&lt;/code&gt; to ensure you&amp;#39;re using the origin&amp;#39;s version of the branch in case yours is stale.&lt;/p&gt;
 
-&lt;h2&gt;How do I cut a release candidate off master?&lt;/h2&gt;
+&lt;h3&gt;How do I cut a release candidate off master?&lt;/h3&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-output&quot; data-lang=&quot;output&quot;&gt;$ git checkout candidate
 $ git pull
 $ git merge --no-ff master
 $ git tag candidate-3.2.645 #optionally tag the candidate
 $ git push --follow-tags
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2&gt;How do I release a candidate?&lt;/h2&gt;
+&lt;h3&gt;How do I release a candidate?&lt;/h3&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-output&quot; data-lang=&quot;output&quot;&gt;$ git push --force origin &amp;lt;tag for the candidate&amp;gt;:release
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Alternatively if you aren&amp;#39;t using tags you could just do:&lt;/p&gt;
@@ -145,23 +145,23 @@ $ git push --follow-tags
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-output&quot; data-lang=&quot;output&quot;&gt;$ git fetch
 $ git push --force origin origin/candidate:release
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2&gt;How do I find which branches have a particular commit on them?&lt;/h2&gt;
+&lt;h3&gt;How do I find which branches have a particular commit on them?&lt;/h3&gt;
 
 &lt;p&gt;Often people want to know if a particular code change is currently in production or set to go out to production in the next release.  Here&amp;#39;s an easy way to find which of the three branches a commit is on.&lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-output&quot; data-lang=&quot;output&quot;&gt;$ git branch -r -contains &amp;lt;sha of commit&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2&gt;How do I find which tag a branch is pointing to?&lt;/h2&gt;
+&lt;h3&gt;How do I find which tag a branch is pointing to?&lt;/h3&gt;
 
 &lt;p&gt;Or in more accurate terms, for a given branch pointer, how do I find which tag(s) point to the same commit as the branch HEAD?&lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-output&quot; data-lang=&quot;output&quot;&gt;$ git describe --tags &amp;lt;branch&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2&gt;How do I find out which commits are going to go out with a release?&lt;/h2&gt;
+&lt;h3&gt;How do I find out which commits are going to go out with a release?&lt;/h3&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-output&quot; data-lang=&quot;output&quot;&gt;$ git log --oneline release..&amp;lt;tag of release candidate&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;You could also do this if you didn&amp;#39;t want to mess with tags:&lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-output&quot; data-lang=&quot;output&quot;&gt;$ git log --oneline release..origin/candidate
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2&gt;How do I set up the candidate and release branches for the first time?&lt;/h2&gt;
+&lt;h3&gt;How do I set up the candidate and release branches for the first time?&lt;/h3&gt;
 
 &lt;p&gt;You can create what&amp;#39;s called an &amp;#39;orphan&amp;#39; branch with no commits to it, but you&amp;#39;ll be unable to push it to origin to set up the remote branch until you have some kind of commit.&lt;/p&gt;
 
