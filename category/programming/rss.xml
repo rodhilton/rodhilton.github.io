@@ -7,7 +7,7 @@
 		<atom:link href="http://www.nomachetejuggling.com/category/programming/rss.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
-				<title>A Different Successful Git Branching Model: Three-Flow</title>
+				<title>A Successful Branching Strategy Simpler Than GitFlow: Three-Flow</title>
 				<description>&lt;p&gt;Of all the conversations I find myself having over and over in this field, I think more than anything else I&amp;#39;ve been a broken record convincing teams &lt;strong&gt;not&lt;/strong&gt; to adopt &lt;a href=&quot;http://nvie.com/posts/a-successful-git-branching-model/&quot;&gt;GitFlow&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Vincent Driessen&amp;#39;s post &amp;quot;&lt;a href=&quot;http://nvie.com/posts/a-successful-git-branching-model/&quot;&gt;A successful Git branching model&lt;/a&gt;&amp;quot; -- or, as it&amp;#39;s become commonly known for some reason, &amp;quot;GitFlow&amp;quot; -- has become the de facto standard for how to successfully adopt git into your team.  If you search for &lt;a href=&quot;https://encrypted.google.com/search?q=git+branching+strategy&quot;&gt;&amp;quot;git branching strategy&amp;quot; on Google&lt;/a&gt;, it&amp;#39;s the number one result.  Atlassian has even adopted it as one of their &lt;a href=&quot;https://www.atlassian.com/git/tutorials/comparing-workflows#gitflow-workflow&quot;&gt;primary tutorials&lt;/a&gt; for adopting Git.&lt;/p&gt;
