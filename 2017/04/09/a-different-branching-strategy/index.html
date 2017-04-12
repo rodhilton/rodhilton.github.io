@@ -84,7 +84,7 @@
 		<p class="meta">
 		<b title="">PROGRAMMING</b> - 
 		April 9, 2017 - 
-		5,088 words -
+		5,089 words -
 		<a href="/2017/04/09/a-different-branching-strategy/#disqus_thread">Comments</a>
 		</p>
 	</div>
@@ -188,7 +188,7 @@ $ git push --follow-tags
 
 <table class='image aligncenter' width='606'><tr><td><img src='/assets/threeflow-history.png' width='600' height='472'/></td></tr></table>
 
-<p>You&#39;ll notice that the way the above graph does NOT resemble the earlier picture is that you don&#39;t see the dotted lines pushing to <code>release</code>except the most recent one.  That&#39;s because we always do a <code>--force</code> push, meaning that every time we release to production, we completely ignore what production once was.  This is intentional - it doesn&#39;t matter what was on production and when, all that matters is what&#39;s on production <em>right now</em> so we can hotfix it in case of a production emergency.  The only time you&#39;ll even see the <code>release</code> branch at all on this graph is for whatever is currently in production, and whenever hotfixes were made that had to be merged into <code>candidate</code> and <code>master</code>.  This is exactly what we want: no unnecessary information adding noise to our graph.</p>
+<p>You&#39;ll notice that the way the above graph does NOT resemble the earlier picture is that you don&#39;t see the dotted lines pushing to <code>release</code> except the most recent one.  That&#39;s because we always do a <code>--force</code> push, meaning that every time we release to production, we completely ignore what production once was.  This is intentional - it doesn&#39;t matter what was on production and when, all that matters is what&#39;s on production <em>right now</em> so we can hotfix it in case of a production emergency.  The only time you&#39;ll even see the <code>release</code> branch at all on this graph is for whatever is currently in production, and whenever hotfixes were made that had to be merged into <code>candidate</code> and <code>master</code>.  This is exactly what we want: no unnecessary information adding noise to our graph.</p>
 
 <h2 id=toc-release-notes>Release Notes</h2>
 
