@@ -340,7 +340,7 @@ $ git branch release --set-upstream-to=origin/release
 <li>Features that are incomplete are put behind feature toggles, ideally dynamic toggles that can be changed without a redeploy</li>
 <li>To cut a release, <code>master</code> is merged into <code>candidate</code> with a <code>--no-ff</code> merge commit</li>
 <li>Any bugs found during a candidate&#39;s QA phase are fixed in <code>candidate</code> and then merged into <code>master</code> with a <code>--no-ff</code> merge commit</li>
-<li>When a candidate is released to production, it&#39;s <code>push --forced</code> to the tip of <code>release</code></li>
+<li>When a candidate is released to production, it&#39;s <code>push --force</code>d to the tip of <code>release</code></li>
 <li>Any production hotfixes happen in <code>release</code> and are then merged into <code>candidate</code> which is then merged into <code>master</code>.</li>
 </ul>
 
