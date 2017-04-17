@@ -84,7 +84,7 @@
 		<p class="meta">
 		<b title="">PROGRAMMING</b> - 
 		April 9, 2017 - 
-		5,089 words -
+		5,092 words -
 		<a href="/2017/04/09/a-different-branching-strategy/#disqus_thread">Comments</a>
 		</p>
 	</div>
@@ -302,10 +302,10 @@ $ git branch release --set-upstream-to=origin/release
 
 <p>Any time you do a <code>merge</code>, I&#39;m asking you do to a <code>merge --no-ff</code>.  When you cut a release and tag it I suggest you <code>push</code> using <code>push --follow-tags</code> so your tag gets up to origin as well.</p>
 
-<p>You can actually set these arguments to be defaults.  Since there&#39;s all merging in Three-Flow uses <code>--no-ff</code>, you&#39;re safe to run:</p>
+<p>You can actually set these arguments to be defaults.  Since all merging in Three-Flow uses <code>--no-ff</code>, you&#39;re safe to run:</p>
 <div class="highlight"><pre><code class="language-output" data-lang="output">$ git config --global merge.ff no
 </code></pre></div>
-<p>If you run this then you can simply run <code>git merge</code> without the <code>--no-ff</code> argument.</p>
+<p>If you run this then from that point on you can simply run <code>git merge</code> without the <code>--no-ff</code> argument.</p>
 
 <p>Similarly, you can set <code>push</code> to always push locally-created tags:</p>
 <div class="highlight"><pre><code class="language-output" data-lang="output">$ git config --global push.followTags true
