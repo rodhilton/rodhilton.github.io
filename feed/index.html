@@ -39,7 +39,7 @@
 
 &lt;p&gt;Long-running feature branches are the exact opposite of what you want.  &lt;strong&gt;A developer&amp;#39;s primary form of communication with other developers is source code&lt;/strong&gt;.  It doesn&amp;#39;t matter how often you have stand-up meetings, when it comes to the central method of communication, &lt;strong&gt;long-running branches represent dead silence&lt;/strong&gt;.  &lt;a href=&quot;https://blog.newrelic.com/2012/11/14/long-running-branches-considered-harmful/&quot;&gt;Long-running branches are the worst&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;Feature branches also scale terribly.  You can get away with one developer having a long-running feature branch, but as your team grows and you have more and more engineers in the same codebase, each pair of developers running feature branches is failing to communicate effectively about their work.  If you have a mere 8 engineers each running their own feature branch, you have $\frac{8&lt;sup&gt;2}{2}&lt;/sup&gt; = 32$ different failed communication lines.  Add another engineer and it&amp;#39;s 40 missed lines of communication.&lt;/p&gt;
+&lt;p&gt;Feature branches also scale terribly.  You can get away with one developer having a long-running feature branch, but as your team grows and you have more and more engineers in the same codebase, each pair of developers running feature branches is failing to communicate effectively about their work.  If you have a mere 8 engineers each running their own feature branch, you have $$\frac{8^2}{2} = 32$$ different failed communication lines.  Add another engineer and it&amp;#39;s 40 missed lines of communication.&lt;/p&gt;
 
 &lt;h2&gt;Use Feature Toggles&lt;/h2&gt;
 
