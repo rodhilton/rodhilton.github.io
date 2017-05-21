@@ -216,7 +216,7 @@ $ git branch release --set-upstream-to=origin/release
 
 &lt;h2&gt;Is there a way to not have to manually type so many arguments?&lt;/h2&gt;
 
-&lt;p&gt;One of the weirder aspects of this flow is that pretty much every command I suggest typing into get has additional arguments.&lt;/p&gt;
+&lt;p&gt;One of the weirder aspects of this flow is that pretty much every command I suggest typing into git has additional arguments.&lt;/p&gt;
 
 &lt;p&gt;Any time you do a &lt;code&gt;merge&lt;/code&gt;, I&amp;#39;m asking you do to a &lt;code&gt;merge --no-ff&lt;/code&gt;.  When you cut a release and tag it I suggest you &lt;code&gt;push&lt;/code&gt; using &lt;code&gt;push --follow-tags&lt;/code&gt; so your tag gets up to origin as well.&lt;/p&gt;
 
