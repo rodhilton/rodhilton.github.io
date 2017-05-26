@@ -101,7 +101,8 @@ abbr {
   margin-left: 20px; }
 
 #sidebars {
-  width: 250px;
+  width: 196px;
+  /*width:$sidebar_width; for 2 sidebars */
   position: relative; }
 
 .sidebar {
@@ -115,10 +116,22 @@ abbr {
   width: 156px;
   padding-right: 0px; }
 
-#sidebar-right {
-  width: 34px;
-  padding-left: 20px;
-  overflow: hidden; }
+a.button {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  text-decoration: none;
+  color: initial;
+  text-align: center;
+  padding: 4px; }
+
+.social-icons {
+  clear: both; }
+  .social-icons p {
+    margin-bottom: 0;
+    clear: both; }
+  .social-icons a {
+    font-size: 150%; }
 
 #social-icons img {
   width: 16px;
